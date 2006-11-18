@@ -1,0 +1,291 @@
+  body { margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 50%;
+    color: rgb(0, 0, 0);
+    font-family: arial,Helvetica,'Bitstream Vera Sans','Luxi Sans',Verdana,Sans-Serif;
+    font-size: 95%;
+    }
+
+  a:link, a:visited, a:hover { font-weight: bold;
+    text-decoration: none;
+    color: rgb(153, 51, 153);
+    }
+
+  a:hover { text-decoration: underline;
+    }
+
+  a:visited { color: rgb(102, 0, 204);
+    }
+
+  div.top { border-bottom: 1px solid black;
+    background: rgb(134, 134, 134) url("cinelerra.png") no-repeat;
+    width: 100%;
+    height: 130px;
+    }
+
+  div.top a.logo, div.top a.logo:link, div.top a.logo:hover, div.top a.logo:visited { border: medium none ;
+    background: transparent none repeat scroll 0% 50%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    }
+
+  div.top h1 { margin: 0px;
+    padding: 4ex 2ex 0ex;
+    background: transparent none repeat scroll 0% 50%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: arial;
+    float: right;
+    }
+
+  img.logo { border: medium none ;
+    float: left;
+    }
+
+  #menu { border: 1px solid rgb(0,0,0);
+    float: left;
+    width: 24ex;
+    margin: 1em;
+    }
+
+  #menu ul { margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    }
+
+  #menu li.sub { padding: 0px;
+    background: rgb(134, 134, 134) none repeat scroll 0% 50%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    }
+
+  #menu .title { padding: 4px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    }
+
+  #menu ul.sub { border-top: 1px solid rgb(0,0,0);
+    border-bottom: 1px solid rgb(0,0,0);
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    }
+
+  #menu li a {  
+    border-top: 1px solid rgb(0,0,0);
+    margin: 0px;
+    padding: 4px 4px 4px 10px;
+    background: rgb(240, 240, 240) none repeat scroll 0% 50%;
+    display: block;
+    width: 100%;
+    color: rgb(102, 51, 102);
+    }
+
+  #menu li a:visited {
+    color: rgb(204, 51, 204);
+    }
+
+  html > body #menu li a { width: auto;
+    }
+
+  #menu li.item a:hover, ul.sub li.item a:hover {
+    border-top: 1px solid rgb(111, 0, 11);
+    background: rgb(172, 108, 157) none repeat scroll 0% 50%;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    }
+
+  body { 
+   width: auto;
+    }
+
+  div.content { padding: 1ex;
+    margin-left: 25ex;
+    margin-right: 1ex;
+    }
+
+  #skipnav { display: none;
+    }
+
+  #togglecss { position: absolute;
+    top: 110px;
+    right: 10px;
+    }
+
+  img.left { float: left;
+     border: 1px solid rgb(0,0,0);
+    }
+
+  img.thumb { border: 1px solid rgb(153, 153, 153);
+    }
+
+  div.news div.item h3 { border-left: 10px solid rgb(153, 153, 153);
+    font-weight: bold;
+    padding-left: 4px;
+    margin-bottom: 4px;
+    clear: right;
+    }
+
+  div.news div.item p { margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+  p { text-align: justify;
+    }
+
+  h2 { border-bottom: 1px solid rgb(0, 0, 0);
+    clear: right;
+    }
+
+  pre { border: 1px solid rgb(0, 111, 2);
+    padding: 4px;
+    background: rgb(176, 228, 174) none repeat scroll 0% 50%;
+    }
+
+  #footer { border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    clear: both;
+    }
+
+  #footer img { border: medium none ;
+    }
+
+  #footer a { color: black;
+    }
+
+  table { background: transparent none repeat scroll 0% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    clear: none;
+    border-collapse: collapse;
+    font-size: 90%;
+    }
+
+  td { padding: 8px;
+    vertical-align: top;
+    }
+
+  table.roadmap { background: rgb(238, 238, 238) none repeat scroll 0% 50%;
+    }
+
+  table.roadmap td { border: 1px solid rgb(153, 153, 153);
+    }
+
+  table.bounty {width: 99%;
+	border: 0.2em solid gray;
+	margin-bottom: 1em;}
+
+  table.bounty th { padding: 1ex; 
+	background: rgb(200, 150, 180);
+	text-align: center;
+	}
+
+  table.bounty td { margin: 1ex; }
+  table.bounty td.category { border-right: 0.1em solid; 
+	width: 15%;}
+  table.bounty td.taskname { border-right: 0.1em solid; 
+	width: 25%;}
+  table.bounty td.req { border-right: 0.1em solid; 
+	width: 40%;}
+  table.bounty td.bounty {border-right: 0.1em solid; 
+	width: 8%;
+	text-align: right;
+	font-size: 1.2em;
+	font-weight: bold;}
+  table.bounty td.status { width: 12%
+	text-align: left;}
+
+  table.bounty tr { background: rgb(208,208,255); }
+  table.bounty tr.odd { background: rgb(240,240,255); }
+  table.bounty tr.completed { background: rgb(220,250,220); }
+
+  Tr.header { background: rgb(221, 221, 221) none repeat scroll 0% 50%;
+    font-weight: bold;
+    }
+
+  td.title { background: rgb(221, 221, 221) none repeat scroll 0% 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(156, 66, 112);
+    }
+
+  img.float { 
+    float: right;
+    border: 1px solid rgb(0,0,0);
+    }
+
+  select, option, textarea, input { border: 1px solid rgb(102, 102, 102);
+    margin: 2px 0px 2px 0pt;
+    padding: 2px;
+    background: white none repeat scroll 0% 50%;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    text-decoration: none;
+    }
+
+  select:hover, option:hover, textarea:hover, input:hover { background: rgb(221, 221, 221) none repeat scroll 0% 50%;
+    }
+
+  form.search { border-top: 1px solid rgb(214, 214, 214);
+    border-bottom: 1px solid rgb(214, 214, 214);
+    margin: 0px;
+    padding: 4px 4px 4px 10px;
+    background: rgb(240, 240, 240) none repeat scroll 0% 50%;
+    text-align: center;
+    display: block;
+    color: rgb(0, 129, 172);
+    }
+
+  form.search:hover { background: rgb(172, 108, 157) none repeat scroll 0% 50%;
+    }
+
+  #post_news input { width: 35%;
+    }
+
+  #post_news textarea { width: 100%;
+    height: 150px;
+    }
+
+  input#login, #post_news input#preview, #post_news input#save, #post_news input#reset { width: 100px;
+    }
+
+  #post_news table { padding: 0pt;
+    }
+
+  #post_news td { padding-left: 0pt;
+    }
+
+  #post_news table tr td.header { width: 10%;
+    font-weight: bold;
+    }
+
+  .alert { color: red;
+    }
+
+  div.alert { border: 1px solid red;
+    padding: 8px;
+    }
+
+  .preview, .message { border: 1px solid rgb(204, 204, 204);
+    padding: 8px;
+    }
+
+  #navbar { padding: 8px;
+    background: rgb(204, 204, 204) none repeat scroll 0% 50%;
+    }
+
+  #navbar a { padding-right: 12px;
+    }
+

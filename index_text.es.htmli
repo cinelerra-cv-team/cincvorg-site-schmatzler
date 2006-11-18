@@ -1,0 +1,80 @@
+<!-- Don't include the html, body, etc as this is included from index.php -->
+<p><strong>Esto es <a href="changelog.html">Cinelerra-CVS.</a>, una versión de Cinelerra. Por favor, visita la sección <a href="aboutphp">acerca de</a> para más información sobre esta dualidad.</strong></p>
+<h2><a name="news">Noticias</a></h2>
+
+<p>
+<strong>Noviembre &nbsp;18</strong><br>
+<a href="http://cvs.cinelerra.org/docs.php">Nuevos Cinelerra CV manuales.</a>
+</p>
+
+<p>
+<strong>Septiembre &nbsp;14, 2006</strong> <br />
+<a href="http://cvs.cinelerra.org/getting_cinelerra.php">"Nuevos paquetes de Debian sid</a> listos para descargar (sin aceleraci&oacute;n OpenGL por ahora).
+</p>
+
+<p>
+<strong>Septiembre &nbsp;10, 2006</strong><br />
+La unificaci&oacute;n de la versi&oacute;n de Cinelerra 2.1 ha sido completada hace unos d&iacute;as. Los paquetes se ir&aacute;n creando a medida que la gente los requiera.<br>
+Por favor, los problemas rep&oacute;rtalos en la lista de correo.
+</p>
+
+<p>
+<strong>Julio &nbsp;10, 2006</strong><br />
+Se ha publicado la versi&oacute;n oficial de Cinelerrai 2.1.<br>
+Johannes Sixt y Pierre Dumuid est&aacute;n trabajando conjuntamente para realizar la unificación de ambas versiones.<br>
+Personalmente yo (Pierre Dumuid), prefiero ver las noticias en <a href="">SVN log</a>
+</p>
+
+<p>
+<strong>Noviembre &nbsp;5, 2005</strong><br />
+¡Ya estamos de vuelta! Han pasado muchas cosas en los últimos 2 meses:<br />
+* Nueva versi&oacute;n de Cinelerra <br />
+* Hemos migrado de cvs a svn<br />
+* Nuevos paquetes de la versión 2.0-cvs (slackware y Debian sid).
+</p>
+
+<p>
+<strong>Septiembre &nbsp;11, 2005</strong><br />
+* Por fin la migraci&oacute;n se ha realizado :) ! prueba el nuevo <strong>cinelerra-2.0cvs</strong> :)<br />
+Muchas gracias a Johannes Sixt quien ha sido el que ha migrado el c&oacute;digo de cinelerra-2.0 dentro del cinelerra-cvs :) (kudos to him)<br />
+</p>
+
+<p><strong>Septiembre &nbsp;11, 2005</strong><br>
+* <a href="bounty.html">Bounty</a>, bounty a lot of bounty :)<br>
+* cinelerra2.0 still in transition
+</p>
+
+<p><strong>Septiembre &nbsp;11, 2005</strong><br>
+* Cinelerra 2.0 disponible en heroinwarrior.com.<br>
+El c&oacute;digo de Cinelerra 2.0 ser&aacute; unificado con cinelerra-cvs  :).<br>
+<strong>stay tuned</strong></p>
+
+<p><strong>Agosto &nbsp;11, 2005 </strong><br>
+* Revisa el  <a href="changelog.html">ChangeLog</a> :)
+</p>
+
+<p><strong>Julio &nbsp;9, 2005</strong><br>
+* Add bin2cinelerra_headers to <a href="user-tips.html">user tips</a> webpage.<br><br>
+</p>
+
+<p><strong>Julio &nbsp;1, 2005</strong><br>
+* Nueva version de <a href="user-tips.html">Seven Gnome</a>.<br>
+</p>
+
+<p><strong>Junio &nbsp;27, 2005</strong><br />
+* Updated <a href="getting_cinelerra.html">packages</a> webpage<br>
+* Updated <a href="user-tips.html">usertips page</a>
+</p>
+
+<p><strong>Junio &nbsp;5, 2005</strong><br>
+* New layout.<br>
+<br>
+* Now we
+provide a online <a href="changelog.html">ChangeLog</a>
+so people can know what comes IN/OUT from the CVS :)<br><br>
+* Cinelerra NOW supports theora/ogg movie for input files. Try it
+(note: if you use debian try the new <a href="getting_cinelerra.html">.deb</a>)<br>
+</p>
+
+<p><a href="oldnews.html">Older news...</a></p>
+

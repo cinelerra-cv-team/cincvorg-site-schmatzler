@@ -1,0 +1,33 @@
+
+<p><strong>Esto es una versión de Cinelerra algunas veces llamado <a href="changelog.html">Cinelerra-CVS.</a>Por favor, visita la sección <a href="about.html">acerca de</a> para más información sobre esta dualidad.</strong></p>
+<h2><a name="news">Noticias</a></h2>
+<p><a name="news"></a>
+<strong>September &nbsp;11, 2005</strong><p>
+* Por fin la migración se ha realizado :) ! prueba el nuevo <strong>cinelerra-2.0cvs</strong> :)<br>
+Muchas gracias a Johannes Sixt quien ha sido el que ha migrado el código de cinelerra-2.0 dentro del cinelerra-cvs :) (kudos to him)<br><br>
+<strong>September &nbsp;11, 2005</strong>
+* <a href="bounty.html">Bounty</a>, bounty a lot of bounty :)<br>
+* cinelerra2.0 still in transition<p>
+<strong>September &nbsp;11, 2005</strong><br><br>
+* Cinelerra 2.0 avaiable on heroinwarrior.com.<br>
+The code of cinelerra 2.0 will be merged in cinelerra-cvs ASAP :).<br>
+<strong>stay tuned</strong></p>
+<strong>August &nbsp;11, 2005 </strong><p><br>
+* Look at the  <a href="changelog.html">ChangeLog</a> :)
+<strong>July &nbsp;9, 2005</strong><p>
+* Add bin2cinelerra_headers to <a href="user-tips.html">user tips</a> webpage.<br><br>
+<strong>July &nbsp;1, 2005</strong><br><br>
+* New version of <a href="user-tips.html">Seven Gnome</a>.<br>
+<strong>June &nbsp;27, 2005</strong><p>
+* Updated <a href="getting_cinelerra.html">packages</a> webpage<br>
+* Updated <a href="user-tips.html">usertips page</a></p>
+<strong>June &nbsp;5, 2005</strong><br>
+* New layout.<br>
+<br>
+* Now we
+provide a online <a href="changelog.html">ChangeLog</a>
+so people can know what comes IN/OUT from the CVS :)<br><br>
+* Cinelerra NOW supports theora/ogg movie for input files. Try it
+(note: if you use debian try the new <a href="getting_cinelerra.html">.deb</a>)<br>
+<br>
+<p><a href="oldnews.html">Older news...</a></>>
