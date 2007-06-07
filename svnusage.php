@@ -45,12 +45,27 @@ You need to checkout only once. If you want to bring an outdated working copy
   <code>svn update</code>
   </p>
  
+ <h2>Web based views of SVN.</h2>
+<p>I know, you're on holidays at a kiosk machine, and are amping to see if
+any changes have occured in the community version of your favourite video editing software, but only wish you had console access to run 'svn log', No??
+Well if so, then have we've got the tools for you! You can actually see a <a href='svn_log.php'>nicely integrated view of the commits</a> or 
+<a href='http://svn.skolelinux.no/websvn/listing.php?repname=cinelerra&path=/trunk/hvirtual/'>the boring websvn</a> view to actually see the files themselves.
+</p>
+
  <h2>Subversion for Developers</h2>
   <p>
   To get the head version use this:<br><br>
-  <code>svn checkout svn+ssh://j6t@svn.skolelinux.org/repos/cinelerra/trunk/hvirtual</code><br><br>
-  You need an ssh account on developer.skolelinux.no for this. Substitute your 
-  login in place of j6t.<br>
+  <code>svn checkout svn+ssh://j6t@svn.skolelinux.org/repos/cinelerra/trunk/hvirtual</code><br>
+  You need an <a href="svnwrite.php">ssh account on user.skolelinux.org</a> for this. Substitute your 
+  login in place of j6t.
+
+  <p>
+  <strong>NOTE:</strong> You may have to type your password more than once,
+  since svn+ssh opens more than one connection.  If you see the 
+ <code>Password:</code> prompt again two times, it is <em>not necessarily</em>
+ because you typed the wrong password.
+
+  <p>
   In the following, it is assumed that you are inside the top-level directory of 
   the working copy (which is named hvirtual).<br>
   Now you can make modifications. When you are done, you first have to make sure 

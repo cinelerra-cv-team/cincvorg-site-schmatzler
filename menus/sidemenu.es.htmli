@@ -23,6 +23,7 @@
    <li class="item"><a href="getting_cinelerra.php">Descargar</a></li>
    <li class="item"><a href="svn_log.php">SVN Commit Logs</a></li>
    <li class="item"><a href="svnusage.php">Acceso SVN</a></li>
+   <li class="item"><a href="gitusage.php">Acceso GIT</a></li>
    <li class="item"><a href="footage/">Clips de prueba</a></li>
    <li class="item"><a href="http://bugs.cinelerra.org/">Bugtracker</a></li>
   </ul>

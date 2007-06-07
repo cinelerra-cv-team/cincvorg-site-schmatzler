@@ -12,8 +12,8 @@ include "newsidemenu.php";
 
 <h3>
 <a href="#livecds">Live CD's</a> |
-<a href="#rpm-suse">Suse</a> |
-<a href="#rpm-fedora">Fedora</a> |
+<a href="#suse">Suse</a> |
+<a href="#fedora">Fedora</a> |
 <a href="#apt-x86">Debian-x86</a> |
 <a href="#apt-AMD64">Debian-AMD64</a> |
 <a href="#ubuntu">Ubuntu</a> |
@@ -72,23 +72,60 @@ contain cinelerra</p>
   <p>
 </blockquote>
 
- <h4 name="apt-AMD64"> For athlon64 processors</h4>
+ <h4><a name="apt-AMD64"> For athlon64 processors</h4>
 
 <blockquote>
-  <code>http://labbs.net/~vale/debian</code><br>
-  <code>deb http://labbs.net/~vale/debian ./</code><br>
-  <code>(source repo coming later...)</code>
+
+  <code>deb http://giss.tv/~vale/debian64 ./</code><br>
+  <code>deb-src http://giss.tv/~vale/debian64 ./</code>
+
 </blockquote>
 
-<h4><a name="ubuntu">Ubuntu packages</a></h4>
+<h4><a name="ubuntu">Ubuntu Feisty</a></h4>
 
 <blockquote>
- <p>Look at the <a href="http://www.kiberpipa.org/~gandalf/ubuntu/README">
- ubuntu package README</a>.
- 
+Jure Cuhalev built packages, he has a <a href="http://www.kiberpipa.org/~gandalf/ubuntu/README">README</a> about the packages.  Some notes are included here:<br><br>
+
+1. Make sure you have universe, multiverse and restricted repositories enabled<br>
+2. Add the following repository to your sources.list file, according to your CPU type:<br>
+<br>
+- i686:<br>
+<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/i686/ ./</code><br>
+- athlonxp:<br>
+<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/athlonxp/ ./</code><br>
+- pentium4:<br>
+<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/pentium4/ ./</code><br>
+<br>
+3. apt-get update ; apt-get install cinelerra <br>
+
 </blockquote>
- 
- <h4><a name="apt-ppc">PowerPC (e.g. Macintosh)</a></h4>
+
+
+
+<!-- Old
+ <p><a href="http://www.kiberpipa.org/~muzzol/cinelerra/">
+ Ubuntu packages</a>:
+<br>
+<code>deb http://www.kiberpipa.org/~muzzol/cinelerra/bin/ ./</code>
+-->
+
+<h4><a name="ubuntu">Ubuntu Edgy</a></h4>
+
+<blockquote>
+<code>deb http://giss.tv/~vale/ubuntu32 ./</code><br>
+<code>deb-src http://giss.tv/~vale/ubuntu32 ./ </code>
+</blockquote>
+
+
+<h4><a name="ubuntu">Ubuntu Edgy amd64</a></h4>
+
+<blockquote>
+<code>deb http://giss.tv/~vale/ubuntu64 ./</code><br>
+<code>deb-src http://giss.tv/~vale/ubuntu64 ./</code>
+</blockquote>
+
+
+ <H4><a name="apt-ppc">PowerPC (e.g. Macintosh)</a></h4>
 
 <blockquote>
 
@@ -100,8 +137,7 @@ contain cinelerra</p>
    <code>deb http://garbure.org/debian/ ./</code><br><br>
    PowerPC with AltiVec or Power4 optimisations:<br>
    <i>Not yet</i>
-   <p>Yes, we are searching people who can build cinelerra-cv on g4/g5. If you want to contribute but you cannot provide debian packages feel free to mail us/join irc channel.</p>
-   <br><br>
+   <p>Yes, we are searching people who can build cinelerra-cv on g4/g5. If you want to contribute but you cannot provide debian packages feel free to mail us/join irc channel.</p> <br>
    Apt-source:<br>
    <code>deb-src http://garbure.org/debian/ ./</code><br><br>
   <p>You will need some additional packages not found in Debian's official
@@ -112,17 +148,32 @@ contain cinelerra</p>
 
 </blockquote>
 
-  <hr>
+<h2><a name="fedora">Fedora</a></h2>
 
-<h2><a name="rpm">RPMs</a></h2>
-<h4><a name="rpm-fedora"> Fedora</a></h4>
+Cinelerra is included in the Freshrpms repository at <a
+href="http://freshrpms.net">http://freshrpms.net</A>. The easiest way to
+install packages from Freshrpms is to include the repository in the <B>yum</B>
+configuration.<BR>
+Also make sure that the Fedora Extras repository is enabled.  This is the case
+by default on Fedora 5 and 6, and Core and Extras are merged into one on Fedora
+7.<BR><BR>
+On Fedora 6, as the user root do:<BR>
+<code>rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/6/freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm</code><BR><BR>
+On Fedora 5, do:<BR>
+<code>rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/5/freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm</code><BR><BR>
+Then type:<BR>
+<code>yum -y install cinelerra</code><BR>
+
+<h2><a name="suse">Suse</a></h2>
+<h4>Suse 10.1 & 10.2</h4>
 <blockquote>
-<p>Supret Sethi provides <a href="http://supreetsethi.net/drupal/?q=node/19">redhat/fedora</a> packages 
-for cinelerra-cv kudos to him (thanks also to jaromil (dyne:bolic) for hosting the packages)</p>
-<p>
+RPMs for openSUSE 10.1 and 10.2 are now in the
+<a href="http://packman.links2linux.org/package/cinelerra">Packman</a>
+repositories.  You can install directly with Yast if you have Packman
+configured as a Yast install source.
 </blockquote>
 
-<h4><a name="rpm-suse">Suse 9.0, 9.2 and SRPMs</a></h4>
+<h4><a name="suse">Suse 9.0, 9.2 and SRPMs</a></h4>
 <blockquote>
 RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <a href="http://cin.kevb.net/files/RPM/">kevb.net</a>.
@@ -134,8 +185,9 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 
 <h4>For x86</h4>
 
-<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/">
-http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/</a>
+<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/">
+http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/
+</a>
 
 <h4>For slackintosh</h4>
 
@@ -161,8 +213,6 @@ skolelinux.no</em>, to tell us what
 you'd like to contribute.</p>
 
  </div>
-<hr>
-<address>Riccardo Setti, giskard at autistici.org</address>
  
  </body>
 

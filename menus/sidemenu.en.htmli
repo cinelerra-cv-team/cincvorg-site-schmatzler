@@ -22,7 +22,8 @@
   <ul class="sub">
    <li class="item"><a href="getting_cinelerra.php">Get Cinelerra</a></li>
    <li class="item"><a href="svn_log.php">SVN Commit Logs</a></li>
-   <li class="item"><a href="svnusage.php"> SVN access</a></li>
+   <li class="item"><a href="svnusage.php">SVN access</a></li>
+   <li class="item"><a href="gitusage.php">GIT access</a></li>
    <li class="item"><a href="footage/">Test clips</a></li>
    <li class="item"><a href="http://bugs.cinelerra.org/">Bugtracker</a></li>
   </ul>

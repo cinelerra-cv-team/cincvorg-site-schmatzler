@@ -22,7 +22,10 @@ echo "<pre>";
  passthru("svn log -r ".$pn." svn://svn.skolelinux.org/cinelerra/trunk/hvirtual;");
 	
 echo "</pre>";
-echo "<p><b>Note:</b> this page displays the result of executing the command:<p><p style='font-family:courier'>$svncommand</p><p>Which you can execute from your command line.  Also, you can perform many more functions, using svn from the command line. Certain keywords $hkeywords are also underlined to possibly give an indication to what each commit is about.</p>";
+echo "<p><b>Note:</b> this page displays the result of executing the command:<p><p style='font-family:courier'>$svncommand</p>
+
+<p>Which you can execute from your command line.  Also, you can perform many more functions, using svn from the command line. Certain keywords $hkeywords are also underlined to possibly give an indication to what each commit is about.</p>
+";
 echo "<pre>";
 passthru($svncommand);
 echo "</pre>";
@@ -89,7 +92,11 @@ echo "<b>Select:</b> "
 
 $hkeywords = "(Fix|Add|Merge|remove|nice|Clear|Clean|drop|replace|convert|reverse|patch)";
 
-echo "<p><b>Note:</b> this page displays the result of executing the command:<p><p style='font-family:courier'>$svncommand</p><p>Which you can execute from your command line.  Also, you can perform many more functions, using svn from the command line. Certain keywords $hkeywords are also underlined to possibly give an indication to what each commit is about.</p>";
+echo "<p><b>Note:</b> this page displays the result of executing the command:<p><p style='font-family:courier'>$svncommand</p><p>Which you can execute from your command line.  Also, you can perform many more functions, using svn from the command line. Certain keywords $hkeywords are also underlined to possibly give an indication to what each commit is about.</p>
+
+<p>The SVN repository is also mirrored in a git repository that has a git-web front end that can be viewed at <a href='http://www.pipapo.org/gitweb?p=cinelerra/svn;a=log'>http://www.pipapo.org/gitweb?p=cinelerra/svn;a=log</a>.
+
+";
 ?>
 <pre style='font-size:12;margin-left:2em'>
 <?php

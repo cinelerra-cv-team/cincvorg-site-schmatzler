@@ -22,8 +22,8 @@ href="http://www.heroinewarrior.com/">official home page</a>
  contribute to the development of Cinelerra. </p>
  <p>If you simply want to <em>use</em>
  Cinelerra, the <a
-  href="http://ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">
-  manual</a> or the <a href="tutorials.html">tutorials</a>
+  href="/docs/cinelerra_cv_manual_en.html">
+  manual</a> or the <a href="docs.php#tutorials">tutorials</a>
   are the first places you should go! </p>
   <h2>Why  2 versions of cinelerra?</h2>
   There are two branches of Cinelerra - one can be found at <a
