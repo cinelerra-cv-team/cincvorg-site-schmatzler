@@ -1,0 +1,76 @@
+<?php 
+include "header.php";
+
+include "funcs.php";
+$availlangs = array("EN","ES","EU");
+$linfo = pmd_getlang($availlangs);
+include "newsidemenu.php"; 
+?>
+
+<div class="content">
+ <h1>Cinelerra GIT - accessing the GIT</h1>
+  <p>
+
+  The source code of Cinelerra-CV, although having the primary branch
+in a available in a Subversion repository is also available in a git
+repository, (distributed SCM).
+  </p>
+
+Here's an email that Christian Thaeter sent on Tue, 05 Jun 2007 09:11:23:
+<pre>
+It happens sometimes that people send new patches/bufixes to this ML
+which eventually might get forgotten. To offer a chance that such things
+are picked easily up somewhere. I created a 'mob' repository on my
+server where anyone can push patches anonymously.
+
+Little HowTo:
+# first clone the repository
+# (use the --reference option when you already have any other
+# git clone of a cinelerra repo)
+git clone git://git.pipapo.org/cinelerra/mob my_cinelerra
+cd my_cinelerra
+
+# then create a branch for your work
+git checkout -b yourbranchname
+
+# work and commit
+..hack..hack..hack
+git commit ...
+
+# send it to my server, maybe with some branch description,
+# see the git-push manpage
+git push --all
+
+
+IMPORTANT:
+Do not trust the code in this repository, anyone could add potentially
+dangerous code, review every foreign commit before run anything
+(autogen.sh, ./configure).
+
+I'd suggest to use gpg signed tags when you reviewd some state and trust
+it (man gpg-tag). Such tags then sign the state and all its history.
+
+Further I don't make any rules how this might be used, feel free to
+acknowledge with other people to make this repository useful. The only
+thing I will do is regulary or automatically rebasing the master branch
+on the ongoing SVN synced repository, I'll tag the tree before doing so,
+but any conflicts occuring during this rebase will be thrown out of the
+master branch (they are still reachable from the tag) but contributors
+would need to resolve conflicts and reapply them on the master branch
+again if they didn't worked in topic branches.
+
+If you have any questions about this, feel free to contact me via mail
+or on IRC.
+
+About mob software:
+http://www.dreamsongs.com/MobSoftware.html
+
+
+
+        Have Fun
+                Christian
+</pre>
+
+
+</body>
+</html>
