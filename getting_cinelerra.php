@@ -430,25 +430,16 @@ for athlonxp, by Jure Cuhalev:<br>
 
 <h2><a name="source">Source code</a></h2>
 
-<p>The source code of Cinelerra-CV is available from a Subversion (SVN) repository. 
-Everybody can retrieve source code from the SVN. To check out a read-only
-working copy for compilation go to the <a href="svnusage.php#anon">SVN access</a> page. 
-You can modify this working copy, but you cannot check your modifications back
-in.</p>
-
-<p>Project members can check in changes into the SVN. 
-If you have code you want to contribute, you can get SVN write access.
-Follow the instructions for <a href="svnwrite.php">getting ssh write access</a>  
-and mail <em>herman at skolelinux.no</em> to tell us what you'd like to contribute.</p>
-
-<p>The source code, although having the primary branch available in
-the Subversion repository, is also available in a git repository, (distributed SCM). 
-More information regarding the git repository is available at <a
-href='http://www.pipapo.org/pipawiki/Cinelerra'>pipapo.org</a>.</p>
+<p>The source code of Cinelerra-CV is available from a git repository. 
+ To get a copy for compilation use the following command</p>
+ <blockquote>
+git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
+ </blockquote>
+<p>You can modify this working copy, and submit your patches to the mailing list, or ask for your own repo or for permission to push to one of the existing ones.</p>
 
  </div>
  
-<address> Last modified on 31 August 2008 </address>
+<address> Last modified on 26 September 2008 </address>
 
 <?php include "footer.php"; ?>
  </body>
