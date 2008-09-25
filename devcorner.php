@@ -12,22 +12,11 @@ include "newsidemenu.php";
 
 <h2>The repositories</h2>
 
-<h3>SVN</h3>
- The source code primary branch is available in a <a
-href="http://svn.skolelinux.no/websvn/">Subversion repository</a>.<br> 
-The activity can be seen in the <a
-href="http://cv.cinelerra.org/svn_log.php">svn commit log</a>.<br>
-To access the SVN and check out a copy visit the <a
-href="http://cinelerra.org/svnusage.php">svn access page</a>.
-
 <h3>GIT</h3>
-The code is available also in a  <a href="http://www.pipapo.org/pipawiki/Cinelerra">
-git repository</a>.<br>
-The git repository can be browsed in 
-<a href="http://www.pipapo.org/gitweb?p=cinelerra/svn;a=summary">gitweb</a>.<br>
-To access the git repo and checkout a copy read the <a
-href="http://www.pipapo.org/pipawiki/Cinelerra/GitHowTo">git Howto</a>.
-
+SVN is no longer being used for Cinelerra CV development.<br />
+A number of repos may be browsed at <a href="http://git.cinelerra.org/gitweb/">http://git.cinelerra.org/gitweb/</a><br />
+To get a copy of the latest version of the Cinelerra 2.1 CV:<br /> 
+git clone git://git.cinelerra.org/j6t/cinelerra.git
 
 <h2>Doxygen documentation</h2>
 
