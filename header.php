@@ -6,7 +6,6 @@
 and compositor for Linux</title>
 </head>
 <body>
-<div class="top">
- <h1><a class="logo" href="index.php">Cinelerra CV</a><br />
- </h1>
-</div>
+<?php
+include "banner.php";
+?>

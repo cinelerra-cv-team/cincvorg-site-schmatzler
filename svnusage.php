@@ -10,11 +10,12 @@ include "newsidemenu.php";
 <div class="content">
  <h1>Cinelerra SVN - accessing the SVN</h1>
   <p>
-  The source code of Cinelerra-CV is available from a Subversion repository. 
-  Subversion is available from subversion.tigris.org, but most likely your 
-  distribution has prebuilt packages.
-  Complete documentation of subversion is available at
-  http://svnbook.red-bean.com/nightly/en/index.html.
+  The source code of Cinelerra-CV is available from a Subversion repository. <BR>
+  Subversion is available from 
+<a href='http://www.subversion.tigris.org/'>Tigris.org</a>, but most likely your 
+  distribution has prebuilt packages. <BR>
+  Complete documentation of Subversion is available 
+  <a href='http://svnbook.red-bean.com/nightly/en/index.html'>here</a>.
   </p>
 
  <h2>Checking out a read-only working copy</h2>
@@ -107,5 +108,6 @@ Well if so, then have we've got the tools for you! You can actually see a <a hre
  </div>
 <hr>
 <address>Riccardo Setti, giskard at autistici.org</address>
+<?php include "footer.php"; ?>
 </body>
 </html>

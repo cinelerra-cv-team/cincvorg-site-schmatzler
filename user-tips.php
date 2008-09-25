@@ -8,21 +8,23 @@ include "newsidemenu.php";
 ?>
 
 <div class="content">
-<h2>User Tips!</h2>
-<p><a name="user_tips"></a>
-Malefico Andauer wrote:<br>&lt;<br>
-<tt><font color="#737373">I have updated my little script for
-converting image</font></tt><tt><font color="#737373"> sequence to
-Cinelerra lists, now with TIFF and PNG</font></tt><tt><font
- color="#737373"> support plus some minor changes (interface traslated</font></tt><tt><font
- color="#737373"> to english for your comfort).</font></tt>
-<br>&gt;<br>
-<br>
-<a href="http://argoslabs.com/%7Emalefico/tutor/img2list-en.html">you can find it here.</a> (<a
- href="http://malefico3d.com.ar/tutor/img2list.html">spanish version</a>)<br>
+<h2>Tools</h2>
+<h3>IMG2LIST - Cinelerra List Generator</h3>
+<blockquote>
+<p><strong>Claudio "Malefico" Andaur</strong> wrote a little application called <a
+href="http://argoslabs.com/%7Emalefico/tutor/img2list-en.html">IMG2LIST
+0.1.5</a>, that is a Cinelerra List Generator for converting an image sequence to a single list file. This script generates a list 
+out a frame of an images sequence and autodetects all related parameters with it, including number of frames, file format and image 
+resolution. TIFF and PNG are now supported. Download it <a
+href="http://argoslabs.com/~malefico/software/img2list-0.1.5.tar.gz" > here</a>. <br> 
+(<a href="http://argoslabs.com/~malefico/software/img2list.html">Spanish version</a>)<br>
+
 </p>
-<p><strong>Peter Semiletov,</strong><br> wrote a program called <em>
-<a href="http://www.roxton.kiev.ua/sevengnomes.html ">Seven Gnomes</a></em>.
+</blockquote>
+<h3>Seven Gnomes</h3>
+<blockquote>
+<p><strong>Peter Semiletov</strong> wrote a program called 
+<a href="http://www.roxton.kiev.ua/sevengnomes.html ">Seven Gnomes</a>.
 It is a simple GTK2-based utility
 designed to simplify some tasks those useful when people work with
 Cinelerra. Seven Gnomes UI is based on drag-and-drop, so to handle
@@ -31,15 +33,55 @@ window. Seven Gnomes calls mpeg3toc to index MPEG1/2 files, mencoder
 to convert video, and uses GTK functions to create Cinelerra-format
 index/toc-files from the sequence of images. No open/save dialogs,
 just "drag-and-drop" and few text entries with options. Any ideas
-about improvements (about Seven Gnomes, not my English) are welcome! 
+about improvements are welcome! 
 </p>
---
-<p><strong>Dominic (Dom) C.,</strong><br> wrote an application called bin2cinelerra_header
-that convert .png files in png.h (if you want to create new skin for cinelerra you need png.h and not png files). 
-Now you can simply create your images and then covert it without problems. enjoy it. :)
+</blockquote>
+<h3>exr2toc</h3>
+<blockquote>
+<p><strong>Andrey Neskreba</strong> wrote a python script called <a
+href="http://www.assistcg.com/index.php/component/content/article/62.html">exr2toc</a>, that is an utility for generation of index TOC files from EXR image sequences. 
+<br>
 </p>
+</blockquote>
+
+<h3>bin2cinelerra_header</h3>
+<blockquote>
+<p><strong>Dominic (Dom) C.</strong> wrote an application called <a
+href="http://baltimorebarcams.com/eb/demos/bin2cinelerra_header.c">bin2cinelerra_header</a> 
+(version 1.1.) that converts .png files to png.h. This is very useful if you want to create a
+new skin for Cinelerra and you need png.h files instead of png files. With
+bin2cinelerra_header you can simply create your .png images and then convert
+them.<br>
+<strong>Franco Iacomella</strong> updated and improved bin2cinelerra_header,
+releasing <a
+href="http://francoiacomella.org/proyectos/tangolerra/lib/exe/fetch.php?id=start&cache=cache&media=bin2cinelerra_header-1.2.tar.gz"
+>bin2cinelerra_header version 1.2</a>.
+</p>
+</blockquote>
+<h3>yuvmotionfps</h3>
+<blockquote>
+<p><strong>Jerome Cornet</strong> wrote a piece of software called <a
+href="http://jcornet.free.fr/linux/yuvmotionfps.html" >yuvmotionfps</a> that converts
+frame rates on progressive streams using the <a href="http://mjpeg.sf.net" >
+mjpegtools</a>. Unlike yuvfps which simply replicates or eliminates frames, yuvmotionfps calculates intermediates 
+frames by interpolating the motion between frames, using an MPEG-style motion compensation algorithm.
+</p>
+</blockquote>
+<h3>framerate</h3>
+<blockquote>
+<p><strong>David McNab</strong> wrote a little utility called <a href="http://www.freenet.org.nz/misc/framerate.py">framerate</a> to convert a video to same or different format with different framerate, with motion interpolation, using the yuvmotionfps and ffmpeg utilities. <em>framerate</em> is pretty simple. It eliminates the need for typing manual commands and creating huge yuv files on your disk. Its input and/or output can be piped. 
+</p>
+</blockquote>
+<h3>Paste, Turn, Copy!</h3>
+<blockquote>
+<p><strong>Guy Sheffer</strong> wrote this small tool for writing Hebrew text with the Titler. <em> Paste, Turn, Copy!</em> reverses Hebrew to Left-To-Righ text and reencodes it as cp1252 (instead of cp1255 ) producing text ready to be pasted in the Titler. The compositor will preview the text with the correct direction and caption. This tool can be easily extended for Arabic too. It is available as <a href="http://gnet.homelinux.com/files/paste-turn-copy_0.5-1_i386.deb">.deb package</a> for Debian and Ubuntu. Mail guysoft [at] ort.org.il for help.
+</p>
+</blockquote>
+
 </div>
-<hr>
-<address>Riccardo Setti, giskard@autistici.org</address>
+
+<address>Last modified on 24 August 2008</address>
+<?php include "footer.php"; ?>
+
 </body>
 </html>

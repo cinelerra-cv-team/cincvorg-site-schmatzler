@@ -39,5 +39,6 @@ include "newsidemenu.php";
 
 
 <address>herman at skolelinux no</address>
+<?php include "footer.php"; ?>
 </body> 
 </html>

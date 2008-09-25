@@ -9,7 +9,7 @@ include "newsidemenu.php";
 
 
 <div class="content">
-<h2><a href="">Bounty!</a></h2>
+<h1>Bounty!</h1>
 <p>
 
 <table class="bounty">
@@ -103,10 +103,11 @@ with that.
 
   </tbody>
 </table>
-<strong> For more information ask to the cin-cvs guys on 
-the cin-cvs ml or in the irc channel on freenode (#cinelerra) :) </strong>
-<hr>
-<address>Cinelerra-CV, http://cvs.cinelerra.org/contact.php</address>
+<strong> For more information contact the <a href="http://cvs.cinelerra.org/contact.php">Cinelerra Community</a></strong>
 </div>
+
+<address>Last modified on 8 August 2008 </address>
+
+<?php include "footer.php"; ?>
 </body>
 </html>

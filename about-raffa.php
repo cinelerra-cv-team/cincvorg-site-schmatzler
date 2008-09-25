@@ -14,7 +14,7 @@ include "newsidemenu.php";
 
 <h2>About Cinelerra</h2>
 
-<p>Cinelerra is the most advanced non-linear video editor and compositor for Linux. It is developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php3">Heroine Virtual Ltd.</a>. 
+<p>Cinelerra is the most advanced non-linear video editor and compositor for Linux. It is developed by Adam Williams (formerly know as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php3">Heroine Virtual Ltd.</a>. 
 <br>
 To know more see the <a href=" http://www.heroinewarrior.com/cinelerra.php3">official Cinelerra home page</a> and the <a href="http://sourceforge.net/projects/heroines/">SourceForge project page</a>.
 </p>
@@ -36,21 +36,21 @@ We try to complete the amazing work of Heroine Virtual Ltd. (HV) offering also a
 <p>
 We set up an <a href="http://localhost/cvs/devcorner.php">unofficial SVN repository</a>, intended for developers and adventurous Linux users who want to contribute to the development of Cinelerra.
 </p>
-<p>We set up also a <a href="http://localhost/cvs/mailinglists.php">Mailing List</a> where we can share development ideas, comment on each other's implementation of new features, submit patches and resolve build problems.
+<p> Cinelerra-CV is not inteded to be a fork. <br>It's the community's attempt to stabilise HV's release and to add enhancement in a community
+fashion.
+Basically we maintain a copy that is fairly similar to the official release, (i.e. we ensure that we can merge with heroine's new releases, we don't do code-tidying patches). 
+We apply our bug fixes, compiler compliance fixes, and enhancements to the svn repository. Thus the CV has a number of features that the official version does not have.</p>
+<p>
+HV does find bugs that we didn't. And in some cases fix bugs that we point out, and don't get around to fixing. When there is a new official release, few members (usually just Johannes Sixt) merge HV's code with our code taking the new enhancements from HV, and re-arranging our version to be more similar to the original (whitespace, function naming, directory naming, slight changes in implementations etc).</p>
+<p>
+New HV releases have often issues in the forms of bugs / usability issues since HV only builds for few distros. After the merge, also the CV version is possibly a little unstable until all the issues with HV's newly added code are fixed (as users find bugs and as time permits to fix them).
 </p>
-<p> Cinelerra-CV is not a fork. We develop it in a direction not diverging from the original and we merge with all the new releases from Heroine Virtual. <br>
-We apply our bug fixes, compiler compliance fixes, and enhancements to the svn repository. Thus the CV has a number of features that the official version does not have.<br>
-Cinelerra CV can be defined as the community's attempt to stabilise HV's release and to add enhancement in a community fashion. </p>
 <p>
-When there is a new official release, few members (usually just Johannes Sixt) merge HV's code with our code taking the new enhancements from HV, and re-arranging our version to be more similar to the original (whitespace, function naming, directory naming, slight changes in implementations etc).</p>
-<p>
-New HV releases have often issues in the forms of bugs or usability issues since HV only builds for few distros. After the merge, also the CV version is possibly a little unstable until all the issues with HV's newly added code are fixed (as users find bugs and as time permits to fix them).
-</p>
-<p>
-Adam Williams is a subscriber of our Mailing List and at times he say a few words here or there about our implementations. He picks up some of our patches but not all of the enhancements we develop make it upstream (e.g. render to YUV pipe). In some cases he fixes bugs that we point out and don't get around to fixing. 
+We do try to send our patches upstream. <br>
+Adam William is a subscriber of our Mailing List and at times he say a few words here or there about our implementations. Not all of the enhancements we develop make it upstream (e.g. render to YUV pipe).
 </p>
 
-
+We set up a <a href="http://localhost/cvs/mailinglists.php">Mailing List</a> where we can share development ideas, comment on each other's implementation of new features, submit patches and resolve build problems.
 
 <h3>Community help</h3>
 
@@ -71,8 +71,9 @@ This website offers:
 
 <p>
 <ul>
-<li>Talk by Andraz Tori at Pixel5 - Download the video by Herman Robak in  <a
-href='http://www.nuug.no/pub/herman/piksel5/andraz_tori_cinelerra_2005.10.21.avi'>High Resolution</a> (368MB) or just the <a
+<li>Talk by Andraz Tori at Pixel5 - Download the <a
+href='http://www.nuug.no/pub/herman/piksel5/andraz_tori_cinelerra_2005.10.21.avi'>Original
+(Hi Res) Video</a> (368MB) or just the <a
 href='media/andraz_tori_cinelerra_2005.10.21.ogg'>Audio Extracted</a>
 (11MB).</li>
 <li>An <a href='http://www.linuxdevcenter.com/pub/a/linux/2003/12/30/cinelerra.html'>interview with Jack Crossfire </a> (2003).</li>
@@ -84,7 +85,7 @@ href='media/andraz_tori_cinelerra_2005.10.21.ogg'>Audio Extracted</a>
 
 </div>
 
-<address>Last modified on 20 August 2008</address>
+<address>Last modified on 15 August 2008</address>
 <?php include "footer.php"; ?>
 </body>
 </html>
