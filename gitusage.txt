@@ -27,7 +27,7 @@ Little HowTo:
 # first clone the repository
 # (use the --reference option when you already have any other
 # git clone of a cinelerra repo)
-git clone git://git.pipapo.org/cinelerra/mob my_cinelerra
+git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 cd my_cinelerra
 
 # then create a branch for your work

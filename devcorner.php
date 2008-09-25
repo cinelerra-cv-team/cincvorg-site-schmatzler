@@ -13,10 +13,11 @@ include "newsidemenu.php";
 <h2>The repositories</h2>
 
 <h3>GIT</h3>
-SVN is no longer being used for Cinelerra CV development.<br />
-A number of repos may be browsed at <a href="http://git.cinelerra.org/gitweb/">http://git.cinelerra.org/gitweb/</a><br />
+Please note: SVN is no longer being used for Cinelerra CV development.<br />
+<p>A number of git repos can be browsed at <a href="http://git.cinelerra.org/gitweb/">http://git.cinelerra.org/gitweb/</a><br />
 To get a copy of the latest version of the Cinelerra 2.1 CV:<br /> 
-git clone git://git.cinelerra.org/j6t/cinelerra.git
+git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra</p>
+Please write to the mailing list if you would like to get commit access to any of the repos or if you have patches you would like to submit.
 
 <h2>Doxygen documentation</h2>
 
