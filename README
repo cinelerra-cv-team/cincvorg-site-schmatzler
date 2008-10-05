@@ -8,7 +8,7 @@ git add newfile1.php newfile2.php
 git commit -a -m "adding newfile 1 and 2"
 git push
 
-(There is a post-update hook which will automatically update the site when you push.)
+(There is a post-update hook which will automatically updates the site when you push.)
 
 To update your local copy with changes others have made:
 git pull
