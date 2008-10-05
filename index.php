@@ -14,6 +14,10 @@ include "newsidemenu.php";
 
 <h2><a name="news">News</a></h2>
 <p>
+<strong>September &nbsp;26, 2008</strong><br>
+* We say farewell to the SVN repo that served us so well. The Cinelerra CV code is now maintained in <a href="http://git.or.cz">git</a>.
+</p>
+<p>
 <strong>September &nbsp;23, 2008</strong><br>
 * Roland "wildhostile" set up a <a href="http://makefx.wordpress.com">Cinelerra blog</a>. Write an article or a tutorial, add a video or localize yourself on the Cinelerra users' map!  
 </p>
@@ -79,7 +83,7 @@ Ubuntu 8.10 Intrepid Ibex.
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 30 August 2008 </address>
+<address>Last modified on 5 October 2008 </address>
 
 <?php include "footer.php"; ?>
 </body>
