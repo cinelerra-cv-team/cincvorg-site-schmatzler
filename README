@@ -1,0 +1,15 @@
+To use the git repo for working on this site:
+
+1) add a new user to gitosis, by adding their public ssh key to the keydir and their name to the repo in gitosis.conf.
+2) git clone git@git.cinelerra.org:www/cinelerra-site.git your-cin-site-copy
+
+Make some changes, then 
+git add newfile1.php newfile2.php
+git commit -a -m "adding newfile 1 and 2"
+git push
+
+(There is a post-update hook which will automatically update the site when you push.)
+
+To update your local copy with changes others have made:
+git pull
+(or possibly git pull git@git.cinelerra.org:www/cinelerra-site.git master)
