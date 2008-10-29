@@ -91,17 +91,16 @@ apt-get install cinelerra</code> .
 
 <blockquote>
 <p>
- x86 Debian packages are built from SVN by Andraz Tori, and hosted at
- <a href="http://www.kiberpipa.org/~minmax/cinelerra/builds/">
- www.kiberpipa.org</a>.<br>
-  To install the package add this line to your sources list:<br><br>
-  For i386 processors:<br>
+To install the package add one of the following lines to your sources list:<br><br>
+For i386 processors, by Valentina Messeri:<br>
+<code>deb http://giss.tv:8000/debian32 ./</code><br><br>
+For i386 processors, by Andraz Tori:<br>
   <code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./</code><br><br>
-  For Pentium4 processors:<br>
+  For Pentium4 processors, by Andraz Tori:<br>
   <code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentium4/ ./</code><br><br>
-  For Athlon processors:<br>
+  For Athlon processors, by Andraz Tori:<br>
   <code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/athlonxp/ ./</code><br><br>
-   Apt-source:<br>
+   Apt-source, by Andraz Tori:<br>
    <code>deb-src http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./</code><br><br>
   You will need some additional packages not found in Debian's official
   repositories, provided by Christian Marillat: <br>
@@ -118,7 +117,7 @@ gpg-key <br>
  <h4><a name="apt-AMD64"> For athlon64 processors</a></h4>
 
 <blockquote>
-AMD64 Debian packages are built from SVN by Valentina Messeri. <br>
+AMD64 Debian packages are built by Valentina Messeri. <br>
 To install the package add this line to your sources list: <br>
   <code>deb http://giss.tv/~vale/debian64 ./</code><br><br>
 Apt-source:<br>
