@@ -14,6 +14,10 @@ include "newsidemenu.php";
 
 <h2><a name="news">News</a></h2>
 <p>
+<strong>October &nbsp;26, 2008</strong><br>
+* <a href="http://lumiera.org">Lumiera</a> is looking for a logo. Enter the <a href="http://www.pipapo.org/pipawiki/Lumiera/Logos">Logo Contest</a>!.
+</p>
+<p>
 <strong>September &nbsp;26, 2008</strong><br>
 * We say farewell to the SVN repo that served us so well. The Cinelerra CV code is now maintained in <a href="http://git.or.cz">git</a>.
 </p>
