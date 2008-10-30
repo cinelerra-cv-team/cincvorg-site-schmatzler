@@ -87,7 +87,7 @@ Ubuntu 8.10 Intrepid Ibex.
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 5 October 2008 </address>
+<address>Last modified on 30 October 2008 </address>
 
 <?php include "footer.php"; ?>
 </body>
