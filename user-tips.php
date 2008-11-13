@@ -36,10 +36,24 @@ just "drag-and-drop" and few text entries with options. Any ideas
 about improvements are welcome! 
 </p>
 </blockquote>
+
+<h3>mkframelist</h3>
+<blockquote>
+<p><strong>IL'dar "AkhIL" AKHmetgaleev</strong> wrote a program called <a href="http://akhilman.googlepages.com/mkframelist">mkframelist</a>, that is a command line tool for creating image lists. It supports every file format, EXR included. It autodetects image size and format. Optionally, framerate, size and format can be set.</p>
+</blockquote>
+
 <h3>exr2toc</h3>
 <blockquote>
 <p><strong>Andrey Neskreba</strong> wrote a python script called <a
 href="http://www.assistcg.com/index.php/component/content/article/62.html">exr2toc</a>, that is an utility for generation of index TOC files from EXR image sequences. 
+<br>
+</p>
+</blockquote>
+
+<h3>cinelerra-slideshow</h3>
+<blockquote>
+<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <a
+href="https://svn.bourget.cc/svn/wackystuff/programs/cinelerra-slideshow/">cinelerra-slideshow</a>, a script that creates a cinelerra .xml file with some already pre-built slideshow tracks. (a bit old)
 <br>
 </p>
 </blockquote>
@@ -58,6 +72,7 @@ href="http://francoiacomella.org/proyectos/tangolerra/lib/exe/fetch.php?id=start
 >bin2cinelerra_header version 1.2</a>.
 </p>
 </blockquote>
+
 <h3>yuvmotionfps</h3>
 <blockquote>
 <p><strong>Jerome Cornet</strong> wrote a piece of software called <a
@@ -67,20 +82,30 @@ mjpegtools</a>. Unlike yuvfps which simply replicates or eliminates frames, yuvm
 frames by interpolating the motion between frames, using an MPEG-style motion compensation algorithm.
 </p>
 </blockquote>
+
 <h3>framerate</h3>
 <blockquote>
 <p><strong>David McNab</strong> wrote a little utility called <a href="http://www.freenet.org.nz/misc/framerate.py">framerate</a> to convert a video to same or different format with different framerate, with motion interpolation, using the yuvmotionfps and ffmpeg utilities. <em>framerate</em> is pretty simple. It eliminates the need for typing manual commands and creating huge yuv files on your disk. Its input and/or output can be piped. 
 </p>
 </blockquote>
+
 <h3>Paste, Turn, Copy!</h3>
 <blockquote>
 <p><strong>Guy Sheffer</strong> wrote this small tool for writing Hebrew text with the Titler. <em> Paste, Turn, Copy!</em> reverses Hebrew to Left-To-Righ text and reencodes it as cp1252 (instead of cp1255 ) producing text ready to be pasted in the Titler. The compositor will preview the text with the correct direction and caption. This tool can be easily extended for Arabic too. It is available as <a href="http://gnet.homelinux.com/files/paste-turn-copy_0.5-1_i386.deb">.deb package</a> for Debian and Ubuntu. Mail guysoft [at] ort.org.il for help.
 </p>
 </blockquote>
 
+<h3>CreateCueSheet</h3>
+<blockquote>
+<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <a
+href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueSheet</a>, a script that creates a PDF Cue-Sheet, based on LABELS in a Cinelerra .xml file. Creates a kind of storyboard, with labels frames marked. Uses LaTeX.
+<br>
+</p>
+</blockquote>
+
 </div>
 
-<address>Last modified on 24 August 2008</address>
+<address>Last modified on 13 November 2008</address>
 <?php include "footer.php"; ?>
 
 </body>
