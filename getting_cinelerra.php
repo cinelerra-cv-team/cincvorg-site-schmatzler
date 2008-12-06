@@ -306,14 +306,11 @@ echo deb http://akirad.cinelerra.org akirad-intrepid main | sudo tee
 http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && 
 sudo apt-get update<br>
 </code>
-- 7 are the packages available in the akirad repository:<br>
+- 4 are the packages available in the akirad repository:<br>
 <blockquote>
-cinelerra (x86 and x86_64 without opengl 2.0 video card)<br>
-cinelerra4-repack (Heroine Virtual version)<br>
-cinelerra-generic (all x86 and x86_64 with opengl 2.0 video card)<br>
-cinelerra-k7 (amd32 without opengl 2.0 video card)<br>
-cinelerra-k7gl (amd32 with opengl 2.0 video card)<br>
-cinelerra-k8 (amd k8 optimized with opengl 2.0 video card)<br>
+cinelerra (all computers)<br>
+cinelerra-gl (best on computer with opengl2.0 shader)<br>
+cinelerra-smp (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
 cinelerra-swtc (extra Shape Wipe Transitions)<br>
 </blockquote>
 - Ubuntu Intrepid uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
