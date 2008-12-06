@@ -288,24 +288,41 @@ installation can be found in the <a href='http://cvs.cinelerra.org/docs/split_ma
 <H4><a name="intrepid">8.10 Intrepid Ibex</a></h4>
 
 <blockquote>
-<p>For intrepid Ubuntu users: akirad repository offers a package to test.</p>
-
-<p>To install it just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer.</p>
-
-<p>Or use one of the following terminal commands:</p>
-<p><code> 
+for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
+<code>deb http://akirad.cinelerra.org akirad-intrepid main</code>
+<blockquote>
+Installation notes:<br>
+- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
+Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
+Alternatively, use one of the following terminal commands:<br>
+<code>
 wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i 
-addakirad.deb && rm addakirad.deb && sudo apt-get update
-</code></p>
-or
-<p><code>
+addakirad.deb && rm addakirad.deb && sudo apt-get update<br>
+</code>
+or<br>
+<code>
 echo deb http://akirad.cinelerra.org akirad-intrepid main | sudo tee 
 /etc/apt/sources.list.d/akirad.list && wget -q 
 http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && 
-sudo apt-get update
+sudo apt-get update<br>
 </code>
-</p>
-Please, report any package bug to <em>akir4d at gmail dot com</em>
+- 7 are the packages available in the akirad repository:<br>
+<blockquote>
+cinelerra (x86 and x86_64 without opengl 2.0 video card)<br>
+cinelerra4-repack (Heroine Virtual version)<br>
+cinelerra-generic (all x86 and x86_64 with opengl 2.0 video card)<br>
+cinelerra-k7 (amd32 without opengl 2.0 video card)<br>
+cinelerra-k7gl (amd32 with opengl 2.0 video card)<br>
+cinelerra-k8 (amd k8 optimized with opengl 2.0 video card)<br>
+cinelerra-swtc (extra Shape Wipe Transitions)<br>
+</blockquote>
+- Ubuntu Intrepid uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
+Server:  <br>
+Port: 7007 <br>
+- These packages set shmmax to 0x7fffffff and add non-English language
+support for Cinelerra.<br>
+- Please, report any package bug to <em>akir4d at gmail dot com</em>
+</blockquote>
 </blockquote>
 
 <H4><a name="hardy">8.04 Hardy Heron</a></h4>
@@ -438,7 +455,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on 26 September 2008 </address>
+<address> Last modified on 6 December 2008 </address>
 
 <?php include "footer.php"; ?>
  </body>
