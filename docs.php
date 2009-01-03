@@ -73,6 +73,8 @@ Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">ass
  <ul>
   <li><a href="http://www.robfisher.net/video/cinelerra1.html">Cinelerra Tutorial - Getting Started</a>, by Rob Fisher.
   </li>
+  <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO">Cinelerra for Grandma </a>, Basic HOWTOs for very beginners, by Raffaella Traniello.
+  </li>
      <li><a href="http://kutxa.homeunix.org/cinelerra">Edición de video bajo GNU/Linux (Cinelerra)</a>, in Spanish, by Gustavo Iñiguez Goya
   </li>
   <li><a href="http://www.funix.org/fr/linux/cinelerra.htm">Guide d'utilisation
@@ -99,6 +101,8 @@ Some HOWTOs for specific needs are available on the internet:
   </li>
   <li><a href="http://www.freenet.org.nz/misc/cintitles/">HOWTO make professional looking Scrolled Credits in Cinelerra</a>, by David McNab
   </li>
+  <li><a href="http://makefx.wordpress.com/2008/10/13/how-to-pan-in-an-image-ken-burns-effect/">How to pan in an image (Ken Burns effect)</a>, by Roland C.</li>
+  <li><a href="http://makefx.wordpress.com/2008/10/07/how-to-load-images-to-make-a-simple-presentation-slideshow/">How to load images to make a simple presentation (slideshow)</a>, by Roland C.</li>
   <li><a href="http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra/#more-246">Crear títulos diferentes con Cinelerra</a>, in Spanish, by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample
 projects.
   </li>
