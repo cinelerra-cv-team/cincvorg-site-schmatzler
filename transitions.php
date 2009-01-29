@@ -61,7 +61,10 @@ Nice 16:9 HD images suitable for the <em>Shape Wipe</em> transition in Cinelerra
 HD images can be downloaded only after registration. Scaled-down images (50 %) are available without registration. 
     <br>
     All images are royalty-free and can be freely downloaded and used.
-    </p>
+    </p></li>
+    <li>
+    <p>
+    You can find many SD and HD <em>Free Alpha Wipes</em> also at <a href="http://effectswiz.com/index.php">effectsWIZ</a>.
 </li>
 </ul>   
 <br>
