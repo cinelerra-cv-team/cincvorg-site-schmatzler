@@ -157,7 +157,7 @@ Installation for Gentoo GNU/Linux is very straight forward. Simply type: <BR>
 as root and it should install and run without any problems. <BR>
 Note that you may need to put cinelerra in your `/etc/portage/package.keywords'
 file in order to unmask it:<BR>
-<code>echo "=media-video/cinelerra ~x86" >> /etc/portage/package.keywords </code><BR>
+<code>echo "media-video/cinelerra ~x86" >> /etc/portage/package.keywords </code><BR>
 See the <a href='http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'>Handbook</a> 
 for details. <BR>
 More informations can be found in the <a
