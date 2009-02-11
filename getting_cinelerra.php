@@ -452,7 +452,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on 6 December 2008 </address>
+<address> Last modified on Feb 11 2009 </address>
 
 <?php include "footer.php"; ?>
  </body>
