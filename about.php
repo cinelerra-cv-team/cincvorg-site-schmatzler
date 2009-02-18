@@ -14,9 +14,9 @@ include "newsidemenu.php";
 
 <h2>About Cinelerra</h2>
 
-<p>Cinelerra is the most advanced non-linear video editor and compositor for Linux. It is developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php3">Heroine Virtual Ltd.</a>. 
+<p>Cinelerra is the most advanced non-linear video editor and compositor for Linux. It is developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php">Heroine Virtual Ltd.</a>.
 <br>
-To know more see the <a href=" http://www.heroinewarrior.com/cinelerra.php3">official Cinelerra home page</a> and the <a href="http://sourceforge.net/projects/heroines/">SourceForge project page</a>.
+To know more see the <a href=" http://www.heroinewarrior.com/cinelerra.php">official Cinelerra home page</a> and the <a href="http://sourceforge.net/projects/heroines/">SourceForge project page</a>.
 </p>
 <p>Cinelerra's source code is available under the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a>.
 <br>
@@ -84,7 +84,7 @@ href='media/andraz_tori_cinelerra_2005.10.21.ogg'>Audio Extracted</a>
 
 </div>
 
-<address>Last modified on 20 August 2008</address>
+<address>Last modified on 18 Feb 2009</address>
 <?php include "footer.php"; ?>
 </body>
 </html>
