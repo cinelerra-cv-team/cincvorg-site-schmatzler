@@ -89,6 +89,7 @@ by Laurent Bellegarde.
   </li>
   <li><a href="http://akiradproject.net/tutorial">Cinelerra is very easy</a> - in English and Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
+  <li><a href="http://www.billauer.co.il/cinelerra-video-edit-quickstart.html">Cinelerra quick start summary</a>, by Eli Billauer.</li>
 </ul>
 <h2><a name="links">HOWTOs</a></h2>
 Some HOWTOs for specific needs are available on the internet:
@@ -160,7 +161,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 8 August 2008 </address>
+<address> Last modified on 7 March 2009 </address>
 
 <?php include "footer.php"; ?>
  </body>
