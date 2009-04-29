@@ -267,11 +267,10 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <a href="http://cin.kevb.net/files/RPM/">kevb.net</a>.
 </blockquote>
 
-
-
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
 <h4>
+<a href="#jaunty">Jaunty Jackalope</a> |
 <a href="#intrepid">Intrepid Ibex</a> |
 <a href="#hardy">Hardy Heron</a> |
 <a href="#gutsy">Gutsy Gibbon</a> |
@@ -283,6 +282,37 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <blockquote>
 <p>Here are the Ubuntu packages repositories. Detailed instructions for
 installation can be found in the <a href='http://cvs.cinelerra.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC24'>Manual</a>.</p>
+</blockquote>
+
+<H4><a name="jaunty">9.04 Jaunty Jackalope</a></h4>
+<blockquote>
+for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
+<code>deb http://akirad.cinelerra.org akirad-jaunty main </code>
+<blockquote>
+Installation notes:<br>
+- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
+Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
+Alternatively, use one of the following terminal commands:<br>
+<code>
+wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i addakirad.deb && rm addakirad.deb && sudo apt-get update<br>
+</code>
+or<br>
+<code>
+echo deb http://akirad.cinelerra.org akirad-jaunty main | sudo tee /etc/apt/sources.list.d/akirad.list && wget -q http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && sudo apt-get update<br>
+</code>
+- 4 are the packages available in the akirad repository:<br>
+<blockquote>
+cinelerracv (all computers)<br>
+cinelerracv-gl (best on computer with opengl2.0 shader)<br>
+cinelerracv-smp (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+cinelerra-swtc (extra Shape Wipe Transitions)<br>
+</blockquote>
+- Ubuntu jaunty uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
+Server: <br>
+Port: 7007 <br>
+- These packages set shmmax to 0x7fffffff and add non-English language support for Cinelerra.<br>
+- Please, report any package bug to <em>akir4d at gmail dot com </em>
+</blockquote>
 </blockquote>
 
 <H4><a name="intrepid">8.10 Intrepid Ibex</a></h4>
