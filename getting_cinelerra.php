@@ -274,9 +274,6 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <a href="#intrepid">Intrepid Ibex</a> |
 <a href="#hardy">Hardy Heron</a> |
 <a href="#gutsy">Gutsy Gibbon</a> |
-<a href="#feisty">Feisty Fawn</a> |
-<a href="#edgy">Edgy Eft</a> |
-<a href="#dapper">Dapper Drake</a> 
 </h4>
 
 <blockquote>
@@ -425,51 +422,6 @@ libfaac (1.25) you can try installing <a
 href='http://www.debian-multimedia.org/dists/stable/main/binary-amd64/package/libfaac0.php'>libfaac0</a>.
 </blockquote>
 </blockquote>
-
-<H4><a name="feisty">7.04 Feisty Fawn</a></h4>
-
-<blockquote>
-optimised for UbuntuStudio, with OpenGL, by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntuopengl/ ./</code><br><br>
-for AMD64 (and also Core Duo Intel64), by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu64 ./</code><br><br>
-for 64 bits with OpenGL disabled, by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu64NOopengl/ ./</code><br><br>
-for i386, by muzzol:<br>
-<code>deb http://www.kiberpipa.org/~muzzol/cinelerra/feisty-i386/ ./</code><br><br>
-for i686, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/i686/ ./</code><br><br>
-for athlonxp, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/athlonxp/ ./</code><br><br>
-for pentium4, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/feisty/cinelerra/pentium4/ ./</code><br><br>
-</blockquote>
-
-
-<H4><a name="edgy">6.10 Edgy Eft</a></h4>
-
-<blockquote>
-by muzzol<br>
-<code>deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./</code><br><br>
-by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu32/edgy ./</code><br><br>
-</blockquote>
-
-<h4><a name="dapper">6.06 Dapper Drake</a></h4>
-
-<blockquote>
-necessary mjpegtools ubuntu backport, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/dapper/mjpegtools ./</code><br><br>
-for pentium4, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/dapper/cinelerra/pentium4/
-./</code><br><br>
-for i686, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/dapper/cinelerra/i686/ ./</code><br><br>
-for athlonxp, by Jure Cuhalev:<br>
-<code>deb http://www.kiberpipa.org/~gandalf/ubuntu/dapper/cinelerra/athlonxp/
-./</code><br><br>
-</blockquote>
-
 
 <h2><a name="source">Source code</a></h2>
 
