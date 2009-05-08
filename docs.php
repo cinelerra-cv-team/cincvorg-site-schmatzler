@@ -100,6 +100,8 @@ Some HOWTOs for specific needs are available on the internet:
   </li>
   <li><a href="http://jcornet.free.fr/linux/chromakey.html">HOWTO use theChromakey (HSV) plugin</a>, by Jerome Cornet
   </li>
+<li><a href="http://crazedmuleproductions.blogspot.com/2009/03/motion-stabilization-tutorial.html">Motion Stabilization Tutorial</a>, by Scott Frase
+  </li>
   <li><a href="http://www.freenet.org.nz/misc/cintitles/">HOWTO make professional looking Scrolled Credits in Cinelerra</a>, by David McNab
   </li>
   <li><a href="http://makefx.wordpress.com/2008/10/13/how-to-pan-in-an-image-ken-burns-effect/">How to pan in an image (Ken Burns effect)</a>, by Roland C.</li>
@@ -161,7 +163,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 7 March 2009 </address>
+<address> Last modified on 9 May 2009 </address>
 
 <?php include "footer.php"; ?>
  </body>
