@@ -14,6 +14,18 @@ include "newsidemenu.php";
 
 <h2><a name="news">News</a></h2>
 <p>
+<strong>May &nbsp;8, 2009</strong><br>
+* Leo Laporte and Randal Schwartz talk about Cinelerra and Lumiera on <a href="http://odtv.me/2009/05/06/floss-68/">FLOSS Weekly podcast #68</a> on <a href="http://twit.tv/FLOSS">Twit.tv</a>. Guests: Joel Holdsworth and Aaron Newcomb.
+</p>
+<p>
+<strong>January &nbsp;21, 2009</strong><br>
+* Cinelerra-cv now supports dnxhd codec. See git <a href="http://git.cinelerra.org/gitweb?p=j6t/cinelerra.git;a=commitdiff;h=954a91e72bba1ed1ce641b5faee7d4c5f318c074">commit</a>.
+</p>
+<p>
+<strong>December &nbsp;31, 2008</strong><br>
+* The new Lumiera logo has been chosen. Admire it <a href="http://lumiera.org/credits.html">here</a>.
+</p>
+<p>
 <strong>October &nbsp;26, 2008</strong><br>
 * <a href="http://lumiera.org">Lumiera</a> is looking for a logo. Enter the <a href="http://www.pipapo.org/pipawiki/Lumiera/Logos">Logo Contest</a>!.
 </p>
@@ -87,7 +99,7 @@ Ubuntu 8.10 Intrepid Ibex.
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 30 October 2008 </address>
+<address>Last modified on 9 May 2009</address>
 
 <?php include "footer.php"; ?>
 </body>
