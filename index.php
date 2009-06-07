@@ -103,7 +103,7 @@ Ubuntu 8.10 Intrepid Ibex.
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 9 May 2009</address>
+<address>Last modified on 7 June 2009</address>
 
 <?php include "footer.php"; ?>
 </body>
