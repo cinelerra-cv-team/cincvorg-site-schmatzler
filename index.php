@@ -14,6 +14,10 @@ include "newsidemenu.php";
 
 <h2><a name="news">News</a></h2>
 <p>
+<strong>June &nbsp;1, 2009</strong><br>
+* CinelerraCV will be at the <a href="http://openvideoconference.org/">Openvideo Conference</a> in New York on 19-20 June 2009. Scott Frase will represent the community.
+</p>
+<p>
 <strong>May &nbsp;8, 2009</strong><br>
 * Leo Laporte and Randal Schwartz talk about Cinelerra and Lumiera on <a href="http://odtv.me/2009/05/06/floss-68/">FLOSS Weekly podcast #68</a> on <a href="http://twit.tv/FLOSS">Twit.tv</a>. Guests: Joel Holdsworth and Aaron Newcomb.
 </p>
