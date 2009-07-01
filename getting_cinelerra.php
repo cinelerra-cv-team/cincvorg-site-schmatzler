@@ -24,16 +24,17 @@ through the use of Live CDs. Here are some of the Live CD's known to
 contain cinelerra</p>
 
 <ul>
-<li><a href='http://www.knoppix.org'>Knoppix</a> - the "original" Debian-based LiveDistro
-<li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager
-<li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager
-<li><a href='http://http://x-evian.org'>x-evian</a> - Debian based live CD for multimedia creations
-<li><a href='http://www.mediainlinux.org'>MediainLinux</a> - Knoppix based live CD
-<li><a href='http://musix.org.ar'>Musix</a> - Knoppix based - for audio production, graphic design and video editing
-<li><a href='http://garbure.org/pho/'>pho (garbure)</a> - dedicated to video editing
-<li><a href='http://linux.slo-tech.com'>Slo-Tech</a> - based on Debian and Morphix
+<li><a href='http://www.knoppix.org'>Knoppix</a> - the "original" Debian-based LiveDistro</li>
+<li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li>
+<li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li>
+<li><a href='http://http://x-evian.org'>x-evian</a> - Debian based live CD for multimedia creations</li>
+<li><a href='http://www.mediainlinux.org'>MediainLinux</a> - Knoppix based live CD</li>
+<li><a href='http://musix.org.ar'>Musix</a> - Knoppix based - for audio production, graphic design and video editing</li>
+<li><a href='http://garbure.org/pho/'>pho (garbure)</a> - dedicated to video editing</li>
+<li><a href='http://linux.slo-tech.com'>Slo-Tech</a> - based on Debian and Morphix</li>
 <li><a href='http://artistx.org'>ArtistX</a> - based on Debian, Gnome or KDE,
-for multimedia
+for multimedia</li>
+<li><a href='http://dl.getdropbox.com/u/331020/Mindmap/index.html'>openArtist</a> - based on Ubuntu Hardy, for artists</li>
 </ul>
 
 
