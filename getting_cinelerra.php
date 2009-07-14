@@ -274,7 +274,6 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <a href="#jaunty">Jaunty Jackalope</a> |
 <a href="#intrepid">Intrepid Ibex</a> |
 <a href="#hardy">Hardy Heron</a> |
-<a href="#gutsy">Gutsy Gibbon</a> |
 </h4>
 
 <blockquote>
@@ -385,43 +384,6 @@ support for Cinelerra.<br>
 <blockquote>
 for i386 (not working on amd 32 bits), by Valentina Messeri:<br>
 <code>deb http://giss.tv/~vale/ubuntu32/hardy ./</code><br><br>
-</blockquote>
-<H4><a name="gutsy">7.10 Gutsy Gibbon</a></h4>
-
-<blockquote>
-for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-<code>deb http://akirad.cinelerra.org akirad-gutsy main</code>
-<blockquote>
-Installation notes:<br>
-- To add this repository in your sources list use the following terminal command:<br>
-<code>sudo wget http://akirad.cinelerra.org/dists/gutsy.list -O
-/etc/apt/sources.list.d/akirad.list</code><br>
-- Installations from this repository need an authentication key. Add it by 
-  typing in your terminal the following command: <br>
-<code>wget -q http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key 
-add - && sudo apt-get update</code><br>
-- Cinelerra package is available in 5 variants:<br>
-<blockquote>
-cinelerra (all x86 and x86_64 without opengl 2.0 video card)<br>
-cinelerra-generic (all x86 and x86_64 with opengl 2.0 video card)<br>
-cinelerra-k7 (all amd32 without opengl 2.0 video card)<br>
-cinelerra-k7gl (all amd32 with opengl 2.0 video card)<br>
-cinelerra-k8 (all amd64 with opengl 2.0 video card)
-</blockquote>
-- These packages set shmmax to 0x7fffffff and add non-English language 
-support for Cinelerra.<br>
-- Please, report any package bug to <em>akir4d at gmail dot com</em>
-</blockquote>
-for i386 (not working on amd 32 bits), by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu32/gutsy ./</code><br><br>
-for AMD64 (and also Core Duo Intel64), by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu64 ./</code><br>
-<blockquote>
-Installation note:<br>
-- If your package manager complains that it does not have the right version of
-libfaac (1.25) you can try installing <a
-href='http://www.debian-multimedia.org/dists/stable/main/binary-amd64/package/libfaac0.php'>libfaac0</a>.
-</blockquote>
 </blockquote>
 
 <h2><a name="source">Source code</a></h2>
