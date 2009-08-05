@@ -11,7 +11,7 @@ include "newsidemenu.php";
 <h2>Patches</h2>
 <h3>Cinelerra Bezier Patch</h3>
 <blockquote>
-<p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra-CV 2.1CV. It retains backwards and (partially) upwards compatibility of session files. It is a developement/beta version. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
+<p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. It is a developement/beta version. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
 </p>
 </blockquote>
 <h2>Tools</h2>
