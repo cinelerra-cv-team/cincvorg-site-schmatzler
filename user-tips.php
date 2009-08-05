@@ -8,6 +8,12 @@ include "newsidemenu.php";
 ?>
 
 <div class="content">
+<h2>Patches</h2>
+<h3>Cinelerra Bezier Patch</h3>
+<blockquote>
+<p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra-CV 2.1CV. It retains backwards and (partially) upwards compatibility of session files. It is a developement/beta version. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
+</p>
+</blockquote>
 <h2>Tools</h2>
 <h3>IMG2LIST - Cinelerra List Generator</h3>
 <blockquote>
@@ -18,7 +24,6 @@ out a frame of an images sequence and autodetects all related parameters with it
 resolution. TIFF and PNG are now supported. Download it <a
 href="http://argoslabs.com/~malefico/software/img2list-0.1.5.tar.gz" > here</a>. <br> 
 (<a href="http://argoslabs.com/~malefico/software/img2list.html">Spanish version</a>)<br>
-
 </p>
 </blockquote>
 <h3>Seven Gnomes</h3>
