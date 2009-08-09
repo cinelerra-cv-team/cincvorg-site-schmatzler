@@ -130,6 +130,7 @@ easy introduction to Interlacing for beginners.
   </li>  
   <li><a href="http://www.100fps.com">What is Deinterlacing? Facts,solutions,examples</a>, in depth description of interlacing.
   </li>  
+  <li> <a href="http://people.xiph.org/~greg/video/ytcompare/comparison.html">YouTube / Ogg/Theora comparison</a>, interesting read, with video examples by Gregory Maxwell from Wikipedia</li>
   <li><a href="http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html">MPEG-2 FAQ</a>.
   </li>    
   <li><a href="http://dvinfo.net/conf/showthread.php?t=76674">Exporting edited HD content back to the camcorder</a> (HDV related).
@@ -163,7 +164,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 9 May 2009 </address>
+<address> Last modified on 9 August 2009 </address>
 
 <?php include "footer.php"; ?>
  </body>
