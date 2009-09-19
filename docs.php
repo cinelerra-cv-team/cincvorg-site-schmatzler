@@ -11,7 +11,7 @@ include "newsidemenu.php";
 <div class="content">
  <h1>The features, the manual, the tutorials</h1>
  <h2>Cinelerra's features</h2>
- Linux Media Arts has an <a href="http://www.lmahd.com/cinelerra.html">impressing listing of Cinelerra's features</a>.  6-channel sound, HDTV,
+ Linux Media Arts has an <a href="http://www.lmahd.com/cinelerra.html">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,
   multiple effects, built-in videoscope and more.  With screenshots.
 <h2>Cinelerra CV manual</h2>
   <ul>
