@@ -166,7 +166,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 9 August 2009 </address>
+<address> Last modified on 19 September 2009 </address>
 
 <?php include "footer.php"; ?>
  </body>
