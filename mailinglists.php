@@ -29,11 +29,13 @@ include "newsidemenu.php";
   <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/">Web
   archive</a> that anybody can browse.
   <br>
-  Kevin Brosius maintains
-  <a href="http://e.kevb.net/lurker/list/cinelerra.en.html">
-  a nicer looking archive</a>, using
-  <a href="http://lurker.sourceforge.net/">Lurker</a>.
-  It has a search function.
+  The archives are avaialble also on:
+<ul>
+<li><a href="http://e.kevb.net/lurker/list/cinelerra.en.html">
+Lurker</a>, maintained by Kevin Brosius</li>
+<li><a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">The Mail Archive</a></li>
+<li><a href="http://dir.gmane.org/gmane.comp.video.cinelerra-cv.general">GMANE</a></li>
+</ul>
   </p>
 
    <h4>Cinelerra SVN commits</h4>
