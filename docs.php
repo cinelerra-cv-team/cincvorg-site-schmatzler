@@ -66,6 +66,7 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li>  #4 is in <i>Episode 3 "Revenge of Cinelerra"</i> from min 10 to min 36 <BR>
  (Rendering for DVD, rendering for the web, transcoding with ffmpeg). </li>
 </ul></li>
+<li><a href="http://www.facilware.com/?page_id=1384">Video manuales de Cinelerra</a> - by FacilWare, in Spanish.</li>
 <li><a href="http://www.assistcg.com/attachments/063_VideoTutorial.mov.zip">
 Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">assistcg.com</a> (drag and drop mode, cut and paste mode, video transitions) - downloadable .zip file.</li>
 </ul>
@@ -82,7 +83,7 @@ de Cinelerra</a>, in French, by funix.org.
   </li> 
   <li><a href="http://laurent.bellegarde.free.fr/lprod/tutoriels/tutoriel_cinelerra_niv1_debutant.pdf">Faire un montage video</a>, French tutorial for beginners on Cinelerra HV,
 by Laurent Bellegarde.
-  </li>  
+  </li>
   <li><a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">Capturando e editando video usando Software Livre</a>, in Portuguese, by Rafael Diniz
   </li>
   <li><a href="http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">Tutorial Cinelerra</a>, in Portuguese, by Leo Germani
@@ -149,6 +150,7 @@ Source video editing, especially for Cinelerra HV (among them an Ubuntu package)
   </li>
   <li><a href="http://www.g-raffa.eu/Cinelerra/cin_glossary.html">Cinelera CV Glossary</a>, for newbies.
   </li>     
+<li><a href="http://carlospineiro.site90.com/">Cinelerra.ES</a>, website dedicated to video editing in GNU/Linux (in Spanish).</li>
 </ul>
 <h2>Cinelerra CV Wiki</h2>
 <p>  <B>DokuWiki</B><BR>
