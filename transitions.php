@@ -80,6 +80,7 @@ New images can be placed in any location. Use the <em>Browse</em> button to brow
 
 Here you can find extra themes for Cinelerra interface.<br>
 <ul>
+<li><a href="http://blenderartists.org/forum/showthread.php?t=37452">Monkey</a> - an elegant dark grey theme, by <b>Fweeb</b></li>
 <li><a href="http://fr.lprod.org/wiki/doku.php?id=video:cinelerra:pluginlprod" >
 lprod</a> - a light colour theme. </li>
 <li><a href="http://placide.home.sapo.pt/cinelerra01.html"> Greenelerra</a> - a
