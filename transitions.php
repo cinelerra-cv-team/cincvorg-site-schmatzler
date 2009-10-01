@@ -93,7 +93,7 @@ dark green theme, with light green and red used for emphasis, by
 </div>
 
 
-<address>Last modified on 7 August 2008</address>
+<address>Last modified on 1 October 2009</address>
 
 <?php include "footer.php"; ?>
 </body> </html>
