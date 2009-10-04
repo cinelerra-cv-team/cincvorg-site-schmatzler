@@ -445,6 +445,7 @@ Utility
 <blockquote>
 <i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
 </blockquote>
+</blockquote>
 - Ubuntu Hardy moved to Pulse Audio Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
 Server:  <br>
 Port: 7007 <br>
