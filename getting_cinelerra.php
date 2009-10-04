@@ -308,14 +308,14 @@ Comunity Version of Cinelerra
 <i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
 Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
 <blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+<i>cinelerrasv</i> (all computers)<br>
+<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
+<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
 </blockquote>
 Utility
 <blockquote>
 <i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote>
+</blockquote></blockquote>
 
 - Ubuntu Karmic uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
 Server: <br>
@@ -324,6 +324,7 @@ Port: 7007 <br>
 - Please, report any package bug to <em>akir4d at gmail dot com </em>
 </blockquote>
 </blockquote>
+
 <H4><a name="jaunty">9.04 Jaunty Jackalope</a></h4>
 <blockquote>
 for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
@@ -349,13 +350,14 @@ Comunity Version of Cinelerra
 <i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
 Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
 <blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+<i>cinelerrasv</i> (all computers)<br>
+<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
+<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
 </blockquote>
 Utility
 <blockquote>
 <i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
+</blockquote>
 </blockquote>
 - Ubuntu Jaunty uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
 Server: <br>
@@ -395,14 +397,14 @@ Comunity Version of Cinelerra
 <i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
 Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
 <blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+<i>cinelerrasv</i> (all computers)<br>
+<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
+<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
 </blockquote>
 Utility
 <blockquote>
 <i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote>
+</blockquote></blockquote>
 - Ubuntu Intrepid uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
 Server:  <br>
 Port: 7007 <br>
@@ -435,9 +437,9 @@ Comunity Version of Cinelerra
 <i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
 Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
 <blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+<i>cinelerrasv</i> (all computers)<br>
+<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
+<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
 </blockquote>
 Utility
 <blockquote>
