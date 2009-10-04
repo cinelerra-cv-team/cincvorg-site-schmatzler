@@ -15,7 +15,7 @@ include "newsidemenu.php";
 <h2><a name="news">News</a></h2>
 <p>
 <strong>Sept &nbsp;24, 2009</strong><br>
-* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.1</a>, featuring now nested sequences. 64 bit binaries for Fedora 11 and for Ubuntu 9.04 are available.</a>
+* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.1</a>, featuring nested sequences. 64 bit binaries for Fedora 11 and for Ubuntu 9.04 are also available.</a>
 </p>
 <p>
 <strong>June &nbsp;1, 2009</strong><br>
