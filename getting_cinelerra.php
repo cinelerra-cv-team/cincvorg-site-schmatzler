@@ -24,7 +24,7 @@ through the use of Live CDs. Here are some of the Live CD's known to
 contain cinelerra</p>
 
 <ul>
-<li><a href='http://www.bandshed.net/AVLinux.html>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE</li>
+<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE</li>
 <li><a href='http://artistx.org'>ArtistX</a> - based on Ubuntu Intrepid, Gnome or KDE,
 for multimedia</li>
 <li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li>
