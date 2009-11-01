@@ -87,6 +87,8 @@ by Laurent Bellegarde.
   <li><a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">Capturando e editando video usando Software Livre</a>, in Portuguese, by Rafael Diniz
   </li>
   <li><a href="http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">Tutorial Cinelerra</a>, in Portuguese, by Leo Germani
+  </li> 
+  <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/basics.html">Cinelerra in 30 minutes and 10 steps</a> - in English and Italian - Cinelerra basics, for Grandma, by Raffaella Traniello. 
   </li>
   <li><a href="http://akiradproject.net/tutorial">Cinelerra is very easy</a> - in English and Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
