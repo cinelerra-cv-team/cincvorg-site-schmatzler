@@ -98,6 +98,11 @@ by Laurent Bellegarde.
 </ul>
 <h2><a name="links">HOWTOs</a></h2>
 Some HOWTOs for specific needs are available on the internet:
+
+<ul>
+  <li><a href="http://www.udosworld.de/">Installation von Cinelerra unter Debian</a> (in the LINUX section of the site) - in German - by Udo Bender </li>
+  <li><a href=http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html"">How to compile CinelerraCV on Ubuntu</a> - In English and Italian - by Raffaella Traniello</li>
+</ul>
 <ul>
   <li><a href="http://crazedmuleproductions.blogspot.com/2007/06/beginners-guide-to-exporting-video-from.html">Beginner's Guide to Exporting Video from Cinelerra</a>, by Scott Frase
   </li>
