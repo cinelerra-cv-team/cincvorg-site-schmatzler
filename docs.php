@@ -175,7 +175,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 31 Ottobre 2009 </address>
+<address> Last modified on 25 February 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
