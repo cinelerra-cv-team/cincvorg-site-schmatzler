@@ -101,11 +101,11 @@ Some HOWTOs for specific needs are available on the internet:
 
 <ul>
   <li><a href="http://www.udosworld.de/">Installation von Cinelerra unter Debian</a> (in the LINUX section of the site) - in German - by Udo Bender </li>
-  <li><a href=http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html"">How to compile CinelerraCV on Ubuntu</a> - In English and Italian - by Raffaella Traniello</li>
+  <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">How to compile CinelerraCV on Ubuntu</a> - In English and Italian - by Raffaella Traniello</li>
+ <li><a href="http://crazedmuleproductions.blogspot.com/2010/02/fedora-12-x86-64-cinelerra-install.html">How to compile CinelerraCV on Fedora 12</a>, by Scott Frase </li>
 </ul>
 <ul>
-  <li><a href="http://crazedmuleproductions.blogspot.com/2007/06/beginners-guide-to-exporting-video-from.html">Beginner's Guide to Exporting Video from Cinelerra</a>, by Scott Frase
-  </li>
+  <li><a href="http://crazedmuleproductions.blogspot.com/2007/06/beginners-guide-to-exporting-video-from.html">Beginner's Guide to Exporting Video from Cinelerra</a>, by Scott Frase  </li>
   <li><a href="http://www.youtube.com/watch?v=MhaOgNQ0Bbc">Capturing desktop screens in Cinelerra</a>, screencast by Scott Frase
   </li>
   <li><a href="http://jcornet.free.fr/linux/chromakey.html">HOWTO use theChromakey (HSV) plugin</a>, by Jerome Cornet
