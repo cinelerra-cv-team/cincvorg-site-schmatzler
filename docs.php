@@ -123,7 +123,9 @@ projects.
 own video transition with Cinelerra and Inkscape</a> in English and Italian, by
 Paolo Rampino
   </li>
-  <li><a href="http://www.g-raffa.eu/SimAV/">SimAV HOWTOs</a> - How to create a picture in picture effect, How to create overlays, How to change theme, by Simeon Volkel
+  <li><a href="http://www.raiden.net/articles/tutorial_using_cinelerra_to_create_pip_videos/">Using Cinelerra to create PiP videos</a> - How to create a picture in picture effect, by Doug Bonnell
+  </li> 
+<li><a href="http://www.g-raffa.eu/SimAV/">SimAV HOWTOs</a> - How to create a picture in picture effect, How to create overlays, How to change theme, by Simeon Volkel
   </li> 
   <li><a
 href="http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder">Tips
