@@ -18,12 +18,12 @@ include "newsidemenu.php";
 <h3>IMG2LIST - Cinelerra List Generator</h3>
 <blockquote>
 <p><strong>Claudio "Malefico" Andaur</strong> wrote a little application called <a
-href="http://argoslabs.com/%7Emalefico/tutor/img2list-en.html">IMG2LIST
+href="http://www.malefico3d.org/blog-en/?page_id=224">IMG2LIST
 0.1.5</a>, that is a Cinelerra List Generator for converting an image sequence to a single list file. This script generates a list 
 out a frame of an images sequence and autodetects all related parameters with it, including number of frames, file format and image 
 resolution. TIFF and PNG are now supported. Download it <a
-href="http://argoslabs.com/~malefico/software/img2list-0.1.5.tar.gz" > here</a>. <br> 
-(<a href="http://argoslabs.com/~malefico/software/img2list.html">Spanish version</a>)<br>
+href="http://www.malefico3d.org/download/img2list-0.1.5.tar.gz" > here</a>. <br> 
+(<a href="http://www.malefico3d.org/blog/?page_id=333">Spanish version</a>)<br>
 </p>
 </blockquote>
 <h3>Seven Gnomes</h3>
