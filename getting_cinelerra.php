@@ -271,189 +271,48 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
-<h4>
-<a href="#karmic">Karmic Koala</a> |
-<a href="#jaunty">Jaunty Jackalope</a> |
-<a href="#intrepid">Intrepid Ibex</a> |
-<a href="#hardy">Hardy Heron</a> |
-</h4>
-
 <blockquote>
-<p>Here are the Ubuntu packages repositories. Detailed instructions for
-installation can be found in the <a href='http://cvs.cinelerra.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC24'>Manual</a>.</p>
+<p>Here are the Ubuntu packages repositories for 10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex, 8.04 Hardy Heron.</p>
 </blockquote>
 
-<H4><a name="karmic">9.10 Karmic Koala</a></h4>
 <blockquote>
 for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-<code>deb http://akirad.cinelerra.org akirad-karmic main </code>
+
+(Replace 'YOURVERSION' with 'hardy', 'intrepid', 'jaunty', 'karmic' or 'lucid' depending on your release)<br>
+<code>deb http://akirad.cinelerra.org akirad-YOURVERSION main</code>
 <blockquote>
 Installation notes:<br>
-- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
-Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
+- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated.<br>
+Just double click on the link
+<a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer.<br>
 Alternatively, use one of the following terminal commands:<br>
-<code>
-wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i addakirad.deb && rm addakirad.deb && sudo apt-get update<br>
-</code>
-or<br>
-<code>
-echo deb http://akirad.cinelerra.org akirad-karmic main | sudo tee /etc/apt/sources.list.d/akirad.list && wget -q http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && sudo apt-get update<br>
-</code>
-- 7 are the packages available in the akirad repository:<br>
+        <code>wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i addakirad.deb && rm addakirad.deb && sudo apt-get update</code><br>
+        or<br>
+<code>echo deb http://akirad.cinelerra.org akirad-YOURVERSION main | sudo tee /etc/apt/sources.list.d/akirad.list && wget -q http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && sudo apt-get update</code><br>
+
+- 3 are the packages available in the akirad repository:<br>
 <blockquote>
-Comunity Version of Cinelerra
+Comunity Version of Cinelerra<br>
 <blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
-Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
-<blockquote>
-<i>cinelerrasv</i> (all computers)<br>
-<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
+<i>cinelerra</i> (all computers)<br>
+<i>cinelerra-xt</i> (same of cinelerra, but with ssse3 enabled that gives about 20% more performance on recent intel cpus)<br>
 </blockquote>
-Utility
+
+            Utility
 <blockquote>
 <i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote></blockquote>
-
-- Ubuntu Karmic uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
-Server: <br>
-Port: 7007 <br>
+</blockquote>
+</blockquote>
 - These packages set shmmax to 0x7fffffff and add non-English language support for Cinelerra.<br>
-- Please, report any package bug to <em>akir4d at gmail dot com </em>
-</blockquote>
-</blockquote>
-
-<H4><a name="jaunty">9.04 Jaunty Jackalope</a></h4>
-<blockquote>
-for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-<code>deb http://akirad.cinelerra.org akirad-jaunty main </code>
-<blockquote>
-Installation notes:<br>
-- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
-Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
-Alternatively, use one of the following terminal commands:<br>
-<code>
-wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i addakirad.deb && rm addakirad.deb && sudo apt-get update<br>
-</code>
-or<br>
-<code>
-echo deb http://akirad.cinelerra.org akirad-jaunty main | sudo tee /etc/apt/sources.list.d/akirad.list && wget -q http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && sudo apt-get update<br>
-</code>
-- 7 are the packages available in the akirad repository:<br>
-<blockquote>
-Comunity Version of Cinelerra
-<blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
-Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
-<blockquote>
-<i>cinelerrasv</i> (all computers)<br>
-<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
-</blockquote>
-Utility
-<blockquote>
-<i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote>
-</blockquote>
-- Ubuntu Jaunty uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
-Server: <br>
-Port: 7007 <br>
-- These packages set shmmax to 0x7fffffff and add non-English language support for Cinelerra.<br>
-- Please, report any package bug to <em>akir4d at gmail dot com </em>
-</blockquote>
-</blockquote>
-
-<H4><a name="intrepid">8.10 Intrepid Ibex</a></h4>
-
-<blockquote>
-for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-<code>deb http://akirad.cinelerra.org akirad-intrepid main</code>
-<blockquote>
-Installation notes:<br>
-- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
-Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
-Alternatively, use one of the following terminal commands:<br>
-<code>
-wget -q http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i 
-addakirad.deb && rm addakirad.deb && sudo apt-get update<br>
-</code>
-or<br>
-<code>
-echo deb http://akirad.cinelerra.org akirad-intrepid main | sudo tee 
-/etc/apt/sources.list.d/akirad.list && wget -q 
-http://akirad.cinelerra.org/dists/akirad.key -O- | sudo apt-key add - && 
-sudo apt-get update<br>
-</code>
-- 7 are the packages available in the akirad repository:<br>
-<blockquote>
-Comunity Version of Cinelerra
-<blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
-Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
-<blockquote>
-<i>cinelerrasv</i> (all computers)<br>
-<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
-</blockquote>
-Utility
-<blockquote>
-<i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote></blockquote>
-- Ubuntu Intrepid uses Pulse Audio as Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
-Server:  <br>
-Port: 7007 <br>
-- These packages set shmmax to 0x7fffffff and add non-English language
-support for Cinelerra.<br>
+- IN EVENT OF UPDATE PROBLEMS RUN THE FOLLOWING TERMINAL COMMAND:
+<code>for i in sv cv cv-gl sv-gl cv-smp sv-smp; do sudo apt-get --force-yes --assume-yes remove cinelerra$i libquicktime$i libmpeg3$i libguicast$i; done && sudo apt-get install cinelerra</code><br>
 - Please, report any package bug to <em>akir4d at gmail dot com</em>
 </blockquote>
 </blockquote>
+
 
 <H4><a name="hardy">8.04 Hardy Heron</a></h4>
 
-<blockquote>
-for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-<code>deb http://akirad.cinelerra.org akirad-hardy main</code>
-<blockquote>
-Installation notes:<br>
-- For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated. <br>
-Just double click on the link <a href="http://akirad.cinelerra.org/pool/addakirad.deb">http://akirad.cinelerra.org/pool/addakirad.deb</a> and install it with GDebi Package Installer. <br>
-Alternatively, use the following terminal command:<br>
-<code>wget -c http://akirad.cinelerra.org/pool/addakirad.deb && sudo dpkg -i
-addakirad.deb</code><br>
-- To update the repository information press <i>Reload</i> in Synaptic Package Manager (Adept for Kubuntu) or use the following terminal command: <br>
-<code>sudo apt-get update</code><br>
-- 7 are the packages available in the akirad repository:<br>
-<blockquote>
-Comunity Version of Cinelerra
-<blockquote>
-<i>cinelerracv</i> (all computers)<br>
-<i>cinelerracv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerracv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br></blockquote>
-Simeon V&ouml;lkel merge between CinelerraCV2.1 and CinelerraHV4
-<blockquote>
-<i>cinelerrasv</i> (all computers)<br>
-<i>cinelerrasv-gl</i> (best on computer with opengl2.0 shader)<br>
-<i>cinelerrasv-smp</i> (best on multiprocessors computer, it allows also opengl2.0 shader)<br>
-</blockquote>
-Utility
-<blockquote>
-<i>cinelerra-swtc</i> (extra Shape Wipe Transitions)<br>
-</blockquote>
-</blockquote>
-- Ubuntu Hardy moved to Pulse Audio Sound driver. Since it comes with a PulseAudio ESD compatibility layer, Cinelerra can be set to work with PulseAudio. Simply open Cinelerra and go to <i>Settings->Preferences->Playback->Audio Driver</i>. Select <i>ESound</i> and set the following parameters:<br>
-Server:  <br>
-Port: 7007 <br>
-- These packages set shmmax to 0x7fffffff and add non-English language 
-support for Cinelerra.<br>
-- Please, report any package bug to <em>akir4d at gmail dot com</em>
-</blockquote>
-</blockquote>
 <blockquote>
 for i386 (not working on amd 32 bits), by Valentina Messeri:<br>
 <code>deb http://giss.tv/~vale/ubuntu32/hardy ./</code><br><br>
