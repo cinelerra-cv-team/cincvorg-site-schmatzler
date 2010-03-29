@@ -278,7 +278,7 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <blockquote>
 for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
 
-(Replace 'YOURVERSION' with 'hardy', 'intrepid', 'jaunty', 'karmic' or 'lucid' depending on your release)<br>
+(Replace 'YOURVERSION' with 'hardy', 'intrepid', 'jaunty', 'karmic' or 'lucid' depending on your release)<br><br>
 <code>deb http://akirad.cinelerra.org akirad-YOURVERSION main</code>
 <blockquote>
 Installation notes:<br>
@@ -304,7 +304,7 @@ Comunity Version of Cinelerra<br>
 </blockquote>
 </blockquote>
 - These packages set shmmax to 0x7fffffff and add non-English language support for Cinelerra.<br>
-- IN EVENT OF UPDATE PROBLEMS RUN THE FOLLOWING TERMINAL COMMAND:
+- IN EVENT OF UPDATE PROBLEMS RUN THE FOLLOWING TERMINAL COMMAND:<br>
 <code>for i in sv cv cv-gl sv-gl cv-smp sv-smp; do sudo apt-get --force-yes --assume-yes remove cinelerra$i libquicktime$i libmpeg3$i libguicast$i; done && sudo apt-get install cinelerra</code><br>
 - Please, report any package bug to <em>akir4d at gmail dot com</em>
 </blockquote>
