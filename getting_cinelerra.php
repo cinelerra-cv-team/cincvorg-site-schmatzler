@@ -329,7 +329,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on Oct 4 2009 </address>
+<address> Last modified on Mar 29 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
