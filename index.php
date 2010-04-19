@@ -16,7 +16,7 @@ include "newsidemenu.php";
 
 <p>
 <strong>April &nbsp;19, 2010</strong><br>
-* CinelerraCV will be at the <a href="http://ctfilmfest.com/">Connecticut Film Festival</a> - Danbury CT on May 7 2010. Scott Frase will represent the community doing a <a href="http://ctfilmfest.com/site/node/43">presentation on Video production using Free Software tools</a>.
+* CinelerraCV will be at the <a href="http://ctfilmfest.com/">Connecticut Film Festival</a> - Danbury CT on May 7 2010. The festival will pay a special attention to Free Software with dedicate talks and workshops. Scott Frase will represent the community doing a <a href="http://ctfilmfest.com/site/node/43">presentation on Video production using Free Software tools</a>.
 </p>
 
 <p>
