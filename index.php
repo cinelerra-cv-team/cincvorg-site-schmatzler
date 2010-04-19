@@ -15,6 +15,11 @@ include "newsidemenu.php";
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>April &nbsp;19, 2010</strong><br>
+* CinelerraCV will be at the <a href="http://ctfilmfest.com/">Connecticut Film Festival</a> - Danbury CT on May 7 2010. Scott Frase will represent the community doing a <a href="http://ctfilmfest.com/site/node/43">presentation on Video production using Free Software tools</a>.
+</p>
+
+<p>
 <strong>Dec &nbsp;6, 2009</strong><br>
 * The migration of our bugtracker from skolelinux.no to cinelerra.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
 The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs.cinelerra.org/</a>; log-in details are unchanged.
@@ -66,7 +71,7 @@ The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 6 December 2009</address>
+<address>Last modified on 19 Aprile 2010</address>
 
 <?php include "footer.php"; ?>
 </body>
