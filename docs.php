@@ -179,7 +179,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on 25 February 2010 </address>
+<address> Last modified on May 18, 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
