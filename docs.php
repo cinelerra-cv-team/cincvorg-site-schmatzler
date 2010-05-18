@@ -76,6 +76,8 @@ Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">ass
   </li>
   <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO">Cinelerra for Grandma </a>, Basic HOWTOs for very beginners, by Raffaella Traniello.
   </li>
+  <li><a href="http://www.calcmaster.net/cinelerra/forgotten-guide/">Cinelerra - The forgotten guide </a>, a tutorial for both CV and HV versions by Joseph Miller
+  </li>
      <li><a href="http://kutxa.homeunix.org/cinelerra">Edición de video bajo GNU/Linux (Cinelerra)</a>, in Spanish, by Gustavo Iñiguez Goya
   </li>
   <li><a href="http://www.funix.org/fr/linux/cinelerra.htm">Guide d'utilisation
