@@ -24,6 +24,7 @@ through the use of Live CDs. Here are some of the Live CD's known to
 contain cinelerra</p>
 
 <ul>
+<li><a href='http://venenux.org/'>Venenux</a> - Debian based</li>
 <li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE</li>
 <li><a href='http://artistx.org'>ArtistX</a> - based on Ubuntu Intrepid, Gnome or KDE,
 for multimedia</li>
@@ -329,7 +330,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on Mar 29 2010 </address>
+<address> Last modified on June 8 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
