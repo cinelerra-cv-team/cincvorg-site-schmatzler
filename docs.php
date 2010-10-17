@@ -114,6 +114,8 @@ Some HOWTOs for specific needs are available on the internet:
   </li>
 <li><a href="http://crazedmuleproductions.blogspot.com/2009/03/motion-stabilization-tutorial.html">Motion Stabilization Tutorial</a>, by Scott Frase
   </li>
+<li><a href="http://jakedth.tumblr.com/post/85794790/cinelerra-cv-motion-tracking-tutorial">CinelerraCV Motion Tracking tutorial</a>, by Jacob Lludkrab</li>
+<li><a href="http://www.calcmaster.net/cinelerra/forgotten-guide/08-advanced-ve-01-motion-tracking.php">Motion tracking in Cinelerra</a>, by calcmaster.NET </li>
   <li><a href="http://www.freenet.org.nz/misc/cintitles/">HOWTO make professional looking Scrolled Credits in Cinelerra</a>, by David McNab
   </li>
   <li><a href="http://makefx.wordpress.com/2008/10/13/how-to-pan-in-an-image-ken-burns-effect/">How to pan in an image (Ken Burns effect)</a>, by Roland C.</li>
@@ -179,7 +181,9 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
 </p>
  </div>
 
-<address> Last modified on May 18, 2010 </address>
+<address>
+  Last modified on October 17, 2010
+</address>
 
 <?php include "footer.php"; ?>
  </body>
