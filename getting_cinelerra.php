@@ -271,10 +271,13 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 </blockquote>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
-
+<h4>10.10 Maverick Meerkat</a></h4>
 <blockquote>
-<p>Here are the Ubuntu packages repositories for 10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex, 8.04 Hardy Heron.</p>
+<p>There are no packages for Ubuntu 10.10 Maverick.<br />
+To install CinelerraCV you have to compile it from source. You can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
+
+<h4>10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex</a></h4>
 
 <blockquote>
 for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
@@ -330,7 +333,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on June 8 2010 </address>
+<address> Last modified on 2 November 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
