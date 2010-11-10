@@ -12,6 +12,16 @@ include "newsidemenu.php";
 
 <div class='content'>
 
+<p style="background-color: #EBEBEB; border-style: solid; border-width: 1px; text-align: center; font-size: larger; padding: 20px">
+<strong>SITE</strong> <strong style="color: red">ADMIN</strong> <strong>WANTED</strong><br>
+Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">Cinelerra mailing list</a>.
+<br>
+</p>
+
+<br>
+
+
+
 <h2><a name="news">News</a></h2>
 
 <p>
@@ -42,7 +52,7 @@ The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 25 October 2010</address>
+<address>Last modified on 10 November 2010</address>
 
 <?php include "footer.php"; ?>
 </body>
