@@ -165,7 +165,7 @@ Source video editing, especially for Cinelerra HV (among them an Ubuntu package)
   </li>
   <li><a href="http://www.g-raffa.eu/Cinelerra/cin_glossary.html">Cinelera CV Glossary</a>, for newbies.
   </li>     
-<li><a href="http://carlospineiro.site90.com/">Cinelerra.ES</a>, website dedicated to video editing in GNU/Linux (in Spanish).</li>
+<li><a href="http://www.cinelerra.es">Cinelerra.ES</a>, website dedicated to video editing in GNU/Linux (in Spanish).</li>
 </ul>
 <h2>Cinelerra CV Wiki</h2>
 <p>  <B>DokuWiki</B><BR>
@@ -182,7 +182,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
  </div>
 
 <address>
-  Last modified on October 17, 2010
+  Last modified on November 17, 2010
 </address>
 
 <?php include "footer.php"; ?>
