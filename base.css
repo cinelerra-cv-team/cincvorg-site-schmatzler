@@ -36,7 +36,7 @@ div.top {
 }
 
 div#logo { 
-    background: black url("/cinelerra.png") no-repeat center;  
+    background: black url("cinelerra-orng.png") no-repeat center;  
     position: absolute;
     width: 348px;
     height: 148px;
@@ -67,7 +67,7 @@ div.top span#banner a {
 }
 
 div.top a span.highlight {  
-    color: red !important;
+    color: orange !important;
 }
 
 img.logo { 
@@ -94,7 +94,7 @@ img.logo {
 /* Side menu title black bars */
 #menu li.sub { 
     padding: 0px;
-    background: black url(/img/square-red-sm.png) no-repeat scroll 10px 50%;
+    background: black url(square-orng-sm.png) no-repeat scroll 10px 50%;
     color: rgb(0, 0, 0);
     font-weight: bold;
 }
@@ -213,7 +213,7 @@ border: medium none ;
 }
 
 #footer a { 
-color: red;
+color: orange;
 }
 
 address { 
@@ -360,11 +360,11 @@ input#login, #post_news input#preview, #post_news input#save, #post_news input#r
 }
 
 .alert { 
-    color: red;
+    color: orange;
 }
 
 div.alert { 
-    border: 1px solid red;
+    border: 1px solid orange;
     padding: 8px;
 }
 
