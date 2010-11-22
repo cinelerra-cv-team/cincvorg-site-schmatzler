@@ -20,9 +20,12 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 -->
 <br>
 
-
-
 <h2><a name="news">News</a></h2>
+
+<p>
+<strong>Nov 21, 2010</strong><br>
+* <em>CinelerraCV 2.1.5</em> is out, with SOWT audio support, other improvements and bug fixes. For more details see the <a href="http://e.kevb.net/lurker/message/20101121.202538.c50bfa27.en.html">release announcement</a>.
+</p>
 
 <p>
 <strong>Oct 15, 2010</strong><br>
@@ -52,7 +55,7 @@ The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 10 November 2010</address>
+<address>Last modified on 22 November 2010</address>
 
 <?php include "footer.php"; ?>
 </body>
