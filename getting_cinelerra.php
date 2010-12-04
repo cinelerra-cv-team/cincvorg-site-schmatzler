@@ -271,19 +271,22 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 </blockquote>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
-<h4>10.10 Maverick Meerkat</a></h4>
+
+<p>Cinelerra CV packages are available from three different repositories.</p>
+
+<h4>Launchpad</h4>
+<p><em>Latest Cinelerra CV 2.1.5 for 10.10 Maverick Meerkat, 10.04 Lucid Lynx, 9.10 Karmic Koala, 8.04 Hardy Heron, maintained by Nicola Ferralis</em></p>
 <blockquote>
-<p>There are no packages for Ubuntu 10.10 Maverick.<br />
-To install CinelerraCV you have to compile it from source. You can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
+<code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
+<p>To add the Cinelerra PPA to your source list follow the instructions on the <a href="https://launchpad.net/~cinelerra-ppa/+archive/ppa">Launchpad page</a>.</p>
 
-<h4>10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex</a></h4>
-
+<h4>Akirad</h4>
+<p><em>Cinelerra CV 2.1 for 10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex, 
+for all x86, working on 32 and 64 bits, maintained by Paolo Rampino</em></p>
 <blockquote>
-for all x86 (full working on 32 and 64 bits), by Paolo Rampino:<br>
-
-(Replace 'YOURVERSION' with 'hardy', 'intrepid', 'jaunty', 'karmic' or 'lucid' depending on your release)<br><br>
-<code>deb http://akirad.cinelerra.org akirad-YOURVERSION main</code>
+<code>deb http://akirad.cinelerra.org akirad-YOURVERSION main</code><br /><br />
+(Replace 'YOURVERSION' with 'lucid', 'karmic', 'jaunty','intrepid' or 'hardy', depending on your release)<br><br>
 <blockquote>
 Installation notes:<br>
 - For your convenience you can install a package for detecting your version of Ubuntu, installing akirad repository and keeping it updated.<br>
@@ -314,12 +317,14 @@ Comunity Version of Cinelerra<br>
 </blockquote>
 </blockquote>
 
-
-<H4><a name="hardy">8.04 Hardy Heron</a></h4>
-
+<H4>giss.tv</a></h4>
+<p><em>Cinelerra CV for 8.04 Hardy Heron, for i386 (not working on amd 32 bits), maintained by by Valentina Messeri</em></p>
 <blockquote>
-for i386 (not working on amd 32 bits), by Valentina Messeri:<br>
-<code>deb http://giss.tv/~vale/ubuntu32/hardy ./</code><br><br>
+<code>deb http://giss.tv/~vale/ubuntu32/hardy ./</code>
+</blockquote>
+
+<h4>Compilation</h4>
+You can find detailed instructions for compiling CinelerraCV from source on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
 
 <h2><a name="source">Source code</a></h2>
@@ -333,7 +338,7 @@ git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
 
  </div>
  
-<address> Last modified on 2 November 2010 </address>
+<address> Last modified on 04 December 2010 </address>
 
 <?php include "footer.php"; ?>
  </body>
