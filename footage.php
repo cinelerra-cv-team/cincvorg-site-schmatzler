@@ -26,6 +26,11 @@ Italian television.</li>
   taken with a digital still camera.</li>
 </ul>
 
+<h2>Titler demo</h2>
+
+<ul>
+<li> <a href="http://cinelerra.org/examples/NY_titler_swipe_glow.ogg">swiping-glowing title</a>, made by Herman Robak with alpha blending, blurring, track bouncing and duplicate tracks with alpha "holes" revealing the altered version below.</li>
+</ul>
 <h2>Compositing demo</h2>
 
 <ul>
@@ -84,7 +89,7 @@ These clips where placed in the parent dir. at one stage:
  <a href='footage/videos/nina-mp4-mp3_m-5s.mov'>#1</a> (278k, herman)  <a href='footage/videos/shrunk.mov'>#2</a> (2.2M herman)  <a href='footage/videos/vid1.avi'>#3</a> (23M, taraba)
 </div>
 
-<address> Last modified on 9 May 2008 </address>
+<address> Last modified on 5 Dec 9 2010 </address>
 <?php include "footer.php"; ?>
 </body>
 </html>
