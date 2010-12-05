@@ -120,6 +120,7 @@ Some HOWTOs for specific needs are available on the internet:
   </li>
   <li><a href="http://makefx.wordpress.com/2008/10/13/how-to-pan-in-an-image-ken-burns-effect/">How to pan in an image (Ken Burns effect)</a>, by Roland C.</li>
   <li><a href="http://makefx.wordpress.com/2008/10/07/how-to-load-images-to-make-a-simple-presentation-slideshow/">How to load images to make a simple presentation (slideshow)</a>, by Roland C.</li>
+<li> <a href="http://michalfapso.blogspot.com/2010/12/how-to-create-photo-slideshow.html">How to create a photo slideshow synchronized with music</a>, by Michal Fapso </li>
   <li><a href="http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra/#more-246">Crear títulos diferentes con Cinelerra</a>, in Spanish, by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample
 projects.
   </li>
@@ -182,7 +183,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
  </div>
 
 <address>
-  Last modified on November 17, 2010
+  Last modified on December 5, 2010
 </address>
 
 <?php include "footer.php"; ?>
