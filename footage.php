@@ -26,11 +26,13 @@ Italian television.</li>
   taken with a digital still camera.</li>
 </ul>
 
-<h2>Titler demo</h2>
+<h2>Titler compositing demo</h2>
 
 <ul>
 <li> <a href="http://cinelerra.org/examples/NY_titler_swipe_glow.ogg">swiping-glowing title</a>, made by Herman Robak with alpha blending, blurring, track bouncing and duplicate tracks with alpha "holes" revealing the altered version below.</li>
 </ul>
+
+
 <h2>Compositing demo</h2>
 
 <ul>
