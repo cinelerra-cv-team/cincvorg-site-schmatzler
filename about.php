@@ -2,6 +2,7 @@
 
 include "header.php";
 
+
 include "funcs.php";
 $availlangs = array("EN","ES","EU");
 $linfo = pmd_getlang($availlangs);
