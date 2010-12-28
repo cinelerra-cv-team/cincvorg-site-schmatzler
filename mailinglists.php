@@ -49,7 +49,7 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
    <p>For general discussion on open source video development and use.<br>
  </p> </div> 
 
-<address>Last modified on 19 September 2009</address>
+<address>Last modified on 28 December 2010</address>
 
 <?php include "footer.php"; ?>
    </body> 
