@@ -18,7 +18,7 @@ include "newsidemenu.php";
    <h4>Cinelerra CV</h4>
 
   <p>We have a mailing list dedicated to development and testing of new
-   features, submitting patches, and resolving build problems. <BR>
+   features, submitting patches, and resolving build problems. <br>
    We offer some handholding to newcomers with build problems and weird bugs, too.
    For real-time handholding, we recommend IRC.
   </p>
@@ -29,42 +29,28 @@ include "newsidemenu.php";
   <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/">Web
   archive</a> that anybody can browse.
   <br>
-  The archives are avaialble also on:
+  The archives are avaialble also on:  </p>
 <ul>
-<li><a href="http://e.kevb.net/lurker/list/cinelerra.en.html">
-Lurker</a>, maintained by Kevin Brosius</li>
+<li><a href="http://e.kevb.net/lurker/list/cinelerra.en.html">Lurker</a>, maintained by Kevin Brosius</li>
 <li><a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">The Mail Archive</a></li>
 <li><a href="http://dir.gmane.org/gmane.comp.video.cinelerra-cv.general">GMANE</a></li>
 </ul>
-  </p>
-
-   <h4>Cinelerra SVN commits</h4>
-
-  <p>As a convenience to the developers, there is a SVN commits mailing list.
-   Every SVN commit triggers a mail to this
-   mailing list. <BR>
-   (Beware: This can generate rather extreme bursts of e-mail!)
-  </p>
-   
-  <P>It has the same <a
-href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra-commits">
-  subscription</a> and <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra-commits/">
-   web archive</a> interfaces as the developer mailing list.  A Lurker archive is 
-   <a href="http://e.kevb.net/lurker/list/cinelerra-commits.en.html">
-   here</a>.</p>
 
    <h2>Our IRC channels</h2>
 
 We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't know which server to connect to, try <code>irc.freenode.net</code>, port 6667 
+
     <h4>#cinelerra</h4>
    <p>For development discussion and users support.<br>
    The channel is logged into a <a href="http://cvs.cinelerra.org/irclog/">web archive</a>.
    </p>
- <h4>#openvideo</h4>
+
+    <h4>#openvideo</h4>
    <p>For general discussion on open source video development and use.<br>
  </p> </div> 
 
-<address>Last modified on 19 september 2009</address>
+<address>Last modified on 19 September 2009</address>
 
 <?php include "footer.php"; ?>
-   </body> </html>
+   </body> 
+</html>
