@@ -30,11 +30,13 @@ contain cinelerra</p>
 for multimedia</li>
 <li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li>
 <li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li>
-<li><a href='http://http://x-evian.org'>x-evian</a> - Debian based live CD for multimedia creations</li>
+<li><strong>(Dead link)</strong>
+<a href='http://http://x-evian.org'>x-evian</a> - Debian based live CD for multimedia creations</li>
 <li><a href='http://www.mediainlinux.org'>MediainLinux</a> - Knoppix based live CD</li>
 <li><a href='http://musix.org.ar'>Musix</a> - Knoppix based - for audio production, graphic design and video editing</li>
 <li><a href='http://dl.getdropbox.com/u/331020/Mindmap/index.html'>openArtist</a> - based on Ubuntu Hardy, for artists</li>
-<li><a href='http://linux.slo-tech.com'>Slo-Tech</a> - based on Debian and Morphix</li>
+<li><strong>(Dead link)</strong>
+<a href='http://linux.slo-tech.com'>Slo-Tech</a> - based on Debian and Morphix</li>
 <li><a href='http://garbure.org/pho/'>pho (garbure)</a> - dedicated to video editing</li>
 <li><a href='http://www.knoppix.org'>Knoppix</a> - the "original" Debian-based LiveDistro</li>
 </ul>
@@ -246,6 +248,8 @@ href='http://plf.zarb.org/packages.php'>PLF</a> site for more information.
 <blockquote>
  Rafael Diniz  build slackware packages for cinelerra 2.1.
 <h4>For x86</h4>
+
+<strong>(Broken link)</strong>
 <a href="http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/">
 http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/
 </a>
@@ -267,7 +271,7 @@ configured as a Yast install source.
 <h4><a name="suse">Suse 9.0, 9.2 and SRPMs</a></h4>
 <blockquote>
 RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
-<a href="http://cin.kevb.net/files/RPM/">kevb.net</a>.
+<a href="http://cin.kevb.net/files/RPM/">kevb.net</a>. 
 </blockquote>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
@@ -285,6 +289,7 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <p><em>Cinelerra CV 2.1 for 10.04 Lucid Lynx, 9.10 Karmic Koala, 9.04 Jaunty Jackalope, 8.10 Intrepid Ibex, 
 for all x86, working on 32 and 64 bits, maintained by Paolo Rampino</em></p>
 <blockquote>
+<strong>(Dead repository)</strong>
 <code>deb http://akirad.cinelerra.org akirad-YOURVERSION main</code><br /><br />
 (Replace 'YOURVERSION' with 'lucid', 'karmic', 'jaunty','intrepid' or 'hardy', depending on your release)<br><br>
 <blockquote>
