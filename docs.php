@@ -156,6 +156,7 @@ easy introduction to Interlacing for beginners.
   </li>        
   <li><a href="http://www.poynton.com/notes/colour_and_gamma/ColorFAQ.html">Colour specification and image coding</a> describes luma, chroma, and different colour models in detail.
   </li>
+<li> <a href="http://www.avsforum.com/avs-vb/showthread.php?t=948496">AVS HD 709 - Blu-ray &amp; MP4 Calibration</a> - a project that aims to provide a free set of calibration patterns for high definition (HD) video players.</li>
   <li><a href="http://wlug.org.nz/DVDVideo">DVD-VIDEO</a> - about DVD structure.
   </li> 
   <li><a href="http://womble.decadent.org.uk/talks/dvd-ukuug06/dvd-talk-ukuug06-paper.html">Creating
