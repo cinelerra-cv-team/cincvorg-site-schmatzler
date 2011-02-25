@@ -35,9 +35,9 @@ We try to complete the amazing work of Heroine Virtual Ltd. (HV) offering also a
 
 <h3>Collaborative development</h3>
 <p>
-We set up an <a href="http://localhost/cvs/devcorner.php">unofficial git repository</a>, intended for developers and adventurous Linux users who want to contribute to the development of Cinelerra.
+We set up an <a href="devcorner.php">unofficial git repository</a>, intended for developers and adventurous Linux users who want to contribute to the development of Cinelerra.
 </p>
-<p>We set up also a <a href="http://localhost/cvs/mailinglists.php">Mailing List</a> where we can share development ideas, comment on each other's implementation of new features, submit patches and resolve build problems.
+<p>We set up also a <a href="mailinglists.php">Mailing List</a> where we can share development ideas, comment on each other's implementation of new features, submit patches and resolve build problems.
 </p>
 <p> Cinelerra-CV is not a fork. We develop it in a direction not diverging from the original and we merge with all the new releases from Heroine Virtual. <br>
 We apply our bug fixes, compiler compliance fixes, and enhancements to the git repository. Thus the CV has a number of features that the official version does not have.<br>
