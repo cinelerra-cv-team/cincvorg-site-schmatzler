@@ -10,37 +10,26 @@ include "newsidemenu.php";
 <div class="content">
  <h1>Get Cinelerra</h1>
 <h3>
-<a href="#livecd">Live CD's</a> |
+<a href="#livecd">Live CDs</a> |
 <a href="#packages">Packages</a> |
 <a href="#source">Source code</a>
 </h3>
 
-<h2><a name="livecd">Live CD's</a></h2>
+<h2><a name="livecd">Live CDs</a></h2>
 
-<p>Before we scare you away by saying cinelerra only runs on X-based
-operating systems only (i.e. NOT MS Windows), it is possible to try
-cinelerra out without modifying your computer. This is possible
-through the use of Live CDs. Here are some of the Live CD's known to
-contain cinelerra</p>
-
-<ul>
-<li><a href='http://venenux.org/'>Venenux</a> - Debian based</li>
-<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE</li>
-<li><a href='http://artistx.org'>ArtistX</a> - based on Ubuntu Intrepid, Gnome or KDE,
-for multimedia</li>
-<li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li>
-<li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li>
-<li><strong>(Dead link)</strong>
-<a href='http://http://x-evian.org'>x-evian</a> - Debian based live CD for multimedia creations</li>
-<li><a href='http://www.mediainlinux.org'>MediainLinux</a> - Knoppix based live CD</li>
-<li><a href='http://musix.org.ar'>Musix</a> - Knoppix based - for audio production, graphic design and video editing</li>
-<li><a href='http://dl.getdropbox.com/u/331020/Mindmap/index.html'>openArtist</a> - based on Ubuntu Hardy, for artists</li>
-<li><strong>(Dead link)</strong>
-<a href='http://linux.slo-tech.com'>Slo-Tech</a> - based on Debian and Morphix</li>
-<li><a href='http://garbure.org/pho/'>pho (garbure)</a> - dedicated to video editing</li>
-<li><a href='http://www.knoppix.org'>Knoppix</a> - the "original" Debian-based LiveDistro</li>
-</ul>
-
+<p>You can try Cinelerra out without modifying your computer, thanks to Live DVDs that contain Cinelerra. <br />
+You just need to download the .iso file, burn it on a DVD, inser it in the drive and restart your machine.</p> 
+ 
+<ul> 
+<li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li> 
+<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE - contains Cinelerra 4.2HV</li> 
+<li><a href='http://artistx.org'>ArtistX</a> - based on Ubuntu 10.04, Gnome or KDE, for multimedia</li> 
+<li><a href='http://venenux.org/'>Venenux 0.8 RC2</a> - Debian based - (note: version EC 0.8.2 has not CinelerraCV in it)</li> 
+<li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li> 
+<li><a href='http://musix.org.ar'>Musix</a> (2009) - Knoppix based - for audio production, graphic design and video editing</li> 
+<li><a href='http://dl.getdropbox.com/u/331020/Mindmap/index.html'>openArtist</a> (2009) - based on Ubuntu Hardy, for artists</li> 
+<li><a href='http://garbure.org/pho/'>pho (garbure)</a> (2004) - dedicated to video editing</li> 
+</ul> 
 
  <h2><a name="packages">Packages</a></h2>
 
