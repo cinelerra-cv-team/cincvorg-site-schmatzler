@@ -90,8 +90,7 @@ irc channel. <br><br>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
-<H4>giss.tv</a></h4>
-<p><em>Cinelerra CV for 8.04 Hardy Heron, for i386 (not working on amd 32 bits), maintained by by Valentina Messeri</em></p>
+<p>Cinelerra CV for 8.04 Hardy Heron, for i386 (not working on amd 32 bits), maintained by by Valentina Messeri</p>
 <blockquote>
 <code>deb http://giss.tv/~vale/ubuntu32/hardy ./</code>
 </blockquote>

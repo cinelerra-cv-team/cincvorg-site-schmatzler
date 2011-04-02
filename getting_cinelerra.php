@@ -211,7 +211,7 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
 <p>To add the Cinelerra PPA to your source list follow the instructions on the <a href="https://launchpad.net/~cinelerra-ppa/+archive/ppa">Launchpad page</a>.</p>
-
+<p>Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 <p> If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
 
