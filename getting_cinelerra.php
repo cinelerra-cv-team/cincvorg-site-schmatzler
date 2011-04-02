@@ -12,7 +12,7 @@ include "newsidemenu.php";
 <h3>
 <a href="#livecd">Live CDs</a> |
 <a href="#packages">Packages</a> |
-<a href="#source">Source code</a>
+<a href="source_code.php">Source code</a>
 </h3>
 
 <h2><a name="livecd">Live CDs</a></h2>
@@ -214,15 +214,6 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 <p>Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 <p> If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
-
-<h2><a name="source">Source code</a></h2>
-
-<p>The source code of Cinelerra-CV is available from a git repository. 
- To get a copy for compilation use the following command</p>
- <blockquote>
-git clone git://git.cinelerra.org/j6t/cinelerra.git my_cinelerra
- </blockquote>
-<p>You can modify this working copy, and submit your patches to the mailing list, or ask for your own repo or for permission to push to one of the existing ones.</p>
 
  </div>
  
