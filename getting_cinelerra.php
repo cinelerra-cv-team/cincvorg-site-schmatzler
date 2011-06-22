@@ -22,7 +22,7 @@ You just need to download the .iso file, burn it on a DVD, inser it in the drive
  
 <ul> 
 <li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li> 
-<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE by default and an optional XFCE - contains Cinelerra 4.2HV</li> 
+<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - based on Debian, with LXDE - contains Cinelerra 2.1.5 CV</li> 
 <li><a href='http://artistx.org'>ArtistX</a> - based on Ubuntu 10.04, Gnome or KDE, for multimedia</li> 
 <li><a href='http://venenux.org/'>Venenux 0.8 RC2</a> - Debian based - (note: version EC 0.8.2 has not CinelerraCV in it)</li> 
 <li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li> 
