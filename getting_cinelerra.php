@@ -119,7 +119,7 @@ href='http://plf.zarb.org/packages.php'>PLF</a> site for more information.
 
 <h3><a name="slack">Slackware</a></h3>
 <blockquote>
-You can find Cinelerra packages in the _multimedia_ section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.
+You can find Cinelerra packages in the <em>multimedia</em> section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.
 </blockquote>
 
 <h3><a name="suse">Suse</a></h3>
