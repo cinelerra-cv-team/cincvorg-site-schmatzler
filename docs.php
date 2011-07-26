@@ -92,9 +92,11 @@ by Laurent Bellegarde.
   </li> 
   <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/basics.html">Cinelerra in 30 minutes and 10 steps</a> - in English and Italian - Cinelerra basics, for Grandma, by Raffaella Traniello. 
   </li>
-  <li><a href="http://akiradproject.net/tutorial">Cinelerra is very easy</a> - in English and Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
+  <li><a href="http://www.tuttoainternet.it/node/17">Cinelerra is very easy</a> - in English - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
-<li><a href="http://senbee.blogspot.com/2009/08/video-editing-e-authoring-su-ubuntu.html">Video Editing e Authoring su Ubuntu Jaunty</a> - in Italian - from DV files to DVD through Cinelerra, by Stefano "Senbee". 
+  <li><a href="http://www.tuttoainternet.it/itCinelerra">Cinelerra è semplicissimo</a> - in Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
+  </li>
+<li><a href="http://www.stefanodroghetti.co.nr/">Produzione video in Ubuntu</a> - in Italian - from DV files to DVD through Cinelerra, by Stefano "Senbee" Droghetti. 
   </li>
   <li><a href="http://www.billauer.co.il/cinelerra-video-edit-quickstart.html">Cinelerra quick start summary</a>, by Eli Billauer.</li>
 </ul>
