@@ -187,7 +187,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
  </div>
 
 <address>
-  Last modified on December 5, 2010
+  Last modified on Jul 26, 2011
 </address>
 
 <?php include "footer.php"; ?>
