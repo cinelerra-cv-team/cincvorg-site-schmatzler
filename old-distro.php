@@ -13,6 +13,7 @@ include "newsidemenu.php";
 <h3>
 <a href="#apt">Debian</a> |
 <a href="#fedora">Fedora</a> |
+<a href="#suse">Suse</a> |
 <a href="#ubuntu">Ubuntu</a> 
 </h3>
 
@@ -166,7 +167,14 @@ Then type:<BR>
 <code>yum -y install cinelerra</code><BR></p>
 </blockquote>
 
+<h3><a name="suse">Suse</a></h3>
 
+<h4><a name="suse">Suse 9.0, 9.2 and SRPMs</a></h4>
+<p>
+<p>RPMs for SUSE 9 are built from CVS by Kevin Brosius, and hosted at
+<a href="http://cin.kevb.net/files/RPM/">kevb.net</a>.
+</p> 
+</blockquote>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
 

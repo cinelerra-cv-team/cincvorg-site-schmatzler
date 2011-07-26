@@ -133,18 +133,10 @@ http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/</a>
 
 
 <h3><a name="suse">Suse</a></h3>
-<h4>Suse 10.1 & 10.2</h4>
-<blockquote>
-RPMs for openSUSE 10.1 and 10.2 are now in the
-<a href="http://packman.links2linux.org/package/cinelerra">Packman</a>
-repositories.  You can install directly with Yast if you have Packman
-configured as a Yast install source.
-</blockquote>
 
-<h4><a name="suse">Suse 9.0, 9.2 and SRPMs</a></h4>
 <blockquote>
-RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
-<a href="http://cin.kevb.net/files/RPM/">kevb.net</a>. 
+<p>RPMs for openSUSE are in the <a href="http://packman.links2linux.org/package/cinelerra">Packman</a> repositories.<br>
+You can install directly with Yast if you have Packman configured as a Yast install source.</p>
 </blockquote>
 
 <h3><a name="ubuntu">Ubuntu</a></h3>
@@ -161,7 +153,7 @@ RPMs for SuSE 9 are built from CVS by Kevin Brosius, and hosted at
 
  </div>
  
-<address> Last modified on Jul 26, 2011 </address>
+<address> Last modified on Jul 27, 2011 </address>
 
 <?php include "footer.php"; ?>
  </body>
