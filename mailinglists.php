@@ -42,6 +42,7 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
 
     <h4>#cinelerra</h4>
    <p>For development discussion and users support.<br>
+    It hosts a mothly meeting every first sunday of the month at 16.00 UTC.<br>
    The channel is logged into a <a href="http://cvs.cinelerra.org/irclog/">web archive</a>.
    </p>
 
@@ -49,7 +50,7 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
    <p>For general discussion on open source video development and use.<br>
  </p> </div> 
 
-<address>Last modified on 28 December 2010</address>
+<address>Last modified on Jul 26 2011</address>
 
 <?php include "footer.php"; ?>
    </body> 
