@@ -119,18 +119,8 @@ href='http://plf.zarb.org/packages.php'>PLF</a> site for more information.
 
 <h3><a name="slack">Slackware</a></h3>
 <blockquote>
- Rafael Diniz  build slackware packages for cinelerra 2.1.
-<h4>For x86</h4>
-
-<strong>(Broken link)</strong>
-<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/">
-http://slack.sarava.org/packages/slackware/slackware-11.0/media/video/
-</a>
-<h4>For slackintosh</h4>
-<a href="http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/">
-http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/</a>
+You can find Cinelerra packages in the _multimedia_ section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.
 </blockquote>
-
 
 <h3><a name="suse">Suse</a></h3>
 
