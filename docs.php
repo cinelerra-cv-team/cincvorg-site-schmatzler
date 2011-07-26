@@ -66,6 +66,7 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li>  #4 is in <i>Episode 3 "Revenge of Cinelerra"</i> from min 10 to min 36 <BR>
  (Rendering for DVD, rendering for the web, transcoding with ffmpeg). </li>
 </ul></li>
+<li><a href="http://www.youtube.com/user/cybridproductions">Cinelerra video tutorials</a> - in English, by Cybrid productions.</li>
 <li><a href="http://www.facilware.com/?page_id=1384">Video manuales de Cinelerra</a> - by FacilWare, in Spanish.</li>
 <li><a href="http://www.assistcg.com/attachments/063_VideoTutorial.mov.zip">
 Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">assistcg.com</a> (drag and drop mode, cut and paste mode, video transitions) - downloadable .zip file.</li>
