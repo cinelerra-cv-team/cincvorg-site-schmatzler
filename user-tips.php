@@ -15,6 +15,14 @@ include "newsidemenu.php";
 </p>
 </blockquote>
 <h2>Tools</h2>
+<h3>Cinelerra theme helper</h3>
+<blockquote>
+<p><strong>Paolo Rampino</strong> created a tool to ease the creation of new themes for Cinelerra. It includes the theme from Cinecutie. It depends on Inkscape. <br>
+<a href="http://www.tuttoainternet.it/kit/cinelerra-theme-helper.tar.gz">Download Cinelerra theme helper</a><br>
+<a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-July/018047.html">Get instructions</a>.
+</p>
+</blockquote>
+
 <h3>IMG2LIST - Cinelerra List Generator</h3>
 <blockquote>
 <p><strong>Claudio "Malefico" Andaur</strong> wrote a little application called <a
@@ -26,6 +34,7 @@ href="http://www.malefico3d.org/download/img2list-0.1.5.tar.gz" > here</a>. <br>
 (<a href="http://www.malefico3d.org/blog/?page_id=333">Spanish version</a>)<br>
 </p>
 </blockquote>
+
 <h3>Seven Gnomes</h3>
 <blockquote>
 <p><strong>Peter Semiletov</strong> wrote a program called 
@@ -110,7 +119,7 @@ href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueS
 
 </div>
 
-<address>Last modified on 24 March 2010</address>
+<address>Last modified on Jul 26 2011</address>
 <?php include "footer.php"; ?>
 
 </body>
