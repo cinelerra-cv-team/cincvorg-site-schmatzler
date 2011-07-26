@@ -93,7 +93,7 @@ by Laurent Bellegarde.
   </li> 
   <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/basics.html">Cinelerra in 30 minutes and 10 steps</a> - in English and Italian - Cinelerra basics, for Grandma, by Raffaella Traniello. 
   </li>
-  <li><a href="http://www.tuttoainternet.it/node/17">Cinelerra is very easy</a> - in English - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
+  <li><a href="http://www.tuttoainternet.it/Cinelerra">Cinelerra is very easy</a> - in English - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
   <li><a href="http://www.tuttoainternet.it/itCinelerra">Cinelerra è semplicissimo</a> - in Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
