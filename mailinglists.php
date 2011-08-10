@@ -23,8 +23,6 @@ include "newsidemenu.php";
    For real-time handholding, we recommend IRC.
   </p>
 
-  <p>For attachments there is a size limit of 60KB. Messages with bigger attachments will be held waiting for moderator approval.</p>
-
   <p>There is a web interface for
   <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">
   subscribing</a>, and a
@@ -52,7 +50,7 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
    <p>For general discussion on open source video development and use.<br>
  </p> </div> 
 
-<address>Last modified on Ago 10 2011</address>
+<address>Last modified on Jul 26 2011</address>
 
 <?php include "footer.php"; ?>
    </body> 
