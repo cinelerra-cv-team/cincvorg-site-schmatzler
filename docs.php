@@ -154,6 +154,7 @@ easy introduction to Interlacing for beginners.
   <li><a href="http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html">MPEG-2 FAQ</a>.
   </li>    
   <li><a href="http://dvinfo.net/conf/showthread.php?t=76674">Exporting edited HD content back to the camcorder</a> (HDV related).
+<li><a href="ww.itbroadcastanddigitalcinema.com/ffmpeg_howto.html">FFmpeh howto</a> - with plenty of ffmpeg commands for format conversion
   </li>      
   <li><a href="http://lipas.uwasa.fi/~f76998/video/conversion">A Quick Guide to Digital Video Resolution and Aspect Ratio Conversions</a>.
   </li>        
@@ -187,7 +188,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
  </div>
 
 <address>
-  Last modified on Jul 26, 2011
+  Last modified on Aug 29, 2011
 </address>
 
 <?php include "footer.php"; ?>
