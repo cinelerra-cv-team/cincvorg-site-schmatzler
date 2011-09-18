@@ -60,7 +60,7 @@ The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on 22 November 2010</address>
+<address>Last modified on 18 September  2011</address>
 
 <?php include "footer.php"; ?>
 </body>
