@@ -23,6 +23,11 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>Aug 5, 2011</strong><br>
+* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.3</a>. Most notable feature is text to movie synthesis.
+</p>
+
+<p>
 <strong>Nov 21, 2010</strong><br>
 * <em>CinelerraCV 2.1.5</em> is out, with SOWT audio support, other improvements and bug fixes. For more details see the <a href="http://e.kevb.net/lurker/message/20101121.202538.c50bfa27.en.html">release announcement</a>.
 </p>
