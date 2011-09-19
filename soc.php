@@ -10,11 +10,10 @@ include "newsidemenu.php";
 
 
 <div class="content">
-<h2><a href="">Summer of Code 2007!</a></h2>
-<p>
+<h2>Google Summer of Code</h2>
 
-<em>Summer of code 2007 is over.  This page may vanish soon,
-or turn into SoC 2008.</em>
+<p>With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/">Google Summer of Code</a>. <br>
+Here is the work planned:</p>
 
 <table class="bounty">
     <tr>
@@ -98,12 +97,10 @@ http://www.pipapo.org/pipawiki/Cinelerra/Developers/ct/MediaManager</a>
 	</tr>
 
 </table>
-<strong> For more information ask to the cin-cvs guys on 
-the cin-cvs ml or in the irc channel on freenode (#cinelerra) :) </strong>
-<hr>
-<address>Cinelerra-CV, http://cvs.cinelerra.org/contact.php</address>
-<address>Riccardo Setti, giskard AT autistici DOT org or rsetti AT gmail DOT com</address>
 </div>
+
+<address> Last modified on Sept 19 2011 </address>
+
 <?php include "footer.php"; ?>
 </body>
 </html>

@@ -47,18 +47,26 @@ cinelerra subdirectory</a>.</li>
 
 <p>  Thanks to Jens Seidel for suggesting doxygen, and providing a template configuration file.</p>
 
-<h2>Merging in new releases from Heroines</h2>
+<h2>Bounty</h2>
 
-<p>Johannes Sixt has written a thorough <a href="/~j6t/cinelerramerge/"> HOWTO</a> describing how he would import Heroines' next Cinelerra release as a "vendor branch" into the the CVS.</p>
+<p>Some users are so willing to have specific new features in CinelerraCV that they offer some money to developers that are willing to wotk for implementing them. We have summarized requests and offers into a <a href="bounty.php">table.</a></p>
+
+<p>For more information write to the <a href="mailinglists.php">mailing list</a>.</p>
 
 <h2>Google Summer of Code (SOC)</h2>
 <p>
 With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/2007">Google Summer of Code 2007</a>.<br>
-The work planned was noted in a <a href="http://cinelerra.org/soc.php">SOC table</a>.
+The work planned was noted in a <a href="soc.php">SOC table</a>.
 </p>
+
+<h2>Merging in new releases from Heroines</h2>
+
+<p>Johannes Sixt has written a thorough <a href="/~j6t/cinelerramerge/"> HOWTO</a> describing how he would import Heroines' next Cinelerra release as a "vendor branch" into the the CVS.</p>
+
+
 </div> 
 
-<address> Last modified on Sept 19 May 2011 </address>
+<address> Last modified on Sept 19 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>

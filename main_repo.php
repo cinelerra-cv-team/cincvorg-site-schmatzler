@@ -180,7 +180,7 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
 </blockquote>
 </div> 
 
-<address> Last modified on Sept 19 May 2011 </address>
+<address> Last modified on Sept 19 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>
