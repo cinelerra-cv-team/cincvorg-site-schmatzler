@@ -8,33 +8,26 @@ include "newsidemenu.php";
 ?>
 
 <div class="content">
- <h1>Get Cinelerra source code</h1>
+ <h1>Get CinelerraCV source code</h1>
 
 <p>
-    The source code of Cinelerra-CV is maintained by the community and made available from a git repository.
+    The source code of Cinelerra-CV is available from a git repository. To get it you need to have git-core installed.
   <p>
 
 <h2>Stable code</h2>
 
-<p>The stable repo is maintained by Johannes Sixt and integrates stable changes by several developers.</p><p>
-<a href="http://git.cinelerra.org/gitweb?p=j6t/cinelerra.git;a=summary">stable repo</a></p>
-<p> To get a copy for compilation use the following command</p>
+<p>If you want to compile CinelerraCV for normal use we recommend you get the stable code. </p>
+
+<p> To get a copy for compilation use the following command:</p>
  <blockquote>
-git clone git://git.cinelerra.org/j6t/cinelerra.git cinelerra-cv
+<code>git clone git://git.cinelerra.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
 
-<p>You can modify this working copy, and submit your patches to the mailing list, or ask for your own repo or for permission to push to one of the existing ones.</p>
+<p>The stable repo is maintained by a small group of core developers. You can browse the <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
 
 <h2>Experimental code</h2>
 
-<p>Several developers are working on improving CinelerraCV code. Each of them is working around a specific issue. You are welcome to test the application and report back.</p>
-
-<h3>ichthyo - bezier automation</h3>
-<blockquote>
-<p>
-Hermann Vosseler created a patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. To know more read its nice <a href="http://ichthyostega.de/cinelerra/bezier-patch/">documentation</a>. </p>
-<p><em>We would like to integrate it in CinelerraCV soon. Please, help us with testing!</em></p>
-</blockquote>
+<p>Some developers are working around specific issues on experimental repos. You are welcome to test the application and report back to the <a href="mailinglists.php">mailing list</a>.</p>
 
 <h3>einar - core</h3>
 <blockquote>
@@ -72,7 +65,7 @@ files with partially incomplete initial open GOPs</li>
 <p><a href="http://git.cinelerra.org/gitweb?p=c4/cinelerra.git;a=summary">SimAV's repo</a></p>
  </div>
  
-<address> Last modified on Apr 2, 2011 </address>
+<address> Last modified on Sep 19, 2011 </address>
 
 <?php include "footer.php"; ?>
  </body>
