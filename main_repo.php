@@ -142,8 +142,24 @@ Different parts of Cinelerra have different coding styles.
 The most common is:</p>
 
 <blockquote>
+<pre>
 int main()<br>
+{<br>
+        int i;<br>
+<br>
+        if(i == 1)<br>
+        {<br>
+                i = 2;<br>
+        }<br>
+}
+</pre>
+</blockquote>
 
+In this example white spaces are made using tabs as follows:
+
+<blockquote>
+<pre>
+int main()<br>
 {<br>
 &lt;tab&gt;int i;<br>
 <br>
@@ -152,6 +168,7 @@ int main()<br>
 &lt;tab&gt;&lt;tab&gt;i = 2;<br>
 &lt;tab&gt;}<br>
 }
+</pre>
 </blockquote>
 
 <p>FIXME: add an Howto set up emacs, vi, and so on to follow this style</p>
