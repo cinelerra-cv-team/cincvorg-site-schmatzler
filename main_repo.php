@@ -149,7 +149,7 @@ int main()<br>
 <br>
 &lt;tab&gt;if(i == 1)<br>
 &lt;tab&gt;{<br>
-&lt;tab&gt;i = 2;<br>
+&lt;tab&gt;&lt;tab&gt;i = 2;<br>
 &lt;tab&gt;}<br>
 }
 </blockquote>
