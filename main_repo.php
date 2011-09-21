@@ -143,13 +143,14 @@ The most common is:</p>
 
 <blockquote>
 int main()<br>
+
 {<br>
-<tab>int i;<br>
+&lt;tab&gt;int i;<br>
 <br>
-<tab>if(i == 1)<br>
-<tab>{<br>
-<tab><tab>i = 2;<br>
-<tab>}<br>
+&lt;tab&gt;if(i == 1)<br>
+&lt;tab&gt;{<br>
+&lt;tab&gt;i = 2;<br>
+&lt;tab&gt;}<br>
 }
 </blockquote>
 
