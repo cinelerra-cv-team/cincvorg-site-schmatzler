@@ -191,9 +191,9 @@ h2 {
 }
 
 pre { 
-    border: 1px solid rgb(0, 111, 2);
-    padding: 4px;
-    background: rgb(176, 228, 174) none repeat scroll 0% 50%;
+    border: 2px solid rgb(74, 152, 190);
+    padding:20px;
+    background: rgb(235, 235, 235) none repeat scroll 0% 50%;
 }
 
 #footer { 

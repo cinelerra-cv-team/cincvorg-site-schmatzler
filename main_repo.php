@@ -141,7 +141,6 @@ rather than to force your own style onto existing code
 Different parts of Cinelerra have different coding styles. 
 The most common is:</p>
 
-<blockquote>
 <pre>
 int main()<br>
 {<br>
@@ -153,11 +152,9 @@ int main()<br>
         }<br>
 }
 </pre>
-</blockquote>
 
 In this example white spaces are made using tabs as follows:
 
-<blockquote>
 <pre>
 int main()<br>
 {<br>
@@ -169,7 +166,6 @@ int main()<br>
 &lt;tab&gt;}<br>
 }
 </pre>
-</blockquote>
 
 <p>FIXME: add an Howto set up emacs, vi, and so on to follow this style</p>
 
@@ -198,7 +194,7 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
 </blockquote>
 </div> 
 
-<address> Last modified on Sept 19 2011 </address>
+<address> Last modified on Sept 21 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>
