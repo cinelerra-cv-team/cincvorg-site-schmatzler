@@ -10,8 +10,6 @@ include "newsidemenu.php";
 <div class='content'>
 <h1>The official unofficial Cinelerra repository</h1>
 
-<h2>The repo</h2>
-
 <p>
 The source code of the community Version of Cinelerra is available from a git repository. To get it you need to have git-core installed.
   <p>
@@ -22,16 +20,16 @@ The source code of the community Version of Cinelerra is available from a git re
  </blockquote>
 <p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
 
-<h2>Guidelines</h2>
+<h1>Guidelines</h1>
 
-<h3>The official repository</h3>
+<h2>The official repository</h2>
 
 <p>The official CinelerraCV git repository is managed by core developers.</p>
 <p>The master branch stores clearly tagged releases. <br>
 The official repository can have other branches which are considered experimental.</p>
 <p>Changes must be approved by 2 core developers.</p>
 
-<h3>Core developers</h3>
+<h2>Core developers</h2>
 
 <p>Core developers are Cinelerra hackers that are happy to accept a small 
 responsibility to help CinelerraCV grow.<br>
@@ -52,11 +50,11 @@ Then he/she can send letter of application to mailing list describing
 what he/she wants to do as a core developer.<br>
 Commit access will be discussed and decided by the core developers.</p>
 
-<h3>Other contributors</h3>
+<h2>Other contributors</h2>
 
 <p>Occasional code contribution is very welcome.</p>
 
-<h4>Patch storage</h4>
+<h3>Patch storage</h3>
 
 <p>We want the contributed code stored in a stable place, with easy access to be sure that we have a copy of 
 the original patch forever. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra.org, bugs.cinelerra.org.).<br>
@@ -67,7 +65,7 @@ Frequent contributors can ask for a personal git repository.</p>
 
 <p>Any patch not immediately available or loaded onto a site that needs some quirk for downloading (registration, waiting times, fees...) will be rejected automatically.</p>
 
-<h4>Mail notification</h4>
+<h3>Mail notification</h3>
 
 <p>Contributions must be notified to the <a href="mailinglists.php">mailing list</a>.<br>
 Patches must start a new thread whith subject </p>
@@ -78,7 +76,7 @@ Patches must start a new thread whith subject </p>
 
 <p>The body of the message must contain the description of the patch and must include the reference (link) to the patch.</p>
 
-<h4>Interaction with the community</h4>
+<h3>Interaction with the community</h3>
 
 <p>Contributors are asked to collaborate for the integration.<br>
 Contributors must accept that their contribution will be reviewed by 
@@ -91,7 +89,7 @@ improve and resubmit the work.<br>
 Please note: the mailing list is not a patch dump, but a place for 
 collaborative work.</p>
 
-<h3>Proposed changes (patches or git commits)</h3>
+<h2>Proposed changes (patches or git commits)</h2>
 
 <p>Every change must be approved by at least 2 core developers 
 before being integrated into the official repository.<br>
@@ -101,7 +99,7 @@ fixes to recent commits.</p>
 <p>Every change must:</p>
 
 <blockquote>
-<h4>1. address a single feature</h4>
+<h3>1. address a single feature</h3>
 
 <p>Separate, single-feature commits are easier to review and test. They also help 
 building a clear history, making reversions possible.<br>
@@ -110,7 +108,7 @@ requires two commits:<br>
 1. making a copy of an old theme and rename it<br>
 2. applying changes to the theme</p>
 
-<h4>2. have a descriptive log</h4>
+<h3>2. have a descriptive log</h3>
 
 <p>The change must be accompanied by the "what" and "why", 
 with a detailed description directed at developers that are likely at least 
@@ -124,12 +122,12 @@ Every significant (non trivial) change should be linked to a Trac ticket number 
 milestone.
 </p>
 
-<h4>3. be non-destructive</h4>
+<h3>3. be non-destructive</h3>
 
 <p>Features should not be removed or replaced without a very good reason 
 (discussed and approved by core developers).</p>
 
-<h4>4. try hard to be compatible</h4>
+<h3>4. try hard to be compatible</h3>
 
 <p>Ideally the new version of CinCV should e able to import a project created in a 
 former version of CinCV. Yet, when important innovations requires it, compatibility can 
@@ -142,7 +140,7 @@ Compatibility between CinCV and CinHV is not a priority.</p>
 <p>Patches must not introduce new compiler warnings when compiled with modern
 compilers. (Warnings can be ignored if the cause is outside of current patch).</p>
 
-<h4>5. follow the style</h4>
+<h3>5. follow the style</h3>
 
 <p>The new code should adhere to the coding standard 
 that is used in surrounding code. <br>
@@ -185,7 +183,7 @@ int main()<br>
 
 </blockquote>
 
-<h4>Notes about new files</h4>
+<h3>Notes about new files</h3>
 
 <p>The license of a new file must be compatible with GPLv2.</p>
 <p>Files that are not created by the author of the patch must have
@@ -196,7 +194,7 @@ It must have a "by" line (at least a notice with the author's name in the commit
 It must be proved that the artwork is permitted to be used in Cinelerra.</p>
 
 
-<h4>Notes about git commit messages</h4>
+<h3>Notes about git commit messages</h3>
 
 <p>The git commit message should be properly formatted:</p>
 <blockquote>
@@ -206,7 +204,7 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
 </blockquote>
 </div> 
 
-<address> Last modified on Sept 21 2011 </address>
+<address> Last modified on Sept 24 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>
