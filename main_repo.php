@@ -56,6 +56,8 @@ Commit access will be discussed and decided by the core developers.</p>
 
 <p>Occasional code contribution is very welcome.</p>
 
+<h4>Patch storage</h4>
+
 <p>We want the contributed code stored in a stable place, with easy access to be sure that we have a copy of 
 the original patch forever. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra.org, bugs.cinelerra.org.).<br>
 Small patches (max 60KB) can be sent to the mailing list as an e-mail attachment. <br>
@@ -63,10 +65,20 @@ The Trac powered bug tracker is set to accept attachements as big as 256KB.<br>
 Bigger patches can be committed to the "mob" GIT repository.<br>
 Frequent contributors can ask for a personal git repository.</p>
 
-<p>Contributions must be notified to the mailing list cinelerra@skolelinux.no.<br>
-Notification must include the reference (link) to the patch.</p>
-
 <p>Any patch not immediately available or loaded onto a site that needs some quirk for downloading (registration, waiting times, fees...) will be rejected automatically.</p>
+
+<h4>Mail notification</h4>
+
+<p>Contributions must be notified to the <a href="mailinglists.php">mailing list</a>.<br>
+Patches must start a new thread whith subject </p>
+
+<blockquote>
+<p>[PATCH] Name of the patch</p>
+</blockquote>
+
+<p>The body of the message must contain the description of the patch and must include the reference (link) to the patch.</p>
+
+<h4>Interaction with the community</h4>
 
 <p>Contributors are asked to collaborate for the integration.<br>
 Contributors must accept that their contribution will be reviewed by 
