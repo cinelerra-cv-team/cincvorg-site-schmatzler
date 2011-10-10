@@ -24,9 +24,37 @@ The source code of the community Version of Cinelerra is available from a git re
 <p>Some developers maintain a personal repository. To browse the experimental repositories go to the project <a href="http://git.cinelerra.org/gitweb/">Gitweb page</a>. <br>
 Have a look at the <a href="source_code.php">Source code</a> page for a brief description of some of them. </p>
 
+<h2>A short introduction to Cinelerra's source layout</h2>
+
+<p>For a very quick start:</p> 
+
+ <p><strong>Directories:</strong></p>
+<ul> 
+ <li>guicast - low level gui - direct interaction with X</li>
+ <li>cinelerra - the core parts of cinelerra</li>
+ <li>plugins - plugins (mostly audio and video effects)</li>
+ <li>quicktime, libmpeg3, mpeg2enc - encoders/decoders</li>
+</ul>
+
+ <p>The rest can be classified as supporting stuff.</p>
+
+ <p><strong>Some files to start out with:</strong></p>
+ <ul>
+<li> guicast/{bcwindowbase, bcwindowdraw}.C - base class of all windows</li>
+ <li>guicast/thread.C - base class of threads</li>
+ <li>guicast/bcsignals.C - signals, debugging helpers</li>
+ <li>cinelerra/mwindow{,gui}.C - main (program) window</li>
+ <li>cinelerra/cwindow{,gui}.C - composer window</li>
+ <li>cinelerra/awindow{,gui}.C - resources window</li>
+ <li>cinelerra/vwindow{,gui}.C - viewer</li>
+ <li>cnelerra/plugin{,a,v}client.C - base classes for a plugin</li>
+</ul>
+<p>
+ Audio and video are kept in fully separated paths (classes, threads). </p>
+
 <h2>Doxygen documentation</h2>
 
-The source code has been documented using Doxygen.<br>
+<p>The source code has been documented using Doxygen.</p>
 
 <blockquote>
 
@@ -66,7 +94,7 @@ The work planned was noted in a <a href="soc.php">SOC table</a>.
 
 </div> 
 
-<address> Last modified on Sept 19 2011 </address>
+<address> Last modified on Oct 10 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>
