@@ -14,10 +14,16 @@ include "newsidemenu.php";
 The source code of the community Version of Cinelerra is available from a git repository. To get it you need to have git-core installed.
   <p>
 
-<p> You can clone the git repository with:</p>
+<p>You can clone the repo of the last stable release (2.2) with:</p>
+ <blockquote>
+<code>git clone git://git.cinelerra.org/CinelerraCV.git -b rel2.2.0 cinelerra-cv-2.2</code>
+ </blockquote>
+
+<p>Alternatively you can clone the ever growing git repository:</p>
  <blockquote>
 <code>git clone git://git.cinelerra.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
+
 <p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
 
 <h1>Guidelines</h1>
@@ -25,8 +31,8 @@ The source code of the community Version of Cinelerra is available from a git re
 <h2>The official repository</h2>
 
 <p>The official CinelerraCV git repository is managed by core developers.</p>
-<p>The master branch stores clearly tagged releases. <br>
-The official repository can have other branches which are considered experimental.</p>
+<p>The master branch stores the live development. <br>
+Every official release freezes the development into a dedicated branch.</p>
 <p>Changes must be approved by 2 core developers.</p>
 
 <h2>Core developers</h2>
@@ -204,7 +210,7 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
 </blockquote>
 </div> 
 
-<address> Last modified on Sept 24 2011 </address>
+<address> Last modified on Nov 13, 2011 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>
