@@ -132,7 +132,7 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
 <blockquote>
-<p>Latest Cinelerra CV 2.1.5 for 11.04 Natty Narval, 10.10 Maverick Meerkat, 10.04 Lucid Lynx, 9.10 Karmic Koala, 8.04 Hardy Heron, are available from a Launchpad repo maintained by Nicola Ferralis</p>
+<p>Latest Cinelerra CV 2.1.5 for 11.10 Oneric Ocelot, 11.04 Natty Narval, 10.10 Maverick Meerkat, 10.04 Lucid Lynx, 9.10 Karmic Koala, 8.04 Hardy Heron, are available from a Launchpad repo maintained by Nicola Ferralis</p>
 <blockquote>
 <code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
