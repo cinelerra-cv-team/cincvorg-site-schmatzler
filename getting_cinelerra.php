@@ -143,7 +143,7 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 
  </div>
  
-<address> Last modified on Jul 27, 2011 </address>
+<address> Last modified on Nov 13, 2011 </address>
 
 <?php include "footer.php"; ?>
  </body>
