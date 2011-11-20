@@ -12,7 +12,7 @@ include "newsidemenu.php";
 <h2>Shape Wipe transition</h2>
 
 The <em>Shape Wipe</em> transition is based on gray-scale PNG images. Only 5 images are included by default in Cinelerra. <br>
-You can extend the plugin by adding your own images. Paolo Rampino wrote a HOWTO <a href="http://akiradproject.net/your_own_transition">Make your own video transition with Cinelerra and Inkscape</a>
+You can extend the plugin by adding your own images. <!--Paolo Rampino wrote a HOWTO <a href="http://akiradproject.net/your_own_transition">Make your own video transition with Cinelerra and Inkscape--></a>
 
 <p>
 Some ready to use images are available for download:
@@ -47,8 +47,8 @@ To preview those transitions watch this <a href="footage/test-shapewipe.mpeg">de
 </blockquote>
 </div>
 </li>
-<li>A collection of images for the <em>Shape Wipe</em> transition is available at <a href="http://repository.akirad.net/pool/main-hardy/cinelerra-swtc_0.1akirad1.tar.gz">akiradproject</a>, also as a <a href="http://repository.akirad.net/pool/main-hardy/cinelerra-swtc_0.1akirad1_all.deb">deb file</a> that works on on all Debian based distros.
-</li>
+<!--<li>A collection of images for the <em>Shape Wipe</em> transition is available at <a href="http://repository.akirad.net/pool/main-hardy/cinelerra-swtc_0.1akirad1.tar.gz">akiradproject</a>, also as a <a href="http://repository.akirad.net/pool/main-hardy/cinelerra-swtc_0.1akirad1_all.deb">deb file</a> that works on on all Debian based distros.
+</li>-->
 <li>
  <p>
   <a href="http://kdenlive.org">Kdenlive</a> has a lot of images that can be used also for the Cinelerra <em>Shape Wipe</em> video transition. They can be found at 
@@ -93,7 +93,7 @@ dark green theme, with light green and red used for emphasis, by
 </div>
 
 
-<address>Last modified on 1 October 2009</address>
+<address>Last modified on Nov 20 2011</address>
 
 <?php include "footer.php"; ?>
 </body> </html>
