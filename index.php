@@ -23,6 +23,11 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>Jul 9, 2012</strong><br>
+* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.4</a>. Faster startup and responsiveness. Audio oscilloscope. Histogram updates. Audio gap removal. Better recording from webcams. Better live audio processing. Introducing the Bright theme for outdoor use.
+</p>
+
+<p>
 <strong>Nov 13, 2011</strong><br>
 * <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-November/018309.html">release announcement</a>.<br>
 This release inaugurates the new <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
@@ -66,7 +71,7 @@ The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on November 13, 2011</address>
+<address>Last modified on November 10, 2012</address>
 
 <?php include "footer.php"; ?>
 </body>
