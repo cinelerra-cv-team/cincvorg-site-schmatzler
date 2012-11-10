@@ -137,9 +137,10 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 <code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
 <p>To add the Cinelerra PPA to your source list follow the instructions on the <a href="https://launchpad.net/~cinelerra-ppa/+archive/ppa">Launchpad page</a>.</p>
-<p>Once the the PPA has been enabled you can install the package with the command: <br>
-</p>
-<blockquote><code>sudo apt-get install cinelerra-cv</code></blockquote>
+<p>Once the the PPA has been enabled you can install the package with the command: </p>
+<blockquote>
+<code>sudo apt-get install cinelerra-cv</code>
+</blockquote>
 
 <p>Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 <p> If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
