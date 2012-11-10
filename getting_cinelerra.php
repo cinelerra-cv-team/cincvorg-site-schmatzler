@@ -132,18 +132,21 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
 <blockquote>
-<p>Latest Cinelerra CV 2.2 for 11.10 Oneric Ocelot, 11.04 Natty Narval, 10.10 Maverick Meerkat, 10.04 Lucid Lynx, 9.10 Karmic Koala, 8.04 Hardy Heron, are available from a Launchpad repo maintained by Nicola Ferralis</p>
+<p>Latest Cinelerra CV 2.2 for Ubuntu (from 8.04 Hardy Heron to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis</p>
 <blockquote>
 <code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
 <p>To add the Cinelerra PPA to your source list follow the instructions on the <a href="https://launchpad.net/~cinelerra-ppa/+archive/ppa">Launchpad page</a>.</p>
+<p>Once the the PPA has been enabled you can install the package with the command: <br>
+<code>sudo apt-get install cinelerra-cv</code></p>
+
 <p>Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 <p> If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
 
  </div>
  
-<address> Last modified on Nov 20, 2011 </address>
+<address> Last modified on Nov 10, 2012 </address>
 
 <?php include "footer.php"; ?>
  </body>
