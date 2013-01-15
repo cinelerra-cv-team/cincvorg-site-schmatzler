@@ -25,10 +25,12 @@ include "newsidemenu.php";
 
   <p>For attachments there is a size limit of 60KB. Messages with bigger attachments will be held waiting for moderator approval.</p>
 
+  <em>January 2013: The mailing list was migrated to another host, and was down for a few weeks.  There are still some glitches as of January 15th...</em>
+
   <p>There is a web interface for
-  <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">
+  <a href="https://lists.skolelinux.org/listinfo/cinelerra">
   subscribing</a>, and a
-  <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/">Web
+  <a href="https://lists.skolelinux.org/pipermail/cinelerra/">Web
   archive</a> that anybody can browse.
   <br>
   The archives are avaialble also on:  </p>
