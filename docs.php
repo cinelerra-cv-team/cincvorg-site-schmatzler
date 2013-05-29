@@ -47,8 +47,11 @@ página por capítulo) |
 <a href="docs/cinelerra_cv_manual_eu.txt">TXT</a> (500 Kb) </li>
  </ul>
 
+Wiki is offline, no one cares.
+<!--
 Improve the Cinelerra CV manual by editing its pages in the <a
 href="docs/wiki/doku.php">Cinelerra CV Wiki</a> 
+-->
 
   <h2><a name="video-tutorials">Cinelerra video tutorials</a></h2>
 Some video tutorials (talk and screencast) are available on the internet:
