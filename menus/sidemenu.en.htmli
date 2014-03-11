@@ -9,7 +9,7 @@
      <li class="item"><a href="/about.php">About</a></li>
      <li class="item"><a href="/contact.php">Contact us</a></li>
      <li class="item"><a href="/mailinglists.php"> Mailing lists & IRC</a></li>
-     <li class="item"><a href="http://cinelerra.org/docs/wiki/doku.php?id=getinvolved">Get involved</a></li>
+     <li class="item"><a href="http://cinelerra-cv.org/docs/wiki/doku.php?id=getinvolved">Get involved</a></li>
      <li class="item"><a href="/docs.php">Documentation</a></li>
      <li class="item"><a href="/productions.php">Users' Productions</a></li>
      </ul>
@@ -23,7 +23,7 @@
      <li class="item"><a href="/main_repo.php">CinelerraCV repository</a></li>
      <li class="item"><a href="/bounty.php">Bounty</a></li>
      <li class="item"><a href="/soc.php">Google SOC</a></li>
-     <li class="item"><a href="http://bugs.cinelerra.org/">Bugtracker</a></li>
+     <li class="item"><a href="http://bugs.cinelerra-cv.org/">Bugtracker</a></li>
    </ul>
   </li>
  <li class="sub">

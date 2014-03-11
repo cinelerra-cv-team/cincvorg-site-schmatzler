@@ -62,8 +62,8 @@ Then there's the fact that all assets are opened in subprocesses so they don't b
 
 <p>
 <strong>Dec 6, 2009</strong><br>
-* The migration of our bugtracker from skolelinux.no to cinelerra.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
-The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs.cinelerra.org/</a>; log-in details are unchanged.
+* The migration of our bugtracker from skolelinux.no to cinelerra-cv.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
+The bugtracker address is still <a href="http://bugs.cinelerra-cv.org/">http://bugs.cinelerra-cv.org/</a>; log-in details are unchanged.
 </p>
 
 <hr>

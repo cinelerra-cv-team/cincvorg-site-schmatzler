@@ -45,7 +45,7 @@ You just need to download the .iso file, burn it on a DVD, inser it in the drive
 <a href="#ubuntu">Ubuntu</a> 
 </h3>
 
-<p>More detailed instructions for every distrubution can be found in the <a href="http://cv.cinelerra.org/docs/wiki/doku.php?id=english_manual:cinelerra_cv_en_2">Manual</a>.
+<p>More detailed instructions for every distrubution can be found in the <a href="http://cv.cinelerra-cv.org/docs/wiki/doku.php?id=english_manual:cinelerra_cv_en_2">Manual</a>.
 <br>
 </p>
 
@@ -92,7 +92,7 @@ file in order to unmask it:<BR>
 See the <a href='http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'>Handbook</a> 
 for details. <BR>
 More informations can be found in the <a
-href='http://cvs.cinelerra.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC25'>Manual</a>.</p>
+href='http://cvs.cinelerra-cv.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC25'>Manual</a>.</p>
 </blockquote>
 
 <h3><a name="fedora">Fedora</a></h3>
