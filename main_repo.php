@@ -16,15 +16,15 @@ The source code of the community Version of Cinelerra is available from a git re
 
 <p>You can clone the repo of the last stable release (2.2) with:</p>
  <blockquote>
-<code>git clone git://git.cinelerra.org/CinelerraCV.git -b rel2.2.0 cinelerra-cv-2.2</code>
+<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git -b rel2.2.0 cinelerra-cv-2.2</code>
  </blockquote>
 
 <p>Alternatively you can clone the ever growing git repository:</p>
  <blockquote>
-<code>git clone git://git.cinelerra.org/CinelerraCV.git cinelerra-cv</code>
+<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
 
-<p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
+<p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
 
 <h1>Guidelines</h1>
 
@@ -63,7 +63,7 @@ Commit access will be discussed and decided by the core developers.</p>
 <h3>Patch storage</h3>
 
 <p>We want the contributed code stored in a stable place, with easy access to be sure that we have a copy of 
-the original patch forever. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra.org, bugs.cinelerra.org.).<br>
+the original patch forever. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra-cv.org, bugs.cinelerra-cv.org.).<br>
 Small patches (max 60KB) can be sent to the mailing list as an e-mail attachment. <br>
 The Trac powered bug tracker is set to accept attachements as big as 256KB.<br>
 Bigger patches can be committed to the "mob" GIT repository.<br>

@@ -20,10 +20,10 @@ include "newsidemenu.php";
 
 <p> To get a copy for compilation use the following command:</p>
  <blockquote>
-<code>git clone git://git.cinelerra.org/CinelerraCV.git cinelerra-cv</code>
+<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
 
-<p>The stable repo is maintained by a small group of core developers. You can browse the <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
+<p>The stable repo is maintained by a small group of core developers. You can browse the <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
 
 <h2>Experimental code</h2>
 
@@ -33,7 +33,7 @@ include "newsidemenu.php";
 <blockquote>
 <p>
 Einar Rünkaru is working with the long-term goal of improving the core fixing bugs and design flaws to get a stronger code, better designed to fit a community development. It's a quite invasive work, that needs a lot of debugging.</p>
-<p><a href="http://git.cinelerra.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
+<p><a href="http://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
 </blockquote>
 
 <h3>monty - FFMPEG-based loader</h3>
@@ -62,7 +62,7 @@ files with partially incomplete initial open GOPs</li>
 <h3>SimAV - merges from HV</h3>
 <blockquote>
 <p>Simeon Voelkel is working on merging the code from Cinelerra 4 (HV)</p>
-<p><a href="http://git.cinelerra.org/gitweb?p=c4/cinelerra.git;a=summary">SimAV's repo</a></p>
+<p><a href="http://git.cinelerra-cv.org/gitweb?p=c4/cinelerra.git;a=summary">SimAV's repo</a></p>
  </div>
  
 <address> Last modified on Sep 19, 2011 </address>

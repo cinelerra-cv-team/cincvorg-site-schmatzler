@@ -30,7 +30,7 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <p>
 <strong>Nov 13, 2011</strong><br>
 * <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-November/018309.html">release announcement</a>.<br>
-This release inaugurates the new <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
+This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
 </p>
 
 <p>
@@ -62,8 +62,8 @@ Then there's the fact that all assets are opened in subprocesses so they don't b
 
 <p>
 <strong>Dec 6, 2009</strong><br>
-* The migration of our bugtracker from skolelinux.no to cinelerra.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
-The bugtracker address is still <a href="http://bugs.cinelerra.org/">http://bugs.cinelerra.org/</a>; log-in details are unchanged.
+* The migration of our bugtracker from skolelinux.no to cinelerra-cv.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
+The bugtracker address is still <a href="http://bugs.cinelerra-cv.org/">http://bugs.cinelerra-cv.org/</a>; log-in details are unchanged.
 </p>
 
 <hr>

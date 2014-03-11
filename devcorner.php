@@ -14,14 +14,14 @@ include "newsidemenu.php";
 
 <p>
 The source code of the community Version of Cinelerra is available from a git repository. </p>
-<p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
+<p>To browse the repo just go to the official CinelerraCV <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">Gitweb page</a>.</p>
 
 <p>To know more and to get the code go to the <a href="main_repo.php">Main repo page</a>.</p>
 <p>If you want to contribute, please read carefully the <a href="main_repo.php">Guidelines</a>. </p>
 
 <h2>Experimental repositories</h2>
 
-<p>Some developers maintain a personal repository. To browse the experimental repositories go to the project <a href="http://git.cinelerra.org/gitweb/">Gitweb page</a>. <br>
+<p>Some developers maintain a personal repository. To browse the experimental repositories go to the project <a href="http://git.cinelerra-cv.org/gitweb/">Gitweb page</a>. <br>
 Have a look at the <a href="source_code.php">Source code</a> page for a brief description of some of them. </p>
 
 <h2>A short introduction to Cinelerra's source layout</h2>
@@ -59,15 +59,15 @@ Have a look at the <a href="source_code.php">Source code</a> page for a brief de
 <blockquote>
 
  <ul> <li>Cinelerra 2.1 svn repository:<br>
-<a href="http://cinelerra.org/devcorner/doxy/svn_2.1_r1056/html/index.html">
+<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.1_r1056/html/index.html">
 revision 1056</a></li>
 </ul>
 
 <ul>
   <li>Cinelerra 2.0 svn repository:<br>
-<a href="http://cinelerra.org/devcorner/doxy/svn_2.0-r707/guicast/html/">
+<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.0-r707/guicast/html/">
 guicast subdirectory</a> <br>
-<a href="http://cinelerra.org/devcorner/doxy/svn_2.0-r707/cinelerra/html/">
+<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.0-r707/cinelerra/html/">
 cinelerra subdirectory</a>.</li>
 </ul>
 
