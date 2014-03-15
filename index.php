@@ -32,8 +32,6 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 * <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-November/018309.html">release announcement</a>.<br>
 This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
 </p>
-<!--Dummy editing-->
-
 <p>
 <strong>Aug 5, 2011</strong><br>
 * <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.3</a>. Most notable feature is text to movie synthesis.
