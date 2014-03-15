@@ -109,10 +109,10 @@ echo "<p><b>Note:</b> this page displays the result of executing the command:<p>
     $line = fgets($fh,4096);
 
     $line = preg_replace("/(Bugs) *(|#) *(\d+) (&|and) *(|#) *(\d+)/i","\\1 "
-."<a href='http://bugs.cinelerra.org/show_bug.cgi?id=\\3'> \\2 \\3</a> \\4 "
-."<a href='http://bugs.cinelerra.org/show_bug.cgi?id=\\6'> \\5 \\6</a>"
+."<a href='http://bugs.cinelerra-cv.org/show_bug.cgi?id=\\3'> \\2 \\3</a> \\4 "
+."<a href='http://bugs.cinelerra-cv.org/show_bug.cgi?id=\\6'> \\5 \\6</a>"
 ,$line);
-    $line = preg_replace("/(Bug |Bug #)(\d+)/i","<a href='http://bugs.cinelerra.org/show_bug.cgi?id=\\2'>\\1 \\2</a>",$line);
+    $line = preg_replace("/(Bug |Bug #)(\d+)/i","<a href='http://bugs.cinelerra-cv.org/show_bug.cgi?id=\\2'>\\1 \\2</a>",$line);
     $line = eregi_replace($hkeywords,"<b><u>\\1</u></b>",$line);	
     if (preg_match("/----+/i",$line,$m))
       echo "<hr/>";
