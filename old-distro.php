@@ -17,7 +17,7 @@ include "newsidemenu.php";
 <a href="#ubuntu">Ubuntu</a> 
 </h3>
 
-<p>More detailed instructions for every distrubution can be found in the <a href="http://cv.cinelerra.org/docs/wiki/doku.php?id=english_manual:cinelerra_cv_en_2">Manual</a>.
+<p>More detailed instructions for every distrubution can be found in the <a href="http://cv.cinelerra-cv.org/docs/wiki/doku.php?id=english_manual:cinelerra_cv_en_2">Manual</a>.
 <br>
 </p>
 
