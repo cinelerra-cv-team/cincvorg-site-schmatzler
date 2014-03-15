@@ -92,7 +92,7 @@ interview</a> with the author from 2003 also provided valuable
 insight.</p>
 
 <p>See the irc discussion at <a
-href='http://cvs.cinelerra.org/irclog/index.php?file=2005-11-05.html'>http://cvs.cinelerra.org/irclog/2005-11-05.html</a>
+href='http://cvs.cinelerra-cv.org/irclog/index.php?file=2005-11-05.html'>http://cvs.cinelerra-cv.org/irclog/2005-11-05.html</a>
 that led me to the video of Andraz Tori talking at Piksel 5 [<a
 href='http://www.nuug.no/pub/herman/piksel5/andraz_tori_cinelerra_2005.10.21.avi'>Original
 (Hi Res) Video Link</a> 368M] [<a

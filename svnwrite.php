@@ -27,7 +27,7 @@ include "newsidemenu.php";
 <h2><a name="what">What do you get?</h2>
 
   <p>You get a shell account at <code>skolelinux.org</code>, also known as
-  <code>cvs.cinelerra.org</code>.  The home directory shares a couple of
+  <code>cvs.cinelerra-cv.org</code>.  The home directory shares a couple of
    gigabytes with the other Cinelerra SVN users.
    It'll be almost full most of the time, so be nice!</p>
 
