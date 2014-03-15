@@ -2,7 +2,7 @@ To use the git repo for working on this site:
 
 1) install git on your computer (on a debian based system `apt-get install git-core`)
 2) add a new user to gitosis, by adding their public ssh key to the keydir and their name to the repo in gitosis.conf.
-3) git clone git@git.cinelerra.org:www/cinelerra-site.git your-cin-site-copy
+3) git clone git@git.cinelerra-cv.org:www/cinelerra-site.git your-cin-site-copy
 
 Make some changes, then 
 git add newfile1.php newfile2.php
@@ -13,4 +13,4 @@ git push
 
 To update your local copy with changes others have made:
 git pull
-(or possibly git pull git@git.cinelerra.org:www/cinelerra-site.git master)
+(or possibly git pull git@git.cinelerra-cv.org:www/cinelerra-site.git master)

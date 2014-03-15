@@ -39,7 +39,7 @@ These are the older ones, back to the beginning in April 2003.
 
 <p>
 <strong>January &nbsp;21, 2009</strong><br>
-* Cinelerra-cv now supports dnxhd codec. See git <a href="http://git.cinelerra.org/gitweb?p=j6t/cinelerra.git;a=commitdiff;h=954a91e72bba1ed1ce641b5faee7d4c5f318c074">commit</a>.
+* Cinelerra-cv now supports dnxhd codec. See git <a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=commitdiff;h=954a91e72bba1ed1ce641b5faee7d4c5f318c074">commit</a>.
 </p>
 
 <p>
@@ -80,12 +80,12 @@ Ubuntu 8.10 Intrepid Ibex.
 
 <p>
 <strong>July &nbsp;19, 2008</strong><br>
-* A <a href="http://www.vimeo.com/groups/cinelerra">cinelerra group</a> has been created on <a href="http://www.vimeo.com">Vimeo</a> by Leandro Ribeiro for both <a href="http://www.heroinewarrior.com/cinelerra.php3">HV</a> and <a href="http://www.cinelerra.org">CV</a> version users. Share your videos!
+* A <a href="http://www.vimeo.com/groups/cinelerra">cinelerra group</a> has been created on <a href="http://www.vimeo.com">Vimeo</a> by Leandro Ribeiro for both <a href="http://www.heroinewarrior.com/cinelerra.php3">HV</a> and <a href="http://www.cinelerra-cv.org">CV</a> version users. Share your videos!
 </p>
 
 <p>
 <strong>June &nbsp;29, 2008</strong><br>
-* The <a href="http://akiradproject.net/wellcome">akirad repository</a> where Paolo Rampino makes Cinelerra packages available for Ubuntu, is mirrored at <a href="http://akirad.cinelerra.org/">akirad.cinelerra.org</a>.
+* The <a href="http://akiradproject.net/wellcome">akirad repository</a> where Paolo Rampino makes Cinelerra packages available for Ubuntu, is mirrored at <a href="http://akirad.cinelerra-cv.org/">akirad.cinelerra-cv.org</a>.
 </p>
 
 <p>
@@ -123,13 +123,13 @@ Ubuntu 8.10 Intrepid Ibex.
 <p>
 <strong>December &nbsp;31, 2007</strong><br>
 * The Cinelerra CV manual is now available in <a
- href="http://cvs.cinelerra.org/docs/split_manual_eu/cinelerra_cv_manual_eu.html">Basque.</a>
+ href="http://cvs.cinelerra-cv.org/docs/split_manual_eu/cinelerra_cv_manual_eu.html">Basque.</a>
 </p>
 
 <p>
 <strong>October &nbsp;7, 2007</strong><br>
 * The Cinelerra CV manual is now available in <a
- href="http://cvs.cinelerra.org/docs/split_manual_es/cinelerra_cv_manual_es.html">Spanish.</a>
+ href="http://cvs.cinelerra-cv.org/docs/split_manual_es/cinelerra_cv_manual_es.html">Spanish.</a>
 </p>
 
 <p>
@@ -150,18 +150,18 @@ href="http://www.pipapo.org/gitweb?p=cinelerra/svn;a=summary">repository</a> wit
 <p>
 <strong>March &nbsp;14, 2007</strong><br>
 * The Cinelerra CV manual is now available in <a
-* href="http://cvs.cinelerra.org/docs/split_manual_pt_BR/cinelerra_cv_manual_pt_BR.html">Brazilian
+* href="http://cvs.cinelerra-cv.org/docs/split_manual_pt_BR/cinelerra_cv_manual_pt_BR.html">Brazilian
  Portuguese.</a>
 </p>
 
 <p>
 <strong>January &nbsp;10, 2007</strong><br>
-* New CinelerraCV <a href="http://cvs.cinelerra.org/docs/wiki/doku.php">wiki</a>.
+* New CinelerraCV <a href="http://cvs.cinelerra-cv.org/docs/wiki/doku.php">wiki</a>.
 </p>
 
 <p>
 <strong>November &nbsp;18, 2006</strong><br>
-* New CinelerraCV <a href="http://cvs.cinelerra.org/docs.php">manuals</a> in
+* New CinelerraCV <a href="http://cvs.cinelerra-cv.org/docs.php">manuals</a> in
  HTML, PDF and TXT.
 </p>
 
@@ -175,7 +175,7 @@ href="http://www.pipapo.org/gitweb?p=cinelerra/svn;a=summary">repository</a> wit
 
 <p>
 <strong>September &nbsp;13, 2006</strong><br>
-* New <a href="http://cvs.cinelerra.org/getting_cinelerra.php">Debian sid packages</a> ready for download (without OpenGL acceleration for the moment).
+* New <a href="http://cvs.cinelerra-cv.org/getting_cinelerra.php">Debian sid packages</a> ready for download (without OpenGL acceleration for the moment).
 </p>
 
 <p><strong>September &nbsp;10, 2006</strong><br/>
@@ -241,7 +241,7 @@ so people can know what comes IN/OUT from the CVS :)<br>
 <p><a name="news"><strong>February 8, 2005</strong><br>
 </a><a href="http://www.kiberpipa.org/%7Eminmax/cinelerra/builds/">
 x86 Debian packages</a> of Cinelerra 1.2.2 by Andraz Tori.<br>
-Use the <a href="http://cvs.cinelerra.org/packages.html#apt-x86">
+Use the <a href="http://cvs.cinelerra-cv.org/packages.html#apt-x86">
 apt source</a> to get it.
 </p>
 
@@ -286,8 +286,8 @@ on a new <a href="http://www.kiberpipa.org/%7Emammique/cinelerra/">
 apt source</a> hosted by <a href="http://www.kiberpipa.org/">Kiberpipa</a>.
 <br>
 <a
- href="http://cvs.cinelerra.org/%7Emammique/transfer_RGBA8888_to_ARGB8888_+transparency.png">screenshot</a>
-<a href="http://cvs.cinelerra.org/%7Emammique/AlBook.jpg">picture</a>
+ href="http://cvs.cinelerra-cv.org/%7Emammique/transfer_RGBA8888_to_ARGB8888_+transparency.png">screenshot</a>
+<a href="http://cvs.cinelerra-cv.org/%7Emammique/AlBook.jpg">picture</a>
 </p>
 <p><strong>September 1, 2004</strong><br>
 Nathan Kurz adds an experimental YUV4MPEG pipe output
@@ -330,12 +330,12 @@ Benjamin Flaming's <a href="http://diffkey.sourceforge.net/">
 diffkey plugin</a> has been imported into the CVS by Andraz Tori.
 </p>
 <p><strong>March 3, 2004</strong><br>
-We have our own <a href="http://bugs.cinelerra.org/">Bugzilla</a>.
+We have our own <a href="http://bugs.cinelerra-cv.org/">Bugzilla</a>.
 Please use it to report bugs, or to check if others have encountered
 the same bugs.
 </p>
 <p><strong>March 2, 2004</strong><br>
-We're now cvs.cinelerra.org! Yay!
+We're now cvs.cinelerra-cv.org! Yay!
 </p>
 <p><strong>February 17, 2004</strong><br>
 Johannes Sixt imported version 1.1.9 from Heroines, and merged it with

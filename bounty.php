@@ -103,7 +103,7 @@ with that.
 
   </tbody>
 </table>
-<strong> For more information contact the <a href="http://cvs.cinelerra.org/contact.php">Cinelerra Community</a></strong>
+<strong> For more information contact the <a href="http://cvs.cinelerra-cv.org/contact.php">Cinelerra Community</a></strong>
 </div>
 
 <address>Last modified on 8 August 2008 </address>
