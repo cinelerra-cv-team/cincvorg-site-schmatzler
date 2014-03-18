@@ -23,6 +23,22 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>Mar 7, 2014</strong><br>
+* Our Bugtracker on <a href="http://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="http://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
+</p>
+
+<p>
+<strong>Feb 23, 2014</strong><br>
+* Our obsolete domain cinelerra.org was reregistered by someone else and currently shows an outdated and modified, static website copy. 
+For verifying future news statements, please refer to our mailing list <a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">cinelerra@skolelinux.no</a>.
+</p>
+
+<p>
+<strong>Jan 20, 2014</strong><br>
+* Cinelerra-CV has moved to <a href="http://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
+</p>
+
+<p>
 <strong>Jul 9, 2012</strong><br>
 * <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.4</a>. Faster startup and responsiveness. Audio oscilloscope. Histogram updates. Audio gap removal. Better recording from webcams. Better live audio processing. Introducing the Bright theme for outdoor use.
 </p>
