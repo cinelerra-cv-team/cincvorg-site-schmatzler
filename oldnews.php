@@ -28,6 +28,22 @@ These are the older ones, back to the beginning in April 2003.
 </p>
 
 <p>
+<strong>October 1-2, 2010</strong><br>
+* The CinelerraCV community is at the <a href="http://openvideoconference.org/">Openvideo Conference</a> in New York.
+</p>
+
+<p>
+<strong>April 19, 2010</strong><br>
+* CinelerraCV will be at the <a href="http://ctfilmfest.com/">Connecticut Film Festival</a> - Danbury CT on May 7 2010. The festival will pay a special attention to Free Software with dedicate talks and workshops. Scott Frase will represent the community doing a <a href="http://ctfilmfest.com/site/node/43">presentation on Video production using Free Software tools</a>.
+</p>
+
+<p>
+<strong>Dec 6, 2009</strong><br>
+* The migration of our bugtracker from skolelinux.no to cinelerra-cv.org is completed, thanks to the precious help of Cillian De Roiste. We moved also from Bugzilla to Trac. 
+The bugtracker address is still <a href="http://bugs.cinelerra-cv.org/">http://bugs.cinelerra-cv.org/</a>; log-in details are unchanged.
+</p>
+
+<p>
 <strong>June 1, 2009</strong><br>
 * CinelerraCV will be at the <a href="http://openvideoconference.org/">Openvideo Conference</a> in New York on 19-20 June 2009. Scott Frase will represent the community.
 </p>
