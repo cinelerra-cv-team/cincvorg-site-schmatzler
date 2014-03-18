@@ -335,7 +335,7 @@ Please use it to report bugs, or to check if others have encountered
 the same bugs.
 </p>
 <p><strong>March 2, 2004</strong><br>
-We're now cvs.cinelerra-cv.org! Yay!
+We're now cvs.cinelerra.org! Yay!
 </p>
 <p><strong>February 17, 2004</strong><br>
 Johannes Sixt imported version 1.1.9 from Heroines, and merged it with
