@@ -70,7 +70,7 @@ Then there's the fact that all assets are opened in subprocesses so they don't b
 <p><a href="oldnews.php">Older news...</a></p>
 </div>
 
-<address>Last modified on November 10, 2012</address>
+<address>Last modified on March 18, 2014</address>
 
 <?php include "footer.php"; ?>
 </body>
