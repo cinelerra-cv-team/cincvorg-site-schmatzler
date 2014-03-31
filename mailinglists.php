@@ -25,16 +25,18 @@ include "newsidemenu.php";
 
   <p>For attachments there is a size limit of 400KB. Messages with bigger attachments will be held waiting for moderator approval.</p>
 
+  <p>
   <em>March 2014: We're moving to a new mailing list, hosted at 
-  cinelerra-cv.org: cinelerra@lists.cinelerra-cv.org</em>
+  cinelerra-cv.org: cinelerra@lists.cinelerra-cv.org</em><br>
 
   There is a web interface for 
   <a href="http://lists.cinelerra-cv.org/cgi-bin/mailman/listinfo/cinelerra">
   subscribing</a>, and a 
   <a href"http://lists.cinelerra-cv.org/pipermail/cinelerra/">
   Web archive</a> that anybody can browse.
+  </p>
 
-
+  <p>
   There is a 
   <a href="https://lists.skolelinux.org/pipermail/cinelerra/">
   web archive of the old mailing list</a> which is being phased out.
