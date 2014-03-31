@@ -32,7 +32,7 @@ include "newsidemenu.php";
   There is a web interface for 
   <a href="http://lists.cinelerra-cv.org/cgi-bin/mailman/listinfo/cinelerra">
   subscribing</a>, and a 
-  <a href"http://lists.cinelerra-cv.org/pipermail/cinelerra/">
+  <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/">
   Web archive</a> that anybody can browse.
   </p>
 
