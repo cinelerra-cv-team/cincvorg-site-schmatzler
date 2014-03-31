@@ -55,14 +55,14 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
     <h4>#cinelerra</h4>
    <p>For development discussion and users support.<br>
     It hosts a mothly meeting every first sunday of the month at 16.00 UTC.<br>
-   The channel is logged into a <a href="http://cvs.cinelerra-cv.org/irclog/">web archive</a>.
+   The channel is logged into a <a href="http://irclog.cinelerra-cv.org/">web archive</a>.
    </p>
 
     <h4>#openvideo</h4>
    <p>For general discussion on open source video development and use.<br>
  </p> </div> 
 
-<address>Last modified on Ago 10 2011</address>
+<address>Last modified on March 31 2014</address>
 
 <?php include "footer.php"; ?>
    </body> 
