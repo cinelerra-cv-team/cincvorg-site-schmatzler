@@ -20,7 +20,7 @@ include "newsidemenu.php";
    <p>We are on the channel <code>cinelerra</code> on <strong>Freenode</strong>.
    If you don't know which server to connect to, try irc.freenode.net, port 6667.
    <br>
-   The channel is logged into a <a href="http://cvs.cinelerra.org/irclog/">
+   The channel is logged into a <a href="http://http://irclog.cinelerra-cv.org/">
    web archive</a>.
    </p>
   </div>
