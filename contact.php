@@ -11,8 +11,9 @@ include "newsidemenu.php";
 <h2>E-mail</h2>
  <ul>
     <li>
-     The Cinelerra CV mailing list <br>
-     &lt;cinelerra <strong>at</strong> skolelinux.no&gt;
+     The Cinelerra CV mailing list has moved from skolelinux.no! <br>
+     The new e-mail address is: 
+     &lt;cinelerra <strong>at</strong> lists.cinelerra-cv.org&gt;
     </li>
    </ul>
  <h2><a name="irc">Internet Relay Chat (IRC)</a></h2>
@@ -23,7 +24,7 @@ include "newsidemenu.php";
    web archive</a>.
    </p>
   </div>
- <address> Last modified on 13 August 2008 </address>
+ <address> Last modified on March 31st 2014 </address>
 <?php include "footer.php"; ?>
  </body>
 </html>
