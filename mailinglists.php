@@ -54,7 +54,6 @@ We use the IRC network <a href="http://freenode.net/">Freenode</a>. If you don't
 
     <h4>#cinelerra</h4>
    <p>For development discussion and users support.<br>
-    It hosts a mothly meeting every first sunday of the month at 16.00 UTC.<br>
    The channel is logged into a <a href="http://irclog.cinelerra-cv.org/">web archive</a>.
    </p>
 
