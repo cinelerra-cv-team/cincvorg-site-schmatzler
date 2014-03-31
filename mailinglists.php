@@ -23,17 +23,23 @@ include "newsidemenu.php";
    For real-time handholding, we recommend IRC.
   </p>
 
-  <p>For attachments there is a size limit of 60KB. Messages with bigger attachments will be held waiting for moderator approval.</p>
+  <p>For attachments there is a size limit of 400KB. Messages with bigger attachments will be held waiting for moderator approval.</p>
 
-  <em>January 2013: The mailing list was migrated to another host, and was down for a few weeks.  There are still some glitches as of January 15th...</em>
+  <em>March 2014: We're moving to a new mailing list, hosted at 
+  cinelerra-cv.org: cinelerra@lists.cinelerra-cv.org</em>
 
-  <p>There is a web interface for
-  <a href="https://lists.skolelinux.org/listinfo/cinelerra">
-  subscribing</a>, and a
-  <a href="https://lists.skolelinux.org/pipermail/cinelerra/">Web
-  archive</a> that anybody can browse.
+  There is a web interface for 
+  <a href="http://lists.cinelerra-cv.org/cgi-bin/mailman/listinfo/cinelerra">
+  subscribing</a>, and a 
+  <a href"http://lists.cinelerra-cv.org/pipermail/cinelerra/">
+  Web archive</a> that anybody can browse.
+
+
+  There is a 
+  <a href="https://lists.skolelinux.org/pipermail/cinelerra/">
+  web archive of the old mailing list</a> which is being phased out.
   <br>
-  The archives are avaialble also on:  </p>
+  The old archives are also avaialble on:  </p>
 <ul>
 <li><a href="http://e.kevb.net/lurker/list/cinelerra.en.html">Lurker</a>, maintained by Kevin Brosius</li>
 <li><a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">The Mail Archive</a></li>
