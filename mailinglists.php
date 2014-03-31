@@ -43,7 +43,6 @@ include "newsidemenu.php";
   <br>
   The old archives are also avaialble on:  </p>
 <ul>
-<li><a href="http://e.kevb.net/lurker/list/cinelerra.en.html">Lurker</a>, maintained by Kevin Brosius</li>
 <li><a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">The Mail Archive</a></li>
 <li><a href="http://dir.gmane.org/gmane.comp.video.cinelerra-cv.general">GMANE</a></li>
 </ul>
