@@ -33,16 +33,6 @@ Italian television.</li>
 <li> <a href="http://cinelerra-cv.org/examples/NY_titler_timefront.ogg">swiping-transparent title</a>, a modified version of the above title, made adding also the Timefront effect.</li>
 </ul>
 
-
-<h2>Compositing demo</h2>
-
-<ul>
-  <li><a href="footage/~baver/cinelerra/clips/example10sec.mov">example10sec.mov</a> is part of an
-  amateur movie edited with Cinelerra.  It demonstrates compositing.</li>
-  <li><a href="footage/~baver/cinelerra/clips/example10sec.mpg">example10sec.mpg</a> is the same clip
-  encoded in MPEG.</li>
-</ul>
-
 <h2>Motion tracker demo</h2>
 
 <ul>
