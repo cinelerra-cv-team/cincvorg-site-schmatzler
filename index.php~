@@ -23,6 +23,11 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>June, 2014</strong><br>
+* The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
+</p>
+
+<p>
 <strong>Mar 7, 2014</strong><br>
 * Our Bugtracker on <a href="http://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="http://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
 </p>
@@ -45,7 +50,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p>
 <strong>Nov 13, 2011</strong><br>
-* <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-November/018309.html">release announcement</a>.<br>
+* <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://lists.skolelinux.org/pipermail/cinelerra/2011-November/018309.html">release announcement</a>.<br>
 This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
 </p>
 <p>
