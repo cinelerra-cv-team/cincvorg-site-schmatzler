@@ -76,7 +76,7 @@ apt-get install cinelerra</code> .
   <h3><a name="apt">Debian</a></h3>
 
 <blockquote>
-<p>Both CinelerraCV 2.1.0 and CinelerraHV 4.2 packages are available from <a href="http://deb-multimedia.org/">Deb-multimedia</a>.<br />
+<p>Both CinelerraCV 2.1.0 and CinelerraHV 4.2 packages are available from <a href="http://debian-multimedia.org/">Debian-multimedia</a>.<br />
 Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 </blockquote>
 
