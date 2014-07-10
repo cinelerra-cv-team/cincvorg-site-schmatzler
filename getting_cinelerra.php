@@ -21,14 +21,14 @@ include "newsidemenu.php";
 You just need to download the .iso file, burn it on a DVD, insert it in the drive and restart your machine.</p> 
  
 <ul> 
-<li><a href='http://www.dynebolic.org'>dyne:bolic</a> -  for multimedia production -uses Window Maker window manager</li> 
+<li><a href='http://www.dynebolic.org'>dyne:bolic</a> - For multimedia production, uses Window Maker window manager</li> 
 <li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - A content-creation focused OS</li> 
-<li><a href='http://www.elivecd.org/'>Elive</a> -  debian based live CD using Enlightenment window manager</li> 
+<li><a href='http://www.elivecd.org/'>Elive</a> - Debian-based live CD using Enlightenment window manager</li> 
 <li><a href='https://musixdistro.wordpress.com'>Musix</a> - For audio production, graphic design and video editing</li> 
-<li><a href='http://openartisthq.org/'>openArtist</a> - based on Ubuntu, for artists</li> 
+<li><a href='http://openartisthq.org/'>openArtist</a> - Ubuntu-based, for artists</li> 
 <li><a href='https://juntadados.org/'>junta Dados</a> - Debian-based Brazilian multimedia distribution</li> 
 <li><a href='http://www.apodio.org/'>Apodio</a> - A GNU/Linux multimedia distribution</li> 
-<li><a href='http://www.celeum.com/about-dreamstudio/'>Dream Studio</a> - A terrific Multimedia Project</li> 
+<li><a href='http://www.celeum.com/about-dreamstudio/'>Dream Studio</a> - A full-featured Multimedia creation project</li> 
 </ul> 
 
 <h2><a name="packages">Packages</a></h2>
