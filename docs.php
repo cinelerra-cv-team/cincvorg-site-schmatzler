@@ -178,9 +178,10 @@ Source video editing, especially for Cinelerra HV (among them an Ubuntu package)
 </ul>
 <h2>Cinelerra CV Wiki</h2>
 <p>  <B>DokuWiki</B><BR>
-A copy of the Cinelerra CV manual is available on a wiki. Users that want to
-improve the manual are welcome to edit its pages at <a
-href="docs/wiki/doku.php">Cinelerra CV Wiki</a> <BR>  </p>
+A copy of the Cinelerra CV manual was available on a wiki.
+Due to too much spam on the Wiki it has been de-linked.
+If you like to help with maintaining the Wiki then please email tv-lists at gmail.com.
+ Cinelerra CV Wiki <BR>  </p>
 <p>  <B>TWiki</B><BR>
 The first Cinelerra CV wiki was set up by Alex Ferrer. At present is available
 only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet
