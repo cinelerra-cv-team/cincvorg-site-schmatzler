@@ -18,7 +18,7 @@ include "newsidemenu.php";
 <li>
 <B>English:</B> 
 <a href="docs/cinelerra_cv_manual_en.html">HTML</a> (A large page) |  
-<a href="docs/split_manual_en/cinelerra_cv_manual_en.html">HTML</a> (One page per chapter)  |  
+<a href="docs/cinelerra_cv_manual_en/cinelerra_cv_manual_en.html">HTML</a> (One page per chapter)  |  
 <a href="docs/cinelerra_cv_manual_en.pdf">PDF</a> (6 Mb)  |  
 <a href="docs/cinelerra_cv_manual_en.txt">TXT</a> (500 Kb) </li>
 <li>
