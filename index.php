@@ -23,6 +23,23 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
+<strong>August, 2015</strong><br>
+* Cinelerra-CV 2.3 has been released!
+Changes in version 2.3:
+<ul><li>Full UTF-8 support</li>
+<li>Complete new overlay engine and resampler</li>
+<li>New graphics: About panel, some icons</li>
+<li>New plugins: GreyCStoration, C41, Bluebanana, color3way, findobject, lens</li>
+<li>Some translations have been updated (German, Italian, French, Norwegian, Portugese)</li>
+<li>Lots of small bugfixes</li>
+<li>Changes in build system:</li>
+<li>Automated creation of header files for png in plugins.</li>
+<li>Updated debian build files</li>
+<li>Renamed project to Cinelerra-cv</li></ul>
+Full changelog can be browsed through <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
+</p>
+
+<p>
 <strong>June, 2014</strong><br>
 * The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
 </p>
