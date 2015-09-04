@@ -1,0 +1,17 @@
+# Video files
+*.mov
+*.ogg
+*.avi
+*.AVI
+*.m2t
+*.m1v
+*.m2v
+*.mpeg
+*.mpg
+*.mp4
+
+# The way-too-big doxygen
+/devcorner/doxy/ 
+
+# Wiki
+/docs/wiki
