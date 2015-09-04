@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 17. Transições</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 17. Transições">
+<meta name="keywords" content="Manual do Cinelerra CV: 17. Transições">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_16.html#SEC250" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_18.html#SEC254" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Transi_00e7_00f5es"></a>
+<a name="SEC251"></a>
+<h1 class="chapter"> 17. Transições </h1>
+
+
+<hr size="6">
+<a name="Usando-transi_00e7_00f5es"></a>
+<a name="SEC252"></a>
+<h2 class="section"> 17.1 Usando transições </h2>
+
+<p>Um vídeo é composto de várias cenas e tomadas. No entanto, nem sempre o corte seco - no qual uma cena sai e, imediatamente, a cena seguinte aparece - é o mais adequado para o momento e o conteúdo que o vídeo pretende expressar. As transições são uma forma de se passar de uma cena à outra com diferentes variações.
+</p>
+<p>O Cinelerra suporta transições de áudio e de vídeo, as quais estão listadas na janela de Recursos.
+</p>
+<p align="center"> <img src=".././manual_images_intl/resources_video_transitions.png" alt="manual_images_intl/resources_video_transitions">
+</p><p align="center"> <b>Transições de vídeo na janela de Recursos</b>
+</p>
+<p>As transições só podem ser aplicadas a determinados tipos de trilhas. As transições presentes em <b>transições de áudio</b> só podem ser aplicadas às trilhas de áudio.  Já as transições presentes em <b>transições de vídeo</b> só podem ser aplicadas às trilhas de vídeo.
+</p>
+<p>Abra dois arquivos de vídeo. Alternativamente, carregue um arquivo único de vídeo e elimine uma parte do centro, de modo que você fique com dois blocos de edição a partir de um arquivo único. Assegure-se que as bordas entre os dois blocos de edição estejam visíveis na linha do tempo.<br>
+Vá até a janela de Recursos e clique na pasta <b>Transições de vídeo</b>. Arraste uma transição qualquer da lista e solte-a sobre o segundo vídeo na linha do tempo. Aparecerá uma caixa informando que temos uma transição naquele ponto. Ao fazer isto, aplicamos uma transição entre a primeira e a segunda cena do vídeo.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_transition.png" alt="manual_images_intl/drop_transition">
+</p><p align="center"> <b>Arrastando uma transição &quot;Dissolver&quot; para a linha do tempo</b>
+</p>
+<p>Agora você pode reproduzir o vídeo e ver como ficou a transição pela <b>janela Compositor</b>. 
+</p>
+<a name="IDX124"></a>
+<a name="IDX125"></a>
+
+<p>Uma vez que a transição está inserida, esta pode ser editada da mesma forma que um efeito. Clique com o botão direito do mouse sobre a transição para acessar seu menu.<br>
+A opção <b>mostrar</b> traz alguns parâmetros específicos para a transição em questão.<br>
+A opção <b>comprimento</b> determina o tempo de duração da transição em segundos. Assim que esses dois parâmetros são ajustados, eles são aplicados às futuras transições até que sejam modificados novamente. Pra finalizar, a opção <b>Separar</b> remove a transição da linha do tempo.
+</p>
+<p>Arrastar e soltar as transições da janela de Recursos para a janela principal do Cinelerra pode ser lento e cansativo. Felizmente, uma vez que uma transição é arrastada da janela de Recursos, você pode usar as teclas <b>U</b> e <b>u</b> para inserir novamente a mesma transição. A tecla <b>U</b> insere a última transição de vídeo utilizada e a <b>u</b> (minúsculo) insere a última transição de áudio em todas as trilhas não protegidas de gravação. Se o cursor ou o ponto de entrada (colchete) estiver sobre um trecho de áudio ou vídeo, a transição será inserida no começo desse trecho.
+</p>
+<p>Transições fazem dois blocos de edição se sobreporem por um determinado período de tempo. Alguns programas simplísticos de uma trilha literalmente movem para trás o segundo bloco de edição para fazer com que ele se sobreponha parcialmente ao primeiro. Este comportamento não é possível em editores multipista, onde a sincronia entre as trilhas é vital. O Cinelerra não moverá os blocos de edição durante as transições. Ao invés disso, ele mantém se preciso quadros do arquivo de origem para aumentar o primeiro bloco de edição o suficiente para fazê-lo se sobrepor ao segundo pela duração da transição.<br> 
+O ponto exato no tempo quando a transição faz efeito é o início do segundo bloco de edição. A transição dura um determinado tempo no segundo bloco. Por exemplo, se você marcar uma duração de 1 segundo para uma transição de Dissolver, ela <b>não</b> começará ao 0.5 segundo final do primeiro bloco de edição e continuará 0.5 segundo a partir do início do segundo bloco. Na verdade, ela começará exatamente ao início do segundo bloco e durar 1 segundo a partir dali.<br> 
+Na linha do tempo, uma barra marrom sobre o símbolo de transição representa visualmente sua posição e duração.<br> 
+A consequência mais importante deste comportamento é que o primeiro bloco de edição precisa ter informação suficiente (duração do vídeo de origem) além dos limites marcados no bloco para preencher a transição no segundo bloco. Esta informação deve ser igual ou maior em duração que a duração do efeito de transição marcado no parâmetro <b>Duração</b> no menu relativo à tansição.<br>  
+Se o último quadro mostrado na linha do tempo for o último do arquivo de origem, o Cinelerra aumentará a duração do primeiro bloco de edição usando somente o último quadro, com o resultado desagradável de este quadro ficar congelado na transição.
+</p>
+<p>Quando as transições são reproduzidas da linha do tempo para a placa aceleradora de vídeo, a aceleração do hardware geralmente será desativada durante a transição e reativada logo depois. Esse procedimento é usado para que a transição possa ser renderizada. Ao se usar uma placa de vídeo sem aceleração, normalmente não ocorre esse problema.
+</p>
+<hr size="6">
+<a name="Transi_00e7_00e3o-de-v_00eddeo-_0022Dissolver_0022"></a>
+<a name="SEC253"></a>
+<h2 class="section"> 17.2 Transição de vídeo &quot;Dissolver&quot; </h2>
+
+<p><img src=".././manual_images_intl/video_disolve_icon.png" alt="manual_images_intl/video_disolve_icon">
+</p>
+<p>Esta é uma suave transição &quot;Dissolver&quot; entre dois trechos de vídeo, os quais nós chamaremos de trecho inicial e trecho final. O trecho inicial vai ganhando transparência e desaparecendo enquanto o trecho final vai surgindo aos poucos. A duração de tempo para esse processo acontecer pode ser determinado pelo controle de &quot;Comprimento&quot;.
+</p>
+<p><b>Controles disponíveis:</b> <br>
+Clicando com o botão direito no ícone da transição na linha do tempo, um menu irá aparecer com os seguintes controles
+</p><ul>
+<li> <b>Mostrar:</b> Abra uma janela com opções específicas da transição (não disponível para a &quot;Dissolver&quot;)
+</li><li> <b>Ligado:</b> Ativa e desativa a transição
+</li><li> <b>Comprimento:</b> Determina a duração em segundos da transição
+</li><li> <b>Separar:</b> Remove a transição da linha do tempo
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC251" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_18.html#SEC254" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

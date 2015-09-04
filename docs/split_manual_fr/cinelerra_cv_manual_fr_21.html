@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 21. Résolution de problèmes</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 21. Résolution de problèmes">
+<meta name="keywords" content="Manuel de Cinelerra CV: 21. Résolution de problèmes">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_20.html#SEC273" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_22.html#SEC317" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="R_00e9solution-de-probl_00e8mes"></a>
+<a name="SEC306"></a>
+<h1 class="chapter"> 21. Résolution de problèmes </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC307">21.1 Signaler des bogues</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC308">21.2 La lecture ne s'arrête pas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC309">21.3 Plantages du pilote Buz</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC310">21.4 Le glisser des points d'entrée et de sortie ne fonctionne pas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC311">21.5 Blocage lors du chargement de fichiers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC312">21.6 Perte de synchronisation lors de l'enregistrement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC313">21.7 L'application de gamma suivie de flou de fonctionne pas</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC314">21.8 Copier-coller de sélections de piste ne fonctionne pas sur la timeline</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC315">21.9 Cinelerra se plante souvent</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC316">21.10 Erreur &quot;Thème Blond introuvable&quot;</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Signaler-des-bogues"></a>
+<a name="SEC307"></a>
+<h2 class="section"> 21.1 Signaler des bogues </h2>
+
+<p>Si vous remarquez un bogue, la première chose à faire est d'aller sur
+<a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> pour vérifier s'il n'a pas déjà été signalé.
+S'il n'existe pas de signalement de bogue correspondant, vous pouvez renseigner
+un signalement de bogue.  Créez un compte sur <a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a>
+si vous n'en avez pas déjà un.  Ensuite, remplissez le rapport de bogue, en y
+incluant les informations suivantes :
+</p>
+<ul>
+<li> Numéro de version de Cinelerra CV.  Exemple : r959
+
+</li><li> Nom et version de la distribution.  Exemple : Debian SID
+
+</li><li> Etapes permettant de reproduire le bogue.  C'est très important car cela
+aide énormément les personnes qui essaient de corriger les bogues.  Exemple :
+<ol>
+<li> lancer Cinelerra
+</li><li> ouvrir la fenêtre d'enregistrement
+</li><li> cliquer OK
+</li><li> plantage de Cinelerra
+</li></ol>
+
+</li><li> Lors d'un plantage de Cinelerra CV, une sortie de débogueur est utile.
+Lancez :<br>
+<code>gdb cinelerra</code><br>
+<code>run</code><br>
+(Vous déclenchez le bogue et Cinelerra CV se plante)<br>
+<code>thread apply all bt</code><br>
+Copiez alors tous les informations affichées dans votre signalement de bogue.
+</li></ul>
+
+<p>Ne pas hésiter à joindre tous les fichiers que vous jugerez utiles, tels que
+des captures d'écran par exemple.  La sortie de gdb est plus utile lorsque
+Cinelerra est compilé avec les symboles de débogage.  Voir la section <a href="cinelerra_cv_manual_fr_2.html#SEC13">Compiler avec les symboles de débogage</a>, pour les instructions de compilation correspondantes.
+</p>
+<p>De plus, si le bogue que vous avez trouvé concerne un problème de chargement
+d'un fichier particulier dans Cinelerra-CV, mettre à disposition un petit
+exemple d'un tel fichier sur internet sera apprécié.  Ceci permettra aux
+personnes qui corrigent les bogues de charger elles-mêmes ce fichier dans
+Cinelerra pour voir ce qui se produit.
+</p>
+<hr size="6">
+<a name="La-lecture-ne-s_0027arr_00eate-pas"></a>
+<a name="SEC308"></a>
+<h2 class="section"> 21.2 La lecture ne s'arrête pas </h2>
+
+<p>Si la lecture des pistes audio ne s'arrête pas sur la timeline et continue
+après la fin de la vidéo, allez dans <b>Préférences-&gt;Lecture</b> et cliquez sur
+<b>Stop playback locks up</b>.  Ce bouton ne sera affiché que si vous avez défini
+ALSA en tant que pilote audio.
+</p>
+<hr size="6">
+<a name="Plantages-du-pilote-Buz"></a>
+<a name="SEC309"></a>
+<h2 class="section"> 21.3 Plantages du pilote Buz </h2>
+
+<p>Tout d'abord, on accède aux cartes d'acquisition Zoran en utilisant le pilote
+vidéo <b>Buz</b> depuis <b>Préférences-&gt;Enregistrement</b> et
+<b>Préférences-&gt;Lecture</b>.  Quelques réglages de configuration sont disponibles
+dans une autre section, Voir la section <a href="cinelerra_cv_manual_fr_20.html#SEC282">Améliorer les performances</a>..
+</p>
+<p>Une fois réglé, le pilote Buz semble planter si le nombre de tampons
+d'enregistrement est trop important.  Assurez-vous que la valeur dans
+<b>Préférence-&gt;Enregistrement-&gt;Images à mettre en tampon sur le périphérique</b>
+est inférieure à 10.
+</p>
+<hr size="6">
+<a name="Le-glisser-des-points-d_0027entr_00e9e-et-de-sortie-ne-fonctionne-pas"></a>
+<a name="SEC310"></a>
+<h2 class="section"> 21.4 Le glisser des points d'entrée et de sortie ne fonctionne pas </h2>
+
+<p>Parfois il y a deux plans trop proches l'un de l'autre.  Le plan sélectionné
+pour le glisser peut se trouver sur un plan trop proche d'un plan qui se trouve
+invisible dans le facteur de zoom actuel.  Effectuez un zoom horizontal.
+</p>
+<p>Si vous pensez que vous ne pouvez pas déplacer toutes les éditions débutant au
+même endroit sur des pistes armées, zoomez horizontalement pour vérifier
+qu'elles commencent effectivement bien au même endroit.  Parfois la
+synchronisation verticale des éditions peut être perdue car vous n'avez pas
+correctement défini les attributs du projet (PAL/NTSC).  Vérifiez cela dans
+<b>Configuration-&gt;Format...</b>
+</p>
+<hr size="6">
+<a name="Blocage-lors-du-chargement-de-fichiers"></a>
+<a name="SEC311"></a>
+<h2 class="section"> 21.5 Blocage lors du chargement de fichiers </h2>
+
+<p>Souvent, lorsqu'un blocage se produit lors du chargement d'un fichier, cela est
+dû au fait que le codec de ce fichier n'est pas supporté.  Une autre raison
+possible est que Cinelerra est en train de construire les vignettes des images
+pour la fenêtre des ressources.  Il lui faut en effet décompresser un grand
+nombre d'images pour constituer ces vignettes.  Aller à
+<b>Configuration-&gt;Préférences-&gt;Interface</b> et désactivez <b>Utiliser les
+vignettes dans la fenêtre des ressources</b> afin de sauter cette étape de
+traitement, si cela pose problème.
+</p>
+<hr size="6">
+<a name="Perte-de-synchronisation-lors-de-l_0027enregistrement"></a>
+<a name="SEC312"></a>
+<h2 class="section"> 21.6 Perte de synchronisation lors de l'enregistrement </h2>
+
+<p>Si la fréquence des images de l'enregistrement est bien plus faible que la
+fréquence des images de la source, au cours du temps, la vidéo va s'accumuler
+dans les tampons d'enregistrement et l'audio et la vidéo ne seront plus
+synchronisées.  Diminuez le <b>nombre d'images à mettre en tampon dans le
+périphérique</b> depuis <b>Préférence-&gt;Acquisition</b> pour que les images en excès
+soient sautées plutôt que mises en tampon.
+</p>
+<hr size="6">
+<a name="L_0027application-de-gamma-suivie-de-flou-de-fonctionne-pas"></a>
+<a name="SEC313"></a>
+<h2 class="section"> 21.7 L'application de gamma suivie de flou de fonctionne pas </h2>
+
+<p>L'effet gamma utilise la fonction <b>pow</b> alors que l'effet de flou utilise un
+certain nombre de fonctions <b>exp</b> de la bibliothèque mathématique.  Pour
+certaines raisons, l'utilisation de la fonction pow casse le fonctionnement
+ultérieur des fonctions exp de la bibliothèque mathématique.  Vous devrez
+appliquer le gamma après le flou pour qu'il puisse fonctionner.
+</p>
+<hr size="6">
+<a name="Copier_002dcoller-de-s_00e9lections-de-piste-ne-fonctionne-pas-sur-la-timeline"></a>
+<a name="SEC314"></a>
+<h2 class="section"> 21.8 Copier-coller de sélections de piste ne fonctionne pas sur la timeline </h2>
+
+<p>Si vous utilisez l'application KDE Klipper, il vous faut soit la désactiver,
+soit faire un clic dans l'icône de sa barre de tâches, sélectionner
+<b>Configurer Klipper</b> et vous assurer que <b>Eviter que le presse-papier ne
+soit vide</b> n'est pas sélectionné.
+</p>
+<hr size="6">
+<a name="Cinelerra-se-plante-souvent"></a>
+<a name="SEC315"></a>
+<h2 class="section"> 21.9 Cinelerra se plante souvent </h2>
+
+<p>Effectuez une installation propre.  Assurez-vous de ne pas avoir de
+bibliothèque provenant d'une installation antérieure.  Supprimez aussi votre
+répertoire <tt>`$HOME/.bcast/'</tt>.<br>
+<code>rm -f /usr/local/lib/libguicast*</code><br>
+<code>rm -f /usr/lib/libguicast*</code><br>
+<code>rm -f /usr/local/lib/libquicktimehv*</code><br>
+<code>rm -f /usr/lib/libquicktimehv*</code><br>
+<code>rm -f /usr/local/lib/libmpeg3hv*</code><br>
+<code>rm -f /usr/lib/libmpeg3hv*</code>
+</p>
+<hr size="6">
+<a name="Erreur-_0022Th_00e8me-Blond-introuvable_0022"></a>
+<a name="SEC316"></a>
+<h2 class="section"> 21.10 Erreur &quot;Thème Blond introuvable&quot; </h2>
+
+<p>Si le message suivant est affiché : <code>Aborted, MWindow::init_theme:
+Theme Blond not found</code>, alors :
+</p><ul>
+<li> Vous devriez avoir le fichier <tt>`defaulttheme.*'</tt> dans
+<tt>`/usr/lib/cinelerra'</tt> ou dans <tt>`/usr/local/lib/cinelerra'</tt>.  Si ce n'est
+pas le cas, il vous faut de nouveau installer les greffons.
+</li><li> Essayez de supprimer le répertoire <tt>`$HOME/.bcast/'</tt>
+</li><li> Regardez dans le fichier <tt>`$HOME/.bcast/Cinelerra_rc'</tt> et recherchez
+THEME, ce devrait être =&gt; THEME Blond
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC306" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_22.html#SEC317" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

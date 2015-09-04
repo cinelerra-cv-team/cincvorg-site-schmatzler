@@ -1,0 +1,1033 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 3. Konfigurazioa</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 3. Konfigurazioa">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 3. Konfigurazioa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_2.html#SEC7" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_4.html#SEC58" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Konfigurazioa"></a>
+<a name="SEC26"></a>
+<h1 class="chapter"> 3. Konfigurazioa </h1>
+
+<p>Bere malgutasuna dela eta, Cinelerra ezin da optimizatu 
+erabiltzailearen beharretara konfiguratu gabe.
+Zoritxarrez, oso parametro gutxi doi daitezke konpilazioko orduan.
+Beraz, exekuzio-denborako konfigurazioa da aukera bakarra 
+erabiltzaile gehienentzat, hainbat parametro erabilgarri dituztelako. <br>
+Azpian konfigurazioko aukerak eta GNU/Linux sisteman onartutako APIa
+zerrendatzen da. <br>
+Cinelerra aplikazioko <b>ezarpenak-&gt;hobespenak</b> menura joan aukerak ikusteko.
+</p>
+
+<hr size="6">
+<a name="Inguruneko-aldagaiak"></a>
+<a name="SEC27"></a>
+<h2 class="section"> 3.1 Inguruneko aldagaiak </h2>
+
+<p>UNIX-en oinarritutako sistemetan, inguruneko aldagaiak aplikazio
+guztiek irakur ditzaketen shell-eko aldagai globalak dira. Inguruneko
+aldagai bat ezartzeko honelako komandoa erabil daiteke: 
+<code>set ALDAGAIA=balioa</code>. Inguruneko 
+aldagai guztiak <code>env</code> bezalako komandoarekin ikus daitezke. 
+Cinelerra-k inguruneko honako aldagaiak ezagutzen ditu:
+</p>
+<ul>
+<li> <b>LADSPA_PATH</b> <br>
+LDASPA plugin-a erabiltzeko aldagai hau definitu behar da komaz bereiztutako
+direktorioen zerrendarekin LDASPA plugin-ak bilatzeko. Ez dago Cinelerra-ren 
+jatorrizko plugin-ik. See section <a href="cinelerra_cv_manual_eu_15.html#SEC239">Ladspa efektuak</a>.
+
+</li><li> <b>GLOBAL_PLUGIN_DIR</b> <br>
+Cinelerra-k direktorio horretan begiratuko du jatorrizko plugin-ik dagoen.
+Direktorio lehenetsia <tt>`/usr/lib/cinelerra'</tt> izan arren, direktorioz aldatu
+beharko da direktorio bera urruneko beste ordenagailuekin NFS erabiliz partekatzen bada.
+Bitar formatu desberdinetako plugin-ak direktorio desberdinetan
+egon behar dute.
+
+</li><li> <b>LANG</b> <br>
+Cinelerra aplikazioa hainbat hizkuntzatara itzulita dago. Cinelerra-ren
+hizkuntzaren ezarpenak GNU/Linux sistemako hizkuntzaren ezarpenetik
+irakurtzen dira normalean. Cinelerra beste hizkuntza batean erabiltzeko 
+inguruneko LANG aldagaia aldatu. <br>
+Adibidez, ireki terminal bat eta idatzi: <code>export LANG=eu_ES</code>,
+gero exekutatu 'cinelerra' shell bertatik. Honela, Cinelerra Euskara
+hizkuntzan agertuko da. <br>
+Hauek dira uneko hizkuntza erabilgarriak:
+<ul>
+<li> es_ES - Gaztelera
+</li><li> sl_SI - Esloveniera
+</li><li> fr_FR - Frantsesa
+</li><li> eu_ES - Euskera
+</li><li> de_DE - Alemana
+</li><li> pt_BR - Brasileko portugesa
+</li></ul>
+<p>Cinelerra CV aplikazioa bere iturburua konpilatuz instalatu baduzu,
+eta konpilatzean <samp>`--prefix='</samp> aukeran  ez baduzu <tt>`/usr/local'</tt> 
+helbidea erabili, baliteke itzulitako fitxategiak instalatu gabe egotea.
+Ikusi See section <a href="cinelerra_cv_manual_eu_2.html#SEC12">Konpilazioaren ohiko prozesua</a>. informazio gehiagorako.
+</p></li></ul>
+
+<hr size="6">
+<a name="Audio_002dkontrolatzaileak"></a>
+<a name="SEC28"></a>
+<h2 class="section"> 3.2 Audio-kontrolatzaileak </h2>
+
+<p>Audio-kontrolatzaileak bai grabatzeko bai erreproduzitzeko erabiltzen
+dira. Beraien funtzionalitatea azpian aipatzen da:
+</p>
+
+<hr size="6">
+<a name="Soinu_002dkontrolatzaileen-atributu-arruntak"></a>
+<a name="SEC29"></a>
+<h3 class="subsection"> 3.2.1 Soinu-kontrolatzaileen atributu arruntak </h3>
+
+<ul>
+<li> <b>Gailuaren bide-izena</b>  <br>
+Normalean <tt>`/dev/'</tt> direktoriopeko fitxategi batek kontrolatzen
+du soinuaren gailua.
+
+</li><li> <b>Bit-ak</b> <br>
+Cinelerra aplikazioak erabiliko duen bit zehaztasuna soinuaren kontrolatzailean.
+Zehaztasun hau batzutan irudizko adiera izaten da. Soinu-kontrolatzaile batzuk 32 bit-eko
+balioarekin ezarri behar dira 24 bit-ekin erreproduzitu ahal izateko, 
+eta 24 bit-eko balioarekin ezartzean ez dute inolako soinurik 
+erreproduzitzen. Beste soinu-kontrolatzaile batzuk berriz 24 bit-eko
+balioarekin ezarri behar dira 24 bit-ekin erreproduzitzeko.
+
+</li><li> <b>Kanalak</b> <br>
+Cinelerra-k erabiliko duen kanal kopurua soinuaren kontrolatzailean.
+Berdin dio zenbat kanal dauden proiektuan, hemen zehaztutako kanal
+kopurua gailuan ezarriko da. 2 balioarekin ezartzen denean eta proiektuak
+kanal bakarra duenean soinua ezkerreko bozgorailutik entzungo da, eta erditik
+mono soinuari dagokion bezala. 1 balioarekin ezartzean, eta proiektuak
+2 kanal baditu, ezkerreko kanala erdian entzun daiteke, baina ez bi kanalak
+elkarrekin nahastuta.
+</li></ul>
+
+<hr size="6">
+<a name="OSS"></a>
+<a name="SEC30"></a>
+<h3 class="subsection"> 3.2.2 OSS </h3>
+
+<p>GNU/Linux-en aurreneko soinu-kontrolatzailea izan zen, software
+libreko inplementazioa eta inplementazio komertziala zituen. Inplementazio
+komertzialak soinu txartel gehiago onartzen ditu.
+GNU/Linux 2.4 bertsiorarte soinu-kontrolatzaile estandarra izan zen.
+Gaur egun soinu-kontrolatzaile bakarra da x86_64 sistemetan i386 bitarra
+erabil dezakena.
+</p>
+<hr size="6">
+<a name="OSS-Envy24"></a>
+<a name="SEC31"></a>
+<h3 class="subsection"> 3.2.3 OSS Envy24 </h3>
+
+<p>OSS bertsio komertzialaren aldaera 24 bit eta 96 Khz motako soinu txartelentzako.
+Aldaera honek nahiko aldaketa behar izan zituen soinu-kontrolatzaileak erabiltzen
+ziren erara moldatzeko, horregatik behar zen kontrolatzaile berria.
+</p>
+<hr size="6">
+<a name="Alsa"></a>
+<a name="SEC32"></a>
+<h3 class="subsection"> 3.2.4 Alsa </h3>
+
+<p>GNU/Linux 2.6 sistemako soinu-kontrolatzaile erabiliena ALSA da. Soinu-txartel
+kopuru gehiena onartzen duena da. GNU/Linux 2.6 bertsioak eskaintzen duen
+latentzia baxuaren onurak eskuratzen ditu (Linux nukleoaren 2.4 bertsioko OSS kontrolatzailearen
+baino errendimendu askoz ere hobeagoa lortuz). Tamalez ALSA denbora guztian
+aldatzen dabil, eta egun batean programa bat ALSArekin lan egin dezake,
+baina agian hurrengo egunean ALSAren beste bertsio batekin ez.
+ALSAren gainean bilduki berriak garatzen
+ari dira. Gure asmoa bilduki horiek onartzea da bitarte erregularretan,
+bilduki berri bakoitza kaleratzean ez ordea. <br>
+ALSA ez da eramangarria izango i386 eta x86_64 arkitekturen artean. i386 bitarrak
+soinu bat erreproduzitzen saiatzean x86_64 kernelean kraskatu egingo da.
+Horretarako, erabili OSS kontrolatzailea.
+</p>
+<hr size="6">
+<a name="Esound"></a>
+<a name="SEC33"></a>
+<h3 class="subsection"> 3.2.5 Esound </h3>
+
+<p>ESOUND soinu-zerbitzari bat zen, OSSren gainean kokatzen zena.
+Enlightenment izeneko leiho-kudeatzailearentzat garatu zen. Bit kopuru
+mugatua onartzen zuen, egungo kontrolatzaile modernoekin konparatuz
+latentzia altua eduki arren hainbat audioko iturburu multiplexatzeko
+gaitasuna zuen. Ez dakigu gaur egun Esound garatzen jarraitzen duten edo ez.
+</p>
+<hr size="6">
+<a name="Raw-1394"></a>
+<a name="SEC34"></a>
+<h3 class="subsection"> 3.2.6 Raw 1394 </h3>
+
+<p>GNU/Linux eta Firewire konexiodun bideo-kameren arteko aurreneko interfazea
+izan zen. Audioa bideo-kamera batean erreproduzitzeko erabil
+daitekeen gutxieneko bide fidagarriena da, eta nukleoko komandoen
+gaineko liburutegian datza.
+</p>
+<hr size="6">
+<a name="DV-1394"></a>
+<a name="SEC35"></a>
+<h3 class="subsection"> 3.2.7 DV 1394 </h3>
+
+<p>GNU/Linux sisteman DV bideo-kamerentzako bigarren aldiz garatutako
+kontrolatzailea da. Bideo-kameran audioa erreproduzitzeko modurik
+fidagarriena da eta nukleoaren komandoak erabiltzen ditu zuzenean.
+</p>
+<hr size="6">
+<a name="IEC-61883"></a>
+<a name="SEC36"></a>
+<h3 class="subsection"> 3.2.8 IEC 61883 </h3>
+
+<p>GNU/Linux sisteman DV bideo-kamerentzako hirugarren aldiz garatutako
+kontrolatzailea da. Raw 1394 liburutegiaren gainean dago, eta Raw 1394 bere
+aldetik kernelaren komandoen gainean dago. Ez da DV 1394 bezain fidagarria, 
+hala ere Raw 1394 baino fidagarriagoa da. Hurrengo garapenak hori finkatu
+beharko luke. Joan <a href="http://www.linux1394.org">http://www.linux1394.org</a> gunera informazio gehiago
+ezagutu eta azken kontrolatzaileak eskuratzeko.
+</p>
+<hr size="6">
+<a name="Bideo_002dkontrolatzaileak"></a>
+<a name="SEC37"></a>
+<h2 class="section"> 3.3 Bideo-kontrolatzaileak </h2>
+
+<p>Bideo-kontrolatzaileak bideoa konposaketa-leihoan eta ikustailean
+erreproduzitzeko erabiltzen dira.
+</p>
+
+<hr size="6">
+<a name="Bideo_002dkontrolatzaileen-atributu-arruntak"></a>
+<a name="SEC38"></a>
+<h3 class="subsection"> 3.3.1 Bideo-kontrolatzaileen atributu arruntak </h3>
+
+<ul>
+<li> <b>Pantaila</b> <br>
+<a name="IDX9"></a>
+Interfazea bi monitoretan bistaratzeko prestatuta dago. Pantailaren balioaren
+arabera, konposaketa-leihoa beste pantailan agertuko da: Cinelerra-ren 
+leiho gehienak pantaila batean bistaratuko diren arren, konposaketa-leihoa beste
+pantailan bistaratuko da.
+
+</li><li> <b>Gailuaren bide-izena</b> <br>
+<tt>`/dev/'</tt> direktorioko fitxategi batek kontrolatuko du
+gailua.
+
+</li><li> <b>Trukatzeko eremuak</b> <br>
+Lerro bikoitiak bakoiti bihurtzen ditu, eta bakoitiak bikoiti, nahiz eta
+gailura bidaltzeko izan. NTSC edo 1080i monitoretan eremuak trukatu egin behar
+izaten dira dardaradun filma saihesteko.
+
+</li><li> <b>Irteerako kanala</b> <br>
+Konektore zehatza beharko da hainbat irteera dituzten bideo-gailuetara bidaltzeko.
+
+</li><li> <b>Ataka</b> <br>
+IEEE1394 estandarrak <b>ataka</b> bezala ezagutzen den zerbait zehazten du. 
+Baliteke firewire txartelaren zenbakia izatea.
+
+</li><li> <b>Kanala</b> <br>
+IEEE1394 estandarrak <b>kanala</b> bezala ezagutzen den zerbait zehazten du.
+DV bideo-kamerek beti <b>63</b> izaten dute.
+</li></ul>
+
+<hr size="6">
+<a name="X11"></a>
+<a name="SEC39"></a>
+<h3 class="subsection"> 3.3.2 X11 </h3>
+
+<p>Hau izan zen aurreneko metodoa pantaila grafikoak kudeatzeko UNIX sistemetan.
+Pixeleko GBU (gorria, berdea eta urdina) hirukotea zuzenean idazten zuen
+leihoan. Oraindik ere erabilgarria izaten jarraitzen du fotograma
+oso handiak kudeatzen ez dituzten hardware grafikoetan.
+</p>
+<hr size="6">
+<a name="X11_002dXV"></a>
+<a name="SEC40"></a>
+<h3 class="subsection"> 3.3.3 X11-XV </h3>
+
+<p>Hau X11-ren hobekuntza izan zen, 1999. urtean garatua. YUV formatutik
+GBU formatura bihurtzen zuen hardwarean eskalatzearekin batera.
+Erreproduzitzeko metodo hobetsiena da, hala ere ezin ditu tamaina
+handiko fotogramak kudeatu. Normalean XV-ek kudea dezaken bideoaren tamaina
+handiena 1920x1080 da.
+</p>
+<hr size="6">
+<a name="X11_002dOpenGL"></a>
+<a name="SEC41"></a>
+<h3 class="subsection"> 3.3.4 X11-OpenGL </h3>
+
+<p>Bideoa erreproduziteko metodorik ahaltsuena OpenGL da. Kontrolatzaile
+honekin efektu gehienak hardware bidez egiten dira. OpenGL-ek
+bideoa testuraren tamainaraino handitzea uzten du, normalean XV-k
+onartzen duena baino handiagoa izanez, eta beti ere kontrolatzaile
+grafikoaren arabera. Gaitzeko bitar konpilazioa behar da OpenGL
+euskarriarkein. OpenGL gaitzeko <code>configure</code> komandoaren 
+<samp>`--enable-opengl'</samp> aukera erabiltzen da. OpenGL 2.0 bertsioa onartzen duen
+txartel grafikoa behar da. Nvidia-ren azkenengo txartelak funtzionatu
+beharko lukete. Gainera, OpenGL 2.0 onartzen duen bideo-kontrolatzailea
+beharko zenuke, Nvidia-ren kontrolatzaile bitarra bezalakoa.
+Zein bideo-kontrolatzailek OpenGL 2.0 onartzen duten jakiteko
+idatzi honako komandoa: <code>glxinfo | grep &quot;OpenGL version&quot;</code>
+</p>
+<ul>
+<li> Hardware bidez OpenGL 2.0 errendatzea onartzen duten bideo-kontrolatzaileak: <br>
+<code>OpenGL version string: 2.0.2 NVIDIA 87.74</code>
+</li><li> Hardware bidez OpenGL 2.0 errendatzea onartzen ez duten bideo-kontrolatzaileak: <br>
+<code>OpenGL version string: <b>1.4</b> (2.0.2 NVIDIA 87.74)</code>
+</li></ul>
+
+<p>OpenGL metodoa PBuffer eta itzalduretan oinarritzen da bideoa errendatzeko.
+Kontrolatzaile grafikoak OpenGL 2.0 onartu behar dute, Cinelerra
+berriz OpenGL 2.0 euskarriarekin esplizitoki konpilatuta egon behar da.
+Konpilazio honek sisteman OpenGL 2.0-ren goiburuak egotea eskatzen du.
+PBuffer-ak aldakorrak direla ezaguna da. Nahikoa memoria ez duten
+txartel grafikoetan, edo eskubide bisualak ez dituztenetan, PBuffer-ek
+ez du funtzionatuko. OpenGL-ek ez badu funtzionatzen, saiatu
+hainbat fotograma kokatzen edo Cinelerra berrabiaratzen.
+</p>
+<p><b>Murriztapenak:</b>
+</p><ul>
+<li> OpenGL-ek ez du eraginik errendatzean. Erreprodukzioa soilik
+azeleraten du.
+</li><li> X11-OpenGL-ek gauza guztiak 8 bit koloreko modeloan prozesatzen ditu,
+nahiz eta YUV eta GBU arteko desberdintasuna mantendu.
+</li><li> OpenGL-ek ez du lanik egiten 4096x4096 baino tamaina handiagoko
+fotogramekin. <br>
+Fotograma handiagoekin lan egitean honako mezua kaleratzen du kontsolan: <br>
+<code>BC_Texture::create_texture frame size &lt;frame_width&gt;x&lt;frame_height&gt; bigger
+than maximum texture 4096x4096.</code>
+</li><li> OpenGL-ek ez ikusi egiten dio eskalatzeko ekuazioari (hobespenen leihoan
+ ezarrita dagoena).
+OpenGL-ek beti erabiltzen du eskalatze lineala.
+</li><li> Proiektuaren eta pisten tamainak 4 balioaren multiploak izan behar
+dute OpenGL-rekin lan egiteko.
+</li><li> 
+Azelerazio azkarrena lortzeko, OpenGL-ek gaitutako efektuak software soileko
+efektuen atzetik kokatu behar dira. Azken software soileko efektuarren aurreko
+errendatze guztiak software bidez egiten da. Cinelerra-ren eragiketa nagusiak,
+kamera eta proiektagailu bezalakoak, OpenGL bidez egiten ditu.
+</li><li> Efektu guztiek ez dute onartzen OpenGL-ren azelerazioa.
+Honako efektuek onartzen dute OpenGL: distira, gako-kromatikoa, gako-kromatikoa (ÑSB),
+kolore-balantzea, gurutzelarkatu, diffkey, disolbatu, irauli, fotogramak eremuetara,
+izoztu fotograma, gamma, gradientea, histograma, ñabarduraren saturazioa,
+interpolatu pixelak, alderantzikatu bideoa, lausotze lineala, gainjarri,
+perspektiba, lausotze erradiala, GBU601, biratu, eskala, atalasea,
+zooma lausotzea.
+</li></ul>
+
+<hr size="6">
+<a name="Buz"></a>
+<a name="SEC42"></a>
+<h3 class="subsection"> 3.3.5 Buz </h3>
+
+<p>Metodo hau JPEG formatuko fitxategien filma seinale analogikodun konposaketan
+erreproduzitzeko erabiltzen da. Video4Linux 1. kontrolatzailearen moldaketa
+ezagun bat du JPEG hardwarean deskonprimitzeko. Nahiz eta irteera
+analogikoa oso zaharkitua egon, kontrolatzaile berriek
+BUZ ordeztu dute.
+</p>
+<hr size="6">
+<a name="Raw-1394-bideo_002derreprodukzioa"></a>
+<a name="SEC43"></a>
+<h3 class="subsection"> 3.3.6 Raw 1394 bideo-erreprodukzioa </h3>
+
+<p>GNU/Linux eta Firewire konexiodun bideo-kameren arteko aurreneko interfazea
+izan zen. Bideoa bideo-kamera batean erreproduzitzeko erabil
+daitekeen gutxieneko bide fidagarriena da, eta nukleoko komandoen
+gaineko liburutegian datza.
+</p>
+<hr size="6">
+<a name="DV-1394-bideo_002derreprodukzioa"></a>
+<a name="SEC44"></a>
+<h3 class="subsection"> 3.3.7 DV 1394 bideo-erreprodukzioa </h3>
+
+<p>GNU/Linux sisteman DV bideo-kamerentzako bigarren aldiz garatutako
+kontrolatzailea da. Bideo-kameran bideoa erreproduzitzeko modurik
+fidagarriena da eta nukleoaren komandoak erabiltzen ditu zuzenean.
+</p>
+<hr size="6">
+<a name="IEC-61883-bideo_002derreprodukzioa"></a>
+<a name="SEC45"></a>
+<h3 class="subsection"> 3.3.8 IEC 61883 bideo-erreprodukzioa </h3>
+
+<p>GNU/Linux sisteman DV bideo-kamerentzako hirugarren aldiz garatutako
+kontrolatzailea da. Ez da DV 1394 bezain fidagarria, 
+hala ere Raw 1394 baino fidagarriagoa da. Hurrengo garapenak hori finkatu
+beharko luke. Joan <a href="http://www.linux1394.org">http://www.linux1394.org</a> gunera informazio gehiago
+ezagutzeko eta azken kontrolatzaileak eskuratzeko.
+</p>
+<hr size="6">
+<a name="Erreprodukzioa"></a>
+<a name="SEC46"></a>
+<h2 class="section"> 3.4 Erreprodukzioa </h2>
+
+
+<hr size="6">
+<a name="Audioaren-irteera"></a>
+<a name="SEC47"></a>
+<h3 class="subsection"> 3.4.1 Audioaren irteera </h3>
+
+<p>Honek denbora-lerroan soinua erreproduzitzean zer gertatuko den zehazten du.
+</p>
+<a name="IDX10"></a>
+<a name="IDX11"></a>
+<ul>
+<li> <b>Laginak kontsolara bidaltzeko</b> <br>
+Audioa erreproduzitzeko diskotik soinuaren zati txikiak irakurri eta 
+kontsola birtual batean sekuentzialki prozesatzen dira. Balio handiagoek
+latentzia luzeagoa sortarazten dute nahasketako parametroak aldatzean,
+hala ere erreprodukzio fidagarriagoa bultzatzen du. <br>
+Soinu-kontrolatzaile batzuk ez dute kontsolaren zatia aldatzea uzten,
+ondorioz berdin dio zein baliorekin ezarri latentzia ez baita aldatzen. <br>
+Garai batean, diskotik zati handiagoak irakurri eta hauek soinu txartelean
+zati txikiagotan banatzea izaten zen erreprodukzioaren kalitate altua bermatzeko modu bat.
+Guzti hau aldatu egin zen kontsola birtuala 'bultzatu' modutik
+'tiratu' modura bihurtzean. Errendatzeko kanalizazioaren aldi desberdinek
+sarrerako datuen tasa alda dezaketenez, oso zaila izan daiteke kontsolaren zatien
+tamainak deskonektatzea diskotik irakurritako zatien tamainetik.
+
+<a name="IDX12"></a>
+<a name="IDX13"></a>
+</li><li> <b>Audioaren desplazamendua</b> <br>
+GNU/Linux sistemako soinu-kontrolatzaileek duten posizio zehatza adierazteko gaitasuna
+nahiko txiroa da, eskaintzen badute bederen. Informazio hau beharrezkoa da
+bideoa egokiro sinkronizatzeko, doitasunezkoa izan behar du. <b>Audioaren desplazamendua</b>k
+soinuaren txartelak itzulitako posizioa doitzeko gaitasuna ematen die erabiltzaileei,
+errealitatea isladatzeko. Audioaren desplazamenduak ez dio audioaren erreprodukzioari
+edo errendatzeari eragiten. Bideoaren erreprodukzioari soilik eragiten dio. <br>
+Audioaren desplazamendua ezartzeko modurik errezena denbora-lerro bat sortzea da
+bideoaren pista batekin eta audioaren pista batekin. Zabaldu audioaren pista eta
+zentratu audioaren panoramika (estereoa). Fotograma-tasa 24 fps baino handiagoa
+beharko luke izan eta lagin-tasa 32000 baino handiagoa.
+Fotogramaren tamaina nahiko txikia izan beharko luke ordenagialuak fotograma-tasa
+osoan errendatu ahal izateko. Nabarmendu denbora-lerroko eskualde bat 10.
+segundoan hasiz eta 20. segundoan amaituz. Jaregin <b>gradientea</b> efektua
+bideoaren pistan eta konfiguratu erabat ikusgai izateko. Jaregin <b>sintetizadorea</b>
+efektua audioan eta konfiguratu entzungarria izateko. <br>
+Erreproduzitu denbora-lerroa 0. segundotik hasita eta ikusi gradientearen efektua
+soinuarekin batera hasten al den. Ez badira biak batera hasten zabaldu audioa
+eta doitu desplazamendua. Audioa bideoaren baino lehenago hasten bada, gutxiagotu
+desplazamenduaren balioa. Audioa bideoaren ondoren hasten bada, handiagotu
+desplazamenduaren balioa. Behin pisten erreprodukzioa sinkronizatuta dagoela,
+kopiatu desplazamenduaren balioa hobespenetako <b>Audioaren desplazamendua</b> eremuan. <br>
+<b>Oharra:</b> soinu-kontrolatzaileak aldatzen badira, edo  <b>Erabili
+softwarea posizioaren informazioan</b> eremuko balioa aldatzen bada, 
+audioaren desplazamendua aldatu beharko da baita ere, soinu-kontrolatzaile desberdinek
+ez dutelako zehaztasun berdinez neurtzen.
+
+<a name="IDX14"></a>
+<a name="IDX15"></a>
+</li><li> <b>Erreprodukzioaren ikuspegia</b> <br>
+Denbora-lerroaren leihoa korritu egiten da erreprodukzioaren kurtsorea mugitzean.
+Honek X zerbitzaria blokea dezake, edo denbora-lerroaren leihoa denbora luzerako blokeatuta
+egotea klipak marrazten dituen bitartean.
+
+<a name="IDX16"></a>
+<a name="IDX17"></a>
+</li><li> <b>Erabili softwarea posizioaren informazioan</b> <br>
+Soinuaren txartel eta kontrolatzaile askok ez dute informazio fidagarririk eskaintzen
+lagin kopuruari buruz (txartela erreproduzitzen ari dena). Informazio hau beharrezkoa
+da bideoaren erreprodukzioarekin sinkronizatzeko. Aukera honek ez ikusi egiten dio
+soinuaren kontrolatzaileari eta software bideko tenporizadorea erabiliko du sinkronizatzeko.
+
+<a name="IDX18"></a>
+<a name="IDX19"></a>
+</li><li> <b>Audioa erreproduzitzea denbora errealean</b> <br>
+Garai batean, prozesadoreen abiadura 150 MHz ingurukoa zenean, ezarpen honek etengabe
+erreproduzitzea uzten zuen karga handiko aldietan. Audioaren erreprodukzioa nukleoan
+lehentasun handiena edukitzera derrigortzen zuen. Gaur egun, egokiagoa da latentzia oso baxua
+lortzea kontsolaren doikuntza eta soinu txartelaren irteeraren artean. Denbora
+errealeko lehentasuna supererabiltzaileak soilik lor dezake.
+
+<a name="IDX20"></a>
+</li><li> <b>Audio-kontrolatzailea edo Kontrolatzailea</b> <br>
+GNU/Linux sisteman soinu-kontrolatzaile ugari daude. Honekin soinuaren kontrolatzaile
+bat aukera daiteke, baita berarentzako parametro zehatzak ezartzea ere.
+Soinuaren txartelak eta dagozkien parametroak soinu-kontrolatzaileen atalean azaltzen da.
+Ikusi See section <a href="#SEC28">Audio-kontrolatzaileak</a>. atala informazio gehiagorako.
+</li></ul>
+
+<hr size="6">
+<a name="Bideoaren-irteera"></a>
+<a name="SEC48"></a>
+<h3 class="subsection"> 3.4.2 Bideoaren irteera </h3>
+
+<p>Denbora-lerrotik pantailara bideoa nola joaten den zehazten du.
+</p>
+<a name="IDX21"></a>
+<a name="IDX22"></a>
+<ul>
+<li> <b>Erreprod. fotog. bakoitza</b> <br>
+Bideoaren fotograma bakoitza bistaratzea eragiten du, nahiz eta audioko pisten
+erreprodukzioa atzean huts egin lezaken. Aukera hau beti gaituta eduki beharko
+litzateke, konprimitugabeko kodekak erabiltzen ez badituzu bederen.
+1/2007 bezala, konprimitutako kodeka gehienek ez dute fotograma
+jaregitea onartzen.
+
+<a name="IDX23"></a>
+</li><li> <b>Fotograma-tasa</b> <br>
+Erreproduzitzean bistaratuko diren fotograma kopurua segundoko.
+Erreproduzitzean soilik eguneratzen da.
+
+<a name="IDX24"></a>
+</li><li> <b>Dekodetu fotogramak asinkronoki</b> <br>
+Ordenagailuak memoria asko eta PUZ bat baino gehiago badu, aukera honek
+erreprodukzioaren errendimendua hobetuko du, PUZ batean bideoa dekodetuz
+beste PUZean bideoa erreproduzitzen den bitartean. Erreprodukzio guztiak
+aurrerantz doazela eta ez dagoela fotogramarik jareginda suposatzen da.
+Alderantziz erreproduzitzeak, edo fotogramak jaregiteak, eragin negatiboa
+dute. <br>
+Aukera honek memoria kopuru handia eskatzen duenez, Cinelerra kraskatu
+daiteke sarrerako fotogramak oso handiak diren kasuetan.
+
+<a name="IDX25"></a>
+<a name="IDX26"></a>
+</li><li> <b>Eskalatze-ekuazioa</b> <br>
+Bideoa erreproduzitzean eskalatu eta translazioa egin behar denean erabiltzen da
+algoritmo hau. Ez dio 1:1 erlazioko erreprodukzioari eragiten.
+<ul>
+<li> <b>\&quot;Hurbilenaren arabera\&quot; luzatzeko eta uzkurtzeko</b> <br>
+Kalitate baxuko irteera erreprodukzio azkarrarekin. 
+Ertz hoskatua eta mugimendu gorabeheratsua sortzen du.
+</li><li> <b>Bikubikoa luzatzeko eta bilineala uzkurtzeko</b> <br>
+Kalitate altuko irteera, baina erreprodukzio motela. Interpolazio bikubikoa
+erabiltzen da handitzeko, pittin bat lausotzen du baina ez du koskarik erakusten.
+Interpolazio bilineala erabiltzen da uzkurtzeko, irudi oso zorrotzak erakusten ditu
+eta zarata gutxitzen du. Bilineala moduan uzkurtutako irudiak zorroztasunaren
+efektuarekin zorrotz daitezke eta bigarren maila zarata gutxiagorekin
+tamaina normaleko irudiarekin konparatzen bada.
+</li><li> <b>Bilineala luzatzeko eta uzkurtzeko</b> <br>
+Piskat handitzea behar denean, luzatze bilineala bikubikoa baino egokiagoa
+dela dirudi.
+</li></ul>
+
+<a name="IDX27"></a>
+<a name="IDX28"></a>
+</li><li> <b>Quicktime-n bufferra:</b> <br>
+Quicktime/AVI dekodetzaileak DVD iturburuak hobeto kudeatzen ditu
+10000000 balioarekin ezartzen denean. Beharrezkoa den bilaketa 
+kopurua murrizten du. Disko gogorretik bit-tasa altuko iturburuak irakurtzean
+errendimendua galtzen da dekodetzea motelduz. Erabilpen normalean 0 balioa eduki beharko luke.
+
+<a name="IDX29"></a>
+<a name="IDX30"></a>
+</li><li> <b>DVDko azpitituluak bistaratzeko</b> <br>
+DVD IFO fitxategiek normalean azpitituluen pistak edukitzen dituzte.
+Hauek MPEG dekodetzailearekin dekodetzen dira. Hautatu  <b>Gaitu azpitituluak</b>
+azpititulua dekodetzeko. Azpitituluen hainbat pista normalean zenbaki batekin
+indexatuta daude, 0 baliotik hasiz. Azpitituluaren pista dekodetzeko
+sartu dagokion zenbakia &quot;DVDaren azpititulua bistaratzeko&quot; testu-kutxan
+edo erabili geziak indizearen balioa handitzeko. Joan MPEG fitxategiari
+dagokion klipara baliabideen leihoan eta saguaren eskuineko botoiarekin
+klik egin. Egin klik &quot;Informazioa&quot;n. Azpitituluaren pistaren zenbakia
+behean agertuko da.
+
+
+<a name="IDX31"></a>
+<a name="IDX32"></a>
+</li><li> <b>Interpolatu CR2 irudiak</b> <br>
+CR2 irudiak interpolatzea gaitzen du. Interpolatzea beharrezkoa da,
+CR2 fitxategiko irudi gordina Bayer-en eredua delako. Interpolazioak
+dcraw-ren barneko interpolazioa erabiltzen duenez, interpolatzeko
+prozesua nahiko motela da. Eragiketa hau desgaitu daiteke, eta honen
+ordez <b>Interpolatu pixelak</b> efektua erabili aurrebista azkar lantzeko.
+
+<a name="IDX33"></a>
+</li><li> <b>CR2 irudien zuri-balantzea</b> <br>
+Interpolazioa ere gaituta egonez gero (3 kolore primarioen batura behar baitu zuri-balantzeak), CR2 motako irudietan zuri-balantzea egitea uzten du.
+Zuri-balantzeak CR2 fitxategiak duen kameraren matrizea erabiltzen du. <br>
+Fotograma ilunen kenketa erabiltzen duten eragiketetan zuri-balantzea desgaitzea
+egokia izaten da. Fotograma ilunak eta esposizio luzeek kolore bereko matrizea
+edukitzea behar dute. <br>
+<b>Interpolatu CR2 irudiak</b> desgaitu eta <b>Interpolatu pixelak</b> efektua
+erabiltzen bada, kontuz ibili, <b>Interpolatu pixelak</b> efektuak bai interpolazioa
+bai zuri-balantzea lantzen baititu kameraren matrizea erabiliz (hobespenetako
+konfigurazioari ez ikusi eginez). Fotograma ilunaren kenketa <b>Interpolatu pixelak</b>
+efektuaren aurretik landu behar da.
+
+<a name="IDX34"></a>
+</li><li> <b>Bideo-kontrolatzailea</b> <br>
+Denbora-lerroko bideoa normalean konposaketa-leihoan agertzen da, bai erreproduzitzean
+bai txertatzeko puntua berriro jartzen denean. Bideoa konposaketa-leihora bidali ordez,
+bideo-kontrolatzailea konfigura daiteke bideoa bestelako irteerako gailura bidaltzeko
+erreprodukzio jarraian. Hala ere, berdin dio bideoa nora bidaltzen den, ez
+baitio eragiten txertatzeko puntua berriro jartzean. <br>
+Bideo-kontrolatzaileak eta dagozkien parametroak bideo-kontrolatzaileen atalean
+zehazten dira: See section <a href="#SEC37">Bideo-kontrolatzaileak</a>.
+</li></ul>
+
+<hr size="6">
+<a name="Grabazioa"></a>
+<a name="SEC49"></a>
+<h2 class="section"> 3.5 Grabazioa </h2>
+<p>Hemen adierazitako parametroak <b>Fitxategia-&gt;Grabatu...</b> funtzioari ematen
+zaizkio, erabiltzaileari fitxategi-formatua aurre-konfiguratzea baimenduz.
+Fitxategi-formatua grabazio guztiei aplikatzen zaie.
+Hemen ere grabatzeko hardwarea konfiguratzen da, hardwareak zehazten
+baitu onartutako fitxategi-formatua (kasu gehienetan).
+</p>
+
+<hr size="6">
+<a name="Fitxategi_002dformatua"></a>
+<a name="SEC50"></a>
+<h3 class="subsection"> 3.5.1 Fitxategi-formatua </h3>
+
+<p>Grabazioen irteerako fitxategi-formatua zehazten du. Erabilitako kontrolatzaile
+motaren araberakoa da. Hautapenen menua errendatzeko interfazearen berdina da, 
+ikusi See section <a href="cinelerra_cv_manual_eu_19.html#SEC256">Fitxategiak errendatzea</a>. <b>Grabatu audioko pistak</b> gaituta egon
+behar du audioa grabatzeko. <b>Grabatu bideoko pistak</b> gaituta egon behar du
+bideoa grabatzeko. Giltza itxurako ikonoa duten ezkerreko botoi bakoitzak
+konfigurazioko elkarrizketa-koadro bat irekitzen du irteerako audio eta
+bideo-korronteen konpresioaren eskema (kodeka) ezartzeko. Audioa eta bideoa
+<b>Formatua</b> menuan definitutako ontzi-formatura doituta
+daude. Bilduki desberdinek audioa soilik, bideoa soilik edo biak grabatu
+dezakete.
+</p>
+<p>Bideo-kontrolatzaile batzuk ontzi batzuetan bakarrik grabatu dezakete.
+Adibidez, DV-ek Quicktime ontzian soilik grabatzen du,
+DV erabiliz bideo-konpresioaren eskema gisa. Bideo-kontrolatzailea
+aldatzen bada, fitxategi-formatua eguneratuko da onartutako irteera emateko.
+Fitxategi-formatua onartu gabeko formatura aldatzen bada, ez du
+bideo-kontrolatzailearekin funtzionatuko.
+</p>
+<hr size="6">
+<a name="Audio_002dsarrera"></a>
+<a name="SEC51"></a>
+<h3 class="subsection"> 3.5.2 Audio-sarrera </h3>
+
+<p>Audioa grabatzean gertatuko dena zehazten du.
+</p>
+<a name="IDX35"></a>
+<a name="IDX36"></a>
+<a name="IDX37"></a>
+<a name="IDX38"></a>
+<ul>
+<li> <b>Grabazio-kontrolatzailea edo Kontrolatzailea</b> <br>
+Hau audioa grabatzeko erabiltzen da grabazio-leihoan. 
+Bideoaren grabazio-kontrolatzailearen bezala konfiguratu audioa eta bideoa
+korronte berdinean biltzea nahi bada. Parametro erabilgarriak kontrolatzailearen
+arabera alda daitezke. Kontrolatzaile hauek <b>Hobespenak-&gt;Erreprodukzioa</b> fitxan
+zerrendatutakoak dira.
+<ul>
+<li> <b>Gailuaren bide-izena</b> <br>
+Normalean <tt>`/dev/'</tt> direktoriopeko fitxategi batek kontrolatzen
+du soinuaren gailua.
+</li><li> <b>Bit-a</b> <br>
+Cinelerra aplikazioak gailuan ezarriko duen bit kopurua da.
+Zehaztasun hau batzutan irudizko adiera da. Soinu-kontrolatzaile batzuk 32 bit-eko
+balioarekin ezarri behar dira 24 bit-ekin grabatu ahal izateko, 
+eta 24 bit-eko balioarekin ezartzean ez dute inolako soinurik 
+grabatzen. Beste soinu-kontrolatzaile batzuk berriz 24 bit-eko
+balioarekin ezarri behar dira 24 bit-ekin grabatzeko.
+</li><li> <b>Kanalak</b> <br>
+Cinelerra aplikazioak gailuan ezarriko duen kanal kopurua da.
+Berdin dio zenbat kanal dauden proiektuan, hemen zehaztutako kanal
+kopurua gailuan ezarriko da. 2 balioarekin ezartzen denean eta proiektuak
+kanal bakarra duenean soinua ezkerreko bozgorailutik entzungo da, eta erditik
+mono soinuari dagokion bezala. 1 balioarekin ezartzean, eta proiektuak
+2 kanal baditu, ezkerreko kanala erdian entzun daiteke, baina ez bi kanalak
+elkarrekin nahastuta.
+</li></ul>
+
+
+<a name="IDX39"></a>
+</li><li> <b>Laginak aldi berean idazteko</b> <br>
+Aurrenik, audioa zati txikietan irakurtzen da gailutik. Gero hainbat zati txiki
+konbinatzen dira zati handiago batean diskoan idatzi aurretik. Diskoan idazteko
+prozesua bestelako modu desberdin batean egiten da. Diskoan idatziko den
+zatien konbinazioaren luzera zehazten du hemengo balioak.
+
+<a name="IDX40"></a>
+<a name="IDX41"></a>
+</li><li> <b>Lagin-tasa grabatzeko</b> <br>
+Berdin dio proiektuaren konfigurazioa zein den, hemen ezarritako balioa grabatzeko
+erabiliko den lagin-tasa izango da. Audioko gailuak onartzen duen baliorik altuenarekin
+ezarri lagin-tasa.
+</li></ul>
+
+<hr size="6">
+<a name="Bideo_002dsarrera"></a>
+<a name="SEC52"></a>
+<h3 class="subsection"> 3.5.3 Bideo-sarrera </h3>
+
+<p>Bideoaren grabazioarekin gertatuko dena zehazten du.
+</p>
+<a name="IDX42"></a>
+<a name="IDX43"></a>
+<ul>
+<li> <b>Grabazio-kontrolatzailea edo Kontrolatzailea</b> <br>
+Bideoa grabatzeko erabiltzen da grabazio-leihoan.
+Bideoaren grabazio-kontrolatzailearen bezala konfiguratu audioa eta bideoa
+korronte berdinean biltzea nahi bada. Parametro erabilgarriak kontrolatzailearen
+arabera alda daitezke. Kontrolatzaile hauek <b>Hobespenak-&gt;Erreprodukzioa</b> fitxan
+zerrendatutakoak dira.
+
+<a name="IDX44"></a>
+</li><li> <b>Fotogramak aldi berean diskoan grabatzeko</b> <br>
+Fotogramak kanalizazio batean grabatzen dira. Fotogramak gailuko
+bufferrean sartzen dira aurrenik. Gero, buffer handi batean irakurtzen dira diskoan
+idazteko. Diskoan idazteko prozesua lantzeko modua eta irakurtzeko prozesua
+oso desberdinak dira. Zenbait kodekek hainbat prozesadore erabiltzen dituzte
+diskoan idazteko. Hemen zehaztutako balioak aldi berean zenbat fotograma idatziko
+diren disko gogorrean zehazten du.
+
+<a name="IDX45"></a>
+</li><li> <b>Gailuaren bufferreko fotogramak</b> <br>
+Gailuan gordeko diren fotograma kopurua zehazten du irakurri aurretik,
+eta sisteman egon daitekeen latentzia-tasa zehazten du fotogramak jaregin aurretik.
+
+<a name="IDX46"></a>
+</li><li> <b>Erabili softwarea posizioaren informazioan</b> <br>
+Sinkronizatzeko bideoak audioa erabiltzen duen arren, soinu-txartel gehienek ez dute
+posizioaren informazio xeherik ematen. Aukera hau hautatuz Cinelerra-k
+audioaren posizioaren estimazioa egin dezake software bidez, hardwarea erabili
+ordez, sinkronizatzeko.
+
+<a name="IDX47"></a>
+</li><li> <b>Sinkronizatu diskoak automatikoki</b> <br>
+Bit-tasa altuko grabazioetan erabiliko diren disko gogorrak azkarrak izan
+behar dute datuak gordetzeko, baina sistema eragilea zain egon daiteke
+minutuetan eta gelditu daiteke aldi batean datuen hainbat minutu idazten duen
+heinean. Honek sistema eragilea bultza dezake bere bufferra garbitzera segundo batzuen
+ondoren, minutuen ordez, denbora errealeko portaera piskat hobeagoa lortzeko.
+
+<a name="IDX48"></a>
+<a name="IDX49"></a>
+</li><li> <b>Kapturaren tamaina</b> <br>
+Grabatutako fotogramen tamaina adierazten du pixeletan. Proiektuko fotogramen
+tamainaren desberdina da, bideo-gailu gehienek tamaina finkatuan grabatzen dituztelako
+fotogramak. Gailuak ez badu onartzen emandako fotogramen tamaina,
+Cinelerra kraskatu egingo da.
+
+<a name="IDX50"></a>
+<a name="IDX51"></a>
+</li><li> <b>Grabazio-tasa</b> <br>
+Grabatutako fotograma-tasa proiektuko ezarpenen desberdina izanten da. Honek
+grabatutako fotograma-tasa ezartzen du.
+</li></ul>
+
+<hr size="6">
+<a name="Errendimendua"></a>
+<a name="SEC53"></a>
+<h2 class="section"> 3.6 Errendimendua </h2>
+
+<p>Atal hau konfiguratzen igarotzen da denbora gehiena. Errendimenduaren atalaren
+gauzarik nagusiena errendatzeko parametroak dira, errendatzearen elkarrizketa-koadroan
+ez baitira agertzen.
+</p>
+<a name="IDX52"></a>
+<ul>
+<li> <b>Cache-ko elementuak</b> <br>
+Errendatzea azkartzeko, hainbat klip aldi berean irekita mantentzen dira.
+Aukera honek zenbat elementu irekita egongo diren zehazten du.
+Zenbaki handiegi batek memoria nahiko azkar agortu dezake, eta aplikazioa
+kraskatu. Zenbaki txikiegi batek erreprodukzio motela dakar, klipak berriro
+irekitzeko maiztasuna handitzen baita.
+
+<a name="IDX53"></a>
+</li><li> <b>Errendatzeari aurrehartzeko seg.</b> <br>
+Efektu batzuk denbora bat behar izaten dute aplikatzeko.
+Aukera honek hautatutako eskualdea errendatu arte diskoan idatzi gabe igaroko den
+segundo kopurua ezartzen du. Errendategia erabiltzean batzutan
+aurre hartu behar da lanen arteko talkarik gabeko transizioak lortzeko. 
+Errendategiko lan bakoitzaren kalkulua balio honekin aurre hartzen da.
+Hala ere, honek ez dio atzeko planoko errendatzeari eragiten. Atzeko planoko
+errendatzeek bestelako aurre hartzeko balioa erabiltzen dute.
+
+<a name="IDX54"></a>
+<a name="IDX55"></a>
+</li><li> <b>Derrigortu prozesadore bakarra erabiltzea</b> <br>
+Lehenetsi gisa, Cinelerra-k sistemako prozesadore guztiak erabiltzen
+saiatzen da, baina gerta daiteke batzutan prozesadore bakarra erabiltzea
+nahi izatea, errendategiko bezero bat bezala. Aukera honek
+prozesadore bakarra erabiltzea derrigortzen du. Gainera, sistema eragileak
+normalean bigarrengo prozesadorea disko gogorra atzitzeko erabiltzen du.
+Beraz, aukera hau benetan 1,25 prozesadore modua da. Parametro honen balioa
+errendategiko bezeroetan erabiltzen da.
+</li></ul>
+
+
+<hr size="6">
+<a name="Atzeko-planoan-errendatzea"></a>
+<a name="SEC54"></a>
+<h3 class="subsection"> 3.6.1 Atzeko planoan errendatzea </h3>
+
+<p>Atzeko planoan errendatzearen jatorria HDTV (Definizio Altuko TeleBista) efektuak
+denbora errealean bistaratzean datza. Atzeko planoan errendatzeak 
+aldi baterako irteera sortzen du errendatzeko denbora-lerroa aldatzen den bitartean.
+Erreproduzitzen ari den bitartean aldi baterako irteera bistaratuko da
+posiblea den neurrian. Oso erabilgarria da denbora errealean oso motelak diren
+trantsizio eta efektuen aurrebistetan. Errendategi bat gaitzen bada, errendategia
+erabiliko da atzeko planoan errendatzeko. Honek denbora errealeko efektuak
+lantzeko ahalmena eskaintzen du nahikoa PUZ nodo eta sareko banda-zabalera edukiz gero.
+</p>
+<p><b>Hobespenak</b> leihoko <b>Errendimendua</b> fitxan gaitu daiteke atzeko planoan errendatzea.
+Funtzio elkarreragile bat du: <b>Ezarpenak menua -&gt; Ezarri atzeko planoan errendatzea</b>.  
+Honek hasierako puntua ezartzen du txertatzeko puntuaren posizioraino atzeko planoan errendatzeko.
+Bideoren bat existitzen bada, barra gorria agertuko da denboraren erregelan, atzeko planoan errendatu dela adieraziz.
+</p>
+<p>Efektu edo trantsizio bat txertatu ondoren, 
+efektuaren aurretik <b>Ezarpenak menua -&gt; Ezarri atzeko planoan errendatzea</b> hautatu
+denbora errealean eta fotograma-tasa osoarekin aurrikusteko.
+</p>
+<a name="IDX56"></a>
+<ul>
+<li> <b>Fotograma kopurua atzeko planoan errendatzeko</b> <br>
+Errendategi bat erabiltzen bada soilik funtzionatzen du, bestela atzeko planoan errendatzeak
+ataza bakarra sortzen du denbora-lerro osoarentzako. Hemen zehaztutako fotograma kopurua
+errendategiko nodoen PUZ-abiadurarekiko eskalatuko da, eta errendategiko ataza bakarrean
+erabiliko da. Zenbaki egokia 10 eta 30 artekoa izan ohi denez, sareko banda-zabalera
+erabiltzen da ataza bakoitza hasieratzeko.
+
+<a name="IDX57"></a>
+</li><li> <b>Fotogramak atzeko planoan aurre hartzeko</b> <br>
+Hau fotograma kopurua da. Lehendabizi fotograma kopuru hau errendatzen
+da, ataza bakoitza atzeko planoan errendatu aurretik. Atzeko planoan
+errendatzearen maila jaisten da tamaina txikiko atazekin 'aurre hartzea'
+erabiltzen denean. Atzeko planoan errendatzea erabiltzen bada, zenbaki hau 
+0 izatea da egokiena. Efektu batzuk 'aurre hartzean' 3 fotograma
+erabiltzea eskatzen dute.
+
+<a name="IDX58"></a>
+</li><li> <b>Atzeko planoan errendatzearen irteera</b> <br>
+Atzeko planoan errendatzeak irudi-fitxategi sekuentzia bat sortzen du direktorio
+batean. Parametro honek irudi-fitxategien izenen aurrizkiak zehatzen ditu.
+Sekuentzia hau disko gogor azkar batean egon beharko luke, eta errendategiko nodo bakoitzak,
+bide-izen berdinean oinarrituz, sekuentzia atzitzeko gai izan beharko luke.
+Normalean ehun eta milaka irudi-fitxategi sortzen direnez, <code>ls</code> komandoak ez du
+funtzionatuko atzeko planoko errendatze-direktorioan. Aukera honen <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> 
+arakatzeko botoiak ere normalean ez du funtzionatuko, 
+baina <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> konfigurazio-botoiak bai ordea.
+
+<a name="IDX59"></a>
+</li><li> <b>Formatua</b> <br>
+Atzeko planoan errendatzean erabiliko den fitxategi-formatua irudi sekuentzia izan behar du.
+Irudi sekuentziaren formatuak erreprodukzioaren kalitatea eta abiadura zehazten du.
+JPEG formatua nahiko ona izan ohi da kasu gehienetan.
+</li></ul>
+
+<hr size="6">
+<a name="Errendategia"></a>
+<a name="SEC55"></a>
+<h3 class="subsection"> 3.6.2 Errendategia </h3>
+
+<p>Errendategia erabiltzeko honako aukerak ezarri behar dira. Ez ikusi egin 
+sistema bakunetan.
+</p>
+<a name="IDX60"></a>
+<ul>
+<li> <b>Erabili errendategia errendatzean</b> <br>
+Aukera hau hautatukoan, <b>Fitxategia -&gt; Errendatu</b> menuko eragiketa guztiek errendategia erabiliko dute.
+
+<a name="IDX61"></a>
+</li><li> <b>Nodoak</b> <br>
+Errendategiko nodo guztiak bistaratzen ditu, eta aktibo daudenak erakusten ditu.
+Nodoaren ostalari-izena idatzi, <b>ataka</b>ren balioa egiaztatu eta <b>gehitu nodoa</b> hautatuz gehitzen dira nodoak. Ehundaka nodo badituzu, edo erabiltzaile aditua bazara, 
+konfigurazioko elkarrizketa-koadroa erabili ordez <tt>`~/.bcast/.Cinelerra_rc'</tt> fitxategia erabil
+dezakezu nodoak editatu eta gehitzeko. Jakin ezazu, eta garrantzitsua da gogoratzea, 
+<tt>`.Cinelerra_rc'</tt> fitxategia gainidatzi egiten dela Cinelerra-ren kopia bat ixten den
+bakoitzean.<br>
+Nodoak sortzen direnean, hautatu <b>AKTIBATU</b> zutabea nodoak aktibatzeko edo deskatibatzeko.
+Nodoak editatzeko errenkada bat nabarmendu eta sakatua <b>aplikatu aldaketak</b>.
+
+<a name="IDX62"></a>
+</li><li> <b>Ostalari-izena</b> <br>
+Editatu existitzen den nodoaren ostalari-izena, edo sartu nodoaren ostalari-izena hemen.
+
+<a name="IDX63"></a>
+</li><li> <b>Ataka</b> <br>
+Editatu existitzen den nodoaren ataka zenbakia, edo sartu nodoaren ataka zenbakia hemen.
+
+<a name="IDX64"></a>
+</li><li> <b>Ordeztu nodoa</b> <br>
+Existitzen den nodo bat editatzean, sakatu botoi hau <b>ostalari-izenaren</b> 
+eta <b>atakaren</b> aldaketak aplikatzeko. Aldaketak ez dira aplikatuko botoi
+hau sakatzen ez bada.
+
+<a name="IDX65"></a>
+</li><li> <b>Gehitu nodoa</b> <br>
+Nodo berria sortzen du <b>ostalari-izena</b> eta <b>ataka</b> ezarpenekin.
+
+<a name="IDX66"></a>
+</li><li> <b>Ezabatu nodoa</b> <br>
+<b>Nodoen</b> zerrendan nabarmendutako elementu guztiak ezabatzen ditu.
+
+<a name="IDX67"></a>
+<a name="IDX68"></a>
+</li><li> <b>Ordenatu nodoak</b> <br>
+<b>Nodoen</b> zerrenda ordenatzen du ostalari-izenaren arabera.
+
+<a name="IDX69"></a>
+</li><li> <b>Berrezarri tasak</b> <br>
+Nodo guztien fotograma-tasa 0 balioarekin berrezartzen du.
+Nodoaren PUZaren abiaduran atazen tamainak eskalatzeko erabiltzen dira fotograma-tasak.
+Errendategia gaituta dagoenean soilik kalkula daitezke fotograma-tasak.
+
+<a name="IDX70"></a>
+<a name="IDX71"></a>
+</li><li> <b>Guztirako atazak sortzeko</b> <br>
+Ataza kopurua zehazten du errendetegiari bidaltzeko. Zenbat eta ataza gehiago
+bidali, orduan eta egokiago landuko da errendategiko balantzea. <br>
+Sortuko diren atazen kopuru osoa kalkulatzeko bidertu errendetegiko 
+nodo kopurua (nodo nagusia ere kontutan izanik) zenbaki batekin.
+1 balioarekin bidertuz ataza bakoitza nodo bati bidaliko zaio.
+Nodoak 3 balioarekin bidertzean, agerian geratzen den bezala, 
+nodo bakoitzari 3 ataza bidaliko zaizkio. Errendategian 10 esklabu eta
+maisu batek osatzen badute, 33 balioa zehaztuz balantze egokia
+duen errendategia izango duzu.
+</li></ul>
+
+<hr size="6">
+<a name="Interfazea"></a>
+<a name="SEC56"></a>
+<h2 class="section"> 3.7 Interfazea </h2>
+
+<p>Parametro hauek erabiltzailearen interfazearen funtzionamenduan eragiten dute.
+</p>
+<a name="IDX72"></a>
+<a name="IDX73"></a>
+<ul>
+<li> <b>Indizeen fitxategien kokalekua</b> <br>
+Garai batean, disko gogorrentzako 4 MB/seg abiadura oso azkarra zenean,
+indizeen fitxategiak sartu ziren audioaren pistak bizkor marrazteko.
+Aukera honek indizeen fitxategiak disko gogorrean non kokatuko diren zehazten du.
+
+<a name="IDX74"></a>
+</li><li> <b>Indizeen fitxategiaren tamaina</b> <br>
+Aukera honek indizeen fitxategi baten tamaina zehazten du.
+Indizearen tamaina handiagoak fitxategi txikiak bizkorrago marraztea eragiten duen
+bitartean, fitxategi handien marrazketa moteltzen du. Indizearen tamaina txikiagoak
+berriz fitxategi handiak bizkorrago marraztu erazten du, eta fitxategi txikien marrazketaren
+abiadura moteldu.
+
+<a name="IDX75"></a>
+</li><li> <b>Indizeen fitxategi kopurua</b> <br>
+Indizeen direktorioa kudeakaitza ez izateko indizeen fitxategi zaharrak ezabatu egiten dira.
+Direktorioan gordeta edukiko diren indizeen gehienezko fitxategi kopurua zehazten du aukera honek.
+
+<a name="IDX76"></a>
+</li><li> <b>Ezabatu indize guztiak</b> <br>
+Aukera honek indizeen fitxategi guztiak ezabatzen ditu indizeen tamaina
+aldatzean edo gehiegizko indizeen fitxategiak garbitzea nahi duzunean.
+
+<a name="IDX77"></a>
+</li><li> <b>Orduak:minutuak:segundoak.xxx</b> <br>
+Denboraren hainbat adierazpen edo formatu ematen dira.
+Hautatu zuretzako egokiena dena. Denboraren adierazpena aldatzeko <kbd>Ktrl</kbd> tekla
+sakatuz denboraren erregelan klik egin dezakezu.
+
+<a name="IDX78"></a>
+</li><li> <b>Erabili koadro txikiak</b> <br>
+Baliabideen leihoak klipen koadro txikiak bistaratzen ditu lehenetsi gisa.
+Klipen koadro txikiak marrazteak denbora piskat behar izaten du. Aukera honek
+koadro txikien marrazketa desgaitzen du.
+
+<a name="IDX79"></a>
+</li><li> <b>Zer egin klik egitean sarrerako/irteerako puntuetan</b> <br>
+Sarrerako/Irteerako puntuak arrastatzean editatzeaz gain, Cinelerra-k beste hiru eragiketa
+definitzen ditu sarrerako/irteerako puntuak arrastatzean lantzeko. Saguaren
+botoi bakoitzaren portaera hauta dezakezu hemen. Edizio moduan dagoen erabilera
+bakoitzari buruzko informazioa edizioan aipatzen da.
+
+<a name="IDX80"></a>
+</li><li> <b>Bolumenaren gutxieneko dB</b> <br>
+Soinuaren iturburu batzuk beste batzuen baino zarataren atalase baxuagoa dute.
+Zarataren atalasea baino baxuagoak zentzugabeak dira. Aukera honek boluman-maila
+baxuena zehazten du, hortik beherakoak mozteko. Kontsumitzaile arruntentzako
+soinu-txartelen maila baxuena -65 izan ohi da. Soinu-txartel profesionalen
+maila baxuena berriz -90 izan ohi da. Irakurri See section <a href="cinelerra_cv_manual_eu_10.html#SEC136">Soinu bolumenaren leihoa</a> atala.
+
+<a name="IDX81"></a>
+</li><li> <b>Bolumenaren gehienezko dB</b> <br>
+Aukera honek boluman-maila altuena zehazten du, hortik gorakoak mozteko.
+Berdin dio zein balio duen, soinu-txartelek ezin dute 0 dB baino soinu
+altuagoak erreproduzitu.
+Soinu-uhin batek muga zenbatean gainditzen duen erakusteko bakarrik erabiltzen da balio hau.
+Irakurri See section <a href="cinelerra_cv_manual_eu_10.html#SEC136">Soinu bolumenaren leihoa</a> atala.
+
+<a name="IDX82"></a>
+</li><li> <b>Gaia</b> <br>
+Cinelerra-k hainbat gai onartzen ditu. Hautatu bat eta berrabiarazi Cinelerra
+itxuraren aldaketa aplikatzeko.
+</li></ul>
+
+<hr size="6">
+<a name="Honi-buruz"></a>
+<a name="SEC57"></a>
+<h2 class="section"> 3.8 Honi buruz leihoa </h2>
+
+<p>Atal honek honako informazioa eskaintzen du: copyright-a; uneko konpilazioaren
+data; bermerik gabeko lizentzia; eta zenbait liburutegiren bertsioak.
+Ziurtatu zaitez bermerik gabeko lizentziarekin ados zaudela.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC26" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_4.html#SEC58" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

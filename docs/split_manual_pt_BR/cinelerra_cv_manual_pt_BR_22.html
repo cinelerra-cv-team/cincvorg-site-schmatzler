@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 22. Resolvendo problemas</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 22. Resolvendo problemas">
+<meta name="keywords" content="Manual do Cinelerra CV: 22. Resolvendo problemas">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_21.html#SEC286" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_23.html#SEC331" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Resolvendo-problemas"></a>
+<a name="SEC320"></a>
+<h1 class="chapter"> 22. Resolvendo problemas </h1>
+
+
+<hr size="6">
+<a name="Reportando-erros"></a>
+<a name="SEC321"></a>
+<h2 class="section"> 22.1 Reportando erros </h2>
+
+<p>Quando você encontra um erro (&quot;bug&quot;), a primeira coisa a fazer é ir para <a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> e checar se ele já não foi reportado. Se não há um reporte para o erro que você notou, você pode preencher um relatório de erro. Abra uma conta em <a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> caso você ainda não a tenha. Então, preencha o reporte de erros, incluindo a seguinte informação:
+</p>
+<ul class="toc">
+<li>- Número de revisão do Cinelerra CV. Exemplo: r959
+
+</li><li>- Nome da distribuição e versão.  Exemplo: Debian SID
+
+</li><li>- Passos para replicar o erro. Isso é muito importante, uma vez que realmente ajuda às pessoas que estão tentando consertá-los. Exemplo:
+<ol>
+<li> abrir o cinelerra
+</li><li> abrir a janela de gravação
+</li><li> clicar em OK
+</li><li> cinelerra dá pau
+</li></ol>
+
+</li><li>- Quando o Cinelerra CV dá pau, uma saída depuradora é bem vinda. Rode: <br>
+<code>gdb cinelerra</code> <br>
+<code>run</code> <br>
+(Você provoca o erro e o Cinelerra CV dá pau) <br>
+<code>thread apply all bt</code> <br>
+Copie toda a informação disposta no seu reporte de erros.
+</li></ul>
+
+<p>Não exite em anexar qualquer arquivo que você acha que tenha relevância, como uma captura de tela por exemplo. A saída gdb é mais útil quando o Cinelerra é compilado com símbolos de depuração. Veja See section <a href="cinelerra_cv_manual_pt_BR_2.html#SEC14">Compilando com símbolos de depuração</a>, para instruções de compilação.
+</p>
+<p>Além disso, se o erro que você notou estiver relacionado a um problema de carregar um arquivo específico no Cinelerra-CV, fazer um upload de uma pequena amostra de tal arquivo na internet pode ser bem útil. Isso permitiria a outras pessoas consertando erros tentar carregar aquele arquivo no Cinelerra e ver o que acontece.
+</p>
+<hr size="6">
+<a name="A-reprodu_00e7_00e3o-n_00e3o-p_00e1ra"></a>
+<a name="SEC322"></a>
+<h2 class="section"> 22.2 A reprodução não pára </h2>
+
+<p>Se a reprodução das trilhas de áudio não parar na linha do tempo e continuar após o final do vídeo, vá para <b>Configurações -&gt; Preferências -&gt; Reprodução</b> e clique na caixinha do <b>Parar travamento de reprodução</b>. Esta caixinha é mostrada apenas se você configurou o ALSA como driver de áudio.
+</p>
+<hr size="6">
+<a name="Paus-do-driver-Buz"></a>
+<a name="SEC323"></a>
+<h2 class="section"> 22.3 Paus do driver Buz </h2>
+
+<p>Primeiro, placas de captura Zoran devem ser acessadas usando o driver de vídeo <b>Buz</b> em <b>Preferências-&gt;Gravação</b> e <b>Preferências-&gt;Reprodução</b>. Alguns ajustes de performance estão disponíveis em outra seção. See section <a href="cinelerra_cv_manual_pt_BR_21.html#SEC295">Melhorando a performance</a>.
+</p>
+<p>Uma vez ajustado, o driver Buz parece dar pau se o número de buffers de gravação for muito alto. Faça com que ele esteja abaixo de 10 em <b>Preferências-&gt;Gravação-&gt;Quadros para bufferizar no dispositivo</b>.
+</p>
+<hr size="6">
+<a name="Arrastar-bordas-de-edi_00e7_00e3o-n_00e3o-funciona"></a>
+<a name="SEC324"></a>
+<h2 class="section"> 22.4 Arrastar bordas de edição não funciona </h2>
+
+<p>Às vezes haverá dois blocos de edição bem juntos um do outro. A borda de edição selecionada para ser arrastada pode ser próxima ao bloco buscado em um bloco muito pequeno para ver no nível de aproximação atual. Aproxime horizontalmente.
+</p>
+<hr size="6">
+<a name="Travando-quando-arquivos-est_00e3o-sendo-carregados"></a>
+<a name="SEC325"></a>
+<h2 class="section"> 22.5 Travando quando arquivos estão sendo carregados </h2>
+
+<p>O maior motivo de travamentos quando se carrega arquivos é porque o codec não é suportado. Um outro motivo é que o Cinelerra está construindo ícones (&quot;picons&quot;) para a Janela de Recursos. Se você carregar um número alto de imagens, será necessário descomprimir cada única imagem para construir um ícone (&quot;picon&quot;). Vá para <b>configurações-&gt;preferências-&gt;interface</b> e desabilite <b>Usar miniaturas na janela de recursos</b> para pular este processo.
+</p>
+<hr size="6">
+<a name="Sincronia-perdida-quando-capturando-arquivos"></a>
+<a name="SEC326"></a>
+<h2 class="section"> 22.6 Sincronia perdida quando capturando arquivos </h2>
+
+<p>Se a taxa de quadros da gravação for muito mais baixa que a taxa de quadros da fonte, o vídeo acumulará buffers de gravação com o tempo enquanto o áudio e o vídeo ficarão bem fora de sincronia. Diminua o <b>número de quadros para bufferizar no dispositivo</b> em <b>preferências-&gt;gravação</b> de modo que os quadros excedentes sejam pulados (&quot;dropped&quot;) ao invés de bufferizados.
+</p>
+<hr size="6">
+<a name="Aplicar-gama-seguido-do-desfocar-n_00e3o-funciona"></a>
+<a name="SEC327"></a>
+<h2 class="section"> 22.7 Aplicar gama seguido do desfocar não funciona </h2>
+
+<p>O efeito gama usa a função 'pow' enquanto o desfocar usa um número de funções 'exp' na biblioteca matemática. Por alguma razão, usar a função 'pow' quebra chamadas seguintes para as funções 'exp' na biblioteca matemática. Você deve aplicar o gama após o desfocar para fazê-los funcionar.
+</p>
+<hr size="6">
+<a name="C_00f3pia-e-Cola-de-sele_00e7_00f5es-de-trilha-n_00e3o-funcionam-na-Linha-do-Tempo"></a>
+<a name="SEC328"></a>
+<h2 class="section"> 22.8 Cópia e Cola de seleções de trilha não funcionam na Linha do Tempo </h2>
+
+<p>Se você estiver usando a aplicação KDE Klipper, ou desabilite-a ou clique com o botão direito em seu ícone na barra de taregas, selecione <b>Configure Klipper</b> e assegure-se que o <b>Prevent empty clipboard</b> não esteja selecionado.
+</p>
+<hr size="6">
+<a name="Cinelerra-d_00e1-pau-freq_00fcente"></a>
+<a name="SEC329"></a>
+<h2 class="section"> 22.9 Cinelerra dá pau freqüente </h2>
+
+<p>Faça uma instalação limpa. Assegure-se que você não possui bibliotecas de instalações anteriores. Apague o seu diretório <tt>`$HOME/.bcast/'</tt> também. <br>
+<code>rm -f /usr/local/lib/libguicast*</code> <br>
+<code>rm -f /usr/lib/libguicast*</code> <br>
+<code>rm -f /usr/local/lib/libquicktimehv*</code> <br>
+<code>rm -f /usr/lib/libquicktimehv*</code> <br>
+<code>rm -f /usr/local/lib/libmpeg3hv*</code> <br>
+<code>rm -f /usr/lib/libmpeg3hv*</code>
+</p>
+<hr size="6">
+<a name="Tema-Blond-n_00e3o-encontrado"></a>
+<a name="SEC330"></a>
+<h2 class="section"> 22.10 Tema Blond não encontrado </h2>
+
+<p>Se a seguinte mensagem de erro aparecer: <code>Aborted, MWindow::init_theme: Theme Blond not found</code>, então:
+</p><ul>
+<li> Você deve ter o arquivo <tt>`defaulttheme.*'</tt> dentro de <tt>`/usr/lib/cinelerra'</tt> ou <tt>`/usr/local/lib/cinelerra'</tt>. Se ele não existe, você precisa instalar os plugins novamente.
+</li><li> Tente apagar a pasta <tt>`$HOME/.bcast/'</tt>.
+</li><li> Olhe dentro de <tt>`$HOME/.bcast/Cinelerra_rc'</tt> e procure o THEME (&quot;tema&quot;); ele estar como =&gt; THEME Blond
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_23.html#SEC331" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+ <link rel="stylesheet" href="../main.css" type="text/css">
+ <title>Cinelerra CVS: Source code docs</title>
+</head>
+
+<body>
+<div class="menu">
+ <ul>
+   <li><a href="../">Main page..</a></li>
+  <hr>
+   <li>The <a href="doxy/a118/cinelerra/html/">guicast</a> source.</li>
+   <li>The <a href="doxy/a118/guicast/html/">cinelerra core</a> source.</li>
+ </ul>
+</div>
+
+<div class="body">
+<h1>Documenting Cinelerra's source code</h1>
+
+<div class="boxa">
+<p>Cinelerra's source code consists of a many, <em>many</em>
+lines of code, spread over thousands of files.  Getting up
+to speed by simply looking through the code takes months,
+even for a skilled programmer.</p>
+</div>
+
+ <div class="boxb">
+<h2>Automatic documentation</h2>
+
+<p>There are quick ways of producing cross-references
+ and pretty dependency graphs out of raw source code.
+ We will use that as a foundation.  So far, I have used
+ <a href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a>.
+</p>
+</div>
+
+<div class="boxa">
+<h2>API documentation, examples, test applications</h2>
+
+<p>To come, I hope...</p>
+</div>
+
+<div class="boxb">
+<h2>Doxygen source code documentation</h2>
+
+<p>I've run doxygen on the <a href="doxy/a118/guicast/html/">
+guicast subdirectory</a> and the <a href="doxy/a118/cinelerra/html/">
+cinelerra subdirectory</a> of the source code.  Cinelerra's core and GUI
+code can now be examined more conveniently.</p>
+
+<p>This is version 1.1.8 from Heroines.  Here is one
+<a href="doxy/a118/guicast/Doxyfile">configuration file</a>
+I used to generate it.  Thanks to Jens Seidel for suggesting
+doxygen, and providing a template configuration file.</p>
+</div>
+ 
+</div> <!-- End body div -->
+
+<hr>
+<address>Herman Robak, herman at skolelinux no</address>
+<!-- hhmts start --> Last modified: Thu Jan 15 23:27:44 CET 2004 <!-- hhmts end -->
+</body> </html>

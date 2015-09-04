@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Change format, and the mask outline does not follow the mask.</title>
+</head>
+
+<body>
+<h1>Change format, and the mask outline and the mask don't line up</h1>
+
+<p>Use the <a href="mask-demo.tgz">mask-demo.tgz</a> if you don't have
+ any footage to play with.</p>
+
+
+<h2>The bug</h2>
+
+<p>If you create a mask, and change the output resolution, the mask
+ outline and control points don't follow the actual mask anymore.</p>
+
+
+<h2>How to reproduce</h2>
+
+<p>Create a mask with a clear and obvious effect: E.g. a black square
+on a bright background.  Or use the test project <a href="mask-demo.tgz">
+mask-demo.tgz</a>, and use the gain slider in the patchbay to darken the
+"lower" video track (Video 1).  You have to disable the "gang fader" to
+fade down the video tracks individually.  Now you have very obvious mask
+effect, as shown in <a href="mask-orig.png">this screenshot</a>.</p>
+
+<p>Change the output format, e.g. to 1280x768 pixels.  Enjoy the
+<a href="mask-mismatch.png">result</a>.  The mask outline has now very
+little to do with the actual mask.</p>
+
+
+<h2>Workaround?</h2>
+
+<p>We'd like to here about a workaround, if it exists.</p>
+
+<hr>
+<address>Herman Robak, herman at skolelinux no</address>
+<!-- hhmts start --> Last modified: Sun Jan 25 21:25:29 CET 2004 <!-- hhmts end -->
+</body> </html>

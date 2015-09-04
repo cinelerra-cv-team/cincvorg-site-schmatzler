@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 15. Efectos Ladspa</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 15. Efectos Ladspa">
+<meta name="keywords" content="Manual de Cinelerra CV: 15. Efectos Ladspa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_14.html#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_16.html#SEC240" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Efectos-Ladspa"></a>
+<a name="SEC239"></a>
+<h1 class="chapter"> 15. Efectos Ladspa </h1>
+
+<p>Los efectos Ladspa son efectos de audio que están soportados tanto en tiempo real como 
+renderizados. Los efectos Ladspa (también llamados plugins) se obtienen de Internet y
+son de calidad variable. La mayoría no se pueden modificar en tiempo real y funcionan 
+mejor renderizados. Algunos no funcionan o producen múltiples errores. Otros sólo se 
+pueden aplicar sobre una única pista, debido a la ausencia de re-entrada. Aunque 
+Cinelerra implementa la interfaz Ladspa con toda la precisión posible, varias pistas
+de tiempo real o procesamiento simultáneo van más allá del empleo que suelen hacer la 
+mayoría de usuarios de Ladspa. Los efectos Ladspa aparecen en la carpeta de Audio 
+como un martillo y un destornillador, con la intención de hacer ver que son plugins
+para desarrolladores de audio en GNU/Linux.
+</p>
+<p align="center"> <img src=".././manual_images_intl/ladspa_effects.png" alt="manual_images_intl/ladspa_effects">
+</p><p align="center"> <b>Efectos Ladspa en la carpeta Audio.</b>
+</p>
+<p>Para habilitar los efectos Ladspa basta con apuntar la variable de entorno <code>LADSPA_PATH</code>
+a la localización con los plugins Ladspa:
+</p><pre class="verbatim">export LADSPA_PATH=/usr/lib/ladspa
+</pre><p>También es posible habilitarlos poniendo dichos efectos en el directorio
+<tt>`/usr/lib/cinelerra'</tt>.<br>
+</p>
+<p>Los usuarios de Debian pueden conseguir muchos plugins usando apt:<br>
+<code>apt-cache search ladspa</code><br>
+<code>apt-get install jack-rack cmt blop swh-plugins</code>
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_14.html#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_16.html#SEC240" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

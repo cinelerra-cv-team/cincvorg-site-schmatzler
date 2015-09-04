@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 4. Atributos do projeto</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 4. Atributos do projeto">
+<meta name="keywords" content="Manual do Cinelerra CV: 4. Atributos do projeto">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_3.html#SEC31" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_5.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Atributos-do-projeto"></a>
+<a name="SEC63"></a>
+<h1 class="chapter"> 4. Atributos do projeto </h1>
+
+
+<hr size="6">
+<a name="Janela-de-configura_00e7_00e3o-de-formato"></a>
+<a name="SEC64"></a>
+<h2 class="section"> 4.1 Janela de configuração de formato </h2>
+
+<p>Quando você reproduz arquivos de mídia no Cinelerra, os arquivos de mídia possuem um certo número de trilhas, uma certo tamanho de quadro, um certo tamanho de amostragem e assim por diante. Não importa o que o arquivo de mídia possui; entretanto, ele ainda será reproduzido de acordo com os atributos do projeto. Se uma taxa de amostragem de áudio for diferente dos atributos do projeto, ela será refeita. Se o tamanho do quadro de um arquivo de vídeo for diferente dos atributos do projeto, ele será composto a um quadro preto, ou recortado ou encaixado dentro de bordas pretas.
+</p>
+<p>Os atributos do projeto são ajustados em <b>Configurações-&gt;Ajustar Formato</b> e, de uma forma algo mais limitada, em <b>Arquivo-&gt;Novo</b>. Quando você ajusta as configurações do projeto em <b>Arquivo-&gt;Novo</b>, uma nova linha do tempo é criada sem informações. Cada linha do tempo criada a partir deste ponto usará as mesmas configurações. Quando você ajusta asconfigurações em <b>Configurações-&gt;Formato</b>, a linha do tempo não é recriada sem informações, mas cada linha do tempo criada a partir deste ponto usará as mesmas configurações.
+</p>
+<p align="center"> <img src=".././manual_images_intl/format.png" alt="manual_images_intl/format">
+</p><p align="center"> <b>Janela de configuração de Formato</b>
+</p>
+<p>Além das configurações tradicionais de taxa de amostragem, taxa de quadros e tamanho de imagem, o Cinelerra usa algumas configurações pouco usuais como <b>posições de canais, modelo de cor e razão de aspecto.</b>
+</p>
+<hr size="6">
+<a name="Pr_00e9_002dconfigura_00e7_00f5es"></a>
+<a name="SEC65"></a>
+<h2 class="section"> 4.2 Pré-configurações </h2>
+
+<p>Selecione uma opção deste menu para ter todas as configurações de projeto marcadas para um dos padrões conhecidos.
+</p>
+<hr size="6">
+<a name="Atributos-de-_00e1udio"></a>
+<a name="SEC66"></a>
+<h2 class="section"> 4.3 Atributos de áudio </h2>
+
+<ul>
+<li> <b>Trilhas</b> <br>
+Marca o número de trilhas de áudio que o novo projeto deverá ter. Trilhas podem ser adicionadas ou apagadas depois, mas opções são dadas aqui por uma conveniência.
+
+</li><li> <b>Taxa de amostagem</b> <br>
+Marca a taxa de amostragem do áudio. A taxa de amostragem do projeto não tem que ser a mesma da taxa de amostragem das mídias que você carregar. A mídia terá sua taxa de amostragem refeita para se adequar à do projeto.
+
+</li><li> <b>Canais</b> <br>
+Marca o número de canais de áudio que o novo projeto deverá ter. O número de canais de áudio não precisa ser o mesmo do número de trilhas.
+
+</li><li> <b>Posições dos canais</b> <br>
+Os canais de áudio atualmente habilitados e suas posições são exibidos no desenho de posições de canais.
+</li></ul>
+
+<p align="center"> <img src=".././manual_images_intl/channelpositions.png" alt="manual_images_intl/channelpositions">
+</p><p align="center"> <b>A ferramenta de posição do canal</b>
+</p>
+<p>Os canais são numerados. Quando renderizados, a saída do canal 1 é renderizada para a primeira trilha de saída no arquivo ou para o primeiro canal da placa de áudio. Outros canais serão renderizados para suas trilhas sucessivamente numeradas.
+</p>
+<p>Os locais dos canais de áudio correspondem a onde na panorâmica cada saída de áudio está. Quão mais perto a posição da panorâmica estiver se uma das saídas de áudio, mais sinal o falante obterá. Clique em um ícone de falante e arraste para mudar a localização do canal de áudio.
+</p>
+<p>Os falantes podem estar em qualquer orientação. Um arranjo diferente de falantes é armazenado para cada número de canais de áudio já que normalmente você não quer que o mesmo arranjo de falantes para números diferentes de canais.
+</p>
+<p>As posições de canais são a única configuração que não afetam a saída necessariamente. É simplesmente uma conveniência, então quando mais de dois canais são usados, os controles de panorâmica na linha do tempo podem distinguir entre eles. Isso não tem nada a ver com o arranjo real dos falantes.
+</p>
+<p>Mas canais diferentes podem ser posicionados muito próximos um ao outro para fazer com que tenham a mesma saída.
+</p>
+<p>See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC110">Fazendo um pan nas trilhas de áudio</a>.
+</p>
+<hr size="6">
+<a name="Atributos-de-v_00eddeo"></a>
+<a name="SEC67"></a>
+<h2 class="section"> 4.4 Atributos de vídeo </h2>
+
+<ul>
+<li> <b>Trilhas</b> <br>
+Marca o número de trilhas de vídeo que o novo projeto deve ter. Trilhas podem ser adicionadas ou apagadas mais tarde, mas opções são dadas aqui por uma conveniência.
+
+</li><li> <b>Taxa de quadros</b> <br>
+Marca a taxa de quadros do vídeo. A taxa de quadros do projeto não precisa ser a mesma das mídias que você vai carregar para dentro dele. Elas terão as suas reajustadas para se adequar à do projeto.
+
+</li><li> <b>Tamanho da tela</b> <br>
+Marca o tamanho da saída de vídeo. Cada trilha também possui seu próprio tamanho de quadro. Inicialmente, o diálogo <b>Novo Projeto</b> cria trilhas de vídeo cujos tamanhos todos se adequam à saída de vídeo, mas os tamanhos de trilha de vídeo podem ser mudados mais tarde sem que se mude a saída de vídeo.
+
+</li><li> <b>Razão de aspecto</b> <br>
+Marca a razão de aspecto. A razão de aspecto é aplicada à saída de vídeo. A razão de aspecto pode ser diferente do número de pixels horizontais / pixels verticais. Marcar uma razão de aspecto diferente do que o número de pixels resulta em pixels não-quadrados.
+
+</li><li> <b>Razão de aspecto automática</b> <br>
+Caso esteja habilitado, o diálogo <b>Novo Projeto</b> sempre recalculará a configuração de <b>Razão de aspecto</b> quando o <b>Tamanho da tela</b> for mudado. Isso assegura que os pixels sempre sejam quadrados.
+
+</li><li> <b>Modelo de Cor</b> <br>
+Marca o modelo de cor para os quais os intermediários de vídeo no projeto vão ser armazenados. <br> O modelo de cor é importante para a reprodução do vídeo já que o vídeo possui a desvantagem de ser muito lento. Embora não seja notável, intermediários de áudio contêm muito mais informação que o áudio no disco e que o áudio que está sendo reproduzido. O áudio sempre usa o intermediário de banda mais alto porque é rápido. <br>
+Intermediários de vídeo devem usar a menor quantidade de informação para a qualidade requerida porque ele é lento, mas os intermediários de vídeo ainda usam um modelo de cor com uma banda mais alta do que o vídeo que está armazenado ou que está sendo reproduzido. Isso permite que mais processamento seja feito com menos destruição da informação original. <br>
+O vídeo é armazenado no disco em um modelo de cor, normalmente comprimido usando um derivativo YUV. Quando reproduzido, o Cinelerra o descomprime do formato de arquivo diretamente no formato do dispositivo de saída. Caso efeitos sejam processados, a descompressão é em um modelo de cor intermediário primeiro e o modelo de cor intermediário é então convertido no formato do dispositivo de saída. A seleção do modelo de cor intermediário determina quão preciso e rápido serão os efeitos. <br>
+Os modelos de cor do Cinelerra são descritos usando uma certa ordem de empacotamento de componentes e um certo número de bits para cada componente. A ordem de empacotamento é impressa à esquerda e a alocação de bit é impressa à direita.
+<a name="IDX70"></a>
+<ul>
+<li> <b>RGB-888</b> <br>
+Aloca 8 bits para os canais R, G e B e nenhum alfa. É normalmente usado para mídia descomprimida com abrangência dinâmica baixa.
+<a name="IDX71"></a>
+</li><li> <b>RGBA-8888</b> <br>
+Aloca um canal alfa ao modelo de cor RGB de 8 bits. É usado para sobrepor múltiplas trilhas.
+<a name="IDX72"></a>
+</li><li> <b>YUV-888</b> <br>
+Aloca 8 bits para Y, U e V. É usado para operações de abrangência dinâmica baixa nas quais a mídia é comprimida no espaçamento de cor YUV. A maioria das mídias comprimidas está em YUV e isso permite que elas sejam processadas rapidamente com a menor degradação de cor.
+<a name="IDX73"></a>
+</li><li> <b>YUVA-8888</b> <br>
+Aloca um canal alfa ao modelo de cor YUV de 8 bits para transparência.
+<a name="IDX74"></a>
+</li><li> <b>RGB-Float</b> <br>
+Aloca um float 32 bit para os canais R, G e B e nenhum alfa. É usado para processamento de abrangência dinâmica alta sem transparência.
+<a name="IDX75"></a>
+</li><li> <b>RGBA-Float</b> <br>
+Adiciona um float 32 bit para alfa ao RGB-Float. É usado para processamento de abrangência dinâmica alta com transparência.
+</li></ul>
+<p><b>Para fazer efeitos que envolvem um canal alfa, um modelo de cor com canal alfa deve ser selecionado</b>. Esses são RGBA8888, YUVA8888 e RGBA Float. Os modelos de cor de 4 canais são notoriamente mais lentos do que os de 3 canais, sendo o mais lento o RGBA Float. Alguns efeitos como fade conseguem trabalhar sem a necessidade de um canal alfa, enquanto outros como o chromakey requerem um canal alfa para fazer qualquer coisa, então é uma boa idéia tentar o efeito sem canais alfa para ver se ele funciona antes de configurar o projeto com um canal alfa e deixá-lo mais lento. <br>
+Os modelos de cor YUV são normalmente mais rápidos do que os modelos de cor RGB quando se usa material comprimido. Eles também destróem menos cores do que os modelos RGB. Se um material armazenado como JPEG ou MPEG for processado muitas vezes em RGB, as cores vão esvanecer enquanto isso não acontecerá caso sejam processadas em YUV. <br>
+Anos trabalhando com material com abrangência dinânica alta mostraram que o RGB com ponto flutuante (&quot;floating point RGB&quot;) é o melhor formato para abrangência dinâmica alta. Enquanto os integradores (&quot;integers&quot;) de 16 bit eram usados no passado, eles tinham muita perda (&quot;lossy&quot;) e eram muito lentos para a quantidade de melhorias. <br>
+O RGB float não destrói a informação quando usado com um material fonte YUV. Ele também suporta brilho acima de 100%. Saiba que alguns efeitos, como o Histograma, ainda recortam acima de 100% quando usados com ponto flutuante.
+</p></li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC63" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_5.html#SEC68" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

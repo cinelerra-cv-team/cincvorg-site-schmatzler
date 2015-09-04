@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 19. Le rendu de fichiers</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 19. Le rendu de fichiers">
+<meta name="keywords" content="Manuel de Cinelerra CV: 19. Le rendu de fichiers">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_18.html#SEC250" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_20.html#SEC273" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Le-rendu-de-fichiers"></a>
+<a name="SEC256"></a>
+<h1 class="chapter"> 19. Le rendu de fichiers </h1>
+
+<p>Le rendu prend une section de la timeline, réalise tout le montage, applique
+les effets et la composition et effectue l'enregistrement dans un fichier de
+sortie.  Vous pouvez alors supprimer tous les objets source, lire le fichier
+issu du rendu dans un lecteur ou le réimporter dans Cinelerra pour y poursuivre
+le montage.  Il est cependant très difficile de retoucher les décisions de
+montage lorsque le fichier est rendu, c'est pourquoi il vous est conseillé de
+conserver les objets d'origine et le fichier XML de montage pendant quelques
+jours après que vous en ayez effectué le rendu.
+</p>
+<p>Toutes les opérations de rendu sont basées sur une région de la timeline.  Vous
+devez définir cette région sur la timeline.  La section sur la navigation
+décrit des méthodes pour définir des régions.  Voir la section <a href="cinelerra_cv_manual_fr_12.html#SEC138">La barre temporelle</a>.  Les
+fonctions de rendu définissent la région en se basant sur un jeu de règles.
+Lorsqu'une région est en surbrillance ou lorsque les points d'entrée/sortie
+sont placés, le rendu de la région affectée est effectué.  Lorsqu'il n'y a pas
+de région en surbrillance, tout ce qui se trouve après le point d'insertion est
+rendu.  En plaçant simplement le point d'insertion au début d'une piste et en
+désélectionnant les points d'entrée/sortie, la piste toute entière est rendue.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC257">19.1 Rendu d'un seul fichier</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Effectuer le rendu d'un fichier unique
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC258">19.2 Rendu dans des fichiers séparés</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC259">19.3 Stratégie d'insertion des fichiers rendus</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC260">19.4 Rendu par lots</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">            	Rendu sans intervention de l'utilisateur
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC261">19.5 La grappe de rendu</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Rendu en utilisant de nombreux ordinateurs
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC262">19.6 Rendu en ligne de commandes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> Effectuer le rendu de plusieurs fichiers sans interface graphique
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC263">19.7 Rendu de vidéos pour internet</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC266">19.8 Charte de compatibilité de Quicktime pour GNU/Linux</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC267">19.9 Faire un DVD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC272">19.10 Utiliser le rendu en tâche de fond</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Rendu-d_0027un-seul-fichier"></a>
+<a name="SEC257"></a>
+<h2 class="section"> 19.1 Rendu d'un seul fichier </h2>
+
+<p>La manière la plus rapide de finaliser votre vidéo sur le disque est d'utiliser
+la fonction de rendu d'un seul fichier.
+</p>
+<p>Allez dans <b>Afficher-&gt;Rendu</b> ou pressez <kbd>MAJ-R</kbd> pour afficher le dialogue
+de rendu.  Choisissez la loupe <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> pour
+afficher un dialogue de sélection de fichier.  Ceci permet de définir le nom du
+fichier vers lequel il faudra écrire les données issues du rendu et de définir
+les paramètres d'encodage.
+</p>
+<p align="center"> <img src=".././manual_images_intl/render_window.png" alt="manual_images_intl/render_window">
+</p><p align="center"> <b>La fenêtre de rendu</b>
+</p>
+<p>Dans le dialogue de rendu, choisissez un <b>Format de fichier</b>.  Le format du
+fichier détermine si vous pouvez effectuer le rendu d'audio, de vidéo ou des
+deux à la fois.  Cochez la case <b>Rendu des pistes audio</b> pour créer des
+pistes audio et <b>Rendu des pistes vidéo</b> pour créer des pistes vidéo.
+</p>
+<p>Sélectionnez la clé <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> qui se trouve près
+de chacune des cases afin de déterminer les paramètres de compression.  Si le
+format du fichier ne permet pas d'enregistrer de l'audio ou de la vidéo les
+paramètres de compression seront vierges.  Si vous avez choisi <b>Rendu des
+pistes audio</b> ou <b>Rendu des pistes vidéo</b> et que le format du fichier ne le
+gère pas, une fenêtre d'erreur sera affichée.
+</p>
+<hr size="6">
+<a name="Rendu-dans-des-fichiers-s_00e9par_00e9s"></a>
+<a name="SEC258"></a>
+<h2 class="section"> 19.2 Rendu dans des fichiers séparés </h2>
+
+<p>La case à cocher <b>Créer un nouveau fichier à chaque marque</b> provoquera la
+création d'un nouveau fichier chaque fois qu'une marque sera rencontrée sur la
+timeline.  Ceci est utile pour séparer de longs enregistrements audio en des
+fichiers séparés.  Lorsque vous utilisez la grappe de calcul, <b>Créer un
+nouveau fichier à chaque marque</b> entraînera la création d'une nouvelle tâche à
+chaque marque plutôt que de d'utiliser l'algorithme interne d'équilibrage de la
+charge pour espacer les tâches.
+</p>
+<p>Lorsque <b>Créer un nouveau fichier à chaque marque</b> est sélectionné, un
+nouveau nom de fichier est créé pour chaque fichier de sortie.  Si le nom de
+fichier donné dans le dialogue de rendu contient un nombre sur deux chiffres,
+ce nombre sera réécrit avec un nombre différent qui sera incrémenté pour chacun
+des fichiers de sortie.  Si deux chiffres ne sont pas renseignés, Cinelerra
+concaténera automatiquement, pour chacun des fichiers de sortie, un nombre à la
+fin du nom de fichier indiqué.
+</p>
+<p>Dans le nom de fichier <tt>`/hmov/track01.wav'</tt>, le <samp>`01'</samp> sera réécrit pour
+chaque fichier de sortie.  Cependant, le nom de fichier <tt>`/hmov/track.wav'</tt>,
+deviendra <tt>`/hmov/track.wav001'</tt> et ainsi de suite.  La modification des
+noms de fichiers n'est utilisée que lorsque la grappe de calcul est active ou
+lorsque l'option <b>Créer un nouveau fichier à chaque marque</b> a été
+sélectionnée.
+</p>
+<hr size="6">
+<a name="Strat_00e9gie-d_0027insertion-des-fichiers-rendus"></a>
+<a name="SEC259"></a>
+<h2 class="section"> 19.3 Stratégie d'insertion des fichiers rendus </h2>
+
+<p>Enfin, le dialogue de sortie vous permet de choisir le mode d'insertion.  Les
+modes d'insertion sont identiques à ceux du chargement de fichiers.  Dans ce
+cas, si vous choisissez de <b>ne rien insérer</b>, le fichier sera écrit sur le
+disque sans modifier le projet actuel.  Pour les autres stratégies d'insertion,
+assurez-vous d'avoir préparé la timeline afin que la sortie soit insérée au bon
+endroit avant que l'opération de rendu ne soit effectuée.  Voir la section <a href="cinelerra_cv_manual_fr_6.html#SEC97">Le montage</a>.
+Le <b>montage</b> décrit comment faire pour que la sortie soit insérée au bon
+endroit.
+</p>
+<p>Il faut noter que même si vous ne voulez effectuer le rendu que de l'audio ou
+que de la vidéo, une stratégie d'insertion de type <b>coller</b> se comportera
+comme une opération de coller normale, toute région de la timeline sélectionnée
+sera effacée et seules les données rendues seront collées.  Si vous ne rendez
+que de l'audio et que vous avez des pistes vidéo armées, les pistes vidéo
+seront tronquées lorsque l'audio sera collé sur les pistes audio.
+</p>
+<hr size="6">
+<a name="Rendu-par-lots"></a>
+<a name="SEC260"></a>
+<h2 class="section"> 19.4 Rendu par lots </h2>
+
+<p>Si vous voulez effectuer le rendu de nombreux projets vers des fichiers de
+média sans avoir à utiliser de manière répétitive le dialogue de <b>rendu</b>, le
+<b>rendu par lots</b> est la fonction à utiliser.  Dans cette fonction, vous
+indiquerez toutes les EDL dont il faut effectuer le rendu avec les fichiers de
+sortie correspondant.  Cinelerra va alors charger chaque fichier EDL et
+effectuer le rendu automatiquement, sans intervention de l'utilisateur.  Chaque
+EDL et sa sortie associée est appelé <b>lot</b>.  Ceci permet de traiter un très
+gros volume de média et améliore beaucoup la rentabilité d'un ordinateur
+coûteux.
+</p>
+<p>La première chose à faire lors de la préparation d'un rendu par lots est de
+définir les projets dont il faut effectuer le rendu.  Définissez un projet et
+indiquez la région devant être rendue soit en la mettant en surbrillance, soit
+en l'encadrant par les points d'entrée/sortie ou la faisant précéder du point
+d'insertion.  Enregistrez alors le projet sous forme d'EDL.  Définissez de
+cette manière autant de projets que nécessaire.  Le rendu par lots récupère la
+région active du fichier EDL pour le rendu.
+</p>
+<p>Lorsque tous les fichiers EDL sont prêts avec leur région active, sélectionnez
+l'entrée de menu <b>Fichier-&gt;Rendu par lots</b>.  Le dialogue de rendu par lots
+s'affichera alors.  L'interface pour le rendu par lots est un peu plus
+compliquée que pour le rendu d'un seul fichier.
+</p>
+<p>Il faut, avant de lancer une opération de rendu par lots, créer une liste des
+lots.  La table des lots qui apparaît en bas du dialogue de rendu par lots est
+appelé <b>Lots dont il faut effectuer le rendu</b>.  Au-dessus de ce tableau
+figurent les paramètres de configuration pour un lot.
+</p>
+<p>Définissez le <b>chemin de sortie</b>, le <b>format de fichier</b>, l'<b>Audio</b>, la
+<b>Vidéo</b> et le paramètre <b>Créer un nouveau fichier à chaque marque</b> comme
+s'il s'agissait d'un seul fichier.  Ces paramètres ne s'appliquent qu'à un seul
+lot.  En plus des paramètres de rendu habituels, vous devez indiquer le fichier
+EDL source à utiliser pour le lot.  Faites-le en indiquant le <b>chemin vers
+l'EDL</b>.
+</p>
+<p>Si la liste des <b>lots dont il faut effectuer le rendu</b> est vide ou si rien
+n'est en surbrillance, cliquez sur <b>Nouveau</b> pour créer un nouveau lot.  Le
+nouveau lot se verra affecter tous les paramètres que vous venez juste de
+définir.
+</p>
+<p>En pressant plusieurs fois le bouton <b>Nouveau</b>, vous allez créer d'autres
+lots avec les mêmes paramètres.  Mettez en surbrillance un lot pour pouvoir
+modifier sa configuration depuis la partie supérieure de la fenêtre de rendu
+par lots.  Les informations affichées correspondent toujours au lot en
+surbrillance.
+</p>
+<p>Il suffit de cliquer-glisser les lots pour modifier l'ordre avec lequel le
+rendu sera effectué.  Cliquez sur <b>Supprimer</b> pour supprimer définitivement
+le lot en surbrillance.
+</p>
+<p>Il y a dans la liste une colonne qui permet d'activer ou de désactiver un lot.
+De cette manière, des lots peuvent être sautés lors du rendu sans être
+supprimés.  Cliquez sur la case <b>Activé</b> dans la liste pour activer ou
+désactiver un lot.  Si elle est cochée, le lot sera rendu.  Si elle est vide,
+le lot sera sauté.
+</p>
+<p>Les autres colonnes de la liste des lots ne sont là que pour donner des
+informations.
+</p><ul>
+<li> <b>Sortie</b> chemin vers la sortie du lot.
+<a name="IDX125"></a>
+</li><li> <b>EDL</b> EDL source du lot.
+</li><li> <b>Temps écoulé</b> temps ayant été nécessaire pour effectuer le rendu du
+lot s'il est terminé.
+</li></ul>
+
+<p>Pour lancer le rendu en commençant par le premier lot, cliquez sur
+<b>Démarrer</b>.
+</p>
+<p>Lorsque le rendu est en cours, la fenêtre principale affiche l'avancement du
+lot.  Une fois le lot terminé, la colonne <b>Temps écoulé</b> dans la liste des
+lots est mise à jour et le lot suivant est rendu jusqu'à ce que tous les lots
+activés soient rendus.  Le lot en cours de rendu est affiché en rouge.
+</p>
+<p>Pour arrêter le rendu avant que les lots ne soient terminés sans fermer le
+dialogue de rendu par lots, cliquez <b>Arrêter</b>.
+</p>
+<p>Pour arrêter le rendu avant que les lots ne soient terminés en fermant le
+dialogue de rendu, cliquez sur <b>Abandonner</b>.
+</p>
+<p>Pour quitter le dialogue de rendu qu'il y ait ou non un rendu en cours, cliquez
+sur <b>Abandonner</b>.
+</p>
+<hr size="6">
+<a name="La-grappe-de-rendu"></a>
+<a name="SEC261"></a>
+<h2 class="section"> 19.5 La grappe de rendu </h2>
+
+<p>Lorsqu'une interpolation bicubique avec de la HDTV a été réalisée pour la
+première fois dans Cinelerra, le temps nécessaire pour produire la moindre
+sortie devint inacceptable, même sur la machine la plus rapide disponible
+alors, un double Xeon 1,7 GHz.  La grappe de calcul, même dans sa forme la plus
+simple, permit de mettre la HDTV au même niveau que la SD tout en rendant la SD
+plus rapide que le temps réel.
+</p>
+<p>Bien que l'interface de la grappe de calcul ne soit pas spectaculaire, il est
+suffisamment simple à utiliser depuis une suite de montage avec moins d'une
+douzaine de noeuds sans avoir les complications de que vous auriez à configurer
+une grappe de calcul de plusieurs centaines de noeuds.  La grappe de calcul est
+appelée de manière transparente pour toutes les opérations de rendu effectuées
+depuis <b>Fichier-&gt;Rendu</b> une fois qu'elle a été activée dans les préférences.
+</p>
+<p>Cinelerra divise la région choisie de la timeline en un certain nombre de
+tâches qui sont ensuite réparties entre les différents noeuds en fonction de
+l'équilibre de la charge.  Les noeuds traitent les tâches et écrivent leur
+sortie vers des fichiers séparés du système de fichiers.  Les fichiers de
+sortie ne sont pas concaténés.  Il est important que tous les noeuds aient
+accès aux objets sur le même système de fichiers associé au même point de
+montage.
+</p>
+<p>Si un noeud ne peut pas avoir accès à un objet d'entrée, il affichera un
+message d'erreur sur sa console mais ne plantera probablement pas.  S'il ne
+peut pas avoir accès aux objets en sortie, cela arrêtera le rendu.
+</p>
+<p>Il faut noter que, dans le dialogue de rendu, l'option <b>Créer un nouveau
+fichier à chaque marque</b> créera une nouvelle tâche pour la grappe de calcul à
+chaque marque plutôt que de les voir crées par le système d'équilibrage de
+charge.  Si cette option est sélectionnée alors qu'il n'existe aucune marque,
+une seule tâche sera créée.
+</p>
+<p>Une grappe de calcul de Cinelerra est organisée avec un noeud principal et un
+nombre quelconque de noeuds secondaires.  Le noeud principal est l'ordinateur
+sur lequel tourne l'interface graphique.  Les noeuds secondaires se trouvent
+n'importe où sur le réseau et sont lancés en ligne de commande.  On lance un
+noeud secondaire avec la commande <code>cinelerra -d</code>
+</p>
+<p>C'est la configuration la plus simple.  Entrez <code>cinelerra -h</code> pour
+obtenir l'ensemble des options disponibles.  Le numéro de port par défaut peut
+être modifié en passant en paramètre un numéro de port après <samp>`-d'</samp>.
+</p>
+<p>La plupart du temps, vous désirerez aller dans la sortie rendue et ajuster les
+temps sur la timeline.  Mais certains formats de fichiers comme MPEG ne peuvent
+pas être copiés directement.  C'est pour cette raison que les fichiers sont
+laissés sous forme de fichiers séparés.
+</p>
+<p>Vous pouvez les charger en créant de nouvelles pistes et en indiquant
+<b>Ajouter aux pistes existantes</b> dans le dialogue de chargement.  Les fichiers
+qui autorisent la copie directe peuvent être concaténés dans un fichier unique
+en effectuant le rendu dans le même format de fichier, la grappe de calcul
+étant désactivée.  Pour pouvoir effectuer une copie directe, la taille de la
+piste, les dimensions en sortie et les dimensions des objets doivent aussi être
+identiques.
+</p>
+<p>Les fichiers MPEG ou les fichiers qui ne permettent pas la copie directe
+doivent être concaténés avec un utilitaire en ligne de commande.  Les fichiers
+MPEG peuvent être concaténés avec la commande <b>cat</b>.
+</p>
+<p>La configuration de la grappe de calcul est décrite dans le chapitre sur la
+configuration.  Voir la section <a href="cinelerra_cv_manual_fr_3.html#SEC55">La grappe de calcul</a>.  Traditionnellement, les noeuds
+secondaires lisent et écrivent les données vers un système de fichiers par
+l'intermédiaire du réseau et ils n'ont donc pas besoin de disque dur.
+</p>
+<p>Idéalement, tous les noeuds d'une grappe de calculs devraient avoir les mêmes
+caractéristiques de CPU.  Cinelerra effectue l'équilibrage de la charge sur la
+base du premier arrivé, premier servi.  Si le dernier segment est affecté au
+noeud le plus lent, tous les noeuds plus rapides attendront que le noeud le
+plus lent ait terminé alors qu'ils auraient pu en effectuer le rendu plus
+rapidement.
+</p>
+<hr size="6">
+<a name="Rendu-en-ligne-de-commandes"></a>
+<a name="SEC262"></a>
+<h2 class="section"> 19.6 Rendu en ligne de commandes </h2>
+
+<p>Le rendu en ligne de commandes est une manière de charger le jeu actuel de
+tâches de rendu par lots et de les traiter sans interface graphique.  C'est
+utile si vous avez un système X qui plante souvent ou si vous désirez effectuer
+le rendu par l'intermédiaire d'une liaison réseau à faible débit.  Vous pouvez
+avoir accès à un supercalculateur en Inde mais être coincé en Amérique,
+peut-être exilé.  Une interface en ligne de commande est idéale pour
+solutionner ce problème.
+</p>
+<p>Pour effectuer le rendu depuis la ligne de commandes, lancez d'abord Cinelerra
+en mode graphique.  Allez dans le menu <b> Fichier-&gt;Rendu par lots</b>.  Créez les
+lots dont vous désirez effectuer le rendu dans la fenêtre de rendu par lot et
+fermez la fenêtre.  Ceci enregistre les lots dans un fichier.  Configurez les
+attributs voulus pour la grappe de calcul dans <b>Configuration-&gt;Préférences</b>
+et quittez Cinelerra.  Ces paramètres sont utilisés lorsque le rendu en ligne
+de commandes est utilisé par la suite.
+</p>
+<p>Sur la ligne de commandes, entrez : <code>cinelerra -r</code>
+</p>
+<p>pour traiter le lot de travaux en cours sans interface graphique.  La
+configuration de tous les paramètres pour cette opération est compliquée.
+C'est pourquoi la ligne de commande s'arrête si un des quelconques fichiers de
+sortie existe déjà.
+</p>
+<p>Il existe d'autres paramètres pour indiquer des fichiers de remplacement pour
+les préférences et les lots.  Une tentative pour utiliser autre chose que les
+valeurs par défaut est assez risquée et n'a donc pas été testée.
+</p>
+<hr size="6">
+<a name="Rendu-de-vid_00e9os-pour-internet"></a>
+<a name="SEC263"></a>
+<h2 class="section"> 19.7 Rendu de vidéos pour internet </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC264">19.7.1 Encoder une vidéo au format MPEG4 pour internet</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC265">19.7.2 Encoder une vidéo au format FLV pour internet</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p>Si vous désirez réencoder votre fichier rendu avec mencoder, nous vous
+recommandons d'en effectuer son rendu sous forme de fichier Quicktime4linux, et
+d'ensuite encoder ce fichier dans les formats MPEG4 ou FLV.  Le fichier
+Quicktime4linux rendu depuis Cinelerra doit avoir les propriétés suivantes :
+</p>
+<ul>
+<li> Options Audio : Complément à deux 16bits (PCM)
+</li><li> Options Vidéo : DV
+</li></ul>
+
+<hr size="6">
+<a name="Encoder-une-vid_00e9o-au-format-MPEG4-pour-internet"></a>
+<a name="SEC264"></a>
+<h3 class="subsection"> 19.7.1 Encoder une vidéo au format MPEG4 pour internet </h3>
+
+<p>Pour obtenir la meilleure qualité possible, vous devez encoder votre fichier
+Quicktime4linux en deux passes.
+</p>
+<p><b>Première passe :</b>
+</p><pre class="verbatim">mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=1 \
+-vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
+</pre><p><b>Seconde passe :</b>
+</p><pre class="verbatim">mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=2 \
+-vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
+</pre><p>N'oubliez pas de changer la dimension de la vidéo encodées, en utilisant
+l'option <samp>`-vf scale='</samp>.<br>
+</p>
+<p>Voici d'autres lignes de commandes.  Elles procurent des fichiers vidéos dont le poids
+est d'environ 13 Mb pour 3 minutes.<br>
+<b>Première passe :</b>
+</p><pre class="verbatim">mencoder -oac pcm -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 \
+-ovc lavc -lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:\
+vcelim=7:lumi_mask=0.05:dark_mask=0.01:scplx_mask=0.3:naq:v4mv:mbd=2:\
+trell:cmp=3:subcmp=3:mbcmp=3:aspect=4/3:sc_threshold=1000000000:\
+vmax_b_frames=2:vb_strategy=1:dia=3:predia=3:cbp:mv0:preme=2:\
+last_pred=3:vpass=1:cgop -ofps 25 -of avi movie.mov -o /dev/null\
+-ffourcc DIVX
+</pre><p><b>Seconde pass :</b>
+</p><pre class="verbatim">mencoder -srate 32000 -oac mp3lame -lameopts cbr:br=${audio_bitrate}:\
+aq=0 -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 -ovc lavc\
+-lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:vcelim=7:\
+lumi_mask=0.05:dark_mask=0.01:scplx_mask=0.3:naq:v4mv:mbd=2:trell:\
+cmp=3:subcmp=3:mbcmp=3:aspect=4/3:sc_threshold=1000000000:\
+vmax_b_frames=2:dia=3:predia=3:cbp:mv0:preme=2:last_pred=3:vpass=3:\
+cgop -ofps 25 -of avi movie.mov -o movie.avi -ffourcc DIVX
+</pre>
+<p>Vous devrez probablement adapter ces lignes de commandes si l'image de la vidéo
+originale comprend beaucoup de bruit; renseignez-vous sur les filtres de
+pré-traitement de mencoder.  Les paramètres *_mask sont très important lors
+d'un encodage à un faible débit binaire.<br>
+</p>
+<p>Si vous voulez que votre fichier vidéo soit affiché correctement dans un
+visualisateur de vidéo très connu sous Windows, vous devez savoir que :
+</p><ul>
+<li> l'information de ratio d'aspect contenue dans l'entête du fichier AVI ne
+sera pas prise en compte par ce lecteur.  C'est pourquoi vous devez
+redimenssionner vous-même l'image au bon ratio d'aspect.  La largeur et la
+hauteur doivent être des multiples de 16.  Voici les résolutions recommandées
+pour des vidéos en 4/3 au format PAL : 384:288, 448:336, 512:384 or
+704:528.
+</li><li> ce visualisateur de vidéo fonctionnant sous Windows va perdre la
+synchronisation audio/vidéo si un débit binaire variable (VBR) est utilisé pour
+l'audio, à la place d'un débit binaire constant (CBR).
+</li><li> Le paramètre <samp>`-ffourcc'</samp> est nécessaire afin que le codec vidéo
+soit reconnu en tant que Divx.
+</li></ul>
+
+<hr size="6">
+<a name="Encoder-une-vid_00e9o-au-format-FLV-pour-internet"></a>
+<a name="SEC265"></a>
+<h3 class="subsection"> 19.7.2 Encoder une vidéo au format FLV pour internet </h3>
+
+<p>Le poids des fichiers FLV (FLash Video) est très petit et les seuls composants
+qui soient nécessaires pour les afficher est un navigateur internet et un
+greffon flash version 7 ou supérieur installé.  Ce format est vraiment utile
+pour les personnes qui désirent partager leur vidéo avec une large audience sur
+internet.
+</p>
+<p><b>Première passe :</b>
+</p><pre class="verbatim">ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 1 -ar 22050 movie.flv
+</pre><p><b>Seconde passe :</b>
+</p><pre class="verbatim">ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 2 -ar 22050 movie.flv
+</pre>
+<p>Faites attention à l'extension du nom de fichier de sortie.  Ffmpeg l'utilise
+pour déterminer le format de sortie.  La fréquence d'échantillonnage de l'audio
+à utiliser est de 22050 et le paramètre <samp>`-ar'</samp> doit être utilisé pour
+permettre à la vidéo d'être correctement encodée.  Ffmpeg n'écrit pas de
+méta-données dans le fichier flv.  La durée doit être écrite dans ces
+meta-données afin que certains visualisateur flash puissent afficher une barre
+de progression de la lecture.  FLVTool2
+(<a href="http://www.inlet-media.de/flvtool2">http://www.inlet-media.de/flvtool2</a>) peut être utilisé afin d'insérer
+cette information :
+</p><pre class="verbatim">cat fichier_entree.flv | flvtool2 -U stdin fichier_sortie.flv
+</pre>
+<hr size="6">
+<a name="Charte-de-compatibilit_00e9-de-Quicktime-pour-GNU_002fLinux"></a>
+<a name="SEC266"></a>
+<h2 class="section"> 19.8 Charte de compatibilité de Quicktime pour GNU/Linux </h2>
+
+<p>Scott Frase a écrit une charte de compatibilité de Quicktime pour GNU/Linux.  Elle
+comprend une liste exhaustive des tous les schémas de compression Quicktime
+disponibles et de leur compatibilité avec Cinelerra, Mplayer et autres
+logiciels de lecture de de médias.  Ce document comporte deux parties
+principales, une est basée sur un projet formaté selon une résolution HDV et
+une autre basée sur un projet dans une résolution au format DV.
+</p>
+<p>Il se trouve disponible ici :<br>
+<a href="http://content.serveftp.net/video/qtcompatibility.ods">http://content.serveftp.net/video/qtcompatibility.ods</a>
+</p>
+<p>Quelques notes intéressantes :
+</p><ul>
+<li> Mplayer se comporte mieux avec la résolution vidéo DV, plus faible
+</li><li> La compatibilité de Cinelerra avec des fichiers rendus depuis un projet
+DV n'est pas très différente de sa compatibilité avec des fichiers rendus
+depuis un projet HDV.
+</li><li> Elle comporte une charte de comparaison de compatibilité DV/HDV
+mplayer/Cinelerra
+</li></ul>
+
+<hr size="6">
+<a name="Faire-un-DVD"></a>
+<a name="SEC267"></a>
+<h2 class="section"> 19.9 Faire un DVD </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC268">19.9.1 Rendu vers mpeg2</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC269">19.9.2 Faire un menu de DVD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC270">19.9.3 Créer un DVD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC271">19.9.4 Graver un DVD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Rendu-vers-mpeg2"></a>
+<a name="SEC268"></a>
+<h3 class="subsection"> 19.9.1 Rendu vers mpeg2 </h3>
+
+<p>Voici une méthode pour exporter une vidéo mpeg2 et réaliser un DVD ne
+comportant qu'un seul chapitre.  Cette méthode vous permet de définir
+précisément les options d'encodage que vous désirez et produit un fichier mpeg2
+100% compatible avec tous les lecteurs de DVD de salon.
+</p>
+<p>Le programme mplex, qui fait partie de <b>mjpegtools</b> doit être installé.  Le
+paquet mjpegtools fait partie de la distribution hvirtual et l'utilitaire mplex
+peut en être extrait.
+</p>
+<p>Assurez-vous d'abord que vous avez correctement défini votre format de projet
+Cinelerra avant d'effectuer le rendu de votre vidéo (menu
+<b>Configuration-&gt;Format</b>).  En PAL, il d'agit de 720x576 à 25 images/seconde,
+et en NTSC, il s'agit de 720x480 à 29,97 images par seconde.
+</p>
+<ol>
+<li> Créez un script <tt>`~/cine_render.sh'</tt>
+</li><li> Copiez dans le fichier <tt>`~/cine_render.sh file'</tt> les lignes
+suivantes :<br>
+<code>#/bin/bash</code><br>
+<code>mpeg2enc -v 0 -K tmpgenc -r 16 -4 1 -2 1 -D 10 -E 10 -g 15 -G 15 -q 6
+-b 8600 -f 8 -o $1</code>
+</li><li> Donnez les droits d'exécution à ce fichier :
+<code>chmod 777 ~/cine_render.sh</code>
+</li><li> Lancez Cinelerra, et sélectionnez la partie de la vidéo dont vous désirez
+effectuer le rendu à l'aide des points [ et ]
+</li><li> Pressez <kbd>MAJ-R</kbd>
+</li><li> Sélectionnez le format de fichier <b>YUV4MPEG Stream</b>
+</li><li> Désélectionnez <b>Rendu des pistes audio</b> et sélectionnez <b>Rendu des
+pistes vidéo</b>
+</li><li> Cliquez sur la clé des options
+</li><li> Dans la fenêtre qui s'ouvre alors, indiquez le nom du fichier <tt>`m2v'</tt>
+que vous désirez créer.  Ce fichier ne comportera que de la vidéo.
+</li><li> Cliquez sur <b>Use pipe</b> et écrivez cette commande :
+<code>/home/&lt;your_user&gt;/cine_render.sh %</code>
+</li><li> Cliquez sur OK pour fermer la seconde fenêtre et de nouveau OK pour
+effectuer le rendu de votre fichier <tt>`m2v'</tt>
+</li><li> Lorsque le rendu du fichier m2v est terminé, ouvrez de nouveau la fenêtre
+de rendu, et effectuez le rendu audio d'un fichier AC3 à 224 kbits
+</li><li> Enfin, combinez la vidéo et l'audio avec cette commande :<br>
+<code>mplex -f 8 votre_fichier_video.m2v votre_fichier_audio.ac3 -o
+votre_fichier_audio_et_video.mpeg</code><br>
+Si vous obtenez des erreurs lors de l'appel à mplex, augmentez la valeur du
+paramètre de quantification (option <samp>`-q'</samp>, voyez ci-dessous).
+</li></ol>
+
+<p>Vous pouvez modifier les paramètres de mpeg2enc si vous le désirez.  Consultez
+la page de manuel de mpeg2enc.  Quelques détails concernant les paramètres :
+</p><ul class="toc">
+<li> <samp>`-b 8600'</samp> : c'est le débit binaire maximum de votre fichier
+<tt>`m2v'</tt> (il ne comprend pas le débit binaire audio).  Nous vous recommandons
+de ne pas augmenter cette valeur car vous pourriez avoir des erreur en
+multiplexant l'audio et la vidéo.
+</li><li> <samp>`-q 6'</samp> : c'est le paramètre de quantification.  Si vous le
+réduisez (n'allez pas en-dessous de 3), la qualité s'améliore.  Mais le débit
+binaire augmente.  Il est recommandé de conserver le débit binaire moyen obtenu
+(il est affiché lorsque vous effectuez le multiplexage des fichiers audio et
+vidéo) aux alentours de 10% en-dessous du débit binaire définit avec l'option
+<samp>`-b'</samp>.
+</li><li> <samp>`-K tmpgenc'</samp> : utilise les matrices d'encodage de TMPGEnc.  Cela
+réduit le débit binaire moyen d'environ 10% comparé aux tables par défaut.
+Lorsque la vidéo utilisée en entrée est de très bonne qualité, on peut se
+passer de cette option.
+</li></ul>
+
+<p>Si votre matériau est affecté de bruit (support Hi8 analogique par exemple),
+vous pouvez ajouter quelques commandes de mjpegtools dans la lignes de
+commandes écrite dans <tt>`~/cine_render.sh'</tt> :
+</p><ul>
+<li> <code>y4mshift</code> et <code>y4mscaler</code> peuvent être utilisés pour
+supprimer les bords bruités autour de la vidéo.  Par exemple, ces commandes,
+ajoutées au début de la ligne de commande dans le <tt>`cine_render.sh'</tt>
+suppriment les bordures noires qui entourent une vidéo Hi8 :<br>
+<code>yuvscaler -v 0 -I ACTIVE_700x560+8+8 | y4mshift -n 2 |</code>
+</li><li> <code>yuvdenoise</code> et <code>yuvmedianfilter</code> peuvent aider à
+supprimer le bruit.  Example :<br>
+<code>yuvdenoise -F | yuvmedianfilter -T 3 |</code><br>
+La suppression de bruit est une tâche complexe, et les options indiquées
+ci-dessus sont juste un exemple.  Veuillez lire la documentation de mjpegtools
+et vous abonner à sa liste de diffusion pour davantage s'informations.
+</li></ul>
+
+<hr size="6">
+<a name="Faire-un-menu-de-DVD"></a>
+<a name="SEC269"></a>
+<h3 class="subsection"> 19.9.2 Faire un menu de DVD </h3>
+
+<p>Un menu de DVD est composé :
+</p>
+<ul>
+<li> d'un arrière-plan (image fixe ou vidéo)
+</li><li> de boutons
+</li><li> de son/musique
+</li></ul>
+
+<p>Vous pouvez bâtir un menu avec une interface graphique telles que QDVDAuthor,
+dvdstyler, dvdwizard ou tovid.  Cependant, l'utilisation de ces interfaces
+n'est pas parfaite ou est pour le moment limitée.
+</p>
+<p>Si vous préférez utiliser une interface graphique, nous vous recommandons
+d'essayer tovid :<br>
+<a href="http://tovid.wikia.com/wiki/Main_Page">http://tovid.wikia.com/wiki/Main_Page</a><br>
+QDVDAuthor contenait énormément de bugs il y a quelque temps, mais son auteur
+en a corrigé certains, ce qui rend QDVDAuthor plus utilisable.
+</p>
+<p>La méthode que nous expliquons ci-dessous est plus compliquée que l'utilisation
+d'une interface graphique, mais cependant :
+</p>
+<ul>
+<li> elle produit des DVD lisibles sur tous les lecteurs de salon
+</li><li> elle n'est pas sujette à des bogues
+</li><li> elle vous fera gagner beaucoup de temps car tout ce que vous aurez à
+faire pour créer un nouveau DVD sera d'éditer des fichiers de texte
+</li></ul>
+
+<p>Voici les étapes nécessaires à la création de votre menu de DVD :
+</p>
+<ul>
+<li> créez l'arrière-plan du menu avec Cinelerra
+</li><li> ajoutez les boutons en créant des images PNG
+</li><li> combinez le menu et les boutons à l'aide de spumux
+</li></ul>
+
+<p>Supposons que vous désiriez créer un menu avec un arrière-plan animé.  Lancez
+Cinelerra et créez un projet contenant l'arrière-plan du menu.  Vous pouvez
+ajouter une musique si vous le désirez.  Faites attention au fait que le menu
+sera joué en boucle.
+</p>
+<p>Pour dessiner les boutons, vous avez deux possibilités :
+</p>
+<ul>
+<li> affichez-les dans Cinelerra.  De cette manière, il vous sera possible de
+faire de boutons animés, comme des vignettes vidéo pour chacune des parties de
+votre vidéo.
+</li><li> ne pas dessiner les boutons dans in Cinelerra.  Vous les ajouterez plus
+tard, depuis des images PNG ajoutées au fichier de menu mpeg2.  Ceci est la
+méthode la plus simple mais elle ne vous permet pas d'afficher des boutons
+animés.
+</li></ul>
+
+<p>Effectuez le rendu de cette vidéo en m2v et ac3 en utilisant la méthode
+<code>cine_render.sh</code> expliquée plus haut.  Combinez l'audio et la vidéo en
+utilisant mplex comme vous le feriez avec une vidéo normale.
+</p>
+<p>Vous obtenez un fichier mpeg2 qui contient l'arrière-plan du menu, avec
+quelques boutons affichés si vous les avez ajoutés dans Cinelerra.
+</p>
+<p>Nous devons utiliser spumux pour définir la position de chacun des boutons dans
+le fichier mpeg2.  Si vous n'avez pas dessiné les boutons dans Cinelerra, vous
+pourrez les ajouter avec spumux.
+</p>
+<p>Spumux est un utilitaire en ligne de commande qui prend 2 paramètres :
+</p>
+<ul>
+<li> un fichier XML décrivant où se trouvent les boutons
+</li><li> le nom du fichier mpeg2 (celui dont vous avez effectué le rendu pour le
+menu)
+</li></ul>
+
+<p>Voici un exemple de fichier XML spumux :
+</p><pre class="verbatim">&lt;subpictures&gt;
+ &lt;stream&gt;
+  &lt;spu start=&quot;00:00:00.0&quot; image=&quot;buttons_normal.png&quot; highlight=
+  &quot;buttons_highlight.png&quot; select=&quot;buttons_select.png&quot;&gt;
+   &lt;button name=&quot;1&quot; x0=&quot;94 &quot; y0=&quot;234 &quot; x1=&quot;253 &quot; y1=&quot;278&quot;
+   down=&quot;2&quot; right=&quot;4&quot; /&gt;
+   &lt;button name=&quot;2&quot; x0=&quot;63 &quot; y0=&quot;287 &quot; x1=&quot;379 &quot; y1=&quot;331&quot; up=&quot;1&quot;
+   down=&quot;3&quot; right=&quot;5&quot; /&gt;
+  &lt;/spu&gt;
+ &lt;/stream&gt;
+&lt;/subpictures&gt;
+</pre>
+<ul>
+<li> <b>image=&quot;buttons_normal.png&quot;</b> cette image png contient les boutons tels
+qu'ils apparaîtront lorsqu'ils ne sont pas sélectionnés ni mis en surbrillance.
+</li><li> <b>highlight=&quot;buttons_highlight.png&quot;</b> cette image png contient les
+boutons dans leur état de surbrillance.
+</li><li> <b>select=&quot;buttons_select.png</b> cette image png contient les boutons dans
+leur état sélectionné.
+</li></ul>
+
+<p>Si vous avez déjà fait les boutons depuis Cinelerra, vous devez indiquer ici
+des images PNG vides (100% transparentes).
+</p>
+<p>Les images PNG utilisées dans spumux doivent :
+</p>
+<ul>
+<li> contenir un <b>canal alpha</b> (c'est-à-dire gérer la transparence)
+</li><li> avoir <b>4 couleurs indexées</b>.  Vous pouvez facilement convertir une
+image sous un format à 4 couleurs indexées en utilisant Gimp.
+</li></ul>
+
+<p>Il y a une ligne par bouton.  Chaque ligne comporte les coordonnées du bouton,
+chaque bouton ayant une forme rectangulaire :
+</p>
+<ul>
+<li> <b>x0, y0</b> : angle supérieur gauche
+</li><li> <b>x1, y1</b> : angle inférieur droit
+</li></ul>
+
+<p>Vous devez aussi définir quel bouton actionner lors de l'utilisation des
+boutons haut, bas, gauche et droite de la télécommande du lecteur de DVD.
+Voici un exemple :
+</p>
+<pre class="verbatim">&lt;button name=&quot;3&quot; ...coordinates... up=&quot;1&quot; down=&quot;5&quot; left=&quot;2&quot; right=&quot;4&quot; /&gt;
+</pre>
+<p>Lorsque le bouton 3 est sélectionné, si la touche &quot;haut&quot; est pressée sur la
+télécommande, alors le bouton 1 sera mis en surbrillance.  Si la touche
+&quot;droite&quot; est pressée sur la télécommande, alors le bouton 4 sera mis en
+surbrillance.
+</p>
+<p>Lorsque vous avez terminé l'édition de votre fichier XML spumux, vous devez
+entrer cette commande :<br>
+<code>spumux menu.xml &lt; menu.mpeg &gt; menu_with_buttons.mpeg</code><br>
+Ceci créera le fichier <tt>`menu_with_buttons.mpeg'</tt>.  C'est un fichier mpeg2
+avec les boutons.
+</p>
+<hr size="6">
+<a name="Cr_00e9er-un-DVD"></a>
+<a name="SEC270"></a>
+<h3 class="subsection"> 19.9.3 Créer un DVD </h3>
+
+<p>Après avoir effectué le rendu de vos fichiers vidéo mpeg2, et après avoir
+préparé un menu à l'aide de spumux, vous devez créer le DVD avec dvdauthor.
+</p>
+<p>Dvdauthor utilise des fichiers XML pour décrire la structure du DVD.  Sa
+syntaxe est rigoureuse, et vous devrez faire très attention à la syntaxe du
+fichier .xml.  Dans le cas contraire, le risque est que le DVD soit lisible sur
+certains lecteurs de salon, mais pas sur tous.
+</p>
+<p>Pour vous aider dans l'utilisation de dvdauthor, voyons quelques exemples de
+fichiers XML.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/chemin/vers/le/dossier/qui/contient/le/dvd&quot;&gt;
+    &lt;vmgm /&gt;
+    &lt;titleset&gt;
+        &lt;titles&gt;
+            &lt;pgc&gt;
+                &lt;vob file=&quot;/the/mpeg/file.mpeg&quot; /&gt;
+		&lt;post&gt;
+                    jump chapter 1;
+                &lt;/post&gt;
+            &lt;/pgc&gt;
+        &lt;/titles&gt;
+    &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p>C'est un fichier XML très simple pour dvdauthor.  Il n'y a pas de menu, le
+fichier vidéo <tt>`/the/mpeg/file.mpeg'</tt> sera joué dès que vous insérerez le
+DVD dans le lecteur.
+</p>
+<p>La commande entre les balises &lt;post&gt; signifie que la vidéo doit être lue en
+boucle.  Quand la platine DVD arrive à la fin de la vidéo, elle se repositionne
+au premier chapitre de la vidéo (que dvdauthor assume être le début de la vidéo
+puisqu'aucun chapitre n'a été défini).
+</p>
+<p>Pour créer le DVD, entrez juste la commande suivante :<br>
+<code>dvdauthor -x simple_example.xml</code>
+</p>
+<p>Maintenant, voyons un exemple plus complexe.  Lorsque le DVD est inséré, un
+menu est affiché et vous avez le choix de la lecture entre 4 vidéos.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/chemin/vers/le/dossier/qui/contient/le/dvd&quot; jumppad=&quot;yes&quot; &gt;
+&lt;vmgm&gt;
+ &lt;fpc&gt; jump menu 1; &lt;/fpc&gt;
+  &lt;menus&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc entry=&quot;title&quot; &gt;
+    &lt;vob file=&quot;menu.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;button name=&quot;1&quot; &gt; { g3=1; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;2&quot; &gt; { g3=2; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;3&quot; &gt; { g3=3; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;4&quot; &gt; { g3=4; jump titleset 1 menu entry root; } &lt;/button&gt;
+     &lt;post&gt; { jump cell 1; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+ &lt;/vmgm&gt;
+ &lt;titleset&gt;
+  &lt;menus&gt;
+   &lt;pgc entry=&quot;root&quot; &gt;
+    &lt;pre&gt; { if ( g3 gt 0 )  {
+		if ( g3 eq 1 ) { g3=0; jump title 1  chapter 1; }
+		if ( g3 eq 2 ) { g3=0; jump title 1  chapter 3; }
+		if ( g3 eq 3 ) { g3=0; jump title 1  chapter 5; }
+		if ( g3 eq 4 ) { g3=0; jump title 1  chapter 7; }
+		jump vmgm menu entry title;
+		}
+	} &lt;/pre&gt;
+    &lt;post&gt; { jump vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+  &lt;titles&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc pause=&quot;0&quot; &gt;
+    &lt;vob file=&quot;video_1.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_2.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_3.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_4.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;post&gt; { call vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/titles&gt;
+ &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p>Le fichier <tt>`blackvideo.mpg'</tt> est utilisé pour ajouter deux secondes
+d'affichage noir entre chaque vidéo.  Voici la manière de le créer :<br>
+<code>convert -size 720x576 xc:black -depth 8 blackframe.ppm</code><br>
+<code>dd if=/dev/zero bs=4 count=960000 | toolame -b 128 -s 48 /dev/stdin
+emptyaudio.mpa</code><br>
+<code>ppmtoy4m -S 420mpeg2 -n 50 -F 25:1 -r blackframe.ppm | mpeg2enc -a 2
+-n p -f 8 -o blackvideo.mpv</code><br>
+<code>mplex -f 8 -o blackvideo.mpg blackvideo.mpv emptyaudio.mpa</code>
+</p>
+<hr size="6">
+<a name="Graver-un-DVD"></a>
+<a name="SEC271"></a>
+<h3 class="subsection"> 19.9.4 Graver un DVD </h3>
+
+<p>Lorsque vous avez terminé la création du DVD, vous obtiendrez dans le dossier
+de destination les répertoires suivants : <tt>`AUDIO_TS'</tt> et
+<tt>`VIDEO_TS'</tt>.  Pour tester votre DVD avant de le graver, allez dans ce
+dossier et exécutez :<br>
+<code>xine dvd:`pwd`</code>
+</p>
+<p>Si votre DVD est lu sans problème sur votre ordinateur, c'est le moment de le
+graver.  Lorsque vous vous trouvez dans le dossier de qui contient <tt>`AUDIO_TS'</tt>
+et <tt>`VIDEO_TS'</tt>, lancez cette commande : (ajustez pour votre graveur,
+par exemple /dev/dvdrw)<br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd -dvd-video -V
+VIDEO ./ &amp;&amp; eject /dev/dvd</code>
+</p>
+<p>Si vous avez de nombreuses copies à réaliser, vous pouvez d'abord créer un
+fichier master .iso en utilisant cette commande :<br>
+<code>nice -n -20 mkisofs -dvd-video -V VIDEO -o ../dvd.iso .</code><br>
+Ce fichier <tt>`../dvd.iso'</tt> peut être gravé en utilisant cette commande :
+<br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd=../dvd.iso &amp;&amp;
+eject /dev/cdrom</code>
+</p>
+<p>Nous vous recommandons de ne pas effectuer de gravure à une vitesse supérieure
+à 4x.  Utilisez uniquement des DVD-R de bonne qualité.
+</p>
+<p>Pour tester votre DVD sur une platine de salon sans avoir à gaspiller plusieurs
+DVD-R, vous pouvez graver sur des DVD-RW.  Tout d'abord, formattez votre DVD-RW
+en utilisant cette commande :<br>
+<code>dvd+rw-format -lead-out /dev/dvd</code><br>
+Vous pouvez alors graver votre DVD-RW en utilisant les commandes qui ont été
+indiquées plus haut.
+</p>
+<hr size="6">
+<a name="Utiliser-le-rendu-en-t_00e2che-de-fond"></a>
+<a name="SEC272"></a>
+<h2 class="section"> 19.10 Utiliser le rendu en tâche de fond </h2>
+
+<p>Le rendu en tâche de fond permet à des effets très lents d'être joués en temps
+réel rapidement après avoir été déposé sur la timeline.  Il effectue en
+permanence le rendu vers une sortie temporaire.  Si la grappe de calcul est
+active, le rendu en tâche de fond l'utilise en permanence.  De cette manière,
+n'importe quelle taille de vidéo peut être affichée en temps réel en créant
+simplement un réseau suffisamment rapide avec suffisamment de noeuds
+</p>
+<p>Le rendu en tâche de fond est activé depuis
+<b>Configuration-&gt;Préférences-&gt;Performances</b>.  Il possède une fonction
+interactive : <b>Configuration-&gt;Point de départ du rendu en tâche de fond</b>.
+Ceci définit le point à partir duquel se fait le rendu en tâche de fond.  S'il
+y a de la vidéo, une barre rouge apparaît dans la barre temporelle qui indique
+ce qui a été rendu en tâche de fond.
+</p>
+<p>Il est souvent utile d'insérer un effet ou une transition et de sélectionner
+ensuite <b>Configuration-&gt;Rendu en tâche de fond</b> juste avant l'effet pour le
+prévisualiser à la vitesse normale.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_20.html#SEC273" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

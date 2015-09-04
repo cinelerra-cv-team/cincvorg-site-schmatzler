@@ -1,0 +1,1156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 6. La fenêtre de programme</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 6. La fenêtre de programme">
+<meta name="keywords" content="Manuel de Cinelerra CV: 6. La fenêtre de programme">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_5.html#SEC63" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_7.html#SEC108" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="La-fen_00eatre-de-programme"></a>
+<a name="SEC88"></a>
+<h1 class="chapter"> 6. La fenêtre de programme </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC89">6.1 Naviguer dans la fenêtre de programme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC97">6.2 Le montage</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                           déplacer le média dans le temps.
+</td></tr>
+</table>
+
+<p>Elle contient la timeline et c'est le point d'entrée pour toutes les opérations
+lancées depuis le menu.  La timeline consiste en une pile verticale de pistes
+avec une représentation horizontale du temps.  Ceci définit la sortie des
+opérations de rendu et ce qui sera enregistré lorsque vous enregistrez des
+fichiers.  A la gauche de la timeline se trouve la boîte à boutons (patchbay)
+qui contrôle les options affectant chacune des pistes.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>La timeline</b>
+</p>
+<p>Dans le menu <b>Fenêtre</b>, vous trouverez des options qui affectent les fenêtres
+principales.  L'option <b>Positions par défaut</b> permet de repositionner les
+fenêtres dans une configuration de montage à 4 fenêtres.  Sur les systèmes à
+deux écrans, l'opération de positionnement par défaut ne place les fenêtres que
+sur un seul écran.
+</p>
+<hr size="6">
+<a name="Naviguer-dans-la-fen_00eatre-de-programme"></a>
+<a name="SEC89"></a>
+<h2 class="section"> 6.1 Naviguer dans la fenêtre de programme </h2>
+
+<p>La fenêtre de programme comporte de nombreuses fonctionnalités pour naviguer
+sur la timeline et l'afficher comme elle est structurée en mémoire : les pistes
+sont empilées verticalement et se déroulent horizontalement dans le temps.  La
+barre de défilement horizontal vous permet de balayer le temps.  La barre de
+défilement vertical vous permet de faire défiler les différentes pistes.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC90">6.1.1 Les pistes vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC91">6.1.2 Les pistes audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC92">6.1.3 La navigation sur les pistes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC93">6.1.4 Le menu déroulant de la piste</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC94">6.1.5 Le point d'insertion</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC95">6.1.6 Les points d'entrée/sortie</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC96">6.1.7 Utiliser les marques dans la fenêtre de programme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Les-pistes-vid_00e9o"></a>
+<a name="SEC90"></a>
+<h3 class="subsection"> 6.1.1 Les pistes vidéo </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_video.png" alt="manual_images_intl/track_video">
+</p><p align="center"> <b>Une piste video</b>
+</p>
+<p>Les pistes vidéo représentent la succession de vos séquences vidéo, comme si
+vous aviez placé des pellicules photographiques bout à bout sur une table.  Les
+images individuelles que vous voyiez sur la piste sont un extrait de ce qui est
+situé dans la vidéo à instant donné.
+</p>
+<hr size="6">
+<a name="Les-pistes-audio"></a>
+<a name="SEC91"></a>
+<h3 class="subsection"> 6.1.2 Les pistes audio </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_audio.png" alt="manual_images_intl/track_audio">
+</p><p align="center"> <b>Une piste audio</b>
+</p>
+<p>Les pistes audio représentent votre média sonore par une forme d'onde audio.
+En poursuivant l'analogie avec le film, c'est comme si vous pouviez &quot;voir&quot; la
+bande magnétique horizontalement sur votre table.<br>
+Vous pouvez ajuster le grossissement horizontal et vertical des pistes en
+utilisant la <b>la barre du panneau de zoom</b>.<br>
+Les commandes situés à la gauche des pistes sont appelées la <b>boîte à
+boutons</b>.  La <b>boîte à boutons</b> est utilisée pour contrôler le comportement
+des pistes.
+</p>
+<hr size="6">
+<a name="La-navigation-sur-les-pistes"></a>
+<a name="SEC92"></a>
+<h3 class="subsection"> 6.1.3 La navigation sur les pistes </h3>
+
+<p>La navigation sur les pistes demande à choisir une piste spécifique (audio ou
+vidéo) et se déplacer jusqu'à un point précis de la piste.  La fenêtre de
+programme comporte de nombreuses fonctionnalités de navigation et affiche la
+timeline telle qu'elle est structurée en mémoire.
+</p>
+<p>La barre de défilement horizontal vous permet de balayer le temps.
+</p>
+<p>La barre de défilement vertical vous permet de parcourir les pistes.
+</p>
+<p>En plus des outils graphiques, vous pouvez aussi utiliser le clavier pour
+naviguer.  En règle générale, la navigation au clavier est plus rapide que la
+navigation à la souris.  Utilisez <kbd>PAGE PREC</kbd> et <kbd>PAGE SUIV</kbd> pour faire
+défiler les pistes vers le haut et vers le bas.
+</p>
+<p>Vous aurez souvent besoin de vous déplacer au-delà des limites de la timeline,
+mais les barres de défilement ne vous le permettent pas.  A la place, utilisez
+la flèche DROITE pour vous déplacer après la fin de la timeline.
+</p>
+<p>Les touches de <kbd>DEBUT</kbd> et de <kbd>FIN</kbd> vous permettent de vous déplacer
+instantanément au début ou à la fin de la timeline.  Dans le mode <b>I-beam</b>,
+maintenir la touche <kbd>MAJ</kbd> enfoncée en pressant la touche <kbd>DEBUT</kbd> ou
+<kbd>FIN</kbd> vous permettra de sélectionner tout ce qui se trouve entre le point
+d'insertion et la touche pressée.
+</p>
+<p>Sous la timeline, vous trouverez le panneau de zoom.  Le panneau de zoom
+comporte la <b>valeur de zoom</b>, l'<b>amplitude</b>, le <b>zoom de piste</b>, et le
+<b>zoom de courbe</b>.  En plus des barres de défilement, ces valeurs sont les
+outils principaux pour positionner la timeline.
+</p>
+<p align="center"> <img src=".././manual_images_fr/zoompanel.png" alt="manual_images_fr/zoompanel">
+</p>
+<p>Modifier la <b>valeur de zoom</b> change l'unité de temps affichée sur la
+timeline.  Cela permet de visualiser votre média depuis un affichage image par
+image jusqu'à un affichage complet de la timeline.  Plus cette valeur est
+élevée, et plus vous verrez d'images à l'écran.  <b>Si votre souris possède une
+molette et qu'elle fonctionne avec X11, plutôt que les boutons de réglage,
+utilisez la molette pour zoomer et dézoomer</b>.
+</p>
+<a name="IDX82"></a>
+<p>L'<b>amplitude</b> n'affecte que l'audio.  Elle détermine la taille de la forme
+d'onde lorsqu'elle est dessinée.
+</p>
+<a name="IDX83"></a>
+<p>Le <b>zoom de piste</b> affecte toutes les pistes.  Il détermine la hauteur de
+chaque piste.  Si vous changez la valeur du zoom de piste, le zoom d'amplitude
+permet d'effectuer une compensation afin que les formes d'onde audio
+apparaissent proportionnelles.
+</p>
+<a name="IDX84"></a>
+<p>Le <b>zoom de courbe</b> affecte les courbes de toutes les pistes.  Il détermine
+l'amplitude et le décalage des courbes.  Les boutons de réglage règlent
+l'amplitude de la courbe, mais la seule façon de modifier le décalage de courbe
+est d'utiliser le <img src=".././manual_images_intl/fit_curves.png" alt="manual_images_intl/fit_curves"> bouton <b>remplir les
+courbes</b>.
+</p>
+<p>Utilisez les flèches <kbd>GAUCHE</kbd> et <kbd>DROITE</kbd> pour vous déplacer dans le
+temps avec de petits incréments.  Vous aurez souvent besoin de vous déplacer
+au-delà de la fin de la timeline, mais les boutons de défilement ne vous le
+permetteront pas.  A leur place, utilisez la flèche <kbd>DROITE</kbd> afin d'aller
+au-delà de l'extrémité de la timeline.
+</p>
+<p>Les flèches <kbd>HAUT</kbd> et <kbd>BAS</kbd> permettent de modifier la valeur de zoom
+par puissances de deux.
+</p>
+<p><kbd>CTRL-HAUT</kbd> et <kbd>CTRL-BAS</kbd> permettent de modifier le zoom d'amplitude.
+</p>
+<p><kbd>CTRL-PAGE PREC</kbd> et <kbd>CTRL-PAGE SUIV</kbd> permettent de modifier le zoom de
+piste.
+</p>
+<p><kbd>ALT-HAUT</kbd> et <kbd>ALT-BAS</kbd> permettent de modifier le zoom de courbe.
+</p>
+<hr size="6">
+<a name="Le-menu-d_00e9roulant-de-la-piste"></a>
+<a name="SEC93"></a>
+<h3 class="subsection"> 6.1.4 Le menu déroulant de la piste </h3>
+
+<p>Chaque piste possède un menu déroulant.  Pour activer le <b>menu déroulant de
+la piste</b>, faites un clic droit sur la piste.  Le menu déroulant affecte la
+piste, qu'elle soit armée sur la <b>boîte à boutons</b> ou non.  Le menu de piste
+contient certaines options :
+</p><ul>
+<li> Attacher un effet
+</li><li> Déplacer vers le bas - déplace la piste sélectionnée vers le haut de la
+pile.
+</li><li> Déplacer vers le haut - déplace la piste sélectionnée vers le bas de la
+pile.
+</li><li> Supprimer la piste - supprime la piste du programme
+</li><li> Ajouter une piste - ajoute une piste du même type de média (audio/vidéo)
+que celle qui est sélectionnée.
+</li><li> Redimensionner la piste - redimensionne la piste
+</li><li> Adapter aux dimensions de la sortie - fait correspondre les dimensions
+des pistes à celle de la sortie
+</li></ul>
+
+<hr size="6">
+<a name="Le-point-d_0027insertion"></a>
+<a name="SEC94"></a>
+<h3 class="subsection"> 6.1.5 Le point d'insertion </h3>
+
+<p>La première fois que vous lancerez Cinelerra, vous pourrez voir un point
+d'insertion clignotant dans la fenêtre de programme.  Semblable au curseur d'un
+traitement de texte, le point d'insertion marque l'emplacement de la timeline
+où la prochaine opération du programme commencera.  C'est aussi le point de
+départ de toutes les opérations de lecture.  Lors du rendu, il définit la
+région de la timeline dont il faut effectuer le rendu.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>Le point d'insertion sur la fenêtre principale du programme,</b>
+</p><p align="center"> <b>indiqué par la fine ligne verticale au point 00:00.500</b>
+</p>
+<p>Normalement, le point d'insertion se déplace en cliquant sur la barre
+temporelle.  Toute région de la barre temporelle qui n'est pas obscurcie par
+des marques ou par les points d'entrée/sortie est une cible possible pour
+repositionner le point d'insertion.
+</p>
+<p align="center"> <img src=".././manual_images_intl/main_timebar.png" alt="manual_images_intl/main_timebar">
+</p><p align="center"> <b>La barre temporelle principale</b>
+</p>
+<p>En fonction du mode d'opération, le point d'insertion peut être déplacé en
+cliquant sur la timeline elle-même.  Le point d'insertion possède deux modes de
+fonctionnement :
+</p><ul>
+<li> Mode glisser-déposer
+</li><li> Mode couper-coller
+</li></ul>
+
+<p>Le mode de fonctionnement est déterminé en choisissant la flèche ou le i-beam
+dans la barre d'outils.
+</p>
+<p><a name="r943_005fr944_005fediting_005fmodes"></a><b>Note:</b> Les révisions 943 et 944 de Cinelerra CV (versions SVN allant du 19
+au 21 octobre 2006) ne possèdent pas d'icônes de sélection des modes.  Les
+modes &quot;glisser-déposer&quot; et &quot;copier coller&quot; ne font, dans ces révisions, plus
+qu'un.  La touche <kbd>MAJ</kbd> permet de passer de l'un à l'autre de ces modes.
+C'est le cas de l'ebuild Gentoo media-video/cinelerra-cvs-20061020.
+</p>
+<p align="center"> <img src=".././manual_images_intl/editing_mode.png" alt="manual_images_intl/editing_mode">
+</p><p align="center"> <b>Les boutons de mode de montage</b>
+</p>
+<a name="IDX85"></a>
+<p>Si la flèche est en surbrillance, le <b>mode glisser-déposer</b> est actif.  Dans
+le mode glisser-déposer, cliquer sur la timeline ne repositionne pas le point
+d'insertion.  En fait, cela sélectionne l'ensemble du plan.  Un glisser sur la
+timeline repositionne le plan, le collant à la limite d'un autre plan.  C'est
+particulièrement utile pour modifier l'ordre des listes de lecture audio et
+pour déplacer des effets.
+</p>
+<a name="IDX86"></a>
+<p>Si le i-beam est en surbrillance, le <b>mode couper-coller</b> est actif.  Dans le
+mode couper-coller, cliquer sur la timeline repositionne le point d'insertion.
+Un glisser sur la timeline met la région en surbrillance.  La région en
+surbrillance sera la région à reproduire lors de la prochaine opération de
+lecture, la plage à rendre lors de la prochaine opération de rendu et la région
+affectée par les opérations de couper-coller.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_highlight.png" alt="manual_images_intl/program_highlight">
+</p><p align="center"> <b>Pistes avec une zone en surbrillance, affichée à l'intérieur de la zone verte</b>
+</p>
+<p><b>MAJ-clic</b> sur le timeline étend la région en surbrillance.
+</p>
+<p>Un <b>double-clic</b> sur la timeline permet de sélectionner l'ensemble du plan
+sur lequel se trouve le curseur.
+</p>
+<p>Lorsqu'on déplace le point d'insertion ou qu'on sélectionne des régions, les
+positions sont alignées soit sur les images soit sur les échantillons.  Lorsque
+vous montez de la vidéo, vous choisirez d'effectuer un alignement sur les
+images alors que vous choisirez un alignement sur des échantillons si vous
+montez de l'audio.  Indiquez votre préférence en définissant
+<b>Configuration-&gt;Aligner le curseur sur les images</b>.
+</p>
+<p>Si la région en surbrillance est la région affectée par les opérations
+couper-coller, comment effectuer un couper et coller en <b>mode
+glisser-déposer</b> ? Dans ce cas, il faut placer les <b>points d'entrée et de
+sortie</b> de manière à définir la région affectée.
+</p>
+<hr size="6">
+<a name="Les-points-d_0027entr_00e9e_002fsortie"></a>
+<a name="SEC95"></a>
+<h3 class="subsection"> 6.1.6 Les points d'entrée/sortie </h3>
+
+<p>Dans les deux mode de montage, vous pouvez définir un point d'entrée et un point de sortie.
+Les points d'entrée/sortie définissent la région affectée.  Dans le mode
+glisser-déposer, c'est la seule manière de définir une région affectée.  A la
+fois dans le mode glisser-déposer et dans le mode couper-coller, la région en
+surbrillance a préséance sur les points d'entrée/sortie.  Si une zone en
+surbrillance a été définie ainsi que les points d'entrée/sortie, la zone en
+surbrillance est affectée par les opérations de montage et les points
+d'entrée/sortie sont ignorés.  S'il n'y a pas de région en surbrillance, les
+points d'entrée/sortie sont utilisés.
+</p>
+<p>Normalement, les points d'entrée/sortie n'affectent pas la région qui est lue.
+Les points d'entrée/sortie déterminent la région qui sera lue uniquement si
+vous pressez la touche <kbd>CTRL</kbd> en même temps que vous lancez la commande de
+lecture.
+</p>
+<p>Pour placer les points d'entrée/sortie, allez sur la barre temporelle et placez
+le point d'insertion quelque part.  Sélectionnez le
+<img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>bouton de point d'entrée</b>.
+Allez à un endroit situé après le point d'entrée et cliquez sur le
+<img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>bouton de point de sortie</b>.
+</p>
+<p align="center"> <img src=".././manual_images_intl/inout_points.png" alt="manual_images_intl/inout_points">
+</p><p align="center"> <b>Barre temporelle avec points d'entée/sortie définis</b>.
+</p>
+<p>Si vous sélectionnez soit le point d'entrée, soit le point de sortie, le point
+d'insertion va se déplacer à cet emplacement.  Après avoir sélectionné un point
+d'entrée, si vous cliquez de nouveau le <b>bouton de point d'entrée</b>, le point
+d'entrée sera effacé.  Après avoir sélectionné un point de sortie, si vous
+cliquez le <b>bouton de point de sortie</b>, le point de sortie sera effacé.
+</p>
+<p><b>Astuce:</b> Pour rapidement vous débarasser des points d'entrée et de sortie,
+sans vous préoccuper de l'endroit où ils se trouvent, ou bien s'ils sont
+présents ou non, faites tout simplement un double-clic sur les boutons [ et ].
+Le premier clic va définir au point d'insertion un nouveau point ou
+repositionner celui qui existait déja;  le second clic va le supprimer.
+</p>
+<p>Si vous sélectionnez une région n'importe où ailleurs alors que les points
+d'entrée/sortie existent, les points existants seront repositionnés lorsque
+vous cliquerez les boutons des points d'entrée/sortie.
+</p>
+<p><b>MAJ-clic</b> sur un point d'entrée/sortie étend la zone en surbrillance jusqu'à
+ce point.  Si une région était déja en surbrillance, cette région sera étendue
+jusqu'à ce point d'entrée/sortie.
+</p>
+<p>A la place de la barre de boutons, vous pouvez utiliser les touches de
+raccourcis <kbd>[</kbd> et <kbd>]</kbd> pour insérer ou supprimer les points
+d'entrée/sortie.
+</p>
+<p>A la fois dans le mode copier-coller et dans le mode glisser-déposer, les
+points d'entrée/sortie on préséance sur la zone en surbrillance.  S'il existe à
+la fois une région en surbrillance et les points d'entrée-sortie, la région en
+surbrillance affecte la lecture alors que les points d'entrée-sortie affectent
+les opérations de montage.  Afin d'éviter toute confusion, il est préférable
+d'utiliser soit la surbrillance, soit les points d'entrée-sortie mais pas les
+deux simultanément.
+</p>
+<p>Le point d'insertion et les points d'entrée/sortie vous permettent de définir
+la région affectée, mais ils ne vous permettent pas de vous déplacer très
+facilement à des endroits précis de la timeline.  Les marques sont faites pour
+cet usage.
+</p>
+<hr size="6">
+<a name="Utiliser-les-marques-dans-la-fen_00eatre-de-programme"></a>
+<a name="SEC96"></a>
+<h3 class="subsection"> 6.1.7 Utiliser les marques dans la fenêtre de programme </h3>
+
+<p>Les marques sont une manière simple de définir des emplacements précis de la
+timeline où vous désirez vous déplacer.  Lorsque vous placez point d'insertion
+quelque part et que vous cliquez <img src=".././manual_images_intl/label_button.png" alt="manual_images_intl/label_button"> le
+<b>bouton de marque</b>, une nouvelle marque est placée sur la timeline.
+</p>
+<p align="center"> <img src=".././manual_images_intl/timebar_label.png" alt="manual_images_intl/timebar_label">
+</p><p align="center"> <b>Barre temporelle avec une marque</b>
+</p>
+<p>Indépendamment des valeurs de zoom, en cliquant sur une marque, vous
+positionnez le point d'insertion exactement où elle se trouve.  Vous effacerez
+une marque en la sélectionnant et en cliquant sur le bouton de marque.
+</p>
+<p><b>MAJ-clic</b> sur une marque met en surbrillance la région située entre cette
+marque et le point d'insertion.  Si une région était déja en surbrillance, cela
+étend cette région en surbrillance jusqu'à la marque.
+</p>
+<p>Un <b>double-clic</b> entre deux marques sur la barre temporelle met en surbrillance la région située
+entre les deux marques.
+</p>
+<p>Presser la touche <kbd>l</kbd> a le même effet que cliquer sur le bouton de marque.
+</p>
+<p>Si vous cliquez le bouton de marque lorsqu'une région est en surbrillance,
+l'état des deux marques placées à chaque extrémité de la zone en surbrillance
+est inversé.  Cependant, si une extrémité comporte déjà une marque, la marque en question
+sera supprimée.
+</p>
+<p>Les marques peuvent repositionner le point d'insertion lorsqu'elles sont
+sélectionnées mais elles peuvent aussi être parcourues avec
+<img src=".././manual_images_intl/label_traversal.png" alt="manual_images_intl/label_traversal"> les <b>boutons de parcours des
+marques</b>.  Lorsqu'une marque est hors de vue, les boutons de parcours des
+marques repositionnent la timeline de façon à ce que la marque soit visible.
+Il y a aussi des raccourcis clavier pour le parcours des marques.
+</p>
+<p><b>CTRL-GAUCHE</b> repositionne le point d'insertion à la marque précédente.
+</p>
+<p><b>CTRL-DROITE</b> repositionne le point d'insertion à la marque suivante.
+</p>
+<p>Avec le parcours des marques, vous pouvez vous déplacer rapidement en avant et
+en arrière sur la timeline mais vous pouvez aussi sélectionner des régions.
+</p>
+<p><b>MAJ-CTRL-GAUCHE</b> étend la région en surbrillance jusqu'à la marque
+précédente.
+</p>
+<p><b>MAJ-CTRL-DROITE</b> étend la région en surbrillance jusqu'à la marque
+suivante.
+</p>
+<p>Cliquer manuellement sur le bouton de marque, ou utiliser la touche <kbd>l</kbd>, de
+manière répétitive pour supprimer une série de marques peut être fastidieux.
+Pour supprimer un ensemble de marques, mettez tout d'abord en surbrillance une
+région.  Ensuite, utilisez la fonction <b>Editer-&gt;Supprimer les marques</b>.  Si
+les points d'entrée/sortie existent, les marques entre les points d'entrée et
+de sortie seront supprimées et la région en surbrillance ignorée.
+</p>
+<p><b>Editer les marques ou empêcher leur déplacement :</b><br>
+Uniquement dans le mode de montage par <b>Copier-Coller</b>, en validant <b>Editer
+les marques</b> dans le menu de configuration, ou en désactivant
+<img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked"> le bouton <b>Empêcher le
+déplacement des marques</b> sur la barre d'outils de la fenêtre principale, les
+marques seront coupées, copiées et collées en même temps que la région
+sélectionnée de la première piste armée.<br>
+De la même manière, si une zone sélectionnée d'une ressource est ajoutée depuis
+la visionneuse vers la timeline à une position qui précède les marques, ces
+marques seront poussées vers la droite de la barre temporelle de la durée de la
+zone sélectionnée.<br>
+Pour éviter que les marques se déplacent sur la barre temporelle,
+désactivez simplement l'option <b>Editer les marques</b> ou activez le
+<img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked"> bouton <b>Empêcher le
+déplacement des marques</b>.<br>
+Dans le mode de montage par <b>glisser-déposer</b>, les marques seront toujours
+verrouillées à la barre temporelle, même si l'option <b>Editer les marques</b>
+est activée.
+</p>
+<hr size="6">
+<a name="Le-montage"></a>
+<a name="SEC97"></a>
+<h2 class="section"> 6.2 Le montage </h2>
+
+<p>Le montage s'effectue à la fois dans le domaine du temps et dans le domaine de
+la piste.  Comme la timeline est constituée d'une pile de pistes, vous devez
+vous préoccuper, en plus de l'instant où un média déterminé doit apparaître sur
+la piste, de la manière de classer et de créer les pistes.
+</p>
+<p>Dans le domaine du temps, Cinelerra offre de nombreuses manière d'aborder le
+processus de montage.  Les trois méthodes principales sont le montage à deux
+écrans, le montage par glisser-déposer, et le montage par couper-coller.
+</p>
+<p>Lors du montage, Cinelerra utilise un certain nombre de concepts qui
+s'appliquent à chacune des méthodes.  La <b>timeline</b> est le lieu où sont
+représentées toutes les décisions de montage.  C'est une pile de pistes au
+centre de la fenêtre principale.  On peut la faire défiler vers le haut, le
+bas, la gauche et la droite à l'aide des barres de défilement qui se trouvent
+sur sa droite et en bas.  On peut aussi la faire défiler vers le haut ou vers
+le bas à l'aide de la molette de la souris.
+</p>
+<p>La <b>région active</b> est la plage de temps qui est affectée par les commandes
+de montage sur la timeline.  La région active est d'abord déterminée par la
+présence des points d'entrée/sortie sur la timeline.  S'ils n'existent pas, la
+région en surbrillance est utilisée.  Enfin, s'il n'y a pas de zone en
+surbrillance, le point d'insertion est utilisé comme point de départ de la
+région active.  Certaines commandes, comme le <b>rendu</b>, traitent tout l'espace
+situé à droite du point d'insertion comme étant la région active, alors que
+d'autres considèrent que la région active a une longueur nulle s'il n'y a pas
+de point de fin de défini pour la région active.
+</p>
+<p>Enfin, les décisions de montage n'affectent jamais le matériau source.  C'est
+un <b>montage non destructif</b>, il est devenu populaire avec l'audio parce que
+c'était beaucoup plus rapide que si vous aviez à copier tous les fichiers de
+média affectés par une opération de montage.  Le montage n'affecte que des
+pointeurs vers le matériau source, ce qui fait que si vous voulez avoir un
+fichier de média qui représente vos décisions de montage à la fin de votre
+session de montage, vous devez en effectuer le <b>rendu</b>.  Voir la section <a href="cinelerra_cv_manual_fr_19.html#SEC256">Le rendu de fichiers</a>.
+</p>
+<p>Chaque piste de la timeline comporte un jeu d'attributs sur sa gauche.  Le plus
+important est l'attribut de <b>piste armée</b>.
+</p>
+<p>Voir la section <a href="cinelerra_cv_manual_fr_23.html#SEC339">Raccourcis d'édition</a>, pour les informations concernant les raccourcis
+d'édition.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC98">6.2.1 La boîte à boutons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">           	Activer certaines fonctionnalités sur certaines pistes
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC99">6.2.2 Décaler les pistes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        	 	Déplacer horizontalement une piste entière
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC100">6.2.3 Panoramique des pistes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        	Modifier les canaux audio de sortie
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC101">6.2.4 Panoramique automatique des pistes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  Panoramique des pistes selon des dispositions courantes de haut-parleurs
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC102">6.2.5 Cartographie audio standard</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> 	Réaliser un panoramique qui fonctionne sur d'autre lecteur.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC103">6.2.6 Manipuler les pistes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    		Déplacer d'un endroit à un autre une piste entière
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC104">6.2.7 Le montage à deux écrans</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     	Utiliser deux denêtre vidéo pour le montage
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC105">6.2.8 Le montage par glisser-déposer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  	Glisser les objets à monter
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC106">6.2.9 Le montage par copier-coller</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  	Editer le média comme du texte
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC107">6.2.10 Ajustement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               		Modifier les points d'entrée/sortie
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="La-bo_00eete-_00e0-boutons"></a>
+<a name="SEC98"></a>
+<h3 class="subsection"> 6.2.1 La boîte à boutons </h3>
+
+<p>A gauche de la timeline se trouve une région affectueusement appelée patchbay,
+la boîte à boutons.  La boîte à boutons active certaines fonctionnalités
+spécifiques à chaque piste.  Toutes les pistes ont une zone de texte permettant
+de les nommer.
+</p>
+<p>Toutes les pistes ont un bouton permettant de les <b>déplier</b>
+<img src=".././manual_images_intl/expandpatch_checked.png" alt="manual_images_intl/expandpatch_checked"> afin d'afficher davantage
+d'options et pour afficher les effets sur la piste.  Cliquez sur ce bouton pour
+déplier ou replier la piste.  S'il pointe vers le côté, la piste est repliée.
+S'il pointe vers le bas, la piste est dépliée.  Les effets existants
+apparaissent en-dessous du média pour la piste.
+</p>
+<p>Toutes les pistes ont la ligne de boutons suivante correspondant à différentes
+fonctions.
+</p>
+<p align="center"> <img src=".././manual_images_fr/track_attributes.png" alt="manual_images_fr/track_attributes">
+</p><p align="center"> <b>Attributs de la piste</b>
+</p>
+<p>Si le bouton est coloré, il est actif.  Si le bouton est d'une couleur
+identique à l'arrière-plan de la plupart des fenêtres, il est désactivé.
+Cliquez sur le bouton pour activer ou désactiver la fonction.  L'utilisation de
+la souris accélère la configuration de plusieurs pistes en même temps.
+</p>
+<p>Cliquer sur un attribut et le glisser sur les pistes adjacentes permet de
+copier cet attribut sur toutes ces pistes.
+</p>
+<p>Maintenez enfoncée la touche <kbd>MAJ</kbd> en cliquant sur un attribut de piste
+pour activer l'attribut pour la piste en cours et basculer l'état de cet
+attribut pour toutes les autres pistes.
+</p>
+<p>Maintenez enfoncée la touche <kbd>MAJ</kbd> en cliquant sur un attribut.  Cliquez
+jusqu'à ce que toutes les pistes exceptée celle qui est sélectionnée soient
+désactivées.  Glissez ensuite le curseur par-dessus la piste adjacente pour
+activer l'attribut pour la piste adjacente.
+</p>
+<p>Autres attributs affectant la sortie de la piste :
+</p>
+<a name="IDX87"></a>
+<ul>
+<li> <b>Jouer la piste</b><br>
+Détermine si la piste sera jouée ou pas.  S'il est désactivé, la piste ne sera
+pas rendue.  Cependant, si la piste est chaînée avec une autre piste
+quelconque, les autres pistes exécuteront tous les effets dans la piste
+chaînée, indépendamment de l'état de ce bouton.
+
+<a name="IDX88"></a>
+</li><li> <b>Armer la piste</b><br>
+Détermine si la piste est armée ou pas.  Seules les <b>pistes armées</b> sont
+affectées par les opérations de montage.  Assurez-vous que vous avez
+suffisamment de pistes de destination armées lorsque vous collez ou insérez du
+matériau ou certaines pistes du matériau ne seront pas traitées.<br>
+En plus de restreindre les opérations de montage, les pistes armées, en
+association avec la région active, déterminent l'emplacement où le matériau
+sera inséré lors du chargement de fichiers.  Si les fichiers sont chargés avec
+une stratégie d'insertion qui n'efface pas le projet en cours, les pistes
+armées seront utilisées en tant que pistes de destination.<br>
+Pressez la touche <kbd>TAB</kbd> alors que le curseur se trouve n'importe où sur une
+piste pour modifier l'état armé de la piste.<br>
+Pressez <kbd>MAJ-TAB</kbd> alors que le curseur se trouve sur une piste pour
+inverser l'état armé de chacune des autres pistes.
+
+<a name="IDX89"></a>
+</li><li> <b>Grouper les réglages</b><br>
+Permet de faire se déplacer le curseur de niveau audio de la piste de façon à
+ce qu'il suive le mouvement du curseur d'une autre piste.  Un curseur ne peut
+être groupé que si la piste est <b>armée</b>.  Ceci est normalement utilisé pour
+ajuster les niveaux audio de toutes les pistes simultanément.  Le regroupage
+permet aussi au paramètre de <b>décalage</b> d'être appliqué de manière synchrone
+sur toutes les pistes regroupées.
+
+<a name="IDX90"></a>
+</li><li> <b>Dessiner le média</b><br>
+Détermine si des vignettes ou formes d'onde doivent être affichées sur la
+piste.  Par défaut, certains formats de fichiers se chargent avec ce paramètre
+désactivé alors que d'autres se chargent avec ce paramètre activé.  Ceci dépend
+du temps nécessaire à l'affichage des vignettes en fonction du format de
+fichier.  Activez-le simplement si vous désirez voir les vignettes quel que
+soit le format de fichier.
+
+<a name="IDX91"></a>
+</li><li> <b>Muet</b><br>
+Fait abandonner la sortie lorsque la piste est complètement rendue.  Ceci se
+produit que la piste soit <b>jouable</b> ou pas.  Si la piste fait partie d'une
+chaîne d'effets, la sortie de l'effet est surchargée même si elle est reroutée
+vers une autre piste.  Rendre une piste muette est utilisé pour éviter à la
+piste d'effet en chaîne de surcharger la sortie de la piste source.
+
+<a name="IDX92"></a>
+</li><li> <b>Réglage de niveau</b><br>
+Toutes les pistes ont un curseur de réglage de niveau, mais les unités de
+chacun des réglages dépendent du type, audio ou vidéo, de la piste.  Cliquez et
+glissez le curseur pour diminuer/augmenter le niveau de l'audio/vidéo de cette
+piste.  Si elle est regroupée avec d'autres pistes du même type de média, et
+que l'option <b>armée</b> est active, les autres curseurs suivront.  Pour centrer
+le curseur sur 0, maintenez touche <kbd>Majuscule</kbd> et glissez le curseur.
+</li></ul>
+
+<hr size="6">
+<a name="D_00e9caler-les-pistes"></a>
+<a name="SEC99"></a>
+<h3 class="subsection"> 6.2.2 Décaler les pistes </h3>
+
+<p>Chaque piste possède, dans la boîte à boutons, une boîte de texte dans laquelle
+on peut inscrire une valeur du décalage.  Vous pouvez avoir besoin de déplier
+la piste pour la voir.  Voici des vues de la boîte à boutons lorsqu'elle est
+dépliée.
+</p>
+<p align="center"> <img src=".././manual_images_fr/apatches.png" alt="manual_images_fr/apatches">
+</p><p align="center"> <b>Panoramique et décalage d'une piste audio</b>
+</p>
+<p align="center"> <img src=".././manual_images_fr/vpatches.png" alt="manual_images_fr/vpatches">
+</p><p align="center"> <b>Mode d'overlay et décalage d'une piste vidéo</b>
+</p>
+<p>Le décalage est la valeur dont la piste est décalée vers la gauche ou vers la
+droite lors de la lecture.  La piste n'est pas affichée décalée sur la timeline
+mais elle est décalée lorsqu'elle est jouée.  Ceci est utile pour synchroniser
+de l'audio avec de la vidéo, pour créer de la fausse stéréo, ou pour compenser
+un effet qui décale le temps, tout ça sans avoir à effectuer d'opération de
+montage.
+</p>
+<p>Entrez simplement la durée de décalage pour obtenir instantanément un décalage
+de la piste.  La piste sera jouée plus tard si la valeur entrée est négative.
+Elle sera jouée plus tôt si cette valeur est positive.  Les unités de décalage
+sont soit des <b>secondes</b>, soit les les unités natives de la piste.
+Choisissez les unités par un <b>clic droit</b> dans la boîte de texte de décalage
+et utilisez le menu contextuel.
+</p>
+<p>Les paramètres de décalage sont regroupés avec le bouton de <b>regroupement des
+réglages de niveau</b> et le bouton d'<b>armement</b> des pistes.
+</p>
+<p>Utilisez la molette de la souris sur la boîte de texte de décalage pour
+l'incrémenter ou le décrémenter.
+</p>
+<hr size="6">
+<a name="Panoramique-des-pistes"></a>
+<a name="SEC100"></a>
+<h3 class="subsection"> 6.2.3 Panoramique des pistes </h3>
+
+<p>Les pistes audio ont une boîte de panoramique dans leur boîte à boutons.  Une
+piste audio doit être dépliée pour que la boîte de panoramique soit visible.
+La boîte de panoramique est affichée ici.
+</p>
+<p align="center"> <img src=".././manual_images_fr/apatches.png" alt="manual_images_fr/apatches">
+</p><p align="center"> <b>Panoramique et décalage d'une piste</b>
+</p>
+<p>Placez le pointeur dans la boîte de panoramique et cliquez-glissez pour
+repositionner la sortie audio dans la disposition des haut-parleurs.  La
+puissance sonore de chacun des haut-parleurs est indiquée lors de l'opération
+de glisser.  La boîte de panoramique utilise un algorithme spécial afin de
+permettre à l'audio d'être focalisée vers un seul haut-parleur ou d'être
+distribuée vers les haut-parleurs les plus proches lorsque plus de 2
+haut-parleurs sont utilisés.
+</p>
+<hr size="6">
+<a name="Panoramique-automatique-des-pistes"></a>
+<a name="SEC101"></a>
+<h3 class="subsection"> 6.2.4 Panoramique automatique des pistes </h3>
+
+<p>Un certain nombre de fonctions pratiques sont fournies qui permettent la
+configuration automatique du panoramique selon des standards habituels.  Elles
+se trouvent dans le menu <b>Audio</b>.  Ces fonctions n'affectent que les pistes
+audio qui ont <b>enregistrement</b> activé.
+</p>
+<ul>
+<li> <b>Audio-&gt;Correspondance 1 vers 1</b><br>
+Ceci fait correspondre chaque piste à son propre canal et recommence au début
+lorsque tous les canaux ont été affectés.  C'est surtout utile pour faire
+correspondre 2 pistes de 2 canaux avec de la stéréo et pour faire correspondre
+6 pistes de 6 canaux à une carte son de 6 canaux.
+
+</li><li> <b>Audio-&gt;Correspondance 5.1 vers 2</b><br>
+Ceci fait correspondre 6 pistes à 2 canaux.  Le projet doit avoir 2 canaux
+lorsqu'on utilise cette fonction.  Aller à <b>Configuration-&gt;Format...</b> pour
+définir le nombre de canaux de sortie à 2.  Ceci surtout utile pour faire du
+mixage d'audio 5.1 vers de la stéréo.
+</li></ul>
+
+<hr size="6">
+<a name="Cartographie-audio-standard"></a>
+<a name="SEC102"></a>
+<h3 class="subsection"> 6.2.5 Cartographie audio standard </h3>
+
+<p>Bien que Cinelerra vous permette de faire correspondre n'importe quelle piste
+audio à n'importe quel haut-parleur, il existe des correspondances standard que
+vous pouvez utiliser afin d'être certain que le média pourra être lu ailleurs.
+De plus, la plupart des encodeurs ont besoin que les pistes audio correspondent
+à des numéros de hauts-parleurs standards ou ils ne fonctionneront pas.
+</p>
+<a name="IDX93"></a>
+<a name="IDX94"></a>
+<p>Dans l'élément graphique <b>position du canal</b>, Voir la section <a href="cinelerra_cv_manual_fr_4.html#SEC58">Attributs du projet</a>, les
+canaux sont numérotés afin de correspondre aux pistes de sortie vers lesquelles
+ils sont rendus.  Pour de la stéréo, la source du canal 1 doit être la piste de
+gauche et la source du canal 2 doit être la piste de droite.
+</p>
+<p>Pour le son 5.1 &quot;surround&quot;, les sources pour les 6 canaux doivent être, dans
+l'ordre, le centre, l'avant-gauche, l'avant-droit, l'arrière-gauche,
+l'arrière-droit et les effets basses fréquences.  Si les pistes de droite ne
+correspondent pas aux hauts-parleurs de droite, la plupart des encodeurs audio
+n'encoderont pas l'information de droite, s'ils encodent quelque chose.  La
+piste des effets basses fréquences, plus particulièrement, ne peut pas contenir
+dans la plupart des cas de hautes fréquences.
+</p>
+<hr size="6">
+<a name="Manipuler-les-pistes"></a>
+<a name="SEC103"></a>
+<h3 class="subsection"> 6.2.6 Manipuler les pistes </h3>
+
+<p>Dans Cinelerra, les pistes peuvent contenir soit de l'audio, soit de la vidéo.
+Il n'y a pas de désignation particulière pour les pistes autre que le type de
+média qu'elles contiennent.  Lorsque vous créez un nouveau projet, il comporte
+un certain nombre de pistes par défaut.  Vous pouvez toujours ajouter ou
+supprimer des pistes par la suite depuis les menus.  Le menu <b>Pistes</b>
+comporte des options permettant de manipuler simultanément plusieurs pistes.
+Chaque piste elle-même comporte un menu déroulant qui affecte une piste.
+</p>
+<p>Affichez le menu déroulant en vous déplaçant sur une piste et en faisant un
+clic-droit.  Le menu déroulant affecte la piste qu'elle soit armée ou non.<br>
+<a name="IDX95"></a>
+<a name="IDX96"></a>
+<b>Déplacer vers le haut</b> et <b>déplacer vers le bas</b> déplace la piste vers le
+haut ou vers le bas dans la pile.  <b>Supprimer la piste</b> supprime la piste.
+</p>
+<p>Les opérations depuis le menu des <b>Pistes</b> n'affectent que les pistes qui
+sont armées :
+</p><ul>
+<li> <b>Déplacer les pistes vers le haut</b> et <b>Déplacer les pistes vers le
+bas</b> décalent toutes les pistes armées vers le haut ou vers le bas dans la
+pile.
+<a name="IDX97"></a>
+<a name="IDX98"></a>
+</li><li> <b>Supprimer les pistes</b> supprime les pistes armées.
+</li><li> <b>Supprimer la dernière piste</b> efface la dernière piste, qu'elle soit
+armée ou non.
+Maintenir la touche <b>d</b> permet d'effacer rapidement toutes les pistes.
+<a name="IDX99"></a>
+<a name="IDX100"></a>
+</li><li> <b>Concaténer les pistes</b> est plus compliqué.  Il prend chaque piste
+<b>jouable</b> et la concatène à la fin de la première <b>piste armée</b>.  S'il y a
+deux pistes armées suivie de deux pistes jouables, l'opération de concaténation
+place les deux pistes jouables après les deux pistes armées.  S'il y a trois
+piste jouables, deux pistes sont placées après les pistes armées et une
+troisième piste est placée à la fin de la première piste armée.  Les pistes de
+destination sont rebouclées jusqu'à ce que toutes les pistes soient
+concaténées.
+</li></ul>
+
+<p>Enfin, vous pouvez créer de nouvelles pistes.  Les menu <b>Audio</b> et <b>Vidéo</b>
+comportent chacun une option permettant d'ajouter une piste de leur type
+spécifique.  Dans le cas de l'audio, la nouvelle piste est placée en bas de la
+timeline et le canal de sortie de la piste audio est incrémenté de un.  Dans le
+cas de la vidéo, la nouvelle piste est placée en haut de la timeline.  De cette
+manière, la vidéo se trouve dans un ordre naturel de composition.  Les
+nouvelles pistes vidéo sont surchargées au-dessus des anciennes pistes.
+</p>
+<hr size="6">
+<a name="Le-montage-_00e0-deux-_00e9crans"></a>
+<a name="SEC104"></a>
+<h3 class="subsection"> 6.2.7 Le montage à deux écrans </h3>
+
+<p>C'est la manière la plus rapide de réaliser un montage à partir de fichiers de
+films.  L'idée consiste à visualiser le fichier de film dans une fenêtre et de
+visualiser le programme dans une autre fenêtre.  Des parties du film sont
+définies dans la fenêtre de la visionneuse et transférées à la fin du programme dans
+la fenêtre de programme.
+</p>
+<p>La manière de commencer une session de montage à deux écrans est de charger des
+ressources.  Depuis <b>fichier-&gt;Charger des fichiers</b>, chargez des vidéos avec
+la stratégie d'insertion <b>Créer de nouvelles ressources uniquement</b>.  De cette manière,
+la timeline demeure inchangée alors que les nouvelles ressources sont créées.
+Allez dans la fenêtre des ressources et choisissez le dossier <b>Media</b>.  Les
+ressources qui viennent d'être chargées devraient s'y trouver.  Double-cliquez sur une
+ressource ou bien glissez-la de la partie média de la fenêtre vers la fenêtre de la visionneuse.
+</p>
+<p>Il doit y avoir suffisamment de pistes armées sur la timeline pour pouvoir y
+placer les coupes désirées du matériau source (généralement une piste vidéo et deux pistes audio).  Si ce n'est pas le cas, créez
+de nouvelles pistes et armez-les.
+</p>
+<p>Dans la visionneuse, définissez un clip depuis votre film :
+</p>
+<ul>
+<li> Définissez le point de début avec le
+<img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>bouton de point d'entrée</b>.
+</li><li> Déplacez-vous à la fin du clip que vous désirez utiliser.
+</li><li> Définissez le point de fin avec le
+<img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>bouton de point de sortie</b>
+</li></ul>
+
+<p>Les deux points devraient apparaître sur la barre temporelle et définir un
+clip.<br>
+Vous pouvez alors faire plusieurs choses avec ce clip :
+</p>
+<ul>
+<li> <b>Insérer</b><br>
+<img src=".././manual_images_intl/splice_button.png" alt="manual_images_intl/splice_button"> Insère le clip sur la timeline après le point d'insertion.<br>
+Après que l'insertion ait été faite, le point d'insertion
+se déplace à la fin du clip, prêt à être utilisé pour réaliser l'insertion
+suivante.  De cette manière, vous pouvez construire votre programme de manière
+continue juste en insérant des clips.<br>
+Si un <b>point d'entrée</b> existe sur la timeline, le clip sera inséré après le
+point d'entrée ou après le point de sortie.<br>
+Si à la fois un point d'entrée et un point de sortie sont définis sur la
+timeline, le clip est inséré après le point d'entrée.<br>
+S'il y a un contenu après l'endroit que vous avez choisi pour réaliser
+l'insertion, alors ce contenu sera poussé vers la droite.
+</li><li> <b>Remplacer</b><br>
+<img src=".././manual_images_intl/overwrite_button.png" alt="manual_images_intl/overwrite_button"> Permet de remplacer la région de
+la timeline située après le point d'insertion par un clip.<br>
+S'il existe un <b>point d'entrée</b> ou un <b>point de sortie</b> sur la timeline, le
+remplacement à lieu après le point d'entrée ou après le point de sortie.<br>
+S'il existe à la fois un <b>point d'entrée</b> ou un <b>point de
+sortie</b> sur la timeline, le remplacement à lieu après le point d'entrée.<br>
+Si une région est en
+surbrillance ou que les points d'entrée/sortie existent tous les deux, ils délimitent
+la région qui sera remplacée, et donc la durée du clip peut être réduite.
+Cette astuce justifie l'explication <b>suivante :</b><br>
+<b>ASTUCE: Pour remplacer une région précise de la timeline :</b><br>
+- Armez uniquement les pistes sur lesquelles le remplacement doit être effectué.<br>
+- Définissez la région à remplacer en utilisant les crochets [ et ].<br>
+- Définissez le clip que vous voulez utiliser dans la visionneuse avec les crochets [ and ], sans avoir à vous inquiéter du fait que le clip soit plus long que la région à rémplacer.<br>
+- Remplacez, de la visionneuse à la timeline.  La portion du clip qui est plus longue que la région de destination ne sera pas copiée.  Sur la timeline, les clips situés après ne vont pas bouger.
+</li><li> <b>Mettre dans le dossier des clips</b><br>
+<img src=".././manual_images_intl/toclip_button.png" alt="manual_images_intl/toclip_button"> Crée, dans la fenêtre des
+ressources, un nouveau clip qui contient la région affectée, sans modifier la
+timeline.  Chaque clip comporte un titre et une description ; ils sont
+optionnels.
+</li><li> <b>Copie</b><br>
+Voir la section <a href="#SEC106">Le montage par copier-coller</a>, la copie se comportant de la même manière
+que dans le montage par couper-coller.
+</li></ul>
+
+<p>Le montage à deux écrans est aussi possible en n'utilisant que des raccourcis
+clavier.  Lorsque vous survolez un bouton avec la souris, une infobulle devrait
+apparaître et vous indiquer quelle touche est liée à ce bouton.  Dans la
+visionneuse, les touches du pavé numérique permettent de commander le
+déplacement et les touches <kbd>[</kbd>, <kbd>]</kbd> et <kbd>v</kbd> permettent de placer les
+points d'entrée/sortie et l'insertion.
+</p>
+<hr size="6">
+<a name="Le-montage-par-glisser_002dd_00e9poser"></a>
+<a name="SEC105"></a>
+<h3 class="subsection"> 6.2.8 Le montage par glisser-déposer </h3>
+
+<p>Le <b>montage par glisser-déposer</b> est une manière rapide et simple de
+travailler avec Cinelerra en n'utilisant que la souris.  L'idée de base est de
+créer de nombreux clips, et ensuite de les glisser dans l'ordre sur la timeline
+en construisant un prototype du film que vous pouvez visionner dans le
+compositeur.  Si, après l'avoir visionné, vous désirez réarranger vos clips,
+insérer des effets, ajouter des transition ou retrancher ou ajouter du
+matériel, glissez-les simplement et déposez-les sur la timeline.
+</p>
+<ol>
+<li> Chargez des fichier en utilisant <b>Fichier-&gt;Charger des fichiers</b>.
+</li><li> Positionnez le mode d'insertion à <b>Créer de nouvelles ressources</b>.
+Ceci chargera les fichiers dans la fenêtre des ressources.
+</li><li> Créez quelques pistes audio et vidéo sur la timeline en utilisant les
+menus vidéo et audio.
+</li><li> Ouvrez le dossier <b>Media</b> dans la fenêtre des ressources.
+</li><li> Assurez-vous que les pistes nécessaires sont armées et glissez un fichier
+de média depuis la fenêtre des ressources sur la timeline.  Si le média
+comporte de la vidéo, glissez-le sur une piste vidéo.  Si le média est de
+l'audio pure, glissez-le sur une piste audio.
+
+<p align="center"> <img src=".././manual_images_intl/drag_to_program.png" alt="manual_images_intl/drag_to_program">
+</p>
+</li></ol>
+<p>Cinelerra remplit les pistes audio et vidéo qui se trouvent sous le curseur
+avec les données du fichier.  Ceci affecte les pistes que vous venez de créer
+initialement et les pistes vers lesquelles vous glissez le média.  Si le média
+comporte une piste vidéo et deux pistes audio, vous devrez créer une piste
+vidéo et deux pistes audio sur la timeline et le média devra être glissé vers
+la première piste vidéo.  Si le média ne comporte que de l'audio, vous aurez
+besoin d'une piste audio sur la timeline pour chacune des pistes audio du média
+et le média devra être glissé sur la première piste audio.
+</p>
+<p>Lorsque vous glissez votre média choisi, le pointeur de la souris va glisser
+l'image réduite du média, et une fois sur la timeline, les bords d'un rectangle
+de la taille de l'édition que vous allez réaliser.<br>
+</p>
+<p>Glissez le média à la position désirée sur une piste vide et déposez-le.<br>
+S'il y a d'autres éditions sur la piste, quand vous déplacez le rectangle sur
+une édition, vous allez voir des flèches apparaître aux frontières de
+l'édition. Si vous déposez le média à cet endroit, la nouvelle édition va
+débuter à l'endroit indiqué par les flèches.
+</p>
+<p>Puisque le pointeur de la souris se trouve au milieu du rectangle, lorsque ce
+rectangle est plus grand que la partie visible de la timeline, il n'est pas
+évident d'indiquer la position où l'insertion doit être faite.  Ceci arrive
+fréquemment pour les longs médias.  Augmenter la durée visible surla timeline
+va réduire la taille du rectangle, et faciliter l'insertion au bon endroit.
+</p>
+<p>Lors du glisser, le média se colle au début de la piste si elle est vide.  S'il
+y a déjà des plans sur la piste, le média se colle à la limite de plan la plus
+proche.
+</p>
+<p>Vous pouvez aussi glisser plusieurs fichiers depuis la fenêtre des ressources.
+Soit en dessinant une boîte autour des fichiers, soit en utilisant <kbd>MAJ</kbd>,
+soit en utilisant <kbd>CTRL</kbd> lors de la sélection des fichiers.  Lorsque vous
+déposez les fichiers sur la timeline, ils sont concaténés.  Le comportement de
+la touche <kbd>MAJ</kbd> ou de la touche <kbd>CTRL</kbd> change selon que les ressources
+sont affichées sous forme de listes ou de vignettes.
+</p>
+<p>Pour afficher les ressources sous forme de vignettes ou sous forme de liste,
+faites un clic droit dans la liste des médias.  Choisissez soit <b>Afficher
+sous forme de vignettes</b>, soit <b>Afficher sous forme de liste</b> pour modifier
+le format de l'affichage.
+</p>
+<p>Lors de l'affichage sous forme de liste dans la fenêtre des ressources,
+<b>MAJ-clic</b> permet d'étendre le nombre de sélections en surbrillance,
+<b>CTRL-clic</b> sur les fichiers de média en mode liste ajoute des fichiers un
+par un.
+</p>
+<p>Lors de l'affichage des icônes dans la fenêtre des ressources, <b>MAJ-clic</b> ou
+<b>CTRL-clic</b> permet de sélectionner les fichiers de média un par un.
+</p>
+<p>En plus de la possibilité de glisser des fichiers de média, si vous créez des
+clips et ouvrez le dossier des <b>clips</b>, vous pouvez glisser des clips sur la
+timeline.
+</p>
+<p>Il y a sur la timeline d'autres fonctionnalités de glisser.  Glisser des plans
+le long de la timeline vous permet de trier vos listes de lecture de musique,
+de trier des séquences de film, et permet de meilleures démonstrations au NAB
+mais guère plus.  Pour activer la fonction de glisser-déposer de la timeline,
+choisissez le bouton avec la flèche <img src=".././manual_images_intl/arrow.png" alt="manual_images_intl/arrow">.
+Déplacez-vous sur un plan et glissez-le.  Lors de l'opération de glisser, le
+plan va être attiré à la limite la plus proche.
+</p>
+<p align="center"> Sélectionnez une pistes avec diverses scènes.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_before.png" alt="manual_images_intl/drop_before">
+</p>
+<p align="center"> Piste d'origine avec trois scènes.
+</p>
+<p align="center"> Allez à la scène n°3, cliquez et glissez-la vers le milieu.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drag_track.png" alt="manual_images_intl/drag_track">
+</p>
+<p align="center"> Lorsque vous déposez la scène n°3
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_concept.png" alt="manual_images_intl/drop_concept">
+</p>
+<p align="center"> la scène n°2 se décale vers la droite
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_after.png" alt="manual_images_intl/drop_after">
+</p>
+<p align="center"> Et voici à quoi ressemble la séquence terminée.
+</p>
+<p>S'il y a plus d'une piste armée, Cinelerra va glisser tous les plans qui
+commencent à la même position que le plan où se trouve actuellement le curseur.
+En d'autres termes, vous pouvez glisser et déposer un groupe de plans.
+Cinelerra reconnaît comme groupe les plans de différentes pistes armées qui ont
+leur point de départ aligné, et ce indépendemment du fait qu'ils appartiennent à la même source
+ou qu'ils aient leur fin alignée.
+</p>
+<p>Quand vous glissez et déposez des média sur la timeline:<br>
+Si vous déposez un média lorsque les flèches &gt;&lt; sont affichées, le clip sera
+coupé et collé au début de la région délimitée par le centre des flèches &gt;&lt;.
+Les éditions suivantes vont se déplacer.<br>
+Si vous déposez un média lorsque les flèches &gt;&lt; ne sont pas affichées,
+l'affichage du clip d'origine sera désactivé, et il sera copié où vous l'avez
+déposé.  Les éditions suivantes ne seront pas déplacées.  Un silence va
+apparaître à la place du média d'origine.
+</p>
+<p>Dans le mode d'édition par glisser-déposer, vous ne pouvez pas glisser et
+déposer des marques.  Elles seront verrouillées à la barre temporelle, même
+quand l'option &quot;Editer les marques&quot; est activée.  Cependant, avec l'option
+&quot;Editer les marques&quot; activée, si une partie sélectionnée d'une ressource est
+copiée de la visionneuse vers la timeline sur une position située avant des
+marques, ces marques seront poussées vers la droite pour la durée de la partie
+sélectionnée.
+</p>
+<p>Avec les points d'entrée/sortie vous pouvez réaliser des opérations de
+couper/coller dans le mode glisser-déposer tout comme dasn le mode
+copier-coller.  Allez dans le menu Edition pour voir la liste des raccourcis.
+</p>
+<hr size="6">
+<a name="Le-montage-par-copier_002dcoller"></a>
+<a name="SEC106"></a>
+<h3 class="subsection"> 6.2.9 Le montage par copier-coller </h3>
+
+<p>C'est la méthode traditionnelle pour effectuer le montage avec les outils de
+montage audio.  Dans le cas de Cinelerra, vous devrez soit lancer une seconde
+instance de Cinelerra et copier d'une instance vers l'autre, soit copier entre
+pistes différentes de la même instance, soit charger un fichier de média dans
+la visionneuse et effectuer la copie depuis cet endroit.
+</p>
+<p>Chargez un certain nombre de fichiers sur la timeline.  Pour effectuer un
+montage par couper-coller, sélectionnez le
+<img src=".././manual_images_intl/ibeam.png" alt="manual_images_intl/ibeam"> bouton i-beam.  Sélectionnez une région
+de la timeline au moyen d'un cliquer-glisser et utilisez le <img src=".././manual_images_intl/cut.png" alt="manual_images_intl/cut"> bouton couper
+pour la couper.  Déplacez le point d'insertion à un autre endroit de la
+timeline et sélectionnez le <img src=".././manual_images_intl/paste.png" alt="manual_images_intl/paste"> bouton coller.
+En supposant que les points d'entrée/sortie sont définis sur la timeline, ceci
+réalise une opération de couper-coller.
+</p>
+<p>Si les points d'entrée/sortie sont définis, le point d'insertion et la région
+en surbrillance seront écrasés par les points d'entrée/sortie lors des
+opérations de presse-papiers.  De cette manière, avec les points
+d'entrée/sortie, vous pouvez effectuer du couper-coller en mode glisser-déposer
+comme en mode couper-coller.
+</p>
+<p>Il y a d'autres opérations que vous pouvez réaliser.  Allez dans le menu Editer
+pour en voir la liste ainsi que les raccourcis clavier qui y sont associés.
+</p>
+<p>Dans le mode Couper-coller vous pouvez aussi éditer les marques.  En activant
+<b>Editer les marquer</b> dans le menu Configuration, ou en désactivant le bouton
+<b>Empêcher les marques de se déplacer</b>, les marques peuvent être coupées,
+copiées ou collées en même temps que les sélections des pistes armées.
+</p>
+<p>Lorsque l'on monte de l'audio, il est habituel de couper depuis une partie de
+la forme d'onde vers la même partie d'une autre forme d'onde.  Le point de
+départ et le point de fin de la coupe sont identiques sur chacune des formes
+d'onde et peuvent être légèrement décalés, car les données de l'onde sont
+différentes.  Il serait très difficile de mettre en surbrillance la forme
+d'onde à couper et de mettre en surbrillance la seconde forme d'onde à coller
+sans modifier les positions relatives de début et de fin.
+</p>
+<p>Une possibilité pour simplifier ces opérations est de lancer une seconde
+instance de Cinelerra, de couper et coller pour déplacer le média entre les
+deux instances.  De cette manière, les deux régions en surbrillance peuvent
+exister simultanément.
+</p>
+<p>Une autre possibilité est de placer les points d'entrée/sortie correspondant à
+la région source de la forme d'onde source et de placer des marques sur la
+région de destination de l'onde de destination.  Effectuez une opération de
+couper, supprimez les points d'entrée/sortie, sélectionnez la région entre les
+marques et effectuez le coller.
+</p>
+<p>Une dernière opération de montage par couper-coller est l'opération
+<b>Editer-&gt;Réinitialiser</b>.  Si une région est en surbrillance ou si les points
+d'entrée/sortie existent, la région affectée est réinitialisée par
+<b>Editer-&gt;Réinitialiser</b>.  Mais si le point d'insertion est sur une limite de
+plan et que les plans situés de chaque côté de cette limite de plan
+appartiennent à la même ressource, les plans seront alors combinés en un seul
+plan compris dans la ressource.  Le début de ce plan unique est le début du
+premier plan et la fin de plan, la fin du deuxième.  Ceci peut soit étendre,
+soit réduire le plan.
+</p>
+<hr size="6">
+<a name="Ajustement"></a>
+<a name="SEC107"></a>
+<h3 class="subsection"> 6.2.10 Ajustement </h3>
+
+<p>Avec un certain nombre de plans sur la timeline, il est possible de faire de
+l'ajustement.  Lors de l'ajustement, vous réduisez ou agrandissez les limites
+des plans en les glissant.  Il est possible de faire de l'ajustement à la fois
+dans le mode glisser-déposer et dans le mode couper-coller.  Déplacez le
+curseur sur la limite d'un plan jusqu'à ce qu'il change de forme.  Le curseur
+prendra la forme d'une flèche soit d'agrandissement vers la droite, soit
+d'agrandissement vers la gauche.  Si le curseur se présente sous la forme d'une
+flèche d'agrandissement vers la gauche, l'opération de glisser affectera le
+début du plan.  Si la flèche est orientée vers la droite, l'opération de
+glisser affectera la fin du plan.
+</p>
+<p>Lorsque vous cliquez sur la limite d'un plan afin de débuter le glisser, le
+bouton de la souris utilisé détermine le comportement du glisser qui suivra.
+Il y a trois comportements possibles associés aux boutons de la souris définis
+dans les préférences de l'interface utilisateur.  Voir la section <a href="cinelerra_cv_manual_fr_3.html#SEC56">Interface</a>.
+</p>
+<p>L'effet de chaque opération de glisser ne dépend pas seulement du comportement
+des boutons mais aussi quelle est la limite - fin ou début - du plan qui est
+glissée.  Lorsque vous relâchez le bouton de la souris, l'opération
+d'ajustement est effectuée.
+</p>
+<p>Dans une opération de <b>Glisser tous les plans qui suivent</b>, le début du plan
+pourra soit supprimer des données du plan si vous le déplacez vers l'avant,
+soit coller de nouvelles données depuis ce qui précède le plan si vous le
+déplacez en arrière.  La fin du plan collera des données dans le plan si vous
+le déplacez vers l'avant, ou coupera des données depuis la fin du plan si vous
+le déplacez vers l'arrière.  Tous les plans qui suivent seront décalés.  Enfin,
+si vous glissez la fin du plan avant le début du plan, le plan sera supprimé.
+</p>
+<p>Dans une opération de <b>Ne glisser qu'un seul plan</b>, le comportement est le
+même si vous glissez le début ou la fin du plan.  La seule différence est
+qu'aucun des autres plans ne sera décalé.  A la place, tout ce qui est adjacent
+au plan actuel sera agrandi ou réduit pour remplir les vides laissés par
+l'opération d'ajustement.
+</p>
+<p>Dans une opération de <b>Ne glisser que la source</b>, rien n'est coupé ni collé.
+Si vous déplacez le début ou la fin du plan vers l'avant, la source de
+référence dans le plan sera déplacée vers l'avant.  Si vous déplacez le début
+ou la fin du plan vers l'arrière, la source de référence sera déplacée en
+arrière.  Les plans restent au même endroit sur la timeline
+mais la source se décale.
+</p>
+<p>Pour tous les formats de fichiers autres que les images fixes, l'étendue de
+l'opération d'ajustement est tronquée à la taille du fichier source.  Une
+tentative de glisser le début du plan avant le début de la source le limitera
+au début du fichier source.
+</p>
+<p>Dans toutes les opérations d'ajustement, tous les plans qui commencent à la
+même position que le curseur lorsque l'opération de glisser commence, sont
+affectés.  Désarmez les pistes dont vous voulez éviter que les plans ne soient
+affectés.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC88" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_7.html#SEC108" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

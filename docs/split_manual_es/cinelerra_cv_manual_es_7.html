@@ -1,0 +1,762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 7. El Compositor</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 7. El Compositor">
+<meta name="keywords" content="Manual de Cinelerra CV: 7. El Compositor">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_6.html#SEC88" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_8.html#SEC133" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="El-Compositor"></a>
+<a name="SEC108"></a>
+<h1 class="chapter"> 7. El Compositor </h1>
+
+<p>Es una ventana que muestra la salida de la línea de tiempos. Es la interfaz para la 
+mayoría de las operaciones de composición o para las operaciones que afectan el 
+aspecto de la salida de la línea de tiempos. Las operaciones que se realicen
+en el Compositor afectan a la línea de tiempos pero no a los clips.
+</p>
+
+
+<hr size="6">
+<a name="Controles-del-compositor"></a>
+<a name="SEC109"></a>
+<h2 class="section"> 7.1 Controles del compositor </h2>
+
+<p>La salida de vídeo tiene varias funciones de navegación. El tamaño del vídeo
+de salida puede estar bloqueado al tamaño de la ventana o desbloqueado y con 
+barras deslizantes para facilitar la observación. Se puede hacer zoom sobre 
+la salida de vídeo, y panorámicas. Navegar la salida de vídeo de esta manera
+no afecta a la salida de una operación de renderizado; simplemente cambia
+el punto de vista en la ventana del Compositor.
+</p>
+<p>Si está desbloqueado respecto al tamaño de la ventana, se puede pinchar con 
+el botón intermedio del ratón y arrastrar la imagen para cambiar el punto de vista 
+de la misma.
+</p>
+<p>Se puede hacer zoom (aumentar y disminuir) sobre la salida de vídeo 
+pulsando las teclas <kbd>+</kbd> y <kbd>-</kbd>.
+</p>
+<p>Bajo la salida de vídeo hay copias de muchas de las funciones disponibles en la 
+ventana principal. Además, hay un menú de zoom <img src=".././manual_images_intl/cwindow_zoom.png" alt="manual_images_intl/cwindow_zoom">
+y una luz rectangular.
+</p>
+<p>El menú de zoom ofrece todos los posibles valores de aproximación y, con la opción
+<b>Auto</b>, la posibilidad de bloquear el tamaño de la salida de vídeo al de la ventana.
+El menú de zoom no afecta al tamaño de la ventana. Si con la opción Auto activada 
+se redimensiona la ventana, el zoom de la salida de vídeo cambiará para ajustarse.
+</p>
+<p>La luz rectangular se enciende de color rojo mientras se está renderizando. De esta 
+manera podemos saber si la salida que muestra el Compositor es la más actual.
+</p>
+<p>Si se pulsa con el botón derecho del ratón en cualquier lugar de la ventana de salida,
+aparece un menú con todos los niveles de zoom y algunas opciones más. En el caso 
+concreto de que el zoom esté en modo Auto, al cambiar el zoom con este menú 
+auxiliar se redimensionará toda la ventana, no sólo el tamaño de la salida de vídeo.
+</p>
+<p>Las opciones <b>Restaurar cámara</b> y <b>Restaurar proyector</b> permiten centrar la cámara
+y el proyector. See section <a href="#SEC119">Composición</a>.
+</p>
+<a name="IDX121"></a>
+<a name="IDX122"></a>
+<p>La opción <b>Ocultar controles</b> oculta todo excepto la imagen de vídeo.
+</p>
+<p>A la izquierda de la salida de vídeo hay una barra de herramientas exclusiva 
+de la ventana del Compositor. Esta barra de herramientas ofrece las siguientes funciones:
+</p>
+
+<hr size="6">
+<a name="Proteger-v_00eddeo-de-cambios"></a>
+<a name="SEC110"></a>
+<h3 class="subsection"> 7.1.1 Proteger vídeo de cambios </h3>
+
+<p>Deshabilita posibles cambios en la salida del compositor debido a clicks
+realizados en la ventana. Es otro nivel más de seguridad, además del
+botón para desmontar pistas, para evitar cambios indeseados.
+</p>
+<hr size="6">
+<a name="Ver-zoom"></a>
+<a name="SEC111"></a>
+<h3 class="subsection"> 7.1.2 Ver zoom </h3>
+
+<p>Esta herramienta  <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> permite aproximarse y alejarse
+a la salida del compositor sin redimensionar la ventana. Si la salida de vídeo está 
+bloqueada al tamaño de la ventana, al pulsar sobre ella con la lupa se desbloquea
+y aparecen barras deslizantes para facilitar la inspección.
+</p>
+<p>Se puede acercar el zoom pulsando con el botón izquierdo.<br>
+Se puede alejar el zoom pulsando <kbd>CTRL - click</kbd>.<br>
+La rueda del ratón también sirve para acercar o alejar el zoom.
+</p>
+<hr size="6">
+<a name="Editar-m_00e1scara"></a>
+<a name="SEC112"></a>
+<h3 class="subsection"> 7.1.3 Editar máscara </h3>
+
+<p>Ésta <img src=".././manual_images_intl/mask.png" alt="manual_images_intl/mask"> es la herramienta de edición de máscaras,  See section <a href="#SEC126">Máscaras</a>.
+Habilite la ventana de información,  <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">, para 
+ver las opciones relativas a esta herramienta.
+</p>
+<hr size="6">
+<a name="Ajustar-automatizado-de-c_00e1mara"></a>
+<a name="SEC113"></a>
+<h3 class="subsection"> 7.1.4 Ajustar automatizado de cámara </h3>
+
+<p>La herramienta <img src=".././manual_images_intl/camera.png" alt="manual_images_intl/camera"> sirve para ajustar la cámara, 
+como se describe en See section <a href="#SEC120">La cámara y el proyector</a>.  Habilite la ventana de información,
+<img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">, para ver las opciones relativas a esta herramienta.
+</p>
+<hr size="6">
+<a name="Ajustar-automatizado-de-proyector"></a>
+<a name="SEC114"></a>
+<h3 class="subsection"> 7.1.5 Ajustar automatizado de proyector </h3>
+
+<p>La herramienta <img src=".././manual_images_intl/projector.png" alt="manual_images_intl/projector"> sirve para ajustar el 
+proyector, como se describe en  See section <a href="#SEC120">La cámara y el proyector</a>. 
+This tool <img src=".././manual_images_intl/projector.png" alt="manual_images_intl/projector"> brings up the projector
+editing tool See section <a href="#SEC120">La cámara y el proyector</a>.  Habilite la ventana de información,
+<img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">, para ver las opciones relativas a esta herramienta.
+</p>
+<hr size="6">
+<a name="Cortar-una-capa-o-la-salida"></a>
+<a name="SEC115"></a>
+<h3 class="subsection"> 7.1.6 Cortar una capa o la salida </h3>
+
+<p>La herramienta <img src=".././manual_images_intl/crop.png" alt="manual_images_intl/crop"> sirve para cortar capas o la
+salida, como se describe en See section <a href="#SEC127">Recorte</a>. La ventana de información, 
+ <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">, debe estar habilitada para poder
+usar esta herramienta.
+</p>
+<hr size="6">
+<a name="Obtener-colores"></a>
+<a name="SEC116"></a>
+<h3 class="subsection"> 7.1.7 Obtener colores </h3>
+
+<p>Proporciona un mecanismo para escoger un color de los que aparecen en la pantalla del
+Compositor. El selector de color detecta el color sobre el que está situado y lo 
+almacena de manera temporal. La ventana de información, <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">,
+si está habilitada, muestra el color seleccionado actualmente. Pulse en cualquier punto
+de la salida de vídeo para obtener el color en dicho punto. <br>
+El selector de color no sólo permite ver áreas que han sido recortadas,s ino que su
+valor se puede aplicar a muchos efectos. Diferentes efectos gestionan la información del
+selector de color de maneras distintas.
+</p>
+<hr size="6">
+<a name="Informaci_00f3n-de-la-herramienta"></a>
+<a name="SEC117"></a>
+<h3 class="subsection"> 7.1.8 Información de la herramienta </h3>
+
+<p>El botón de ayuda, <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">, sólo funciona en 
+combinación con otros controles del compositor. Basándose en el control que esté
+activo en cada momento, el botón de ayuda mostrará un diálogo u otro.
+</p>
+<p>Las herramientas con diálogos de información son:
+</p><ul>
+<li> Editar máscara
+</li><li> Ajustar automatizado de cámara
+</li><li> Ajustar automatizado de proyector
+</li><li> Cortar una capa o la salida
+</li></ul>
+
+<hr size="6">
+<a name="Mostrar-zonas-seguras"></a>
+<a name="SEC118"></a>
+<h3 class="subsection"> 7.1.9 Mostrar zonas seguras </h3>
+
+<p>La herramienta <img src=".././manual_images_intl/titlesafe.png" alt="manual_images_intl/titlesafe"> dibuja las zonas seguras en la
+salida de vídeo. Esto no afecta a la salida final al renderizar. Véase  See section <a href="#SEC128">Zonas seguras</a>.
+</p>
+<hr size="6">
+<a name="Composici_00f3n"></a>
+<a name="SEC119"></a>
+<h2 class="section"> 7.2 Composición </h2>
+
+<p>Gran parte del programa Cinelerra está orientado a la composición. ¿Qué es la
+composición? Cambiar la resolución de una película o el formato (por ejemplo,
+de 4/3 a 16/9), dividir una pantalla, 
+entrar con un fundido o salir con otro, entre otras cosas, todo eso son operaciones
+de composición en Cinelerra. Cinelerra detecta las operaciones de composición
+y cuando visualiza la película usa el motor de composición. Si no, usa el decodificador
+más rápido que encuentre en su hardware.
+</p>
+<p>Las operaciones de composición se hacen en la línea de tiempos y en la ventana del
+Compositor. Existen atajos en la ventana de Recursos para cambiar algunos atributos
+de composición. Cuando ya hay archivos de vídeo en la línea de tiempos, la ventana
+del Compositor es un buen sitio para componer la película.
+</p>
+
+<hr size="6">
+<a name="La-c_00e1mara-y-el-proyector"></a>
+<a name="SEC120"></a>
+<h3 class="subsection"> 7.2.1 La cámara y el proyector </h3>
+
+
+<hr size="6">
+<a name="Composici_00f3n-provisional"></a>
+<a name="SEC121"></a>
+<h4 class="subsubsection"> 7.2.1.1 Composición provisional </h4>
+
+<p>En la ventana del Compositor, las funciones más importantes son el botón
+de la cámara, <img src=".././manual_images_intl/camera.png" alt="manual_images_intl/camera">, y el botón del proyector,
+<img src=".././manual_images_intl/projector.png" alt="manual_images_intl/projector">. Controlan la operación de la cámara y el proyector.
+Las rutinas de composición de Cinelerra usan una copia provisional, fotogramas de vídeo
+almacenados temporalmente en memoria sobre los que se realiza todo el procesamiento 
+gráfico. En el proceso de composición en Cinelerra, la cámara determina de dónde, en el 
+vídeo original, se copian los datos (fotogramas) provisionales. El proyector determina dónde van los
+datos provisionales, en la salida final.
+</p>
+<p align="center"> <img src=".././manual_images_en/temporary_explained.png" alt="manual_images_en/temporary_explained">
+</p>
+<p>El proceso es como si escaneáramos un rollo de película antigua, un fotograma cada vez,
+y luego, con un programa de retoque de imágenes (por ejemplo, Gimp) retocáramos digitalmente
+la imagen escaneada aplicándole varios filtros. Esta imagen escaneada que estamos
+imaginando sería el documento provisional, sobre el que aplicamos nuestras modificaciones,
+respetando así el vídeo original. Cuando la imagen ha sido transformada por 
+los filtros, como por ejemplo uno de corrección de color, la proyectamos terminada en 
+un nuevo rollo de película, creando así una versión &quot;modificada&quot; del original.
+</p>
+<p>Cada pista tiene datos provisionales diferentes, definidos por el tamaño de la pista.
+Al redimensionar las pistas puede crear pantallas divididas en dos o más secciones, 
+panorámicas y zooms.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositing_pipeline.png" alt="manual_images_en/compositing_pipeline">
+</p><p align="center"> <b>Representación gráfica del proceso de composición.</b>
+</p>
+<p>Al usar la cámara y el proyector en la ventana del compositor, la pista afectada
+es la primera pista con <b>grabación</b> activa es la pista afectada. Incluso si es una 
+pista completamente transparente, aún así es al pista afectada. Si existen múltiples
+pistas de vídeo, la forma más sencilla de seleccionar sólo una pista en la que editar
+es pulsar <kbd>MAY-click</kbd> en el icono de grabación de la pista. Así se aisla la pista.
+</p>
+<p align="center"> <img src=".././manual_images_en/projector_concept.png" alt="manual_images_en/projector_concept">
+</p>
+<p>El propósito del proyector es situar los contenidos provisionales en la salida
+del proyecto. Sirve por lo tanto para componer varias fuentes de varias pistas en 
+una única pista de salida. 
+</p>
+<p>Tanto la cámara como el proyector se caracterizan por sus marcos o lentes, dos 
+rectángulos que determinan qué se coge del vídeo original como datos provisionales
+(en el caso de la cámara) y en qué posición en la salida se vuelcan los datos provisionales, una vez
+editados (en el caso del proyector).
+</p>
+<p align="center"> <img src=".././manual_images_intl/projector_screen.png" alt="manual_images_intl/projector_screen">
+</p>
+<hr size="6">
+<a name="Controles-del-proyector"></a>
+<a name="SEC122"></a>
+<h4 class="subsubsection"> 7.2.1.2 Controles del proyector </h4>
+
+<p>Al pulsar el botón <b>proyector</b> se habilita el control en la ventana del compositor 
+y ya se puede ajustar el proyector. En la ventana de vídeo del compositor aparece una
+caja con guías. Si se arrastra con el ratón en cualquier punto de la ventana de vídeo, 
+las guías se desplazan junto al vídeo (el vídeo puede moverse un poco más lento). 
+Si se mantiene la tecla <b>MAY</b> pulsada mientras se arrastra el ratón sobre la ventana,
+las guías se encogen o aumentan junto con el vídeo. Si ya ha posicionado el vídeo con el 
+proyector (juegue todo lo que le apetezca), está preparado para dominar la cámara.
+</p>
+<hr size="6">
+<a name="Controles-de-la-c_00e1mara"></a>
+<a name="SEC123"></a>
+<h4 class="subsubsection"> 7.2.1.3 Controles de la cámara </h4>
+
+<p>Al pulsar el botón de la cámara, <img src=".././manual_images_intl/camera.png" alt="manual_images_intl/camera">, 
+se habilita el control en la ventana del compositor. Aparecen unas guías que 
+muestran la posición de la cámara en relación a posiciones pasadas y futuras 
+de la propia cámara, pero no en relación al vídeo original. Si se intentan arrastrar las
+guías de la cámara se comprobará que no se mueven las guías, sino la localización del 
+vídeo dentro de la referencia de la cámara.
+</p>
+
+<a name="IDX123"></a>
+<p>La <b>mirilla</b> es una ventana en la cámara, como una rendija en la lente, que enmarca 
+el área de vídeo original que se a escanear. La mirilla se representa como un marco 
+rojo con barras diagonales cruzadas. 
+</p>
+<p align="center"> <img src=".././manual_images_en/camera_concept.png" alt="manual_images_en/camera_concept">
+</p><p align="center"> <b>La mirilla</b>
+</p>
+<p align="center"> <img src=".././manual_images_en/viewport_sizes.png" alt="manual_images_en/viewport_sizes">
+</p><p align="center"> <b>Tamaños de mirilla</b>
+</p>
+<p>El tamaño de la mirilla depende del tamaño de la pista actual, no del vídeo
+original. Si es pequeña (640x400) captura un área pequeña. Si la pista actual es grande 
+(800x200), captura un área mayor que el vídeo original y rellena el espacio vacío
+con regiones vacías de color blanco.
+</p>
+<p>Cuando ya está definida la mirilla se debe posicionar la cámara justo sobre el área
+de vídeo original que nos interesa. Para controlar la posición de la cámara:
+</p><ol>
+<li> Abra la ventana del compositor con una pista seleccionada.
+</li><li> Pulse el botón de la cámara para activar el ajuste de la misma.
+</li><li> Arrastre el ratón sobre el vídeo en el compositor.
+</li></ol>
+
+<p>Al arrastrar el ratón sobre la mirilla en la ventana del compositor (aunque al
+principio parezca extraño), la mirilla no se mueve pero sí lo hace el trozo
+de vídeo al otro lado de la cámara. Es como si la ventana fuera nuestra cámara, 
+y al moverla mientras grabamos viéramos moverse la imagen al otro lado de la lente.
+</p>
+<p align="center"> <img src=".././manual_images_intl/viewport_drag.png" alt="manual_images_intl/viewport_drag">
+</p><p align="center"> <b>En la ventana del compositor, la cámara siempre se muestra</b>
+</p><p align="center"> <b>centrada, lo que se mueve es el vídeo al otro lado.</b>
+</p>
+<p>Por ejemplo, si mueve la cámara hacia abajo, la mirilla está moviéndose 
+hacia abajo respecto al vídeo, pero si mientras movemos la cámara hacia abajo 
+estamos mirando por el visor de la cámara lo que veremos será que el vídeo
+está subiendo. Por la misma razón, si mueve la cámara hacia la derecha, el 
+vídeo parecerá moverse hacia la izquierda.
+</p>
+<p><b>Nota:</b> Las guías muestran la posición de la cámara en relación a posiciones
+pasadas y futuras de la cámara, no en relación al vídeo original.
+</p>
+<hr size="6">
+<a name="Men_00fa-contextual"></a>
+<a name="SEC124"></a>
+<h4 class="subsubsection"> 7.2.1.4 Menú contextual </h4>
+
+<p>En la ventana del compositor hay un menú contextual con opciones que afectan
+a la cámara y al proyector. Pulse con el botón derecho del ratón sobre la imagen
+de vídeo para acceder a él.
+</p>
+<ul>
+<li> Restaurar la Cámara devuelve a la cámara a la posición inicial centrada.
+</li><li> Restaurar Proyector devuelve al proyector al centro (posición inicial).
+</li></ul>
+
+<hr size="6">
+<a name="La-ventana-de-herramientas-de-la-c_00e1mara-y-el-proyector"></a>
+<a name="SEC125"></a>
+<h4 class="subsubsection"> 7.2.1.5 La ventana de herramientas de la cámara y el proyector </h4>
+
+<p>Se pueden realizar algunas operaciones con la cámara y el proyector 
+que no aparecen en el menú contextual y no se representan en las capas de vídeo.
+Se accede a ellas en la <b>Información de la herramienta</b>. La mayoría de las 
+herramientas del Compositor poseen una ventana de información que se muestra 
+al pulsar el símbolo de interrogación  <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">. 
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_campro_tool.png" alt="manual_images_intl/compositor_campro_tool">
+</p><p align="center"> <b>La ventana de información de la cámara y el proyector.</b>
+</p>
+<p>En el caso de la cámara y el proyector, la ventana de información muestra las coordenadas
+z, y y z. Con la rueda del ratón o directamente escribiendo texto, se pueden
+posicionar con precisión la cámara y el proyector. Además, se definen nueve tipos de 
+justificación para facilitar el posicionamiento. Una operación frecuente es justificar
+la proyección a la esquina superior izquierda tras reducir la imagen. Se usa al 
+reducir el tamaño de un vídeo con ajuste de la razón de aspecto.
+</p>
+<ul>
+<li> <img src=".././manual_images_intl/button_justify_left.png" alt="manual_images_intl/button_justify_left"> Izquierda
+</li><li> <img src=".././manual_images_intl/button_justify_centerH.png" alt="manual_images_intl/button_justify_centerH"> Centrado horizontal
+</li><li> <img src=".././manual_images_intl/button_justify_right.png" alt="manual_images_intl/button_justify_right"> Derecha
+</li><li> <img src=".././manual_images_intl/button_justify_top.png" alt="manual_images_intl/button_justify_top"> Arriba
+</li><li> <img src=".././manual_images_intl/button_justify_centerV.png" alt="manual_images_intl/button_justify_centerV"> Centrado Vertical
+</li><li> <img src=".././manual_images_intl/button_justify_bottom.png" alt="manual_images_intl/button_justify_bottom"> Abajo
+</li></ul>
+
+<p>El efecto de traslación permite conversión simultánea de la razón de aspecto
+y reducción, pero es más fácil de usar si el vídeo reducido se pone en la
+esquina superior izquierda de la imagen provisional, en lugar de en el centro. 
+El tamaño de la pista se ajusta al tamaño original del vídeo, y se centra la 
+cámara. El tamaño de la salida será el que queremo para el vídeo reducido de salida.
+Así se obtiene la porción central del vídeo recortada sin usar efectos.
+</p>
+<p>A continuación se debe arrastrar el efecto de traslación sobre la pista de vídeo. Se 
+ajustan las dimensiones de entrada del efecto de traslación al tamaño original y las 
+dimensiones de salida al tamaño reducido que deseamos obtener. Para poner el vídeo 
+reducido en el centro de la imagen que muestra el proyector requeriría un desplazamiento
+de los <b>valores de salida de x, y</b> según un cálculo complicado. En lugar de eso,
+dejamos los valores de salida de x e y a 0 y usamos la ventana de información de la herramienta 
+proyector.
+</p>
+<p>Sólo con seleccionar justificación a la izquierda <img src=".././manual_images_intl/left_justify.png" alt="manual_images_intl/left_justify"> 
+y justificación arriba <img src=".././manual_images_intl/top_justify.png" alt="manual_images_intl/top_justify">, el proyector muestra
+la imagen reducida de la esquina superior izquierda de la imagen provisional 
+en el centro de la salida.
+</p>
+<hr size="6">
+<a name="M_00e1scaras"></a>
+<a name="SEC126"></a>
+<h3 class="subsection"> 7.2.2 Máscaras </h3>
+
+<p>Las máscaras permiten seleccionar una región del vídeo. Seleccionar una región
+concreta dentro de la imagen es útil si hay algo que se desea mostrar u ocultar,
+o aplicar un efecto sobre áreas concretas de los fotogramas. Se puede retrasar 
+ligeramente una copia de una pista de vídeo y mostrar esa copia sin enmascarar
+en zonas donde una copia tiene interferencias pero la otra no. Se puede necesitar
+corrección del color en una sección de una serie de fotogramas pero no 
+en todo el área de los fotogramas. Las máscaras también sirven para eliminar
+micrófonos, aviones o personas que no deberían estar.
+</p>
+<p>El orden del proceso de edición afecta a las tareas que se pueden realizar con
+las máscaras. Principalmente, las máscaras se realizan en los datos provisionales,
+tras aplicar los efectos pero antes del proyector. En consecuencia, se pueden
+enviar varias pistas a una sola pista con máscara y proyectarlas con la misma máscara.
+</p>
+<p>Nuestro proceso de composición tiene ahora una etapa adicional: la de aplicación 
+de máscaras. Puede haber hasta 8 máscaras por pista. Cada máscara se define 
+por separado, aunque todas realizan la misma operación, sea adición o substracción.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositing_pipeline2.png" alt="manual_images_en/compositing_pipeline2">
+</p><p align="center"> <b>Proceso de composición con máscaras.</b>
+</p>
+<p>Para definir una máscara, active el botón <b>Editar máscara</b> <img src=".././manual_images_intl/mask.png" alt="manual_images_intl/mask">
+en la ventana del compositor. Con esta opción activa, arrastre el ratón (pulsando
+el botón izquierdo) sobre la ventana de vídeo.
+</p>
+<p><b>IMPORTANTE:</b> Debe escoger <b>fotogramas clave automáticos</b>, si desea mover una máscara en el tiempo. Si no selecciona  
+<b>fotogramas clave automáticos</b>, la posición de la máscara será la misma 
+incluso aunque la edite en diferentes sitios de la línea de tiempos.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_mask1.png" alt="manual_images_intl/compositor_mask1">
+</p>
+<p>Pulse o arrastre nuevamente en otros puntos de la imagen para crear nuevos puntos
+de la máscara. Aunque no sea el comportamiento convencional de las curvas de 
+Bezier, esta interfaz para la máscara muestra en tiempo real cuál va a ser el 
+comportamiento de la máscara. 
+</p>
+<p>Los puntos que ya se han creado se pueden mover arrastrándolos. Para ello se deben
+arrastrar con el ratón, manteniendo pulsada la tecla <b>CTRL</b>.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositor_mask_drag.png" alt="manual_images_en/compositor_mask_drag">
+</p><p align="center"> <b>CTRL-arrastrar permite mover los puntos existentes a</b>
+</p><p align="center"> <b>nuevas posiciones, modificando así la geometría de la máscara.</b>
+</p>
+<p>Si únicamente se añaden nuevos puntos o se desplazan los ya existentes, la 
+máscara estará siempre delimitada por una línea poligonal. Para convertir
+los tramos rectos en curvas de Bezier es necesario usar los puntos de anclaje 
+de la curva. Se accede a estos puntos arrastrando uno de los puntos ya
+existentes mientras se mantiene pulsada la tecla <b>MAY</b>. Para mover estos puntos
+y cambiarlos de posición, basta con arrastrarlos mientras se mantiene pulsada la 
+tecla <b>MAY</b>.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositor_mask_bezier.png" alt="manual_images_en/compositor_mask_bezier">
+</p><p align="center"> <b>Los anclajes de la curva de Bezier se activan</b>
+</p><p align="center"> <b>arrastrando mientras se pulsa la tecla MAY. Así se</b>
+</p><p align="center"> <b>pueden crear líneas curvas entre puntos de la máscara.</b>
+</p>
+<p>Una máscara ya existente se puede mover entera pulsando las teclas <b>ALT</b> 
+y <b>CTRL</b> a la vez, mientras se arrastra con el ratón. La edición de máscaras 
+en Cinelerra es idéntica a la edición de máscaras en El Gimp, excepto que 
+en Cinelerra el efecto de la máscara siempre está activado.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositor_mask_translate.png" alt="manual_images_en/compositor_mask_translate">
+</p><p align="center"> <b>CTRL-ALT y arrastrar permite mover una máscara</b>
+</p><p align="center"> <b>entera a una nueva posción en la imagen.</b>
+</p>
+<p>Las máscaras tienen muchos parámetros más, que no se pueden representar con
+superposición de vídeo. Estos parámetros se representan en la ventana de información
+de herramienta de máscaras. Esta ventana con las opciones aplicables a la máscara, 
+<img src=".././manual_images_intl/mask.png" alt="manual_images_intl/mask">, aparece al pulsar el botón con forma de 
+interrogación <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">.
+</p>
+<p align="center"> <img src=".././manual_images_intl/mask_dialog.png" alt="manual_images_intl/mask_dialog">
+</p><p align="center"> <b>Ventana de opciones de máscara.</b>
+</p>
+<p>El <b>modo</b> de la máscara determina si la máscara elimina datos o hace visibles
+los datos. Si el modo es subtractivo, la máscara provoca la desaparición del vídeo
+sobre el que se aplica. Si el modo es aditivo, la máscara hace visible el vídeo
+sobre el que se aplica e invisible todo lo que está fuera de la máscara. 
+</p>
+<p align="center"> <img src=".././manual_images_en/compositor_mask_mode.png" alt="manual_images_en/compositor_mask_mode">
+</p><p align="center"> <b>Modo de la máscara</b>
+</p>
+<p>El <b>valor</b> de la máscara determina cuán extrema es la adición o substracción
+aplicada. En modo substractivo, valores mayores eliminan más alfa. En modo 
+aditivo, valores mayores hacen más brillante al región en la máscara, 
+dejando la región exterior siempre igualmente invisible. 
+</p>
+<p align="center"> <img src=".././manual_images_en/composite_mask_value.png" alt="manual_images_en/composite_mask_value">
+</p><p align="center"> <b>Valor de la máscara.</b>
+</p>
+<p>El número de la máscara identifica cuál de las 8 posibles máscaras estamos
+editando. Cada pista tiene hasta 8 posibles máscaras. Al pinchar o arrastrar en la ventana
+del compositor, sólo se está editando una de las máscaras. Cambiando el <b>número 
+de máscara</b>, se pasa a editar otra máscara. Las máscaras con números diferentes al
+de la que estamos editando siguen activas, pero no se ve la línea blanca porque 
+no se pueden editar. Al cambiar el número de máscara se escoge una máscara de entre todas
+las posibles para trabajar sobre ella, por eso las demás no se pueden modificar mientras
+tanto.
+</p>
+<p>Al usar múltiples máscaras, se aplica la unión de sus efectos (relación OR entre sus
+respectivos efectos). Todas las máscaras de una misma pista usan el mismo modo y valor.
+</p>
+<a name="IDX124"></a>
+<a name="IDX125"></a>
+<p>Los bordes de una máscara son líneas rectas por defecto, pero esto rara vez 
+es lo que deseamos. El parámetro <b>feather</b> determina cuántos píxeles se debe
+difuminar el borde de la máscara. Así se crean bordes parcialmente transparentes, 
+que toman aspecto borroso o difuminado, pero que a cambio son más lentos de renderizar.
+</p>
+<p align="center"> <img src=".././manual_images_en/compositor_feather.png" alt="manual_images_en/compositor_feather">
+</p><p align="center"> <b>Parámetro de difuminado</b>
+</p>
+<p>Finalmente, hay parámetros que afectan a un solo punto de la máscara actual, y no
+a toda la máscara. Son el comando <b>Borrar</b> y los parámetros <b>x, y</b>. Afectan al
+punto activo, que es el último punto arrastrado o creado en la ventana del compositor.
+Se puede activar cualquier punto (reemplazando al que estaba activo hasta ese momento)
+pinchando con el ratón en sus inmediaciones mientras se mantiene pulsada la tecla <b>CTRL</b>.
+Cuando se ha activado un punto, <b>Borrar</b> lo elimina y <b>x, y</b> permiten reposicionarlo
+con precisión, escribiendo su nueva posición.
+</p>
+<hr size="6">
+<a name="Recorte"></a>
+<a name="SEC127"></a>
+<h3 class="subsection"> 7.2.3 Recorte </h3>
+
+<p>El recorte cambia el valor de las dimensiones de salida y el proyector para reducir
+el área visible del dibujo. Active el botón Recorte <img src=".././manual_images_intl/crop.png" alt="manual_images_intl/crop"> 
+y la ventana de información de herramienta <img src=".././manual_images_intl/toolwindow.png" alt="manual_images_intl/toolwindow">
+en la ventana del compositor para visualizar el <b>diálogo de la herrmaienta recorte</b>.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_crop_tool.png" alt="manual_images_intl/compositor_crop_tool">
+</p><p align="center"> <b>Diálogo de la herramienta recorte</b>
+</p>
+<p>Pinche y arrastre en cualquier punto de la imagen para definir el área a
+recortar. Se dibuja un rectángulo sobre el vídeo. Volviendo a arrastrar 
+en cualquier sitio, se reemplaza dicho rectángulo por uno nuevo. También se
+puede mover una esquina cualquiera arrastrándola con el ratón.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_crop.png" alt="manual_images_intl/compositor_crop">
+</p><p align="center"> <b>Área de recorte.</b>
+</p>
+<p>Se puede mover el rectángulo entero (sin deformarlo) a una nueva posición,
+pulsando la tecla <b>MAY</b> mientras se arrastra con el ratón.
+</p>
+<p>La ventana de información de la herramienta permite aún más precisión, introduciendo
+las coordenadas numéricas. Cuando el rectángulo esté adecuadamente construido, 
+basta con pulsar el botón <b>Do it</b> (Ejecutar) para realizar la operación de corte.
+</p>
+<p><b>Nota:</b> Las coordenadas X1,Y1 y X2,Y2 del diálogo de recorte permiten introducir
+mediante el teclado las coordenadas de las esquinas superior izquierda y la inferior
+derecha, que son suficientes para definir el rectángulo completamente.
+</p>
+<hr size="6">
+<a name="Zonas-seguras"></a>
+<a name="SEC128"></a>
+<h3 class="subsection"> 7.2.4 Zonas seguras </h3>
+
+<p>En muchos dispositivos de electrónica de consumo, los bordes de la imagen
+se recortan, y dentro queda una región que no siempre es cuadrada (es decir,
+no siempre es igual que la vemos en la ventana del compositor). Los bordes
+están pensados para que haya algo de espacio adicional. Se pueden mostrar estos
+bordes activando el botón Mostrar zonas seguras, <img src=".././manual_images_intl/titlesafe.png" alt="manual_images_intl/titlesafe">.
+Es conveniente intentar que los títulos estén siempre dentro del rectángulo 
+interior, y la acción (o el contenido más interesante para el espectador) dentro del 
+rectángulo exterior.
+</p>
+<hr size="6">
+<a name="Modos-de-superposici_00f3n"></a>
+<a name="SEC129"></a>
+<h3 class="subsection"> 7.2.5 Modos de superposición </h3>
+
+<p>Cada pista de vídeo tiene un modo de superposición, al que se puede acceder expandiendo
+la pista. El modo de superposición es un menú desplegable a la izquierda de la región 
+expandida, bajo el &quot;fader&quot; (control de atenuación). Cuando no está desplegado, muestra 
+un icono que indica cuál es el modo de superposición actual.
+</p>
+<p>Pulse sobre el botón de expansión de la pista, <img src=".././manual_images_intl/expandpatch_checked.png" alt="manual_images_intl/expandpatch_checked">,
+para ver todas las opciones del vídeo, si no encuentra el modo de superposición.
+El modo de superposición de las pistas de vídeo es <b>normal</b> por defecto. Puede escoger
+otros modos pulsando el botón de modo de superposición y seleccionando uno de los que
+se le ofrecen.
+</p>
+<p>Los modos de superposición se procesan en la etapa de proyección, cuando se activa el 
+proyector, dentro de lo que sería el proceso anteriormente descrito de composición.
+A continuación se describen los diferentes modos de superposición.
+</p>
+<a name="IDX126"></a>
+<ul>
+<li> <b>Normal</b><br>
+Este modo usa una ecuación tradicional de Porter-Diff para fundir las pistas
+con alfa (transaparencia). Si el modelo de color usado no tiene alfa, la nueva 
+pista siempre reemplaza la salida previa.
+
+<a name="IDX127"></a>
+</li><li> <b>Adición</b><br>
+En este modo, lo que haya en la salida se suma a la pista actual. El resultado
+se funde en base al alfa de la pista actual, con la salida que ya hubiera.
+
+<a name="IDX128"></a>
+</li><li> <b>Sustraer</b><br>
+En este modo, a la salida que ya hubiera se le resta la pista actual y el resultado 
+se funde, según el alfa de al pista, con la salida que ya hubiera.
+
+<a name="IDX129"></a>
+</li><li> <b>Multiplicar</b><br>
+Es la operación más útil. Se multiplican la pista actual y la salida previa, 
+y el resultado se funde con la salida previa. Como pista actual es frecuente usar
+una imagen en blanco y negro sin canal alfa, o un título blanco sobre una imagen
+negra. Con la multiplicación, sólo se mostrarán los fragmentos bajo el área blanca.
+
+<a name="IDX130"></a>
+</li><li> <b>Dividir</b><br>
+Este modo divide la pista actual entre la salida previa y el resultado se 
+funde con la salida previa. Suele dar niveles sobrecargados.
+
+<a name="IDX131"></a>
+</li><li> <b>Replace</b><br>
+Con este modo no se realiza fusión ninguna, sino que la pista actual 
+reemplaza a la salida previa que pudiera haber.
+</li></ul>
+
+
+<hr size="6">
+<a name="Tama_00f1os-de-pista-y-salida"></a>
+<a name="SEC130"></a>
+<h3 class="subsection"> 7.2.6 Tamaños de pista y salida </h3>
+
+
+<p>El tamaño de la película provisional y el tamaño de la salida son independientes
+en nuestro proceso de composición, lo cual encaja bien con todo lo explicado hasta
+ahora. La mirilla de la cámara es el tamaño de la película provisional. Los efectos
+se procesan sobre dicha película temporal y les afecta el tamaño que ésta tenga. 
+La proyección de esta película es lo que se renderiza en la salida final, y se ve
+determinada por el tamaño de la salida. Si la película provisional es más pequeña
+que la salida, la película temporal se verá rodeada de una región blanca en la salida.
+Si es más grande que la salida, saldrá recortada.
+</p>
+<hr size="6">
+<a name="Tama_00f1o-de-pista"></a>
+<a name="SEC131"></a>
+<h4 class="subsubsection"> 7.2.6.1 Tamaño de pista </h4>
+
+<p>El tamaño de la pista provisional se define según el tamaño de la pista. Cada pista
+tiene un tamaño diferente. Pulsando con el botón derecho del ratón sobre una pista, 
+se hace aparecer el menú de dicha pista. Puede pulsar <b>Redimensionar pista</b> para 
+redimensionar al pista a cualquier tamaño arbitrario. De manera alternativa, se puede
+escoger <b>Redimensionar al tamaño de salida</b> para hacer la pista del mismo tamaño que la salida.
+</p>
+<p align="center"> <img src=".././manual_images_intl/resize_track.png" alt="manual_images_intl/resize_track">
+</p><p align="center"> <b>La ventana de redimensionamiento de pista.</b>
+</p>
+<p>Por ejemplo, la próxima imagen muestra cómo una pista de vídeo y la salida de un 
+proyecto del mismo tamaño se ven en el compositor.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_output_equal.png" alt="manual_images_intl/compositor_output_equal">
+</p><p align="center"> <b>Tamaño de la salida de vídeo del proyecto y</b>
+</p><p align="center"> <b>pista de vídeo de iguales dimensiones (720x480)</b>
+</p>
+<p>Al redimensionar una pista, su aspecto en el compositor varía en proporción.
+</p>
+<p>Reducir la pista (a 640 x 400, por ejemplo) y mantener el mismo tamaño de salida
+para el proyecto hace que la pista aparezca más pequeña en el compositor y enmarcada
+por un área blanca.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_output_small.png" alt="manual_images_intl/compositor_output_small">
+</p><p align="center"> <b>Nueva pista (640x400), más pequeña</b>
+</p><p align="center"> <b>que la salida del proyecto (720x480)</b>
+</p>
+<p>Agrandar el tamaño de la pista (a 800 x 560, por ejemplo) y mantener el mismo tamaño
+de salida en el proyecto hace que la pista aparezca más pequeña en el compositor y
+recortada al tamaño de la salida.
+</p>
+<p align="center"> <img src=".././manual_images_intl/compositor_output_large.png" alt="manual_images_intl/compositor_output_large">
+</p><p align="center"> <b>Nueva pista (800x560), recortada al</b>
+</p><p align="center"> <b>tamaño de la salida del proyecto (720x480).</b>
+</p>
+<p>Aprovechando la relación entre los tamaños de la pista y el proyecto se puede
+reducir o aumentar el tamaño de una pista concreta respecto a la salida final,
+y así crear &quot;efectos&quot; visuales como pantallas divididas, panorámicas y zooms.
+</p>
+<hr size="6">
+<a name="Tama_00f1o-de-la-salida"></a>
+<a name="SEC132"></a>
+<h4 class="subsubsection"> 7.2.6.2 Tamaño de la salida </h4>
+
+<p>El tamaño de la salida se ajusta en el menú <b>Fichero-&gt;Nuevo</b> al crear un 
+proyecto nuevo o en <b>Preferencias-&gt;Formato</b>. En la ventana de recursos hay
+otra forma de cambiar el tamaño de la salida. Pulsando con el botón derecho
+en un recurso de vídeo se puede seleccionar la opción <b>Match project size</b>
+para adecuar la salida a este recurso. Al crear pistas nuevas el tamaño de 
+pista siempre será el tamaño de salida especificado por estos métodos que acabamos
+de explicar.
+</p>
+<p>Al renderizar, el tamaño de la salida del proyecto será el de la pista de vídeo final
+en la que se renderiza la película provisional. 
+</p>
+<p>Si el tamaño de salida es mayor que el de la película provisional, entonces la 
+imagen transferida desde la película provisional ocupará una parte de la pista de 
+salida, quedando enmarcada por una región blanca. 
+</p>
+<p align="center"> <img src=".././manual_images_intl/output_small.png" alt="manual_images_intl/output_small">
+</p><p align="center"> <b>Tamaño de la salida (en verde) mayor</b>
+</p><p align="center"> <b>que el de la película provisional.</b>
+</p>
+<p>Si el tamaño de la salida es menor que el de la película temporal, parte del vídeo
+temporal aparecerá recortado en la salida final.
+</p>
+<p align="center"> <img src=".././manual_images_intl/output_large.png" alt="manual_images_intl/output_large">
+</p><p align="center"> <b>Tamaño de salida demasiado pequeño para el vídeo provisional.</b>
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC108" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_8.html#SEC133" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

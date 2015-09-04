@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 18 Keyframing</title>
+
+<meta name="description" content="Cinelerra CV Manual: 18 Keyframing">
+<meta name="keywords" content="Cinelerra CV Manual: 18 Keyframing">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_17.html#Transitions" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_19.html#Capturing-media" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Keyframing"></a>
+<a name="Keyframing-1"></a>
+<h1 class="chapter">18 Keyframing</h1>
+<a name="index-Keyframing"></a>
+
+<p>The term &quot;keyframe&quot; is borrowed from the world of animation where it refers to 
+an essential (key) drawing in a sequence. Typically this would be a starting or 
+an ending point of a smooth transition in a series of frames. The keyframes would 
+be drawn by the more senior artists and their assistants would draw the &quot;inbetweens&quot;. 
+The word keyframe has since been used to suggest similar concepts in other fields.<br>
+</p>
+<p>In non-linear digital video editing and video compositing software a keyframe 
+represents a certain value set by the user at a certain point in the timeline. 
+For example you could use keyframes to fade in a clip by setting the transparency 
+to 100% at the first keyframe and adding another keyframe 5 seconds later in the 
+timeline with a transparency of 0%. A keyframe is used to manipulate changes made 
+to the signal over time, essentially acting as a control point for the user to set 
+parameters e.g. of effects. Cinelerra interpolates the intermediate values making 
+the change happen smoothly and gradually over time.<br>
+</p>
+<a name="index-Default-keyframe"></a>
+<a name="index-Keyframe_002c-default"></a>
+<p>When you change the fade, camera, projector, or other parameters for a track, 
+they stay by default the same for the entire duration of the project. Their value 
+is stored in a keyframe. The keyframe it is stored in by default is known as the 
+<b>default keyframe</b>. The default keyframe applies to the entire duration only if 
+no other keyframes are present and it is not drawn on the timeline.
+</p>
+<p>The only way change occurs over time is if additional keyframes are created.<br>
+Setting static parameters with the default keyframe is only useful if you don&rsquo;t 
+want to change anything over time. Normally you need to move the camera around or 
+change mask positions e.g. if a mask needs to follow an object. Defining additional 
+keyframes to the default one is a very convenient technique for creating dynamic 
+changes.
+</p>
+<p>In Cinelerra, there are keyframes for almost every compositing parameter and 
+effect parameter.<br>
+Parameters can be graphically represented in many forms: curves, toggles, modes, 
+and so on.<br>
+The relative keyframe can be represented on the timeline as a little square on a 
+curve (e.g. fade) or as a symbol (e.g. mask).<br>
+In Cinelerra the term keyframe can be misleading: it doesn&rsquo;t refer to a frame, 
+but to a point between two frames.
+</p>
+<p>To display the graphical representation of parameters and the relative keyframes 
+use the <b>View</b> menu.<br>
+A faster way to toggle multiple parameters types is to bring up <b>Window -&gt; Show Overlays</b>. 
+This window allows toggling of every parameter in the view menu. When parameters 
+are selected, they are drawn on the timeline over the tracks they apply to.
+</p>
+<p>How to handle the different types of keyframes is described here. 
+</p>
+
+<hr>
+<a name="Curve-keyframes"></a>
+<a name="Curve-keyframes-1"></a>
+<h2 class="section">18.1 Curve keyframes</h2>
+<a name="index-Curve-keyframes"></a>
+<a name="index-Keyframes_002c-curve"></a>
+
+<p>Many parameters are stored in Bezier curves.  Go to <b>view-&gt;fade</b> or
+<b>view-&gt;...zoom</b> to show curves on the timeline for those parameters.  In
+either arrow editing mode or i-beam editing mode, move the cursor over the
+curves in the timeline until it changes shape.  Then merely by clicking and
+dragging on the curve you can create a keyframe at the position.
+</p>
+<p>After the keyframe is created, click drag on it again to reposition it.  When
+you click-drag a second keyframe on the curve, it creates a smooth ramp.
+<b>CTRL-dragging</b> on a keyframe changes the value of either the input control
+or the output control.  This affects the sharpness of the curve.  While the
+input control and the output control can be moved horizontally as well as
+vertically, the horizontal movement is purely for legibility and is not used in
+the curve value.
+</p>
+<p>You may remember that The Gimp and the Compositing masks all use &lt;SHIFT&gt; to
+select control points so why does the timeline use &lt;CTRL&gt;?  When you
+<b>SHIFT-drag</b> on a timeline curve, the keyframe snaps to the value of either
+the next or previous keyframe, depending on which exists.  This lets you set a
+constant curve value without having to copy the next or previous keyframe.
+</p>
+
+<hr>
+<a name="Navigating-curve-keyframes"></a>
+<a name="Navigating-curve-keyframes-1"></a>
+<h3 class="subsection">18.1.1 Navigating curve keyframes</h3>
+<a name="index-Navigating-curve-keyframes"></a>
+
+<p>There is not much room on the timeline for a wide range of curve values.  You
+need to zoom the curves in and out vertically to have any variability.  This is
+done by 2 tools: the automation fit button and automation zoom menu
+<img src="manual_images_intl/autozoom.png" alt="manual_images_intl/autozoom">.
+</p>
+<p>The automation fit button scales and offsets the vertical range so the selected
+curve area appears in the timeline.  If a region of the timeline is highlighted
+by the cursor, only that region is scaled.  In/out points do not affect the
+zoomed region.  <kbd>ALT-f</kbd> also performs automation fitting.
+</p>
+<p>The automation zoom menu manually changes the vertical scaling of the curves in
+multiples of 2.  Click on its tumbler to change the zoom.  <kbd>ALT-UP</kbd> and
+<kbd>ALT-DOWN</kbd> change the automation zoom from the keyboard.
+</p>
+<hr>
+<a name="Toggle-keyframes"></a>
+<a name="Toggle-keyframes-1"></a>
+<h2 class="section">18.2 Toggle keyframes</h2>
+<a name="index-Toggle-keyframes"></a>
+<a name="index-Keyframes_002c-toggle"></a>
+
+<p>Mute is the only toggle keyframe.  Mute keyframes determine where the track is
+processed but not rendered to the output.  Click-drag on these curves to create
+a keyframe.  Unlike curves, the toggle keyframe has only two values: on or off.
+&lt;CTRL&gt; and &lt;SHIFT&gt; do nothing on toggle keyframes.
+</p>
+<hr>
+<a name="Automatic-keyframes"></a>
+<a name="Automatic-keyframes-1"></a>
+<h2 class="section">18.3 Automatic keyframes</h2>
+<a name="index-Automatic-keyframes"></a>
+<a name="index-Keyframes_002c-automatic"></a>
+
+<p>You may have noticed when a few fade curves are set up, moving the insertion
+point around the curves causes the faders to reflect the curve value under the
+insertion point.  This is not just to look cool.  The faders themselves can set
+keyframes in automatic keyframe mode.  Automatic keyframe mode is usually more
+useful than dragging curves.
+</p>
+<p>Enable automatic keyframe mode by enabling the automatic keyframe toggle
+<img src="manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">.  In automatic keyframe mode, every time you tweak
+a key-framable parameter it creates a keyframe on the timeline.  Since
+automatic keyframes affect many parameters, it is best enabled just before you
+need a keyframe and disabled immediately thereafter.
+</p>
+<p>It is useful to go into the <b>View</b> menu and make the desired parameter
+visible before performing a change.  The location where the automatic keyframe
+is generated is under the insertion point.  If the timeline is playing back
+during a tweak, several automatic keyframes will be generated as you change the
+parameter.
+</p>
+<p>When automatic keyframe mode is disabled, a similarly strange thing happens.
+Adjusting a parameter adjusts the keyframe immediately preceding the insertion
+point.  If two fade keyframes exist and the insertion point is between them,
+changing the fader changes the first keyframe.
+</p>
+<p>There are many parameters which can only be keyframed in automatic keyframe
+mode.  These are parameters for which curves would take up too much space on
+the track or which can not be represented easily by a curve.
+</p>
+<p>Effects are only key-framable in automatic mode because of the number of
+parameters in each individual effect.
+</p>
+<p>Camera and projector translation can only be keyframed in automatic keyframe
+mode while camera and projector zoom can be keyframed with curves.  It is here
+that we conclude the discussion of compositing, since compositing is highly
+dependant on the ability to change over time.
+</p>
+<hr>
+<a name="Compositor-keyframes"></a>
+<a name="Compositor-keyframes-1"></a>
+<h2 class="section">18.4 Compositor keyframes</h2>
+<a name="index-Compositor-keyframes"></a>
+<a name="index-Keyframes_002c-compositor"></a>
+
+<p>Camera and projector translation is represented by two parameters: x and y.
+Therefore it is cumbersome to adjust with curves.  Cinelerra solves this
+problem by relying on automatic keyframes.  With a video track loaded, move the
+insertion point to the beginning of the track and enable automatic keyframe
+mode.
+</p>
+<p>Move the projector slightly in the compositor window to create a keyframe.
+Then go forward several seconds.  Move the projector a long distance to create
+another keyframe and emphasize motion.  This creates a second projector box in
+the compositor, with a line joining the two boxes.  The joining line is the
+motion path.  If you create more keyframes, more boxes are created.  Once all
+the desired keyframes are created, disable automatic keyframe mode.
+</p>
+<p>Now when scrubbing around with the compositor window&rsquo;s slider, the video
+projection moves over time.  At any point between two keyframes, the motion
+path is red for all time before the insertion point and green for all time
+after the insertion point.  It is debatable if this is a very useful feature
+but it makes you feel good to know what keyframe is going to be affected by the
+next projector tweak.
+</p>
+<p>Click-drag when automatic keyframes are off to adjust the preceding keyframe.
+If you are halfway between two keyframes, the first projector box is adjusted
+while the second one stays the same.  Furthermore, the video does not appear to
+move in step with the first keyframe.  This is because halfway between two
+keyframes the projector translation is interpolated.  In order to set the
+second keyframe you will need to scrub after the second keyframe.
+</p>
+<p>By default the motion path is a straight line, but it can be curved with
+control points.  <b>CTRL-drag</b> to set either the in or out control point of the
+preceding keyframe.  Once again, we depart from The Gimp because &lt;SHIFT&gt; is
+already used for zoom.  After the in or out control points are extrapolated
+from the keyframe, <b>CTRL-dragging</b> anywhere in the video adjusts the nearest
+control point.  A control point can be out of view entirely yet still
+controllable.
+</p>
+<p>When editing the camera translation, the behavior of the camera boxes is
+slightly different.  Camera automation is normally used for still photo
+panning.  The current camera box does not move during a drag, but if multiple
+keyframes are set, every camera box except the current keyframe appears to
+move.  This is because the camera display shows every other camera position
+relative to the current one.
+</p>
+<p>The situation becomes more intuitive if you bend the motion path between two
+keyframes and scrub between the two keyframes.  The division between red and
+green, the current position between the keyframes, is always centered while the
+camera boxes move.
+</p>
+<hr>
+<a name="Editing-keyframes"></a>
+<a name="Editing-keyframes-1"></a>
+<h2 class="section">18.5 Editing keyframes</h2>
+<a name="index-Editing-keyframes"></a>
+<a name="index-Keyframes_002c-editing"></a>
+
+<p><b>IMPORTANT:</b> when copying and pasting keyframes, make sure there is <b>no IN
+or OUT point defined on the timeline</b>.
+</p>
+<p>Keyframes can be shifted around and moved between tracks on the timeline using
+similar cut and paste operations to editing media.  Only the keyframes selected
+in the <b>view</b> menu are affected by keyframe editing operations, however.
+</p>
+<p>The most popular keyframe editing operation is replication of some curve from
+one track to the other, to make a stereo pair.  The first step is to solo the
+source track&rsquo;s record <img src="manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> patch by
+<b>SHIFT-clicking</b> on it.  Then either set in/out points or highlight the
+desired region of keyframes.  Go to <b>keyframes-&gt;copy keyframes</b> to copy them
+to the clipboard.  Solo the destination track&rsquo;s record
+<img src="manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> patch by <b>SHIFT-clicking</b> on it and go to
+<b>keyframes-&gt;paste keyframes</b> to paste the clipboard.
+</p>
+<p>The media editing commands are mapped to the keyframe editing commands by using
+the &lt;SHIFT&gt; key instead of just the keyboard shortcut.
+</p>
+<p>This leads to the most complicated part of keyframe editing, the default
+keyframe.  Remember that when no keyframes are set at all, there is still a
+default keyframe which stores a global parameter for the entire duration.  The
+default keyframe is not drawn because it always exists.  What if the default
+keyframe is a good value which you want to transpose between other non-default
+keyframes?  The <b>keyframes-&gt;copy default keyframe</b> and <b>keyframes-&gt;paste
+default keyframe</b> allow conversion of the default keyframe to a non-default
+keyframe.
+</p>
+<p><b>Keyframes-&gt;copy default keyframe</b> copies the default keyframe to the
+clipboard, no matter what region of the timeline is selected.  The
+<b>keyframes-&gt;paste keyframes</b> function may then be used to paste the clipboard
+as a non-default keyframe.
+</p>
+<p>If you have copied a non-default keyframe, it can be stored as the default
+keyframe by calling <b>keyframes-&gt;paste default keyframe</b>.  After using paste
+default keyframe to convert a non-default keyframe into a default keyframe, you
+will not see the value of the default keyframe reflected until all the
+non-default keyframes are removed.
+</p>
+<p>Finally, there is a convenient way to delete keyframes besides selecting a
+region and calling <b>keyframes-&gt;clear keyframes</b>.  Merely click-drag a
+keyframe before its preceding keyframe or after its following keyframe on the
+track.This is the only way you can simultaneously delete keyframes on ganged tracks.
+</p>
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Keyframing" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_19.html#Capturing-media" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

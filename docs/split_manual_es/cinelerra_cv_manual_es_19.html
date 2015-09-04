@@ -1,0 +1,867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 19. Renderizar archivos</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 19. Renderizar archivos">
+<meta name="keywords" content="Manual de Cinelerra CV: 19. Renderizar archivos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_18.html#SEC250" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_20.html#SEC273" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Renderizar-archivos"></a>
+<a name="SEC256"></a>
+<h1 class="chapter"> 19. Renderizar archivos </h1>
+
+<p>Rendering takes a section of the timeline, performs all the editing, effects
+and compositing, and stores it in a pure movie file.  You can then delete all
+the source assets, play the rendered file in a movie player, or bring it back
+into Cinelerra for more editing.  It is very difficult to retouch any editing
+decisions in the pure movie file, however, so keep the original assets and XML
+file around several days after you render it.
+</p>
+<p>All rendering operations are based on a region of the timeline to be rendered.
+You need to define this region on the timeline.  The navigation section
+describes methods of defining regions.  See section <a href="cinelerra_cv_manual_es_12.html#SEC138">La barra de tiempos</a>.  The
+rendering functions define the region based on a set of rules.  When a region
+is highlighted or in/out points are set, the affected region is rendered.  When
+no region is highlighted, everything after the insertion point is rendered.
+Merely by positioning the insertion point at the beginning of a track and
+unsetting all in/out points, the entire track is rendered.
+</p>
+
+<hr size="6">
+<a name="Renderizar-a-_00fanico-archivo"></a>
+<a name="SEC257"></a>
+<h2 class="section"> 19.1 Renderizar a único archivo </h2>
+
+<p>El modo más rápido de producir un contenido audiovisual en el disco es la función
+de renderizado a un único archivo. 
+</p>
+<p>Vaya a <b>Fichero-&gt;Renderizar</b> o pulse <kbd>MAY-R</kbd> para abrir el diálogo de renderizado.
+Pulse en la lupa <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> para abrir un archivo de
+selección de diálogo. Aquí puede determinar el nombre del archivo en el que 
+almacenar el archivo renderizado y los parámetros de codificación.
+</p>
+<p align="center"> <img src=".././manual_images_intl/render_window.png" alt="manual_images_intl/render_window">
+</p><p align="center"> <b>La ventana de renderizado.</b>
+</p>
+<p>En el diálogo de renderizado escoja un formato del menú <b>Formato de fichero</b>. El 
+formato escogido determina si se puede renderizar audio, sonido o ambos. Escoja los
+botones <b>Renderizar pistas de vídeo</b> y <b>Renderizar pistas de audio</b> para generar
+pistas de audio o vídeo.
+</p>
+<p>La llave inglesa <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> junto a cada uno de estos botones
+permite ajustar los parámetros de compresión que se van a usar al codificar el archivo final.
+Si el formato de fichero escogido no permite almacenar audio o vídeo no se podrá ajustar ningún
+parámetro de compresión para ese caso. Si las opciones <b>Renderizar pistas de vídeo</b> o
+<b>Renderizar pistas de audio</b> están seleccionadas y el formato de archivo no lo permite, 
+se producirá un error al intentar renderizar.
+</p>
+
+<hr size="6">
+<a name="Renderizar-a-archivos-separados"></a>
+<a name="SEC258"></a>
+<h2 class="section"> 19.2 Renderizar a archivos separados </h2>
+
+<p>La opción <b>Crear un fichero nuevo en cada etiqueta</b> crea varios ficheros diferentes, 
+uno nuevo cada vez que aparece una etiqueta al avanzar por la línea de tiempos. 
+Es una manera útil de dividir largas grabaciones de audio en varios archivos separados, 
+por ejemplo. Al usar la granja de renderizado la opción <b>Crear un fichero nuevo en 
+cada etiqueta</b> crea un trabajo de renderizado en cada etiqueta, sustituyendo así al 
+algoritmo interno de balance de carga que se suele usar para repartir el trabajo 
+entre las máquinas que componen la granja. 
+</p>
+<p>Cuando se selecciona  <b>Crear un fichero nuevo en cada etiqueta</b> cada fichero de salida
+debe tener un nombre diferente, como es lógico. Si el nombre proporcionado en el diálogo
+de renderizado contiene un número de 2 dígitos, este número de 2 dígitos se sobreescribirá
+con un número diferente, incrementado de uno en uno, para cada fichero resultante. Si no
+hay ningún número de 2 dígitos, Cinelerra concatena automáticamente un número diferente 
+para cada fichero a continuación del nombre proporcionado.
+</p>
+<p>Por ejemplo, si se proporciona el nombre de archivo <tt>`/hmov/track01.wav'</tt>, la parte 
+<samp>`01'</samp> se sobreescribiría para cada fichero de salida. Sin embargo, si se proporciona
+el nombre de archivo <tt>`/hmov/track.wav'</tt>, la primera salida sería <tt>`/hmov/track.wav01'</tt>,
+y las demás irían incrementando dicho número. 
+</p>
+<p>Este comportamiento sólo ocurre cuando el modo granja de renderizado está activo o 
+la opción de crear nuevos ficheros en cada etiqueta está activa.
+</p>
+<hr size="6">
+<a name="Estrategia-de-inserci_00f3n-de-los-archivos-renderizados"></a>
+<a name="SEC259"></a>
+<h2 class="section"> 19.3 Estrategia de inserción de los archivos renderizados </h2>
+
+<p>Lo último que el diálogo de renderizado permite escoger es un modo de inserción. Los
+modos de inserción funcionan igual que al cargar ficheros. En este caso al seleccionar
+<b>No insertar nada</b> el fichero generado tras renderizar se copiará en el disco duro del
+sistema, sin modificar para nada el proyecto abierto de Cinelerra. El resto de estrategias
+de inserción, en cambio, modifican la línea de tiempos del proyecto abierto, así que
+si se van a usar otras estrategias conviene asegurarse de que la línea de tiempos esté
+preparada para la inserción del archivo generado. El archivo generado se inserta 
+al acabar la operación de renderizado. 
+</p>
+<p>Obsérvese que, aunque sólo se renderice audio o vídeo, una estrategia de inserción 
+<b>Pegar...</b> siempre se comportará como una operación normal de pegado, borrando la 
+región seleccionada de la línea de tiempos y pegando únicamente los datos renderizados.
+Si sólo renderiza audio pero hay pistas de vídeo armadas, las pistas de vídeo resultarán
+truncadas al igual que las de audio, pero sólo se pegará material renderizado en las 
+pistas de audio. 
+</p>
+<hr size="6">
+<a name="Renderizar-por-lotes"></a>
+<a name="SEC260"></a>
+<h2 class="section"> 19.4 Renderizar por lotes </h2>
+
+<p>Si se desea renderizar muchos proyectos a archivos audiovisuales sin tener que
+recurrir repetidamente al diálogo <b>Renderizar...</b>, la función <b>Fichero-&gt;Renderizado
+por lotes</b> es la función a usar. A esta función hay que especificarle una o varias
+LDE para renderizar y los ficheros de salida para cada una de ellas. Cinelerra, de 
+manera automática, carga cada LDE y la renderiza sin necesidad de intervención del 
+usuario. Cada fichero LDE y su salida tras renderizar son un <b>lote</b>. Esto permite
+procesar grandes cantidades de contenidos audiovisuales y aumenta enormemente el valor
+de un computador caro. Por ejemplo, procesando por lotes durante la noche los proyectos
+en los que se ha trabajado durante el día se puede aumentar mucho la utilización del sistema
+y el tiempo útil del usuario.
+</p>
+<p>La primera cosa que hay que hacer al prepararse para hacer renderizado por lotes es
+definir los proyectos que se van a renderizar. El renderizado por lotes requiere un 
+fichero LDE separado para cada archivo y lote que se va a renderizar. Para cada proyecto hay
+que definir la región que se va a renderizar seleccionándola, insertando puntos de entrada 
+y salida o posicionando el punto de inserción al inicio de dicha región. A continuación se
+debe guardar el proyecto como una LDE. De esta manera se pueden definir tantos proyectos como
+se necesite. El renderizador sólo trabaja con la región activa del fichero LDE.
+</p>
+<p>Cuando todos los proyectos que se desea renderizar están así preparados, se puede
+lanzar el renderizado desde el menú <b>Fichero-&gt;Renderizado por lotes</b>. Se abre el diálogo
+para el renderizado por lotes. La interfaz para el renderizado por lotes es algo más compleja
+que para el renderizado en un único fichero.
+</p>
+<p>Se debe definir una lista de lotes antes de empezar la operación de renderizado por lotes. 
+La tabla de lotes aparece al pie del diálogo de renderizado por lotes y se llama 
+<b>Lotes a renderizar</b>. Por encima de esta lista se encuentran los parámetros de configuración para 
+un lote concreto. 
+</p>
+<p>Ajuste los parámetros de <b>Ruta de salida</b>, <b>Formato de fichero</b>, <b>Audio</b>, 
+<b>Vídeo</b> y <b>Crear un fichero nuevo en cada etiqueta</b> como si se tratara de un único
+fichero. Estos parámetros sólo se aplican a un lote. Además de estos parámetros típicos
+del renderizado debe seleccionar la fuente LDE para usar en el lote. Esto se hace 
+definiendo la <b>Ruta de la LDE</b>. 
+</p>
+<p>Si la lista de <b>Lotes a renderizar</b> está vacía o no hay nada seleccionado, pulse
+<b>Nuevo</b> para crear un lote. Los parámetros del nuevo lote coinciderán con los 
+parámetros recién ajustados.
+</p>
+<p>Se pueden crear más lotes con los mismos parámetros: para ello basta con pulsar 
+tantas veces como se desee el botón <b>Nuevo</b>. Se puede modificar la configuración de 
+cualquiera de los lotes así creados simplemente seleccionándolo en la lista y modificándolo
+en el área superior. El lote seleccionado siempre se mantiene sincronizado con la 
+información mostrada encima.
+</p>
+<p>Se pueden arrastrar los lotes en la lista, para alterar así el orden en que se 
+renderizarán. Puede eliminar permanentemente el lote seleccionado pulsando <b>Borrar</b>.
+</p>
+<p>En la lista de lotes hay una columna que habilita o deshabilita cada lote. De esta 
+forma es posible saltarse algunos lotes durante el renderizado, sin necesidad de 
+borrarlos o modificarlos. Pulse en la columna <b>Permitido</b> de la lista
+para habilitar o deshabilitar un lote. Si está chequeado, el lote se renderizará. 
+Si está en blanco, el proceso de renderizado omitirá dicho lote y saltará al siguiente.
+</p>
+<p>Las otras columnas de la lista de lotes son informativas.
+</p><ul>
+<li> <b>Salida</b> La ruta de salida del lote, donde se generará el archivo final.
+<a name="IDX147"></a>
+</li><li> <b>LDE</b> El archivo LDE fuente para el lote.
+</li><li> <b>Transcurrido</b> La cantidad de tiempo que ha sido necesaria para renderizar 
+el lote, si ya ha concluido dicha tarea.
+</li></ul>
+
+<p>Para empezar a renderizar desde el primer lote habilitado, pulse <b>Empezar</b>.
+</p>
+<p>Una vez comenzado el proceso de renderizado la ventana principal muestra el 
+progreso de cada lote. Al acabar el lote, la columna Transcurrido de la lista de
+lotes se actualiza y comienza el renderizado del siguiente lote, hasta acabar todos
+los lotes habilitados. El lote que está siendo renderizado se muestra en color rojo.
+</p>
+<p>Para detener el renderizado antes de acabar todos los lotes, sin cerrar el diálogo
+de renderizado por lotes pulse <b>Parar</b>.
+</p>
+<p>Para detener el renderizado antes de acabar todos los lotes y cerrar el diálogo de 
+renderizado por lotes pulse <b>Cerrar</b>.
+</p>
+<p>Para salir del diálogo de renderizado por lotes, independientemente de que el proceso
+de renderizado esté en marcha o no, pulse <b>Cerrar</b>.
+</p>
+<hr size="6">
+<a name="Granja-de-renderizado"></a>
+<a name="SEC261"></a>
+<h2 class="section"> 19.5 Granja de renderizado </h2>
+
+<p>La primera vez que se implementaron la interpolación bicúbica y el HDTV en Cinelerra
+resultó que el tiempo necesario para producir los resultados más sencillos era
+intolerablemente largo, incluso en el Xeon dual a 1.7 GHz más rápido de aquel momento.
+El uso de una granja de renderizado, aunque sea de la forma más sencilla,
+posibilita HDTV y consigue ejecutar SD en tiempo real.
+</p>
+<p>Aunque la interfaz de la granja de renderizado no sea espectacular, es lo suficientemente
+sencilla de usar para una suite de edición con menos de una docena de nodos. Con 
+granjas de varios cientos de nodos resulta aparotosa. La granja de renderizado 
+se invoca de manera transparente para todas las operaciones de renderizado (Fichero-&gt;Renderizado)
+cuando está activada en las preferencias del programa.
+</p>
+<p>Cinelerra divide la región seleccionada en la línea de tiempos en cierto número de 
+tareas, que luego se reparten entre los diferentes nodos en función del cálculo de 
+balance de cargas que hace el programa. Los nodos procesan los trabajos y almacenan la salida
+en diferentes ficheros del sistema. Los ficheros de salida no se concatenan. 
+Es importante que todos los nodos tengan acceso al mismo sistema de archivos, 
+montado en el mismo punto, para obtener los mismos recursos originales. 
+</p>
+<p>Si un nodo no puede acceder a un recurso de los que componen el proyecto mostrará un 
+mensaje de error en su consola, pero probablemente no morirá (no abortará el proceso).
+Si lo que no puede acceder es un directorio o recurso a la salida, entonces 
+probablemente el proceso de renderizado abortará. 
+</p>
+<p>Obsérvese que en el diálogo de renderizado la opción <b>Crear un fichero nuevo en 
+cada etiqueta</b> evita la aplicación del algoritmo de balance de cargas de Cinelerra.
+En su lugar, se crea una tarea nueva en cada etiqueta, con lo que se presupone
+que el usuario ha repartido las cargas como prefiere. Si esta opción está seleccionada
+pero no existen etiquetas, entonces sólo se creará una única tarea de renderizado.
+</p>
+<p>Las máquinas que componen una granja de renderizado en Cinelerra se organizan en 
+un nodo maestro y el resto de computadores como esclavos. El nodo maestro es el computador
+en el que se está ejecutando la interfaz gráfica de usuario. Los nodos esclavos están
+en cualquier lugar de la red y se ejecutan desde la línea de comandos. Se puede ejecutar un 
+nodo esclavo desde línea de comandos con <code>cinelerra -d</code>.
+</p>
+<p>Ésta es la configuración más simple. Escribiendo <code>cinelerra -h</code> tendrá acceso a 
+más opciones. El número de puerto por defecto se puede sobreescribir añadiendo un 
+número de puerto tras la opción  <samp>`-d'</samp>. Por ejemplo, un nodo esclavo 
+en el puerto 3658 se arrancaría así: <code>cinelerra -d 3658</code>
+</p>
+<p>Lo más frecuente es querer observar la salida renderizada y ajustar los tiempos 
+usando la línea de tiempos. Por otra parte, algunos formatos como MPEG no se 
+pueden copiar directamente. Por todo esto el resultado de la renderización se 
+deja como ficheros individuales. 
+</p>
+<p>Se pueden cargar estos ficheros individuales en Cinelerra de la siguiente manera:
+cree una pista nueva y especifique <b>Concatenar con las pistas existentes</b> en el 
+diálogo de carga. Los ficheros que soportan copia directa se pueden concatenar en 
+un único archivo, renderizándolos al mismo formato y con la granja de servidores
+deshabilitada. Además, para conseguir una copia directa las dimensiones de las pistas,
+las dimensiones de salida y las dimensiones de los recursos tienen que ser iguales.
+</p>
+<p>Los ficheros MPEG u otros ficheros que no soportan copia directa tienen que ser 
+concatenados con alguna otra aplicación. Se puede concatener ficheros MPEG con 
+la herramienta <b>cat</b> desde línea de comandos.
+</p>
+<p>La configuración de la granja de renderizado se describe en el capítulo de configuración,
+Los nodos esclavos, tradicionalmente, leen y escriben datos a un sistema de ficheros
+común en la red, y por lo tanto no necesitan discos duros.
+</p>
+<p>Lo ideal sería que todos los nodos que componen la granja tuvieran similar rendimiento.
+Cinelerra reparte las cargas según va encontrando los nodos. Si el último segmento 
+se encarga al nodo más lento, puede ocurrir que todos los demás nodos, más rápidos,
+tengan que esperar a que acabe el nodo más lento, incluso aunque ellos hubieran
+podido acabar el trabajo más rápido.
+</p>
+<hr size="6">
+<a name="Renderizar-desde-l_00ednea-de-comandos"></a>
+<a name="SEC262"></a>
+<h2 class="section"> 19.6 Renderizar desde línea de comandos </h2>
+
+<p>Se puede cargar un conjunto de trabajos pendientes de ser renderizados por lotes, 
+usando para ello la línea de comandos. Es decir, sin usar la interfaz gráfica. 
+Esto es útil si se prevé la posibilidad de que el sistema de ventanas X vaya a 
+tener problemas por alguna razón. También puede ser útil si se tiene acceso a un
+supercomputador remoto: por ejemplo, alguien podría tener acceso a un computador
+en la India pero vivir en América. Una interfaz de línea de comandos es ideal en 
+este caso.
+</p>
+<p>Para realizar el renderizado desde la línea de comandos, primero hay que ejecutar
+Cinelerra en modo gráfico. Seleccione el menú <b>Fichero-&gt;Renderizado por lotes</b>.
+Cree los lotes que pretenda renderizar en la ventana de renderizado por lotes y
+cierre dicha ventana. Esto guarda los lotes en un fichero. Ajuste los atributos 
+convenientes en <b>Preferencias-&gt;Preferencias...</b> y cierre el programa Cinelerra.
+Los ajustes que acaba de hacer son los que se emplearán la próxima vez que 
+se use un renderizado desde línea de comandos.
+</p>
+<p>En la línea de comandos, ejectue: <code>cinelerra -r</code>
+para procesar los trabajos por lotes pendientes sin interfaz gráfica de usuario.
+Es difícil ajustar todos los parámetros para realizar esta operación. Por eso
+el renderizado desde línea de comandos aborta si alguno de los ficheros de salida
+ya existe.
+</p>
+<p>Existen otros parámetros que permiten especificar archivos alternativos para las 
+preferencias y los lotes. Intentar usar algo diferente a los valores por defecto
+requiere mucho esfuerzo y dedicación, así que hasta la fecha no ha sido probado.
+</p>
+
+<hr size="6">
+<a name="Renderizar-v_00eddeos-para-Internet"></a>
+<a name="SEC263"></a>
+<h2 class="section"> 19.7 Renderizar vídeos para Internet </h2>
+
+
+<p>Si desea codificar un vídeo para ponerlo en Internet, le recomendamos renderizarlo
+en el formato Quicktime4linux y a continuación codificar dicho fichero a los 
+formatos MPEG4 o FLV. El fichero en formato Quicktime4linux renderizado desde 
+Cinelerra debe tener las siguientes propiedades:
+</p>
+<ul>
+<li> Opción de audio Complemento a dos (Two Complements) de 16bits, PCM
+</li><li> Opción de vídeo DV
+</li></ul>
+
+<hr size="6">
+<a name="Codificar-un-v_00eddeo-en-formato-MPEG4-para-Internet"></a>
+<a name="SEC264"></a>
+<h3 class="subsection"> 19.7.1 Codificar un vídeo en formato MPEG4 para Internet </h3>
+
+<p>Se consigue la mejor calidad codificando el fichero Quicktime4linux con 
+mencoder en dos pasos:
+</p>
+<p><b>Primer paso:</b>
+</p><pre class="verbatim">mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=1 \
+-vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
+</pre><p><b>Segundo paso:</b>
+</p><pre class="verbatim">mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=2 \
+-vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
+</pre><p>No olvide cambiar el tamaño de salida del vídeo, con la opción <samp>`-vf
+scale='</samp>.<br>
+</p>
+<p>Veamos algunas otras líneas de comandos. Proporcionan ficheros de vídeo 
+cuyo peso está en torno a 13 Mb para 3 minutos.<br>
+<b>Primer paso:</b>
+</p><pre class="verbatim">mencoder -oac pcm -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 \
+-ovc lavc -lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:\
+vcelim=7:lumi_mask=0.05:dark_mask=0.01:scplx_mask=0.3:naq:v4mv:mbd=2:\
+trell:cmp=3:subcmp=3:mbcmp=3:aspect=4/3:sc_threshold=1000000000:\
+vmax_b_frames=2:vb_strategy=1:dia=3:predia=3:cbp:mv0:preme=2:\
+last_pred=3:vpass=1:cgop -ofps 25 -of avi movie.mov -o /dev/null\
+-ffourcc DIVX
+</pre><p><b>Segundo paso:</b>
+</p><pre class="verbatim">mencoder -srate 32000 -oac mp3lame -lameopts cbr:br=${audio_bitrate}:\
+aq=0 -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 -ovc lavc\
+-lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:vcelim=7:\
+lumi_mask=0.05:dark_mask=0.01:scplx_mask=0.3:naq:v4mv:mbd=2:trell:\
+cmp=3:subcmp=3:mbcmp=3:aspect=4/3:sc_threshold=1000000000:\
+vmax_b_frames=2:dia=3:predia=3:cbp:mv0:preme=2:last_pred=3:vpass=3:\
+cgop -ofps 25 -of avi movie.mov -o movie.avi -ffourcc DIVX
+</pre>
+<p>En los casos en que el material tiene mucho ruido es posible y conveniente 
+adaptar las líneas anteriores; no dude en echar un vistazo a los filtros de 
+preprocesamiento de mencoder. Los parámetros *_mascara son realmente muy
+importantes al codificar a bajas tasas de bits.<br>
+</p>
+<p>Si desea que su fichero de vídeo se pueda reproducir adecuadamente en un 
+reproductor muy famoso que sólo funciona en Windows, debería tener en cuenta 
+que:
+</p><ul>
+<li> dicho reproductor no tiene en cuenta la información de relación de aspecto
+que se incluye en la cabecera AVI. Por esta razón es necesario escalar la imagen
+para que tenga la relación de aspecto adecuada. El ancho y el alto deben ser 
+múltiplos de 16. Las resoluciones recomendadas para el material 4/3 PAL son:
+384:288, 448:336, 512:384 o 704:528.
+</li><li> dicho reproductor perderá la sincronía A/V si se usa una tasa de 
+audio VBR en lugar de CBR.
+</li><li> el parámetro  <samp>`-ffourcc'</samp> es necesario para que dicho reproductor
+reconozca el códec de vídeo como Divx.
+</li></ul>
+
+<hr size="6">
+<a name="Codificar-un-v_00eddeo-en-formato-FLV-para-Internet"></a>
+<a name="SEC265"></a>
+<h3 class="subsection"> 19.7.2 Codificar un vídeo en formato FLV para Internet </h3>
+
+<p>Los ficheros FLV (Vídeo FLash) pesan muy poco y lo único que se necesita para 
+reproducirlos es un navegador web con el plugin de Flash, versiones 7 o superiores.
+Este formato es muy útil para compartir un vídeo con todo el público de Internet.
+</p>
+<p><b>Primer paso:</b>
+</p><pre class="verbatim">ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 1 -ar 22050 movie.flv
+</pre><p><b>Segundo paso:</b>
+</p><pre class="verbatim">ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 2 -ar 22050 movie.flv
+</pre>
+<p>Preste atención a la extensión del fichero de salida. La aplicación ffmpeg la usa
+para determinar el formato de salida. La frecuencia de muestreo que hay que usar 
+es 22050 y el parámetro <samp>`-ar'</samp> es necesario para que el vídeo sea codificado
+adecuadamente. La aplicación ffmpeg no escribe metadatos en el fichero flv. Para que
+algunos reproductores Flash puedan mostrar el avance durante la reproducción es necesario
+incluir los metadatos de información en el fichero. Para ello se puede usar la 
+herramienta FLVTool2 (<a href="http://www.inlet-media.de/flvtool2">http://www.inlet-media.de/flvtool2</a>):
+</p><pre class="verbatim">cat input_file.flv | flvtool2 -U stdin output_file.flv
+</pre>
+<hr size="6">
+<a name="Lista-de-compatibilidades-de-Quicktime-para-GNU_002fLinux"></a>
+<a name="SEC266"></a>
+<h2 class="section"> 19.8 Lista de compatibilidades de Quicktime para GNU/Linux </h2>
+
+<p>Scott Frase escribió una lista de compatibilidades de Quicktime para GNU/Linux. 
+Contiene un listado exhaustivo de todos los esquemas de compresión disponibles 
+en Quicktime y su compatibilidad con Cinelerra, Mplayer y algunos otros 
+reproductores. Este documento tiene dos secciones, una supone un proyecto 
+en formato de alta resolución HDV y la otra supone un proyecto en formato 
+DV. 
+</p>
+<p>Está disponible en inglés en la siguiente dirección:<br>
+<a href="http://content.serveftp.net/video/qtcompatibility.ods">http://content.serveftp.net/video/qtcompatibility.ods</a>
+</p>
+<p>Algunas observaciones interesantes:
+</p><ul>
+<li> Mplayer se comporta mejor con vídeo pequeño de resolución DV
+</li><li> La compatibilidad de Cinelerra con los archivos renderizados de un proyecto
+DV no es muy diferente de la compatibilidad con los ficheros renderizados desde
+un proyecto HDV.
+</li><li> Se incluye un gráfico de comparación entre mplayer/cinelerra para proyectos 
+DV/HDV.
+</li></ul>
+
+<hr size="6">
+<a name="Hacer-un-DVD"></a>
+<a name="SEC267"></a>
+<h2 class="section"> 19.9 Hacer un DVD </h2>
+
+
+<hr size="6">
+<a name="Renderizar-a-mpeg2"></a>
+<a name="SEC268"></a>
+<h3 class="subsection"> 19.9.1 Renderizar a mpeg2 </h3>
+
+<p>A continuación se presenta un método para exportar vídeo mpeg2 y hacer un 
+DVD de un solo capítulo. Este método permite determinar con precisión la opción
+de codificación que se desea, produciendo un fichero mpeg2 compatible al 100% con
+todos los reproductores domésticos de DVD.
+</p>
+<p>Debe estar instalado el programa mplex de <b>mjpegtools</b>. El paquete mjpegtools
+forma parte de la distribución hvirtual y la utilidad mplex se puede extraer
+de ahí. 
+</p>
+<p>En primer lugar, asegúrese de haber definido correctamente el formato de su 
+proyecto en Cinelerra, antes de renderizar el vídeo. Puede comprobarlo en 
+el menú <b>Preferencias-&gt;Formato</b>. PAL es 720x576 a 25 fotogramas por segundo
+y NTSC es 720x480 a 29.97 fotogramas por segundo.
+</p>
+<ol>
+<li> Cree un script <tt>`~/cine_render.sh'</tt>
+</li><li> Copie en <tt>`~/cine_render.sh file'</tt> las siguientes líneas:<br>
+<code>#/bin/bash</code><br>
+<code>mpeg2enc -v 0 -K tmpgenc -r 16 -4 1 -2 1 -D 10 -E 10 -g 15 -G 15 -q 6
+-b 8600 -f 8 -o $1</code>
+</li><li> Conceda permisos de ejecución a dicho fichero:
+<code>chmod 777 ~/cine_render.sh</code>
+</li><li> Abra Cinelerra y seleccione el fragmento de vídeo que desea renderizar, 
+usando para ello los puntos de entrada y salida, [ y ]
+</li><li> Pulse <kbd>May-R</kbd>
+</li><li> Seleccione el formato <b>YUV4MPEG Stream</b>
+</li><li> No seleccione <b>Renderizar pistas de audio</b>, pero sí <b>Renderizar pistas de vídeo</b>
+</li><li> Pulse sobre el icono de la llave inglesa.
+</li><li> En la ventana que se abrirá, indique el nombre del fichero  <tt>`m2v'</tt> que desea 
+crear. Ese fichero sólo contendrá vídeo. 
+</li><li> Pulse en <b>Use pipe</b> (usar tubería) y escriba este comando:
+<code>/home/&lt;your_user&gt;/cine_render.sh %</code>
+</li><li> Pulse OK para cerrar la segunda ventana, y OK de nuevo para renderizar su 
+fichero <tt>`m2v'</tt>
+</li><li> Cuando esté renderizado el fichero m2v abra de nuevo la ventana de renderizado
+y renderice un fichero AC3 a 224 kbits.
+</li><li> Finalmente, combine el vídeo y el audio con este comando:<br>
+<code>mplex -f 8 your_video_file.m2v your_audio_file.ac3 -o
+video_audio_file.mpeg</code><br>
+Si al usar mplex se producen errores, aumente la opción del cuantizador (quantizer), 
+<samp>`-q'</samp>, ver más adelante.
+</li></ol>
+
+<p>Puede modificar los parámetros de mpeg2enc si lo desea. Consulte el manual 
+de mpeg2enc. Algunos detalles sobre la configuración del mismo que pueden resultarle
+interesantes son los siguientes:
+</p><ul class="toc">
+<li> <samp>`-b 8600'</samp> : Ésta es la máxima tasa de bits de su fichero <tt>`m2v'</tt> (no
+incluye la tasa de bits del audio). Le recomendamos no aumentar este valor, pues
+podrían producirse errores al usar mplex para combinar el vídeo y el audio.
+</li><li> <samp>`-q 6'</samp> : La configuración de la cuantización. Si la reduce (nunca por 
+debajo de 3), la calidad aumenta, pero también lo hará la tasa de bits. Se 
+recomienda mantener la tasa de bits media (se muestra al combinar con mplex los
+ficheros de audio y vídeo) aproximadamente un 10% por debajo de la tasa de bits 
+definida con la opción <samp>`-b'</samp>. 
+</li><li> <samp>`-K tmpgenc'</samp> : invoca las matrices TMPGEnc. Reduce la tasa de bits
+media aproximadamente un 10%, frente a las tablas que se usan por defecto. Para 
+material de muy alta calidad puede probar a eliminar esta opción.
+</li></ul>
+
+<p>Si su material es ruidoso (por ejemplo, material analógico Hi8), puede añadir
+algunas utilidades del paquete mjpegtools a los comandos escritos en <tt>`~/cine_render.sh'</tt>:
+</p><ul>
+<li> Se pueden usar <code>y4mshift</code> y <code>y4mscaler</code> para eliminar los 
+bordes ruidosos alrededor del vídeo. Por ejemplo, al añadir estos comandos al principio
+de la línea de comandos en <tt>`cine_render.sh'</tt> se eliminan los bordes negros alrededor
+de un vídeo Hi8:<br>
+<code>yuvscaler -v 0 -I ACTIVE_700x560+8+8 | y4mshift -n 2 |</code>
+</li><li> <code>yuvdenoise</code> y <code>yuvmedianfilter</code> pueden ayudar a reducir el ruido. Por
+ejemplo:<br>
+<code>yuvdenoise -F | yuvmedianfilter -T 3 |</code><br>
+Reducir el ruido es una tarea compleja. Las opciones anteriores no son más que ejemplos.
+Si le interesa el tema, no dude en consultar el manual de mjpegtools y en subscribirse a 
+su lista de correo para obtener más información.
+</li></ul>
+
+<hr size="6">
+<a name="Hacer-el-men_00fa-de-un-DVD"></a>
+<a name="SEC269"></a>
+<h3 class="subsection"> 19.9.2 Hacer el menú de un DVD </h3>
+
+<p>El menú de un DVD se compone de:
+</p>
+<ul>
+<li> un fondo fijo (imagen o vídeo)
+</li><li> botones
+</li><li> sonido (música)
+</li></ul>
+
+<p>Puede usar un programa que le proporcione una interfaz gráfica de usuario, como
+qdvdauthor, dvdstyler, dvdwizard o tovid. Sin embargo, estos programas no son aún
+perfectos. Algunos incluso tienen fallos o limitan sus opciones. 
+</p>
+<p>Si usted prefiere usar una interfaz gráfica, le recomendamos tovid:<br>
+<a href="http://tovid.wikia.com/wiki/Main_Page">http://tovid.wikia.com/wiki/Main_Page</a><br>
+QDVDAuthor contenía muchos errores hace algún tiempo, pero parece ser que su 
+autor ha arreglado varios de ellos, lo que hace de QDVDAuthor un programa más usable.
+</p>
+<p>El método que explicamos a continuación es más complicado que usar un interfaz gráfica, 
+pero a cambio::
+</p>
+<ul>
+<li> produce DVDs que se pueden ver en todos los reproductores
+</li><li> no está sujeto a errores de un programa intermedio
+</li><li> le puede ahorrar mucho tiempo una vez aprendido, pues lo único que necesita
+para realizar un nuevo DVD es modificar ficheros de texto.
+</li></ul>
+
+<p>Estos son los pasos necesarios para crear un menú para su DVD:
+</p>
+<ul>
+<li> Crear el fondo del menú con Cinelerra.
+</li><li> Añadir los botones creando imágenes PNG.
+</li><li> Combinar los botones y el menú con spumux.
+</li></ul>
+
+<p>Supondremos que desea crear un menú con un fondo animado. Para ello, arranque Cinelerra
+y cree un proyecto que contenga lo que desee como fondo de su menú. Puede añadir música,
+si lo desea. Preste atención que este fondo se va a repetir en un bucle: es decir, cuando
+llegue al final volverá a empezar a reproducirse desde el principio, una y otra vez.
+</p>
+<p>Para dibujar los botones, tiene dos posibilidades:
+</p>
+<ul>
+<li> Dibujarlos en Cinelerra. De esa manera, podrá hacer botones animados, como por 
+ejemplo una imagen en miniatura para cada parte de su vídeo. 
+</li><li> No dibujarlos en Cinelerra. En este caso los añadirá al final, a partir de imágenes
+PNG &quot;sobreimpuestas&quot; al fichero mpeg2 con el menú. Este método es el más sencillo, pero
+no podrá mostrar botones animados.
+</li></ul>
+
+<p>Renderice el vídeo a m2v y ac3 usando el método <code>cine_render.sh</code> explicado 
+anteriormente. Combine el audio y el vídeo mediante mplex, como haría con cualquier 
+vídeo &quot;normal&quot;.
+</p>
+<p>Obtendrá un fichero mpeg2 que contendrá el fondo del menú, y algunos botones que se 
+mostrarán encima si los ha añadido con Cinelerra.
+</p>
+<p>Tenemos que usar spumux para definir la posición de cada botón en ese fichero mpeg2. 
+Si non dibujó los botones en Cinelerra, podrá añadirlos ahora usando spumux.
+</p>
+<p>spumux es una utilidad de línea de comandos que acepta dos argumentos:
+</p>
+<ul>
+<li> un fichero XML que indica la posición de los botones (sus coordenadas)
+</li><li> el nombre del fichero mpeg2 (el que renderizó como fondo para su menú)
+</li></ul>
+
+<p>Éste es un ejemplo de un fichero spumux:
+</p><pre class="verbatim">&lt;subpictures&gt;
+ &lt;stream&gt;
+  &lt;spu start=&quot;00:00:00.0&quot; image=&quot;buttons_normal.png&quot; highlight=
+  &quot;buttons_highlight.png&quot; select=&quot;buttons_select.png&quot;&gt;
+   &lt;button name=&quot;1&quot; x0=&quot;94 &quot; y0=&quot;234 &quot; x1=&quot;253 &quot; y1=&quot;278&quot;
+   down=&quot;2&quot; right=&quot;4&quot; /&gt;
+   &lt;button name=&quot;2&quot; x0=&quot;63 &quot; y0=&quot;287 &quot; x1=&quot;379 &quot; y1=&quot;331&quot; up=&quot;1&quot;
+   down=&quot;3&quot; right=&quot;5&quot; /&gt;
+  &lt;/spu&gt;
+ &lt;/stream&gt;
+&lt;/subpictures&gt;
+</pre>
+<ul>
+<li> <b>image=&quot;buttons_normal.png&quot;</b> Esta imagen png contiene los botones tal y como 
+deberían aparecer cuadno no estén seleccionados o iluminados.
+</li><li> <b>highlight=&quot;buttons_highlight.png&quot;</b> Esta imagen png contiene los botones cuando 
+están iluminados.
+</li><li> <b>select=&quot;buttons_select.png</b> Esta imagen png contiene los botones cuando están 
+seleccionados.
+</li></ul>
+
+<p>Si ya ha hecho los botones en Cinelerra, aquí debe incluir únicamente imágenes png
+vacías (es decir, completamente transparentes, 100% transparencia en todos sus píxeles).
+</p>
+<p>Las imágenes png usadas en spumux deben:
+</p>
+<ul>
+<li> contener <b>canal alfa</b>, es decir, soportar transparencia
+</li><li> estar en <b>4 colores indexados</b>. Puede convertir fácilmente una imagen 
+png cualquiera en otra en 4 colores indexados usando El Gimp.
+</li></ul>
+
+<p>En el ejemplo anterior de XML se incluye una línea por cada botón. Siempre debe haber 
+una línea por cada botón. Cada línea contiene las coordenadas del botón, y cada 
+botón siempre tendrá forma rectangular:
+</p>
+<ul>
+<li> <b>x0, y0</b>: esquina superior izquierda
+</li><li> <b>x1, y1</b>: esquina inferior derecha
+</li></ul>
+
+<p>Además, tiene que indicar a qué botón se realizará el movimiento cuando el espectador
+pulse los botones de arriba, abajo, derecha o izquierda en su mando a distancia. Por 
+ejemplo:
+</p>
+<pre class="verbatim">&lt;button name=&quot;3&quot; ...coordinates... up=&quot;1&quot; down=&quot;5&quot; left=&quot;2&quot; right=&quot;4&quot; /&gt;
+</pre>
+<p>En este ejemplo, si el botón 3 está seleccionado y el espectador pulsa la tecla
+Arriba (&quot;Up&quot;) de su mando, entonces se iluminará el botón 1. Si con el mismo botón
+3 seleccionado la tecla que pulsa en el mando a distancia es la de la derecha (&quot;Right&quot;), 
+entonces se iluminará el botón 4.
+</p>
+<p>Cuando haya acabado de editar su fichero XML para spumux debe usar el siguiente comando:<br>
+<code>spumux menu.xml &lt; menu.mpeg &gt; menu_with_buttons.mpeg</code><br>
+Esto creará un fichero llamado <tt>`menu_with_buttons.mpeg'</tt>. Es un fichero mpeg2 con 
+botones.
+</p>
+<hr size="6">
+<a name="Crear-un-DVD"></a>
+<a name="SEC270"></a>
+<h3 class="subsection"> 19.9.3 Crear un DVD </h3>
+
+<p>Tras renderizar a mpeg2 sus ficheros de vídeo, y haber preparado un menú con spumux,
+tiene que usar dvdauthor para &quot;crear&quot; el DVD.
+</p>
+<p>dvdauthor usa ficheros XML para describir la estructura de un DVD. La sintaxis es
+importante, y hay que prestar mucha atención a la sintaxis del fichero .xml. Si no 
+es suficientemente rigurosa puede ocurrir que muchos reproductores (sobre todo los 
+domésticos o portátiles) no lean bien el DVD. 
+</p>
+<p>Para ayudarle a empezar a usar dvdauthor le mostraremos algunos ejemplos
+de ficheros XML.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/ruta/a/la/carpeta/que/contendra/el/dvd&quot;&gt;
+    &lt;vmgm /&gt;
+    &lt;titleset&gt;
+        &lt;titles&gt;
+            &lt;pgc&gt;
+                &lt;vob file=&quot;/the/mpeg/file.mpeg&quot; /&gt;
+		&lt;post&gt;
+                    jump chapter 1;
+                &lt;/post&gt;
+            &lt;/pgc&gt;
+        &lt;/titles&gt;
+    &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p>Este es un fichero XML muy sencillo para dvdauthor. No hay menús, así que la reproducción
+del fichero de vídeo <tt>`/the/mpeg/file.mpeg'</tt> empezará tan pronto como inserte 
+el DVD en el reproductor.
+</p>
+<p>El comando en la etiqueta &lt;post&gt; indica que el vídeo debe reproducirse en bucle.
+Cuando el reproductor de DVD alcance el final de la película, volverá al primer 
+fotograma del inicio y empezará de nuevo. 
+</p>
+<p>Para crear el DVD, basta con escribir lo siguiente en línea de comandos:<br>
+<code>dvdauthor -x simple_example.xml</code>
+</p>
+<p>Pasemos a un ejemplo un poco más sofisticado. Al insertar el DVD se mostrará un 
+menú que permitirá al espectador escoger entre 4 vídeo diferentes.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/ruta/a/la/carpeta/que/contendra/el/dvd&quot; jumppad=&quot;yes&quot; &gt;
+&lt;vmgm&gt;
+ &lt;fpc&gt; jump menu 1; &lt;/fpc&gt;
+  &lt;menus&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc entry=&quot;title&quot; &gt;
+    &lt;vob file=&quot;menu.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;button name=&quot;1&quot; &gt; { g3=1; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;2&quot; &gt; { g3=2; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;3&quot; &gt; { g3=3; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;4&quot; &gt; { g3=4; jump titleset 1 menu entry root; } &lt;/button&gt;
+     &lt;post&gt; { jump cell 1; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+ &lt;/vmgm&gt;
+ &lt;titleset&gt;
+  &lt;menus&gt;
+   &lt;pgc entry=&quot;root&quot; &gt;
+    &lt;pre&gt; { if ( g3 gt 0 )  {
+		if ( g3 eq 1 ) { g3=0; jump title 1  chapter 1; }
+		if ( g3 eq 2 ) { g3=0; jump title 1  chapter 3; }
+		if ( g3 eq 3 ) { g3=0; jump title 1  chapter 5; }
+		if ( g3 eq 4 ) { g3=0; jump title 1  chapter 7; }
+		jump vmgm menu entry title;
+		}
+	} &lt;/pre&gt;
+    &lt;post&gt; { jump vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+  &lt;titles&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc pause=&quot;0&quot; &gt;
+    &lt;vob file=&quot;video_1.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_2.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_3.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;blackvideo.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;video_4.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;post&gt; { call vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/titles&gt;
+ &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p>El fichero <tt>`blackvideo.mpg'</tt> se usa para añadir una pantalla negra de 2 
+segundos entre cada vídeo. Se puede crear así:<br>
+<code>convert -size 720x576 xc:black -depth 8 blackframe.ppm</code><br>
+<code>dd if=/dev/zero bs=4 count=960000 | toolame -b 128 -s 48 /dev/stdin
+emptyaudio.mpa</code><br>
+<code>ppmtoy4m -S 420mpeg2 -n 50 -F 25:1 -r blackframe.ppm | mpeg2enc -a 2
+-n p -f 8 -o blackvideo.mpv</code><br>
+<code>mplex -f 8 -o blackvideo.mpg blackvideo.mpv emptyaudio.mpa</code>
+</p>
+
+<hr size="6">
+<a name="Grabar-un-DVD"></a>
+<a name="SEC271"></a>
+<h3 class="subsection"> 19.9.4 Grabar un DVD </h3>
+
+<p>Tras crear el DVD, encontrará en la carpeta de destino los siguientes directorios:
+<tt>`AUDIO_TS'</tt> y <tt>`VIDEO_TS'</tt>. Para probar su DVD antes de grabarlo, desplácese
+a dicha carpeta usando la línea de comandos y escriba:<br>
+<code>xine dvd:`pwd`</code>
+</p>
+<p>Si el DVD se reproduce adecuadamente haciendo esto, ha llegado el momento de grabarlo.
+Estando en la carpeta que contiene <tt>`AUDIO_TS'</tt> y <tt>`VIDEO_TS'</tt>, escriba el siguiente
+comando (adecuando el directorio al de su dispositivo de grabación de DVD, por ejemplo 
+/dev/dvdrw):<br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd -dvd-video -V
+VIDEO ./ &amp;&amp; eject /dev/dvd</code>
+</p>
+<p>Si tiene que hacer muchas copias, puede primero preparar una copia maestra .iso 
+usando este comando:<br>
+<code>nice -n -20 mkisofs -dvd-video -V VIDEO -o ../dvd.iso .</code><br>
+Este fichero <tt>`../dvd.iso'</tt> se puede grabar usando el siguiente comando:<br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd=../dvd.iso &amp;&amp;
+eject /dev/cdrom</code>
+</p>
+<p>Le recomendamos que no grabe a velocidades mayores de 4x, y que sólo use DVD-R de 
+buena calidad.
+</p>
+<p>Para probar su DVD en un reproductor específico (por ejemplo, uno doméstico o uno 
+portátil) sin desperdiciar varios DVD en caso de que algo vaya mal, puede 
+realizar la primera grabación sobre un DVD-RW. Para ello, primero formatee su 
+DVD-RW usando este comando:<br>
+<code>dvd+rw-format -lead-out /dev/dvd</code><br>
+Y a continuación grabe el DVD-RW usando los comandos anteriores.
+</p>
+<hr size="6">
+<a name="Renderizar-en-segundo-plano"></a>
+<a name="SEC272"></a>
+<h2 class="section"> 19.10 Renderizar en segundo plano </h2>
+
+<p>El renderizado en segundo plano permite reproducir casi en tiempo real efectos que 
+de otra manera serían tremendamente lentos de mostrar. Funciona renderizando 
+constinuamente la salida temporal: en cuanto se modifica algo en la línea de tiempos
+o se añade un nuevo efecto comienza el proceso de renderizado en segundo plano, de
+manera que si al poco tiempo intentamos visualizar en el compositor la escena podamos
+ver la escena, tal y como se acaba de renderizar hasta el momento. De no disponer de 
+esta posibilidad, al intentar visualizar en el compositor el trabajo que estamos montando
+se mostraría a trompicones o no se mostraría nada. 
+</p>
+<p>Si hay una granja de renderizado funcionando, el renderizado en segundo plano la usa
+de manera continua. De esta forma podemos mostrar en tiempo real cualquier proyecto, 
+simplemente disponiendo de una granja con suficiente capacidad de procesamiento (suficiente
+número de nodos).
+</p>
+<p>El renderizado en segundo plano se activa en el menú <b>Preferencias-&gt;Preferencias-&gt;Mejoras</b>.
+Tiene una función interactiva: <b>Mejoras-&gt;Usar renderizado en background</b>. Con ella
+se define el punto en que debe comenzar el renderizado en segundo plano, que será la 
+posición del punto de entrada. Si existe vídeo en esa posición, aparecerá una barra roja
+en la línea de tiempos, indicando el metraje que ya ha sido renderizado en segundo plano.
+</p>
+<p>A menudo es útil seleccionar Preferencias-&gt;Usar renderizado en background justo tras
+insertar un efecto o transición, para así poder visualizar enseguida el resultado
+a la tasa de fotogramas correcta y sin perder la sincronía entre el vídeo y el audio.
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_20.html#SEC273" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

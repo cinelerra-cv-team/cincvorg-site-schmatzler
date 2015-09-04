@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 14. Efectos renderizados</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 14. Efectos renderizados">
+<meta name="keywords" content="Manual de Cinelerra CV: 14. Efectos renderizados">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_13.html#SEC139" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_15.html#SEC239" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Efectos-renderizados"></a>
+<a name="SEC234"></a>
+<h1 class="chapter"> 14. Efectos renderizados </h1>
+
+<p>Además de los efectos en tiempo real, hay otro tipo de efectos. Se ejecutan sobre una 
+región de la pista y el resultado se almacena en el disco antes de visualizarlos por
+pantalla. Normalmente el resultado se pega en la pista sustituyendo los datos originales.
+</p>
+<p>Los efectos renderizados no aparecen en la ventana de Recursos. Se puede acceder a ellos
+mediante los menús <b>Audio-&gt;Renderizar efecto...</b> y <b>Vídeo-&gt;Renderizar efecto...</b>. Cada uno
+de estos menús abre un diálogo para los efectos renderizados. Los efectos renderizados
+sólo se aplican a un tipo de pista, o bien de audio o bien de vídeo. Si no existen pistas 
+de dicho tipo se producirá un error.
+</p>
+<p>Antes de usar el menú <b>Renderizar efecto...</b> hay que definir una región de la línea de
+tiempos a la que aplicar el efecto. Si no hay puntos de entrada y salida o región 
+seleccionada, el efecto se aplicará sobre toda la película que quede a continuación
+del punto de inserción. De haberlos, los puntos de entrada y salida o la región seleccionada 
+delimitan la región afectada.
+</p>
+<p>Además el efecto sólo se aplicará a las pistas que estén <b>montadas</b>. El resto de pistas
+se ignoran.
+</p>
+<p>Por último, el efecto renderizado procesa ciertos atributos de pistas cuando lee los 
+datos de entrada, pero no todos. Las transiciones en las pistas afectadas sí se aplican.
+El escalado (&quot;nudge&quot;) y los efectos, no. Esto permite pegar los nuevos datos en la 
+posición de la selección existente sin cambiar el valor de escalado (&quot;nudge&quot;).
+</p>
+<p>En el diálogo Renderizar Efecto hay una lista de todos los efectos, tanto los de 
+tiempo real como los renderizados. La diferencia es que aquí los efectos en tiempo real
+se renderizan, en vez de aplicarse bajo la pista. Es necesario escoger un efecto de la lista
+para ejecutarlo, y definir un fichero en el que almacenar el efecto renderizado, en el 
+cuadro de texto <b>Seleccionar un fichero a renderizar</b>. La lupa  
+<img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> facilita la selección de un fichero.
+</p>
+<p>Hay que escoger un formato de archivo que pueda manejar el tipo de pista. La llave inglesa,
+<img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench">, permite configurar el formato de fichero.
+</p>
+<p>También hay una segunda opción que permite <b>Crear un fichero nuevo en cada etiqueta</b>. Si tiene
+un CD ripeado en la línea de tiempos y desea dividirlo en diferentes ficheros, las
+etiquetas serían los puntos divisorios entre ficheros al escoger esta opción. Cuando la
+línea de tiempos está dividida con etiquetas y se escoge esta opción, el efecto se 
+reinicia en cada etiqueta. En consecuencia, las operaciones de normalizado en estas 
+circunstancias consideran los picos del fichero actual, y no los de toda la línea de tiempos.
+</p>
+<p>Lo último que se muestra es la estrategia de inserción, que funciona igual que en el 
+diálogo para renderizar. Debería observarse que incluso aunque los efectos se apliquen sólo
+a audio o vídeo, la estrategia de inserción se aplica a todas las pistas, igual que 
+las operaciones que involucran el portapapeles (copiar y pegar).
+</p>
+<p>Al pulsar <b>Aceptar</b> (el botón verde) en el diálogo de efectos, aparece otro diálogo
+relativo al efecto. Si el efecto es además un efecto en tiempo real, aparecerá un segundo
+diálogo pidiendo confirmación para la configuración actual. Tras aceptar esta configuración
+se procesa el efecto.
+</p>
+
+<hr size="6">
+<a name="Efectos-de-audio-renderizados"></a>
+<a name="SEC235"></a>
+<h2 class="section"> 14.1 Efectos de audio renderizados </h2>
+
+
+<hr size="6">
+<a name="Resample"></a>
+<a name="SEC236"></a>
+<h3 class="subsection"> 14.1.1 Resample </h3>
+
+<p>Multiplica el número de cada muestra a la salida por un factor de escala para así 
+encontrar el número de muestra correspondiente a la entrada. La tasa de muestreo
+del fichero de salida será la del proyecto, pero su longitud cambiará para reflejar
+los cambios en el número de muestras. Tras el nuevo muestreo filtra el audio para 
+eliminar el aliasing.
+</p>
+<p>Si el factor de escala es 2, cada dos muestras de entrada se reducirán a una sola
+a la salida y el fichero de salida tendrá la mitad de muestras que el de entrada.
+Si es 0.5, cada 0.5 muestras a la entrada se alargarán para dar lugar a 1 muestra
+completa a la salida, teniendo por lo tanto el fichero de salida el doble de muestras
+que el de entrada. 
+</p>
+<hr size="6">
+<a name="Efectos-de-v_00eddeo-renderizados"></a>
+<a name="SEC237"></a>
+<h2 class="section"> 14.2 Efectos de vídeo renderizados </h2>
+
+
+<hr size="6">
+<a name="Reframe"></a>
+<a name="SEC238"></a>
+<h3 class="subsection"> 14.2.1 Reframe </h3>
+
+<p>Hace exactamente lo mismo que el efecto de tiempo real <b>ReframeRT</b> en modo <b>Estirar</b>.
+Multiplica el número de fotograma a la salida por el factor de escala para encontrar
+el correspondiente fotograma de entrada y cambia la longitud de la secuencia. A diferencia
+de ReframeRT debe ejecutarse desde el menú <b>Vídeo-&gt;Renderizar efecto...</b> y debe 
+renderizar el resultado de su ejecución.
+</p>
+<p>Observe que <b>Reframe</b> no usa la tasa de fotogramas escalada como tasa de fotogramas
+del fichero renderizado. Lo que hace es producir un fichero de longitud escalada, más largo
+que la secuencia original si la escala es menor que 1, pero con la misma tasa de 
+fotogramas que el proyecto. La nueva longitud es 1/(factor escala) por la original.
+</p>
+<p><b>Crear vídeo a cámara lenta o cámara rápida:</b>
+</p><ol>
+<li> Disponga el clip de vídeo que desea muestrear de nuevo sobre una pista.
+</li><li> Seleccione la región que desea volver a muestrear.
+</li><li> Escoja el menú <b>Vídeo-&gt;Renderizar efecto...</b>.
+</li><li> En la lista de efectos escoja Reframe.
+</li><li> Introduzca el formato de salida y la estrategia de inserción para el clip 
+que va a crear.
+</li><li> Pulse Aceptar.
+</li><li> En el diálogo subsiguiente introduzca el factor de escala 2 para que el clip
+vaya al doble de velocidad o 0.5 para que vaya a la mitad de velocidad.
+</li></ol>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_15.html#SEC239" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

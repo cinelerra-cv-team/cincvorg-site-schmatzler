@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<link rel="stylesheet" href="../main.css" type="text/css">
+<title>Cinelerra community: Developer's corner</title>
+</head>
+
+<body>
+<div class="menu">
+ <ul>
+   <li><a href="../">Main page..</a></li>
+ <hr>
+   <li><a href="build-req.html">Building Cinelerra</a> from source;
+   build requirements.</li>
+   <li><a href="http://cv.cinelerra.org/getting_cinelerra.php">
+    Download Cinelerra</a></li>
+    
+    <hr>
+  </ul>
+  
+</div>
+
+<div class="body">
+<h1>Developer's corner (not up to date)</h1>
+
+<p><strong>This is for coders and tinkerers, not mere users!</strong> </p>
+
+<div class="boxa">
+<p><a href="cvswrite.html">
+The people with SVN write access</a>, names and nicks
+</p>
+
+ <div class="boxb">
+<h2>Doxygen source code documentation</h2>
+
+<p>I've run doxygen on Cinelerra 2.0 from our svn repository:
+<br>
+<a href="doxy/svn_2.0-r707/guicast/html/">
+The guicast subdirectory</a> and
+<a href="doxy/svn_2.0-r707/cinelerra/html/">
+the cinelerra subdirectory</a>.
+
+<p>  Thanks to Jens Seidel for suggesting
+doxygen, and providing a template configuration file.</p>
+</div>
+
+ <div class="boxa">
+<h2>Merging in new releases from Heroines</h2>
+
+<p>Johannes Sixt has written a thorough <a href="/~j6t/cinelerramerge/">
+HOWTO</a> describing how he would import Heroines' next Cinelerra release
+as a "vendor branch" into the the CVS.</p>
+</div>
+
+ <div class="boxb">
+<h2>Sample clips</h2>
+
+<ul>
+  <li><a href="/footage/coals.mov">Burning coal</a> (DV Quicktime, 15MB, 5 seconds)
+  shows heavy chroma artifacts caused by the camera.</li>
+
+  <li><a href="/~baver/cinelerra/clips/example10sec.mov">example10sec.mov</a> is part of an
+  amateur movie edited with Cinelerra.  It demonstrates compositing.
+  <a href="/~baver/cinelerra/clips/example10sec.mpg">example10sec.mpg</a> is the same clip
+  encoded in MPEG.
+</ul>
+
+</div>
+
+</div> <!-- end body div -->
+
+<hr>
+<address>Herman Robak, herman at skolelinux no</address>
+</body> </html>

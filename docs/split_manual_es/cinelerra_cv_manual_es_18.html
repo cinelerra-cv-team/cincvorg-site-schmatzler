@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 18. Capturar contenidos</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 18. Capturar contenidos">
+<meta name="keywords" content="Manual de Cinelerra CV: 18. Capturar contenidos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_17.html#SEC243" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Capturar-contenidos"></a>
+<a name="SEC250"></a>
+<h1 class="chapter"> 18. Capturar contenidos </h1>
+
+
+<hr size="6">
+<a name="Capturar-usando-Cinelerra"></a>
+<a name="SEC251"></a>
+<h2 class="section"> 18.1 Capturar usando Cinelerra </h2>
+
+
+<hr size="6">
+<a name="Funciones-de-grabaci_00f3n-de-Cinelerra"></a>
+<a name="SEC252"></a>
+<h3 class="subsection"> 18.1.1 Funciones de grabación de Cinelerra </h3>
+
+<p>Idealmente, todos los contenidos estarían almacenados en discos duros, CD-ROM, memorias
+flash o DVD, de modo que cargarlos en Cinelerra sería tan sencillo como cargar un archivo.
+En realidad hay muy pocas fuentes de material original a las que se pueda acceder como
+un sistema de ficheros: frecuentemente confían en mecanismos de transporte de cinta o 
+o extraños procedimientos de entrada/salida para transferir los datos entre computadores.
+Estos tipos de contenidos se importan en Cinelerra mediante el diálogo Grabación.
+</p>
+<p>El primer paso para realizar una grabación es configurar el dispositivo de entrada. En
+el menú <b>Preferencias-&gt;Preferencias...</b> se presentan algunos parámetros, descritos en 
+. Estos parámetros se aplican a la grabación independientemente de la configuración del 
+proyecto, porque los parámetros de grabación suelen coincidir con la máxima capacidad
+del hardware, mientras que la configuración del proyecto suele cambiar con cada nuevo proyecto.
+</p>
+<p>Se puede grabar una fuente de entrada/salida desde el menú <b>Fichero-&gt;Grabar...</b>. 
+Se abre un diálogo que solicita un formato de salida, igual que en el caso del renderizado.
+Una vez escogido el formato aparecen la ventana y el monitor de grabación.
+</p>
+<p>La ventana de grabación se divide en regiones. Aunque muchos parámetros varían 
+dependiendo de la naturaleza del fichero (audio, vídeo), las regiones de la ventana
+siempre son las mismas.
+</p>
+<ul>
+<li> La región del formato de salida describe el formato del fichero de salida
+y la posición actual en el mismo.
+</li><li> El área de edición de grupo permite cambiar los parámetros del grupo actual.
+</li><li> Los controles de navegación inician y detienen la grabación de diferentes maneras.
+</li><li> La lista de grupos muestra todos los grupos definidos.
+</li><li> El área de confirmación permite determinar cómo se van a importar los ficheros de
+salida en la línea de tiempos.
+</li></ul>
+
+<p align="center"> <img src=".././manual_images_en/recording.png" alt="manual_images_en/recording">
+</p><p align="center"> <b>Áreas en que se divide la ventana de grabación.</b>
+</p>
+<p>La grabación en Cinelerra se organiza en torno al concepto de <b>lotes</b>. En esencia, 
+un lote sirve para definir un fichero de salida diferente para el resultado de la grabación.  
+Por el momento podemos ignorar este concepto por entero y grabar simplemente pulsando el botón 
+de grabación <img src=".././manual_images_intl/record.png" alt="manual_images_intl/record">.
+</p>
+<p>El botón de grabación abre el fichero de salida actual si no está ya abierto, y escribe
+en él los datos capturados. El botón de parada permite detener la grabación. Para continuar
+grabando se debe pulsar de nuevo el botón de grabación, en cuyo caso los nuevos datos de 
+la grabación se añadirán al fichero de salida a partir del final del mismo. En el caso de
+que se esté grabando un archivo de vídeo existe un botón que permite grabar un único 
+fotograma, <img src=".././manual_images_intl/singleframe.png" alt="manual_images_intl/singleframe">.
+</p>
+<p>Cuando se ha grabado suficiente material y se desea detener el proceso, se debe escoger
+un método de inserción de entre las diferentes <b>Estrategias de inserción</b> y pulsar el 
+botón <b>Cerrar</b>. 
+</p>
+<hr size="6">
+<a name="Grabaci_00f3n-por-lotes"></a>
+<a name="SEC253"></a>
+<h3 class="subsection"> 18.1.2 Grabación por lotes </h3>
+
+<p>Ahora llegamos al concepto de lotes. Los lotes intentan hacer que los datos de 
+entrada/salida parezcan más como un sistema de ficheros. Tradicionalmente los lotes se 
+usaban para dividir una cinta en varios programas diferentes y guardar cada uno de ellos 
+como un fichero diferente, en lugar de grabar todos los datos seguidos en la cinta. 
+Debido al elevado coste necesario para desarrollar mecanismos de control con 
+precisión de fotogramas, el único uso de los lotes en la actualidad es la grabación
+de diferentes programas a diferentes horas del día. Esto sigue siendo útil para grabar
+programas de televisión o películas en diferido, como bien saben todos aquellos que no
+disponen de medios para adquirir equipos más sofisticados.
+</p>
+<p>La ventana de grabación soporta una lista de lotes y dos modos de grabación:
+interactiva y por lotes. La grabación interactiva empieza al pulsar el botón de grabación
+y usa el lote actual para determinar todo salvo la hora de inicio. El lote actual 
+está configurado por defecto para comportarse como una cinta. 
+</p>
+<p>La grabación por lotes se produce al pulsar el botón <b>Empezar</b>. En la grabación por lotes,
+el <b>Tiempo de inicio</b> es la hora a la que empieza la grabación del lote. 
+</p>
+<p>Lo primero que querrá hacer es crear algunos lotes. Cada lote tiene ciertos parámetros
+y métodos de ajuste. 
+</p>
+<ul>
+<li> <b>Activo</b><br>
+Determina si el lote está incluido en las operaciones de grabación por lotes. Pulsando en
+la lista, en la columna <b>Activo</b>, se habilita o deshabilita un lote.
+
+</li><li> <b>Ruta</b><br>
+Es el fichero en el que se va a grabar el lote. El nombre de archivo especificado en el 
+diálogo de grabación es el nombre del primer lote, para simplificar la grabación interactiva,
+pero se puede cambiar en la ventana de grabación, en el área <b>Edición de lotes</b>.
+
+</li><li> <b>Noticias</b><br>
+Muestra si el fichero existe o no. Este atributo es muy importante, puesto que si el 
+fichero existe no aparecerá diálogo de confirmación. La primera vez que pulse el botón de 
+grabación se abrirá el fichero. Si el fichero ya existía, en este instante se borra. 
+La columna de Noticias muestra <b>Existe el fichero</b> si el fichero existe, y <b>OK</b> si 
+no es así. Cada vez que desee reiniciar la grabación en el mismo lote la columna de Noticias 
+debería decir <b>Abrir</b>, indicando que el fichero ya está abierto y no se borrará la 
+próxima vez que pulse el botón de grabación.<br>
+Si cambia de lote tras grabar en uno, se cierra el fichero sobre el que estuvo grabando. 
+La próxima vez que desee grabar en ese lote se borrará el fichero antes de empezar. 
+
+</li><li> <b>Tiempo de inicio</b><br>
+Es la hora del día, con un reloj de 24 horas, a la que el lote empezará a grabar, en 
+modo de grabación por lotes. La hora de inicio podría ser también una hora de cinta y 
+un número de bobina si algún día se implementa un control adecuado, pero por ahora es 
+una hora del día.
+
+</li><li> <b>Duración</b><br>
+Es la longitud del lote. Sólo tiene sentido si el <b>Modo</b> del lote es <b>Timed</b> 
+(temporizado). Una vez que la duración de la grabación ha alcanzado el valor 
+de <b>Duración</b> la grabación para, tanto en modo interactivo como por lotes.
+
+</li><li> <b>Fuente</b><br>
+Sólo tiene sentido cuando el hardware de captura tiene múltiples fuentes. Normalmente
+la fuente es un canal emisor o una entrada física diferente. Cuando el lote actual acaba y empieza la 
+grabación en un nuevo lote, la fuente cambia a la que esté determinada para el siguiente
+lote. Esto permite, por ejemplo, grabar diferentes emisoras de televisión a horas diferentes.
+</li></ul>
+
+<p>La ventana de grabación informa sobre el <b>lote actual</b>. El lote actual no necesariamente 
+coincide con el lote que aparece seleccionado en la lista de lotes. El texto del lote actual
+aparece coloreado de rojo en la lista de lotes. El lote seleccionado es el que se está 
+editando en el área de edición de lotes. Así es posible editar los atributos de varios lotes
+sin cambiar el lote actual.
+</p>
+<p>Todas las operaciones de grabación se realizan sobre el lote actual. Si hay múltiples lotes
+se puede escoger uno de ellos para que sea el lote actual. Para ello, debe seleccionarse y
+pulsar sobre la columna <b>Activo</b> del mismo. Si se pulsa el botón de grabación se graba 
+inmediatamente el lote actual en modo interactivo.
+</p>
+<p>Tanto en el modo de grabación interactivo como por lotes, cuando acaba la grabación del lote
+actual se activa el siguiente lote. Todas las grabaciones futuras se hacen por lotes. Cuando 
+acaba el primer lote, el siguiente se queda brillando hasta que llegue su hora de inicio.
+</p>
+<p>El botón <b>Parar la operación</b> permite interrumpir la grabación, tanto en modo interactivo
+como por lotes.
+</p>
+<p>También existe un botón de rebobinado, <img src=".././manual_images_intl/rewind.png" alt="manual_images_intl/rewind">. Tanto en modo
+interactivo como por lotes este botón cierra el fichero del lote actual. La próxima operación
+de grabación sobre el lote actual borrará el fichero, por lo tanto.
+</p>
+<hr size="6">
+<a name="Editar-informaci_00f3n-de-sintonizador"></a>
+<a name="SEC254"></a>
+<h3 class="subsection"> 18.1.3 Editar información de sintonizador </h3>
+
+<p>A veces, durante el proceso de grabación o de configuración, es necesario definir y seleccionar
+los canales que se van a sintonizar para grabar o reproducir. En el caso de los drivers de grabación
+Video4Linux y Buz, los canales de sintonización definen la fuente. Cuando se usa el driver Buz también 
+para la reproducción, los canales de sintonización definen el destino.
+</p>
+<p>Se puede definir canales de sintonización pulsando el botón de canales, <img src=".././manual_images_intl/channel.png" alt="manual_images_intl/channel">,
+que se encuentra en la ventana del monitor de grabación. Al pulsar este botón se muestra 
+la ventana de edición de canales. En esta ventana se pueden añadir, editar y ordenar los canales.
+Además con algunos drivers de vídeo es posible ajustar la calidad de la imagen.
+</p>
+<p>La operación <b>Añadir...</b> abre una ventana de edición de canal. El nombre del canal aparece
+en la lista de canales. La fuente del canal es el valor físico de frecuencia en la tabla de
+sintonías correspondiente al nombre.
+</p>
+<p>Se puede usar el control deslizante <b>Afinar</b> para modificar ligeramente la frecuencia del
+canal, si el driver lo soporta. La norma (control <b>Norm</b>) y la tabla de frecuencias definen
+qué tabla de frecuencias se usará para definir las fuentes. Si el dispositivo soporta 
+múltiples entradas el menú de entrada permite seleccionarlas. 
+</p>
+<p>Se puede ordenar los canales seleccionando uno de ellos en la lista y pulsando 
+<b>Mover hacia arriba</b> o <b>Mover hacia abajo</b> para desplazarlo por la lista.
+</p>
+<p>Una vez definidos los canales, se puede usar el control <b>Origen</b> de la ventana de grabación
+para seleccionar los canales que se van a grabar. Se dispone de la misma posibilidad de selección
+en la ventana del monitor del grabación. Tenga en cuenta que las selecciones de canal en la 
+ventana de grabación y en la ventana del monitor se almacenan en el lote actual.
+</p>
+<p>Con algunos drivers es posible que la opción <b>Intercambiar campos</b> se muestre visible. Estos
+drivers no siempre consiguen acertar con el orden correcto de los campos sin intervención
+humana. Si las líneas pares e impares están confundidas, pulse esta opción para grabar 
+en el orden correcto.
+</p>
+<hr size="6">
+<a name="Capturar-usando-dvgrab"></a>
+<a name="SEC255"></a>
+<h2 class="section"> 18.2 Capturar usando dvgrab </h2>
+
+<p>dvgrab es una excelente herramienta para capturar vídeos desde una cámara digital DV
+mediante línea de comandos. Al invacarlo pondrá automáticamente la cámara en modo
+de reproducción, y empezará a almacenar los vídeos en el disco duro de su sistema. 
+Los ficheros de vídeo se etiquetarán secuencialmente, por ejemplo: <tt>`001.avi'</tt>, 
+<tt>`002.avi'</tt> etc&hellip;
+</p>
+<p>Para instalar dvgrab, use el mecanismo apropiado a su distribución de GNU/Linux 
+(apt, rpm, deb, etc&hellip;) o consulte el sitio web de dvgrab.
+</p>
+<p>Captura de vídeos en cuatro pasos sencillos:
+</p><ol>
+<li> Cree el directorio en el que desee almacenar los vídeos capturados.
+</li><li> En consola, <code>cd</code> a ese directorio
+</li><li> Para iniciar la captura: <code>dvgrab --buffers 500</code> y <kbd>RETURN</kbd>.
+</li><li> Pulse <kbd>CTRL-C</kbd> para detener la captura de vídeo.
+</li></ol>
+
+<p>La opción <samp>`--autosplit'</samp> es muy útil. Divide las escenas según el código de 
+tiempos. Sin embargo, sólo funciona al grabar desde una cámara digital DV. No funciona
+al grabar desde un convertidor analógico-digital como Canopus ADVC110, ya que no se puede
+usar el código de tiempos del material original.
+</p>
+<p>Consulte el manual de dvgrab para obtener más información sobre la funcionalidad de dvgrab.
+</p>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC250" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

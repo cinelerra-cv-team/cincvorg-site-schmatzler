@@ -1,0 +1,2522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 14 Realtime effects</title>
+
+<meta name="description" content="Cinelerra CV Manual: 14 Realtime effects">
+<meta name="keywords" content="Cinelerra CV Manual: 14 Realtime effects">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_13.html#Timebar" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_15.html#Rendered-effects" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Realtime-effects"></a>
+<a name="Realtime-effects-1"></a>
+<h1 class="chapter">14 Realtime effects</h1>
+<a name="index-Realtime-effects"></a>
+<a name="index-Effects_002c-realtime"></a>
+
+<p>These are layered under the track they apply to.  They process the track when
+the track is played back, with no permanent storage of the output except when
+the project is rendered.
+</p>
+<p>All the realtime effects are listed in the resource window, divided into two
+groups: audio effects and video effects.  Audio effects should be dragged from
+the resource window onto audio tracks.  Video effects should be dragged onto
+video tracks.
+</p>
+<p>If there is data on the destination track, the effect is applied to the entire
+track.  If there is no data on the track the effect is deleted.  Finally, if a
+region of the track is selected the effect is pasted into the region,
+regardless of whether there is data.
+</p>
+<p>Some of the effects do not process data but synthesize data.  In the case of a
+synthesis effect, you will want to select a region of the track so the dragging
+operation pastes it without deleting it.
+</p>
+<p>When dragging more than one effect onto a track, you will see the effects
+layering from top to bottom, on the bottom of the track.  When the track is
+played back, effects are processed from top to bottom.  The output of the top
+effect becomes the input of the bottom effect and so on and so forth.
+</p>
+<p>In addition to dragging from the resource window, effects may be applied to a
+track by a popup menu.  Right click on a track and select <b>Attach effect</b>
+from the popup.  The attach effect dialog gives you more control than pure
+dragging and dropping.  For one thing, the attach effect dialog lets you attach
+two more types of effects: shared effects and shared tracks.  Select a plugin
+from the <b>Plugins</b> column and hit <b>Attach</b> under the plugins column to
+attach it.  The effect is the same as if the effect was dragged from the
+resource window.
+</p>
+<p>When an effect exists under a track, it often needs to be configured.  Go
+to the effect and right click on it to bring up the effect popup.  In the
+effect popup is a <b>show</b> option.  The show option causes the GUI for the
+effect to appear under the cursor.  Most effects have GUI&rsquo;s but some do not.  If
+the effect does not have a GUI, nothing pops up when the <b>show</b> option is
+selected.  When you tweak parameters in the effect GUI, the parameters normally
+affect the entire duration of the effect.
+</p>
+
+<hr>
+<a name="Realtime-effect-types"></a>
+<a name="Realtime-effect-types-1"></a>
+<h2 class="section">14.1 Realtime effect types</h2>
+<a name="index-Realtime-effect-types"></a>
+
+<p>The two other effect types supported by the Attach Effect dialog are recycled
+effects.  In order to use a recycled effect, three requirements must be met:
+</p><ul>
+<li> There must be other effects in the timeline.
+</li><li> The other effects must be of the same type as the track you are attaching
+an effect to.  If the track is an audio track, the effects must be audio
+effects.  If the track is a video track, the effects must be video effects.
+</li><li> The insertion point or selected region must start inside the other
+effects.
+</li></ul>
+
+<p>In the case of a shared effect, these conditions must be true.  In the case of
+a shared track, there merely must be another track on the timeline of the same
+type as the track you are applying an effect to.  If you right clicked on a
+video track to attach an effect, there will not be anything in the <b>shared
+tracks</b> column if no other video track exists.  If you right clicked on an
+audio track there will not be anything in the shared track column if no other
+audio track exists.
+</p>
+<p>If shared effects or shared tracks are available, they appear in the <b>shared
+effects</b> and <b>shared tracks</b> columns.  The <b>attach</b> button under each
+column causes anything highlighted in the column to be attached under the
+current track.
+</p>
+<p>Shared effects and shared tracks allow very unique things to be done.  In the
+case of a shared effect, the shared effect is treated like a copy of the
+original effect except in the shared effect the GUI can not be brought up.  All
+configuration of the shared effect is determined by the GUI of the original
+effect and only the GUI of the original effect can be brought up.
+</p>
+<p>When a shared effect is played back, it is processed just like a normal effect
+except the configuration is copied from the original effect.  Some effects
+detect when they are being shared, like the reverb effects and the compressor.
+These effects determine what tracks are sharing them and either mix the two
+tracks together or use one track to stage some value.  The reverb mixes tracks
+together to simulate ambience.  The compressor uses one of the sharing tracks
+as the trigger.
+</p>
+<a name="index-Bouncing-tracks"></a>
+<a name="index-Tracks_002c-bouncing"></a>
+<a name="index-Shared-track"></a>
+<p>When an original track has a <b>shared track</b> as one of its effects, the shared
+track itself is used as a realtime effect.  This is more commonly known as
+<b>bouncing tracks</b> but Cinelerra achieves the same operation by attaching
+shared tracks.  The fade and any effects in the shared track are applied to the
+original track.  Once the shared track has processed the data, the original
+track performs any effects which come below the shared track and then
+composites it on the output.
+</p>
+<p>In addition, once the shared track has processed the output of the original
+track like a realtime effect, the shared track mixes itself into the output
+with it is settings for pan, mode, and projector.  Thus, two tracks are mixing
+the same data on the output.  Most of the times you do not want the shared track
+to mix the same data as the original track on the output.  You want it to stop
+right before the mixing stage and give the data back to the original track.  Do
+this by enabling the <img src="manual_images_intl/mutepatch_up.png" alt="manual_images_intl/mutepatch_up"> mute toggle next to each
+track for whom you do not want to mix on the output.
+</p>
+<p>Suppose you were making video and you did want the shared track to composite
+the original track&rsquo;s data on the output a second time.  In the case of video,
+the video from the shared track would always appear under the video from the
+original track, regardless of whether it was on top of the original track.
+This is because shared tracks are composited in order of their attachment.
+Since it is part of the original track it has to be composited before the
+original track is composited.
+</p>
+<hr>
+<a name="Editing-realtime-effects"></a>
+<a name="Editing-realtime-effects-1"></a>
+<h2 class="section">14.2 Editing realtime effects</h2>
+<a name="index-Realtime-effects_002c-editing"></a>
+<p>Many operations exist for manipulating effects once they are in the timeline.
+Because mixing effects and media is such complex business, the methods used in
+editing effects are not as concise as cutting and pasting.  Some of the editing
+happens by dragging in/out points, some of the editing happens through popup
+menus, and some of it happens by dragging effects.
+</p>
+<p>Normally when you edit tracks, the effects follow the editing decisions.  If
+you cut from a track, the effect shrinks.  If you drag edit in/out points, the
+effect changes length.  This behavior can be disabled by selecting
+<b>Settings-&gt;edit effects</b> in the project window.  This decouples effects from
+editing operations, but what if you just want to edit the effects?
+</p>
+<p>Move the timeline cursor over the effect borders until it changes to a resize
+left or resize right icon.  In this state, if you drag the end of the effect,
+it performs an edit just like dragging the end of a track does.
+</p>
+<p>The three editing behaviors of track trimming apply to effect trimming and they
+are bound to the mouse buttons that you set in <b>interface preferences</b>.
+See section <a href="cinelerra_cv_manual_en_3.html#Interface">Interface</a>.  When you perform a trim edit on an effect, the effect
+boundary is moved by dragging on it.  Unlike track editing, the effect has no
+source length.  You can extend the end of an effect as much as desired without
+being limited.
+</p>
+<p>Also unlike track editing, the starting position of the drag operation does not
+bind the edit decision to media.  The media the effect is bound to does not
+follow effect edits.  Other effects, however, do follow editing decisions made
+on an effect.  If you drag the end of an effect which is lined up to effects on
+other tracks, the effects on the other tracks will be edited while the media
+stays the same.
+</p>
+<p>What happens if you trim the end of an effect in, leaving a lot of unaffected
+time near the end of the track?  When you drag an effect in from the Resource
+Window you can insert the effect in the portion of the row unoccupied by the
+trimming operation.  Realtime effects are organized into rows under the track.
+Each row can have multiple effects.
+</p>
+<p>In some cases you will want a trimming operation to change only one row of
+effects.  This can be achieved by first positioning the insertion point on the
+start or end of the effect.  Then press &lt;SHIFT&gt; while beginning the
+trimming operation.  This causes the operation to change only one row of
+effects.
+</p>
+<p>In addition to trimming, you can move effects up or down.  Every track can have
+a stack of effects under it.  By moving an effect up or down you change the
+order in which effects are processed in the stack.  Go to an effect and right
+click to bring up the effect menu.  The <b>Move up</b> and <b>Move down</b> options
+move the effect up or down.
+</p>
+<a name="index-Shared-effects"></a>
+<a name="index-Effects_002c-shared"></a>
+<p>When you are moving effects up or down, be aware that if they are shared as
+<b>shared effects</b>, any references will be pointing to a different effect after
+the move operation.
+</p>
+<p>Finally, there is dragging of effects.  Dragging effects works just like
+dragging edits.  You must select the <img src="manual_images_intl/arrow.png" alt="manual_images_intl/arrow"> arrow
+to enter drag and drop mode before dragging effects.  The effects snap to media
+boundaries, effect boundaries, and tracks.  Be aware if you drag a reference to
+a shared effect, the reference will usually point to the wrong effect
+afterwards.
+</p>
+<p>Right click on an effect to bring up a menu for the effect.  Select
+<b>attach...</b> to change the effect or change the reference if it is a shared
+effect.
+</p>
+<hr>
+<a name="Realtime-audio-effects"></a>
+<a name="Realtime-audio-effects-1"></a>
+<h2 class="section">14.3 Realtime audio effects</h2>
+<a name="index-Realtime-audio-effects"></a>
+
+
+<hr>
+<a name="Compressor"></a>
+<a name="Compressor-1"></a>
+<h3 class="subsection">14.3.1 Compressor</h3>
+<a name="index-Compressor"></a>
+
+<img src="manual_images_intl/compressor.png" alt="manual_images_intl/compressor">
+
+<p>Contrary to computer science experience, the audio compressor does not reduce
+the amount of data required to store the audio.  The audio compressor reduces
+the dynamic range of the audio.  In Cinelerra the compressor actually performs
+the function of an expander and compressor.
+</p>
+<p>The compressor works by calculating the maximum sound level within a certain
+time period of the current position.  The maximum sound level is taken as the
+input sound level.  For every input sound level there is an output sound level
+specified by the user.  The gain at the current position is adjusted so the
+maximum sound level in the time range is the user specified value.
+</p>
+<p>The compressor has a graph which correlates every input sound level to an
+output level.  The horizontal direction is the input sound level in dB.  The
+vertical direction is the output sound level in dB.  The user specifies output
+sound levels by creating points on the graph.  Click in the graph to create a
+point.  If 2 points exist, drag one point across another point to delete it.
+The most recent point selected has its vales displayed in textboxes for more
+precise adjustment.
+</p>
+<p>To make the compressor reduce the dynamic range of the audio, make all the
+output values greater than the input values except 0 dB.  To make the
+compressor expand the dynamic range of the audio, make all the output values
+except 0 dB less than the input values.  The algorithm currently limits all
+sound levels above 0 dB to 0 dB so to get an overloaded effect put a gain
+effect before the compressor to reduce all the levels and follow it with
+another gain effect to amplify all the levels back over 0 dB.
+</p>
+<p><b>Reaction secs:</b> This determines where in relation to the current position
+the maximum sound level is taken and how fast the gain is adjusted to reach
+that peak.  It is notated in seconds.  If it is negative the compressor reads
+ahead of the current position to get the future peak.  The gain is ramped to
+that peak over one reaction time.  This allows it to hit the desired output
+level exactly when the input peak occurs at the current position.
+</p>
+<p>If the reaction time is positive the compressor scans only the current position
+for the gain and ramps gain over one reaction time to hit the desired output
+level.  It hits the output level exactly one reaction time after detecting the
+input peak.
+</p>
+<p><b>Decay secs:</b> If the peak is higher than the current level, the compressor
+ramps the gain up to the peak value.  Then if a future peak is less than the
+current peak it ramps the gain down.  The time taken to ramp the gain down can
+be greater than the time taken to ramp the gain up.  This ramping down time is
+the decay seconds.
+</p>
+<p><b>Trigger type:</b>  The compressor is a multi-channel effect.  Several tracks can
+share one compressor.  How the signal from many tracks is interpreted is
+determined by the trigger type.
+</p>
+<p>The <b>Trigger type</b> uses the value supplied in the <b>Trigger</b> textbox as the
+number of the track to use as input for the compressor.  This allows a track
+which is not even heard to determine the loudness of the other tracks.
+</p>
+<p>The <b>Maximum</b> trigger takes the loudest track and uses it as the input for
+the compressor.
+</p>
+<p>The <b>Total</b> trigger type adds the signals from all the tracks and uses the
+total as the input for the compressor.  This is the most natural sounding
+compression and is ideal when multiple tracks are averaged into single
+speakers.
+</p>
+<p><b>Trigger:</b> The compressor is a multichannel effect.  Several tracks can share
+one compressor.  Normally only one track is scanned for the input peak.  This
+track is specified by the <b>Trigger</b>.  By sharing several tracks and playing
+with the trigger value, you can make a sine wave on one track follow the
+amplitude of a drum on another track for example.
+</p>
+<p><b>Smooth only:</b> For visualizing what the compressor is doing to the
+sound-level, this option causes it to replace the sound wave with just the
+current peak value.  It makes it very easy to see how <b>reaction secs</b> affects
+the detected peak values.
+</p>
+<hr>
+<a name="Delay-audio"></a>
+<a name="Delay-audio-1"></a>
+<h3 class="subsection">14.3.2 Delay audio</h3>
+<a name="index-Delay-audio"></a>
+
+<img src="manual_images_intl/delayaudio.png" alt="manual_images_intl/delayaudio">
+
+<p>Just tell how much seconds you want to delay the video track.
+</p>
+<hr>
+<a name="Denoise"></a>
+<a name="Denoise-1"></a>
+<h3 class="subsection">14.3.3 Denoise</h3>
+<a name="index-Denoise"></a>
+
+<img src="manual_images_intl/denoise.png" alt="manual_images_intl/denoise">
+
+<p>FIXME
+</p>
+<hr>
+<a name="DenoiseFFT"></a>
+<a name="DenoiseFFT-1"></a>
+<h3 class="subsection">14.3.4 DenoiseFFT</h3>
+<a name="index-DenoiseFFT"></a>
+
+<img src="manual_images_intl/denoisefft.png" alt="manual_images_intl/denoisefft">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Despike"></a>
+<a name="Despike-1"></a>
+<h3 class="subsection">14.3.5 Despike</h3>
+<a name="index-Despike"></a>
+
+<img src="manual_images_intl/despike.png" alt="manual_images_intl/despike">
+
+<p>FIXME
+</p>
+<hr>
+<a name="EQ-Parametric"></a>
+<a name="EQ-Parametric-1"></a>
+<h3 class="subsection">14.3.6 EQ Parametric</h3>
+<a name="index-EQ-Parametric"></a>
+
+<img src="manual_images_intl/parametric.png" alt="manual_images_intl/parametric">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Freeverb"></a>
+<a name="Freeverb-1"></a>
+<h3 class="subsection">14.3.7 Freeverb</h3>
+<a name="index-Freeverb"></a>
+
+<img src="manual_images_intl/freeverb.png" alt="manual_images_intl/freeverb">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Gain"></a>
+<a name="Gain-1"></a>
+<h3 class="subsection">14.3.8 Gain</h3>
+<a name="index-Gain"></a>
+
+<img src="manual_images_intl/gain.png" alt="manual_images_intl/gain">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Heroine-College"></a>
+<a name="Heroine-College-1"></a>
+<h3 class="subsection">14.3.9 Heroine College</h3>
+<a name="index-Heroine-College"></a>
+
+<img src="manual_images_intl/reverb.png" alt="manual_images_intl/reverb">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Interpolate"></a>
+<a name="Interpolate-1"></a>
+<h3 class="subsection">14.3.10 Interpolate</h3>
+<a name="index-Interpolate"></a>
+
+<img src="manual_images_intl/interpolateaudio.png" alt="manual_images_intl/interpolateaudio">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Invert-Audio"></a>
+<a name="Invert-Audio-1"></a>
+<h3 class="subsection">14.3.11 Invert Audio</h3>
+<a name="index-Invert-Audio"></a>
+
+<img src="manual_images_intl/invertaudio.png" alt="manual_images_intl/invertaudio">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Live-audio"></a>
+<a name="Live-audio-1"></a>
+<h3 class="subsection">14.3.12 Live audio</h3>
+<a name="index-Live-audio-effect"></a>
+
+<img src="manual_images_intl/liveaudio.png" alt="manual_images_intl/liveaudio">
+
+<p>This effect reads audio directly from the soundcard input.  It replaces any
+audio on the track so it is normally applied to an empty track.
+</p>
+<p>To use Live Audio, highlight a horizontal region of an audio track or define in
+and out points.  Then drop the Live Audio effect into it.  Create extra tracks
+and attach shared copies of the first Live Audio effect to the other tracks to
+have extra channels recorded.
+</p>
+<p>Live Audio uses the sound driver selected in
+<b>Settings-&gt;Preferences-&gt;Playback-&gt;Audio Out</b> for recording, but unlike
+recording it uses the <b>playback buffer size</b> as the recording buffer size and
+it uses the <b>project sample rate</b> as the sampling rate.
+</p>
+<p>These settings are critical since some sound drivers can not record in the same
+sized buffer they play back in.  Live audio has been most reliable when ALSA is
+the recording driver and the playback fragment size is 2048.
+</p>
+<p>Drop other effects after Live Audio to process soundcard input in realtime.
+</p>
+<p>Now the bad news.  With live audio there is no read-ahead, so effects like
+compressor will either delay if they have read-ahead enabled or playback will
+under-run.
+</p>
+<p>Another problem is sometimes the recording clock on the soundcard is slightly
+slower than the playback clock.  The recording eventually falls behind and
+playback sounds choppy.
+</p>
+<p>Finally, live audio does not work in reverse.
+</p>
+<hr>
+<a name="Loop-audio"></a>
+<a name="Loop-audio-1"></a>
+<h3 class="subsection">14.3.13 Loop audio</h3>
+<a name="index-Loop-audio"></a>
+
+<img src="manual_images_intl/loopaudio.png" alt="manual_images_intl/loopaudio">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Overlay"></a>
+<a name="Overlay-1"></a>
+<h3 class="subsection">14.3.14 Overlay</h3>
+<a name="index-Overlay"></a>
+
+<img src="manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Pitch-shift"></a>
+<a name="Pitch-shift-1"></a>
+<h3 class="subsection">14.3.15 Pitch shift</h3>
+<a name="index-Pitch-shift"></a>
+<a name="index-Audio_002c-pitch-shift"></a>
+
+<img src="manual_images_intl/pitch.png" alt="manual_images_intl/pitch">
+
+<p>Like the time stretching methods, there are three pitch shifting methods:
+<b>Pitch shift</b>, <b>Resample</b>, and <b>Asset info dialog</b>.  Pitch shift is a
+realtime effect which can be dragged and dropped onto recordable audio tracks.
+Pitch shift uses a fast Fourier transform to try to change the pitch without
+changing the duration, but this introduces windowing artifacts.
+</p>
+<p>Because the windowing artifacts are less obtrusive in audio which is obviously
+pitch shifted, Pitch shift is mainly useful for extreme pitch changes.  For
+mild pitch changes, use <b>Resample</b> from the <b>Audio-&gt;Render Effect</b>
+interface.  Resample can change the pitch within 5% without a noticeable change
+in duration.
+</p>
+<p>Another way to change pitch slightly is to go to the <b>Resources</b> window,
+highlight the <b>media</b> folder, right click on an audio file, click on
+<b>Info</b>.  Adjust the sample rate in the <b>Info</b> dialog to adjust the pitch.
+This method also requires left clicking on the right boundary of the audio
+tracks and dragging left or right to correspond to the length changes.
+</p>
+<hr>
+<a name="Reverse-audio"></a>
+<a name="Reverse-audio-1"></a>
+<h3 class="subsection">14.3.16 Reverse audio</h3>
+<a name="index-Reverse-audio-effect"></a>
+
+<img src="manual_images_intl/reverseaudio.png" alt="manual_images_intl/reverseaudio">
+
+<p>Apply <b>reverse audio</b> to an audio track and play it backwards.  The sound
+plays forward.
+</p>
+<p>Be aware when reversing audio that the waveform on the timeline does not
+reflect the actual reversed output.
+</p>
+<hr>
+<a name="SoundLevel"></a>
+<a name="SoundLevel-1"></a>
+<h3 class="subsection">14.3.17 SoundLevel</h3>
+<a name="index-SoundLevel"></a>
+
+<img src="manual_images_intl/level.png" alt="manual_images_intl/level">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Spectrogram"></a>
+<a name="Spectrogram-1"></a>
+<h3 class="subsection">14.3.18 Spectrogram</h3>
+<a name="index-Spectrogram"></a>
+
+<img src="manual_images_intl/spectrogram.png" alt="manual_images_intl/spectrogram">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Synthesizer"></a>
+<a name="Synthesizer-1"></a>
+<h3 class="subsection">14.3.19 Synthesizer</h3>
+<a name="index-Synthesizer"></a>
+
+<img src="manual_images_intl/synthesizer.png" alt="manual_images_intl/synthesizer">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Time-stretch"></a>
+<a name="Time-stretch-1"></a>
+<h3 class="subsection">14.3.20 Time stretch</h3>
+<a name="index-Time-stretch"></a>
+
+<img src="manual_images_intl/timestretch.png" alt="manual_images_intl/timestretch">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Realtime-video-effects"></a>
+<a name="Realtime-video-effects-1"></a>
+<h2 class="section">14.4 Realtime video effects</h2>
+<a name="index-Realtime-video-effects"></a>
+
+
+<hr>
+<a name="g_t1080-to-480"></a>
+<a name="g_t1080-to-480-1"></a>
+<h3 class="subsection">14.4.1 1080 to 480</h3>
+<a name="index-1080-to-480-effect"></a>
+
+<img src="manual_images_intl/1080to540.png" alt="manual_images_intl/1080to540">
+
+<p>Most TV broadcasts are received with a 1920x1080 resolution but originate from
+a 720x480 source at the studio.  It is a waste of space to compress the entire
+1920x1080 if the only resolvable details are 720x480.  Unfortunately resizing
+1920x1080 video to 720x480 is not as simple as shrinking it.
+</p>
+<p>At the TV station the original 720x480 footage was first converted to fields of
+720x240.  Each field was then scaled up to 1920x540.  The two 1920x540 fields
+were finally combined with interlacing to form the 1920x1080 image.  This
+technique allows a consumer TV to display the re-sampled image without extra
+circuitry to handle 720x480 interlacing in a 1920x1080 image.
+</p>
+<p>If you merely deinterlace the 1920x1080 images, you would end up with
+resolution of 720x240.  The <b>1080 to 480</b> effect properly extracts two
+1920x540 size fields from the image, resizes them separately, and combines them
+again to restore a 1920x480 interlaced image.  The <b>scale</b> effect must then
+be applied to reduce the horizontal size to 960 or 720 depending on the
+original aspect ratio.
+</p>
+<p>The tracks to which <b>1080 to 480</b> is applied need to be at 1920x1080
+resolution.  The project settings in <b>settings-&gt;format</b> should be at least
+720x480 resolution.
+</p>
+<p>The effect does not know if the first row in the 1920x1080 image belongs to the
+first row of the 720x480 original.  You have to specify what the first row is
+in the effect configuration.
+</p>
+<p>The output of this effect is a small image in the middle of the original
+1920x1080 frame.  Use the projector to center the output image in the playback.
+</p>
+<p>Finally, once you have 720x480 interlaced video you can either apply <b>frames
+to fields</b> of <b>inverse telecine</b> to further recover original progressive
+frames.
+</p>
+<hr>
+<a name="Aging-TV"></a>
+<a name="Aging-TV-1"></a>
+<h3 class="subsection">14.4.2 Aging TV</h3>
+<a name="index-Aging-TV"></a>
+
+<img src="manual_images_intl/aging.png" alt="manual_images_intl/aging">
+
+<p>This effect is the one to use if you want to achieve an &quot;old movie&quot; or TV show
+look.  It will put moving lines up and down the movie as well as putting &quot;snow&quot;
+on the video.  Use is along with Brightness/Contrast and Color Balance to make
+your movie look like a really old black and white movie.
+</p>
+<hr>
+<a name="Blur"></a>
+<a name="Blur-1"></a>
+<h3 class="subsection">14.4.3 Blur</h3>
+<a name="index-Blur"></a>
+
+<img src="manual_images_intl/blur.png" alt="manual_images_intl/blur">
+
+<p>This effect blurs a video track.  The parameters are:
+</p><ul>
+<li> <b>Horizontal and vertical</b><br>
+Those parameters are used to tell which one of field blurring affects.  It
+can be be both fields.
+</li><li> <b>Radius</b><br>
+Use this slider to define the amount of blur to apply.
+</li><li> <b>Blur alpha, red, green, blue</b><br>
+Specifies which color channels has to be blurred.
+</li></ul>
+
+<hr>
+<a name="Brightness_002fcontrast"></a>
+<a name="Brightness_002fcontrast-1"></a>
+<h3 class="subsection">14.4.4 Brightness/contrast</h3>
+<a name="index-Brightness_002fcontrast"></a>
+<a name="index-Contrast"></a>
+
+<img src="manual_images_intl/brightness.png" alt="manual_images_intl/brightness">
+
+<p>If you want to brighten a dark shot, or add light, this is the tool to use.  Do
+not overuse the effect or you risk degrading your video quality.  Use the effect along
+with Keyframing to brighten a long shot that is dark at the beginning but bright
+at the end.  Generally you will want to change the brightness and contrast
+about the same amount (eg darkness 28 contrast 26) so that your original colors
+are kept intact.
+</p>
+<hr>
+<a name="Burning-TV"></a>
+<a name="Burning-TV-1"></a>
+<h3 class="subsection">14.4.5 Burning TV</h3>
+<a name="index-Burning-TV"></a>
+<a name="index-Video-burning"></a>
+
+<img src="manual_images_intl/burn.png" alt="manual_images_intl/burn">
+
+<p>The video burning effect makes your video &quot;burn&quot; where there are small light
+colored patches of video, on the edge of a white T-shirt for example.  It can
+be a great asset to a music video and just a great outlet to help free your
+imagination in your video.
+</p>
+<hr>
+<a name="Chroma-key"></a>
+<a name="Chroma-key-1"></a>
+<h3 class="subsection">14.4.6 Chroma key</h3>
+<a name="index-Chroma-key-effect"></a>
+
+<img src="manual_images_intl/chromakey.png" alt="manual_images_intl/chromakey">
+
+<p>This effect erases pixels which match the selected color.  They are replaced
+to black if there is no alpha channel and transparency if there is an alpha
+channel.  The selection of color model is important to determine the behavior.
+</p>
+<a name="index-Color-picker"></a>
+<a name="index-Picker_002c-color"></a>
+<p>Chroma key uses either the lightness or the hue to determine what is erased.
+<b>Use value</b> singles out only the lightness to determine transparency.  Select
+a center color to erase using the <b>Color</b> button.  Alternatively a color can
+be picked directly from the output frame by first using the <b>color picker</b> in
+the compositor window and then selecting the <b>Use color picker</b> button.  This
+sets the chroma key color to the current color picker color.
+</p>
+<p>Be aware that the output of the chroma key is fed back to the compositor, so
+selecting a color again from the compositor will use the output of the chroma
+key effect.  The chroma key should be disabled when selecting colors with the
+color picker.
+</p>
+<p>If the lightness or hue is within a certain threshold it is erased.  Increasing
+the threshold determines the range of colors to be erased.  It is not a simple
+on/off switch, however.  As the color approaches the edge of the threshold, it
+gradually gets erased if the slope is high or is rapidly erased if the slope is
+low.  The slope as defined here is the number of extra values flanking the
+threshold required to go from opaque to transparent.
+</p>
+<p>Normally threshold is very low when using a high slope.  The two parameters
+tend to be exclusive because slope fills in extra threshold.
+</p>
+<p>The slope tries to soften the edges of the chroma key but it does not work well
+for compressed sources.  A popular softening technique is to use a maximum
+slope and chain a blur effect below the chroma key effect to blur just the
+alpha.
+</p>
+<hr>
+<a name="Chroma-key-_0028HSV_0029"></a>
+<a name="Chroma-key-_0028HSV_0029-1"></a>
+<h3 class="subsection">14.4.7 Chroma key (HSV)</h3>
+<a name="index-Chroma-key-effect-_0028HSV_0029"></a>
+
+<img src="manual_images_intl/chromakeyhsv.png" alt="manual_images_intl/chromakeyhsv">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Color-balance"></a>
+<a name="Color-balance-1"></a>
+<h3 class="subsection">14.4.8 Color balance</h3>
+<a name="index-Color-balance"></a>
+<a name="index-Balance_002c-color"></a>
+
+<img src="manual_images_intl/colorbalance.png" alt="manual_images_intl/colorbalance">
+
+<p>Video Color Balance is a great effect to use along with Brightness/contrast and
+Hue/Saturation to try and compensate for possible errors in filming (low
+lighting, etc).  It can only do so much without greatly lowering the quality of
+the video, however.  It is just like the color balance effect on a picture
+editing program, such as GIMP.  With it you can change the colors being sent to
+output CMY (Cyan, Magenta, Yellow) or RGB (Red, Green, Blue).
+</p>
+<hr>
+<a name="Decimate"></a>
+<a name="Decimate-1"></a>
+<h3 class="subsection">14.4.9 Decimate</h3>
+<a name="index-Decimate-effect"></a>
+
+<img src="manual_images_intl/decimate.png" alt="manual_images_intl/decimate">
+
+<p>This effect drops frames from a track which are most similar in order to reduce
+the frame rate.  This is usually applied to a DVD to convert the 29.97 fps
+video to the 23.97 fps film rate but this decimate effect can take any input
+rate and convert it to any lower output rate.
+</p>
+<p>The output rate of <b>decimate</b> is the project frame rate.  The input rate is
+set in the <b>decimate</b> user interface.  To convert 29.97 fps progressive video
+to 23.97 fps film, apply a decimate effect to the track.  Set the decimate
+input rate to 29.97 and the project rate to 23.97.
+</p>
+<p>Be aware every effect layered before decimate processes video at the decimate
+input rate and every effect layered after decimate processes video at the
+project frame rate.  Computationally intensive effects should come below
+decimate.
+</p>
+<hr>
+<a name="Deinterlace"></a>
+<a name="Deinterlace-1"></a>
+<h3 class="subsection">14.4.10 Deinterlace</h3>
+<a name="index-Deinterlace-effect"></a>
+
+<img src="manual_images_intl/deinterlace.png" alt="manual_images_intl/deinterlace">
+
+<p>The deinterlace effect has evolved over the years to deinterlacing and a whole
+lot more.  In fact two of the deinterlacing methods, <b>Inverse Telecine</b> and
+<b>Frames to Fields</b>, are separate effects.  The deinterlace effect offers
+several variations of line replication to eliminate comb artifacts in
+interlaced video.  It also has some line swapping tools to fix improperly
+captured video or make the result of a reverse effect display fields in the
+right order.
+</p>
+<hr>
+<a name="Delay-video"></a>
+<a name="Delay-video-1"></a>
+<h3 class="subsection">14.4.11 Delay video</h3>
+<a name="index-Delay-video"></a>
+
+<img src="manual_images_intl/delayvideo.png" alt="manual_images_intl/delayvideo">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Denoise-video"></a>
+<a name="Denoise-video-1"></a>
+<h3 class="subsection">14.4.12 Denoise video</h3>
+<a name="index-Denoise-video"></a>
+
+<img src="manual_images_intl/denoisevideo.png" alt="manual_images_intl/denoisevideo">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Denoise-video2"></a>
+<a name="Denoise-video2-1"></a>
+<h3 class="subsection">14.4.13 Denoise video2</h3>
+<a name="index-Denoise-video-1"></a>
+
+<img src="manual_images_intl/denoisemjpeg.png" alt="manual_images_intl/denoisemjpeg">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Difference-key"></a>
+<a name="Difference-key-1"></a>
+<h3 class="subsection">14.4.14 Difference key</h3>
+<a name="index-Difference-key-effect"></a>
+
+<img src="manual_images_intl/diffkey.png" alt="manual_images_intl/diffkey">
+
+<p>The difference key creates transparency in areas which are similar between 2
+frames.  The Difference key effect must be applied to 2 tracks.  One track
+contains the action in front of a constant background and another track
+contains the background with nothing in front of it.  Apply the difference key
+to the track with the action and apply a shared copy of it to the track with
+the background.  The track with the background should be muted and underneath
+the track with the action and the colormodel should have an alpha channel.
+</p>
+<p>Pixels which are different between the background and action track are treated
+as opaque.  Pixels which are similar are treated as transparent.  Change
+<b>threshold</b> in the difference key window to make more pixels which are not the
+same color transparent.  Change <b>slope</b> to change the rate at which the
+transparency tapers off as pixels get more different.
+</p>
+<p>The slope as defined here is the number of extra values flanking the threshold
+required to go from opaque to transparent.  A high slope is more useful with a
+low threshold because slope fills in extra threshold.
+</p>
+<p><b>Use value</b> causes the intensity of pixels to be compared instead of the
+color.
+</p>
+<p>Applying a blur to the top track with just the alpha channel blurred can soften
+the transparency border.
+</p>
+<p><b>Note:</b> Currently this effect is known to crash when using YUV modes.
+</p>
+<hr>
+<a name="DotTV"></a>
+<a name="DotTV-1"></a>
+<h3 class="subsection">14.4.15 DotTV</h3>
+<a name="index-DotTV"></a>
+
+<img src="manual_images_intl/dot.png" alt="manual_images_intl/dot">
+
+<p>Another effect by Kentaro (effectTV).
+</p>
+<hr>
+<a name="Downsample"></a>
+<a name="Downsample-1"></a>
+<h3 class="subsection">14.4.16 Downsample</h3>
+<a name="index-Downsample"></a>
+
+<img src="manual_images_intl/downsample.png" alt="manual_images_intl/downsample">
+
+<p>Downsampling is the process of reducing the size of an
+image by throwing out data, reducing sampling rate.
+</p>
+<p>Parameters refers to:<br>
+Horizontal<br>
+Horizontal offset<br>
+Vertical<br>
+Vertical offset<br>
+Channels
+</p>
+<hr>
+<a name="Fields-to-frames"></a>
+<a name="Fields-to-frames-1"></a>
+<h3 class="subsection">14.4.17 Fields to frames</h3>
+<a name="index-Fields-to-frames-effect"></a>
+
+<img src="manual_images_intl/fieldframe.png" alt="manual_images_intl/fieldframe">
+
+<p>This effect reads frames at twice the project framerate, combining 2 input
+frames into a single interlaced output frame.  Effects preceding <b>fields to
+frames</b> process frames at twice the project frame rate.  Each input frame is
+called a field.
+</p>
+<p><b>Fields to frames</b> needs to know what field corresponds to what lines in the
+output frame.  The easiest way to figure it out is to try both options in the
+window.  If the input fields are the result of a line doubling process like
+<b>frames to fields</b>, the wrong setting results in blurrier output.  If the
+input fields are the result of a standards conversion process like <b>1080 to
+480</b>, the wrong setting will not make any difference.
+</p>
+<p>The debobber which converts 720x480 interlaced into 1920x1080 interlaced or
+1280x720 progressive seems to degrade the vertical resolution to the point that
+it can not be recovered.
+</p>
+<hr>
+<a name="Flip"></a>
+<a name="Flip-1"></a>
+<h3 class="subsection">14.4.18 Flip</h3>
+<a name="index-Flip"></a>
+
+<img src="manual_images_intl/flip.png" alt="manual_images_intl/flip">
+
+<p>This effect permits to flip a video track (or a portion of) from left to right,
+right to left, up to down, down to up.
+</p>
+<p>The dialog window is simple, since only the vertical and horizontal parameters
+are needed.
+</p>
+<hr>
+<a name="Frames-to-fields"></a>
+<a name="Frames-to-fields-1"></a>
+<h3 class="subsection">14.4.19 Frames to fields</h3>
+<a name="index-Frames-to-fields"></a>
+
+<img src="manual_images_intl/framefield.png" alt="manual_images_intl/framefield">
+
+<p>This plugin applies the operation reverse to the &quot;Fields to Frames&quot; plugin: 
+it extracts the two interlaced fields stored in alternating lines of interlaced 
+source footage and outputs them as separate full frames. The alternating lines 
+missing on each output frame are interpolated. (The naming of this pair of plugins 
+is obviously misleading with respect to the common usage of the terms &quot;field&quot; 
+and &quot;frame&quot;; normally, &quot;fields&quot; denotes the interlaced half images and &quot;frame&quot; 
+denotes the full image).
+</p>
+<p>This plugin is only useful if its output is pulled with doubled framerate with
+respect to the source footage. One typical usage scenario is to do masking,
+scaling and translating on interlaced footage without the need to destroy the 
+additional temporal information contained in such source material. This is 
+helpful if your intended target format is interlaced. If on the other hand, 
+you just want to target a progressive display (e.g. you create video for display 
+on computer monitor solely) then it is much more convenient to de-interlace
+the source material prior to any further processing. 
+</p>
+<p><b>Processing interlaced footage without deinterlacing</b>
+</p>
+<ol>
+<li> Create a new project with doubled frame rate. I.e make it 50fps if your 
+source footage is 25i
+</li><li> Insert your source footage onto a video track in the timeline. Now, 
+Cinelerra will playback each frame of your footage twice.
+</li><li> Apply the &quot;Frames to Fields&quot; effect. Be sure to choose the correct 
+field order. Typical values being &quot;bottom field first&quot; for DV and &quot;top field
+first&quot; for HDV.
+</li><li> Then apply any further effects afterwards, including translations, scaling, 
+slow motion, precise frame-wise masking or use of the motion tracker plugin.
+</li><li> Render your project to a intermediate clip. Be sure to choose a rather 
+lossless video codec, e.g. Motion-JPEG-A or even uncompressed yuv if you have 
+plenty of storage.
+</li><li> Insert the intermediate clip into your original project. Make sure the 
+doubled framerate has been detected correctly by Cinelerra (by looking in the 
+clip&rsquo;s media info in the media resources folder)
+</li><li> Apply the &quot;Fields to frames&quot; effect to the intermediate clip. This will 
+combine two adjacent fields into one interlaced field with the original frame rate.
+</li><li> Do the final render on your original project
+</li></ol>
+
+<hr>
+<a name="Freeze-frame"></a>
+<a name="Freeze-frame-1"></a>
+<h3 class="subsection">14.4.20 Freeze frame</h3>
+<a name="index-Freeze-frame-effect"></a>
+
+<img src="manual_images_intl/freezeframe.png" alt="manual_images_intl/freezeframe">
+
+<p>In its simplest form, highlight a region of the track to freeze, drop the
+freeze frame effect on the highlighted region, and the lowest numbered frame in
+the affected area will play throughout the entire region.
+</p>
+<p>Freezeframe has an <b>enabled</b> option which can be keyframed.  Regions of a
+freeze frame effect which are enabled repeat the lowest numbered frame since
+the last keyframe.  This has unique possibilities.
+</p>
+<ul>
+<li> If a freeze frame effect has a keyframe in the middle of it set to
+<b>enabled</b>, the frame in the middle is repeated in the entire effect.
+</li><li> If a freeze frame effect has several keyframes, each set to <b>enabled</b>,
+every time a keyframe is encountered the frame under it becomes the frozen one.
+</li><li> If a freeze frame effect alternates between <b>enabled</b> and <b>disabled</b>,
+each time an <b>enabled</b> keyframe is encountered the frame under it is
+replicated until the next <b>disabled</b> keyframe.  The disabled regions play
+through.
+</li></ul>
+
+<hr>
+<a name="Gamma"></a>
+<a name="Gamma-1"></a>
+<h3 class="subsection">14.4.21 Gamma</h3>
+<a name="index-Gamma-effect"></a>
+<a name="index-Raw-camera-images"></a>
+
+<img src="manual_images_intl/gamma.png" alt="manual_images_intl/gamma">
+
+<p>Raw camera images store colors in a logarithmic scale.  The blacks in these
+images are nearly 0 and the whites are supposed to be infinity.  The graphics
+card and most video codecs store colors in a linear scale but Cinelerra keeps
+raw camera images in their original logarithmic scale when it renders them.
+This is necessary because the raw image parser can not always decode the proper
+gamma values for the images.  It also does its processing in 16 bit integers,
+which takes away a lot of information.
+</p>
+<p>The gamma effect converts the logarithmic colors to linear colors through a
+gamma value and a maximum value.  The gamma value determines how steep the
+output curve is and the maximum value is where 1.0 in the output corresponds to
+maximum brightness in the input.
+</p>
+<p>The gamma effect has 2 more parameters to simplify gamma correction.  The
+<b>automatic</b> option causes it to calculate <b>max</b> from the histogram of the
+image.  Use this when making a preview of a long list of images since it
+changes for every image.
+</p>
+<p>The <b>use color picker</b> option uses the value currently in the color picker to
+set the <b>max</b> value.  Note that every time you pick a color from the
+compositor window, you need to hit <b>use color picker</b> to apply the new value.
+</p>
+<hr>
+<a name="Gradient"></a>
+<a name="Gradient-1"></a>
+<h3 class="subsection">14.4.22 Gradient</h3>
+<a name="index-Gradient"></a>
+
+<img src="manual_images_intl/gradient.png" alt="manual_images_intl/gradient">
+
+<p>The gradient effect overlays a smooth color gradient on top of every video frame. 
+It is useful for all sorts of background fills, for partially filtering or for
+adding moving highlights. The Gradient effect can generate linear or circular 
+color fills. For linear fills, you can choose the angle, for circular fills the 
+center of the created gradient pattern. Moreover, you can control the slope of 
+the color transition by selecting a transition function (linear, logarithmic, 
+squared) and by changing the &quot;start&quot; and &quot;stop&quot; radius. Note that both colors 
+used in this color transition can contain an arbitrary Alpha value (transparency). 
+All parameters can be keyed and will be interpolated between keyframes.
+</p>
+<p>Note the following well known problems:
+</p><ul>
+<li> When using limited color models in your project, the Gradient fill can 
+create color bands or steps.
+</li><li> When using a project format with anamorphic storage, Cinelerra won&rsquo;t do
+any internal corrections for this. This can result in a circular fill showing up 
+elliptical. A common example is the HDV 1080i format, which is stored as 1440x1080 
+pixels, but displayed as 1920x1080 (16:9 aspect ratio). As Cinelerra does its 
+calculations on a 1440x1080 pixel bitmap, any circular fill will be stretched out
+horizontally when displaying the final output.
+</li></ul>
+
+<hr>
+<a name="GreyCStoration"></a>
+<a name="GreyCStoration-1"></a>
+<h3 class="subsection">14.4.23 GreyCStoration</h3>
+<a name="index-GreyCStoration-effect"></a>
+
+<p>Although GREYCstoration is a rendered plugin, it can be optionally used as a
+realtime effect. It is important to note, however, that as a realtime effect, GreyCStoration
+is very slow. More details on the GreyCStoration plugin can be found in the rendered
+video effects chapter of this guide.
+</p>
+<hr>
+<a name="Histogram"></a>
+<a name="Histogram-1"></a>
+<h3 class="subsection">14.4.24 Histogram</h3>
+<a name="index-Histogram-effect"></a>
+
+<img src="manual_images_intl/histogram.png" alt="manual_images_intl/histogram">
+
+<p>This shows the number of occurrences of each color on a histogram plot.
+</p>
+<p>It is always performed in floating point RGB regardless of the project
+color-space.  The histogram has two sets of transfer parameters: the input
+transfer and the output transfer.
+</p>
+<p>4 histograms are possible in the histogram viewer.  The red, green, blue
+histograms show the input histograms for red, green, blue and multiply them by
+an input transfer to get the output red, green, blue.  Then the output red,
+green, blue is scaled by an output transfer.  The scaled red, green, blue is
+converted into a value and plotted on the value histogram.  The value histogram
+thus changes depending on the settings for red, green, blue.  The value
+transfers are applied uniformly to R, G, B after their color transfers are
+applied.
+</p>
+<p>Select which transfer to view by selecting one of the channels on the top of
+the histogram.
+</p>
+<p>The input transfer is defined by a graph overlaid on the histogram.  The
+horizontal direction corresponds to every possible input color.  The vertical
+direction corresponds to the output color for every input color.  Video
+entering the histogram is first plotted on the histogram plot, then it is
+translated so output values now equal the output values for each input value on
+the input graph.
+</p>
+<p>The input graph is edited by adding and removing any number of points.  Click
+and drag anywhere in the input graph to create a point and move it.  Click on
+an existing point to make it active and move it.  The active point is always
+indicated by being filled in.  The active point&rsquo;s input and output color are
+given in text boxes on top of the window.  The input and output color of the
+point can be changed through these text boxes.
+</p>
+<p>Points can be deleted by first selecting a point and then dragging it to the
+other side of an adjacent point.  They can also be deleted by selecting them
+and hitting <b>delete</b>.
+</p>
+<p>After the input transfer, the image is processed by the output transfer.  The
+output transfer is simply a minimum and maximum to scale the input colors to.
+Input values of 100% are scaled down to the output&rsquo;s maximum.  Input values of
+0% are scaled up to the output minimum.
+</p>
+<p>Input values below 0 are always clamped to 0 and input values above 100% are
+always clamped to 100%.  Click and drag on the output gradient&rsquo;s triangles to
+change it.  It also has textboxes to enter values into.
+</p>
+<p>Enable the <b>automatic</b> toggle to have the histogram calculate an automatic
+input transfer for the red, green, blue but not the value.  It does this by
+scaling the middle 99% of the pixels to take 100% of the histogram width.  The
+number of pixels permitted to pass through is set by the <b>Threshold</b> textbox.
+A threshold of 0.99 scales the input so 99% of the pixels pass through.
+Smaller thresholds permit fewer pixels to pass through and make the output look
+more contrasty.
+</p>
+<p>Automatic input transfer is calculated for the R, G, and B channels but not the
+value.<br>
+<b>Plot histogram</b><br>
+<b>Split output</b>
+</p>
+<hr>
+<a name="HolographicTV"></a>
+<a name="HolographicTV-1"></a>
+<h3 class="subsection">14.4.25 HolographicTV</h3>
+<a name="index-HolographicTV"></a>
+
+<img src="manual_images_intl/holo.png" alt="manual_images_intl/holo">
+
+<p>By Kentarou effectTV
+</p>
+<hr>
+<a name="Hue-saturation"></a>
+<a name="Hue-saturation-1"></a>
+<h3 class="subsection">14.4.26 Hue saturation</h3>
+<a name="index-Hue-saturation"></a>
+<a name="index-Saturation"></a>
+
+<img src="manual_images_intl/huesaturation.png" alt="manual_images_intl/huesaturation">
+
+<p>With that effect you can change hue, saturation and value.  The parameters are
+modified using 3 simple sliders.
+</p>
+<ul>
+<li> The hue control shifts the colors circularly in the color plane, normally 
+resulting in &quot;false&quot; colors.
+</li><li> The saturation control can be used to reduce color footage to black and white.
+</li><li> The value control makes any given colors more bright or more subdued.
+</li></ul>
+
+<hr>
+<a name="Interpolate-video"></a>
+<a name="Interpolate-video-1"></a>
+<h3 class="subsection">14.4.27 Interpolate video</h3>
+<a name="index-Interpolate-video"></a>
+
+<img src="manual_images_intl/interpolatevideo.png" alt="manual_images_intl/interpolatevideo">
+
+<p>The interpolate effect tries to create the illusion of a higher frame rate from 
+source footage of very low framerates by averaging frames over time. It averages 
+two input frames for each output frame. The input frames are at different times, 
+resulting in a dissolve for all output frames between the input frames. There 
+are two ways of specifying the input frames. You can specify an input frame rate 
+which is lower than the project frame rate. This causes input frames to be taken 
+at even intervals.<br>
+You can also specify keyframe locations as the positions of the input frames. 
+In this mode the output frame rate is used as the input frame rate and you just 
+create keyframes wherever you want to specify an input frame. 
+</p>
+<hr>
+<a name="Interpolate-pixels"></a>
+<a name="Interpolate-pixels-1"></a>
+<h3 class="subsection">14.4.28 Interpolate pixels</h3>
+<a name="index-Interpolate-pixels"></a>
+
+<img src="manual_images_intl/interpolate.png" alt="manual_images_intl/interpolate">
+
+<p>Note: this effect works only for float color models.
+</p>
+<p>FIXME
+</p>
+<hr>
+<a name="Inverse-telecine"></a>
+<a name="Inverse-telecine-1"></a>
+<h3 class="subsection">14.4.29 Inverse telecine</h3>
+<a name="index-Inverse-telecine-effect"></a>
+
+<img src="manual_images_intl/ivtc.png" alt="manual_images_intl/ivtc">
+
+<p>This is the most effective deinterlacing tool when the footage is a video
+transfer of a film.  Here the film was converted from 24 fps to 60 fps.  Then
+the 60 fps was down-sampled to 30 fps by extracting odd and even lines and
+interlacing the lines.  The IVTC effect is primarily a way to convert
+interlaced video to progressive video.  It undoes three patterns of
+interlacing.<br>
+<code>A AB BC CD D</code><br>
+<code>AB CD CD DE EF</code><br>
+<code>Automatic</code>
+</p>
+<p>The first two options are fixed patterns and affected by the <b>pattern offset</b>
+and <b>odd field first</b> parameters.  The last option creates several
+combinations of lines for each frame and picks the most progressive
+combination.  It is a brute force algorithm.
+</p>
+<p>This technique does not rely on a pattern like other techniques and is less
+destructive but the timing is going to be jittery because of the lack of a
+frame rate reduction.  In order to smooth out the timing, you need to follow
+inverse telecine with a decimate effect.
+</p>
+<hr>
+<a name="Invert-video"></a>
+<a name="Invert-video-1"></a>
+<h3 class="subsection">14.4.30 Invert video</h3>
+<a name="index-Invert-video"></a>
+
+<img src="manual_images_intl/invertvideo.png" alt="manual_images_intl/invertvideo">
+
+<p>Also called invert video, it is a method of reversing the colors of a video
+track.
+</p>
+<p>The three parameters refer to channels (Red, Blue, Green, Alpha)
+</p>
+<hr>
+<a name="Linear-blur"></a>
+<a name="Linear-blur-1"></a>
+<h3 class="subsection">14.4.31 Linear blur</h3>
+<a name="index-Linear-blur"></a>
+
+<img src="manual_images_intl/linearblur.png" alt="manual_images_intl/linearblur">
+
+<p>Blur has three styles: Linear, Radial, and Zoom
+</p>
+<p>Parameters refer to:
+</p><ul>
+<li> <b>Length</b><br>
+Distance between original image and final blur step
+</li><li> <b>Angle</b><br>
+Angle of motion, for linear blur
+</li><li> <b>Steps</b><br>
+Number of blur steps
+</li><li> <b>Channels</b><br>
+Which channel(s) to blur.
+</li></ul>
+
+<hr>
+<a name="Live-video"></a>
+<a name="Live-video-1"></a>
+<h3 class="subsection">14.4.32 Live video</h3>
+<a name="index-Live-video-effect"></a>
+
+<img src="manual_images_intl/livevideo.png" alt="manual_images_intl/livevideo">
+
+<p>This effect reads video directly from the capture card input.  It replaces any
+video on the track so it is normally applied to an empty track.  The
+configuration for the capture card is taken from the recording preferences.  Go
+to <b>Settings-&gt;Preferences-&gt;Recording</b> to set up the capture card.
+</p>
+<p>Go to the <b>Video In</b> section where it says <b>Record driver</b>.  It must be set
+to either <b>Video4Linux2</b> or <b>IEC 61883</b>.  Other video drivers have not been
+tested with Live Video and probably will not work.
+</p>
+<p>For live video, the selection for <b>File Format</b> and <b>Video</b> needs to be set
+to a format the timeline can use.  The file format must be <b>Quicktime for
+Linux</b> and video recording must be enabled for it.  Click on the wrench
+<img src="manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> to set the video compression.
+</p>
+<p>The video compression depends on the recording driver.  For the
+<b>Video4Linux2</b> recording driver, the compression must be <b>Motion JPEG A</b>.
+For the <b>IEC 61883</b> driver, the compression must be <b>DV</b>.  This gets the
+driver to generate output in a colormodel that the timeline can use.
+</p>
+<p>Some cards provide color and channel settings.  Live video takes the color
+settings from the values set in the <b>Video In</b> window.  Go to
+<b>File-&gt;Record</b> to bring up the recording interface and the Video In window.
+Values set in the <b>Video in</b> window are used by <b>Live Video</b>.  Any channels
+the capture card supports need to be configured in the <b>Video in</b> interface
+since the same channels are used by the <b>Live Video</b> effect.
+</p>
+<p>With the video recording configured, highlight a horizontal region of a video
+track or define in and out points.  Then drop the Live Video effect into it.
+Drop other effects after Live Video to process the live video in realtime.  For
+best results, you should use OpenGL and a video card which supports GL shading
+language.  Go to <b>Settings-&gt;Preferences-&gt;Playback-&gt;Video Out</b> to enable the
+OpenGL driver.
+</p>
+<p>Only one Live Video effect can exist at any time on the timeline.  It can not be
+shared by more than one track.
+</p>
+<hr>
+<a name="Loop-video"></a>
+<a name="Loop-video-1"></a>
+<h3 class="subsection">14.4.33 Loop video</h3>
+<a name="index-Loop-video-effect"></a>
+
+<img src="manual_images_intl/loopvideo.png" alt="manual_images_intl/loopvideo">
+
+<p>Sections of video can be looped by dropping a <b>loop</b> effect on them.
+Contrary to the <b>settings-&gt;loop playback</b> option, the loop effects can be
+rendered where the <b>settings-&gt;loop playback</b> option can not be.  The loop
+effects are also convenient for short regions.
+</p>
+<p>The loop effects have one option: the number of <b>frames</b> or <b>samples</b> to
+loop.  This specifies the length of the region to loop starting from either the
+beginning of the effect or the latest keyframe.  The region is replicated for
+the entire effect.
+</p>
+<p>Every time a keyframe is set in a loop effect, the keyframe becomes the
+beginning of the region to loop.  Setting several keyframes in succession
+causes several regions to loop.  Setting a single keyframe causes the region
+after the keyframe to be looped throughout the effect, no matter where the
+keyframe is.  The end of an effect can be looped from the beginning by setting
+the keyframe near the end.
+</p>
+<hr>
+<a name="Motion"></a>
+<a name="Motion-1"></a>
+<h3 class="subsection">14.4.34 Motion</h3>
+<a name="index-Motion-video-effect"></a>
+
+<img src="manual_images_intl/motion.png" alt="manual_images_intl/motion">
+
+<p>The motion tracker is almost a complete application in itself.  The motion
+tracker tracks two types of motion: translation and rotation.  It can track
+both simultaneously or one only.  It can do 1/4 pixel tracking or single pixel
+tracking.  It can stabilize motion or cause one track to follow the motion of
+another track.
+</p>
+<p>Although the motion tracker is applied as a realtime effect, it usually must be
+rendered to see useful results.  The effect takes a long time to precisely
+detect motion.
+</p>
+<p>The motion tracker works by using one region of the frame as the region to
+track.  It compares this region between 2 frames to calculate the motion.  This
+region can be defined anywhere on the screen.  Once the motion between 2 frames
+has been calculated, a number of things can be done with that motion vector.
+It can be scaled by a user value and clamped to a maximum range.  It can be
+thrown away or accumulated with all the motion vectors leading up to the
+current position.
+</p>
+<p>To save time the motion result can be saved for later reuse, recalled from a
+previous calculation, or discarded.
+</p>
+<p>The motion tracker has a notion of 2 tracks, the master layer and the target
+layer.  The master layer is where the comparison between 2 frames takes place.
+The target layer is where motion is applied either to track or compensate for
+the motion in the master layer.
+</p>
+<p>The intricacies of motion tracking are enough to sustain entire companies and
+build careers around.  The motion tracker in Cinelerra is not as sophisticated
+as some world class motion trackers but it is enough to sweeten some camcorder
+footage.
+</p>
+<p>Here is a brief description of the motion tracking parameters:
+</p>
+<ul>
+<li> <b>Track translation</b><br>
+Enables translation operations.  The motion tracker tracks X and Y motion in
+the master layer and adjusts X and Y motion in the target layer.
+
+<a name="index-Motion-effect_002c-translation-block"></a>
+<a name="index-Translation-block"></a>
+</li><li> <b>Translation block size</b><br>
+For the translation operations, a block is compared to a number of neighboring
+blocks to find the one with the least difference.  The size of the block to
+search for is given by this parameter.
+
+</li><li> <b>Translation search radius</b><br>
+The size of the area to scan for the translation block.
+
+</li><li> <b>Translation search steps</b><br>
+Ideally the search operation would compare the translation block with every
+other pixel in the translation search radius.  To speed this operation up, a
+subset of the total positions is searched.  Then the search area is narrowed
+and rescanned by the same number of search steps until the motion is known to
+1/4 pixel accuracy.
+
+</li><li> <b>Block X, Y</b><br>
+These coordinates determine the center of the translation block based on
+percentages of the width and height of the image.  The center of the block
+should be part of the image which is visible at all times.
+
+</li><li> <b>Maximum absolute offset</b><br>
+The amount of motion detected by the motion tracker is unlimited if this is
+100.  If it is under 100 the amount of motion is limited by that percentage of
+the image size.
+
+</li><li> <b>Settling speed</b><br>
+The motion detected between every frame can be accumulated to form an absolute
+motion vector.  If the settling speed is 100 the absolute vector is added to
+the next frame.  If the settling speed is less than 100 the absolute vector is
+downscaled by the settling amount before being added to the next frame.
+
+</li><li> <b>Track rotation</b><br>
+Enables rotation operations.  The motion tracker tracks rotation in the master
+layer and adjusts rotation in the target layer.
+
+</li><li> <b>Rotation block size</b><br>
+For rotation operations a single block is compared to equally sized blocks,
+each rotated by a different amount.  This is the size of the rotation block.
+
+</li><li> <b>Rotation search radius</b><br>
+This is the maximum angle of rotation from the starting frame the rotation
+scanner can detect.  The rotation scan is from this angle counterclockwise to
+this angle clockwise.  Thus the rotation search radius is half the total range
+scanned.
+
+</li><li> <b>Rotation search steps</b><br>
+Ideally every possible angle would be tested to get the rotation.  To speed up
+the rotation search, the rotation search radius is divided into a finite number
+of angles and only those angles compared to the starting frame.  Then the
+search radius is narrowed and an equal number of angles is compared in the
+smaller radius until the highest possible accuracy is achieved.<br>
+Normally you need one search step for every degree scanned.  Since the rotation
+scanner scans the rotation search radius in two directions, you need two steps
+for every degree in the search radius to search the complete range.
+
+</li><li> <b>Draw vectors</b><br>
+When translation is enabled, 2 boxes are drawn on the frame.  One box
+represents the translation block.  Another box outside the translation block
+represents the extent of the translation search radius.  In the center of these
+boxes is an arrow showing the translation between the 2 master frames.<br>
+When rotation is enabled a single box the size of the rotation block is drawn
+rotated by the amount of rotation detected.
+
+</li><li> <b>Track single frame</b><br>
+When this option is used the motion between a single starting frame and the
+frame currently under the insertion point is calculated.  The starting frame is
+specified in the <b>Frame number</b> blank.  The motion calculated this way is
+taken as the absolute motion vector.  The absolute motion vector for each frame
+replaces the absolute motion vector for the previous frame.  Settling speed has
+no effect on it since it does not contain any previous motion vectors.
+Playback can start anywhere on the timeline since there is no dependence on
+previous results.
+
+</li><li> <b>Track previous frame</b><br>
+Causes only the motion between the previous frame and the current frame to be
+calculated.  This is added to an absolute motion vector to get the new motion
+from the start of the sequence to the current position.  After every frame
+processed this way, the block position is shifted to always cover the same
+region of the image.  Playback must be started from the start of the motion
+effect in order to accumulate all the necessary motion vectors.
+
+</li><li> <b>Previous frame same block</b><br>
+This is useful for stabilizing jerky camcorder footage.  In this mode the
+motion between the previous frame and the current frame is calculated.  Instead
+of adjusting the block position to reflect the new location of the image, like
+Track Previous Frame does, the block position is unchanged between each frame.
+Thus a new region is compared for each frame.
+
+</li><li> <b>Master layer</b><br>
+This determines the track which supplies the starting frame and ending frame
+for the motion calculation.  If it is <b>Bottom</b> the bottom track of all the
+tracks sharing this effect is the master layer.  The top track of all the
+tracks is the target layer.
+
+</li><li> <b>Calculation</b><br>
+This determines whether to calculate the motion at all and whether to save it
+to disk.  If it is <b>Don&rsquo;t Calculate</b> the motion calculation is skipped.  If
+it is <b>Recalculate</b> the motion calculation is performed every time each frame
+is rendered.  If it is <b>Save</b> the motion calculation is always performed but
+a copy is also saved.  If it is <b>Load</b>, the motion calculation is loaded from
+a previous save calculation.  If there is no previous save calculation on disk,
+a new motion calculation is performed.
+
+</li><li> <b>Action</b><br>
+Once the motion vector is known this determines whether to move the target
+layer opposing the motion vector or following the motion vector.  If it is
+<b>Do Nothing</b> the target layer is untouched.  If it is <b>Track...</b> the target
+layer is moved by the same amount as the master layer.  This is useful for
+matching titles to objects in the frame.  If it is <b>Stabilize...</b> the target
+layer is moved opposite to the motion vector.  This is useful for stabilizing
+an object in the frame.  The motion operations can be accurate to single pixels
+or subpixels by changing the action setting.
+</li></ul>
+
+
+<hr>
+<a name="Secrets-of-motion-tracking"></a>
+<a name="Secrets-of-motion-tracking-1"></a>
+<h4 class="subsubsection">14.4.34.1 Secrets of motion tracking</h4>
+<a name="index-Secrets-of-motion-tracking"></a>
+<a name="index-Motion-tracking_002c-secrets-of"></a>
+
+<p>Since it is a very slow effect, there is a method to applying the motion
+tracker to get the most out of it.  First disable playback for the track to do
+motion tracking on.  Then drop the effect on a region of video with some motion
+to track.  Then rewind the insertion point to the start of the region.  Set
+<b>Action</b> -&gt; <b>Do Nothing</b>.  Set <b>Calculation</b> -&gt; <b>Don&rsquo;t calculate</b>.
+Enable <b>Draw vectors</b>.  Then enable playback of the track to see the motion
+tracking areas.
+</p>
+<p>Enable which of <b>translation motion</b> or <b>rotation motion</b> vectors you want
+to track.  By watching the compositor window and adjusting the <b>Block x,y</b>
+settings, center the block on the part of the image you want to track.  Then
+set search radius, block size, and block coordinates for translation and
+rotation.
+</p>
+<p>Once this is configured, set the calculation to <b>Save coords</b> and do test
+runs through the sequence to see if the motion tracker works and to save the
+motion vectors.  Once this is done, disable playback for the track, disable
+<b>Draw vectors</b>, set the motion action to perform on the target layer and
+change the calculation to <b>Load coords</b>.  Finally enable playback for the
+track.
+</p>
+<p>When using a single starting frame to calculate the motion of a sequence, the
+starting frame should be a single frame with the least motion to any of the
+other frames.  This is rarely frame 0.  Usually it is a frame near the middle
+of the sequence.  This way the search radius need only reach halfway to the
+full extent of the motion in the sequence.
+</p>
+<p>If the motion tracker is used on a render farm, <b>Save coords</b> and <b>previous
+frame</b> mode will not work.  The results of the save coords operation are saved to
+the hard drives on the render nodes, not the master node.  Future rendering
+operations on these nodes will process different frames and read the wrong
+coordinates from the node filesystems.  The fact that render nodes only
+visualize a portion of the timeline also prevents <b>previous frame</b> from
+working since it depends on calculating an absolute motion vector starting on
+frame 0.
+</p>
+<hr>
+<a name="g_t2-pass-motion-tracking"></a>
+<a name="g_t2-pass-motion-tracking-1"></a>
+<h4 class="subsubsection">14.4.34.2 2 pass motion tracking</h4>
+<a name="index-2-pass-motion-tracking"></a>
+<a name="index-Motion-tracking_002c-2-pass"></a>
+
+<p>The method described above is 2 pass motion tracking.  One pass is used just to
+calculate the motion vectors.  A second pass is used to apply the motion
+vectors to the footage.  This is faster than a single pass because errors in
+the motion vector calculation can be discovered quickly.
+</p>
+<p>This also allows the motion tracking to use a less demanding colormodel like
+RGB888 in the scanning step and a more demanding colormodel like RGB Float in
+the action step.  The scanning step takes much longer than action.
+</p>
+<p>This suffers the disadvantage of not being practical for extremely long
+sequences where some error is acceptable and the picture quality is lousy to
+begin with, like stabilizing camcorder footage.
+</p>
+<p>The slower method is to calculate the motion vectors and apply them
+simultaneously.  This method can use one track as the motion vector calculation
+track and another track as the target track for motion vector actions.  This is
+useful for long sequences where some error is acceptable.
+</p>
+<hr>
+<a name="Using-blur-to-improve-motion-tracking"></a>
+<a name="Using-blur-to-improve-motion-tracking-1"></a>
+<h4 class="subsubsection">14.4.34.3 Using blur to improve motion tracking</h4>
+<a name="index-Blur_002c-motion-tracking"></a>
+<a name="index-Motion-tracking_002c-improving-using-blur"></a>
+
+<p>With extremely noisy or interlaced footage, applying a blur effect before the
+motion tracking can improve accuracy.  Either save the motion vectors in a
+<b>tracking pass</b> and disable the blur for the <b>action pass</b> or apply the
+blur just to the <b>master layer</b>.
+</p>
+<hr>
+<a name="Using-histogram-to-improve-motion-tracking"></a>
+<a name="Using-histogram-to-improve-motion-tracking-1"></a>
+<h4 class="subsubsection">14.4.34.4 Using histogram to improve motion tracking</h4>
+<a name="index-Motion-tracking_002c-using-histogram"></a>
+
+<p>A histogram is almost always applied before motion tracking to clamp out noise
+in the darker pixels.  Either save the motion vectors in a <b>tracking pass</b>
+and disable the histogram for the <b>action pass</b> or apply the histogram just
+to the <b>master layer</b>.
+</p>
+<hr>
+<a name="Motion-tracking-in-action"></a>
+<a name="Motion-tracking-in-action-1"></a>
+<h4 class="subsubsection">14.4.34.5 Motion tracking in action</h4>
+<a name="index-Motion-tracking-in-action"></a>
+
+<p>First, add a motion effect to the track.  Drag it from the resource window and
+drop it directly over the video in Cinelerra&rsquo;s main window.  You should see
+something similar to this:
+</p>
+<img src="manual_images_intl/cin_timeline_eff_clip.png" alt="manual_images_intl/cin_timeline_eff_clip">
+
+<p>Then right-click on the motion effect marker in the timeline and select show
+to see the motion tracker dialog:
+</p>
+<img src="manual_images_intl/cin_motion_win.png" alt="manual_images_intl/cin_motion_win">
+
+<p>Start by looking at your Compositor.  You will see some new boxes
+overlaid on the video.  These are important to control the motion tracker.
+Here is a quick shot of what it will look like when working:
+</p>
+<img src="manual_images_intl/cin_comp_action_small.png" alt="manual_images_intl/cin_comp_action_small">
+
+<p>The image above shows the motion tracker losing track of the object because of
+a search window that is too small.  We will talk about this more later, but
+quickly:<br>
+</p><ul>
+<li> The middle small box is the target of the tracker.
+</li><li> The middle larger box is the search range for the tracker.  It should
+contain the full range of motion for the tracking target.
+</li><li> In this example, we are trying to track the hanging handle.  We have
+failed in this video frame, because the handle is far right of the center of
+frame.
+</li><li> The left pointing vector indicates the motion tracker attempting to find
+the target.  More on this later.
+</li></ul>
+
+<p>Move to the beginning of your video clip
+</p>
+<p>Make sure the motion tracker dialog is open
+</p>
+<p>Look at the Compositor
+</p>
+<p>Start adjusting these four knobs:
+</p>
+<img src="manual_images_intl/cin_motion_track.png" alt="manual_images_intl/cin_motion_track">
+
+<p>Make sure you check Track Translation
+</p>
+<p>Uncheck Track Rotation
+</p>
+<p>Start with knob two - Translation block size - and spin it to get an idea
+for what is changing.  Notice that both boxes resize.  Look at the small inside
+box.  Adjust it to the size of the target (the object you want to track).  Do not
+worry if it does not cover the object yet.
+</p>
+<p>Go on to knobs three and four - Block X and Block Y.  Use these to put the
+target designator over the target itself.
+</p>
+<p>Finally, use the top knob - Translation search radius.  Expand it to
+include the full range of travel you expect for the target.  If you look back
+at my original action shot, the search radius was to small and the target moved
+outside the range.  You can test this by playing the timeline and viewing the
+results (if your machine is fast enough for realtime) or by rendering and
+viewing the stabilized handle in the output.
+</p>
+<p>Make the first video frame look similar to:
+</p>
+<img src="manual_images_intl/cin_comp_first_setup_small.png" alt="manual_images_intl/cin_comp_first_setup_small">
+
+<p>This image shows a lot of detail.  Notice that the small frame is centered over
+the handle and sized to just include it.  Those settings are control by knobs
+two through four.  Finally, the outer frame is larger than the back and forth
+movement of the handle in the entire video clip.
+</p>
+<p>Finally, here are other settings needed to see the effect:
+</p>
+<img src="manual_images_intl/cin_motion_set_output1.png" alt="manual_images_intl/cin_motion_set_output1">
+
+<ul>
+<li> <b>Draw vectors</b> Uncheck this to prevent rendering of the target boxes and
+motion vectors in your rendered video.  If checked, the vectors and boxes are
+rendered in output video.
+</li><li> <b>Track Single Frame</b> For this example it is set with a Frame number of 0
+(first frame)
+</li><li> <b>Master Layer</b> If the effect is shared between two tracks it specifies
+which of those tracks will be the one where motion is tracked (Master Layer)
+and which layer will be affected by the resulting translation vectors (Target
+Layer).  If there is no second track sharing motion tracker then the
+Master=Target.
+</li><li> <b>Action</b> Select the stabilize options to have the rendered video follow
+the motion of the target.  Select a Track option to run motion tracking without
+adjusting the video.
+</li><li> <b>Calculation</b>
+<ul>
+<li> <b>Don&rsquo;t Calculate</b> select this option to turn off adjustment of video.
+</li><li> <b>Recalculate</b> Perform motion tracking and update video per Action
+setting.
+</li><li> <b>Save and Load</b> Saves/Loads the translation/rotation vectors (absolute
+or relative) to/from files.  Each frame gets an separate file in /tmp directory
+which contains its vector.
+</li></ul>
+</li></ul>
+
+<hr>
+<a name="Tracking-stabilization-in-action"></a>
+<a name="Tracking-stabilization-in-action-1"></a>
+<h4 class="subsubsection">14.4.34.6 Tracking stabilization in action</h4>
+<a name="index-Tracking-stabilization-in-action"></a>
+
+<p>In this section, we will explain how to stabilize a video.  Such a need can
+arise when the video was taken from a vehicle for example.
+</p>
+<p>First select on the timeline the part of the footage you want to stabilize,
+using the in and out points.  Then apply the motion effect on that part of the
+video.
+</p>
+<p>Select the &quot;Previous frame same block&quot; option.  That option is recommended for
+stabilizing jerky camcorder footage.  Its goal is not to &quot;follow&quot; an object.
+The block stays exactly at the same place during all the effect length.
+</p>
+<p>Enlarge the block and select almost half the size of the video.  Select the
+&quot;Stabilize subpixel&quot; option: it will give a finer stabilization.  Reduce the
+&quot;Maximum absolute offset&quot; value to limit the stabilization amplitude.  You
+probably prefer to get a non-perfect stabilization on some places on the video,
+than having a very large black border on one side of the picture during big
+shakes.  Set the &quot;Translation search steps&quot; value to 128.  Increasing that
+value will not give a better result, but will considerably increase the
+rendering time.  Make sure the &quot;Draw vectors&quot; option is selected, and render
+the part of the video where the motion effect is applied.
+</p>
+<p>If the result is good, deselect the &quot;Draw vectors&quot; option.  The block and
+vectors were not drawn anymore on the video.  Then, render your video to a
+&lsquo;<tt>.dv</tt>&rsquo; file, and import it into your project.
+</p>
+<p>You will notice the video is stabilized but there are black borders which
+appear on sides of the frame.  You have to zoom in and define projector
+keyframes to move the projector around the screen, in order to remove those
+black borders.  The more your footage is jerky, the more you have to zoom in to
+discard the black borders.  That is why the result is better with HDV footage
+than with DV footage.
+</p>
+<hr>
+<a name="Motion-blur"></a>
+<a name="Motion-blur-1"></a>
+<h3 class="subsection">14.4.35 Motion blur</h3>
+<a name="index-Motion-blur"></a>
+
+<p>This real-time effect takes  the X/Y camera automation vectors as input and
+applies a linear blur trailing the direction of the camera automation to fool
+ the eye into thinking it is seeing a more natural motion. It is mainly designed
+ to remove choppy motion in overlying graphics/SVG.
+</p>
+<p> This plugin is not designed for rendering in non real-time applications, for
+ example to add motion blur frame-by-frame inside an existing live-action
+ video. For the plugin to work, camera automation is required.
+</p>
+<p> <b>Parameters:</b>
+ </p><ul>
+<li> <i>Length:</i> sets the distance between the duplicate images
+ </li><li> <i>Steps:</i> number of duplicate images (steps) that are offset from
+ the input image to the end of the blur. This lets you set the smoothness of
+ the resulting blur.
+ </li></ul>
+
+<img src="manual_images_intl/motionblur.png" alt="manual_images_intl/motionblur">
+
+<hr>
+<a name="Oil-painting"></a>
+<a name="Oil-painting-1"></a>
+<h3 class="subsection">14.4.36 Oil painting</h3>
+<a name="index-Oil-painting"></a>
+<a name="index-Painting_002c-oil"></a>
+
+<img src="manual_images_intl/oilpainting.png" alt="manual_images_intl/oilpainting">
+
+<p>This effect makes video tracks appears as a painting.  It can be controlled by
+Radius slider.  Intensity of colors can be chosen as option.
+</p>
+<hr>
+<a name="Overlay-video"></a>
+<a name="Overlay-video-1"></a>
+<h3 class="subsection">14.4.37 Overlay video</h3>
+<a name="index-Overlay-video"></a>
+
+<img src="manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
+
+<p>This effect can combine several tracks by using the so called Overlayer. This is 
+a basic internal device normally used by Cinelerra to create the (dissolve) 
+transitions and for compositing the final output of every track onto the output 
+bitmap. The Overlayer has the ability to combine one or several image layers on 
+top of a &quot;bottom layer&quot;. It can do this combining of images in several different 
+(and switchable) output modes: Normal, Additive, Subtractive, Multiply (Filter), 
+Divide, Max and Replace. For a detailed explanation of the several overlay modes 
+See section <a href="cinelerra_cv_manual_en_8.html#Compositing">Compositing</a>. 
+</p>
+<p>Now, the overlay plugin enables the use of this Overlayer device in the middle 
+of any plugin stack, opening endless filtering and processing possibilities.
+It is only useful as a shared plugin (i.e. a multitrack plugin). So, to use
+the overlay plugin
+</p>
+<ol>
+<li> Add the effect to Track A.
+</li><li> Choose &quot;attach effect&quot; from the context menu of another track (Track B).
+</li><li> Choose &quot;Track A:Overlay&quot; as a shared plugin.
+</li><li> Manipulate the plugin parameters in Track A.
+</li></ol>
+
+<p>In the Overlay Plugin&rsquo;s parameter window you can choose the overlay order, i.e. 
+which track plays the role of the &quot;bottom layer&quot; and which plays the role of 
+the &quot;top layer&quot;. For some overlay modes, this can make quite a difference, e.g. 
+the top layer is subtracted from the bottom layer for &quot;Subtractive&quot; mode. Further
+on, you can choose on which of the tracks to overlay the combined output. (Hint: 
+in most cases, you will want to mute the other track and only retain this 
+combined output). 
+</p>
+<hr>
+<a name="Perspective"></a>
+<a name="Perspective-1"></a>
+<h3 class="subsection">14.4.38 Perspective</h3>
+<a name="index-Perspective"></a>
+
+<img src="manual_images_intl/perspective.png" alt="manual_images_intl/perspective">
+
+<p>The perspective effect allows you to change the perspective of an object, and
+is perfect for making objects appear as if they are fading into the distance.
+</p>
+<hr>
+<a name="Polar"></a>
+<a name="Polar-1"></a>
+<h3 class="subsection">14.4.39 Polar</h3>
+<a name="index-Polar"></a>
+
+<img src="manual_images_intl/polar.png" alt="manual_images_intl/polar">
+
+<p>The Polar effect bends and warps your video in weird ways.  Mathematically, it
+converts your video from either polar coordinates to rectangular coordinates,
+or the reverse.
+</p>
+<hr>
+<a name="RGB_002d601"></a>
+<a name="RGB_002d601-1"></a>
+<h3 class="subsection">14.4.40 RGB-601</h3>
+<a name="index-RGB_002d601"></a>
+
+<img src="manual_images_intl/rgb601.png" alt="manual_images_intl/rgb601">
+
+<p>For analog video or MPEG (including DVD) output, the maximum range for
+R,G,B is [16, 235] (8-bit). For YUV, the maximum range for intensity
+(Y) is [16, 235] (8-bit). This range corresponds to gray levels from
+6% to 92%. When rendering, values outside of these ranges will be
+clipped to these limits.
+</p>
+<p>To render to MPEG, add the RGB-601 effect to all video tracks where
+material uses the full intensity scale (0-100%), and enable <b>RGB -&gt;
+601 compression</b>. Consider adding the Videoscope effect after RGB-601
+to see how RGB-601 affects your dynamic range. See section <a href="#Videoscope">Videoscope</a>.
+</p>
+<p>(To preview how your rendered MPEG would look <i>without</i> RGB-to-601
+compression, instead enable <b>601 -&gt; RGB expansion</b> &ndash; you will
+observe a noticeable contrast increase.)
+</p>
+<p>Although RGB-601 will reduce contrast in your video tracks, the
+contrast will be restored during MPEG playback.
+</p>
+<hr>
+<a name="Radial-blur"></a>
+<a name="Radial-blur-1"></a>
+<h3 class="subsection">14.4.41 Radial blur</h3>
+<a name="index-Radial-blur"></a>
+
+<img src="manual_images_intl/radialblur.png" alt="manual_images_intl/radialblur">
+
+<p>It creates a whirlpool blur that simulates a swirling camera.  You can vary the
+location, type, and quality of the blur.
+</p>
+<hr>
+<a name="ReframeRT"></a>
+<a name="ReframeRT-1"></a>
+<h3 class="subsection">14.4.42 ReframeRT</h3>
+<a name="index-ReframeRT-video-effect"></a>
+
+<img src="manual_images_intl/reframert.png" alt="manual_images_intl/reframert">
+
+<p>ReframeRT changes number of frames in a sequence of video directly from the
+timeline.  It has 2 modes, selected by the 2 toggles in the GUI.
+</p>
+<p><b>Stretch</b> mode multiplies the current frame number of its output by the scale
+factor to arrive at the frame to read from its input.  If its current output
+frame is #55 and the scale factor is 2, frame #110 is read from its input.  The
+stretch mode has the effect of changing the length of output video by the
+inverse of the scale factor.  If the scale factor is greater than 1, the output
+will end before the end of the sequence on the timeline.  If it is less than 1,
+the output will end after the end of the sequence on the timeline.  The
+ReframeRT effect must be lengthened to the necessary length to accommodate the
+scale factor.  Change the length of the effect by clicking on the endpoint of
+the effect and dragging.
+</p>
+<p>Although stretch mode changes the number of the frame read from its input, it
+does not change the frame rate of the input.  Effects before ReframeRT assume
+the same frame rate as ReframeRT.
+</p>
+<a name="index-Fast-play-effect"></a>
+<p>The ReframeRT in stretch mode can be use to create a <b>fast play effect</b>.
+Select Stretch mode and enter a value greater than 1 to get accelerated
+playback.
+</p>
+<a name="index-Slow-motion-effect"></a>
+<p>For <b>slow motion effect</b>, use a ReframeRT effect in stretch mode with a value
+less than 1.  <b>Example</b>: you have a clip that you want to put in slow motion.
+The clip starts at 33.792 seconds and ends at 39.765.  The clip is 5.973
+seconds long.  You want to play it at 4/10ths normal speed.  You divide the
+clip length by the playback speed (5.973/.4) to get a final clip length of
+14.9325 seconds.  You create an in point at the start of your clip: 33.792
+seconds.  You put an out point 14.9325 seconds later, at 48.7245 seconds
+(33.792 + 14.9325).  You attach a ReframeRT effect, set it to .4 and stretch.
+You change the out point at 48.7245 to an in point.  You start your next clip
+after the slow motion effect at the 48.7245 out point.
+</p>
+<p>You can also change the frame rate of the clip if you right click on it in the
+<b>media viewer</b> and go to <b>Info</b>.  If you do not hit the drop down first, you
+can type in a desired frame rate as well.  Cinelerra will pick the right frames
+out for the project frame rate, effectively doing the time-lapsing as well
+</p>
+<p><b>Downsample</b> mode does not change the length of the output sequence.  It
+multiplies the frame rate of the output by the scale factor to arrive at a
+frame rate to read the input.  This has the effect of replicating the input
+frames so that they only change at the scaled frame rate when sent to the
+output.  It does not change the length of the sequence.  If the scale factor is
+0.5 and the output frame rate is 30 fps, only 15 frames will be shown per
+second and the input will be read at 15 fps.  Downsample is only useful for
+scalefactors below 1, hence the name downsample.
+</p>
+<p>Downsample mode changes the frame rate of the input as well as the number of
+the frame to read, so effects before ReframeRT see the frame rate * the scale
+factor as their frame rate.  If the scale factor is 2 and the output frame rate
+is 30, the input frame rate will be 60 and the input frame number will by
+doubled.  This will not normally do anything but some input effects may behave
+differently at the higher frame rate.
+</p>
+<hr>
+<a name="Reroute"></a>
+<a name="Reroute-1"></a>
+<h3 class="subsection">14.4.43 Reroute</h3>
+<a name="index-Reroute-video-effect"></a>
+
+<p>FIXME
+</p>
+<p>It enables to selectively transfer the Alpha channel or the Components (RGB or 
+YUV) or both from a source track to a target track, partially overwriting the 
+target&rsquo;s contents. It works as a shared plugin. The typical usage scenario is
+to build up a possibly animated Mask in one track and then to transfer the Alpha 
+channel to another content track.
+</p>
+<hr>
+<a name="Reverse-video"></a>
+<a name="Reverse-video-1"></a>
+<h3 class="subsection">14.4.44 Reverse video</h3>
+<a name="index-Reverse-video-effect"></a>
+
+<img src="manual_images_intl/reversevideo.png" alt="manual_images_intl/reversevideo">
+
+<p>Media can be reversed on the timeline in realtime.  This is not to be confused
+with using the reverse playback on the transport.  The reverse effects reverse
+the region covered by the effect regardless of the transport direction.
+</p>
+<p>The region to be reversed is first determined by what part of the track the
+effect is under and second by the locations of keyframes in the effect.  The
+reverse effects have an <b>enabled</b> option which allows you to set keyframes.
+This allows may possibilities.
+</p>
+<p>Every <b>enabled</b> keyframe is treated as the start of a new reversed region and
+the end of a previous reversed region.  Several <b>enabled</b> keyframes in
+succession yield several regions reversed independent of each other.  An
+<b>enabled</b> keyframe followed by a <b>disabled</b> keyframe yields one reversed
+region followed by a forward region.
+</p>
+<hr>
+<a name="Rotate"></a>
+<a name="Rotate-1"></a>
+<h3 class="subsection">14.4.45 Rotate</h3>
+<a name="index-Rotate"></a>
+
+<img src="manual_images_intl/rotate.png" alt="manual_images_intl/rotate">
+
+<p>The Rotate filter can rotate the video in 90 degree increments, reverse and
+flip the video.
+</p>
+<hr>
+<a name="SVG-via-Inkscape"></a>
+<a name="SVG-via-Inkscape-1"></a>
+<h3 class="subsection">14.4.46 SVG via Inkscape</h3>
+<a name="index-SVG-via-Inkscape"></a>
+
+<img src="manual_images_intl/svg.png" alt="manual_images_intl/svg">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Scale"></a>
+<a name="Scale-1"></a>
+<h3 class="subsection">14.4.47 Scale</h3>
+<a name="index-Scale"></a>
+
+<img src="manual_images_intl/scale.png" alt="manual_images_intl/scale">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Selective-temporal-averaging"></a>
+<a name="Selective-temporal-averaging-1"></a>
+<h3 class="subsection">14.4.48 Selective temporal averaging</h3>
+<a name="index-Selective-temporal-averaging"></a>
+
+<img src="manual_images_intl/timeavg.png" alt="manual_images_intl/timeavg">
+
+<p>This plugin is designed to smooth out non-moving areas of a video clip.  The
+smoothing is performed by averaging the color component for each pixel across a
+number of frames.  The smoothed value is used if both the standard deviation
+and the difference between the current component value and the average
+component value are below a threshold.
+</p>
+<p>The average and standard deviation are calculated for each of the components
+of the video.  The type of components averaged is determined by the color model
+of the entire project.  The average and standard deviation of the frames can be
+examined by selecting the specific radio button in the plugin options window.
+</p>
+<p>The region over which the frames are averaged is determined by either a fixed
+offset or a restart marker system.  In a restart marker system, certain
+keyframes are marked as beginning of sections.  Then for each section, the
+frames surrounding the current frame are used as the frames to average over,
+except when approaching the beginning and end of a section, whereby the
+averaging is performed over the <i>N</i> beginning or ending frames respectively.
+</p>
+<p><b>Common usage:</b>
+</p>
+<p>If you have to select the number of frames you wish to average.
+</p>
+<ol>
+<li> Enter a reasonable number of frames to average (e.g. 10).
+</li><li> Select the <b>Selective Temporal Averaging</b> method and enter 1 and 10 for
+all the <b>Av. Thres.</b> and <b>S.D. Thres.</b> respectively.  This basically causes
+all pixels to use the average value.
+</li><li> Turn the mask for a the first component on.  This should make the whole
+frame have a solid color of that specific component.
+</li><li> Slowly reduce the <b>S.D. Thres.</b> value.  As you do so, you will notice
+that the regions vastly different from the average will have a flipped mask
+state.  Continue to reduce the threshold until you reach the point at which
+non-moving regions of the video have a flipped masked state.  This value is
+known as the <b>noise-floor</b> and is the level of natural noise generated by the
+CCD in the camera.
+</li><li> Repeat the same procedure for the <b>Av. Thres.</b>
+</li><li> Turn off the mask
+</li><li> Repeat this for all channels
+</li></ol>
+
+<hr>
+<a name="Sharpen"></a>
+<a name="Sharpen-1"></a>
+<h3 class="subsection">14.4.49 Sharpen</h3>
+<a name="index-Sharpen"></a>
+
+<img src="manual_images_intl/sharpen.png" alt="manual_images_intl/sharpen">
+
+<p>FIXME
+</p>
+<hr>
+<a name="ShiftInterlace"></a>
+<a name="ShiftInterlace-1"></a>
+<h3 class="subsection">14.4.50 ShiftInterlace</h3>
+<a name="index-ShiftInterlace"></a>
+
+<img src="manual_images_intl/shiftinterlace.png" alt="manual_images_intl/shiftinterlace">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Swap-channels"></a>
+<a name="Swap-channels-1"></a>
+<h3 class="subsection">14.4.51 Swap channels</h3>
+<a name="index-Swap-channels"></a>
+
+<img src="manual_images_intl/swapchannels.png" alt="manual_images_intl/swapchannels">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Threshold"></a>
+<a name="Threshold-1"></a>
+<h3 class="subsection">14.4.52 Threshold</h3>
+<a name="index-Threshold-video-effect"></a>
+<a name="index-Luminance"></a>
+
+<img src="manual_images_intl/threshold.png" alt="manual_images_intl/threshold">
+
+<p>Threshold converts the image to pure luminance, and replaces pixels
+with one of three colors based on the luminance. Pixels with luminance
+values in the low range are replaced with black, pixels in the middle
+range are replaced with white, and pixels in the high range are
+replaced with black. Color and alpha for each range are configurable
+and interpolate according to keyframes.
+</p>
+<p>The threshold window shows a histogram of luminance values for the
+current frame. Click dragging inside the histogram creates a range to
+convert to white. <b>SHIFT-clicking</b> extends one border of this range.
+Values for the threshold range can also be specified in the text
+boxes.
+</p>
+<p>This effect is basically a primitive luminance key.  A second track above the
+track with the threshold effect can be multiplied, resulting in only the parts
+of the second track within the threshold being displayed.
+</p>
+<hr>
+<a name="Time-average"></a>
+<a name="Time-average-1"></a>
+<h3 class="subsection">14.4.53 Time average</h3>
+<a name="index-Time-average-video-effect"></a>
+
+<img src="manual_images_intl/timeavg.png" alt="manual_images_intl/timeavg">
+
+<p>Time average is one effect which has many uses besides creating nifty trail
+patterns of moving objects.  It is main use is reducing noise in still images.
+Merely point a video camera at a stationary subject for 30 frames, capture the
+frames, and average them using <b>time average</b> and you will have a super high
+quality print.  In floating point colormodels, time average can increase the
+dynamic range of lousy cameras.
+</p>
+<p>Inside the time average effect is an accumulation buffer and a divisor.  A
+number of frames are accumulated in the accumulation buffer and divided by the
+divisor to get the average.
+</p>
+<p>Because the time average can consume enormous amounts of memory, it is best
+applied by first disabling playback for the track, dropping the time average in
+it, configuring time average for the desired number of frames, and re-enabling
+playback for the track.
+</p>
+<ul>
+<li> <b>Frames to average</b><br>
+This determines the number of frames to be accumulated in the accumulation
+buffer.  For extremely large integrations it is easier to edit the EDL in a
+text editor and put in the number of frames.
+
+</li><li> <b>Accumulate</b><br>
+This outputs the accumulation buffer without dividing it.
+
+</li><li> <b>Average</b><br>
+This causes the accumulation buffer to be divided before being output.
+This results in the average of all the frames.
+
+</li><li> <b>Inclusive Or</b><br>
+This causes the accumulation buffer to be replaced by any pixels which
+are not transparent.  In combination with motion tracking it allows entire
+sequences to be combined to form panoramas.
+
+</li><li> <b>Reprocess frame again</b><br>
+If an effect before the time average is adjusted the time average normally
+does not reread the accumulation buffer to get the change.  This forces it to
+reread the accumulation buffer when other effects change.
+
+</li><li> <b>Disable subtraction</b><br>
+In order to represent the accumulation of only the specified number of
+frames, the time average retains all the previous frames in memory and
+subtracts them out as it plays forward.  It would run out of memory if it had
+to accumulate thousands of frames.  By disabling subtraction the previous
+frames are not stored in memory and only the average function is affected by
+the frame count.
+</li></ul>
+
+<hr>
+<a name="TimeFront"></a>
+<a name="TimeFront-1"></a>
+<h3 class="subsection">14.4.54 TimeFront</h3>
+<a name="index-TimeFront"></a>
+
+<img src="manual_images_intl/timefront.png" alt="manual_images_intl/timefront">
+
+<p>This is a warping framework plugin based on this article:<br>
+<a href="http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf">http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf</a>
+</p>
+<hr>
+<a name="Title"></a>
+<a name="Title-1"></a>
+<h3 class="subsection">14.4.55 Title</h3>
+<a name="index-Title"></a>
+<a name="index-Gimp"></a>
+
+<img src="manual_images_intl/titler.png" alt="manual_images_intl/titler">
+
+<p>While it is possible to add text to movies by importing still images from The
+Gimp and compositing them, the Titler allows you to add text from within
+Cinelerra.
+</p>
+<p>The titler has standard options for <b>font, size, and style</b>.  The best font
+is a generic, normal font like Arial in a large size. <br>
+The titler also has options you will only find in moving pictures.  The
+<b>Justify</b> operation justifies the text relative to the entire frame.  Once
+justified, the <b>X and Y</b> offset is applied.  This allows text to be justified
+while at the same time letting you push it within the title safe region.<br>
+The <b>motion type</b> scrolls the text in any of the four directions.  When using
+this, the text may disappear.  Make sure the speed is set to a reasonably high 
+value (try 150) and move the insertion point along the timeline until the text 
+is far enough along the animation to reappear.  The text scrolls on and scrolls
+off.<br>
+Setting <b>loop</b> causes the text to scroll completely off and repeat.  Without
+<b>loop</b> the text scrolls off and never reappears.<br>
+The speed of the animation is determined by <b>speed</b>, in pixels per second.  
+Set it higher to speed up the animation.<br>
+<b>Drop shadow</b> draws a black copy of the text to the bottom right of the
+original text.  This is useful when drawing text over changing video to keep
+the border always visible.<br>
+In addition to the scrolling, <b>Fade in/Fade out</b> are a second type of
+animation.  If the fade seconds are 0, no fading is done.<br>
+<b>Color</b> picks the color to draw the text in.  Usually white is the only
+practical color.<br>
+<b>Stamp timecode</b> replaces the text with the current position on the timeline
+in seconds and frames.<br>
+</p>
+<p>Text options can only be applied to all the text as a whole. If you want your
+title text formatted with a mixture of fonts, sizes, styles, alignments etc. you
+need to use multiple tile effects.
+</p>
+<p>The title effect supports keyframes only for <b>Justify</b> and <b>Text</b>, with
+no interpolation.<br>
+To add subtitles to your movie can set a single title effect and then define keyframes.  
+If you enable the automatic keyframes toggle <img src="manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">, 
+a new keyframe is created each time you edit the text. Check <b>View -&gt; Plugin autos</b> 
+to make them visible on the timeline. In the text input box you will see the
+subtitle displayed under the insertion point.<br>
+To correct an existing subtitle, the automatic keyframes toggle must be off. 
+To adjust the timing of subtitles simply drag the keyframes.<br>
+<b>Note:</b> For adding subtitles on a separate stream, you need an external subtitle editor.
+See section <a href="cinelerra_cv_manual_en_21.html#Adding-subtitles">Adding subtitles</a>, for more information.
+</p>
+<p>To create special effects for your title you can place it on a dedicated track
+and insert other realtime video effects just under the title effect or/and use
+camera and projector. Thanks to keyframing you can animate your title and make it 
+change position, size, colour, transparency, texture, shape over time.
+</p>
+<p>For improving playback performances of titles with effects, you can reduce the size 
+of the dedicated track. Right click on the track and select <b>Resize track...</b>. 
+Enter the smallest resolution that still keeps the title visible. For moving your title
+use the compositor projector.
+</p>
+<p>To included graphical elements like logos, you may want to import your title as
+a PNG image (alpha channel transparency is possible), move it with camera
+and projector or add effects.
+</p>
+<p>The titler input is limited to 1023 characters. Titles longer than 1023 characters 
+will be accepted by the software, but they will likely cause lock-ups. See 
+<a href="http://bugs.cinelerra.org/show_bug.cgi?id=155|bug 155">http://bugs.cinelerra.org/show_bug.cgi?id=155|bug 155</a> to know more.
+</p>
+
+<hr>
+<a name="Adding-fonts-to-the-titler"></a>
+<a name="Adding-fonts-to-the-titler-1"></a>
+<h4 class="subsubsection">14.4.55.1 Adding fonts to the titler</h4>
+
+<a name="index-Fonts_002c-adding-to-the-titler"></a>
+<a name="index-TTF-fonts"></a>
+<p>The X Window system originally did not have a suitable font renderer for video.
+It also is restricted to the current bit depth.  It does not have a convenient
+way to know which fonts work with the suitable font renderer in the desired bit
+depth.  The easiest way we have found to support fonts in the titler is to have a
+directory for them at &lsquo;<tt>/usr/lib/cinelerra/fonts</tt>&rsquo;.
+</p>
+<p>The titler supports mainly <b>TTF</b>, true type fonts.  It supports others but
+TTF are the most reliable.  To add true type fonts, copy the &lsquo;<tt>.TTF</tt>&rsquo; files
+to the &lsquo;<tt>/usr/lib/cinelerra/fonts</tt>&rsquo; directory.  In that directory run
+<code>ttmkfdir &amp;&amp; mv fonts.scale fonts.dir</code> and restart Cinelerra.  The new
+fonts should appear.  The usage of ttmkfdir changes frequently so this
+technique might not work.
+</p>
+<hr>
+<a name="The-title_002dsafe-region"></a>
+<a name="The-title_002dsafe-region-1"></a>
+<h4 class="subsubsection">14.4.55.2 The title-safe region</h4>
+<a name="index-Title_002dsafe-region"></a>
+<a name="index-TV-display"></a>
+
+<p>If the video is displayed on a consumer TV, the outer border is going to be
+cropped by 5% on each side.  Moreover, text which is too close to the edge
+looks sloppy.  Make sure when adding titles to have the <b>title-safe</b>
+<img src="manual_images_intl/titlesafe.png" alt="manual_images_intl/titlesafe"> tool active in the <b>compositor</b> window.  
+The text should not cross the inner rectangle.
+</p>
+<hr>
+<a name="Translate"></a>
+<a name="Translate-1"></a>
+<h3 class="subsection">14.4.56 Translate</h3>
+<a name="index-Translate"></a>
+
+<img src="manual_images_intl/translate.png" alt="manual_images_intl/translate">
+
+<p>This effect allows displacing, cropping, and/or scaling the source video
+horizontally and/or vertically.  The In and Out parameters operate similar to the
+camera and projector functions in the Compositor:
+</p>
+<ul>
+<li> In X/Y specifies how many pixels from the left/top of the source you want
+to start (camera) while Out X/Y defines where on the screen you want the output
+to start (projector)
+</li><li> In W/H defines how many pixels of the source you want to include in each
+direction while Out W/H defines how many pixels on the screen you want that
+source to take up.  Identical values for both In and Out that are less than the
+source dimension will simply crop the source.  Different values will stretch
+(or compress if Out &gt; In) the source in that direction (and crop if In is less
+than the source dimension.)
+</li></ul>
+
+<p>This effect supports keyframes so these parameters can change smoothly over
+time.
+</p>
+<p>You can use this effect for many things such as having a cropped inset clip
+move across the screen, or have it change size or stretch while doing so. 
+Be forewarned though, that for interlaced footage horizontal displacements are 
+likely to destroy the field order, resulting in all sort of flickering and 
+jumping movements.
+</p>
+<hr>
+<a name="Unsharp"></a>
+<a name="Unsharp-1"></a>
+<h3 class="subsection">14.4.57 Unsharp</h3>
+<a name="index-Unsharp"></a>
+
+<img src="manual_images_intl/unsharp.png" alt="manual_images_intl/unsharp">
+
+<p>This effect applies a traditional darkroom technique, the so called unsharp mask
+to every video frame. With different parameter values, this can be used to 
+soften or to sharpen the image. Its parameters are:
+</p><ul>
+<li> <b>Amount</b><br>
+Moving the slider to the right makes dark areas get darker and light areas
+get lighter.
+
+</li><li> <b>Radius</b><br>
+This slider controls how much blurring is used in the edge-finding stage.
+The practical effect of this is to specify how large a region is darkened or
+lightened.
+
+</li><li> <b>Threshold</b><br>
+This slider permits to control how big is a difference between a pixel in
+the blurred copy and the original copy is needed before any darkening or
+lightening will be applied.
+</li></ul>
+
+<hr>
+<a name="Videoscope"></a>
+<a name="Videoscope-1"></a>
+<h3 class="subsection">14.4.58 Videoscope</h3>
+<a name="index-Videoscope"></a>
+
+
+<img src="manual_images_intl/videoscope.png" alt="manual_images_intl/videoscope">
+
+<p>The Videoscope summarizes intensity and color on a calibrated display.
+The Videoscope can be used in conjunction with other Cinelerra plugins
+such as YUV, HUE, Brightness, Color Balance or Histogram to accurately
+correct video for contrast, clarity, conformance (to normalize various
+videos shot under different light settings), or for cinematic
+purposes. The human eye is not specialized to match precise level of
+light and color, but Videoscope is.
+</p>
+<p>Some thought is being given to having a video scope for recording.
+Unfortunately, this would require a lot of variations of the video scope for
+all the different video drivers.
+</p>
+<p>The Videoscope contains two displays: the <b>waveform scope</b> and the
+<b>vectorscope</b>
+</p>
+<hr>
+<a name="The-waveform-scope"></a>
+<a name="The-waveform-scope-1"></a>
+<h4 class="subsubsection">14.4.58.1 The waveform scope</h4>
+<a name="index-Waveform-scope"></a>
+
+<p>The Waveform Scope displays image intensity (luminance) versus image X
+position. The Waveform Scope appears on the left side of the
+Videoscope window.
+</p>
+<p>The display is calibrated vertically from 0% intensity (black) at the
+bottom up to 100% intensity at the top. Each column of pixels in the
+image corresponds to one column of pixels in the Waveform Scope.
+</p>
+<img src="manual_images_intl/videoscope_waveform_bars.png" alt="manual_images_intl/videoscope_waveform_bars">
+
+<p>The color bar test image is plotted in the waveform display as a stair
+step set of lines. In this example, the waveform display and the test
+image are aligned to show that each stair step corresponds with one
+color bar.
+</p>
+<p>The waveform display shows the white bar at the 75% level because the
+colors in the test image are 75% values. The white bar has the highest
+luminance because it contains all color components. In more complex
+images, multiple levels in the same column are represented with
+multiple pixels on the scope.
+</p>
+<p>The Waveform scope helps correct image light levels for contrast range or for
+conforming light levels on various scenes originally shot on different light
+settings.
+</p>
+<p>Adjusting light levels (adjusting luminance):
+</p><ol>
+<li> Insert the Brightness/Contrast, YUV, or another video adjustment effect
+on your track.
+</li><li> Insert the Videoscope effect on the track below. Make sure that it is
+placed below so it can see the adjustment effect&rsquo;s results. If it is not,
+right-click and move it down.
+</li><li> Show both the effect and Videoscope.
+</li><li> Adjust the effect while observing the waveform to match the desired
+light level.
+</li></ol>
+
+<p>If you are looking for maximum contrast range, adjust the
+Brightness/Contrast levels to align the darkest point on the scope
+with the 0% level and the brightest portion with 100%. Anything above
+100% is over saturated. Limits which may be highlighted with checkbox
+controls:
+</p>
+<ul>
+<li> <b>HDTV or sRGB (ITU-R BT.709)</b> <br>
+The maximum pixel range for HDTV or sRGB is [0, 255]. This range
+corresponds with levels 0% and 100%.
+
+</li><li> <b>MPEG or Analog video (ITU-R BT.601)</b> <br>
+For analog video or MPEG (including DVD), the maximum range for RGB is
+[16, 235] (8-bit). For YUV, the maximum range for intensity (Y) is
+[16, 235] (8-bit). This range corresponds to gray levels from 6% to
+92%. See section <a href="#RGB_002d601">RGB-601</a>.
+
+</li><li> <b>NTSC Television broadcast</b> <br>
+If you are producing a video for NTSC television broadcast, keep the
+intensity between 7.5% and 100%. The minimum black value which can be
+broadcast is IRE 7.5% (indicated by the &ldquo;7.5&rdquo; level), and values
+below this level are no darker.
+
+</li></ul>
+
+<hr>
+<a name="The-vectorscope"></a>
+<a name="The-vectorscope-1"></a>
+<h4 class="subsubsection">14.4.58.2 The vectorscope</h4>
+<a name="index-Vectorscope"></a>
+
+<p>The Vectorscope displays color and color saturation. Each pixel in the
+source image is drawn as a point on the color wheel. The distance from
+the center is the color saturation. Gray values are close to the
+center, and high saturation values are near the perimeter.
+</p>
+<p>The Vectorscope is used with other plugins to correct color, adjust image
+tint, and apply other effects for cinematic effects, image correction, or to
+conform images to look the same.
+</p>
+<img src="manual_images_intl/videoscope_vectorscope_color_correct.png" alt="manual_images_intl/videoscope_vectorscope_color_correct">
+
+<p>In this example, the top image is white balanced. Vectorscope shows
+many pixels in the yellow region and few in the white region. To
+remove the yellow tint, the Color Balance effect is used to first
+shift the vectorscope plot towards magenta (Mg), and then towards
+blue (B) until the region previously near the center surrounds the
+center. In the bottom image, yellow highlights have become white
+highlights (arrows). Note that the corresponding features in waveform
+also appear whiter (arrows).
+</p>
+<p>The Vectorscope can also be used to verify that the video output will
+display properly on various monitors.  Any points along the inner radius will
+be displayed as pure white and any points above the 100% radius, will probably
+not be correctly displayed on the screen.
+</p>
+<hr>
+<a name="Wave"></a>
+<a name="Wave-1"></a>
+<h3 class="subsection">14.4.59 Wave</h3>
+<a name="index-Wave"></a>
+
+<img src="manual_images_intl/wave.png" alt="manual_images_intl/wave">
+
+<p>The wave effect adds waves on the image.
+</p>
+<img src="manual_images_en/effect_wave_before_after.png" alt="manual_images_en/effect_wave_before_after">
+
+<p>You can adjust the following parameters:
+</p>
+<img src="manual_images_intl/effect_wave_window.png" alt="manual_images_intl/effect_wave_window">
+
+<hr>
+<a name="Whirl"></a>
+<a name="Whirl-1"></a>
+<h3 class="subsection">14.4.60 Whirl</h3>
+<a name="index-Whirl"></a>
+
+<img src="manual_images_intl/whirl.png" alt="manual_images_intl/whirl">
+
+<p>FIXME
+</p>
+<hr>
+<a name="YUV"></a>
+<a name="YUV-1"></a>
+<h3 class="subsection">14.4.61 YUV</h3>
+<a name="index-YUV"></a>
+
+<img src="manual_images_intl/yuv.png" alt="manual_images_intl/yuv">
+
+<p>FIXME
+</p>
+<hr>
+<a name="Zoom-blur"></a>
+<a name="Zoom-blur-1"></a>
+<h3 class="subsection">14.4.62 Zoom blur</h3>
+<a name="index-Zoom-blur"></a>
+
+<img src="manual_images_intl/zoomblur.png" alt="manual_images_intl/zoomblur">
+
+<p>FIXME
+</p>
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Realtime-effects" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_15.html#Rendered-effects" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

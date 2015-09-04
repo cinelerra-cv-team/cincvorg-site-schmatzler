@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 5. Charger et enregistrer des fichiers</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 5. Charger et enregistrer des fichiers">
+<meta name="keywords" content="Manuel de Cinelerra CV: 5. Charger et enregistrer des fichiers">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_4.html#SEC58" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_6.html#SEC88" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Charger-et-enregistrer-des-fichiers"></a>
+<a name="SEC63"></a>
+<h1 class="chapter"> 5. Charger et enregistrer des fichiers </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC64">5.1 Formats de fichiers supportés</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  Les formats que Cinelerra peut importer et exporter
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC79">5.2 Charger des fichiers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Charger tout type de fichier
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC85">5.3 Charger la sauvegarde</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         	Récupérer la session dans l'état précédant un plantage
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC86">5.4 Enregistrer des fichiers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">            Enregistrer la liste des décisions de montage
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC87">5.5 Fusionner des projets</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Formats-de-fichiers-support_00e9s"></a>
+<a name="SEC64"></a>
+<h2 class="section"> 5.1 Formats de fichiers supportés </h2>
+
+<p>Voici la plupart des formats de fichiers supportés et des informations
+concernant leur compression.  Il est possible de charger des fichiers ayant
+d'autres formats que ceux indiqués ici.<br>
+Le format du fichier détermine ce que Cinelerra en fait.  Les paramètres du projet
+sont sauvegardées dans une liste de décisions de montage (EDL) au format XML.  Les formats
+qui contiennent des médias mais pas de décision de montage se contentent
+d'ajouter des données aux pistes.  Si le taux d'échantillonnage de votre projet
+est de 48 kHz et que vous chargez un fichier audio avec un taux de 96 kHz, vous
+continuerez à le reproduire à 48 kHz.  Si vous chargez un fichier EDL à 96 kHz
+et que le taux d'échantillonage du projet en cours est de 48 kHz, il sera
+modifié pour 96 kHz.<br>
+Certains formats de fichiers sont très lents à s'afficher sur la timeline.
+C'est en général parce qu'ils comportent de la vidéo avec un fort taux de
+compression.  Dessiner les vignettes d'une vidéo très compressée peut être très
+lent.  Il faut désactiver le dessin des vignettes pour ces fichiers à l'aide du
+bouton <b>dessiner le média</b> et ainsi accélérer les opérations.
+</p>
+<p>Les formats supportés sont actuellement :
+</p><ul>
+<li> WAV
+</li><li> PCM
+</li><li> AIFF
+</li><li> Audio AC3
+</li></ul>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC65">5.1.1 Quicktime</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC66">5.1.2 Audio MPEG-4</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC67">5.1.3 Séquence d'images</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC68">5.1.4 Images fixes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC73">5.1.5 AVI</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC74">5.1.6 Fichiers MPEG contenant de la vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC75">5.1.7 Films sur DVD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC76">5.1.8 Audio MPEG 1</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC77">5.1.9 Ogg Theora/Vorbis</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC78">5.1.10 Liste de décisions de montage</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Quicktime"></a>
+<a name="SEC65"></a>
+<h3 class="subsection"> 5.1.1 Quicktime </h3>
+
+<p>Quicktime n'est pas le standard sous UNIX mais nous l'utilisons parce qu'il est
+bien documenté.  Tous les films Quicktime sur Internet sont compressés.
+Cinelerra prend en compte certains fichiers compressés en Quicktime.  Mais si
+Cinelerra plante lors du chargement d'un tel fichier, cela est probablement dû
+au fait que le format n'a pas pû être parfaitement pris en compte.<br>
+Quicktime est un conteneur pour deux flux, un flux vidéo et un flux audio.  Ces
+flux sont compressés en utilisant des méthodes différentes.  L'encodage préféré
+pour les sorties Quicktime est la vidéo MPEG-4 et l'audio MPEG-4.  Ce format
+est compatible avec la plupart des logiciels commerciaux de lecture vidéo sous
+Windows, possède un bon taux de compression et une bonne qualité de sortie.
+Pour une meilleure compression, il faut utiliser la vidéo H-264.
+Malheureusement le décodage H-264 est tellement lent qu'il ne permet pas de
+reproduire de très grandes tailles d'images.<br>
+Cinelerra supporte deux codecs non standards : vidéo MPEG-4 Dual et vidéo H.264
+Dual.  Il ne pourront être lus nulle part ailleurs que dans Cinelerra et
+XMovie.  Il sont conçus pour des films dont les images ont été divisées en deux
+champs, chaque champ étant affiché séquentiellement.  Les codecs dual
+entrelacent les deux flux vidéo de façon à améliorer l'efficacité sans demander
+de modification majeure au logiciel de lecture.
+</p>
+<hr size="6">
+<a name="Audio-MPEG_002d4"></a>
+<a name="SEC66"></a>
+<h3 class="subsection"> 5.1.2 Audio MPEG-4 </h3>
+
+<p>C'est le même que Quicktime avec un codec audio Audio MPEG-4.
+</p>
+<hr size="6">
+<a name="S_00e9quence-d_0027images"></a>
+<a name="SEC67"></a>
+<h3 class="subsection"> 5.1.3 Séquence d'images </h3>
+
+<p>Le rendu d'une séquence d'images n'est pas identique au rendu d'une image
+isolée.  Lorsqu'il effectue le rendu d'une séquence d'images, Cinelerra génère
+un fichier de table des matières pour la séquence d'images et crée un fichier
+image différent pour chaque position de la timeline.  Pour obtenir de
+meilleures performances, la table des matières peut être chargée à la place de
+chaque image.  Pour en apprendre davantage concernant les différents formats
+d'images pris en compte dans une séquence d'images, veuillez lire ce qui
+concerne les images fixes.
+</p>
+<hr size="6">
+<a name="Images-fixes"></a>
+<a name="SEC68"></a>
+<h3 class="subsection"> 5.1.4 Images fixes </h3>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC69">5.1.4.1 Charger des images fixes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC70">5.1.4.2 Dimensions des images fixes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC71">5.1.4.3 Images Open EXR</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC72">5.1.4.4 Images brutes d'appareils numériques</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Charger-des-images-fixes"></a>
+<a name="SEC69"></a>
+<h4 class="subsubsection"> 5.1.4.1 Charger des images fixes </h4>
+
+<p>Le rendu d'une image isolée provoque l'écrasement du fichier image pour chaque
+position de la timeline.  Aucune table d'index n'est créée.  Lors du
+chargement, l'image occupe la place d'une image vidéo et ne modifie pas les
+attributs du projet.  Pour voir une image, zoomez sur la timeline jusqu'à ce
+que puissiez la voir.  Pour allonger la durée d'une image, étendez-la comme
+vous le feriez avec un média vidéo normal.  Vous pouvez allonger sa durée autant
+que vous le désirez.  Les images dans Cinelerra ont la possibilité d'être
+étendues sur une durée infinie.<br>
+Cinelerra vous permet de définir la durée initiale des images chargées.  Le
+paramètre est défini dans la section Images de <b>Configuration-&gt;
+Préférences-&gt;Acquisition</b>.<br>
+A moins que votre matériau d'origine ne provienne d'une source numérique (tel
+qu'un appareil photo numérique), la première chose à faire avant de pouvoir
+l'utiliser est, d'une manière ou d'une autre, de faire l'acquisition vers un
+format de média numérique utilisable.<br>
+Pour des photos anciennes, des cartes en papier, des dessins ou des schémas,
+vous devrez effectuer une numérisation dans un format tel que PNG, TIF, TGA ou
+JPG à l'aide d'un scanner.  Vous pourrez utiliser Gimp pour retoucher les
+images, nettoyer les zones endommagées ou en corriger les couleurs.<br>
+Si vous objets proviennent d'un appareil photo numérique ou d'une copie
+d'écran, assurez vous d'effectuer l'acquisition avec la meilleure résolution
+possible.  Ceci vous permettera d'obtenir de vos projets Cinelerra une sortie
+de meilleure qualité.
+</p>
+<hr size="6">
+<a name="Dimensions-des-images-fixes"></a>
+<a name="SEC70"></a>
+<h4 class="subsubsection"> 5.1.4.2 Dimensions des images fixes </h4>
+
+<p><b>Important :</b> les images importées demeurent toujours dans leurs dimensions
+d'origine.  Vous devrez donc tenir compte du rapport d'aspect de votre vidéo
+dans Cinelerra, et devrez redimensionner vos images avant de les importer dans
+Cinelerra.<br>
+Par exemple, le rapport d'aspect en PAL est de 4/3, mais 720x576 fait 5/4.
+Pour que les images que vous importez soient affichées correctement, vous devez
+redimensionner leur taille horizontale :<br>
+Nouvelle dimension horizontale=<em>(5 / 4) / (4 / 3)</em> x taille horizontale
+d'origine<br>
+Pour les vidéo PAL, vous devrez multiplier la dimension horizontale des images
+que vous désirez importer par un facteur de 0.9375.<br>
+Voici un petit script de l'interpréteur de commandes qui, lorsqu'il est lancé
+depuis un répertoire contenant des images au format jpg, redimensionne ces
+images et met les nouvelles images dans le dossier <tt>`resized'</tt> :
+</p><pre class="verbatim">#/bin/sh
+mkdir resized
+for element in `ls . | grep jpg`;
+do
+    size=`identify ${element}`
+    width=`echo ${size} | sed '+s+.*JPEG ++' | sed '+s+x.*++'`
+    height=`echo ${size} | sed '+s+.*JPEG [0-9]*x++' | sed '+s+DirectClass.*++'`
+    let new_width=${width}*9375/10000
+    convert -resize ${new_width}x${height} -quality 100 ${element} resized/${element}
+done
+</pre>
+<hr size="6">
+<a name="Images-Open-EXR"></a>
+<a name="SEC71"></a>
+<h4 class="subsubsection"> 5.1.4.3 Images Open EXR </h4>
+
+<p>Vous ne connaissez peut-être pas le format Open EXR.  Ce format enregistre des
+images RVB en virgule flottante.  Il peut aussi gérer un faible niveau de
+compression.  Un projet qui effectue un rendu vers EXR doit être configuré avec
+un modèle colorimétrique en virgule flottante pour pouvoir bénéficier de l'EXR.
+Voir Voir la section <a href="cinelerra_cv_manual_fr_4.html#SEC58">Attributs du projet</a>.  Un certain nombre d'options de compression
+sont disponibles avec le format EXR.
+</p>
+<a name="IDX75"></a>
+<a name="IDX76"></a>
+<ul>
+<li> <b>PIZ :</b> compression par ondelettes sans pertes.  C'est la meilleure
+compression.
+<a name="IDX77"></a>
+</li><li> <b>ZIP :</b> algorithme gzip sans pertes.
+<a name="IDX78"></a>
+</li><li> <b>RLE :</b> encodage sans pertes &quot;run length&quot;.  C'est la compression
+la plus rapide mais la moins efficace
+<a name="IDX79"></a>
+</li><li> <b>PXR24 :</b> compression avec pertes où les nombres flottants sont
+convertis sous 24 bits et compressés avec gzip.
+</li></ul>
+
+<p>Choisissez <b>Utiliser un canal alpha</b> si le modèle colorimétrique du projet
+comporte un canal alpha et que vous désirez le conserver dans le fichier.
+Sinon, les couleurs primaires seront multipliées par le canal alpha.
+</p>
+<hr size="6">
+<a name="Images-brutes-d_0027appareils-num_00e9riques"></a>
+<a name="SEC72"></a>
+<h4 class="subsubsection"> 5.1.4.4 Images brutes d'appareils numériques </h4>
+
+<p>Les images brutes de capteur (RAW) des appareils photos numériques sont un type
+particulier d'images que Cinelerra ne sait qu'importer.  Une fois positionnées
+sur la timeline, elle doivent être traitées dans un espace colorimétrique en
+virgule flottante.  Les images brutes des appareils Canon sont les seules à
+avoir été testées.  On doit leur appliquer un effet de <b>Gamma</b> pour en
+corriger le gamma.  Parce qu'il faut beaucoup de temps pour interpoler des
+images brutes, elles sont habituellement visualisées dans un fichier proxy et
+ensuite retouchées.
+</p>
+<p>Appliquez d'abord l'effet de gamma à la piste où se trouvent les images brutes
+et configurez cet effet en mode <b>automatique</b> avec un gamma de <b>0,6</b>.
+Effectuez ensuite le rendu de la timeline sous forme d'un fichier Quicktime
+JPEG.  Ajoutez le fichier Quicktime JPEG à une nouvelle piste et désactivez
+l'ancienne piste.  Maintenant, la copie avec le gamma corrigé de chaque image
+brute peut être prévisualisée relativement rapidement à la même position de la
+timeline que l'image d'origine.
+</p>
+<hr size="6">
+<a name="AVI"></a>
+<a name="SEC73"></a>
+<h3 class="subsection"> 5.1.5 AVI </h3>
+
+<p>Etant donné que le format AVI est très fragmenté, avec des codecs audio et
+vidéo variés, il se peut que vous ne soyiez pas en mesure de visualiser tous
+les fichiers de format AVI.
+</p>
+<hr size="6">
+<a name="Fichiers-MPEG-contenant-de-la-vid_00e9o"></a>
+<a name="SEC74"></a>
+<h3 class="subsection"> 5.1.6 Fichiers MPEG contenant de la vidéo </h3>
+
+<p>Les fichiers MPEG contenant de la vidéo peuvent être chargés directement dans
+Cinelerra.  Si le format du fichier est supporté, une table d'index est
+construite.  Si le format n'est pas géré, il s'ensuit habituellement un
+plantage ou alors seules quelques pistes très courtes sont affichées.
+Malheureusement cette méthode de chargement des fichiers MPEG n'est pas valable
+si vous projetez d'utiliser les fichiers avec une grappe de calcul.<br>
+Pour utiliser les fichiers MPEG avec une grappe de calcul, vous devez utiliser
+mpeg3toc pour créer une table d'index pour le fichier, puis ensuite charger la
+table d'index.  Il faut indiquer à mpeg3toc le chemin absolu vers le fichier
+MPEG.  Si vous n'utilisez pas un chemin absolu, il va supposer que le fichier
+MPEG se trouve dans le même répertoire que celui d'où a été lancé Cinelerra.<br>
+Les flux MPEG sont structurés en plusieurs pistes.  Chaque piste pouvant être
+de type audio ou vidéo.  Une piste audio peut avoir de 1 à 6 canaux.  Cinelerra
+convertit chaque canal en une piste.
+</p>
+<a name="IDX80"></a>
+<p><b>Notes concernant l'encodage vidéo MPEG :</b><br>
+L'encodage vidéo MPEG est effectué séparément de l'encodage audio MPEG.  Il y a
+deux modèles colorimétriques possibles pour la vidéo MPEG.  Le modèle YUV 4:2:0
+est encodé par une version de mpeg2enc très optimisée avec des préréglages
+correspondant à de l'électronique grand public standard.  Dans le processus
+d'optimisation de mpeg2enc, ils se sont débarrassé de l'encodage YUV 4:2:2.  Le
+modèle colorimétrique YUV 4:2:2 est encodé en utilisant une version moins
+optimisée de mpeg2enc.<br>
+L'encodage YUV 4:2:2 a été conservé parce que la version NTSC de la vidéo DV
+perd trop en qualité lors de la conversion vers YUV 4:2:0.  Cette vidéo DV doit
+être convertie en YUV 4:2:2.<br>
+Lors de l'encodage YUV 4:2:0, le paramètre de débit binaire change de
+signification selon que le débit binaire ou la quantification est fixe.  Si le
+débit binaire est fixe, c'est le débit binaire à atteindre.  Si la
+quantification est fixe, c'est le débit binaire maximum autorisé.  C'est une
+astuce de la version de mpeg2enc.
+</p>
+<hr size="6">
+<a name="Films-sur-DVD"></a>
+<a name="SEC75"></a>
+<h3 class="subsection"> 5.1.7 Films sur DVD </h3>
+
+<p>Les DVD sont constitués d'un certain nombre de programmes, chacun d'entre-eux
+est identifié par un fichier <tt>`IFO'</tt> unique.  Si vous désirez charger un
+DVD, recherchez le fichier IFO correspondant au programme qui vous intéresse.
+Chargez le fichier IFO directement et une table d'index sera construite.  Si
+vous utilisez une grappe de calcul, une table d'index peut être construite
+séparément.<br>
+<a name="IDX81"></a>
+Lancez : <code>mpeg3toc -v /cdrom/video_ts/vts_01_0.ifo dvd.toc</code><br>
+ou quelque chose de similaire.  Chargez ensuite le fichier <tt>`dvd.toc'</tt>.
+</p>
+<hr size="6">
+<a name="Audio-MPEG-1"></a>
+<a name="SEC76"></a>
+<h3 class="subsection"> 5.1.8 Audio MPEG 1 </h3>
+
+<p>Ce sont des fichiers .mp2 et .mp3.  Si ces fichiers sont encodées avec un débit
+binaire fixe, ils peuvent être chargés directement sans table d'index.  Les
+flux à débit variable ont besoin d'une table d'index créée alors avec mpeg3toc.
+</p>
+<hr size="6">
+<a name="Ogg-Theora_002fVorbis"></a>
+<a name="SEC77"></a>
+<h3 class="subsection"> 5.1.9 Ogg Theora/Vorbis </h3>
+
+<p>Le format OGG est un format dépassé, supposé libre de brevets pour compresser
+de l'audio et de la vidéo.  La qualité n'est pas aussi bonne qu'en H.264 ou en
+MPEG-4 Audio.  En réalité, quiconque en ayant les moyens et la volonté peut
+trouver un brevet dans n'importe quoi, la justification d'OGG est donc sujette
+à caution.
+</p>
+<hr size="6">
+<a name="Liste-de-d_00e9cisions-de-montage"></a>
+<a name="SEC78"></a>
+<h3 class="subsection"> 5.1.10 Liste de décisions de montage </h3>
+
+<p>Les listes de décisions de montage (EDL) sont créées par Cinelerra pour
+l'enregistrement des projets.  Les fichiers EDL possèdent l'extension .xml.
+Quand ils sont chargés, ils modifient les attributs du projet.  Comme les
+listes de décisions de montage sont des fichiers texte, elles peuvent être
+modifiées avec un simple éditeur de texte.
+</p>
+<hr size="6">
+<a name="Charger-des-fichiers"></a>
+<a name="SEC79"></a>
+<h2 class="section"> 5.2 Charger des fichiers </h2>
+
+<p>Toutes les données avec lesquelles vous travaillez dans Cinelerra sont
+récupérées soit par <b>acquisition depuis un périphérique</b> soit en les
+<b>chargeant depuis un disque</b>.  Cette section traite du chargement depuis un
+disque.<br>
+Charger et reproduire des fichiers fonctionne exactement comme vous vous y
+attendez.  Allez simplement dans <b>Fichier-&gt;Charger des fichiers...</b>,
+choisissez un fichier à charger et cliquez sur le bouton <b>ok</b>.  Cliquez le
+bouton de lecture et cette dernière doit commencer, qu'une barre d'avancement
+soit affichée ou non.
+</p>
+<p align="center"> <img src=".././manual_images_intl/load.png" alt="manual_images_intl/load">
+</p><p align="center"> <b>La fenêtre de chargement</b>
+</p>
+<p>Si le fichier est une image fixe, les attributs du projet ne sont pas modifiés
+et la première image de la piste devient cette image.  Si le fichier contient
+de l'audio, Cinelerra peut construire un fichier d'index afin d'en accélérer le
+dessin.  Vous pouvez effectuer des opération de montage ou reproduire le
+fichier alors que l'index est en cours de construction.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC80">5.2.1 Stratégie d'insertion</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC81">5.2.2 Charger plusieurs fichiers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC82">5.2.3 Charger des fichiers depuis la ligne de commande</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC83">5.2.4 Filtrer les fichiers selon leur extension</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC84">5.2.5 Charger d'autres formats</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Strat_00e9gie-d_0027insertion"></a>
+<a name="SEC80"></a>
+<h3 class="subsection"> 5.2.1 Stratégie d'insertion </h3>
+
+<p>Habituellement, il se produit trois choses lorsque vous chargez un fichier :
+</p><ol>
+<li> le projet existant est effacé de l'écran
+</li><li> les attributs du projet sont modifiés pour correspondre à ceux du fichier
+</li><li> les nouvelles pistes correspondant au fichier sont crées sur la timeline.
+</li></ol>
+<p>Cependant, Cinelerra vous permet de modifier son comportement lors du
+chargement d'un fichier.<br>
+Dans la boîte de sélection de fichier, allez à la boîte <b>Stratégie
+d'insertion</b> et sélectionnez-là.  Chacune de ses options permet de charger le
+fichier de manière différente.
+</p><ul>
+<li> <b>Remplacer le projet actuel</b><br>
+Toutes les pistes du projet en cours sont supprimées et de nouvelles pistes
+sont crées en correspondance avec la source.  Les attributs du projet ne sont
+modifiés que si vous chargez un fichier XML.  Si plusieurs fichiers sont
+sélectionnées, Cinelerra créé une piste pour chaque fichier.
+
+</li><li> <b>Remplacer le projet actuel et concaténer les pistes</b><br>
+Identique à &quot;Remplacer le projet actuel&quot;, si ce n'est que si plusieurs fichiers
+sont sélectionnés, Cinelerra concatène chaque piste de chaque fichier, l'une
+après l'autre, dans un ordre alphanumérique.
+
+</li><li> <b>Ajouter de nouvelles pistes</b><br>
+Le projet actuel n'est pas supprimé et de nouvelles pistes correspondant à la
+source sont ajoutées.
+
+</li><li> <b>Concaténer aux pistes existantes</b><br>
+Le projet actuel n'est pas supprimé et les nouveaux fichiers sont concaténés
+aux pistes existantes.
+
+</li><li> <b>Coller au point d'insertion</b><br>
+Le fichier est collé sur la timeline au point d'insertion.
+
+</li><li> <b>Créer de nouvelles ressources uniquement</b><br>
+La timeline demeure inchangée et de nouvelles ressources sont créées dans la
+fenêtre des ressources.
+</li></ul>
+
+<p>La stratégie d'insertion est une option que l'on retrouve dans de nombreuses
+fonctions de Cinelerra.  A chaque fois, les options ont la même action.  En
+utilisant ces options, vous pouvez faire presque tout votre montage rien qu'en
+chargeant des fichiers.  Si vous chargez des fichiers en les passant à
+Cinelerra en paramètres de la ligne de commande, les fichiers seront chargés
+avec la règle <b>Remplacer le projet actuel</b>.
+</p>
+<hr size="6">
+<a name="Charger-plusieurs-fichiers"></a>
+<a name="SEC81"></a>
+<h3 class="subsection"> 5.2.2 Charger plusieurs fichiers </h3>
+
+<p>Dans la boîte de sélection allez à la liste des fichiers.  Sélectionnez un
+fichier.  Déplacez-vous sur un autre fichier et sélectionnez-le en maintenant
+la touche <kbd>Ctrl</kbd> enfoncée.  Ceci permet de sélectionner un fichier
+supplémentaire.  Déplacez-vous sur un autre fichier et sélectionnez-le en
+maintenant la touche <kbd>Majuscule</kbd> appuyée.  Ceci sélectionnera tous les
+fichiers se trouvant entre les fichiers sélectionnés.  Ce comportement est
+disponible avec la plupart des listes.<br>
+Utilisez cette méthode avec la stratégie d'insertion <b>Concaténer aux pistes
+existantes</b> pour créer un diaporama de vos images ou une liste de lecture de
+vos chansons.
+</p>
+<hr size="6">
+<a name="Charger-des-fichiers-depuis-la-ligne-de-commande"></a>
+<a name="SEC82"></a>
+<h3 class="subsection"> 5.2.3 Charger des fichiers depuis la ligne de commande </h3>
+
+<p>Une autre manière de charger des fichiers est de passer le nom des fichiers en
+paramètres de la ligne de commande.<br>
+<code>cinelerra myvideo.mov myothervideo.mov</code><br>
+Ceci crée de nouvelles pistes pour chaque fichier et lance le programme en
+chargeant tous les fichiers passés en paramètres.
+</p>
+<hr size="6">
+<a name="Filtrer-les-fichiers-selon-leur-extension"></a>
+<a name="SEC83"></a>
+<h3 class="subsection"> 5.2.4 Filtrer les fichiers selon leur extension </h3>
+
+<p>S'il y a trop de fichiers dans votre répertoire de médias, il peut être
+difficile de trouver le fichier que vous désirez parmi tous les autres.  Afin
+de résoudre cette difficulté, la <b>fenêtre de chargement</b> vous permet de
+filtrer les fichiers à afficher dans la liste en fonction de leur extension.<br>
+Cliquez sur la liste déroulante (juste en-dessous de la zone d'entrée du nom de
+fichier) et sélectionnez l'extension de votre média (par exemple : mpg,
+mov, mp3, avi, etc).  La liste des fichiers ne comporte maintenant plus que les
+fichiers ayant l'extension indiquée.
+</p>
+<hr size="6">
+<a name="Charger-d_0027autres-formats"></a>
+<a name="SEC84"></a>
+<h3 class="subsection"> 5.2.5 Charger d'autres formats </h3>
+
+<p>Si vous ne pouvez pas charger un type particulier de clip vidéo, et que vous ne
+disposez pas de la source d'origine, vous devrez le convertir dans un format
+pris en compte par Cinelerra.  Convertir votre fichier en mpeg2 est une bonne
+solution, puisque Cinelerra charge ce format sans problème.  Dans ce cas, vous
+devrez utiliser ffmpeg pour effectuer la conversion.  Cependant, le format
+mpeg2 requiert que la vidéo possède une taille d'image et un nombre d'images
+par seconde spécifiques :
+</p><ul>
+<li> <b>PAL</b> est en 720x576 à 25 images/seconde
+</li><li> <b>NTSC</b> est en 720x480 à 29.97 (=30000/1001) images/seconde
+</li></ul>
+<p>Pour les fichiers qui n'ont pas ces propriétés, vous devriez utiliser mencoder
+afin de convertir en MPEG4.  Vous pouvez identifier les codecs et le conteneur
+d'une vidéo en exécutant la commande suivante :<br>
+<code>mplayer -identify &lt;your_video_file.xyz&gt;</code>
+</p>
+<ul>
+<li> <b>Convertir avec ffmpeg :</b><br>
+<code>ffmpeg -sameq -i original_video.xyz converted_video.mpeg</code><br>
+L'option <samp>`-sameq'</samp> maintient la qualité de l'original.
+
+</li><li> <b>Convertir avec mencoder :</b><br>
+<code>mencoder original_video.xyz -ovc lavc -lavcopts vcodec=mpeg4:\</code><br>
+<code>vhq:vbitrate=6000 -oac mp3lame -lameopts br=256:vol=1 \</code><br>
+<code>-ffourcc DIVX -o converted_video.avi</code>
+</li></ul>
+
+<hr size="6">
+<a name="Charger-la-sauvegarde"></a>
+<a name="SEC85"></a>
+<h2 class="section"> 5.3 Charger la sauvegarde </h2>
+
+<p>En permanence se trouve sur le disque un fichier XML particulier.  Après chaque
+opération de montage, Cinelerra enregistre le projet en cours dans une
+sauvegarde placée dans <tt>`$HOME/.bcast/backup.xml'</tt>.  En cas de plantage, la
+première opération à effectuer et de sélectionner <b>Fichier-&gt;Charger la
+sauvegarde</b> afin de charger la sauvegarde.  Ceci aura pour effet de relancer
+Cinelerra au moment de vos opérations de montage situé juste avant le plantage.
+Il est important, après un plantage, de relancer Cinelerra sans faire aucune
+opération de montage sinon la sauvegarde sera écrasée.
+</p>
+<hr size="6">
+<a name="Enregistrer-des-fichiers"></a>
+<a name="SEC86"></a>
+<h2 class="section"> 5.4 Enregistrer des fichiers </h2>
+
+<p>Lorsque Cinelerra enregistre un fichier, il enregistre une liste des intentions
+de montage mais n'enregistre aucun média.  Allez à <b>Fichier-&gt;Enregistrer
+sous...</b>.  Choisissez un fichier à écraser ou entrez un nouveau nom de fichier.
+Cinelerra ajoutera automatiquement l'extension <samp>`.xml'</samp> au nom de fichier si
+elle n'est pas indiquée.
+</p>
+<p>Le fichier enregistré contient tous les paramètres du projet et l'emplacement
+de chacun des plans.  A la place du média, il contient des pointeurs vers les
+fichiers de média d'origine sur le disque.
+</p>
+<p>Pour chaque fichier de média, le fichier XML enregistre soit le chemin absolu
+soit uniquement un chemin relatif.  Si le média se trouve dans le même
+répertoire que le fichier XML, un chemin relatif est enregistré.  S'il se
+trouve dans un répertoire différent, un chemin absolu est enregistré.
+</p>
+<p>Afin de pouvoir déplacer les fichiers XML sans casser les liens vers les
+médias, vous devez soit toujours conserver les médias dans le même répertoire
+que le fichier XML ou enregistrer le fichier XML dans un autre répertoire que
+les médias et ne plus jamais déplacer les médias par la suite.
+</p>
+<p>Si vous désirez créer une liste de lecture audio pour la graver sur un CD,
+enregistrez le fichier XML dans le même répertoire que les fichiers audio et
+gravez l'ensemble du répertoire.  Ceci permettra de conserver des chemins
+relatifs.
+</p>
+<p>Les fichiers XML sont utiles pour enregistrer l'état actuel de Cinelerra avant
+de terminer sa session de montage.  Les fichiers XML sont spécifiques à
+Cinelerra.  Vous ne pouvez pas lire des fichiers XML dans un lecteur vidéo
+dédié.  Les effets en temps réel d'un fichier XML doivent être resynthétisés
+chaque fois que vous les rejouez.  Le fichier XML nécessite aussi que vous
+conserviez tous les objets source sur le disque dur, ce qui prend de la place
+et coûte de l'électricité pour les faire tourner.  Effectuez le rendu de vos
+vidéos dans un format final pour un stockage plus long du résultat final.
+</p>
+<hr size="6">
+<a name="Fusionner-des-projets"></a>
+<a name="SEC87"></a>
+<h2 class="section"> 5.5 Fusionner des projets </h2>
+
+<p>Pour fusionner plusieurs projets séparés en un même gros projet :
+</p><ol>
+<li> Lancer Cinelerra
+</li><li> Charger le projet A
+</li><li> Lancer une seconde instance de Cinelerra
+</li><li> Charger le projet B
+</li><li> Couper et coller depuis A vers B
+</li></ol>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC63" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_6.html#SEC88" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

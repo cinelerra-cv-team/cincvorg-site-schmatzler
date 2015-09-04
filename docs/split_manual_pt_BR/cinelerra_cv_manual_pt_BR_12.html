@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 12. Controles de transporte</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 12. Controles de transporte">
+<meta name="keywords" content="Manual do Cinelerra CV: 12. Controles de transporte">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_11.html#SEC146" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_13.html#SEC148" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Controles-de-transporte"></a>
+<a name="SEC147"></a>
+<h1 class="chapter"> 12. Controles de transporte </h1>
+
+<p>Controles de transporte são tão úteis na navegação quanto o são para reproduzir gravações; por isso são descritos aqui na seção de navegação. Cada uma das janelas de visualização, composição e programa possui um painel de transporte.
+</p>
+<p align="center"> <img src=".././manual_images_en/transport_panel.png" alt="manual_images_en/transport_panel">
+</p><p align="center"> <b>O panel de transporte</b>.
+</p>
+<p>O painel de transporte é controlado tanto pelo teclado como pela interface gráfica. Para cada uma das operações que ele performa, a posição de início é a posição do ponto de inserção da janela de Programa e o slider na janela de Composição. A posição final é tanto o fim ou começo da Linha do Tempo ou o fim ou começo da região selecionada, caso haja uma.
+</p>
+<p>Aorientação do fim ou início depende da direção da reprodução. Se ela for para a frente, a posição final é o fim da região selecionada. Se é para trás, a posição final é o começo da região selecionada.
+</p>
+<p>O ponto de inserção se move para acompanhar a reprodução. Quando a reprodução pára, o ponto de inserção fica no ponto onde ela parou. Assim, ao reproduzir o vídeo, você muda a posição do ponto de inserção.
+</p>
+<p>A interface de teclado é normalmente a mais rápida e possui mais velocidades. As teclas de transporte estão arranjadas em um <b>T</b> lateral na área numérica do teclado.
+</p>
+<table>
+<tr><td><p> <kbd>4</kbd>
+</p></td><td><p> Quadro anterior
+</p></td><td><p> <kbd>5</kbd>
+</p></td><td><p> Lento reverso
+</p></td><td><p> <kbd>6</kbd>
+</p></td><td><p> Reverso
+</p></td><td><p> <kbd>+</kbd>
+</p></td><td><p> Reverso rápido
+</p></td></tr>
+<tr><td><p> <kbd>1</kbd>
+</p></td><td><p> Quadro à frente
+</p></td><td><p> <kbd>2</kbd>
+</p></td><td><p> Á frente lento
+</p></td><td><p> <kbd>3</kbd>
+</p></td><td><p> Reproduzir
+</p></td><td><p> <kbd>Enter</kbd>
+</p></td><td><p> À frente rápido
+</p></td></tr>
+<tr><td><p> <kbd>0</kbd>
+</p></td><td><p> Parar
+</p></td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</table>
+
+<p>Pressionando qualquer tecla no teclado duas vezes pausa a exibição.
+</p>
+<p>Quando estiver utilizando funções de avanço de quadros, o comportamento pode parecer estranho. Se você fizer o avanço de um quadro e depois voltar o mesmo quadro, o quadro exibido não mudará. Isso acontece porque a posição de reprodução não é o quadro, mas o tempo entre dois quadros. O quadro renderizado é a área que cruza a posição de reprodução. Quando você aumenta o tempo entre dois quadros por um e o decresce por um, você cruza o mesmo quadro nas duas vezes e portanto o mesmo quadro é exibido.
+</p>
+<p>O comportamento de transporte muda se você mantiver pressionado o <kbd>CTRL</kbd> quando usando qualquer dos comandos de transporte. Isso faz o ponto de início ser o ponto de entrada caso a reprodução seja para frente e o ponto de saída se for reversa. Se for para a frente, o ponto de saída se torna o ponto final e se estiver sendo reversa, o ponto de entrada torna-se o ponto final. Se nenhum ponto de entrada/saída forem especificados, o comportamento volta a ser o de usar o ponto de inserção e limites de trilhas como os pontos de início e término.
+</p>
+<p>É possível usar um hardware JogShuttle<a name="DOCF1" href="cinelerra_cv_manual_pt_BR_fot.html#FOOT1">(1)</a>
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_11.html#SEC146" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_13.html#SEC148" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

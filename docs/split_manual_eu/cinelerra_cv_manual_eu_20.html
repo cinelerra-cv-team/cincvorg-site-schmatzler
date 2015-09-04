@@ -1,0 +1,862 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 20. Aholkuak</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 20. Aholkuak">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 20. Aholkuak">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_19.html#SEC256" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_21.html#SEC295" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Aholkuak"></a>
+<a name="SEC271"></a>
+<h1 class="chapter"> 20. Aholkuak </h1>
+
+<p>Atal honetan Cinelerra-ren erabilerarekin zerikusia duten arazo batzuk nola gainditzen diren
+azaltzen da. Arazoen eta gainditzeko erabilgarriak diren tresnen arabera dago ordenatuta.
+</p>
+
+<hr size="6">
+<a name="g_t_0027Dolby-Pro-Logic_0027_002dera-kodetzea"></a>
+<a name="SEC272"></a>
+<h2 class="section"> 20.1 'Dolby Pro Logic'-era kodetzea </h2>
+
+<p><b>Dolby pro logic</b> modu erraz bat da 6 kanaletako audioa erreproduzitzeak
+2 kanal bakarrik dituen soinu-txartel batekin, soinu piskat degradatuarekin
+baina hala ere erabilgarria. Dolby pro logic-en oinarrizko kodeketa lor daiteke
+efektuen erabilpen argia landuz.
+</p>
+<p>Aurrenik, sortu aurreko ezkerreko eta eskuineko kanalak. Sortu audioaren bi pista,
+bakoitzak kanal hauetariko bat edukiko duelarik. Kokatu ezkerreko kanala
+ezkerrean, eta eskuineko kanala eskuinean, <b>panoramikoa</b> ikuspegiarekin.
+</p>
+<p>Gero, sortu atzeko ezkerreko eta eskuineko kanalak. Sortu audioaren beste bi pista,
+aurrekoen antzera. Desplazatu ezkerreko kanala ezkerrera, eta eskuineko kanala
+eskuinera. Ondoren, aplikatu <b>Alderantzikatu audioa</b> efektua bi kanalei
+eta seinalea atzeko bozgorailuetatik etorriko da.
+</p>
+<p>Jarraian, sortu zentruko kanala, audioaren pista bakarra sortuz soinu 
+monofonikoarekin (&quot;mono&quot;) iturburu desberdin batetik. Zentratu ezazu 
+<b>Panoramikoa</b> ikuspegia erabiliz, seinalea bozgorailu zentraletik
+kaleratzeko.
+</p>
+<p>Atzeko bozgorailuen seinalearen kopia bat aurreko bozgorailuan egotea nahi bada,
+atzeko bozgorailuen seinalea gutxienez 0.05 segundo atzeratu behar da, eta 
+pista berri bakar bat sortu behar da. Erabili ikuspegi panoramikoa aurreko
+bozgorailuetako seinalea orientatzeko.
+</p>
+<p>Seinale berdina edukitzea nahi bada bozgorailu guztientan, zentrukoa ezik, atzeko bozgorailuen
+soinua 0.5 segundo atzeratu, eta aurreko eskuineko edo ezkerreko bozgorailua 0.2 segundo
+atzeratu.
+</p>
+<p>Maiztasun baxuko kanala (subwoofer) entzutea nahi baduzu, sortu pista berri bat, hautatu
+maiztasunen barruti bat, gehitu 'Sintetizatzailea' efektua eta doitu maiztasuna 60 Hz
+azpitik. Baxuen  bozgorailuak normalean 60 Hz azpitik dauden soinuak soilik 
+erreproduzitzen ditu.
+</p>
+<p>Beste trikimailu bat bozgorailuak banatzeko ekualizazio parametrikoa
+erabiltzea da, bozgorailu bakoitzean maiztasun barruti zehatz bat erreproduzitzeko,
+eta behe-paseko iragazkiak erabiltzea baxuen bozgorailutik irtengo diren seinaleak
+hautatzeko.
+</p>
+<hr size="6">
+<a name="TB-analogikoa-garbitzea"></a>
+<a name="SEC273"></a>
+<h2 class="section"> 20.2 TB analogikoa garbitzea </h2>
+
+<p>Txina bezalako estatu aberats batean bizi edo bideo-artista izan ezik, litekeena da
+telebista modu analogikoan gehiago grabatzea digitalean baino. Telebista analogikoaren
+kalitatea txarra da, baina zerbait hobetu daiteke Cinelerra erabiliz, estudio
+batetik lortuko zatekeenaren itxura gehiago izateko.
+</p>
+<p>Aurrenik, bideoa kapturatzean, saiatu ahalik eta bereizmen handienarekin kapturatzen.
+Europan 720x576 da, eta Amerikan 720x480. Ez saiatu monitorearen distira edo
+kontrastea doitzen, nahiz eta kolorea maximizatzea erabilgarria den. Kapturatu MJPEG
+erabiliz, edo konprimatu gabeko osagaien moduan, posible bada. Gehiegi eskatzea bada,
+kapturatu JPEG formatuan. GBU azken baliabide gisa soilik erabili.
+</p>
+<p>Orain, denbora-lerroan, erabili <b>Ezarpenak -&gt; Formatua</b> YUV kolore-espazioa
+ezartzeko. Gehitu <b>Lagin-murrizketa</b> efektua muntaiari, eta doitu honela:
+</p><pre class="verbatim">Horizontala:        2
+Despl. horizontala: 0
+Bertikala:          2
+Despl. bertikala:   0
+      gorria
+  x   berdea
+  x   urdina
+      alfa
+</pre>
+<p>Erabili kamera tresna filmea lerro bat gora edo behera eramateko, eta irudiaren
+kolore-interferentzia gehiena kentzeko. Bilatzen ari garen desberdintasuna hau da:
+</p>
+<p align="center"> <img src=".././manual_images_en/cleaning1.png" alt="manual_images_en/cleaning1">
+</p>
+<p>Hutsune bertikalari buruzko informazioa baduzu, edo fotograma bakoitzean konstanteki
+aldatzen diren ondulazioak, <b>Maskara</b> tresnarekin bloketau. Honek konpresioaren
+erlazioa hobetzen du.
+</p>
+<p>Gutxi gorabehera hauxe da egin daitekeen guztia, konpresioarekin naturalki galduko
+liratekeen datuen baino gehiago suntsitu gabe. Teknika suntsitzaileagoek
+desgurutzelarkatzea daukate.
+</p>
+<hr size="6">
+<a name="Gurutzelarkatua-gainditzea"></a>
+<a name="SEC274"></a>
+<h2 class="section"> 20.3 Gurutzelarkatua gainditzea </h2>
+
+<p>Bideoaren iturburu gehienak gurutzelarkatuak dira, eskaneatze progresiboko
+kamerak eta CRTak sortzea garestiegiak direlako. Kontsumitzaile bat baino
+gehiago sutu da 6 hilabetetako soldata kamera digital batean gastatu eta
+ordenagailuko monitorean irudiak zatarki desitxuratuta agertzen direlako.
+</p>
+<p>Eskaneatze progresiboko kamerei buruz, hobeto ahatzea. Kostuen arazoak direla
+eta baliteke gurutzelarkatutako kameren bereizmen espaziala inoiz ez lortzea.
+Gurutzelarkatzea gure artean dago, eta bertan geratzeko asmoarekin gainera.
+Gutzi hau kontutan eduki zenez garatu zen desgurutzelarkatzea Cinelerra-n.
+</p>
+<p>Ez dugu uste inoiz desgurutzelarkatzeko efektu perfekturik egon denik. 
+Edo itzulbiderik gabekoak dira, edo ez dute funtzionatzen. Cinelerra-k
+tarteko erabakia hartu zuen: desgurutzelarkatzeko tresnak eskainitzen ditu,
+batzuetan itzulibiderik ez dute, eta beste batzuetan ez dute funtzionatzen, 
+baina ez dira ez bata ez bestea.
+</p>
+<ul>
+<li>
+<a name="IDX149"></a>
+<b>Lerroak bikoiztea</b>
+Honek <b>Desgurutzelarkatze</b> efektua lantzen du <b>Lerro bikoitietara</b> edo 
+<b>Lerro bakoitietara</b> doitzean. Pista baten gainean aplikatzean bereizmen
+bertikalaren tamaina murrizten du 1/2ra, eta fotograma progresiboak eskaintzen
+ditu eskailera-mailarekin (<i>stairstepping</i>). Erabilgarria da baldin eta eskalatzeko
+efektuak jarraitzen badio, irudia bere tamainaren erdira murrizteko (aipatutako
+bereizmen galera dela eta).
+
+</li><li>
+<a name="IDX150"></a>
+<b>Lerroen batez bestekoa</b>
+Honek <b>Desgurutzelarkatze</b> efektua lantzen du <b>Lerro bikoitien batez bestekoa</b>
+edo <b>Lerro bakoitien batez bestekoa</b> ezartzean. Lerroak bikoizteak antzera egiten
+du, baina lerroen kopia zehatzak lerroen arteko batez bestekoekin ordezten du.
+Erabilgarria da eskalatze guztientzako.<br>
+
+<p>Aukera bat dago lerroaren batez besteko moldaerantzako, batez besteko kalkulua aplikatuko
+zaien lerroak eta gurutzelarkatuta mantentzeko lerroak hautatzen ditu, lerroen
+arteko diferentzian oinarrituz. Ez du funtzionatzen.
+</p>
+</li><li>
+<a name="IDX151"></a>
+<b>Alderantzikatu Telezinema</b>
+Desgurutzelarkatzeko tresnarik eraginkorrena da, NTSC telebistaren igorpena denean
+filmearen metrajea. Irakurri See section <a href="cinelerra_cv_manual_eu_13.html#SEC191">Alderantzikatu Telezinema</a> atala.
+
+</li><li>
+<a name="IDX152"></a>
+<b>Denbora-oinarriaren zuzenketa</b>
+Aurreneko hiru tresnek metrajeta itzulibiderik gabe suntsitzen dute edo
+batzutan ez dute funtzionatzen. <b>Denbora-oinarriaren zuzenketa</b> tresna
+amaieran dator, desgurutzelarkatzeko tresna perfektua delako. Metrajea
+ikutu gabe uzten du. Ez du bereizmena murrizten, edo gutxienez ez da
+hautematen. Ez du jauzirik sortzen denboran (saltoka aurrera joatea).
+
+</li><li>
+<a name="IDX153"></a>
+<b>Fotogramak eremuetara</b> efektuak fotograma bakoitza bi fotogrametan bihurtzen
+dituenez, jatorrizko metrajearen fotograma-tasa bikoizten duten proiektuetan
+erabili behar da. Aurreneko fotograman lerro bakoitien batez bestekoaren kopia
+jartzen du, bigarren fotograman berriz lerro bikoitien batez bestekoaren kopia.
+Fotograma-tasa horrekin erreproduzitzean, bideo progresiboaren hautamena
+eskaintzen du, xehetasunik galdu gabe. <br>
+
+<p>Onena da aplikatutako efektua atzera itzuli daitekeela <b>Eremuak fotogrametara</b>
+efektuarekin. 'Eremuak fotogrametara' efektuak gurutzelarkatutako jatorrizko
+metrajearen bi fotograma konbinatzen ditu, fotograma-tasa erdiarekin erreproduzitzeko.<br>
+</p>
+<p>Ohartu zaitez 'Fotogramak eremuetara' efektuak sarrerako fotogramak abiadura
+proiektuaren fotograma-tasaren erdiarekin irakurtzen dituela. 'Fotogramak eremuetara'
+efektuaren aurretik dauden efektuek fotograma-tasa murriztuarekin prozesatzen dira. <br>
+</p>
+<p>Zoritxarrez, 'Fotogramak eremuetara' efektuaren irteera ezin da jatorrizkoak duen
+eraginkortasunarekin konprimitu, 'twitter' (<i>txio egitearen onomatopeia</i>) bertikala
+eta fotograma-tasa oso altuak sortzen dituelako.<br>
+</p>
+<p>29.97 f/s fotograma-tasarekin gurutzelarkatutako metrajea filmaren itxura har dezake
+<b>Fotogramak eremuetara</b> efektua aplikatuz, eta ondoren proiektuaren 59.94 f/s
+fotograma-tasatik 23.97 f/s fotograma-tasara murriztuz. Honek ez du denbora-jauzirik
+sortzen, eta ustegabeko eremu bakoitiak xehetasun gehiago izatearen hautamena ematen du
+jatorrizko lerroen batez bestekoa landuz lortuko zatekeena baino.
+</p></li></ul>
+
+<a name="IDX154"></a>
+<a name="IDX155"></a>
+<p><b>HDTV salbuespenak</b> <br>
+Definizio altuko telebista, 1920x1080 HDTV, modu berezi batean kodetzen da. Jatorrizko 
+HDTV filmearen igorpena bada, 'Alderantzikatu Telezinema' efektuak ongi funtzionatzen
+du. Baino igorpenaren jatorriz 720x480 bada, denbora-oinarriaren zuzenketa eta lerro
+bikoizketaren algoritmoa erabili behar da desgurutzelarkatzeko. Irakurri
+See section <a href="cinelerra_cv_manual_eu_13.html#SEC164">1080-tik 480-ra</a> atala.
+</p>
+<hr size="6">
+<a name="Bideoa-filmaren-itxurarekin"></a>
+<a name="SEC275"></a>
+<h2 class="section"> 20.4 Bideoa filmaren itxurarekin </h2>
+
+<p>Bideoaren kalitatea hobetuz doa egun batetik bestera. Bizi garen garaian, etxeko
+kamera digital merketik eskuratutako bideoa 24 f/s fotograma-tasa progresibora bihurtzea
+da egin daitekeen gauzarik hoberena. Benetan hau lortu ezin den arren, nahiko hurbil
+irits gaitezke. Kontu ibili beharra dago ordea, prozedura honek kalitate altuko bideoa
+degradatu dezakelako, kalitate baxuko bideoa hobetu dezakeen bezain erraz.
+</p>
+<ol>
+<li> Ezarri proiektuaren fotograma-tasa bideoaren bikoitzera.
+</li><li> Aplikatu <b>Enfokatu</b> efektua. Doitu garbitasuna (<i>sharpness</i>) 25 balioarekin,
+ez-gurutzelarkatua, eta horizontala soilik.
+</li><li> Jaregin <b>Fotogramak eremuetara</b> efektua pista berdinaren gainean.
+Gaitu 'Average empty rows' eta erreproduzitu bideoa behin baino gehiagotan aurreneko
+eremua zein den jakiteko. Aurretik doan okerreko eremua hautatzen baduzu, filmea
+dardarka agertuko da. Kontutan izan, bideoaren gainean egindako edozein muntaketa
+(bikoiztutako fotograma-tasarekin) eremuen ordena hondatzeko gai dela.
+Cinelerra-ren garatzaileak eremuen aldaketen abisuak emateko modu errazagoa
+ikertzen ari dira, baina oraingoz muntaketa osoa fotograma-tasa normalarekin
+egin behar da edo eremuen ordena ongi dagoela ziurtatzea behin eta berriz.
+</li><li> Errendatu bideoa ahalik eta kalitate altuenarekin.
+</li><li> Inportatu bideoa pista berri batera. Proiektuaren fotograma-tasa 24 f/s
+balioarekin doitu. Orain pista berriak filme baten itxura gehiago eduki beharko luke,
+jatorrizko metrajea baino.
+</li></ol>
+
+<p>Prozedura oso hau efektu batean (ez zen denbora errealekoa izango) garatu daiteke,
+baina horrela egitearen arazo nagusiena honakoa da: erabiltzaileek eremuetan oinarritutako
+irteera eta 24 f/s mantentzea nahi izaten dute, etorkizunean erabiltzeko.
+Denbora errealekoa ez den efektu batek prozedura guzti hau beharko luke 24 f/s fotograma-tasako
+kopiarentzat. Oraindik eztabaidatzen dago.
+</p>
+<hr size="6">
+<a name="Behelainoa-kentzea"></a>
+<a name="SEC276"></a>
+<h2 class="section"> 20.5 Behelainoa kentzea </h2>
+
+<p>Askotan gertatzen da behelainorekin argazkiak ateratzea, eta zeru urdina inoiz
+ez ikustea. Norbaitek egun batean zeru urdina kapturatzea lortzen badu ere,
+zeruertzaren argazkiek ia beti sakonera gehiago eduki lezakete. Horretarako
+erabiltzen da <b>Gradientea</b> efektua.
+</p>
+<p>Jaregin 'Gradientea' efektua behelainoa duen pistaren gainean. Ezarri honako parametroak:
+</p><ul>
+<li> Angelua: 0
+</li><li> Barneko erradioa: 0
+</li><li> Kanpoko erradioa: 40
+</li><li> Barneko kolorea: urdina 100% alfa
+</li><li> Kanpoko kolorea: urdina 0% alfa
+</li></ul>
+
+<p>Garrantzitsua da kolorea 'urdina 0% alfa' balioarekin doitzea, nahi eta erabat gardena izan.
+Kanpoko alfaren kolorea barneko kolorearekin interpolatzen da. Hau gradientearen
+aplikazio orokorreko ezarpena da. Ilunabarreko eszena batzuk laranja edo marroia kolorearekin hobeto
+geratzen dira.
+</p>
+<hr size="6">
+<a name="Mugikorrentzako-tonua-sortzea"></a>
+<a name="SEC277"></a>
+<h2 class="section"> 20.6 Mugikorrentzako tonua sortzea </h2>
+
+<p>Honela sortu genituen tonuak Motorola V180 gailuarentzako, eta baliteke telefono mugikor
+berrietan ere funtzionatzea. Joan <b>Fitxategia -&gt; Kargatu fitxategiak</b> menura, kargatu
+soinua duen fitxategi bat <b>Ordeztu uneko proiektua</b> txertatzeko estrategiarekin.
+Joan <b>Ezarpenak -&gt; Formatua</b> menura, eta aldatu <b>Kanalak</b> 1 balioarekin, eta
+<b>Lagin-tasa</b> 16000 edo 22050 balioarekin.
+</p>
+<p>Orain nabarmendu denbora-lerroko eskualde bat, edo gehitu sarrerako eta
+irteerako puntuak, politonua osatuko duen zatia zehazteko. Telefono mugikorraren
+soinu-kalitatea hobetzeko gehienezko anplitutea beharko duzu soinuaren
+hainbat zatitan. Saguaren eskuineko botoiarekin Audio 1 pistaren gainean
+klik egin, eta hautatu <b>Erantsi efektua</b>. Agertuko den elkarrizketa-koadroan
+hautatu <b>Konpresorea</b> efektua, eta egin klik <b>Erantsi</b> botoian.
+</p>
+<p>Ziurtatu zaitez txertatzeko puntua edo nabarmendutako area Konpresorea efektuaren
+eskualdean dagoela. Saguaren eskuineko botoiarekin egin klik Audio 2 pistaren gainean
+eta hautatu <b>Erantsi efektua</b>. Hautatu <b>Audio 1: Konpresora</b> elementua eta
+egin klik <b>Erantsi</b> botoian. Audio 1 Konpresorea efektuko  <img src=".././manual_images_en/magnify.png" alt="manual_images_en/magnify">
+luparen gainean klik egin konpresorearen elkarrizketa-koadroa bistaratzeko..
+</p>
+<p>Doitu honako parametroak:
+</p><ul>
+<li> Erantzun-denbora: <b>-0.1</b>
+</li><li> Gainbehera-denbora: <b>0.1</b>
+</li><li> Abiarazle mota: <b>Total</b>
+</li><li> Abiarazlea: <b>0</b>
+</li><li> Leundu soilik: <b>No</b>
+</li></ul>
+
+<p>Egin klik <b>Garbitu</b> botoian grafikoa garbitzeko. Saretaren areako edozein puntutan
+klik egin eta arrastatu puntu berria 0 Irteerara (Output), eta -50 Sarrerara (Input).
+Grafikoak honelakoa izan beharko luke:
+</p>
+<p align="center"> <img src=".././manual_images_en/compress.png" alt="manual_images_en/compress">
+</p>
+<p>Joan orain <b>Fitxategia -&gt; Errendatu</b> menura. Idatzi irteerako mp3 fitxategiaren izena.
+Ezarri formatua <b>MPEG Audioa</b> elementuarekin. Egin klik Audioaren <img src=".././manual_images_en/wrench.png" alt="manual_images_en/wrench">
+giltzaren gainean, eta ezarri <b>Geruza</b> eremua <b>III</b> balioarekin, eta <b>Kbit segundoko:</b>
+eremua <b>24</b> edo <b>32</b> balioarekin. Aktibatu <b>Errendatu audioko pistak</b> eta desaktibatu
+<b>Errendatu bideoko pistak</b>. Egin klik Ados botoiaren gainean fitxategia errendatzeko.
+</p>
+<p>Emaitzeko <tt>`.mp3'</tt> fitxategia web zerbitzarira igo. Ondoren, telefonoaren nabigatzailearekin
+<tt>`.mp3'</tt> fitxategia URL horretatik deskagatu. Baliteke telefono batek deskargatu eta erabili dezakeen
+fitxategien tamaina mugatuta edukitzea.
+</p>
+<hr size="6">
+<a name="Tiratu-audioa-denboran"></a>
+<a name="SEC278"></a>
+<h2 class="section"> 20.7 Tiratu audioa denboran </h2>
+
+<p>Audioaren pista baten eskualde bat hautatu, nahi den pistaren grabazioa
+aktibatu, <b>Audioa -&gt; Errendatu efektua</b> menura joan eta <b>Tiratu denbora</b>
+efektua aplikatzea bezain erraza dela dirudi audioa denboran luzatzea.
+Audioaren 3 efektu daude audioa denboran zehar luzatzeko: <b>Tiratu denbora</b>,
+<b>Berriz lagindu</b> eta <b>Baliabidearen informazioaren elkarrizketa-koadroa</b>.
+</p>
+<p><b>Berriz lagindu</b> efektuak Fourier-en transformatu azkar bat aplikatzen du
+tonua aldatu gabe iraupena aldatzen saiatzeko, baina honek distortsioak
+sortzen ditu audioan. Erabilgarria da denboran aldaketa nabarmenak egiteko,
+aldaketa nabarmena denean entzuleari distortsioak onargarriagoak
+gertatzen zaizkiolako.
+</p>
+<p>Iraupen txikiagoko aldaketetan, %5 baino handiagoak ez, <b>Berriz lagindu</b>
+erabili behar da. Honek audioaren garaiera aldatzen du, eta egindako aldaketak
+nahiko txikiak badira, entzuleak ez ditu nabarmentzen. Laginketa berriro
+egitean ez da soinu distortsiorik sortzen, eta honela erabilgarriagoa da
+iraupen txikiko aldaketetan.
+</p>
+<p>Iraupena piskat aldatzeko beste modua hau da: joan <b>Baliabideak</b> leihora,
+hautatu <b>Multimedia</b> (media) karpeta, saguaren eskuineko botoiarekin audioaren
+fitxategi batean klik egin eta <b>Informazioa</b> hautatu. Informazioaren elkarrizketa-koadroan
+ezarri lagin-tasa iraupena doitzeko. Metodo honek saguarekin audioaren pistaren eskuineko
+muga eskuinera edo ezkerrera arrastatzea eskatzen du, iraupenaren aldaketari egokitzeko.
+</p>
+<hr size="6">
+<a name="Bideoaren-pantaila_002dkapturak"></a>
+<a name="SEC279"></a>
+<h2 class="section"> 20.8 Bideoaren pantaila-kapturak </h2>
+
+<p>Atal honetan monitorean agertzen dena bideo batean kapturatu eta Cinelerra-n
+nola editatu azaltzen da.
+</p>
+<p>Aurrenik, bideoa <b>xvidcap</b> tresnarekin kapturatu. Tresna hau GNU/Linux
+banaketetako biltegietan aurkitzen da, edo honako gunetik deskarga daiteke: <br>
+<a href="http://xvidcap.sourceforge.net">http://xvidcap.sourceforge.net</a>
+</p>
+<p>Esan bezala, aurrenik kapturatu bideoa<br>
+<code>xvidcap --fps 10 --cap_geometry 1280x1024+0+0 --file &quot;fitxategia1.mpeg&quot;
+--gui no --audio no</code>
+Ez ahaztu geometriaren aukera doitzea zure pantailaren tamainara egokitzeko. Ondoren,
+lortu berri duzun <tt>`fitxategia1.mpeg'</tt> fitxategia bihurtu Cinelerra-k erabiltzen
+duen mpeg formatura: <br>
+<code>ffmpeg -r 10 -i fitxategia1.mpeg -s 1280x1024 -b 3000 -aspect 1.33 -r 25
+fitxat2.mpeg</code>
+</p>
+<p>Orain fitxategi hori (fitxat2.mpg) Cinelerra-n karga dezakezu. Ziurtatu proiektuaren
+bideo-formatua ongi konfiguratzen duzula: tamaina, fotograma-tasa, aspektu-erlazioa.
+</p>
+<p>Bideoa muntatzea amaitu ondoren, errendatu egin behar duzu. JPEG sekuentzia gisa
+errendatu. Sortuko diren JPEG fitxategiak karpeta berri baten gordetzea gomendatzen da, 
+fitxategi berri asko sortuko baitira.
+</p>
+<p>Ondoren, ireki kontsola bat eta kokatu zaitez karpeta horretan (<code>cd</code>
+komandoa erabiliz). Kodetu jpeg fitxategiak honako komandoak erabiliz:
+</p>
+<p>Aurreneko urratsa: <br>
+<code>mencoder &quot;mf://*.jpg&quot; -mf fps=25 -oac pcm -sws 2 -vf
+scale=1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts
+vcodec=mpeg4:vbitrate=800:aspect=4/3:vpass=1 -ofps 10 -of avi -o /dev/null
+-ffourcc DIVX</code> <br>
+Bigarren urratsa: <br>
+<code>mencoder &quot;mf://*.jpg&quot; -mf fps=25 -oac pcm -sws 2 -vf
+scale=1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts
+vcodec=mpeg4:vbitrate=800:aspect=4/3:vpass=2 -ofps 10 -of avi -o
+../rendered_file.avi -ffourcc DIVX</code>
+</p>
+<p>Bideoa mpeg4 formatuan zuzenean errendatu dezakezu Cinelerra-tik, horrela egitea nahi
+izanez gero.
+</p>
+<hr size="6">
+<a name="Errendimendua-hobetzea"></a>
+<a name="SEC280"></a>
+<h2 class="section"> 20.9 Errendimendua hobetzea </h2>
+
+<p>Oraingoz GNU/Linux sistemak ez du agintzen mahaigainetan, bai zerbitzarien arloan ordea.
+GNU/Linux-eko programa asko sareko aplikazioak dira, aurpegirik gabekoak, estrategikoki
+diseinatuak nolabait Microsoft-en zerbitzarien funtzionalitateei aurka egiteko, baina
+ez erabiltzailearekiko dagoen elkarreraginkortasunean pentsatuz. Erabiltzaile batek GNU/Linux
+sistemako hainbat parametro doitu ditzake odol garbiko abere baten antzeko portaera izateko
+mahaigaineko arloan.
+</p>
+<p><i>Itzultzailearen oharra: arestiko paragrafo hori jatorrizko dokumentuak zuen. Gaur egun
+GNU/Linux sistemak ez dio inolako enbidiarik beste sistema eragileei mahaigainen arloan,
+eta ari da piskanaka zabaltzen bai etxeetan bai bulegoetan ere. Gainera eguneroko zereginetarako
+aplikazio ugari ditu.</i>
+</p>
+
+
+<hr size="6">
+<a name="Trukatzeko-diskoa-desgaitzea"></a>
+<a name="SEC281"></a>
+<h3 class="subsection"> 20.9.1 Trukatzeko diskoa desgaitzea </h3>
+
+<p>Memoria asko duten sistemetan baliteke Cinelerra-k trukatzeko diskorik gabe
+(swap partizioa) hobeto funtzionatzea. Ordenagailuak 4 GB memoria RAM badu,
+litekeena da trukatzeko partiziorik gabe hobeto funtzionatzea. Memoria gutxi
+badu, 512 MB adibidez, trukatzeko partizioa mantendu beharko litzateke.
+Grabazio bat lantzea nahi baduzu, trukatzeko partizioa desaktibatu beharko zenuke.
+Honek badu bere zergatia: GNU/Linux sistemak dagoen memoriaren erdia bakarrik erabiltzea
+uzten du. Hortik aurrera orrialde libreak bilatzen hasten da trukatzeko, 
+memoria askatu eta diskora sarbidetzeko cache gisa erabiltzeko. 4 GB memoria
+duen sistema batean, orrialdeen trukatzearen atzerapena 2 GB erabili ondoren hasten da
+nabarmentzen.
+</p>
+<p>Orduan, honako galdera etortzen da burura: nola exekutatu GNU/Linux trukatzeko partiziorik
+gabe. Teorian nahikoa izango litzateke honako komandoa exekutatzea:<br>
+<code>swapoff -a</code>
+</p>
+<p>Zoritxarrez, trukatzeko partiziorik gabe 'kswapd' ataza begizta batean exekutatzen da
+errendimenduaren %100 bereganatuz. Arazo hau saihesteko, editatu <tt>`linux/mm/vmscan.c'</tt>
+fitxategia. Gehitu lerro bat <code>return 0;</code> dioena, honako lerroen aurretik:
+</p><pre class="verbatim">    /*
+     * Kswapd main loop.
+     */
+</pre>
+<p>Gero, gorde fitxategia eta berkonpilatu nukleoa.
+</p>
+<hr size="6">
+<a name="Handiagotu-soinuaren-bufferrak"></a>
+<a name="SEC282"></a>
+<h3 class="subsection"> 20.9.2 Handiagotu soinuaren bufferrak </h3>
+
+<p>Denbora errealeko errendimendua handitzeko, GNU/Linux-en soinu-kontrolatzaile
+guztien audioaren bufferrak 128K-tik 64K-ra mugatu ziren. Audio eta bideoaren
+aldi bereko grabazioan, eta audioaren grabazio askotan, honek seinalearen
+galerak sortzen ditu. Adabakiak aplikatzea, latentzia baxua eta prozesuak
+lehentasunez lantzea lortzeko, audioaren grabazioaren arazo gehienak konpontzen
+ditu, baina ez du bideo eta audioa aldi bereko grabazioa hobetzen. Hori dela
+eta, nukleoa aldatu egin behar da.
+</p>
+<p>Sistemako soinuaren bufferrak egokiak diren ikusteko, exekutatu ekartzen duen
+soinuaren probarako programa, audioa edo bideoa jadanik beste programa batekin
+erreproduzitzen ari ez dela ziurtatuz. Programa honek ahalik eta tamaina handienarekin
+ezartzen ditu bufferrak eta erakutsi egiten ditu. <b>Guztirako Byte erabilgarriak</b> 131072
+azpitik egonez gero, kontrolatzailearen bufferrak handiagotu egin beharko dituzu.
+Kontrolatzaile gehienak desberdinak izan arren, oraingoz eraldaketa bat prestatu
+dugu horietariko batentzako.
+</p>
+<p>Jarraian datorrena SoundBlaster Live kontrolatzailearen OSS bertsioari aplikatzen zaio.
+Soinu-txartel bakoitzak eta eratorritako soinuaren kontrolatzaile bakoitzak inplementazio
+desberdin bat duenez, beste soinu-txartelen kasuetan ikertu egin beharko duzu. Kasu
+honetan, editatu <tt>`linux/drivers/sound/emu10k1/audio.c'</tt> fitxategia.
+</p>
+<p>Honakoa agertzen den lekuan
+</p><pre class="verbatim">if (bufsize &gt;= 0x10000)
+</pre><p>honeki ordeztu:
+</p><pre class="verbatim">if (bufsize &gt; 0x40000)
+</pre>
+<p>Honakoa agertzen den lekuan
+</p><pre class="verbatim">    for (i = 0; i &lt; 8; i++)
+        for (j = 0; j &lt; 4; j++)
+</pre><p>honekin ordeztu:
+</p><pre class="verbatim">    for (i = 0; i &lt; 16; i++)
+        for (j = 0; j &lt; 4; j++)
+</pre>
+<p><tt>`linux/drivers/sound/emu10k1/hwaccess.h'</tt> fitxategian, honakoa agertzen
+den lekuan
+</p><pre class="verbatim">#define MAXBUFSIZE 65536
+</pre><p>honekin ordeztu:
+</p><pre class="verbatim">#define MAXBUFSIZE 262144
+</pre>
+<p>Azkenik, <tt>`linux/drivers/sound/emu10k1/cardwi.h'</tt> fitxategian, hau aldatu
+</p><pre class="verbatim">#define WAVEIN_MAXBUFSIZE         65536
+</pre><p>honekin
+</p><pre class="verbatim">#define WAVEIN_MAXBUFSIZE         262144
+</pre>
+<p>Gero, konpilatu berrirnire_gailuao nukleoaren moduluak.
+</p>
+<hr size="6">
+<a name="Partekatutako-memoria-gehiago-askatzea"></a>
+<a name="SEC283"></a>
+<h3 class="subsection"> 20.9.3 Partekatutako memoria gehiago askatzea </h3>
+
+<p>Linux nukleoak memoriaren 32 MB soilik partekatzea uzten du lehenetsi gisa.
+Kopuru hau handiagotu beharra dago zerbait erabilgarria lantzeko. Abiaraztean,
+Cinelerra-k honako abisuarekin jakinaraziko du:
+</p>
+<p><i>The following errors occurred:
+void MWindow::init_shm0: WARNING:/proc/sys/kernel/shmmax is 0x2000000, which is too low.
+Before running Cinelerra do the following as root:
+echo &quot;0x7fffffff&quot;&gt;/proc/sys/kernel/shmmax</i>
+</p>
+<p>Aldaketa betirako izateko, gehitu honako lerroa <tt>`/etc/sysctl.conf'</tt> fitxategian:
+<code>kernel/shmmax=0x7fffffff</code>
+</p>
+<p>Aurreneko aldian, ordenagailua berrabiarazi dezakezu, edo supererabiltzaile gisa honakoa
+exekutatu:
+</p>
+<p><code>sysctl -p</code>
+</p>
+<hr size="6">
+<a name="Disko-gogorra-bizkortzea"></a>
+<a name="SEC284"></a>
+<h3 class="subsection"> 20.9.4 Disko gogorra bizkortzea </h3>
+
+<p>GNU/Linux sistemako adituen artean komando oso ospetsua da, baina GNU/Linux banaketetan ez da
+lehenetsi gisa erabiltzen. <br>
+<code>hdparm -c3 -d1 -u1 -k1 /dev/hda</code>
+</p>
+<ul>
+<li> <samp>`-c3'</samp> disko gogorra 32 bit-eko sarrera/irteera sinkronizatuan jartzen du.
+Normalean ez du funtzionatzen, nukleoak ez duelako ongi onartzen IDE kontrolagailu gehienak.
+<i>lost interrupt</i> edo <i>SeekComplete</i> bezalako erroreak agertzen badira, berehala erabili
+<b>-c0</b> aukera '-c3' aukeraren ordez.
+</li><li> <samp>`-d1'</samp> aukerak DMA gaitzen du. Honek PUZaren zeregina piskat askatzen du
+datuen transferentziak egitetik.
+</li><li> <samp>`-u1'</samp> hainbat interrupzio kudeatzea uzten du disko gogorreko transakzioetan.
+Honek PUZaren denbora gehiago askatzen du.
+</li><li> <samp>`-k1'</samp> aukerak arazoak daudenean GNU/Linux sistemak ezarpenak berrezartzea saihesten du.
+</li></ul>
+
+<hr size="6">
+<a name="Cron-desgaitzea"></a>
+<a name="SEC285"></a>
+<h3 class="subsection"> 20.9.5 Cron desgaitzea </h3>
+
+<p>GNU/Linux sistemak eguneroko ataza batzuk lantzen ditu, hala nola eskuliburuen
+orrialdeak (man orrialdeak) konprimitzea. Normalean, aplikazio bat konpilatzen edo
+testu bat idazten ari bagara, ez dira antzematen atzeko planoan lantzen ari badira.
+Baina bideoa erreproduzitzen edo muntatzen ari garenean bai ordea, antzematen dira.
+Eragiketa hauek desgaitu daitezke <tt>`/etc/rc.d/init.d/anacron'</tt> fitxategia
+editatuz.
+</p>
+<p>Horretarako, idatzi <code>exit</code> hitza <code>#</code> ikurrarekin hasten ez den
+aurreneko lerroan. <tt>`/etc/rc.d/init.d/crond'</tt> fitxategian idatzi <code>exit</code>
+hitza <code>#</code> ikurrarekin hasten ez den aurreneko lerroan. Gero, berrabiarazi
+ordenagailua.
+</p>
+<p>Aldaketa hauek egin ostean, ezin izango da <code>at</code> komandoa erabili, 
+gaur egun norbaitek erabiltzen al du komando hori?
+</p>
+<hr size="6">
+<a name="USB-saguaren-sentikortasuna-murriztea"></a>
+<a name="SEC286"></a>
+<h3 class="subsection"> 20.9.6 USB saguaren sentikortasuna murriztea </h3>
+
+<p>Bideojokuetara aritzen diren erabiltzaileek bereizmen altuko saguak atsegin dituzte,
+baina mota horretako saguekin denbora-lerroan edo bideoaren pantailan doitasunez posizio
+batean kokatzea oso zaila izaten da. Bere garaian, XFree86 zerbitzari grafikoak
+PS/2 saguaren sentikortasuna murriztea uzten zuen, <code>xset m 1 1</code> bezalako
+komandoak erabiliz, baina ez da horrelakorik gertatzen USB edo
+KVM-etan.
+</p>
+<p>USB motako sagu baten sentikortasuna murrizteko modu bat badago, baina nukleoaren
+iturburua editatzea eskatzen du. USB motako euskarria duela urteetatik garatuta egon
+arren, sagu mota horien nukleoaren iturburua behin eta berriro idazten da.
+Instrukzio hauek nukleoaren  2.6.12.3 bertsiorako dira baliozkoak. Editatu
+<tt>`/usr/src/linux/drivers/input/mousedev.c'</tt> fitxategia.
+</p>
+<p>Honakoa dioen lerroaren ondoren
+</p><pre class="verbatim">struct mousedev_hw_data {
+</pre><p>idatzi
+</p><pre class="verbatim">#define DOWNSAMPLE_N 100
+#define DOWNSAMPLE_D 350
+int x_accum, y_accum;}
+</pre>
+<p>Gero, honelako zerbait dioen atalean:
+</p><pre class="verbatim">switch (code) {
+    case REL_X:	mousedev-&gt;packet.dx += value; break;
+    case REL_Y:	mousedev-&gt;packet.dy -= value; break;
+    case REL_WHEEL:	mousedev-&gt;packet.dz -= value; break;
+}
+</pre><p>honekin ordeztu
+</p><pre class="verbatim">switch (code) {
+    case REL_X:
+    mousedev-&gt;packet.x_accum += value * DOWNSAMPLE_N;
+    mousedev-&gt;packet.dx += (int)mousedev-&gt;packet.x_accum
+    / (int)DOWNSAMPLE_D;
+    mousedev-&gt;packet.x_accum -=
+    ((int)mousedev-&gt;packet.x_accum / (int)DOWNSAMPLE_D)
+    * (int)DOWNSAMPLE_D;
+    break;
+    case REL_Y:
+    mousedev-&gt;packet.y_accum += value * DOWNSAMPLE_N;
+    mousedev-&gt;packet.dy -= (int)mousedev-&gt;packet.y_accum
+    / (int)DOWNSAMPLE_D;
+    mousedev-&gt;packet.y_accum -=
+    ((int)mousedev-&gt;packet.y_accum
+    / (int)DOWNSAMPLE_D) * (int)DOWNSAMPLE_D;
+    break;
+    case REL_WHEEL: mousedev-&gt;packet.dz -= value; break;
+}
+</pre><p>Aldatu <b>DOWNSAMPLE_N</b>-ren balioa saguaren sentikortasuna aldatzeko.
+</p>
+<hr size="6">
+<a name="X-zerbitzariaren-ezarpenak"></a>
+<a name="SEC287"></a>
+<h3 class="subsection"> 20.9.7 X zerbitzariaren ezarpenak </h3>
+
+<p>Lehenetsi gisa, XFree86 ez da oso azkarra izaten Cinelerra-ren pixmapak errendatze
+aurretatuarekin erakustean. X zerbitzaria gelditu egiten da interfazearen zerrendak
+marraztean. Sistemak XFree86 erabiltzen badu (egungo banaketa askok ez dute erabiltzen),
+arazo hau gainditzeko XFree86-ren konfigurazioko fitxategian lerro bat gehitu.
+</p>
+<p><b>Section &quot;Device&quot;</b> atalean, gehitu honako lerroa:
+</p><pre class="verbatim">Option &quot;XaaNoOffscreenPixmaps&quot;
+</pre><p>eta berrabiarazi zerbitzaria.
+</p>
+<p>Monitorea automatikoki itzaltzea saihesteko, <tt>`/etc/X11/xinit/xinitrc'</tt>
+fitxategian idatzi
+</p><pre class="verbatim">xset s off
+xset s noblank
+</pre><p>aurreneko <code>if</code> instrukzioaren aurretik.
+</p>
+<p>Windows sistemako teklei buruz, GNU/Linux-eko banaketa bat berak ere erabiltzen
+ez dituztenak, <kbd>Alt</kbd> teklaren funtzionalitatea edukitzea lor dezakezu. 
+<tt>`/etc/X11/Xmodmap'</tt> fitxategian gehitu honakoa
+</p><pre class="verbatim">keycode 115 = Hyper_L
+keycode 116 = Hyper_R
+add mod4 = Hyper_L
+add mod5 = Hyper_R
+</pre>
+<p>Leiho-kudeatzaile batek Windows-eko teklak <kbd>Alt</kbd> bezala onartzeko
+behar diren aldaketak nahiko konplexuak dira. FVWM kudeatzailearen kasuan
+editatu <tt>`/etc/X11/fvwm/system.fvwm2rc'</tt>  fitxategia eta idatzi:
+</p><pre class="verbatim">Mouse 0 T A move-and-raise-or-raiselower
+#Mouse 0 W M move
+Mouse 0 W 4 move
+Mouse 0 W 5 move
+Mouse 0 F A resize-or-raiselower
+Mouse 0 S A resize-or-raiselower
+</pre>
+<p>atal lehenetsiaren ordez mugitzeko eta tamainaz aldatzeko. Errendimendu onena
+FVWM leiho-kudeatzailearekin lortzen da. Beste leiho-kudeatzaileek bideoa
+moteltzen dutela dirudi, gertaera gehiegi atzitzen dutelako eta diseinuan
+ez direlako hain eraginkorrak.
+</p>
+<hr size="6">
+<a name="Fitxategi_002dsistema-bizkortzea"></a>
+<a name="SEC288"></a>
+<h3 class="subsection"> 20.9.8 Fitxategi-sistema bizkortzea </h3>
+
+<p>Maiz gertatuko da bideoa disko oso handi eta garesti batean gordetzea, eta abioko
+disko gogorraren desberdina izatea. Hori dela eta, disko gogor horretan EXT
+fitxategi-sistema eskuz instalatu beharko duzu, <code>mke2fs</code> tresna erabiliz.
+Fitxategi-sistema azkarrena honakoarekin lortzen da<br>
+<a name="IDX156"></a>
+<a name="IDX157"></a>
+<code>mke2fs -i 65536 -b 4096 nire_gailua</code> <br>
+<code>tune2fs -r0 -c10000 nire_gailua</code>
+</p>
+<p>Honela konfiguratuta, fitxategi-sistemak ez du egunkaririk (<i>journaling</i>),
+ahalik eta bloke gutxien gordetzen ditu fitxategi-izenekin erabiltzeko,
+eta ahalik eta datu kopuru gehiena atzitzen du. Piska bat motelagoa den
+fitxategi-sistema, baina argi indarra joan ondoren leheneratzeko egokiagoa dena,
+lortzeko <br>
+<code>mke2fs -j -i 65536 -b 4096 nire_gailua</code> <br>
+<code>tune2fs -r0 -c10000 nire_gailua</code>
+</p>
+<p>Konfigurazio honek egunkaria gehitzen du, idazketa piska bat motelduz,
+eta fitxategi-sistemaren egiaztaketak bizkortzen du.
+</p>
+<hr size="6">
+<a name="Zoran-bideoa-hobetzea"></a>
+<a name="SEC289"></a>
+<h3 class="subsection"> 20.9.9 Zoran bideoa hobetzea </h3>
+
+<p>ZORAN sarreretik grabatutako bideoa ez da lerrokatuta egoten, edo ez dago erabat
+eskuinera kodetuta. Portaera hau piskat zuzendu daiteke kontrolatzailearen iturburuko
+parametroak doituz.
+</p>
+<p><tt>`/usr/src/linux/drivers/media/video/zr36067.c'</tt> fitxategiko 623garren lerroaren inguruan
+definitutako egiturak eragiten dio lerrokadurari. NTSC moduarentzako gutxienez, 
+kontrolatzailearen 2.4.20 bertsioa hobetu zatekeen honakoa
+</p><pre class="verbatim">    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 16 };
+honeki aldatuz
+    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 17 };
+</pre>
+<p><tt>`/usr/src/linux/drivers/media/video/bt819.c'</tt> fitxategiko 76garren lerroaren
+inguruan lerrokadurari eta kodeketari eragiten dion egitura dago. <br>
+NTSC moduarentzat
+</p><pre class="verbatim">    {858 - 24, 2, 523, 1, 0x00f8, 0x0000},
+honeki aldatu
+    {868 - 24, 2, 523, 1, 0x00f8, 0x0000},
+</pre>
+<p>Parametro hauek doitzea irudia zentrura gerturatzeko balio lezake, edo ez. 
+Gehienetan kontrolatzailea blokeatu egiten da aurreneko fotograma kapturatu
+aurretik.
+</p>
+<p><b>Berria 2.6.5 bertsioan:</b> <br>
+</p>
+<p>2.6 bertsioko nukleotan, bideoaren azpisistema hutsetik berridatzi zen. ZORANen
+parametroak doitzeko, joan <tt>`drivers/media/video/zoran_card.c'</tt> fitxategira
+eta bilatu bertan honako lerroen antzekoa
+</p>
+<pre class="verbatim">    static struct tvnorm f50sqpixel = { 944, 768, 83, 880, 625, 576, 16 };
+    static struct tvnorm f60sqpixel = { 780, 640, 51, 716, 525, 480, 12 };
+    static struct tvnorm f50ccir601 = { 864, 720, 75, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 16 };
+
+    static struct tvnorm f50ccir601_lml33 = { 864, 720, 75+34, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601_lml33 = { 858, 720, 57+34, 788, 525, 480, 16 };
+
+    /* The DC10 (57/16/50) uses VActive as HSync, so HStart must be 0 */
+    static struct tvnorm f50sqpixel_dc10 = { 944, 768, 0, 880, 625, 576, 0 };
+    static struct tvnorm f60sqpixel_dc10 = { 780, 640, 0, 716, 525, 480, 12 };
+
+    /* FIXME: I cannot swap U and V in saa7114, so i do one
+     * pixel left shift in zoran (75 -&gt; 74)
+     * (Maxim Yevtyushkin &lt;max@linuxmedialabs.com&gt;) */
+    static struct tvnorm f50ccir601_lm33r10 = { 864, 720, 74+54, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601_lm33r10 = { 858, 720, 56+54, 788, 525, 480, 16 };
+</pre>
+<p>Badirudi, lerro horiek direla irudiaren posizioa kontrolaren arduradunak. Gutxienez
+LML33rentzako, <b>f60ccir601_lml33</b>-ren definizioak lortzen du:
+</p><pre class="verbatim">static struct tvnorm f60ccir601_lml33 = { 858, 720, 67+34, 788, 525, 480, 13 };
+</pre>
+<hr size="6">
+<a name="Cinelerra-itzultzea"></a>
+<a name="SEC290"></a>
+<h2 class="section"> 20.10 Cinelerra itzultzea </h2>
+
+
+<p>Informazio hau behar da Cinelerra beste hizkuntza batera itzultzen laguntzea
+nahi baduzu. Irakurri See section <a href="cinelerra_cv_manual_eu_3.html#SEC27">Inguruneko aldagaiak</a> atala Cinelerra zure hizkuntzean
+exekutatzeko.
+</p>
+<hr size="6">
+<a name="Itzulpen-erabilgarriak"></a>
+<a name="SEC291"></a>
+<h3 class="subsection"> 20.10.1 Itzulpen erabilgarriak </h3>
+
+<p>Cinelerra honako hizkuntzetara itzulita dago:
+</p><ul>
+<li> <b>DE</b> - Alemaniera
+</li><li> <b>ES</b> - Gaztelera
+</li><li> <b>EU</b> - Euskara
+</li><li> <b>FR</b> - Frantsesa
+</li><li> <b>IT</b> - Italiera
+</li><li> <b>PT_BR</b> - Brasilgo portugesa
+</li><li> <b>SL</b> - Esloveniera
+</li></ul>
+
+<hr size="6">
+<a name="Itzulpen-bat-eguneratzea"></a>
+<a name="SEC292"></a>
+<h3 class="subsection"> 20.10.2 Itzulpen bat eguneratzea </h3>
+
+<p>Eguneratutako <tt>`.po'</tt> fitxategi bat sortzeko, Cinelerra-ren iturburuko
+mezu berriekin, <code>./configure</code> exekutatu ondoren: <br>
+<code>cd po &amp;&amp; make</code>
+</p>
+<p>Gero, zure helburuko hizkuntzako <tt>`po/'</tt> direktorioko <tt>`.po'</tt> fitxategia
+editatu, eta bidali <i>diff</i> fitxategia Cinelerra-CV proiektuko garatzaileei.
+</p>
+<hr size="6">
+<a name="Itzulpen-berria-sortzea"></a>
+<a name="SEC293"></a>
+<h3 class="subsection"> 20.10.3 Itzulpen berria sortzea </h3>
+
+<p>Itzulpen berria sortzeko, <code>./configure</code> exekutatu ondoren<br>
+<code>cd po &amp;&amp; make</code>
+</p>
+<p>Gero, <tt>`po/'</tt> direktorioan dagoen <tt>`cinelerra.pot'</tt> fitxategia
+editatu, eta itzuli bertan agertzen diren mezuak. Aldatu fitxategiaren izena
+<tt>`(hizkuntza_kodea).po'</tt> eta gehitu hizkuntzari dagokion kodea
+<tt>`po/LINGUAS'</tt> fitxategiari. Azkenik, bidali <i>diff</i> fitxategia
+Cinelerra-CV proiektuko garatzaileei.
+</p>
+<hr size="6">
+<a name="Irudi-finkoen-panoramikoak-eta-zoomak"></a>
+<a name="SEC294"></a>
+<h2 class="section"> 20.11 Irudi finkoen panoramikoak eta zoomak </h2>
+
+<p>Cinelerra-ren gako-fotogramen funtzionalitate ahaltsuak, irudi finkoen
+panoramikoak eta zoomaren efektuak sortzea uzten du.
+</p>
+<ol>
+<li> Kargatu eta sortu klip bat irudi finkotik, arestiko atalean aipatu
+den bezala. Klip honek 10 segundo iraun ditzala egin.
+</li><li> Gaitu <b>Gako-fotogramak automatikoki sortzea</b>.
+</li><li> <b>Nabigazioko kontrolak</b> erabiliz, joan kliparen hasierara.
+</li><li> <b>Kameraren kontrola</b> erabiliz, kliparen hasierako posizioa doitu.
+</li><li> <b>Nabigazioko kontrolak</b> erabiliz, joan aurrerantz bi segundo klipean.
+</li><li> <b>Konposaketako kamera arrastatuz</b>, eraman posizio desberdin batera.
+</li><li> Orain joan kliparen hasierara eta erreproduzitu.
+</li></ol>
+
+<p>Ikus dezakezunez, kamera gako-fotograma batetik hurrengora leuntasunez mugituko
+da, Cinelerrak automatikoki doitzen baitu kameraren mugimendua marra zuzenen
+bidez puntu batetik bestera.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC271" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_21.html#SEC295" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Masking quirks and bugs</title>
+</head>
+
+<body>
+<h1>Quirks and bugs with masking</h1>
+
+<p>Testcase(s) for masking bugs</p>
+
+
+<h2>Testcase 1: Shared effect overrides mask (FIXED)</h2>
+
+<p>
+<strong>Status: FIXED</strong><br>
+Andraz Tori submitted a one-line fix to the CVS.
+</p>
+
+<a href="shared-effect.html">Shared effect becomes
+shared track instead</a> (UI bug)
+
+<p>I stumbled on this when I was masking out a passer-by
+in the background of a recording.  The masking went OK,
+but then I wanted to colour-correct the video.
+
+<h3>The bug</h3>
+
+<p>Since I had two "layers" that were supposed to look
+exactly the same, "sharing effects" seemed like a very
+good idea.  I attached the <em>hue and saturation</em>
+effect, to video track 1 (the one with the passer-by),
+and ajusted it to my satisfaction.  Then I attached it
+again as a "shared effect" on Video 2 (the masking track).
+That made video1 vanish from the compositor.  As long
+as I used the shared effect on Video 2, I had to disable
+playback of Video 2 to see Video 1 at all.</p>
+
+
+<h3>How to reproduce</h3>
+
+<ol>
+ <li> Download the <a href="maskbug.tgz">tarball</a> (5.2 MB)
+with two short clips and the project files.</li>
+ <li>Open the mask-demo.xml project file</li>
+ <li>Attach the brightness/contrast effect to Video 1.</li>
+ <li>Right-click on the Video 2 track, and pick "Attach effect..."</li>
+ <li>In the Attach Effect dialog, select the entry "Video 1: Brightness/Contrast"
+  (the only available one) from the "Shared effects" list, the one in the
+  middle (See the
+  <a href="http://developer.skolelinux.no/~herman/cinelerra/bugs/tc/masking/mask-attach.png">
+  screenshot</a>).</li>
+ <li>Click on the "Attach" button <em>below the Shared effects</em> list.</li>
+</ol>
+
+<p>What should happen: You get "Video 1: Brightness/Contrast" (shared effect)
+attached to Video 2.</p>
+
+<p>What did happen: I got "Video 1" (shared track) attached to Video 2.</p>
+
+
+<h3>Workaround (thanks to Andraz Tori)</h3>
+
+<p>Instead of first selecting, then clicking "Attach", just double-click
+ the desired shared effect.  That works as expected.</p>
+
+
+<h3>The project files, mask-demo.xml and mask-share_bug.xml</h3>
+
+<p>If you open the <a href="mask-demo.xml">mask-demo.xml</a>
+project file, you will se the masking effect as it was intended.
+The colour correction has not been applied yet.  In
+<a href="mask-share_bug.xml">mask-share_bug.xml</a>, the colour
+correction is shared between video1 and video2, video2 being the
+"master".</p>
+
+<p>Try applying the colour correction effect yourself on the
+mask-demo project.  Attaching effects on the video tracks
+individually will work.  Sharing will trigger the bug.</p>
+
+<p>The video files are MJPEG Quicktime rendered by Cinelerra at
+a 50% quality setting, without sound.  This is four times smaller
+than the original DV, which is of higher quality.</p>
+
+
+<hr>
+<address>Herman Robak, herman at skolelinux no</address>
+<!-- hhmts start --> Last modified: Sun Jan 25 16:56:25 CET 2004 <!-- hhmts end -->
+</body> </html>

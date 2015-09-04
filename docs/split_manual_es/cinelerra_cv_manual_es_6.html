@@ -1,0 +1,1111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 6. Ventana del programa</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 6. Ventana del programa">
+<meta name="keywords" content="Manual de Cinelerra CV: 6. Ventana del programa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_5.html#SEC63" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_7.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Ventana-del-programa"></a>
+<a name="SEC88"></a>
+<h1 class="chapter"> 6. Ventana del programa </h1>
+
+
+<p>La ventana del Programa contiene la línea de tiempos y es el punto de inicio
+para todas las operaciones basadas en el menú. La linea de tiempos consiste en 
+una pila vertical de pistas, con el tiempo representado horizontalmente para 
+cada una de ellas. Aquí se define la salida de las operaciones de renderizado 
+y qué se guarda al guardar ficheros. A la izquierda de la línea de tiempos 
+está el área de control (&quot;patchbay&quot;), que contiene opcioens que afectan a cada pista.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>La línea de tiempos</b>
+</p>
+<p>Bajo el menú  <b>Ventana</b>, se pueden encontrar opciones que afectan a las ventanas
+principales. La opción <b>Posición por defecto</b> reposiciona todas las ventanas en
+una configuración predeterminada de edición con 4 pantallas. En sistemas con 
+dos monitores, la opción <b>Posición por defecto</b> dispone las ventanas en un único
+monitor.
+</p>
+<hr size="6">
+<a name="Navegar-por-la-ventana-del-programa"></a>
+<a name="SEC89"></a>
+<h2 class="section"> 6.1 Navegar por la ventana del programa </h2>
+
+<p>La ventana del programa contiene muchas funciones para navegar y visualiza la
+línea de tiempos tal y como está estructurada en memoria: las pistas se 
+apilan verticalmente y se extienden a lo largo del tiempo horizontalmente. 
+La barra deslizante horizontal le permite navegar en el tiempo. La
+barra deslizante vertical le permite navegar entre las pistas.
+</p>
+
+<hr size="6">
+<a name="Pistas-de-v_00eddeo"></a>
+<a name="SEC90"></a>
+<h3 class="subsection"> 6.1.1 Pistas de vídeo </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_video.png" alt="manual_images_intl/track_video">
+</p><p align="center"> <b>Una pista de vídeo</b>
+</p>
+<p>Las pistas de vídeo representan la duración de las secuencias de películas, 
+como si se hubiera desenrollado una película fotográfica real de un extremo a otro
+sobre una mesa. Las imágenes individuales que se ven en la pista son muestras
+de los contenidos en ese instante concreto en la línea de tiempos.
+</p>
+<hr size="6">
+<a name="Pistas-de-audio"></a>
+<a name="SEC91"></a>
+<h3 class="subsection"> 6.1.2 Pistas de audio </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_audio.png" alt="manual_images_intl/track_audio">
+</p><p align="center"> <b>Una pista de audio</b>
+</p>
+<p>Las pistas de audio representan el contenido como una forma de onda de audio. 
+Siguiendo con la analogía de la película, sería como visualizar una cinta 
+magnetofónica desenrollada horizontalmente sobre la mesa.<br>
+Puede acercar o alejar una lupa imaginaria a las pistas, usando la  <b>barra del
+panel de zoom</b>.<br> También puede ajustar la ampliación de la forma de onda de 
+audio usando esta barra.
+Los botones a la izquierda de las pistas definen el <b>área de control</b>, que se 
+usa para determinar el comportamiento de las pistas.
+</p>
+
+<hr size="6">
+<a name="Navegar-por-las-pistas"></a>
+<a name="SEC92"></a>
+<h3 class="subsection"> 6.1.3 Navegar por las pistas </h3>
+
+<p>Navegar por las pistas consiste en escoger una pista de audio o vídeo
+concreta y moverse a un cierto instante de tiempo en la pista. La ventana
+del programa contiene mucha funcionalidad para facilitar esta navegación, además de
+visualizar la línea de tiempos tal y como está estructurada en memoria.
+</p>
+<p>La barra deslizante horizontal permite desplazarse en el tiempo.
+</p>
+<p>La barra deslizante vertical permite desplazarse de unas pistas a otras.
+</p>
+<p>Además de estas herramientas gráficas, también se puede navegar usando el teclado.
+En general, navegar usando el teclado es más rápido que usando el ratón. Use 
+<kbd>Av Pág</kbd> y  <kbd>Re Pág</kbd> para desplazarse hacia arriba y hacia abajo por 
+las pistas.
+</p>
+<p>A menudo tendrá que desplazarse más allá del final de la línea de tiempos, pero
+las barras deslizantes no se lo permitirán. En ese caso, puede usar la flecha 
+derecha para avanzar hacia delante en la línea de tiempos, incluso más allá de su final.
+</p>
+<p>Puede usar la tecla <kbd>Inicio</kbd> y la tecla <kbd>Fin</kbd> para desplazarse instantáneamente
+al principio o final de la línea de tiempos. En modo <b>I-beam</b>, puede mantener pulsada
+la tecla <kbd>SHIFT</kbd> (mayúsculas) y pulsar <kbd>Inicio</kbd> para seleccionar todo desde el
+punto de inserción hasta el origen de la línea de tiempos, o mantener pulsada <kbd>SHIFT</kbd>
+y pulsar <kbd>Fin</kbd> para seleccionar todo desde el punto de inserción hasta el final de 
+la línea de tiempos.
+</p>
+<p>Al pie de la línea de tiempos, encontrará el panel de zoom. El panel de zoom contiene
+los valores de  <b>zoom del muestreo</b>,  <b>amplitud</b>,  <b>zoom de las pistas</b> y 
+ <b>zoom de curva</b>. Junto con las barras deslizantes, estos valores son las herramientas 
+principales para posicionar la línea de tiempos.
+</p>
+<p align="center"> <img src=".././manual_images_en/zoompanel.png" alt="manual_images_en/zoompanel">
+</p>
+<p>Cambiar el <b>zoom del muestreo</b> provoca el cambio de la unidad de medida de tiempo 
+que se usa en la línea de tiempos. Permite visualizar todos los contenidos que componen 
+el proyecto, desde fotogramas individuales hasta la longitud entera del proyecto. Cuanto
+mayor sea este valor, más fotogramas se verán en la pantalla (menor será la granularidad
+de la unidad de tiempo).  <b>Si su ratón tiene rueda central y funciona con X11, 
+puede mover el ratón sobre las imágenes en miniatura y usar la rueda para acercar
+y alejar el zoom</b>.
+</p>
+<a name="IDX95"></a>
+<p>La <b>amplitud</b> sólo afecta al audio. Determina cuán grande aparece la forma de onda,
+si es que se está dibujando.
+</p>
+<a name="IDX96"></a>
+<p>El <b>zoom de las pistas</b> afecta a todas las pistas. Determina la altura de cada una
+de ellas. Si se cambia el zoom de las pistas, el zoom de amplitud compensa este 
+cambio, de manera que las formas de onda del audio mantengan su proporción original.
+</p>
+<a name="IDX97"></a>
+<p>El <b>zoom de curva</b> afecta las curvas en todas las pistas. Determina la amplitud
+y el desplazamiento inicial (offset) de las curvas. La opción marcada afecta a
+la amplitud de la curva, pero la única forma de afectar al desplazamiento inicial 
+(offset de la curva) es usar el botón <b>Ajustar a curva</b>. 
+<img src=".././manual_images_intl/fit_curves.png" alt="manual_images_intl/fit_curves">
+</p>
+<p>Puede usar las flechas  <kbd>IZQUIERDA</kbd> y  <kbd>DERECHA</kbd> para desplazarse a lo
+largo del tiempo en pequeños incrementos. A menudo tendrá que desplazarse más 
+allá del final de la línea de tiempos, pero las barras deslizantes no se lo 
+permitirán. En ese caso, puede usar la flecha derecha para avanzar hacia delante 
+en la línea de tiempos, incluso más allá de su final.
+</p>
+<p>Puede usar las flechas  <kbd>ARRIBA</kbd> y  <kbd>ABAJO</kbd> para cambiar el zoom del muestreo
+en una potencia de dos (2, 4, 8...).
+</p>
+<p><kbd>CTRL-ARRIBA</kbd> y <kbd>CTRL-ABAJO</kbd> cambian el zoom de amplitud.  
+</p>
+<p><kbd>CTRL-Av Pág</kbd> y <kbd>CTRL-Re Pág</kbd> cambian el zoom de la pista. 
+</p>
+<p><kbd>ALT-ARRIBA</kbd> y <kbd>ALT-ABAJO</kbd> cambian la amplitud de la pista.  
+</p>
+
+<hr size="6">
+<a name="El-men_00fa-de-pista"></a>
+<a name="SEC93"></a>
+<h3 class="subsection"> 6.1.4 El menú de pista </h3>
+
+<p>Cada pista tiene un menú contextual, el <b>menú de pista</b>, que se puede activar
+pulsando con el botón derecho del ratón sobre la pista. Este menú afecta a la 
+pista, tanto si la pista está armada en el <b>área de control</b> como si no. El
+menú de la pista contiene las siguientes opciones:
+</p><ul>
+<li> Añadir efecto - abre un diálogo con los efectos aplicables a este tipo de pista
+</li><li> Subir - sube la posición de la pista en la pila.
+</li><li> Bajar - baja la posición de la pista en la pila.
+</li><li> Borrar pista - elimina la pista del programa.
+</li><li> Añadir pista - añade una pista del mismo tipo (audio/video) que la seleccionada.
+</li><li> Redimensionar pista - redimensiona la pista.
+</li><li> Adaptar a la dimensión de la salida - redimensiona la pista para que tenga el 
+mismo tamaño que la salida.
+</li></ul>
+
+
+<hr size="6">
+<a name="El-punto-de-inserci_00f3n"></a>
+<a name="SEC94"></a>
+<h3 class="subsection"> 6.1.5 El punto de inserción </h3>
+
+<p>La primera vez que arranque Cinelerra, verá un punto de inserción parpadeante
+en la ventana del programa, análogo al cursor de un procesador de textos. Marca
+el punto de la línea de tiempos en el que la próxima operación tendrá lugar.
+Es, además, el punto de inicio de todas las operaciones de reproducción (es decir,
+el programa empezará a reproducir los contenidos desde este punto). Al renderizar,
+define la región de la línea de tiempos que va a ser renderizada.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>El punto de inserción en la ventana del programa,</b>
+</p><p align="center"> <b>indicado por la fina línea vertical en el punto 00:00.500.</b>
+</p>
+<p>Normalmente, el punto de inserción se puede mover simplemente pulsando con el 
+ratón en la barra de tiempos. Cualquier región de la barra de tiempos que no 
+esté oscurecida por etiquetas o puntos de entrada o salida, es un sitio válido
+para posicionar el punto de inserción.
+</p>
+<p align="center"> <img src=".././manual_images_intl/main_timebar.png" alt="manual_images_intl/main_timebar">
+</p><p align="center"> <b>La barra de tiempos.</b>
+</p>
+<p>Dependiendo del modo de operación, el punto de inserción se puede mover pinchando
+en la propia línea de tiempos con el ratón. El punto de inserción tiene dos modos de operación:
+</p><ul>
+<li> modo arrastrar y soltar
+</li><li> modo copiar y pegar
+</li></ul>
+
+<p>El modo de operación se determina seleccionando la flecha o el símbolo &quot;I&quot; en la barra de botones.
+</p>
+<p><a name="r943_005fr944_005fediting_005fmodes"></a><b>Nota:</b> Las revisiones 943 y 944 de Cinelerra CV (versiones 
+19 a 21 del SVN) no tenían iconos de modos de edición. Los modos de edición &quot;copiar y pegar&quot;
+y &quot;arrastrar y soltar&quot; estaban fundidos en uno solo, diferenciable pulsando la tecla de 
+mayúsculas (<kbd>SHIFT</kbd>). En esta situación se encuentra el ebuild de Gentoo 
+media-video/cinelerra-cvs-20061020.
+</p>
+<p align="center"> <img src=".././manual_images_intl/editing_mode.png" alt="manual_images_intl/editing_mode">
+</p><p align="center"> <b>Los botones de modo de edición.</b>
+</p>
+<a name="IDX98"></a>
+<a name="IDX99"></a>
+<p>Si la flecha está iluminada, el modo activo es el modo <b>arrastrar y soltar</b>.
+En este modo, pinchar sobre la línea de tiempos no reposiciona el punto de 
+inserción. En cambio, selecciona un área de edición entera. Arrastrar sobre la
+línea de tiempos reposiciona la edición, encajándola en la frontera de edición más 
+cercana. Este comportamiento es útil para reordenar listas de audio o mover efectos. 
+</p>
+<a name="IDX100"></a>
+<a name="IDX101"></a>
+
+<p>Si el botón con símbolo &quot;I&quot; está iluminado, el modo <b>copiar y pegar</b> está activo.
+En este caso, al pinchar con el ratón en la línea de tiempos el punto de inserción 
+se coloca en el punto en el que hemos pinchado. Al arrastrar el ratón sobre la línea 
+de tiempos se selecciona una región. Esta región seleccionada es el ámbito de 
+reproducción mientras se mantenga seleccionada (es decir, si pulsamos el botón de 
+reproducir, sólo se visualizará el área seleccionada). Además, éste área seleccionada
+es la única que se verá afectada por las operaciones de copiar y pegar.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_highlight.png" alt="manual_images_intl/program_highlight">
+</p><p align="center"> <b>Pistas con un área seleccionada, la cual se muestra dentro del área verde.</b>
+</p>
+<p><b>MAY-click</b> en la línea de tiempos extiende la región seleccionada.
+</p>
+<p><b>Doble click</b> (pinchar dos veces seguidas) en la línea de tiempos selecciona
+el área de edición entera sobre la que esté el cursor.
+</p>
+<p>Al mover el punto de inserción y escoger regiones, sus posiciones se alinean con fotogramas
+o con muestras. Al editar vídeo, querrá alinearlas con los fotogramas. Al editar audio 
+querrá alinearlas con muestras. Puede escoger una u otra opción en 
+<b>Preferencias-&gt;Alinear el cursor en fotogramas</b> (si se activa, la alineación se 
+produce respecto a los fotogramas; si se desactiva, respecto a las muestras).
+</p>
+<p>Si la región seleccionada es la región afectada por las operaciones de cortar y pegar,
+¿cómo se corta y se pega en el modo <b>arrastrar y soltar</b>? En este caso, es necesario 
+situar <b>puntos de entrada y salida</b> para definir el área afectada.
+</p>
+
+<hr size="6">
+<a name="Los-puntos-de-entrada-y-salida"></a>
+<a name="SEC95"></a>
+<h3 class="subsection"> 6.1.6 Los puntos de entrada y salida </h3>
+
+<p>En ambos modos de edición, se puede poner un punto de entrada y otro de salida. 
+Los puntos de entrada y salida definen la región afectada. En modo arrastrar y
+soltar, son la única forma de definir una región afectada. Tanto en un modo como
+en el otro, si hay un área seleccionada, ésta tiene prioridad sobre los puntos 
+de entrada y salida. Es decir, si simultáneamente hay puntos de entrada y salida
+y un área seleccionada, es esta última la que se ve afectada por las operaciones
+de edición, siendo en este caso ignorados los puntos de entrada y salida. Ahora 
+bien, si no hay ningún área seleccionada, las operaciones de edición afectan al
+área comprendida entre el punto de entrada y el de salida.
+</p>
+<p>Normalmente, los puntos de entrada y salida no afectan a la región de reproducción.
+Los puntos de entrada y salida determinan los límites de reproducción sólo si
+se pulsa la tecla <kbd>CTRL</kbd> mientras se da la orden de reproducir.
+</p>
+<p>Para colocar el punto de entrada y el de salida, posicione el punto de inserción
+en cualquier lugar de la barra de tiempos. Pulse el botón <b>punto de entrada</b>
+<img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button">. En una posición por delante del 
+punto de entrada, pulse el botón <b>punto de salida</b>
+<img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button">.
+</p>
+<p align="center"> <img src=".././manual_images_intl/inout_points.png" alt="manual_images_intl/inout_points">
+</p><p align="center"> <b>Barra de tiempos con punto de entrada y punto de salida</b>.
+</p>
+<p>Si selecciona el punto de entrada o el de salida, el punto de inserción 
+ocupará inmediatamente dicha posición. Tras seleccionar un punto de entrada, 
+si pulsa el botón <b>punto de entrada</b> eliminará dicho punto de entrada. 
+De la misma manera, si selecciona el punto de salida y pulsa el botón
+<b>punto de salida</b>, eliminará dicho punto de salida.
+</p>
+<p><b>Truco:</b> Para deshacerse rápidamente de los puntos de entrada y salida, 
+sin importar dónde están, simplemente pinche dos veces (doble click) sobre 
+los botones [ y ]. La primera vez que pinche, pondrá un punto nuevo (o 
+reposicionará el anterior, si ya había uno) en la posición actual del punto
+de inserción; la segunda vez que pinche, lo eliminará. Obviamente, este truco
+no funciona si el punto de inserción está ya sobre un punto de entrada o salida.
+</p>
+<p>Manteniendo pulsada la tecla <b>MAY</b> y pinchando con el ratón en un punto de
+entrada o salida, se selecciona la región entre el punto de inserción y dicho
+punto de entrada o salida. Si ya hay una región seleccionada, la selección se
+extiende hasta el punto de entrada o salida pinchado.
+</p>
+<p>En lugar de usar la barra de botones, puede usar las teclas  <kbd>[</kbd> y <kbd>]</kbd>
+para poner o quitar los puntos de entrada y salida.
+</p>
+<p>Tanto en el modo de edición cortar y pegar como en el modo de edición arrastrar
+y soltar, el área seleccionada tiene prioridad sobre los puntos de entrada y salida.
+Para evitar confusiones, lo mejor suele ser usar sólo áreas seleccionadas o puntos
+de entrada y salida, pero no ambos a la vez.
+</p>
+<p>El punto de inserción y los puntos de entrada y salida le permiten definir una 
+región afectada, pero no permiten saltar a puntos concretos de la línea de tiempos
+de manera sencilla. Para este propósito se usan las etiquetas.
+</p>
+<hr size="6">
+<a name="Usar-etiquetas-en-la-ventana-del-programa"></a>
+<a name="SEC96"></a>
+<h3 class="subsection"> 6.1.7 Usar etiquetas en la ventana del programa </h3>
+
+<p>Las etiquetas son una forma sencilla de establecer puntos exactos a los que es 
+conveniente poder acceder de manera rápida. Para poner una nueva etiqueta en la 
+línea de tiempos, basta con posicionar el punto de inserción en el punto que nos
+interesa y pulsar el botón de <b>etiqueta</b> <img src=".././manual_images_intl/label_button.png" alt="manual_images_intl/label_button">.
+</p>
+<p align="center"> <img src=".././manual_images_intl/timebar_label.png" alt="manual_images_intl/timebar_label">
+</p><p align="center"> <b>Barra de tiempos con una etiqueta.</b>
+</p>
+<p>Al pulsar sobre la etiqueta, el punto de inserción se desplaza exactamente a la 
+posición de la misma, independientemente del grado de zoom que se esté usando.
+Si se vuelve a pulsar sobre una etiqueta seleccionada, se borra.
+</p>
+<p><b>MAY-click</b> sobre una etiqueta selecciona la región entre dicha etiqueta y el 
+punto de inserción. Si ya hay una región seleccionada, dicha región se extiende hasta
+la etiqueta.
+</p>
+<p>Haciendo <b>doble-click</b> entre dos etiquetas en la barra de tiempos selecciona
+la región comprendida entre ambas etiquetas.
+</p>
+<p>Pulsar la tecla <kbd>l</kbd> (del inglés &quot;label&quot;) tiene el mismo efecto que pulsar el botón
+para añadir una etiqueta.
+</p>
+<p>Si pulsa el botón de añadir etiqueta y hay una región seleccionada, se añaden dos
+etiquetas, una en cada extremo de la región seleccionada. Sin embargo, si uno de los
+extremos ya tiene una etiqueta, esta etiqueta previa será borrada.
+</p>
+<p>Al seleccionar una etiqueta, el punto de inserción se sitúa en la posición de la etiqueta.
+Pero además, las etiquetas se pueden usar para avanzar por la línea de tiempos con 
+los botones <b>siguiente etiqueta</b> y <b>etiqueta previa</b>
+ <img src=".././manual_images_intl/label_traversal.png" alt="manual_images_intl/label_traversal">. Aunque una etiqueta no esté a la vista, 
+se puede avanzar hasta ella, desplazándose en la línea de tiempos. También hay atajos
+de teclado para avanzar de una etiqueta a otra.
+</p>
+<p><b>CTRL-Flecha izquierda</b> sitúa el punto de inserción en la etiqueta previa.
+</p>
+<p><b>CTRL-Flecha derecha</b> sitúa el punto de inserción en la siguiente etiqueta.
+</p>
+<p>Atravesando etiquetas se puede avanzar y retroceder rápidamente a lo largo
+de la línea de tiempos, pero también se pueden seleccioner regiones.
+</p>
+<p><b>SHIFT-CTRL-Flecha izquierda</b> selecciona la región comprendida entre el punto
+de inserciónñ y la etiqueta previa.
+</p>
+<p><b>SHIFT-CTRL-Flecha derecha</b> selecciona la región entre el punto de inserción
+y la siguiente etiqueta.
+</p>
+<p>Pulsar a mano el botón de etiqueta o la tecla <kbd>l</kbd> una y otra vez para 
+borrar una serie de etiquetas puede resultar tedioso. Para borrar un conjunto
+de etiquetas, primero seleccione una región, y a continuación use el menú
+<b>Edición-&gt;Eliminar etiquetas</b>. Si existen puntos de entrada y salida, se eliminan
+las etiquetas entre los puntos de entrada y salida, ignorando la región seleccionada. 
+</p>
+<p><b>Editar o bloquear las etiquetas:</b><br>
+En el modo de edición <b>cortar y pegar</b> tan sólo, se puede habilitar el menú
+<b>Preferencias-&gt;Editar etiquetas</b> o deshabilitar el botón <b>Bloquear movimiento
+de etiquetas</b> <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked"> de la barra de 
+herramientas del programa. En cualquiera de los dos casos, al cortar, copiar o pegar
+una selección de la primera pista armada en el proyecto, las etiquetas se moverán 
+con ella, manteniendo su posición relativa.<br> Igualmente, si la región seleccionada
+de un recurso es separada (botón <b>Separar</b>) del visor a la línea de tiempos, a una
+posición en la misma por delante de alguna etiqueta, dichas etiquetas serán desplazadas
+a la derecha de la barra de tiempos, junto con el resto de fotogramas.<br>
+Para evitar estos movimientos de las etiquetas en la barra de tiempos, basta
+con deshabilitar la opción <b>Edición-&gt;Editar etiquetas</b> o habilitar el botón
+<b>Bloquear movimiento de etiquetas</b> <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked">.
+En el modo de edición <b>arrastrar y soltar</b> las etiquetas siempre están pegadas 
+a la barra de tiempos, incluso con la opción <b>Editar etiquetas</b> habilitadas.
+</p>
+
+<hr size="6">
+<a name="Editar"></a>
+<a name="SEC97"></a>
+<h2 class="section"> 6.2 Editar </h2>
+
+<p>La edición se realiza a la vez en el dominio del tiempo y el dominio de las pistas.
+Puesto que la línea de tiempos consiste en una pila de pistas, es necesario 
+preocuparse de crear y ordenar las pistas, y no sólo del instante de tiempo en
+que un contenido aparece en una pista.
+</p>
+<p>En el dominio del tiempo, Cinelerra ofrece muchas formas de aproximarse al proceso 
+de edición. Los tres métodos principales son la edición en dos pantallas, la edición 
+arrastrando y soltando y la edición cortando y pegando.
+</p>
+<p>Hay varios conceptos que Cinelerra usa al editar, y que se aplican a todos los métodos.
+La <b>línea de tiempos</b> es donde se representan todas las decisiones de edición.
+Consiste en varias pistas apiladas en el centro de la ventana principal. Se puede
+desplazar hacia arriba, hacia abajo y a derecha e izquierda, gracias a las dos barras
+deslizantes que aparecen, una a la derecha y otra al pie de las pistas. También se 
+puede usar la rueda del ratón para desplazar las pistas hacia arriba o hacia abajo.
+</p>
+<p>La <b>región activa</b> el intervalo de tiempo que se ve afectado por los comandos
+que se apliquen sobre la línea de tiempos. La región activa se determina, en primer
+lugar, por la presencia de puntos de entrada y salida en la línea de tiempos. Si 
+no hay tales puntos, la región activa es el área seleccionada (aparece coloreada
+de un color más claro). Si tampoco hay ninguna región seleccionada, el punto 
+de inserción determina el origen de la región activa. Algunos comandos, en este
+caso, tratarán todo el espacio a la derecha del punto de inserción como activo. 
+Por ejemplo, el comando <b>Renderizar...</b>. En cambio, otros comandos consideran 
+que la región activa es exactamente la posición del punto de inserción (es decir, 
+la región activa tiene longitud 0 en este caso), salvo si se define un punto de 
+salida. 
+</p>
+<p>Finalmente, cabe destacar que las decisiones de edición nunca afectarán a su material
+original. Este comportamiento se llama <b>edición no destructiva</b>, y se popularizó
+rápidamente, primero con el audio y más tarde con el vídeo. Es mucho más rápida que 
+copiar todos los medios originales afectados por cada edición. La edición sólo afecta
+a unas referencias internas del programa, que apuntan a los medios originales. Al 
+finalizar la sesión de edición, si se desea tener un archivo de vídeo o audio es 
+necesario <b>renderizar</b> la lista de ediciones efectuadas. </p>
+<p>Cada pista en la línea de tiempos tiene un conjunto de atributos a la izquierda, 
+el más importante de los cuales es el atributo  <b>armar pista</b>.
+</p>
+<p>Se puede encontrar información sobre los controles de edición y sus atajos 
+de teclado correspondientes en </p>
+
+
+<hr size="6">
+<a name="El-_00e1rea-de-control"></a>
+<a name="SEC98"></a>
+<h3 class="subsection"> 6.2.1 El área de control </h3>
+
+<p>A la izquierda de la línea de tiempos hay una región con botones llamada el 
+área de control. Aquí se habilita funcionalidad específica para cada pista.
+Todas las pistas tienen en este área un cuadro de texto en el que se les puede
+asignar un nombre. 
+</p>
+<p>Todas las pistas tienen un botón de <b>expansión</b> <img src=".././manual_images_intl/expandpatch_checked.png" alt="manual_images_intl/expandpatch_checked">
+que permite ver opciones adicionales de control, así como los efectos aplicados 
+sobre la pista. Para expandir o reducir la pista, pulse sobre el botón de despliegue.
+Si está apuntando hacia la derecha, la pista está reducida. Si apunta hacia abajo,
+la pista está expandida. Los efectos existentes parecen al pie de la pista, cuando 
+está desplegada.
+</p>
+<p>Todas las pistas tienen, además, una fila de botones con diversa funcionalidad.
+</p>
+<p align="center"> <img src=".././manual_images_en/track_attributes.png" alt="manual_images_en/track_attributes">
+</p><p align="center"> <b>Atributos de la pista.</b>
+</p>
+<p>Si el botón está coloreado, la opción está activada para esa pista en concreto.
+Si el color de fondo del botón es el mismo que el resto del área de control, 
+la opción que representa está desactivada. Pulse en el botón para activar o 
+desactivar la funcionalidad. Hay formas de acelerar la configuración de varias
+pistas a la vez, usando el ratón.
+</p>
+<p>Puede pulsar en un botón y arrastrarlo a lo largo de varias pistas adyacentes, 
+para copiar así el mismo valor del atributo que representa en todas esas pistas.
+</p>
+<p>Puede pulsar la tecla <kbd>MAY</kbd> al pinchar en un atributo de una pista para 
+activar dicho atributo en la pista en que está pulsando, y cambiar su estado
+en todas las demás pistas (en cada pista se pondrá el valor opuesto al actual).
+</p>
+<p>También puede pulsar la tecla <kbd>MAY</kbd> mientras pincha en un atributo. Si, manteniendo
+la tecla pulsada, sigue pinchando en el mismo atributo, dicho atributo acabará
+desactivándose en todas las pistas salvo aquella en que está pinchando. En ese momento,
+puede arrastrar el cursor del ratón sobre las pistas adyacentes, para habilitar el 
+atributo sobre todas aquellas sobre las que se mueva.
+</p>
+<p>El resto de atributos afectan a la salida de la pista:
+<a name="IDX102"></a>
+<a name="IDX103"></a>
+</p><ul>
+<li> <b>Ver pista</b><br>
+Determina si la pista se va a renderizar o no. Si está desactivado,
+la pista no se va a renderizar. Sin embargo, si la pista está encadenada 
+a otras pistas, estas otras pistas ejecutarán los efectos que lo requieran
+sobre esta pista, tanto si se puede ver como si no.
+
+<a name="IDX104"></a>
+<a name="IDX105"></a>
+</li><li> <b>Montar pista</b><br>
+Determina si la pista está bloqueada o no. Sólo a las pistas <b>montadas</b> les 
+afectan las operaciones de edición. Debe asegurarse siempre de tener suficientes
+pistas de destino montadas cuando pegue o inserte contenido a partir de un recurso,
+o habrá pistas del material que se perderán.<br>
+Además de restringir las operaciones de edición, las pistas montadas determinan, 
+junto con la región activa, dónde se inserta el material al cargar nuevos ficheros.
+Si los ficheros se cargan con alguna estrategia de inserción que no implique 
+borrar el proyecto existente, las pistas montadas serán las pistas de destino. Como
+acabamos de mencionar, si no hay suficientes pistas montadas se podría perder parte
+del contenido que está cargando.<br>
+Puede pulsar la tecla <kbd>TAB</kbd> mientras el cursor del ratón está en cualquier punto
+de una pista para cambiar el estado de una pista (montarla o desmontarla).<br>
+Puede pulsar <kbd>MAY-TAB</kbd> mientras el cursor del ratón está sobre una pista para 
+cambiar el estado de todas las demás pistas a la vez (montarlas o desmontarlas).
+
+<a name="IDX106"></a>
+<a name="IDX107"></a>
+</li><li> <b>Gang fader</b><br>
+Acoplar los &quot;faders&quot;. Un fader es un control que permite aplicar una 
+atenuación gradual (o un incremento) al volumen de sonido o la opacidad de la imagen.
+Cada pista tiene un fader. Este control sirve para acoplar los faders de varias 
+pistas, de manera que el nivel de audio de todas las pistas cuyos faders están 
+acoplados se ajuste simultáneamente (los cambios en una afectan inmediatamente a
+las demás). Al acoplar los faders, también se acopla el <b>retraso</b> de las pistas en 
+afectadas, sincronizándose inmediatamente.
+
+<a name="IDX108"></a>
+<a name="IDX109"></a>
+</li><li> <b>Dibujar recursos</b><br>
+Determina si se van a dibujar picons o formas de onda en la pista. Por defecto,
+algunos formatos de fichero se cargan con esta opción desactivada, mientras que 
+otros lo hacen con la opción activada. Depende de si el formato de fichero 
+suele requerir mucho tiempo hasta que se puede dibujar en la línea de tiempos.
+Basta con que lo active para poder ver los picons de cualquier formato de fichero.
+
+<a name="IDX110"></a>
+<a name="IDX111"></a>
+</li><li> <b>Silenciar pista</b><br>
+La salida de la pista se ignora, una vez que la pista ha sido completamente
+renderizada. Esta opción es independiente de la opción <b>ver pista</b>. Si la 
+pista es parte de una cadena de efectos, la pista de salida de la cadena de 
+efectos será evitada en la salida final, incluso si debería ser redirigida
+hacia otra pista. Las pistas mudas se usan para evitar que la pista de efecto
+en cadena se superponga a la salida de la pista original.
+
+<a name="IDX112"></a>
+</li><li> <b>Fader</b><br>
+Todas las pistas tienen un &quot;fader&quot;. Un fader es un control que permite aplicar una 
+atenuación gradual (o un incremento) al volumen de sonido o la opacidad de la imagen.
+Las unidades de medida del fader dependen de si la pista es de audio o vídeo. 
+Arrastre el botón del fader para atenuar la pista al principio o al final. Si está 
+acoplado a otros faders de pistas del mismo tipo, con la opción de <b>montar</b>
+habilitada, los otros faders deberían moverse en sincronía. Puede pulsar la tecla
+<kbd>MAY</kbd> mientras desplaza un fader, para centrarlo en cero.
+</li></ul>
+
+<hr size="6">
+<a name="Retrasar-las-pistas"></a>
+<a name="SEC99"></a>
+<h3 class="subsection"> 6.2.2 Retrasar las pistas </h3>
+
+<p>Cada pista tiene un cuadro de texto para retrasarla en su área de control. 
+Puede que tenga que desplegar el control de la pista para verlo. Las que siguen
+son vistas de áreas de control desplegadas.
+</p>
+<p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
+</p><p align="center"> <b>Balance de canales y retraso de una pista de audio.</b>
+</p>
+<p align="center"> <img src=".././manual_images_en/vpatches.png" alt="manual_images_en/vpatches">
+</p><p align="center"> <b>Modo de impresión y retraso de una pista de vídeo.</b>
+</p>
+<p>El retraso es el desplazamiento que sufre la pista hacia la derecha o hacia 
+la izquierda. La pista no se visualiza desplazada en la línea de tiempos, pero 
+sí se aplica el retraso al reproducirla en el visor. El retraso es útil para
+sincronizar el audio con el vídeo, crear falsos estéreos o compensar efectos 
+que provocan retrasos en el tiempo, y todo ello sin estropear las modificaciones
+ya realizadas.
+</p>
+<p>Simplemente escriba la cantidad de tiempo que desea retrasar la pista, y 
+éste se aplicará desde ese mismo instante. Los números positivos hacen entrar
+antes a la pista. Los negativos, la hacen entrar más tarde. Las unidades de
+retraso son <b>segundos</b> o las unidades nativas de la pista. Puede escoger 
+las unidades pulsando con el botón derecho del ratón en el cuadro de texto
+del retraso y usando el menú contextual que aparecerá.
+</p>
+<p>Los parámetros del retraso se acoplan unos a otros con los botones  <b>Gang faders</b> 
+y <b>Montar pista</b>.
+</p>
+<p>Puede usar la rueda del ratón sobre el cuadro de texto del retraso para 
+aumentarlo o retrasarlo.
+</p>
+<hr size="6">
+<a name="Balance-de-canales"></a>
+<a name="SEC100"></a>
+<h3 class="subsection"> 6.2.3 Balance de canales </h3>
+
+<p>Las pistas de audio tienen una caja para equilibrar los canales en su área de control.
+Es posible que haya que expandir el área de control para poder ver el balance de pistas.
+El control de balance de pistas se muestra a continuación.
+</p>
+<p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
+</p><p align="center"> <b>Balance de pistas y retraso de una pista de audio.</b>
+</p>
+<p>Puede situar el ratón sobre el control de balance de pistas y pulsar o arrastrar
+para posicionar la salida de audio respecto a la disposición de altavoces. 
+El volumen relativo a cada altavoz se muestra mientras mantenga el ratón pulsado.
+El control de balance usa un algoritmo especial para intentar repartir el audio
+entre uno o varios altavoces, si se está usando más de uno.
+</p>
+<hr size="6">
+<a name="Balance-autom_00e1tico-de-pistas"></a>
+<a name="SEC101"></a>
+<h3 class="subsection"> 6.2.4 Balance automático de pistas </h3>
+
+<p>Se proporcionan varias funciones que ayudan a ajustar el balance a algunos
+de los estándares más frecuentes. Se listan en el menú <b>Audio</b>. Estas 
+funciones sólo afectan a las pistas de audio con <b>grabación</b> activa.
+</p>
+<ul>
+<li> <b>Audio-&gt;Map 1:1</b><br>
+Asigna cada pista a su propio canal. Si ya se ha asignado una pista a cada
+canal y quedan más pistas, vuelve a empezar (a cada canal le asigna una segunda
+pista, etc...). De gran utilidad para usar dos pistas y dos canales como estéreo,
+y para mapear 6 pistas con 6 canales a una tarjeta de sonido de 6 canales.
+
+</li><li> <b>Audio-&gt;Map 5.1:2</b><br>
+Asigna 6 pistas a 2 canales. El proyecto debería tener únicamente dos canales al
+usar esta función. En <b>Preferencias-&gt;Formato</b> se puede limitar el número de 
+canales de salida a 2. Este ajuste es muy útil para convertir sonido 5.1 en estéreo.
+</li></ul>
+
+
+<hr size="6">
+<a name="Asignaciones-est_00e1ndar-de-audio"></a>
+<a name="SEC102"></a>
+<h3 class="subsection"> 6.2.5 Asignaciones estándar de audio </h3>
+
+<p>Aunque Cinelerra permita asignar cualquier pista a cualquier altavoz, hay
+asignaciones estándar que son las que debería usar si quiere asegurarse de que
+su película (o música) final pueden reproducirse en cualquier sitio. Además,
+la mayoría de los codificadores de audio necesitan que las pistas de audio 
+estén asignadas a números estándar de altavoces, o no funcionarán bien.
+</p>
+<a name="IDX113"></a>
+<a name="IDX114"></a>
+<p>En el control gráfico <b>Posición de los canales</b>,  See section <a href="cinelerra_cv_manual_es_4.html#SEC58">Atributos del proyecto</a>, los
+canales están numerados para corresponder a las pistas de salida en las que se 
+van a renderizar. Si va a ser estéreo, la fuente del canal 1 debe ser la pista
+izquierda y la fuente del canal 2 debe ser la derecha.
+</p>
+<p>Para el sonido surround 5.1, las fuentes de los 6 canales deben ser, por orden,
+los siguientes: centro, delante izquierda, delante derecha, detrás izquierda, 
+detrás derecha, efectos de baja frecuencia. Si las pistas no coinciden con
+los altavoces correctos, la mayoría de los codificadores de audio no 
+codificarán bien la información, si es que codifican algo. La pista de efectos de baja
+frecuencia, en particular, casi nunca puede codificar altas frecuencias.
+</p>
+
+<hr size="6">
+<a name="Manipular-las-pistas"></a>
+<a name="SEC103"></a>
+<h3 class="subsection"> 6.2.6 Manipular las pistas </h3>
+
+<p>Las pistas en Cinelerra contienen audio o contienen vídeo. No hay una 
+designación especial para cada tipo de pista, salvo que se mencione la 
+naturaleza de su contenido. Cuando se crea un nuevo proyecto, contiene
+un número de pistas por defecto, y se pueden añadir más o eliminar algunas
+de ellas usando los menús. El menú <b>Pistas</b> contiene cierto número de 
+opciones para trabajar con varias pistas a la vez. Cada pista, a su vez,
+tiene un menú contextual que aparece al pinchar con el botón derecho
+del ratón sobre dicha pista y sólo afecta a la propia pista. Este menú 
+aparece independientemente de que la pista esté montada o no.<br>
+<a name="IDX115"></a>
+<a name="IDX116"></a>
+<b>Mover arriba</b> y <b>mover abajo</b> sube o baja la posición de la pista en la pila
+de pistas. <b>Borrar pista</b> la elimina.
+</p>
+<p>Las operaciones presentes en el menú <b>Pistas</b> sólo afectan a las pistas montadas:
+</p><ul>
+<li> <b>Mover pistas hacia arriba</b> y <b>Mover pistas hacia abajo</b> desplaza todas
+las pilas montadas hacia arriba o hacia abajo en la pila. Al subirlas, si la pila
+superior está armada, se moverá al pie de la pila de pistas.
+<a name="IDX117"></a>
+<a name="IDX118"></a>
+</li><li> <b>Eliminar pistas</b> elimina las pistas armadas.
+</li><li> <b>Eliminar última pista</b> elimina la última pista, tanto si está armada como si no.
+Se pueden eliminar todas las pistas apretando rápidamente la tecla <b>d</b>.
+<a name="IDX119"></a>
+<a name="IDX120"></a>
+</li><li> <b>Concatenar pistas</b> es más complicado. Concatena cada pista <b>reproducible</b>
+al final de la primera <b>pista montada</b>. Si hay dos pistas montadas, seguidas
+de dos pistas reproducibles, la operación de concatenación pone las dos pistas
+reproducibles a continuación de las dos pistas montadas. Si en cambio hay tres pistas
+reproducibles, las dos primeras pistas reproducibles se ponen cada una a continuación
+de una las que están montadas, y la tercera, pista se pone a continuación de la 
+primera pista montada. Es decir, cuando ha asignado una pista reproducible a cada una
+de las pistas montadas, vuelve a empezar a asignar. Cuando ya se han asignado dos pistas
+reproducibles a cada pista montada, se vuelve a empezar una vez más.
+</li></ul>
+
+<p>Por último, se puede querer crear nuevas pistas. Los menús de <b>Audio</b> y <b>Vídeo</b>
+contienen opciones para añadir una pista de cada uno de sus tipos. En el caso del 
+audio, la nueva pista se pone al pie de la pila de pistas, por debajo de las demás 
+pistas, y el canal de salida se incrementa en uno para esta pista. Para el caso 
+del vídeo, la nueva pista se pone encima de las demás pistas, en lo alto de la línea
+de tiempos. De esta manera el vídeo presenta un orden de composición intuitivo, con
+las pistas más nuevas encima de las más antiguas.
+</p>
+
+<hr size="6">
+<a name="Edici_00f3n-a-dos-pantallas"></a>
+<a name="SEC104"></a>
+<h3 class="subsection"> 6.2.7 Edición a dos pantallas </h3>
+
+<p>Ésta es la forma más rápida de construir un programa a partir de archivos de películas.
+La idea consiste en visualizar el archivo con la película en una ventana y ver el
+programa en otra ventana. En la ventana del visor se definen subsecciones del archivo
+de película que luego se transfieren al final del programa en la ventana del programa.
+</p>
+<p>Para empezar una sesión de edición con dos pantallas, lo primero es cargar algún 
+recurso. Para ello, use el menú <b>Archivo-&gt;Cargar ficheros...</b> y escoja algunas 
+películas, asegurándose de emplear la estrategia de inserción <b>Crear sólo recursos
+nuevos</b>. De esta manera, la línea de tiempos no sufrirá modificaciones al cargar
+los nuevos recursos. Ahora abra la ventan Recursos y escoja la carpeta <b>Media</b>. 
+Al seleccionarla con el ratón, los recursos recién cargados aparecerán en el 
+área de la derecha. Puede pinchar dos veces sobre cualquiera de dichos recursos, 
+o arrastrarlo hasta la ventana del Visor para cargarlo en dicha ventana.
+</p>
+<p>Debería haber suficientes pistas montadas en la línea de tiempos como para poder
+incorporar los trozos de material original que desee (normalmente será una pista
+de vídeo y dos de audio). Si no las hay, cree nuevas pistas o monte algunas de 
+las existentes.
+</p>
+<p>En la ventana del Visor, defina un clip a partir del archivo de su película:<br>
+</p>
+<ul>
+<li> Especifique el punto de inicio en el botón 
+<img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>punto de entrada</b>.
+</li><li> Localice el punto en el que desea acabar el clip.
+</li><li> Especifique el punto final de su clip con el botón 
+<img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>punto de salida</b>.
+</li></ul>
+
+<p>Ahora deberían aparecer ambos puntos en la barra de tiempos, definiendo un
+clip.<br> Se pueden hacer varias cosas con un clip:
+</p>
+<ul>
+<li> <b>Separar</b><br>
+<img src=".././manual_images_intl/splice_button.png" alt="manual_images_intl/splice_button"> Inserta el área seleccionada en la línea de tiempos,
+tras el punto de inserción.<br>
+Cuando se ha realizado la separación, el punto de inserción se mueve al final 
+de la edición, listo para la proxima separación que efectúe. De esta forma, se 
+puede construir el programa mediante sucesivas separaciones.<br>
+Si existen un punto de entrada o un punto de salida en la línea de tiempos, el 
+clip se insertará tras el punto de entrada o tras el punto de salida.<br>
+Si hay tanto un punto de entrada como un punto de salida en la línea de tiempos,
+el clip se inserta tras el punto de entrada.<br>
+Si queda película más allá de la localización que usted ha escogido en la línea
+de tiempos, se empujará a la derecha.
+</li><li> <b>Sobreescribir</b><br>
+<img src=".././manual_images_intl/overwrite_button.png" alt="manual_images_intl/overwrite_button"> Sobreescribe la región de la línea
+de tiempos tras el punto de inserción, superponiendo el clip a los contenidos 
+que hubiera previamente en dicha región.<br>
+Si existen un punto de entrada o un punto de salida en la línea de tiempos, el 
+clip se superpone al contenido que hubiera justo tras el punto de entrada o tras el 
+punto de salida.<br>
+Si hay tanto un punto de entrada como uno de salida en la línea de tiempos, 
+el clip se inserta tras el punto de entrada.<br>
+Si hay una región seleccionada (aparece de color más claro) o hay tanto punto de entrada
+como de salida, la región sobre la que se puede superponer el nuevo contenido está 
+limitada por ellos, y por lo tanto el clip podría verse acortado. Esta artimaña es 
+muy útil, y se merece una descripción más detallada:<br>
+<b>TRUCO: Para sobreescribir exactamente una región concreta de la línea de tiempos:</b><br>
+- Monte sólo las pistas que desea modificar.<br>
+- Defina la región de destino en la línea de tiempos usando los botones [ y ].<br>
+- Defina en el Visor el clip que desee insertar, usando los botones [ y ].<br>
+- Sobreescriba desde el visor a la línea de tiempos.<br> Si la región de destino es más corta 
+que el clip que ha definido en el Visor, la porción de clip en exceso no será copiada. Los
+contenidos a la izquierda del punto de salida no se moverán.<br>
+Cuidado: si la región de destino es mayor que el clip definido en el Visor, la región 
+de destino se encogerá hasta alcanzar el tamaño del clip. En la línea de tiempos, el
+resto de contenidos a la derecha del punto de salida o de la región seleccionada
+se moverán a la izquierda.
+</li><li> <b>A clip</b><br>
+<img src=".././manual_images_intl/toclip_button.png" alt="manual_images_intl/toclip_button"> Genera un nuevo clip que se almacena en 
+la ventana de Recursos, en la carpeta Clips. Este clip contiene la región afectada, tal
+y como se ha definido en el visor. Sin embargo, su creación no modifica la línea de tiempos.
+Cada clip tiene un título y una descripción (son opcionales).
+</li><li> <b>Copiar</b><br>
+See section <a href="#SEC106">Editar cortando y pegando</a>, se comporta exactamente igual.
+</li></ul>
+
+<p>La edición usando dos pantallas se puede realizar usando únicamente atajos de 
+teclado. Al mover el ratón sobre un botón cualquiera, aparecerá una pequeña notita
+mostrando el nombre del botón y, entre paréntesis, la tecla que se puede pulsar 
+y que tiene el mismo efecto que dicho botón. En la ventana del Visor, las 
+teclas numéricas controlan el avance y los rebobinados, mientras que las 
+teclas <kbd>[</kbd> <kbd>]</kbd> <kbd>v</kbd> insertan o eliminan los puntos de entrada y 
+salida y realizan la separación, respectivamente.
+</p>
+
+<hr size="6">
+<a name="Editar-arrastrando-y-soltando"></a>
+<a name="SEC105"></a>
+<h3 class="subsection"> 6.2.8 Editar arrastrando y soltando </h3>
+
+<p>La <b>edición arrastrando y soltando</b> es una forma rápida y sencilla de trabajar
+en Cinelerra, usando sólo el ratón. La idea básica es crear un grupo de clips, 
+y ordenarlos en la línea de tiempos arrastrándolos a diferentes posiciones. De 
+esta manera se puede construir una película prototipo que se puede ver en el 
+Compositor. Tras verla es posible desear reordenar los clips que la componen, 
+añadir transiciones o efectos o eliminar parte del material. Para ello, basta
+con arrastrar los nuevos clips o efectos sobre la línea de tiempos y reordenarlos
+también arrastrándolos.
+</p>
+<ol>
+<li> Cargue algunos archivos usando el menú <b>Fichero-&gt;Cargar ficheros...</b>.
+</li><li> Escoja la estrategia de inserción <b>Crear sólo nuevos recursos</b>. Los 
+recursos se cargan en la ventana de Recursos.
+</li><li> Cree algunas pistas de audio y vídeo en la línea de tiempos, por ejemplo
+usando los menús de Audio y Vídeo.
+</li><li> Abra la carpeta <b>Media</b> en la ventana de Recursos.
+</li><li> Asegúrese de que las pistas necesarias están montadas y arrastre alguno
+de los recursos desde la ventana de Recursos hasta la línea de tiempos. Si 
+el recurso tiene vídeo, arrástrelos sobre una pista de vídeo. Si el recurso 
+es únicamente de audio, arrástrelo sobre una pista de audio.
+
+<p align="center"> <img src=".././manual_images_intl/drag_to_program.png" alt="manual_images_intl/drag_to_program">
+</p>
+</li></ol>
+
+<p>Cinelerra llena las pistas de audio y vídeo por debajo de aquélla sobre la que 
+está arrastrando los archivos con datos del mismo fichero. Esto afecta a las
+pistas que se deben crear inicialmente, así como la elección de la pista
+sobre la que arrastrar cada clip. Si el clip tiene una pista de vídeo y dos
+de audio (algo muy frecuente) necesitará esas mismas pistas sobre la línea 
+de tiempos, y deberá arrastrar el clip sobre la pista de vídeo, no sobre las 
+de audio. Si el recurso que va a arrastrar sólo tiene audio, necesitará tantas
+pistas de audio sobre la línea de tiempos como tenga el clip de audio, y 
+debería arrastrarlo sobre la primera de dichas pistas de audio.
+</p>
+<p>Al arrastrar el clip desde la carpeta Media a la ventana del programa, el cursor
+del ratón mostrará una pequeña vista en miniatura del clip, y una vez sobre la la
+línea de tiempos, la silueta de un rectángulo blanco, ocupando tanto espacio
+como ocupará el clip una vez depositado.<br>
+Arrastre un clip a la posición deseada en una pista vacía de la línea de tiempos y
+suéltelo ahí. <br> Si hay otras secuencias en la pista, al mover el rectángulo blanco
+sobre una de ellas, verá un símbolo parecido a un arco, &gt;&lt;, aparecer en las fronteras
+entre unas secuencias y otras. Si deposita allí el clip, la nueva secuencia, correspondiente
+al clip que acaba de soltar, comenzará en el centro de la frontera de edición que indicaba
+el centro del símbolo &gt;&lt;.
+</p>
+<p>Al estar el puntero del ratón en el centro del rectángulo blanco, si este rectángulo es
+mayor que la parte visible de la línea de tiempos puede resultar incómodo posicionarlo
+con la precisión conveniente. Es probable que esto suceda con clips largos.
+La forma más sencilla de facilitar esta operación es cambiar el zoom de la muestra en 
+el panel de zoom, lo que reducirá el tamaño del rectángulo blanco. 
+</p>
+<p>También puede arrastrar múltiples archivos desde la ventana de recursos. Para ello
+puede arrastrar el rectángulo sobre varios de ellos (describiendo un área de 
+selección rectangular), o bien pulsar la tecla <kbd>MAY</kbd> o la tecla <kbd>CTRL</kbd> al
+seleccionar los ficheros. Cuando deposite estos archivos en la línea de tiempos, 
+aparecerán concatenados. El comportamiento de las teclas <kbd>MAY</kbd> y <kbd>CTRL</kbd>
+cambia dependiendo de si los recursos se muestran como texto o como iconos.
+</p>
+<p>Para mostrar los recursos como texto o como iconos, pulse con el botón derecho
+del ratón en la lista Media. Escoja <b>Mostrar iconos</b> o <b>Mostrar texto</b> 
+para cambiar el formato con que se muestra la lista. 
+</p>
+<p>Si los recursos se muestran como texto, al pulsar <b>MAY - click</b> sobre ficheros
+de recursos, se extiende el número de selecciones efectuadas y todos los 
+recursos intermedios son seleccionados. Si se pulsa <b>CTRL - click</b> sobre 
+los recursos en modo texto, se seleccionan los ficheros de uno de en uno.
+</p>
+<p>Al mostrar los recursos como iconos en la ventana de Recursos, tanto
+<b>MAY - click</b> como <b>CTRL - click</b> permiten seleccionar los archivos 
+de uno en uno.
+</p>
+<p>Además de arrastrar los archivos de contenidos, si crea clips y abre la 
+carpeta <b>Clips</b>, puede arrastrar los clips que hay en ella sobre la línea de tiempos.
+</p>
+<p>En la línea de tiempos hay funcionalidad adicional. Las secuencias se pueden 
+arrastrar por la línea de tiempos para ordenar piezas de sonido, escenas de
+películas, y proporcionar mejores demos de NAB, pero no mucho más. Para activar la 
+posibilidad de arrastrar sobre la línea de tiempos, escoja el icono de flecha
+en la barra de herramientas de la ventana del Programa, <img src=".././manual_images_intl/arrow.png" alt="manual_images_intl/arrow">.<br>
+</p>
+<p align="center"> Seleccionar una pista con varias escenas.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_before.png" alt="manual_images_intl/drop_before">
+</p>
+<p align="center"> Pista original con tres escenas.
+</p>
+<p align="center"> Vaya a la escena #3, pinche y arrástrela al centro.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drag_track.png" alt="manual_images_intl/drag_track">
+</p>
+<p align="center"> Cuando deposite la escena #3
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_concept.png" alt="manual_images_intl/drop_concept">
+</p>
+<p align="center"> la escena #2 se desplaza a la derecha
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_after.png" alt="manual_images_intl/drop_after">
+</p>
+<p align="center"> Éste es el aspecto final de la secuencia.
+</p>
+<p>Si hay más de una pista montada, al arrastrar una pista Cinelerra arrastrará 
+todas las secuencias que comienzan en la misma posición que aquella sobre la 
+que se encuentra actualmente el cursor. En otras palabras, se puede arrastrar
+y soltar un grupo de secuencias. Cinelerra reconoce como grupo las secuencias
+de pistas diferentes que tienen sus principios alineados, es decir, que empiezan
+en el mismo instante de tiempo, independientemente de si tienen la misma fuente
+o si sus finales están alineados.
+</p>
+<p>Al arrastrar y soltar recursos o clips en la línea de tiempos:<br>
+Si suelta una secuencia cuando se muestran las marcas &gt;&lt;, el clip se pegará
+empezando a partir del centro del símbolo &gt;&lt;. Las secuencias que estaban 
+detrás de dicho símbolo, se moverán hacia la derecha.<br>
+Si deposita una secuencia en donde no se muestra la marca &gt;&lt;, el clip original
+se pegará en donde lo ha depositado. El resto de secuencias no se moverán. El 
+clip se pegará sin audio, apareciendo un silenciio en el lugar donde ha pegado 
+el vídeo.<br>
+Si hay más pistas montadas en la línea de tiempos que en el recurso que está 
+arrastrando, sólo las secuencias subsiguientes de las pistas afectadas por 
+la operación de arrastrado se desplazarán hacia la derecha. Esto puede 
+causar una pérdida de sincronización con las pistas que no se han visto 
+afectadas por la operación de arrastrar. Para recuperar la sincronización, 
+desmonte las pistas afectadas, seleccione la secuencia que acaba de depositar
+y pegue silencio sobre la selección (menú <b>Edición -&gt; Pegar silencio</b>).
+</p>
+<p>Al editar en modo arrastrar y soltar no puede arrastrar las etiquetas. Siempre
+estarán clavadas en la barra de tiempos, incluso cuando la opción <b>Editar etiquetas</b>
+(en el menú Preferencias) está habilitada. Aún así, si la opción Editar etiquetas
+está habilitada, si se separa un área seleccionada de un recurso en el Visor y
+se inserta en la línea de tiempos, por delante de alguna etiqueta,
+empujará dicha etiqueta hacia la derecha, a una distancia igual al fragmento
+que se ha insertado.
+</p>
+<p>Si hay puntos de entrada y salida puede cortar y pegar tanto en modo arrastrar
+y soltar como en modo cortar y pegar. En el menú Edición hay una lista de 
+opciones y atajos de teclado.
+</p>
+
+<hr size="6">
+<a name="Editar-cortando-y-pegando"></a>
+<a name="SEC106"></a>
+<h3 class="subsection"> 6.2.9 Editar cortando y pegando </h3>
+
+<p>Éste es el método tradicional de edición en los editores de audio. En el caso
+de Cinelerra, es necesario arrancar una segunda instancia del programa Cinelerra
+y copiar de una a la otra, copiar entre diferentes pistas en la misma instancia
+del programa, o cargar un fichero de contenidos en el Visor y copiar desde allí.
+</p>
+<p>Cargue algunos ficheros en la línea de tiempos. Para editar cortando y pegando
+seleccione el botón I, <img src=".././manual_images_intl/ibeam.png" alt="manual_images_intl/ibeam">. Escoja una región
+de la línea de tiempos pulsando sobre ella y arrastrando el ratón, y use el 
+botón de corte <img src=".././manual_images_intl/cut.png" alt="manual_images_intl/cut"> para cortarla. Desplace 
+el punto de inserción a otro punto en la línea de tiempos y escoja el botón 
+para pegar <img src=".././manual_images_intl/paste.png" alt="manual_images_intl/paste">. Suponiendo que no haya ningún
+punto de entrada o salida establecido, habrá realizado una maniobra de cortar y pegar.
+</p>
+<p>Si se han definido puntos de entrada o salida, tienen preferencia sobre el punto de 
+inserción y la región seleccionada, a efectos de cortar y pegar. Por lo tanto,
+con puntos de entrada y salida se puede realizar el corte y el pegado tanto en
+modo cortar y pegar como en modo arrastrar y soltar.
+</p>
+<p>Hay otras operaciones que puede realizar. Vaya al menu Edición para ver una lista
+y sus atajos de teclado.
+</p>
+<p>En el modo de edición cortando y pegando se pueden editar las etiquetas, también.
+Al habilitar el menú <b>Preferencias-&gt;Editar etiquetas</b>, o deshabilitar el botón
+<b>Lock labels from moving</b> de la barra de herramientas del programa, las 
+etiquetas se transportarán siempre al cortar, copiar o pegar secuencias de la
+región seleccionada de las pistas montadas.
+</p>
+<p>Al editar audio, es frecuente cortar de una parte de una forma de onda para pegarlo
+en la misma parte de otra forma de onda. Los puntos de inicio y final en cada
+forma de onda son idénticos, quizá con un ligero desplazamiento, pero la forma de 
+la onda es diferente. Sería muy complicado seleccionar una forma de onda para cortarla
+y seleccionar el mismo sitio para pegarla sobre la segunda forma de onda, sin 
+modificar las posiciones de inicio y final inadvertidamente.
+</p>
+<p>Una opción que permite simplificar esta operación es arrancar una segunda copia
+de Cinelerra, y cortar y pegar para transportar el contenido entre ambas copias.
+De esta forma, pueden existir a la vez dos regiones seleccionadas.
+</p>
+<p>Otra opción es establecer puntos de entrada y salida para la región fuente (aquélla
+que queremos copiar) de la primera forma de onda, y poner etiquetas para señalar
+al área de destino en la segunda forma de onda. Entonces basta con realizar el corte,
+borrar los puntos de entrada y salida, seleccionar la región entre las etiquetas y pegar.
+</p>
+<p>Una última operación en la edición cortando y pegando es <b>Edición-&gt;Limpiar</b>.
+Si hay una región seleccionada o puntos de entrada y salida, se puede limpiar
+la región afectada mediante este menú. Pero si el punto de inserción está
+sobre una frontera de edición y las secuencias a cada lado de la frontera de 
+edición son el mismo recurso, ambas secuencias se combinan en una sola 
+determinada por el recurso. Esta nueva secuencia empieza en el instante en que empezaba la 
+primera de las anteriores y termina donde terminaba la segunda. Esto puede 
+resultar en una expansión o un encogimiento de la secuencia. 
+</p>
+<hr size="6">
+<a name="Cambiar-longitud"></a>
+<a name="SEC107"></a>
+<h3 class="subsection"> 6.2.10 Cambiar longitud </h3>
+
+<p>Es posible modificar la duración de algunas secuencias en la línea de tiempos. Al hacerlo 
+se encoge o alarga las duración de una secuencia, simplemente arrastrándola. En el
+modo arrastrar y soltar o en el modo cortar y pegar puede mover el cursor 
+sobre una frontera de edición hasta que cambie de forma. Al cambiar de forma,
+se convertirá en una flecha hacia la izquierda o hacia la derecha. Si el cursor
+es una flecha hacia la izquierda, la operación afecta al principio de la
+secuencia. Si es una flecha hacia la izquierda, afecta al final de la secuencia.
+</p>
+<p>Al pinchar con el ratón sobre una frontera de edición para empezar a arrastrar,
+el botón del ratón con el que hayamos pulsado determina el tipo de comportamiento
+que se va a obtener al arrastrar. Hay tres posibles comportamientos. En el menú
+<b>Preferencias-&gt;Preferencias...</b>, en la pestaña <b>Interfaz</b>, se puede escoger
+qué botón del ratón provoca qué comportamiento. See section <a href="cinelerra_cv_manual_es_3.html#SEC56">Interfaz</a>.
+</p>
+<p>El resultado de arrastrar una frontera de edición no sólo depende del botón
+del ratón, sino también de si se está arrastrando el principio o el final de 
+la secuencia. Al soltar el ratón del botón, se realizará la operación de recorte.
+</p>
+<p>En una operación de tipo <b>Arrastrar todos</b>, el principio de la secuencia
+podrá cortar datos de la secuencia si se mueve hacia delante o bien pegar
+datos nuevos anteriores a la secuencia si se mueve hacia atrás. El final de 
+la secuencia pega datos en la secuencia si se mueve hacia atrás, y todas las
+secuencias detrás de ésa son desplazadas. Finalmente, si se arrastra el final
+de la secuencia a una posición por delante del principio de la secuncia, 
+se borra la secuencia entera.
+</p>
+<p>En una operación de tipo <b>Arrastrar solo uno</b>, el comportamiento es el mismo
+si arrastra el principio o el final de una secuencia. La única diferencia es que 
+ninguna de las otras secuencias en la pista se desplazan. En cambio, cualquier
+secuencia adyacente a la que se está editando se expandirá o encogerá hasta 
+llenar el hueco que haya dejado la operación de arrastrar.
+</p>
+<p>En una operación de tipo <b>Arrastrar origen</b>, no se corta ni se pega nada. Si 
+se mueve el principio o el final de una secuencia hacia delante, la fuente de referencia
+(el contenido) de la secuencia se desplaza hacia delante. Si mueve el principio 
+o el final hacia detrás, el contenido se desplaza hacia detrás. La secuencia no
+permanece en el mismo sitio y con el mismo tamaño, pero el contenido avanza o 
+retrocede en el tiempo.
+</p>
+<p>Para todos los formatos de fichero salvo imágenes fijas, el alcance de la operación
+de recorte nunca excede la longitud del fichero fuente original. Si se intenta
+arrastrar el principio de una secuencia a una posición anterior al principio
+del fichero de contenido original, se observará que no es posible.
+</p>
+<p>En todas las operaciones de recorte, todas las secuencias cuyo origen está en la
+misma posición que el cursor cuando empieza a arrastrar se ven afectadas. Si 
+se desea evitar afectar a alguna secuencia en estas condiciones, debe desmontarse
+dicha pista durante la operación de arrastre.
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC88" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_7.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

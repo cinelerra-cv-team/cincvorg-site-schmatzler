@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 1. Introducción</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 1. Introducción">
+<meta name="keywords" content="Manual de Cinelerra CV: 1. Introducción">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[ &lt;&lt; ]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_2.html#SEC8" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Introducci_00f3n"></a>
+<a name="SEC1"></a>
+<h1 class="chapter"> 1. Introducción </h1>
+<p>Durante años, muchas personas han deseado poder editar sus archivos de audio y 
+vídeo en un único lugar, con la misma facilidad con que se edita texto. Cinelerra
+intenta cubrir en un único punto todas sus necesidades de edición de vídeo y audio.
+Aquí se gestionan grabación, edición y reproducción. Se puede usar como un 
+reproductor de audio. Se puede usar para grabar audio o vídeo. Se puede usar,
+incluso, para retoque fotográfico.
+</p>
+
+
+
+<hr size="6">
+<a name="Acerca-de-Cinelerra"></a>
+<a name="SEC2"></a>
+<h2 class="section"> 1.1 Acerca de Cinelerra </h2>
+
+<p>Durante años, muchas personas han deseado poder editar sus archivos de audio y 
+vídeo en un único lugar, con la misma facilidad con que se edita texto. Cinelerra
+intenta cubrir en un único punto todas sus necesidades de edición de vídeo y audio.
+Aquí se gestionan grabación, edición y reproducción. Se puede usar como un 
+reproductor de audio. Se puede usar para grabar audio o vídeo. Se puede usar,
+incluso, para retoque fotográfico.
+</p>
+<p>Hay dos tipos de personas interesadas en el vídeo: los productores, que crean contenidos
+nuevos y los retocan para mejorarlos un tiempo más tarde, y los consumidores,
+que adquieren contenido y lo reproducenc. Cinelerra no está pensado para los 
+consumidores. Cinelerra incorpora abundante funcionalidad para trabajar con 
+contenido sin comprimir, procesamiento de alta resolución y composición. Los 
+productores necesitan toda esta funcionalidad para poder retocar muchas 
+generaciones de metraje, lo que hace de Cinelerra un programa muy complejo.
+Los consumidores deberían evaluar otras herramientas, como MainActor, Kino 
+o Moxy.
+</p>
+<hr size="6">
+<a name="Las-dos-versiones-de-Cinelerra"></a>
+<a name="SEC3"></a>
+<h2 class="section"> 1.2 Las dos versiones de Cinelerra </h2>
+
+<p>Hay dos ramas de Cinelerra. Una se puede encontrar en
+<a href="http://www.heroinewarrior.com">http://www.heroinewarrior.com</a> y la otra en 
+<a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>.  Esta documentación se ciñe a 
+<b>Cinelerra-CV (Community Version)</b>.
+</p>
+<p>El código fuente oficial de Cinelerra se desarrolla &quot;upstream&quot; por 
+Heroine Virtual, Ltd (HV). HV comparte su código base con una versión
+de la comunidad de Cinelerra (Cinelerra-CV, &quot;Community Version&quot;), pero no 
+participa activamente con la comunidad de desarrolladores responsable de 
+Cinelerra-CV. A HV le gusta trabajar en su propia copia de Cinelerra, 
+liberando código de manera regular cada seis meses aproximadamente.
+</p>
+<p>Cinelerra-CV fue fundada por desarrolladores que querían añadir funcionalidad
+y arreglar problemas inherentes al código base de HV. Decidieron desarrollar 
+Cinelerra de manera colectiva sin escindirse completamente (&quot;fork&quot;) del código
+original de HV. Así que el código de Cinelerra CV es muy similar al de la 
+versión oficial. Los programadores de la versión comunitaria, CV, corrigen
+errores en el código (<a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a>) y añaden mejoras al
+SVN y aumentan la compatibilidad. Ocasionalmente, estos programadores hacen 
+llegar sus correcciones al desarrollador principal. De esta manera, Cinelerra CV
+posee una serie de características de las que carece la versión oficial.
+</p>
+<p>A diferencia de otros programas, la versión de HV no se puede calificar de
+&quot;estable&quot;. Después del lanzamiento de una versión de Cinelerra por HV, a 
+menudo surgen nuevos errores o funcionalidades imposibles de usar. Cuando 
+se produce uno de estos lanzamientos, un miembro de la comunidad (j6t) une
+el código de HV con el código de Cinelerra CV, aplicando las mejoras de HV y 
+reformateando el código de la versión CV (espacios en blanco, nombres de 
+funciones, nombres de directorios) para que sea más similar al de HV, con
+ligeros cambios en la implementación. Tras esta fusión, la última versión de 
+Cinelerra CV es algo inestable y los usuarios suelen encontrar errores. Cuando
+el tiempo lo permite, los programadores de Cinelerra CV corrigen tantos de 
+estos errores como es posible. De esta manera, Cinelerra CV se puede entender
+como el intento por parte de la comunidad de estabilizar los lanzamientos de HV.
+</p>
+<p>Como ya se mencionó, la comunidad añade nuevas mejoras al código de HV. Los 
+miembros comentan entre sí sus implementaciones, para crear un producto más 
+estable y funcional. Ocasionalmente, HV acepta las implementaciones que los 
+miembros de la comunidad le envían. Sin embargo, no todas las mejoras que crea 
+la comunidad se abren camino al código final; por ejemplo, el renderizado 
+por tuberías (&quot;pipes&quot;) YUV.
+</p>
+<p>De la anterior discusión se desprende que el código obtenido del SVN justo antes
+de una fusión (&quot;merge&quot;) será más estable que el inmediatamente posterior. Es 
+conveniente tener en cuenta que los archivos de descripción de proyectos o 
+Listas de Decisiones de Edición (EDL, se discuten más adelante) podrían no 
+ser compatibles con la nueva versión tras combinar el código de HV y CV. Con
+cualquier versión de Cinelerra, la tarea de encontrar errores es relativamente
+sencilla. Sin embargo, documentar estos errores de manera clara y concisa para
+que la comunidad pueda ocuparse de ellos es una tarea en la que se pide 
+colaboración a todos los usuarios del software. La comunidad responde rápidamente.
+Por favor, ayúdales proporcionándoles informes de errores bien elaborados. Puedes
+incorporarte a nuestra lista de correo en <a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>. 
+</p>
+<hr size="6">
+<a name="Sobre-este-manual"></a>
+<a name="SEC4"></a>
+<h2 class="section"> 1.3 Sobre este manual </h2>
+
+<p>La edición de este manual es la 1.32.ES, para la versión de Cinelerra CV 
+2.1.  Se permite su distribución y/o modificación bajo los términos de
+la licencia GNU General Public License, tal y como la publica la Free Software Foundation;
+tanto la versión 2 de dicha Licencia como, opcionalmente, cualquier versión posterior.
+</p>
+<p>Este manual surge a partir de &quot;Secrets of Cinelerra&quot;, una introducción excelente escrita
+por Adam <small>WILLIAMS</small> de <small>HEROINE VIRTUAL LTD</small>. En el año 2003 Alex <small>FERRER</small>
+creó una Wiki basada en dicho manual, y añadió abundantes capturas de pantalla y descripciones
+de diversos temas. En aquel momento, Cinelerra CV aún no tenía su propio manual de usuario, 
+y la información relativa a la Versión de la Comunidad de Cinelerra se encontraba dispersa 
+en diversos lugares de Internet (listas de correo, IRC, sitios web, wiki, etc). En el año 
+2006, Nicolas <small>MAUFRAIS</small> combinó el documento original &quot;Secrets of Cinelerra&quot; con los 
+contenidos de la Wiki de Alex <small>FERRER</small> en un sólo documento.
+</p>
+<p>Responsables de la documentación de Cinelerra CV:<br>
+Inglés: Nicolas <small>MAUFRAIS</small> (coordinador)<br>
+Francés: Jean-Luc <small>COULON</small><br>
+Español: Alberto <small>RAMALLO</small>
+</p>
+<p>Otras contribuciones: Alexandre <small>BOURGET</small>, Kevin <small>BROSIUS</small>, Carlos
+<small>DAVILA</small>, Rafael <small>DINIZ</small>, Pierre <small>DUMUID</small>, Mike <small>EDWARDS</small>, Martin
+<small>ELLISON</small>, Graham <small>EVANS</small>, Scott <small>FRASE</small>, Joe <small>FRIEDRICHSEN</small>, Gus Gus, Terje <small>HANSSEN</small>, Mikko <small>HUHTALA</small>, Ben
+<small>JORDEN</small>, Nathan <small>KIDD</small>, Marcin <small>KOSTUR</small>, Joseph <small>L.</small>, Valentina <small>MESSERI</small>, Sean <small>PAPPALARDO</small>,
+Herman <small>ROBAK</small>, Dana <small>ROGERS</small>, Jim <small>SCOTT</small>, Andraz <small>TORI</small>, Raffaella
+<small>TRANIELLO</small>, Alberto <small>RAMALLO</small>.
+</p>
+<p>Gracias al equipo del proyecto GNU, y en particular a Karl <small>BERRY</small>, responsable
+de GNU Texinfo, por la valiosa ayuda que nos proporcionó durante la elaboración de
+este manual.
+</p>
+<ul class="toc">
+<li> Para obtener las fuentes del manual, instala cogito y git-core en tu sistema y
+ejecuta:<br>
+<code>cg-clone git://scm.pipapo.org/cinelerra/nicolasm</code>
+</li><li> Puedes colaborar en la edición de este manual realizando cambios
+en la Wiki de Cinelerra CV:<br>
+<a href="http://cvs.cinelerra.org/docs/wiki/doku.php">http://cvs.cinelerra.org/docs/wiki/doku.php</a>
+</li></ul>
+
+
+<hr size="6">
+<a name="Conseguir-ayuda"></a>
+<a name="SEC5"></a>
+<h2 class="section"> 1.4 Conseguir ayuda </h2>
+
+<p>Se puede conseguir ayuda en:
+</p><ul>
+<li> <b>Canal IRC:</b> #cinelerra en Freenode
+</li><li> <b>Lista de correo:</b> <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra</a>
+</li><li> <b>Sitio web de Cinelerra CV:</b> <a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>
+</li></ul>
+
+<hr size="6">
+<a name="Tutoriales"></a>
+<a name="SEC6"></a>
+<h2 class="section"> 1.5 Tutoriales </h2>
+
+<p>En Internet hay disponibles algunos tutoriales:
+</p><ul>
+<li> <b>Cinelerra Tutorial - Getting Started</b>, por Rob <small>FISHER</small><br>
+<a href="http://www.robfisher.net/video/cinelerra1.html">http://www.robfisher.net/video/cinelerra1.html</a>
+</li><li> <b>Guide d'utilisation de Cinelerra</b>, en francés<br>
+<a href="http://www.funix.org/fr/linux/cinelerra.htm">http://www.funix.org/fr/linux/cinelerra.htm</a>
+</li><li> <b>Cinelerra video tutorials</b>, por The Source<br>
+<a href="http://www.thesourceshow.org/node/11">http://www.thesourceshow.org/node/11</a><br>
+El primer tutorial está en Episode 6 - &quot;The Return Of The Pixel&quot;.<br>
+El segundo tutorial está en Episode 1 - &quot;The Filesystem Menace&quot;.
+</li><li> <b>Beginner's Guide to Exporting Video from Cinelerra</b>, por Scott <small>FRASE</small><br>
+<a href="http://content.serveftp.net/video/renderTest/guideToCinExport.html">http://content.serveftp.net/video/renderTest/guideToCinExport.html</a>
+</li><li> <b>Capturando e editando video usando Software Livre</b>, en portugués, por Rafael <small>DINIZ</small><br>
+<a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">https://docs.indymedia.org/view/Sysadmin/Cinelerra</a>
+</li><li> <b>Tutorial Cinelerra</b>, en Portuguese, por Leo <small>GERMANI</small><br>
+<a href="http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">http://www.estudiolivre.org/tiki-index.php?page=Cinelerra</a>
+</li><li> <b>Edicion de video bajo GNU/Linux (Cinelerra)</b>, en español, por Gustavo I&ntilde;iguez <small>GOYA</small><br>
+<a href="http://kutxa.homeunix.org/cinelerra">http://kutxa.homeunix.org/cinelerra</a>
+</li></ul>
+
+<hr size="6">
+<a name="Enlaces-varios"></a>
+<a name="SEC7"></a>
+<h2 class="section"> 1.6 Enlaces varios </h2>
+
+<p>Enlaces varios:
+</p><ul>
+<li> <b>What is Deinterlacing? Facts, solutions, examples</b><br>
+Una página interesante (en inglés) sobre el desentrelazado<br>
+<a href="http://www.100fps.com">http://www.100fps.com</a>
+</li><li> <b>MPEG-2 FAQ</b><br>
+<a href="http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html">http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html</a>
+</li><li> <b>&quot;Exporting edited HD content back to the camcorder&quot; (HDV related)</b><br>
+<a href="http://dvinfo.net/conf/showthread.php?t=76674">http://dvinfo.net/conf/showthread.php?t=76674</a>
+</li></ul>
+
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_2.html#SEC8" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

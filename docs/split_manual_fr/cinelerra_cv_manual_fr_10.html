@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 10. La fenêtre des vu-mètres</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 10. La fenêtre des vu-mètres">
+<meta name="keywords" content="Manuel de Cinelerra CV: 10. La fenêtre des vu-mètres">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_9.html#SEC134" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_11.html#SEC137" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="La-fen_00eatre-des-vu_002dm_00e8tres"></a>
+<a name="SEC136"></a>
+<h1 class="chapter"> 10. La fenêtre des vu-mètres </h1>
+
+<p>Une fenêtre supplémentaire, la <b>fenêtre des vu-mètres</b> peut être appelée
+depuis le menu <b>Fenêtre</b>.  La fenêtre des <b>indicateurs de niveaux</b> permet
+d'afficher les niveaux de sortie audio après que le mixage ait été effectué.
+</p>
+<p align="center"> <img src=".././manual_images_intl/sound_level_meters_window.png" alt="manual_images_intl/sound_level_meters_window">
+</p>
+<p align="center"> <b>Fenêtre des niveaux sonores</b>
+</p>
+<p>Les vu-mètres peuvent être affichés à différents emplacements.  On peut les
+activer ou les désactiver depuis la visionneuse ou le compositeur à l'aide du
+bouton des vu-mètres.  Ils apparaissent dans la boîte à boutons lorsque la
+piste est dépliée (Voir la section <a href="cinelerra_cv_manual_fr_6.html#SEC98">La boîte à boutons</a>.)  Ils sont affichés dans le
+contrôleur d'enregistrement lors d'un enregistrement audio.
+</p>
+<p>Les niveaux sonores dans la <b>fenêtre des niveaux, le compositeur et la
+visionneuse</b> correspondent aux niveaux de la sortie finale avant qu'ils ne
+soient tronqués pour entrer dans la dynamique de la carte son.  Dans le
+<b>contrôleur d'enregistrement</b> ce sont les valeurs d'entrée issues de la carte
+son.  Dans la <b>boîte à boutons</b>, ce sont les niveaux sonores de chacune des
+pistes après que tous les effets aient été traités et avant de faire le mélange
+en réduction (&quot;down-mixing&quot;) vers la sortie.
+</p>
+<p>La plupart du temps, les niveaux audio ont une échelle numérique en dB mais
+dans la boîte à boutons, il n'y a pas assez de place pour cela.
+</p>
+<p>Le niveau audio est codé par couleurs de façon à donner un autre moyen de
+contrôler le niveau sonore.  Même sans les échelles numériques, la couleur
+permet de distinguer entre plusieurs plage et la saturation.  Regardez le
+codage des couleurs sur un vu-mètre avec une échelle numérique pour voir à
+quelle couleur correspond tel ou tel niveau sonore.  Ensuite, il vous suffira
+d'utiliser le codage des couleurs dans la boîte à boutons avec les pistes audio
+dépliées pour vous assurer qu'il n'y a pas de saturation.
+</p>
+<p>Soyez attentifs au fait que les niveaux sonores dans Cinelerra peuvent dépasser
+0 dB.  Ceci permet non seulement de voir qu'une piste présente une saturation
+mais encore la quantité d'information qui sera perdue par cette saturation.
+Une saturation de moins de 3 dB est en général acceptable.  Alors que la
+saturation est traitée sous forme de nombres positifs par Cinelerra, elle est
+tronquée à 0 lorsqu'elle est envoyée vers une carte son ou vers un fichier.
+</p>
+<p>La plage visible des indicateurs de niveau audio est configurable depuis
+<b>Configuration-&gt;Préférences...-&gt;Interface utilisateur</b> (Voir la section <a href="cinelerra_cv_manual_fr_3.html#SEC56">Interface</a>.)
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_9.html#SEC134" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_11.html#SEC137" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

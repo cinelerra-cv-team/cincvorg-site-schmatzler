@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 22 Troubleshooting</title>
+
+<meta name="description" content="Cinelerra CV Manual: 22 Troubleshooting">
+<meta name="keywords" content="Cinelerra CV Manual: 22 Troubleshooting">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_21.html#Tips" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_23.html#Plugin-authoring" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Troubleshooting"></a>
+<a name="Troubleshooting-1"></a>
+<h1 class="chapter">22 Troubleshooting</h1>
+<a name="index-Troubleshooting"></a>
+
+
+<hr>
+<a name="Reporting-bugs"></a>
+<a name="Reporting-bugs-1"></a>
+<h2 class="section">22.1 Reporting bugs</h2>
+<a name="index-Reporting-bugs"></a>
+<a name="index-Bugs_002c-reporting"></a>
+
+<p>When you notice a bug, the first thing to do is to go to
+<a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> and check if it has not been already reported.
+If there is no bug report for the bug you noticed, you can file a bug report.
+Open an account on <a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> if you do not have one.
+Then, file the bug report, including the following information:
+</p>
+<ul>
+<li> Revision number of Cinelerra CV.  Example: r959
+
+</li><li> Distribution name and version.  Example: Debian SID
+
+</li><li> Steps to replicate the bug.  That is very important since it really helps
+people trying to fix bugs.  Example:
+<ol>
+<li> launch cinelerra
+</li><li> open the recording window
+</li><li> click on OK
+</li><li> Cinelerra crashes
+</li></ol>
+
+</li><li> When Cinelerra CV crashes, a debugger output is welcome.  Run:<br>
+<code>gdb cinelerra</code><br>
+<code>run</code><br>
+(You trigger the bug and Cinelerra CV crashes)<br>
+<code>thread apply all bt</code><br>
+Then copy all of the information displayed into your bug report.
+</li></ul>
+
+<p>Do not hesitate to attach any file which you think could be useful, such as a
+screenshot for example.  The gdb output is more useful when Cinelerra is
+compiled with debugging symbols.  See section <a href="cinelerra_cv_manual_en_2.html#Compiling-with-debugging-symbols">Compiling with debugging symbols</a>, for
+compilation instructions.
+</p>
+<p>Moreover, if the bug you noticed concerns a problem loading a specific file
+into Cinelerra-CV, uploading a small sample of such a file on the internet is
+appreciated.  That would allow people fixing bugs to load that file themselves
+in Cinelerra and look at what happens.
+</p>
+<hr>
+<a name="Playback-does-not-stop"></a>
+<a name="Playback-does-not-stop-1"></a>
+<h2 class="section">22.2 Playback does not stop</h2>
+<a name="index-Playback-does-not-stop"></a>
+
+<p>If playback of audio tracks doesn&rsquo;t stop on the timeline and keeps going after
+the end of the video, go to <b>Settings -&gt; Preferences -&gt; Playback</b> and click
+on the <b>Stop playback locks up</b> checkbox.  This checkbox is shown only if you
+set ALSA as audio driver.
+</p>
+<hr>
+<a name="Buz-driver-crashes"></a>
+<a name="Buz-driver-crashes-1"></a>
+<h2 class="section">22.3 Buz driver crashes</h2>
+<a name="index-Buz_002c-driver-crashes"></a>
+
+<p>First, Zoran capture boards must be accessed using the <b>Buz</b> video driver in
+<b>Preferences-&gt;Recording</b> and <b>Preferences-&gt;Playback</b>.  Some performance
+tweaks are available in another section.  See section <a href="cinelerra_cv_manual_en_21.html#Improving-performance">Improving performance</a>.
+</p>
+<p>Once tweaked, the Buz driver seems to crash if the number of recording buffers
+is too high.  Make sure <b>Preferences-&gt;Recording-&gt;Frames to buffer in device</b>
+is below 10.
+</p>
+<hr>
+<a name="Dragging-edit-boundaries-does-not-work"></a>
+<a name="Dragging-edit-boundaries-does-not-work-1"></a>
+<h2 class="section">22.4 Dragging edit boundaries does not work</h2>
+<a name="index-Dragging-edit-boundaries-does-not-work"></a>
+<a name="index-Edit-boundaries_002c-dragging-does-not-work"></a>
+
+<p>Sometimes there will be two edits really close together.  The edit boundary
+selected for dragging may be next to the intended edit if those edits are too
+small to see at the current zoom level.  Zoom in horizontally.
+</p>
+<p>If you think you can&rsquo;t drag all the edits starting at the same point on armed
+tracks, zoom in horizontally to check if they really start at the same point.
+Sometime vertical synchronization of edits can be lost just because you did not
+set properly project attributes (e.g. PAL/NTSC).  Check <b>Settings -&gt; Format</b>. 
+</p>
+<hr>
+<a name="Locking-up-when-loading-files"></a>
+<a name="Locking-up-when-loading-files-1"></a>
+<h2 class="section">22.5 Locking up when loading files</h2>
+<a name="index-Locking-up-when-loading-files"></a>
+<a name="index-Files_002c-locking-up-when-loading"></a>
+
+<p>The most common reason loading files locks up Cinelerra is because the codec is not
+supported.  Another reason is because Cinelerra is building picons for the
+Resources window.  If you load a large number of images, it needs to decompress
+every single image to build a picon.  Go into
+<b>settings-&gt;preferences-&gt;interface</b> and disable <b>Use thumbnails in resource
+window</b> to skip this process.
+</p>
+<hr>
+<a name="Synchronization-lost-while-recording"></a>
+<a name="Synchronization-lost-while-recording-1"></a>
+<h2 class="section">22.6 Synchronization lost while recording</h2>
+<a name="index-Synchronization-lost-while-recording"></a>
+<a name="index-Recording_002c-synchronization"></a>
+
+<p>If the rate at which frames are captured during recording is much lower than the frame rate of the
+source, the video will accumulate in the recording buffers over time and the
+audio and video will become well out of sync.  Decrease the <b>number of frames to
+buffer in the device</b> in <b>preferences-&gt;recording</b> so the excess frames are
+dropped instead of buffered.
+</p>
+<hr>
+<a name="Applying-gamma-followed-by-blur-does-not-work"></a>
+<a name="Applying-gamma-followed-by-blur-does-not-work-1"></a>
+<h2 class="section">22.7 Applying gamma followed by blur does not work</h2>
+
+<p>The gamma effect uses the pow function while the blur effect uses a number of
+exp functions in the math library.  For some reason, using the pow function
+breaks later calls to the exp functions in the math library.  You need to apply
+gamma after blur to get it to work.
+</p>
+<hr>
+<a name="Copy_002fPaste-of-track-selections-does-not-work-in-the-timeline"></a>
+<a name="Copy_002fPaste-of-track-selections-does-not-work-in-the-timeline-1"></a>
+<h2 class="section">22.8 Copy/Paste of track selections does not work in the timeline</h2>
+<a name="index-Copy_002fPaste-of-track-selections-does-not-work-in-the-timeline"></a>
+
+<p>If you are running the KDE Klipper application, either disable it, or
+right-click its taskbar icon, select <b>Configure Klipper</b> and ensure
+<b>Prevent empty clipboard</b> is not selected.
+</p>
+<hr>
+<a name="Cinelerra-often-crashes"></a>
+<a name="Cinelerra-often-crashes-1"></a>
+<h2 class="section">22.9 Cinelerra often crashes</h2>
+<a name="index-Crashes"></a>
+
+<p>Do a clean install.  Be sure that you do not have libraries from previous
+installations.  Delete your &lsquo;<tt>$HOME/.bcast/</tt>&rsquo; directory too.<br>
+<code>rm -f /usr/local/lib/libguicast*</code><br>
+<code>rm -f /usr/lib/libguicast*</code><br>
+<code>rm -f /usr/local/lib/libquicktimehv*</code><br>
+<code>rm -f /usr/lib/libquicktimehv*</code><br>
+<code>rm -f /usr/local/lib/libmpeg3hv*</code><br>
+<code>rm -f /usr/lib/libmpeg3hv*</code>
+</p>
+<hr>
+<a name="Theme-Blond-not-found-error"></a>
+<a name="Theme-Blond-not-found-error-1"></a>
+<h2 class="section">22.10 Theme Blond not found error</h2>
+<a name="index-Theme-Blond-not-found-error"></a>
+
+<p>If the following error message appears: <code>Aborted, MWindow::init_theme:
+Theme Blond not found</code>, then:
+</p><ul>
+<li> You should check for the file &lsquo;<tt>defaulttheme.*</tt>&rsquo; in
+&lsquo;<tt>/usr/lib/cinelerra</tt>&rsquo; or &lsquo;<tt>/usr/local/lib/cinelerra</tt>&rsquo;.  If it does not
+exist, you need to install the plugins again.
+</li><li> Try to delete the &lsquo;<tt>$HOME/.bcast/</tt>&rsquo; directory
+</li><li> Look into &lsquo;<tt>$HOME/.bcast/Cinelerra_rc</tt>&rsquo; and find THEME, it should be
+=&gt; THEME Blond
+</li></ul>
+
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Troubleshooting" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_23.html#Plugin-authoring" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 19. Fitxategiak errendatzea</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 19. Fitxategiak errendatzea">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 19. Fitxategiak errendatzea">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_18.html#SEC250" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_20.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Fitxategiak-errendatzea"></a>
+<a name="SEC256"></a>
+<h1 class="chapter"> 19. Fitxategiak errendatzea </h1>
+
+<p>Errendatzeak denbora-lerroko atal bat hartzen du, muntaketa guztia landu
+(efektuak eta konposaketak) eta filme hutsa fitxategi batean gordetzen du.
+Behin errendatze prozesua fitxategi batean gordetakoan, iturburuko klip
+guztiak ezaba ditzakezu (nahi izanez gero), errendatutako fitxategia
+filme-erreproduzigailu batean erreproduzitu, edo jarraitu filmearen
+muntaketa Cinelerra aplikazioan. Azken kasu honetan, oso zaila da filme
+hutsean muntatze-erabakiak berriro ikutzea, eta ondorioz mantendu iturburuko
+klipak eta XML fitxategiak egun dezente proiektua errendatu eta gero
+(baliteke hauek behar izatea eta).
+</p>
+<p>Errendatze-eragiketa guztiak denbora-lerroko eskualde batean oinarritzen
+dira errendatzeko. Eskualde hori definitu behar duzu denbora-lerroan.
+Nabigazioaren atalak eskualdeak definitzeko azalpenak ditu. See section <a href="cinelerra_cv_manual_eu_12.html#SEC138">Denbora-barra</a>.
+Errendatzeko funtzioek eskualdea definitzen dute arau-multzo batean oinarrituz.
+ESkualde bat nabarmentzen denean, edo sarrerako eta irteerako puntuak ezartzen
+direnean, eragindako eskualdea errendatzen da. Eskualderik ez denean nabarmentzen,
+txertatzeko puntuaren atzetik dagoen edozer errendatzen da. Txertatzeko puntua
+pista baten hasieran kokatzearekin bakarrik, sarrerako eta irteerako puntu
+gutiak kenduz, pista osoa errendatuko da.
+</p>
+
+<hr size="6">
+<a name="Fitxategi-bakarra-errendatzea"></a>
+<a name="SEC257"></a>
+<h2 class="section"> 19.1 Fitxategi bakarra errendatzea </h2>
+
+<p>Multimediako edukia disko gogorrean ekoizteko biderik azkarrena fitxategi
+bakar batean errendatzeko funtzioa da.
+</p>
+<p>Joan <b>Fitxategia -&gt; Errendatu</b> menua, edo sakatu <kbd>Maius+R</kbd>, errendatzearen
+elkarrizketa-koadroa bistaratzeko. Sakatu <img src=".././manual_images_en/magnify.png" alt="manual_images_en/magnify"> lupa
+fitxategi hautapenaren elkarrizketa-koadroa bistaratzeko. Azken elkarrizketa-koadro
+horretan, fitxategiaren izena zehaz dezakezu, errendatutaako fitxategia gordetzeko
+eta kodeketaren parametroak zehaztu.
+</p>
+<p align="center"> <img src=".././manual_images_en/render_window.png" alt="manual_images_en/render_window">
+</p><p align="center"> <b>Errendatze-leihoa</b>
+</p>
+<p>Errendatzearen elkarrizketa-koadroan, hautatu formatu bat <b>Formatua</b>
+menuan. Hautatutako formatuak audioa, bideoa edo biak errendatuko diren zehazten du.
+Hautatu <b>Errendatu audioko pistak</b> botoia audioko pistak sortzeko, eta
+<b>Errendatu bideoaren pistak</b> bideoaren pistak sortzeko.
+</p>
+<p>Botoi bakoitzaren alboan dagoen <img src=".././manual_images_en/wrench.png" alt="manual_images_en/wrench"> giltza
+hautatu amaierako fitxategia kodetzean erabiliko den konpresioaren parametroak
+doitzeko. Hautatutako formatuak ez badu audioa edo bideoa gordetzen uzten,
+ezin izango da konpresioaren parametrorik doitu. <b>Errendatu audioko pistak</b> edo
+<b>Errendatu bideoaren pistak</b> aukerak gaituta badaude, eta fitxategiaren formatuak
+ez badu uzten, errorea gertatuko da errendatzen saiatzean.
+</p>
+<hr size="6">
+<a name="Banandutako-fitxategiak-errendatzea"></a>
+<a name="SEC258"></a>
+<h2 class="section"> 19.2 Banandutako fitxategiak errendatzea </h2>
+
+<p>Denbora-lerroan aurkitzen den etiketa bakoitzeko fitxategi berri bat
+sortzen du <b>Etiketa bakoitzean fitxategi berria sortu</b> aukerak.
+Oso erabilgarria da audioko grabazio luzeak banandutako fitxategietan
+zatitzeko. Errendategia erabiltzean, <b>Etiketa bakoitzean fitxategi berria sortu</b>
+aukerak errendatzeko ataza bat sortzen du etiketa bakoitzeko, barneko
+balantzearen algoritmoa erabili ordez (errendategia osatzen duten ordenagailuen
+artean atazak banatzeko erabiltzen dena).
+</p>
+<p><b>Etiketa bakoitzean fitxategi berria sortu</b> aukera hautatzean, irteerako fitxategi
+bakoitzeko fitxategi-izen berri bat sortzen da. Errendatzearen elkarrizketa-koadroan
+ematen den fitxategi-izenak 2 digituko zenbakia badu, zenbaki hori beste zenbaki
+desberdin batekin ordeztuko da, zenbaki hori 1 balioarekin gehituz sortzen den
+fitxategi bakoitzeko. 2 digituko zenbakirik ez badago, Cinelerra-k automatikoki
+zenbaki desberdin bat erantsiko dio izenaren atzetik fitxategi bakoitzeko.
+</p>
+<p>Adibidez, <tt>`/hmov/pista01.wav'</tt> fitxategi-izena ematen bada, <samp>`01'</samp> zatia
+gainidatzi egingo da irteerako fitxategi bakoitzeko. Bestalde, <tt>`/hmov/pista.wav'</tt> 
+izena ematen bada, aurreneko irteera <tt>`/hmov/pista.wav01'</tt> izango da, eta beste
+guztiek zenbaki hori gehitzen joango dira 1 balioarekin. 
+</p>
+<p>Portaera hau errendategia gaituta dagoenean soilik gertatzen da, edo 
+<b>Etiketa bakoitzean fitxategi berria sortu</b> aukera hautatuta dagoenean.
+</p>
+<hr size="6">
+<a name="Errendatutako-fitxategien-txertatzeko-estrategia"></a>
+<a name="SEC259"></a>
+<h2 class="section"> 19.3 Errendatutako fitxategien txertatzeko estrategia </h2>
+
+<p>Azkenik, errendatzearen elkarrizketa-koadroak txertatzeko modua hautatzea uzten
+du. Fitxategiak kargatzean bezala funtzionatzen du txertatzeko moduak.
+Kasu honetan, <b>Ezer ez txertatu</b> hautatzean errendatu ondoren sortzen den
+fitxategia sistemako disko gogorrean kopiatuko da, Cinelerra-n irekita dagoen
+proiektuan ezer aldatu gabe. Txertatzeko beste estrategiek berriz uneko
+proiektuaren denbora-lerroa aldatzen dutenez, estrategia horietariko bat
+erabiltzean ziurtatu denbora-lerroa prest dagoela sortutako fitxategia
+txertatzeko. See section <a href="cinelerra_cv_manual_eu_6.html#SEC97">Muntaketa</a>. Errendatzea amaitzean txertatuko da sortu
+berri den fitxategia.
+</p>
+<p>Ohartuko zara audioa edo bideoa bakarrik errendatutakoan <b>Itsatsi</b> txertatzeko
+estrategiaren portaera itsatsi eragiketa arrunt baten antzekoa izango dela, 
+denbora-lerroan hautatuta dagoen eskualdea ezabatu eta errendatutako datuak
+soilik itsatsiko dituela. Audioa bakarrik errendatzen baduzu, baina bideoaren
+pistak ainguratuta badaude, bideoaren pistak trunkatu egingo dira (audioaren
+pisten antzera), baina errendatutako irteera audioaren pistetan soilik
+itsatsiko da.
+</p>
+<hr size="6">
+<a name="Batch_002dekin-errendatzea"></a>
+<a name="SEC260"></a>
+<h2 class="section"> 19.4 Batch-ekin errendatzea </h2>
+
+<p>Proiektu asko multimediako hainbat fitxategietan errendatzea nahi baduzu,
+<b>Errendatu</b> elkarrizketa-koadroa erabili gabe, <b>Fitxategia -&gt; Batch-ekin
+errendatzea</b> menua erabili. Funtzio honi muntatze-erabakien zerrenda (EDL)
+bat edo gehiago eman behar zaizkio errendatzeko, eta irteerako fitxategiak
+bakoitzeko. Cinelerra-k automatikoki EDL bakoitza kargatu eta errendatzen du
+erabiltzailea arduratu gabe. EDL fitxategi bakoitza, eta dagokion errendatutako
+irteera, <b>batch</b> bat da. Multimediaren eduki ugari prozesatzea uzten du,
+eta ordenagailu oso garesti bati etekina ateratzen dio. Adibidez, egunean zehar
+landutako proiektuak gabean batch moduan prozesatzeak sistemaren erabilpena
+hobetzen du, eta erabiltzailearen denbora aurreztu.
+</p>
+<p>Batch moduan lan egiteko, aurrenik errendatuko diren proiektuak definitu behar
+dira. Batch-ekin errendatzeak EDL fitxategi bat eskatzen du errendatuko den
+batch bakoitzeko. Proiektu bakoitzeko errendatuko den eskualdea definitu behar
+da eskualdea nabarmenduz, sarrerako eta irteerako puntuak ezarriz, edo
+txertatzeko puntua eskualdearen hasieran kokatuz. Ondoren, proiektua
+EDL bat bezala gorde behar da. Honela nahi adina proiektu defini daitezke.
+Errendatzaileak EDL fitxategiaren eskualde aktiboarekin bakarrik lan egiten du.
+</p>
+<p>Errendatuko diren proiektuak prest daudenean (EDL fitxategi guztiak
+prestatutakoan), <b>Fitxategia -&gt; Batch-ekin errendatu</b> aukera abiarazi.
+Honek elkarrizketa-koadro bat bistaratuko du. <b>Batch-ekin errendatzea</b>
+elkarrizketa-koadroa fitxategi bakarra errendatzea baino zerbait konplexuagoa
+da.
+</p>
+<p>Batch-en zerrenda bat zehaztu behar da errendatzeko eragiketarekin hasi aurretik.
+batch-en taula elkarrizketa-koadroaren behean agerten da, eta <b>Batch-ak
+errendatzeko</b> izena dauka. Taula honen gainean, batch bakarraren parametroen
+konfigurazioa agertzen da.
+</p>
+<p>Fitxategi bakarra izan balitz bezala, honako parametroak doitu: <b>Irteerako
+bide-izena</b>, <b>Formatua</b>, <b>Audioa</b>, <b>Bideoa</b> eta
+<b>Etiketa bakoitzean fitxategi berria sortu</b>. Parametro hauek batch bakar
+bati aplikatzen zaizkio. errendatzeko parametro estandar hauetaz gain,
+EDLaren iturburua hautatu behar da batch-ean erabiltzeko. Horretarako
+erabili <b>EDLren bide-izena</b>.
+</p>
+<p><b>Batch-ak errendatzeko</b> zerrenda hutsik egonez gero, edo ezer ez badago
+hautatuta, sakatu <b>Berria</b> botoia batch berri bat sortzeko. Batch berriaren
+parametroak doitu berri diren parametroekin bat etorriko dira.
+</p>
+<p>Parametro berdinekin batch gehiago sor daitezke. Horretarako sakatu <b>Berria</b>
+botoia nahi adina aldiz. Edozein batch-en konfigurazioa alda daiteke:
+hautatu batch bat taulan eta doitu gaineko parametroak. Hautatutako batch-a
+beti mantentzen da gainean bistaratutako informazioarekin.
+</p>
+<p>Batch-ak lekuz alda daitezke taulan, batch baten gainean klik egin eta arrastatu
+nahi den kokalekura, eta honela errendatuko diren ordena berrantola dezakezu.
+Batch bat betirako ezaba dezakezu <b>Ezabatu</b> botoia sakatuz.
+</p>
+<p>Batch-en taulan zutabe bat dago batch bakoitza gaitzeko edo desgaitzeko.
+Honela, batch batzuk salta daitezke errendatzetik, ezabatu edo aldatu beharra
+izan gabe. <b>Gaituta</b> zutabean klik egin batch bat gaitzeko edo desgaitzeko.
+Gaituta badago, batch-a errendatu egingo da. Bestela, batch-a ez da errendatuko
+eta hurrengo gaitutako batch-a errendatuko da.
+</p>
+<p>Taulako beste zutabeak informazioa eskaintzeko bakarrik erabiltzen dira.
+</p>
+<ul>
+<li> <b>Irteera</b> Batch-aren irteerako bide-izena.
+<a name="IDX148"></a>
+</li><li> <b>EDL</b> Batch-aren muntatze-erabakien zerrendaren (EDL) iturburua.
+</li><li> <b>Igarotakoa</b> Batch-a errendatzeko igaroko den denbora, amaituta badago.
+</li></ul>
+
+<p>Gaituta dagoen aurreneko batch-a errendatzen hasteko, sakatu <b>Hasi</b> botoia.
+</p>
+<p>Errendatze-prozesua behin hasitakoan, leiho nagusiak batch bakoitzaren progresioa
+erakusten du. Batch bat errendatzea amaitzean, batch-en taulako <b>Igarotakoa</b>
+zutabea eguneratu egiten da eta hurrengo gaitutako batch-a errendatzen hasiko da.
+Horrela gaituta dauden batch guztiekin. Errendatzen ari den batch-a kolore
+gorriarekin agertzen da.
+</p>
+<p>Batch guztiak amaitu aurretik errendatzea gelditzeko, errendatzearen
+elkarrizketa-koadroa itxi gabe, sakatu <b>Gelditu</b> botoia.
+</p>
+<p>Batch guztiak amaitu aurretik errendatzea gelditzeko, errendatzearen
+elkarrizketa-koadroa itxiz, sakatu <b>Utzi</b> botoia.
+</p>
+<p>Batch-ekin errendatzearen elkarrizketa-koadrotik irtetzeko, errendatze-prozesua
+abioan dagoen edo ez kontutan hartu gabe, sakatu <b>Utzi</b> botoia.
+</p>
+<hr size="6">
+<a name="Errendategiak"></a>
+<a name="SEC261"></a>
+<h2 class="section"> 19.5 Errendategiak </h2>
+
+<p>Interpolazio bikubikoa eta HDTV Cinelerra-n garatu ziren aurreneko aldian, emaitza
+bakunenak ekoizteko behar zen denbora ikaragarri luzea zen, nahiz eta garai
+horretako bi bihotzdun Xeon 1.7 Ghz prozesagailua erabili. Errendategia erabiltzean,
+nahiz eta bere modurik errazenean izan, HDTV erabil daiteke eta SD denbora
+errealeran exekutatzen da.
+</p>
+<p>Errendategiaren interfazea ikusgarria ez izan arren, 12 nodo baino gutxiagorekin
+erabiltzeko erraza da. Ehundaka nodo dituen errendategi batean erabiltzeko ordea
+nahiko korapilotsua gerta daiteke. <b>Fitxategia -&gt; Errendatu</b> menuarekin deitzen
+zaio errendategiari, programaren hobespenetan errendategia gaituta egonez gero.
+</p>
+<p>Cinelerra-k denbora-lerroan nabarmendutako eskualdea ataza kopuru batean
+zatitzen du, gero nodo desberdinen artean banatzen ditu atazak karga-balantzearen
+arabera. Nodoek atazak prozesatu eta irteerak sistemako disko gogorreko fitxategietan
+gordetzen dituzte. Irteerako fitxategiak ez dira kateatzen. Garrantzitsua da nodoek
+fitxategi-sistema berdinera, leku berean muntatuta, sarbidetzeko eskubidea edukitzea
+jatorrizko baliabideak eskuratzeko.
+</p>
+<p>Nodo batek ezin badu baliabide bat atzitu, bere kontsolan erroreari buruz
+jakinaraziko du, baina nodoaren prozesua ez da hilko. Ezin badu direktorio
+edo irteerako klip bat atzitu, orduan baliteke errendatzeko prozesua bertan
+behera uztea.
+</p>
+<p>Ohartu zaitez errendatzearen elkarrizketa-koadroko <b>Etiketa bakoitzean fitxategi
+berria sortu</b> aukerak Cinelerra-ren karga-balantzearen algoritmoa saihesten du.
+Bere ordez, etiketa bakoitzeko ataza berri bat sortzen da (erabiltzaileak kargak
+nahi dituen bezala banatu dituela suposatzen da). Aukera hau gaituta badago eta
+ez badaude etiketarik, errendatzeko ataza bakarra sortuko da.
+</p>
+<p>Cinelerra-ren errendategia osaten duten ordenagailuak honela antolatzen dira: nodo maisu
+bat ezartzen da, eta beste guztiak morroiak dira. Nodo maisua (edo nagusia) erabiltzailearen
+interfaze grafikoa exekutatzen ari den ordenagailua da. Morroiak diren nodoak
+sareko edozein lekutan egon daitezke, eta komando-lerrotik exekutatzen dira.
+Nodo morroia komando-lerrotik exekutatzeko erabili honako komandoa: 
+<code>cinelerra -d</code>
+</p>
+<p>Hau konfigurazio errazena da. <code>cinelerra -h</code> komandoa exekutatuz aukera
+gehiago bistaratuko dira terminalean. Ataka zenbaki lehenetsia gainidatzi daiteke
+<samp>`-d'</samp> aukeraren ondoren idatziz. Adibidez, nodo morroi baten ataka 3658 bada,
+honela abiaraziko litzateke: <code>cinelerra -d 3658</code>
+</p>
+<p>Askotan gertatzen da errendatutako irteera gainbegiratu nahi izatea eta denbora-lerroa
+erabiliz denborak doitzea. Bestalde, MPEG bezalako formatu batzuk ezin dira zuzenean
+kopiatu. Guzti honengatik, atazen emaitzak banakako fitxategietan uzten dira.
+</p>
+<p>Banakako fitxategi hauek Cinelerra-n karga daitezke: sortu pista berri bat, eta
+<b>Kateatu dauden pistei</b> zehaztu  kargaren elkarrizketa-koadroan. Zuzeneko kopia
+onartzen duten fitxategiak fitxategi bakar batean kateatu daitezke, 
+fitxategi-formatu berdinean errendatuz eta errendategia desgaituz. Gainera, zuzeneko
+kopia bat lortzeko pisten dimentsioak, irteerako dimentsioak eta baliabideen
+dimentsioak berdinak izan behar dute.
+</p>
+<p>Zuzeneko kopia onartzen ez duten MPEG edo beste formatuko fitxategiak beste
+aplikazio batekin kateatu behar dira. MPEG fitxategia kateatzeko komando-lerroko
+<b>cat</b> tresna erabil dezakezu.
+</p>
+<p>Errendategiaren konfigurazioa See section <a href="cinelerra_cv_manual_eu_3.html#SEC55">Errendategia</a> atalean azaltzen da.
+Nodo morroiek datuak fitxategi-sistema amankomun batean sarearen bidez irakurri
+eta idatzi egiten dutenez, ez dute disko gogorrik behar.
+</p>
+<p>Hoberenik hoberenean, errendategia osatzen duten ordenagailuek errendimendu
+antzekoa edukitzea izango litzateke. Aurkitzen diren nodoen arabera atazak banatzen
+ditu Cinelerra-k. Azken zatiaz nodo geldoena arduratzen bada, gerta daiteke
+beste nodo guztiek (azkarragoak) geldoenak amaitu arte zai gelditu behar izatea,
+nahiz eta beraiek ataza askoz ere azkarrago amaitu.
+</p>
+<hr size="6">
+<a name="Komando_002dlerroarekin-errendatzea"></a>
+<a name="SEC262"></a>
+<h2 class="section"> 19.6 Komando-lerroarekin errendatzea </h2>
+
+<p>Lantzea falta den batch multzo bat errendatu daiteke komando-lerroa erabiliz (interfaze
+grafikoa erabili gabe). Oso erabilgarria da edozer arrazoi dela eta X sistema grafikoak
+kraskatu bataiteke. Urruneko superordenagailu bat edukiz gero ere oso erabilgarria
+izan daiteke, adibide gisa, demagun norbait Euskal Herrian bizi dela eta Argentinako
+ordenagailu batean sarbidetzeko baimenak dituela. Kasu horretan komando-lerroa oso
+erabilgarria da.
+</p>
+<p>Komando-lerrotik errendatzeko, aurrenik Cinelerra modu grafikoan exekutatu behar da.
+Hautatu <b>Fitxategia -&gt; Batch-ekin errendatzea</b> menua. Elkarrizketa-leihoan sortu
+errendatzea nahi dituzun batch-ak. Honela batch-en zerrenda fitxategi batean gordeko
+dira. Doitu errendategiaren atributuak <b>Ezarpenak -&gt; Hobespenak</b> menuan eta irten
+Cinelerra aplikaziotik. Burututako ezarpenak komando-lerrotik errendatzea exekutatzean
+erabiliko dira.
+</p>
+<p>Komando-lerroan exekutatu honakoa: <code>cinelerra -r</code>
+</p>
+<p>Honela falta diren batch-ak prozesatuko dira interfaze grafikoria erabili gabe.
+Zaila da parametro guztiak doitzea eragiketa hau lantzeko. Hori dela eta, komando-lerroan
+errendatzea bertan abortatu egingo da irteerako fitxategiren bat existitzen bada.
+</p>
+<p>Badaude beste parametro batzuk hobespenen eta batch-en bestelako fitxategiak zehazteko.
+Balio lehenetsien desberdinak diren bestelako gauzak erabiltzeak lan asko eskatzen du,
+hori dela eta orainarte ez da probarik egin.
+</p>
+<hr size="6">
+<a name="Errendatzeko-aukerak-eta-kodeketen-argibideak"></a>
+<a name="SEC263"></a>
+<h2 class="section"> 19.7 Errendatzeko aukerak eta kodeketen argibideak </h2>
+
+
+<hr size="6">
+<a name="Quicktime4linux_002dera-errendatzea-mencoder-erabiliz-berkodetzeko"></a>
+<a name="SEC264"></a>
+<h3 class="subsection"> 19.7.1 Quicktime4linux-era errendatzea mencoder erabiliz berkodetzeko </h3>
+
+<p>Errendatutako fitxategia 'mencoder' tresnarekin berriro kodetzeko,
+esportatu fitxategia Quicktime4linux gisa:
+</p>
+<ul>
+<li> Audioaren 16 bit-eko Biren osagarria aukera (Pcm)
+</li><li> Bideoaren DV aukera Video option DV
+</li></ul>
+
+<p><b>Mencoder kodeketaren aukerak:</b>
+</p>
+<ul>
+<li> <b>Avi (mpeg4/divx) ez kargatzeko helburuarekin:</b> <br>
+<code>mencoder -of avi -o cinelerra.avi -oac mp3lame -ovc lavc -lavcopts
+vcodec=mpeg4:vbitrate=2500 cinelerra_render.mov</code>
+
+</li><li> <b>Internet (deskarga):</b> <br>
+<code>mencoder -of avi -o cinelerra_render.avi -oac mp3lame -ovc lavc
+-lavcopts vcodec=mpeg4:vbitrate=400 -vf scale=320:240 cinelerra_render.mov</code> <br>
+edo <br>
+Lehenbiziko urratsa: <br>
+<code>mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=1 -vf
+scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi</code> <br>
+Bigarren urratsa: <br>
+<code>mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=2 -vf
+scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi</code>
+</li></ul>
+
+<p>Scott Frase-k 'Quicktime GNU/Linuxentzako bateragarritasun diagrama' idatzi zuen.
+Quicktime konpresioaren eskema erabilgarrien zerrenda zehatza dauka, eta hauek
+Cinelerra, MPlayer eta beste zenbait multimedia erreproduzigailuekin duten
+bateragarritasuna azaltzen du. Dokumentu horrek bi atal nagusi ditu, bata
+HDV bereizmeneko formatua duen proiektu batean oinarritutakoa, eta bestea
+DV bereizmeneko formatua duen proiektu batean oinarrituta.
+</p>
+<p>Honako gunetik deskarga daiteke: <br>
+<a href="http://content.serveftp.net/video/qtcompatibility.ods">http://content.serveftp.net/video/qtcompatibility.ods</a>
+</p>
+<p>Ohar interesgarri batzuk:
+</p><ul>
+<li> MPlayer-en portaera hobeagoa da DV formatuko bideo txikiagoakin.
+</li><li> DV formatuan errendatutako fitxategiekin Cinelerra-k duen bateragarritasuna 
+HDV proiektuko errendatutako fitxategiekin duenaren antzekoa da, ez oso desberdina.
+</li><li> DV eta HDV proiektuen MPlayer eta Cinelerra arteko konparazioen grafika du dokumentuak
+</li></ul>
+
+<hr size="6">
+<a name="DVDa-sortzea"></a>
+<a name="SEC265"></a>
+<h3 class="subsection"> 19.7.2 DVDa sortzea </h3>
+
+
+<hr size="6">
+<a name="mpeg2_002dra-errendatzea"></a>
+<a name="SEC266"></a>
+<h4 class="subsubsection"> 19.7.2.1 mpeg2-ra errendatzea </h4>
+
+<p>Atal honetan mpeg2 bideora esportatu eta kapitulu bakarreko DVD bat nola sortzen
+den azaltzen da. Metodo honek nahi duzun kodeketaren aukera doitasunez zehaztea
+uzten dizu, mpeg2 formatuko fitxategi bat sortuz (kontsumo arrunteko DVD
+erreproduzigailuen %100-ekoarkin bateragarria izanik).
+</p>
+<p><b>mjpegtools</b> paketeko 'mplex' tresna instalatuta egon behar da. mjpegtools paketea
+hvirtual banaketaren zati da, eta bertatik atera daiteke mplex tresna.
+</p>
+<p>Aurrenik, Cinelerra-n proiektuaren formatua ongi definituta dagoela ziurtatu,
+bideoa errendatzen hasi aurretik (<b>Ezarpenak -&gt; Formatua</b>). PAL formatuak
+720x576 tamainako bereizmena erabiltzen du 25 f/s fotograma-tasarekin;
+NTSC formatuak berriz 720x480 tamaina, 29.97 f/s tasarekin.
+</p>
+<ol>
+<li> Sortu script bat: <tt>`~/cine_render.sh'</tt>
+</li><li> Kopiatu <tt>`~/cine_render.sh fitxategian'</tt> honako lerroak: <br>
+<code>#/bin/bash</code> <br>
+<code>mpeg2enc -v 0 -K tmpgenc -r 16 -4 1 -2 1 -D 10 -E 10 -g 15 -G 15 -q 6
+-b 8600 -f 8 -o $1</code>
+</li><li> Eman exekutatzeko baimenak script-ari:
+<code>chmod 777 ~/cine_render.sh</code>
+</li><li> Abiarazi Cinelerra, eta hautatu errendatzea nahi duzun bideoaren zatia
+[ eta ] puntuekin
+</li><li> Sakatu <kbd>Maius+R</kbd> teklak
+</li><li> Hautatu <b>YUV4MPEG korrontea</b> fitxategi-formatua
+</li><li> Desautatu <b>Errendatu audioko pistak</b> eta hautatu <b>Errendatu bideoaren pistak</b>
+</li><li> Egin klik giltzaren gainean
+</li><li> Ireki berri den leihoan, adierazi sortzea nahi duzun <tt>`m2v'</tt> fitxategiaren
+izena. Fitxategi horrek bideoa bakarrik edukiko du.
+</li><li> Egin klik <b>Erabili kanalizazioa</b> gainean eta idatzi honako komandoa:
+<code>/home/&lt;zure_erabiltzailea&gt;/cine_render.sh %</code>
+</li><li> Egin klik Ados botoian bigarren leihoa ixteko, eta berriro Ados botoian
+zure <tt>`m2v'</tt> fitxategia errendatzen hasteko.
+</li><li> m2v fitxategia errendatzen ari den bitartean, ireki errendatzearen leihoa
+berriro eta errendatu AC3 fitxategia 224 bit-ekin.
+</li><li> Azkenik, konbinatu bideoa eta audioa honako komandoarekin:
+<code>mplex -f 8 zure_bideo_fitxat.m2v zure_audio_fitxat.ac3 -o
+bideo_audio_fitxat.mpeg</code>
+Mplex erabiltzean erroreak gertatzen badira, handitu kuantizadorearen aukera, '-q'.
+</li></ol>
+
+<p>mpeg2enc-en parametroak alda ditzakezu nahi izanez gero. Begiratu mpeg2enc tresnaren
+eskuliburua. Horren konfigurazioari buruzko xehetasun batzuk ongi etorriko zaizkizu:
+</p>
+<ul class="toc">
+<li> <samp>`-b 8600'</samp>: 'm2v' fitxategiaren gehienezko bit-tasa da (ez du audioaren
+bit-tasa zehazten). Balio hau ez handitzea gomendatzen dizugu, bestela bideoa eta
+audioa nahasteko mplex erabiltzean errore batzuk gerta daitezkeelako.
+</li><li> <samp>`-q 6'</samp>: Kuantizazioaren konfigurazioa. Balioa gutxiagotzen baduzu
+(inoiz ez 3 azpitik), kalitatea handiagotu egiten da, eta baita bit-tasa ere.
+Tarteko bit-tasa '-b' aukeran dagoena baino %10 baxuagoa mantentzea gomendatzen
+da (mplex tresnarekin audioaren eta bideoaren fitxategiak konbinatzean azaltzen da).
+</li><li> <samp>`-K tmpenc'</samp>: TMPEnc matrizeei deitzen die. Bit-tasa gutxi gorabehera
+%10ean murrizten du, lehenetsi gisa erabiltzen diren taulen ordez. Kalitate oso
+altuko multimediaren kasuan, probatu aukera hau erabili gabe.
+</li></ul>
+
+<p>Multimediaren edukia zaratatsua bada (Hi8 multimedia analogikoa, adibidez),
+mpegtools-eko komando batzuk gehitu  <tt>`~/cine_render.sh'</tt> script-ari:
+</p><ul>
+<li> <code>y4mshift</code> eta <code>y4mscaler</code> komandoak erabil daitezke
+bideoaren inguruko ertzak kentzeko. Adibidez, <tt>`cine_render.sh'</tt> script-aren
+hasieran Hi8 bideoaren inguruko ertz beltzak kentzen dituzte: <br>
+<code>y4mshift -n -2 | yuvscaler -I USE_744x560+12+8 -O DVD -M BICUBIC |</code>
+</li><li> <code>yuvdenoise</code> eta <code>yuvmedianfilter</code> komandoak zarata
+kentzen lagunduko dute. Adibidez: <br>
+<code>yuvdenoise -F | yuvmedianfilter -T 3 |</code> <br>
+Zarata kentzea ataza konplexua da, eta emandako komando horiek adibide bat
+besterik ez dira. Irakurri mpegtools-en eskuliburua, eta harpidetu dagokion
+posta-zerrendara, informazio gehiago eskuratzeko.
+</li></ul>
+
+<hr size="6">
+<a name="DVD-baten-menua-sortzea"></a>
+<a name="SEC267"></a>
+<h4 class="subsubsection"> 19.7.2.2 DVD baten menua sortzea </h4>
+
+<p>DVD batek honako osagaiak ditu:
+</p>
+<ul>
+<li> Atzeko planoa (irudi finkoa edo bideoa)
+</li><li> Botoiak
+</li><li> Soinua edo musika
+</li></ul>
+
+<p>Menu bat sor dezakezu qdvdauthor, dvdstyler, dvdwizard edo tovid bezalako
+aplikazio grafikoekin. Hala ere, interfaze horiek oraingoz ez dira perfektuak,
+akatsak dituztelako eta mugatuta daudelako.
+</p>
+<p>Azpian azaltzen den metodoa interfaze grafikoa erabiltzea baino
+konplexuagoa izan arren, baditu bere alde onak:
+</p>
+<ul>
+<li> Erreproduzigailu guztietan erreproduzi daitekeen DVDak sortzen ditu.
+</li><li> Ez dauka tarteko programa baten akatsik.
+</li><li> Denbora asko aurreztuko dizu, DVD berri bat sortzeko egin behar duzun
+bakarra testu-fitxategiak aldatzea baita.
+</li></ul>
+
+<p>Interfaze grafikoa duen aplikazioa erabiltzea nahi izanez gero,
+saiatu tovid programarekin: <br>
+<a href="http://tovid.wikia.com/wiki/Main_Page">http://tovid.wikia.com/wiki/Main_Page</a>
+</p>
+<p>DVDaren menua sortzeko jarraitu honako urratsak:
+</p>
+<ul>
+<li> Sortu menuaren atzeko planoa Cinelerra-rekin.
+</li><li> Gehitu botoiak PNG formatuko irudiak sortuz.
+</li><li> Konbinatu menua eta botoiak spumux tresnarekin.
+</li></ul>
+
+<p>Demagun menuaren atzeko planoan animazioa edukitzea nahi duzula. Horretarako
+abiarazi Cinelerra eta sortu proiektu bat menuaren atzeko planoa duena.
+Nahi izanez gero, gehituiozu musika. Ohartu zaitez menu hau begizta batean
+errepika daitekeela. Hau da, menuaren amaierara iristean hasieratik 
+erreproduzitzen hasiko da, eta horrela behin eta berriz.
+</p>
+<p>Botoiak marrazteko, bi bide dituzu:
+</p>
+<ul>
+<li> Bistaratu botoiak Cinelerra-n. Honela, botoi animatuak sortzeko
+gaitasuna izan dezakezu, bideoaren zati bakoitzaren koadro txikiak bezala.
+</li><li> Ez marraztu botoiak Cinelerra-n. Botoi horiek geroago gehitu ditzazkeiozu
+mpeg2 menuaren fitxategiari. Hau metodorik bakunena da, baina ezin izango duzu
+botoi animaturik bistaratu.
+</li></ul>
+
+<p>Bideoa m2v eta ac3 formatutan errendatu arestian aipatu den <code>cine_render.sh</code>
+metodoa erabiliz. Konbinatu audioa eta bideoa mplex tresna erabiliz,
+bideo 'normalekin' egingo zenukeen antzera.
+</p>
+<p>Menuaren atzeko planoa edukiko duen mpeg2 formatuko fitxategia lortuko duzu, 
+eta gainean botoi batzuk bistaratuta Cinelerra-n gehitu badituzu.
+</p>
+<p>'spumux' tresna erabili behar da botoi bakoitzaren posizioa mpeg2 fitxategiko
+definitzeko. Ez badituzu botoiak Cinelerra-n margotu, spumux
+tresnarekin botoiak jarri dagokien posizioetan.
+</p>
+<p>Spumux komandoak 2 argumentu ditu:
+</p>
+<ul>
+<li> XML fitxategi bat botoiak non dauden zehaztuz
+</li><li> mpeg2 fitxategi-izena (menuarentzako errendatu duzuna)
+</li></ul>
+
+<p>XML fitxategiaren adibidea spumux-ek erabiltzeko:
+</p><pre class="verbatim">&lt;subpictures&gt;
+ &lt;stream&gt;
+  &lt;spu start=&quot;00:00:00.0&quot; image=&quot;botoi_arruntak.png&quot; highlight=
+  &quot;botoi_nabarmenduak.png&quot; select=&quot;botoi_hautatuak.png&quot;&gt;
+   &lt;button name=&quot;1&quot; x0=&quot;94 &quot; y0=&quot;234 &quot; x1=&quot;253 &quot; y1=&quot;278&quot;
+   down=&quot;2&quot; right=&quot;4&quot; /&gt;
+   &lt;button name=&quot;2&quot; x0=&quot;63 &quot; y0=&quot;287 &quot; x1=&quot;379 &quot; y1=&quot;331&quot; up=&quot;1&quot;
+   down=&quot;3&quot; right=&quot;5&quot; /&gt;
+  &lt;/spu&gt;
+ &lt;/stream&gt;
+&lt;/subpictures&gt;
+</pre>
+<ul>
+<li> <b>image=&quot;botoi_arruntak.png&quot;</b> PNG formatuko irudi honek
+botoiak ditu hautatuta edo nabarmenduta ez daudenean bistaratzeko.
+</li><li> <b>highlight=&quot;botoi_nabarmenduak.png&quot;</b> PNG irudi honek
+nabarmendutako egoera adierazten duten botoiak ditu.
+</li><li> <b>select=&quot;botoi_hautatuak.png</b> PNG irudi honek
+hautatutako egoera adierazten duten botoiak ditu.
+</li></ul>
+
+<p>Botoiak Cinelerra-n egin badituzu, irudi horiek hutsak (%100 gardenak)
+bezala zehaztu behar dituzu.
+</p>
+<p>Spumux-en erabiltzen diren PNG irudiek eduki beharrekoa:
+</p>
+<ul>
+<li> <b>alfa kanala</b> (gardentasuna onartzeko)
+</li><li> <b>indexatutako 4 koloretan egotea</b>. Gimp erabiliz irudi bat indexatutako 4 koloretara
+erraz bihur dezakezu.
+</li></ul>
+
+<p>Botoi bakoitzeko lerro bat dago. Lerro bakoitzak botoiaren koordenatuak ditu,
+botoiak beti izango dira laukizuzen formakoak:
+</p>
+<ul>
+<li> <b>x0, y0</b>: goiko ezkerreko ertza
+</li><li> <b>x1, y1</b>: beheko eskuineko ertza
+</li></ul>
+
+<p>Gainera, ikusleak urrunetik teklak sakatzean (gora, behera, ezkerrera, eskuinera) zein
+botoira joan behar duen mugimendua zehaztu behar duzu. Adibidez:
+</p>
+<pre class="verbatim">&lt;button name=&quot;3&quot; ...coordinates... up=&quot;1&quot; down=&quot;5&quot; left=&quot;2&quot; right=&quot;4&quot; /&gt;
+</pre>
+<p>&quot;3&quot; botoia hautatzen denean, urruneko kontrolean &quot;Gora&quot; tekla sakatzen bada
+&quot;1&quot; botoia nabarmenduko da. &quot;Eskuinera&quot; tekla sakatzen bada, &quot;4&quot; botoia
+nabarmenduko da.
+</p>
+<p>Spumux-en XML fitxategia editatzea amaitutakoan, honako komandoa exekutatu:<br>
+<code>spumux menua.xml &lt; menua.mpeg &gt; menua_botoiekin.mpeg</code> <br>
+Honek <tt>`menua_botoiekin.mpeg'</tt> fitxategia sortuko du. Botoiak dituen
+mpeg2 motako fitxategia da.
+</p>
+<hr size="6">
+<a name="DVD-bat-sortzea"></a>
+<a name="SEC268"></a>
+<h4 class="subsubsection"> 19.7.2.3 DVD bat sortzea </h4>
+
+<p>Zure bideo-fitxategiak mpeg2 formatura errendatu ondoren, eta spumux tresnarekin
+menu bat prestatutakoan, DVDa sortu behar duzu dvdauthor aplikazioarekin.
+</p>
+<p>Gezurra dirudi baina egia da, dvdauthor-ek ere XML fitxategiak erabiltzen ditu
+DVDaren egitura azaltzeko. Sintaxia oso garrantzitsua da, eta .xml fitxategiaren
+sintaxia nola dagoen egituratua sakonki aztertu behar da. Sintaxia ez badago
+ongi finkatuta erreproduzigailu batzuk ez dute DVDa erreproduzituko.
+</p>
+<p>'dvdauthor' tresna erabiltzen laguntzeko, hemen duzu XML fitxategien
+zenbait adibide.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/bidea/direktorioaren/edukia/dvd&quot;&gt;
+    &lt;vmgm /&gt;
+    &lt;titleset&gt;
+        &lt;titles&gt;
+            &lt;pgc&gt;
+                &lt;vob file=&quot;/the/mpeg/fitxategia.mpeg&quot; /&gt;
+		&lt;post&gt;
+                    jump chapter 1;
+                &lt;/post&gt;
+            &lt;/pgc&gt;
+        &lt;/titles&gt;
+    &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p>dvdauthor tresnarentzako XML fitxategi xumea. Menurik ez duenez, 
+<tt>`/the/mpeg/fitxategia.mpeg'</tt> fitxategia zuzenean erreproduzitzen hasiko
+da DVDa erreproduzigailuan sartu bezain laster.
+</p>
+<p><b>&lt;post&gt;</b> etiketapean dagoen komandoak bideoa begizta batean erreproduzitu
+behar dela adierazten du. DVDaren erreproduzigailua bideoaren amaierara
+iristen denean, bideoaren aurreneko kapitulura salto egingo du
+(dvdauthor-ek bideoaren hasiera dela suposatuko du, ez baita kapitulurik
+definitu).
+</p>
+<p>DVDa sortzeko, idatzi honako komandoa: <br>
+<code>dvdauthor -x adibide_xumea.xml</code>
+</p>
+<p>Orain adibide pittin bat konplexuagoa ikusiko dugu. DVDa erreproduzigailuan 
+sartzen denean, menu bat bistaratuko da eta 4 bideoetatik edozein aukera
+dezakezu erreproduzitzeko.
+</p>
+<pre class="verbatim">&lt;dvdauthor dest=&quot;/bidea/direktorioaren/edukia/dvd&quot; jumppad=&quot;yes&quot; &gt;
+&lt;vmgm&gt;
+ &lt;fpc&gt; jump menu 1; &lt;/fpc&gt;
+  &lt;menus&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc entry=&quot;title&quot; &gt;
+    &lt;vob file=&quot;menua.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;button name=&quot;1&quot; &gt; { g3=1; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;2&quot; &gt; { g3=2; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;3&quot; &gt; { g3=3; jump titleset 1 menu entry root; } &lt;/button&gt;
+    &lt;button name=&quot;4&quot; &gt; { g3=4; jump titleset 1 menu entry root; } &lt;/button&gt;
+     &lt;post&gt; { jump cell 1; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+ &lt;/vmgm&gt;
+ &lt;titleset&gt;
+  &lt;menus&gt;
+   &lt;pgc entry=&quot;root&quot; &gt;
+    &lt;pre&gt; { if ( g3 gt 0 )  {
+		if ( g3 eq 1 ) { g3=0; jump title 1  chapter 1; }
+		if ( g3 eq 2 ) { g3=0; jump title 1  chapter 3; }
+		if ( g3 eq 3 ) { g3=0; jump title 1  chapter 5; }
+		if ( g3 eq 4 ) { g3=0; jump title 1  chapter 7; }
+		jump vmgm menu entry title;
+		}
+	} &lt;/pre&gt;
+    &lt;post&gt; { jump vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/menus&gt;
+  &lt;titles&gt;
+   &lt;video format=&quot;pal&quot; aspect=&quot;4:3&quot; resolution=&quot;720x576&quot; /&gt;
+   &lt;pgc pause=&quot;0&quot; &gt;
+    &lt;vob file=&quot;bideoa_1.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideobeltza.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideoa_2.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideobeltza.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideoa_3.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideobeltza.mpg&quot; pause=&quot;0&quot; /&gt;
+    &lt;vob file=&quot;bideoa_4.mpeg&quot; pause=&quot;0&quot; /&gt;
+    &lt;post&gt; { call vmgm menu entry title; } &lt;/post&gt;
+   &lt;/pgc&gt;
+  &lt;/titles&gt;
+ &lt;/titleset&gt;
+&lt;/dvdauthor&gt;
+</pre>
+<p><tt>`bideobeltza.mpg'</tt> fitxategia erabiltzen da 2 segundotako pantaila beltza
+gehitzeko bideo bakoitzaren artean. Goazen <tt>`bideobeltza.mpg'</tt> fitxategia
+sortzera: <br>
+<code>convert -size 720x576 xc:black -depth 8 markobeltza.ppm</code> <br>
+<code>dd if=/dev/zero bs=4 count=960000 | toolame -b 128 -s 48 /dev/stdin
+audiogabe.mpa</code> <br>
+<code>ppmtoy4m -S 420mpeg2 -n 50 -F 25:1 -r markobeltza.ppm | mpeg2enc -a 2
+-n p -f 8 -o bideobeltza.mpv</code> <br>
+<code>mplex -f 8 -o bideobeltza.mpg bideobeltza.mpv audiogabe.mpa</code>
+</p>
+<hr size="6">
+<a name="DVD-bat-grabatzea"></a>
+<a name="SEC269"></a>
+<h4 class="subsubsection"> 19.7.2.4 DVD bat grabatzea </h4>
+
+<p>DVDa sortu ondoren, helburuko karpetan honako direktorioan aurkituko dituzu:
+<tt>`AUDIO_TS'</tt> eta <tt>`VIDEO_TS'</tt>. Probatu zure DVDa grabatu aurretik.
+Horretarako joan helburuko karpetara eta idatzi honako komandoa (suposatzen
+dugu <b>xine</b> aplikazioa instalatuta dagoela): <br>
+<code>xine dvd:`pwd`</code>
+</p>
+<p>Komando hori exekutatuz DVDa ongi erreproduzitzen bada, disko huts batean
+grabatzeko ordua iritsi da. <tt>`AUDIO_TS'</tt> eta <tt>`VIDEO_TS'</tt> direktorioak
+dituen karpetan kokatuta zaudela, idatzi honako komandoa (egokitu direktorioa
+DVD grabatzeko gailuari, adibidez /dev/dvdrw):<br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd -dvd-video -V
+VIDEO ./ &amp;&amp; eject /dev/dvd</code>
+</p>
+<p>DVD horren kopia asko egin behar badituzu, hoberena <tt>`.iso'</tt> irudi bat sortzea da
+honako komandoa erabiliz:<br>
+<code>nice -n -20 mkisofs -dvd-video -V VIDEO -o ../dvd.iso .</code> <br>
+Sortu berri den <tt>`../dvd.iso'</tt> fitxategia DVD disko huts batean graba
+dezakezu beste komando hau erabiliz: <br>
+<code>nice -n -20 growisofs -dvd-compat -speed=2 -Z /dev/dvd=../dvd.iso &amp;&amp;
+eject /dev/dvd</code>
+</p>
+<p><b>Gomendioa:</b> 4x baino abiadura handiagoekin ez grabatu, eta kalitate oneko DVD-R
+disko hutsak erabili.
+</p>
+<p>DVDa erreproduzigailu zehatz batean (etxeko DVD erreproduzigailuan) probatzeko
+ez daukazu DVD diskoak alferrik bota beharrik zerbait gaizki gertatuz gero, 
+aurreneko grabazioa DVD-RW euskarrian egin. Horretarako aurrenik
+DVD-RW diskoari formatua eman: <br>
+<code>dvd+rw-format -lead-out /dev/dvd</code> <br>
+Gero, grabatu DVD-RW diskoa arestiko komandoekin.
+</p>
+<hr size="6">
+<a name="Atzeko-planoan-errendatu"></a>
+<a name="SEC270"></a>
+<h2 class="section"> 19.8 Atzeko planoan errendatu </h2>
+
+<p>Atzeko planoan errendatzeak ia denbora errealean efektuak erreproduzitzea uzten du, 
+bestela oso motelak izango ziren bistaratzeko. Aldi baterako irteera modu jarraian
+errendatzen du: denbora-lerroan zerbait aldatzen denean, edo efektu berri bat gehitzen
+denean, atzeko planoan errendatzen hasten da eta denbora gutxira unean errendatua
+izan den bezala ikus ahal izango dugu <b>Konposaketa-leihoan</b>. Aukera hau ez
+edukiz gero, muntatzen ari garen proiektua erreproduzitzean gauzak saltoka
+bistaratuko dira, edo ez agian ez dira bistaratuko.
+</p>
+<p>Errendategia lanean ari bada, atzeko planoan modu jarraian errendatuko da.
+Honela, denbora errealean edozein proiektu erakuts daiteke, prozesamendurako
+gaitasun nahikoa (nodo kopurua) duen errendategi bat edukiz.
+</p>
+<p>Atzeko planoan errendatzeko joan <b>Ezarpenak -&gt; Hobespenak -&gt; Errendimendua</b> menura.
+Bistaratuko den elkarrizketa-koadroan funtzio elkarreragile bat dago: 
+<b>Ezarpenak -&gt; Ezarri atzeko planoan errendatzea</b>. Funtzio honek atzeko planoan
+errendatzen hasteko puntua ezartzen du, puntu hori sarrerako puntua da. Posizio
+horretan bideoa badago, denbora-lerroan marra gorri bat agertuko da, 
+atzeko planoan errendatu den zatia adieraziz.
+</p>
+<p>Askotan egokia izaten da <b>Hobespenak -&gt; Ezarri atzeko planoan errendatzea</b> hautatzea
+efektu edo trantsizio bat txertatu ondoren, eta honela emaitza fotograma-tasa zuzenean
+bistaratzeko (audioaren eta bideoaren arteko sinkronizazioa galdu gabe).
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_20.html#SEC271" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

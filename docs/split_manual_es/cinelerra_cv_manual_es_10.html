@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 10. Ventanas de medida del nivel de sonido</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 10. Ventanas de medida del nivel de sonido">
+<meta name="keywords" content="Manual de Cinelerra CV: 10. Ventanas de medida del nivel de sonido">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_9.html#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_11.html#SEC137" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Ventanas-de-medida-del-nivel-de-sonido"></a>
+<a name="SEC136"></a>
+<h1 class="chapter"> 10. Ventanas de medida del nivel de sonido </h1>
+
+<p>Se puede abrir una ventana adicional, la ventana de <b>niveles de sonido</b>, desde 
+el menú <b>Ventana</b> en la ventana principal del programa. La ventana de <b>niveles</b>
+muestra los niveles de salida de audio tras hacer todas las mezclas.
+</p>
+<p align="center"> <img src=".././manual_images_intl/sound_level_meters_window.png" alt="manual_images_intl/sound_level_meters_window">
+</p>
+<p align="center"> <b>Ventana de medida de nivel de sonido</b>
+</p>
+<p>Los medidores de nivel de sonido aparecen en varios sitios. Se pueden mostrar en 
+las ventanas del visor y del compositor, con el botón <b>Mostrar métrica</b>. Aparecen
+en el área de control cuando se expande una pista (See section <a href="cinelerra_cv_manual_es_6.html#SEC98">El área de control</a>.) Aparecen en 
+el monitor de grabación cuando se graba audio.
+</p>
+<p>La métrica de sonido en las ventanas de <b>niveles, compositor</b> y <b>visor</b> corresponde
+a los niveles finales de salida, antes de ser recortados para quedar dentro del alcance 
+de la tarjeta de sonido. En el <b>monitor de grabación</b> son los valores de entrada de la 
+tarjeta de sonido. En el <b>área de control</b> son los niveles de sonido de cada pista
+tras procesar todos los niveles y antes de mezclar todo para producir la salida final.
+</p>
+<p>En casi todos los sitios la métrica se acompaña de marcas numéricas en dB, salvo en
+en el área de control de la pista, donde no hay suficiente espacio.
+</p>
+<p>La métrica de sonido aparece coloreada como ayuda visual adicional. Incluso sin
+las marcas numéricas, el color del nivel de sonido puede servir para distinguir
+entre varios alcances y sobrecarga. Se pueden comparar los códigos de color de una 
+métrica sin marcas numéricas con los de otra métrica que sí tenga marcas numéricas,
+y saber así qué colores corresponden a qué nivel de sonido. Las métricas en el área 
+de control de las pistas de audio expandidas usan los códigos de color para saber 
+si existe sobrecarga. 
+</p>
+<p>Nótese que los niveles de sonido en Cinelerra pueden superar 0 dB. Esto permite 
+observar si una pista está sobrecargada y, más aún, cuánta información se está 
+perdiendo por esta sobrecarga. Sobrecargas menores de 3 dB suelen ser aceptables.
+Aunque la sobrecarga se trata en Cinelerra como números positivos, al enviarla 
+a la tarjeta de sonido o a un archivo se recorta para que no exceda 0.
+</p>
+<p>El máximo alcance visible para la métrica de nivel de sonido se puede configurar
+en <b>Preferencias-&gt;Preferencias-&gt;Interfaz</b>. (See section <a href="cinelerra_cv_manual_es_3.html#SEC56">Interfaz</a>.)
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_9.html#SEC134" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_11.html#SEC137" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

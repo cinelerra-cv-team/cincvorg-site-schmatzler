@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 2. Instalazioa</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 2. Instalazioa">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 2. Instalazioa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_1.html#SEC1" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_3.html#SEC26" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Instalazioa"></a>
+<a name="SEC7"></a>
+<h1 class="chapter"> 2. Instalazioa </h1>
+
+<p>Cinelerraren pakete guztien eduki orokorra da.
+</p>
+<ul>
+<li> <b>Kanpoko hizkuntzara itzultzea</b> - Kokalekua: 
+<tt>`/usr/share/locale'</tt>
+</li><li> <b>Cinelerra exekutagarria</b> - Kokalekua: <tt>`/usr/bin'</tt>
+</li><li> <b>Cinelerra plugin-ak</b> - Kokalekua: <tt>`/usr/lib/cinelerra'</tt> 32 biteko 
+sistemetan eta <tt>`/usr/lib64/cinelerra'</tt> 64 biteko sistemetan.
+<a name="IDX1"></a>
+<a name="IDX2"></a>
+</li><li> <b>soundtest</b> - Soinu-txarteleko buffer-tamaina zehazteko tresna.
+<a name="IDX3"></a>
+</li><li> <b>mplexlo</b> - MPEG-en oinarrizko korronteak multiplexatzea estandarrekin
+baino eraginkorragoa (nahiz eta bat etorri ez).
+<a name="IDX4"></a>
+</li><li> <b>mpeg3cat</b> - MPEG fitxategia sarrera estandarretik irakurtzeko
+eta irteera estandarrean idazteko tresna.
+<a name="IDX5"></a>
+<a name="IDX6"></a>
+</li><li> <b>mpeg3toc, mpeg3cat, mpeg3dump</b> - MPEG fitxategiak indexatzeko eta 
+irakurtzeko tresnak.
+<a name="IDX7"></a>
+</li><li> <b>mpeg3peek</b> - MPEG fitxategiko fotograma baten desplazamenduko byte-a
+bistaratzeko tresna.
+</li></ul>
+
+
+<hr size="6">
+<a name="Hardwarearen-eskakizunak"></a>
+<a name="SEC8"></a>
+<h2 class="section"> 2.1 Hardwarearen eskakizunak </h2>
+
+<p>Cinelerra-k ordenagailuko azpisistema guztiak eskatzen ditu: bideoa 
+irakurtzea, dekodetzea eta erreproduzitzeak sistemaren prozesamendu asko erabiliko 
+dutelako. Honela, Cinelerra-ren errendimendua eta erabilgarritasuna bideo-formatuaren 
+(SVCD, DV, HDV, HD, e.a.) arabera izango da, eta nola ez, ordenagailuaren PUZ, S/I 
+busaren abiadura, bideo eta memoriaren arteko bus-aren arkitekturaren arabera.
+Hortaz, audioarekin soilik edo bereizmen baxuko bideo-formatuarekin lan egiteko 
+ahalmen gutxiago duten ordenagailuak nahikoak dira. Hala ere, sistema bera larriki 
+motelduko da bereizmen altuagoko formatua erreproduzitzen hastean, DV formatua adibidez.
+Audioaren efektu eta pista anitzek okertu dezakete arazo hauek. Murriztapen hauek kontutan
+izanik, Cinelerra exekutatzeko aholku batzuk zerrendatuko dira:
+</p>
+
+
+<ul>
+<li> <b>PUZ abiadura</b> <br>
+Prozesadorearen abiadura gutxienez 500 MHz beharko luke, hortik behera erabilkaitza 
+gerta daiteke. 'Core' bikoitzeko eta SMP motako prozesadoreek Cinelerraren abiadura asko
+hobetzen dute.
+</li><li> <b>Memoria</b> <br>
+Bideoarekin lan egitean, memoria librearen kopuru erabilgarri handiak eragiketen 
+abiadura nabarmenki azkartu dezake (trukatzeko erabiltzen den disko gogorra erabili 
+gabe) materiala erosotasunez erabilgarri utziz. Gutxieneko memoriaren tamaina 
+265 MByte-koa izatea gomendatzen da. 
+Bereizmen altuko bideo-formatutan Cinelerra erabiltzeko memoriaren tamaina 1 Gb edo handiagoa
+izatea gomendatzen da.
+</li><li> <b>Biltegia</b> <br>
+Bideoaren edizioak baliabide asko behar ditu sarrera/irteerako eragiketetan.
+Biltegiaren eskakizunak zure bideo edizioaren beharren araberakoak dira.
+Pieza luzeak ekoiztea nahi baduzu (konprimitu gabeko edo bereizmena altuagoko 
+formatuan), disko gogor handia (&gt;200Gb) eta azkarra (&lt;10ms) beharko duzu.
+Adibidez, DV formatuak 3.5 MB segundoko erabiltzen ditu (12 GB orduko).
+Proiektu txikiagoentzako 1 GB tamainako lekuarekin nahikoa izan dezakezu.
+RAID0, RAID1+0 edo RAID5 egiturek ere erreprodukzioa azkartu dezakete.
+</li><li> <b>Bideo txartelak</b> <br>
+2.1 bertsiotik hasita, Cinelerra aplikazioak hardware bidezko OpenGL bizkortzearen
+onurak erabil ditzake. Ziurtatu ordenagailuak duen bideo-txartelak 
+OpenGL 2.0 onartzen duela 3D bizkortze-sistemaren onurak eskuratzeko.
+Jakina da Nvidia hornitzailearen 7 serieak (adib. 7600GS) ongi funtzionatzen 
+dutela. Tamalez, ATI hornitzaileak duen Linux-entzako kontrolatzaileek 
+ez dute erabateko OpenGL 2.0 inplementazioa, hala ere baliteke dokumentu
+hau irakurtzean ATIren kontrolatzaileak OpenGL 2.0 onartzea eta badazpada
+begiratu interneten honi buruz. Seinale konposatua zuzenean telebistara edo 
+bideo grabagailu batera bidaltzeko asmoa baduzu, ziurtatu bideo-txartelak 
+onartzen duela.
+</li><li> <b>Pantaila anitzak</b> <br>
+Xfree86 edo Xorg-en Xinerama funtzionalitatea earbil dezakezu hainbat monitoreekin
+lan egiteko. Funtzionalitate hau oso eraginkorra da ekoizpena bizkortzeko.
+</li><li> <b>TV-irteera</b> <br>
+Bideoaren txartelak telebistaren irteera (TV-Out) badu, telebista edo 
+S-Video monitore batekin konekta dezakezu landutako edukia telebista 
+batean ikusteko.
+</li><li> <b>Bideo kapturatzaileak</b> <br>
+Bideo-kamera analogo bat baduzu, edo bideoa kapturatzea nahi baduzu magnetoskopio 
+zahar batetik, bideo-kapturatzaile bat beharko duzu. Cinelerra-k, 
+Video4Linux bidez, bideo kapturatzaileak onar ditzake.
+</li><li> <b>Firewire</b> <br>
+Materiala sistemara deskargatzeko biderik azkarrena Firewire konexioa erabiltzea da. 
+Multimediaren edukia CD/DVD batetik (edo beste aurre-kapturako formatutik
+edo bideo kapturatzaile analogikotik) ez baduzu inportatzen
+sisteman Firewire konexioa eduki beharko duzu.
+</li><li> <b>DV kamerak</b> <br>
+Cinelerrarekin erabil daitezkeen mota desberdineko DV kamera ugari daude.
+Firewire bidez kontekta daitekeen edozein kamera ere baliozkoa da.
+Bideo kapturatzailearen sistemako parametroak egoki ezarri dituzula ziurtatu 
+zure kamerarekin bat etortzeko. <a href="http://www.linux1394.org">http://www.linux1394.org</a> gunean onartutako 
+kamerak zerrendatzen dira.
+</li></ul>
+
+<hr size="6">
+<a name="Softwarearen-eskakizunak"></a>
+<a name="SEC9"></a>
+<h2 class="section"> 2.2 Softwarearen eskakizunak </h2>
+
+<p>Cinelerra instalatzeko GNU/Linux sistema eguneratua edukitzea komeni da, XFree86 
+edo Xorg sistemarekin, eta ongi exekutatzen diren audioa kudeatzeko zenbait software.
+Gainera, honako liburutegiak ere sisteman instalatuta eduki behar dira 
+(zerrenda partziala):
+</p><ul>
+<li> a52dec
+</li><li> dv
+</li><li> faac
+</li><li> ffmpeg
+</li><li> fftw
+</li><li> lame
+</li><li> libavc1394
+</li><li> libfaad2
+</li><li> libraw1394
+</li><li> mjpegtools
+</li><li> OpenEXR
+</li><li> theora
+</li><li> x264
+</li></ul>
+
+<hr size="6">
+<a name="RPM-bat-instalatzea"></a>
+<a name="SEC10"></a>
+<h2 class="section"> 2.3 RPM bat instalatzea </h2>
+<p>Cinelerra instalatzeko modurik erosoena RPM paketea deskargatzea 
+eta instalatzea da. Instalatzeko erabili honako komandoa:<br>
+<code>rpm -U --force --nodeps hvirtual*.rpm</code> <br>
+Fedora sisteman.
+</p>
+<a name="IDX8"></a>
+<p>RPM onartzen ez duten sistemetan <b>rpm2cpio</b> izeneko tresna 
+erabil daiteke. Deskargatu Cinelerraren RPM paketea eta <tt>`/'</tt> 
+direktorioan exekutatu:<br>
+<code>rpm2cpio hvirtual*.rpm | cpio -i --make-directories</code> <br>
+Honek ez du beti funtzionatzen, sardetutako C liburutegi asko daude, 
+bata bestearekin bateraezina izanik. Hau da arrazoi nagusiena 
+hasieratik konpilatzea gomendatzeko.
+</p>
+<hr size="6">
+<a name="Cinelerra-CV-konpilatzea"></a>
+<a name="SEC11"></a>
+<h2 class="section"> 2.4 Cinelerra CV konpilatzea </h2>
+
+
+<hr size="6">
+<a name="Konpilazioaren-ohiko-prozesua"></a>
+<a name="SEC12"></a>
+<h3 class="subsection"> 2.4.1 Konpilazioaren ohiko prozesua </h3>
+
+<p>Cinelerra CV instalatzeko kodearen iturburua deskarga eta konpila dezakezu.
+Konpilazioa lantzeko Cinelerra CV-ren bertsio eguneratuena erabiltzea komeni da..
+</p>
+<ol>
+<li> Aurrenik lortu Cinelerra CV-ren iturburua SVN biltegitik 
+(170 MB gutxi gorabehera). Exekutatu:<br>
+<code>svn checkout svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code> <br>
+Hain eguneratua ez dagoen iturburua eskuratu baduzu, azken bertsiora 
+egunera dezakezu <tt>`hvirtual'</tt> direktorioan kokatuz eta honako komandoa
+exekutatuz ('subversion' paketea sisteman instalatuta egon behar du):<br>
+<code>svn update</code> <br>
+Bertsio zaharragoa lortzea nahi baduzu, exekutatu: <br>
+<code>svn checkout -r &lt;adarra&gt;
+svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code>
+
+</li><li> Joan 'hvirtual' karpetara: <br>
+<code>cd hvirtual</code>
+
+</li><li> Sortu <tt>`./configure'</tt> fitxategia honakoa exekutatuz: <br>
+<code>autoreconf -i --force</code>
+
+</li><li> Ondoren exekutatu <tt>`.configure'</tt> fitxategia: <br>
+<code>./configure --with-buildinfo=svn/recompile</code> <br>
+Erabilgarri dauden aukera guztiak ezagutzeko exekutatu: <br>
+<code>./configure --help</code>
+
+</li><li> Eta exekutatu 'make': <br>
+<code>make</code>
+
+</li><li> Azkenik, instalatu Cinelerra CV: <br>
+<code>sudo make install</code>
+</li></ol>
+
+<p><b>Oharrak:</b>
+</p><ul>
+<li> <b>SMP ordenagailua:</b> <br>
+Prozesadore anitzeko (SMP) sistemetan Cinelerra CV konpilatzeko <samp>`-j 3'</samp> aukera 
+gehitzea gomendatzen dugu, erabilgarri dauden prozesadoreen onurak eskuratzeko.
+</li><li> <b>x86 prozesadoreak soilik</b>: <br>
+Agian MMX euskarria gaitzea nahiko duzu. Horretarako exekutatu <code>./configure</code>
+komandoa  <samp>`--enable-mmx'</samp> aukerarekin. Hau eginez gero, <samp>`--without-pic'</samp> 
+aukera ere erabili beharko zenuke, bestela konpilazioak huts egingo baitu.
+</li><li> <b>Pentium-M:</b> <br>
+Bandera erabilgarri batzuk zerrendatu dira: <br>
+<code>./configure --prefix=/usr --enable-x86 --enable-mmx --enable-freetype2
+--with-buildinfo=svn/recompile CFLAGS='-O3 -pipe -fomit-frame-pointer
+-funroll-all-loops -falign-loops=2 -falign-jumps=2 -falign-functions=2
+-ffast-math -march=pentium-m -mfpmath=sse,387 -mmmx -msse'</code>
+</li><li> <b>Hainbat adar instalatzea:</b> <br>
+Cinelerra CV-ren hainbat adar instalatzea nahi baduzu, sortu <tt>`/usr/local_cinelerra'</tt> 
+karpeta, eta erabili honako aukerak <code>./configure</code> komandoarekin
+(ordeztu <samp>`xxx'</samp> konpilatuko den adarraren zenbakiarekin): <br>
+<samp>`--prefix=/usr/local_cinelerra/rxxx
+--exec-prefix=/usr/local_cinelerra/rxxx --program-suffix=_rxxx'</samp> <br>
+Metodo hau erabiliz Cinelerra instalatzen baduzu, itzulitako <tt>`.po'</tt> fitxategiak
+ez dira ongi instalatuko. Joan iturburua dagoen <tt>`hvirtual'</tt> direktoriora, eta
+exekutatu: <br>
+<code>./configure prefix=/usr</code> <br>
+<code>cd po</code> <br>
+<code>sudo make install</code> <br>
+Instalatuta dagoen direktoriotik exekutatu Cinelerra CV: <br>
+<code>cd /usr/local_cinelerra/r960</code> <br>
+<code>./cinelerra_r960</code>
+</li><li> <b>Automake version:</b> <br>
+Konpilatzeko automake 1.7 behar da, 1.4 bertsioarekin ez baitu funtzionatzen.  Autoconf 2.57 ere 
+behar da konpilatzeko.
+</li></ul>
+
+<hr size="6">
+<a name="Arazketako-ikurrekin-konpilatzea"></a>
+<a name="SEC13"></a>
+<h3 class="subsection"> 2.4.2 Arazketako ikurrekin konpilatzea </h3>
+
+<p>Cinelerra CV kraskatzen bada, arazketako ikurrekin konpila dezakezu eta 
+arazketako gdb programaren barruan exekutatu. Gdb tresnarekin bistaratutako 
+informazioak xehetasun gehiago du eta CV bertsioko garatzaileei laguntzen die
+akatsak azkarrago aurkitzen eta konpontzen.
+</p>
+<p>Aurrenik, lortu kodearen iturburua SVN biltegitik. Ondoren 
+exekutatu honako komandoak: <br>
+<code>cd hvirtual</code> <br>
+<code>nice -19 autoreconf -i --force</code> <br>
+<code>mkdir ../hvdbg</code> <br>
+<code>cd ../hvdbg</code> <br>
+<code>nice -19 ../hvirtual/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g'
+--with-buildinfo=svn/recompile</code> <br>
+<code>cd quicktime/ffmpeg</code> <br>
+<code>nice -19 make CFLAGS='-O3'</code> <br>
+<code>cd ../..</code> <br>
+<code>nice -19 make</code> <br>
+<code>nice -19 make install</code>
+</p>
+<p>See section <a href="cinelerra_cv_manual_eu_21.html#SEC296">Erroreen berri ematea</a>, gdb tresnaren barruan Cinelerra exekutatzeari buruz.
+</p>
+<hr size="6">
+<a name="Cinelerra-exekutatzea"></a>
+<a name="SEC14"></a>
+<h2 class="section"> 2.5 Cinelerra exekutatzea </h2>
+
+<p>Cinelerra exekutatzeko modurik errezena <code>/usr/bin/cinelerra</code> komandoa 
+exekutatzea da. <br>
+Komando-lerroko aukerak zerrendatzeko idatzi: <code>cinelerra -h</code>. 
+Hurrengo ataletan aukera hauek deskribatzen dira. Komando-lerrotik errendatzeko
+ikusi See section <a href="cinelerra_cv_manual_eu_19.html#SEC256">Fitxategiak errendatzea</a>. atala.
+</p>
+<hr size="6">
+<a name="Debian"></a>
+<a name="SEC15"></a>
+<h2 class="section"> 2.6 Debian </h2>
+
+
+<hr size="6">
+<a name="Debian-bitarrak"></a>
+<a name="SEC16"></a>
+<h3 class="subsection"> 2.6.1 Debian bitarrak </h3>
+
+<p>Andraz <small>TORI</small>-ek mantentzen ditu Cinelerra CV konpilatzeko arauak
+Debian Sid adarrean. Sid adarreko .deb pakete bitarrak ere berak konpilatzen ditu.
+Pakete hauek SVN biltegiko argitalpen ez ofizialetik eskuratutako iturburuekin
+konpilatuta daude. Debian Sid adarreko paketeak honako gunetan aurki daitezke:
+</p><ul>
+<li> <b>Apt source for i386:</b> <br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./</code>
+</li><li> <b>Apt source for Pentium4 (optimized):</b> <br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentium4/ ./</code>
+</li><li> <b>Apt source for Pentium-M (optimized):</b> <br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentiumm/ ./</code>
+</li><li> <b>Apt source for AthlonXP (optimized):</b> <br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/athlonxp/ ./</code>
+</li><li> <b>Apt source for Athlon64 (optimized):</b> <br>
+<code>deb http://labbs.net/~vale/debian ./</code>
+</li></ul>
+
+<p><b>Oharra:</b> Cinelerra-k honako errorea ematen badu: <br>
+<code>cinelerra: relocation error: /usr/lib/libavcodec.so.0.4.8:
+undefined symbol: faacDecOpen</code> <br>
+honako komandoa exekutatu supererabiltzaile ('root') gisa: <br>
+<code>apt-get install --reinstall libfaad2-0=2.0.0-0.5</code>
+</p>
+<hr size="6">
+<a name="Debian_002den-eskakizunak"></a>
+<a name="SEC17"></a>
+<h3 class="subsection"> 2.6.2 Debian-en eskakizunak </h3>
+
+<p>Debian banaketa ofizialeko biltegian aurkitzen ez diren zenbait betekizun 
+osatu behar dituzu. Sistemako <tt>`/etc/apt/sources.list'</tt> fitxategian honako
+lerroa gehitu (Christian Marillat-en biltegia da): <br>
+<code>deb http://www.debian-multimedia.org/ sid main</code>
+</p>
+<p>Zerbitzari-ispilua erabiltzeko Marillat-en gakoa zure gako-sortan gehitu behar duzu: <br>
+<code>gpg --keyserver hkp://wwwkeys.eu.pgp.net --recv-keys 1F41B907</code> <br>
+<code>gpg --armor --export 1F41B907 | sudo apt-key add -</code> <br>
+Ezin baduzu sudo erabili, landu honakoa supererabiltzaile ('root') gisa: <br>
+<code>gpg --armor --export 1F41B907 | apt-key add -</code>
+</p>
+<hr size="6">
+<a name="Ubuntu"></a>
+<a name="SEC18"></a>
+<h2 class="section"> 2.7 Ubuntu </h2>
+
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Gentoo"></a>
+<a name="SEC19"></a>
+<h2 class="section"> 2.8 Gentoo </h2>
+
+<p>Gentoo GNU/Linux banaketan Cinelerra CV instalatzea zuzeneko gauza da. 
+Soilik honakoa idatzi: <br>
+<code>emerge cinelerra</code> <br>
+supererabiltzaile gisa eta berak instalatu eta exekutatuko du inolako arazorik gabe.
+</p>
+<hr size="6">
+<a name="Knoppix"></a>
+<a name="SEC20"></a>
+<h2 class="section"> 2.9 Knoppix </h2>
+
+<p>Knoppix banaketa berezi bat da, CD edo DVD motako euskarrian GNU/Linux 
+sistema eragile abiarazgarria du, hardwarea automatikoki detektatzeko 
+gaitasunarekin: txartel grafikoak, soinu-txartelak, SCSI eta USB gailuak, e.a.
+Knoppix banaketa probako GNU/Linux gisa erabil daiteke, baita hezkuntzako CD gisa
+edo sistema berreskuratzeko ere. Gainera produktu komertzialak erakusteko baliagarria da.
+Ez da beharrezkoa Knoppix disko gogorrean instalatzea.
+(<a href="http://www.knoppix.org">http://www.knoppix.org</a> gunetik eskuratua)
+</p>
+<p>Cinelerra duten Knoppix banaketa ezagunenak:
+</p><ul>
+<li> <a href="http://www.dynebolic.org">http://www.dynebolic.org</a>
+</li><li> <a href="http://linux.slo-tech.com">http://linux.slo-tech.com</a>
+</li><li> <a href="http://garbure.org/pho">http://garbure.org/pho</a>
+</li></ul>
+
+<hr size="6">
+<a name="Redhat"></a>
+<a name="SEC21"></a>
+<h2 class="section"> 2.10 Redhat </h2>
+
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Mandriva"></a>
+<a name="SEC22"></a>
+<h2 class="section"> 2.11 Mandriva </h2>
+
+<p>Agian, Cinelerra Mandriva banaketan konpilatzeko dagoen aldaketa
+nagusiena liburutegien mendekotasun egokiekin dauka zerikusia.
+Beharrezko liburutegiak (eta beraien garapenerako paketeak) instalatutakoan 
+konpilazioa gozo lantzen da.
+</p>
+<hr size="6">
+<a name="Slackware"></a>
+<a name="SEC23"></a>
+<h2 class="section"> 2.12 Slackware </h2>
+
+<p>Rafael <small>DINIZ</small>-ek konpilatzen ditu Cinelerraren paketeak Slackware banaketarentzako.
+</p>
+<ul>
+<li> <b>x86 prozesadoreak:</b> <br>
+<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/">http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/</a>
+</li><li> <b>slackintosh:</b> <br>
+<a href="http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/">http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/</a>
+</li></ul>
+
+<hr size="6">
+<a name="Suse"></a>
+<a name="SEC24"></a>
+<h2 class="section"> 2.13 Suse </h2>
+
+<p>SuSE 9 banaketarako RPM paketeak CVS biltegitik konpilatzen ditu 
+Kevin <small>BROSIUS</small>-ek, eta honako gunean daude eskuragarri: 
+<a href="http://cin.kevb.net/files/RPM/">http://cin.kevb.net/files/RPM/</a>
+</p>
+<hr size="6">
+<a name="MacOSX"></a>
+<a name="SEC25"></a>
+<h2 class="section"> 2.14 MacOSX </h2>
+
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC7" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_3.html#SEC26" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

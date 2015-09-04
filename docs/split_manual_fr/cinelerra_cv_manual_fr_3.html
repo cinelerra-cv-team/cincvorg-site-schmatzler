@@ -1,0 +1,1140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 3. Configuration</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 3. Configuration">
+<meta name="keywords" content="Manuel de Cinelerra CV: 3. Configuration">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_2.html#SEC8" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_4.html#SEC58" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Configuration"></a>
+<a name="SEC26"></a>
+<h1 class="chapter"> 3. Configuration </h1>
+
+<p>En raison de sa flexibilité, Cinelerra ne peut tourner de manière optimale sans
+être finement configuré pour répondre à vos besoins particuliers.
+Malheureusement, peu de paramètres sont ajustables lors de la compilation.  En
+conséquence de quoi la configuration lors de l'exécution est la seule
+possibilité pour la plupart des systèmes en raison de la multitude des
+paramètres.<br>
+Ci-dessous se trouvent les options de configuration ainsi que les différentes
+API de GNU/Linux qui sont supportées.<br>
+Dans Cinelerra, allez à <b>Configuration-&gt;Préférences</b> afin de voir les
+options.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC27">3.1 Variables d'environnement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Ces variables d'environnement sont reconnues par Cinelerra.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC28">3.2 Pilotes audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          	Informations concernant les pilotes audio.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC37">3.3 Pilotes vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          	Informations concernant les pilotes vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC46">3.4 Lecture</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">			Configurer les paramètres relatifs à la lecture.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC49">3.5 Acquisition</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		        Configurer les paramètres relatifs à l'enregistrement.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC53">3.6 Performances</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">            	Configurer les paramètres permettant d'accélérer les choses.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC56">3.7 Interface</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              	Configurer l'interface utilisateur.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC57">3.8 A propos</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                  	Afficher certaines informations concernant le programme.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Variables-d_0027environnement"></a>
+<a name="SEC27"></a>
+<h2 class="section"> 3.1 Variables d'environnement </h2>
+
+<p>Dans les variantes d'UNIX, les variables d'environnement sont des variables
+globales de l'interpréteur de commande (shell) que toutes les applications
+peuvent lire.  Elles sont définies en utilisant des commandes telles que
+<code>set VARIABLE=value</code>.  Toutes les variables d'environnement peuvent
+être affichées avec la commande <code>env</code>.  Cinelerra reconnaît les
+variables d'environnement suivantes :
+</p>
+<ul>
+<li> <b>LADSPA_PATH</b><br>
+Cette variable doit être définie si vous désirez utiliser des greffons LADSPA ;
+c'est une liste de répertoires, séparés par des &quot;:&quot;, où les greffons LADSPA
+sont recherchés.  Ce ne sont pas des greffons natifs de Cinelerra.  Voir la section <a href="cinelerra_cv_manual_fr_15.html#SEC239">Les effets Ladspa</a>.
+
+</li><li> <b>GLOBAL_PLUGIN_DIR</b><br>
+C'est le répertoire où Cinelerra recherchera les greffons natifs.  La valeur
+par défaut est <tt>`/usr/lib/cinelerra'</tt> mais vous pouvez avoir besoin d'un
+autre répertoire si vous partagez le même répertoire exécutable avec de
+nombreuses machines via NFS.  Des greffons ayant des formats binaires
+différents doivent se trouver dans des répertoires différents.
+
+</li><li> <b>LANG</b><br>
+Cinelerra a été traduit dans de nombreuses langues.  Les paramètres de langue
+de Cinelerra sont normalement lus depuis vos paramètres régionaux de GNU/Linux.
+Pour faire tourner Cinelerra dans une langue différente de celle de votre
+système.  Modifiez simplement la variable d'environnement LANG.
+Par exemple ouvrez un terminal et entrez la commande : <code>export
+LANG=fr_FR</code>, et lancez ensuite <code>cinelerra</code> depuis la même fenêtre.  Il va
+s'ouvrir configuré en français.<br>
+Les langues disponibles sont :
+<ul>
+<li> en_EN - anglais
+</li><li> es_ES - espagnol
+</li><li> sl_SI - slovène
+</li><li> fr_FR - francais
+</li><li> eu_ES - Euskera
+</li><li> de_DE - allemand
+</li><li> pt_BR - portugais (Brésil)
+</li><li> it_IT - Italien
+</li></ul>
+<p>Si vous avez installé Cinelerra CV en le compilant depuis les sources, et que
+vous avez indiqué une option <samp>`--prefix='</samp> différente de
+<tt>`/usr/local'</tt>, les fichiers traduits ne seront probablement pas installés.
+Voir la section <a href="cinelerra_cv_manual_fr_2.html#SEC12">Processus de compilation habituel</a>, pour davantage d'informations.
+</p></li></ul>
+
+<hr size="6">
+<a name="Pilotes-audio"></a>
+<a name="SEC28"></a>
+<h2 class="section"> 3.2 Pilotes audio </h2>
+
+<p>Les pilotes audio sont utilisés à la fois pour l'enregistrement et la lecture
+du son.  Leur fonctionnalité est décrite ici dans une section ci-dessous :
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC29">3.2.1 Attributs communs aux pilotes audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> attributs qui ne sont pas propres à un seul pilote audio.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC30">3.2.2 OSS</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote OSS.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC31">3.2.3 OSS Envy24</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote OSS pour le composant Envy24.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC32">3.2.4 Alsa</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote ALSA.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC33">3.2.5 Esound</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote ESound.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC34">3.2.6 Raw 1394</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote Raw1394.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC35">3.2.7 DV 1394</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote DV1394.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC36">3.2.8 IEC 61883</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> notes concernant le pilote IEC 61883.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Attributs-communs-aux-pilotes-audio"></a>
+<a name="SEC29"></a>
+<h3 class="subsection"> 3.2.1 Attributs communs aux pilotes audio </h3>
+
+<ul>
+<li> <b>Chemin vers le périphérique</b> <br>
+C'est habituellement un fichier dans le répertoire <tt>`/dev/'</tt>, qui contrôle
+le périphérique.
+
+</li><li> <b>Bits</b><br>
+Nombre de bits de précision pour lequel Cinelerra doit configurer le
+périphérique.  Ceci a parfois une signification figurée.  Certains pilotes
+audio ont besoin d'être configurés avec 32 bits pour pouvoir effectuer la
+lecture du son sous 24 bits et ne joueront rien s'ils sont configurés avec 24
+bits.  Certains pilotes ont besoin d'être configurés avec 24 bits pour une
+lecture du son en 24 bits.
+
+</li><li> <b>Canaux</b><br>
+Nombre de canaux devant être configurés par Cinelerra pour le périphérique.
+Indépendemment du nombre de canaux du projet, le nombre de canaux configurés
+ici sera écrit à destination du périphérique.  Lorsqu'il est défini à 2 et que
+le projet n'a qu'un canal, vous pourrez entendre le son par le haut-parleur de
+gauche et non centré comme on pourrait s'y attendre avec un projet mono.
+Lorsqu'il est défini à 1 et que le projet a deux canaux, vous entendrez le
+canal de gauche centré et non les deux canaux mélangés.
+</li></ul>
+
+<hr size="6">
+<a name="OSS"></a>
+<a name="SEC30"></a>
+<h3 class="subsection"> 3.2.2 OSS </h3>
+
+<p>Ce fut le premier pilote audio pour GNU/Linux.  Il possédait une implémentation
+libre ainsi qu'une implémentation commerciale qui pouvait gérer davantage de
+cartes.  C'était le pilote audio standard jusqu'à GNU/Linux 2.4.  C'est encore
+le seul pilote audio avec lequel un binaire i386 peut être utilisé lorsqu'il
+tourne sur un système x86_64.
+</p>
+<hr size="6">
+<a name="OSS-Envy24"></a>
+<a name="SEC31"></a>
+<h3 class="subsection"> 3.2.3 OSS Envy24 </h3>
+
+<p>La version commerciale d'OSS comportait une variante pour les cartes son 24 bit
+96 kHz.  Cette variante avait besoin de modifications significatives dans la
+manière d'utiliser les pilotes audio, d'où le besoin d'un nouveau pilote.
+</p>
+<hr size="6">
+<a name="Alsa"></a>
+<a name="SEC32"></a>
+<h3 class="subsection"> 3.2.4 Alsa </h3>
+
+<p>ALSA est le plus courant des pilotes audio utilisés sous GNU/Linux 2.6.  Il
+sait maintenant gérer la plupart des cartes son.  Il profite des
+fonctionnalités de faible latence de GNU/Linux 2.6 pour procurer de meilleures
+performances que ce qui est obtenu avec OSS et GNU/Linux 2.4, mais les
+performances sont sensiblement les mêmes que celles qu'OSS permettait d'avoir
+avec la version 2.0.  Malheureusement ALSA est en perpétuelle évolution.  Un
+programme qui fonctionne avec un jour, peut très bien ne plus fonctionner le
+lendemain.  De nouvelles interfaces sont développées autour d'ALSA au même
+rythme.  Nous prévoyons d'en ajouter la gestion à intervalle régulier, mais pas
+chaque fois qu'il en sortira un nouveau.<br>
+ALSA n'est maintenant plus portable entre i386 et x86_64.  Si un binaire i386
+tente une lecture du son avec un noyau x86_64, il va se planter.  Dans ce cas,
+utilisez OSS.
+</p>
+<hr size="6">
+<a name="Esound"></a>
+<a name="SEC33"></a>
+<h3 class="subsection"> 3.2.5 Esound </h3>
+
+<p>ESOUND est un serveur de son qui s'appuie sur OSS.  Il a été écrit pour un
+gestionnaire de fenêtres appelé Enlightenment.  Il gère un nombre limité de
+bits et possède une latence élevée par rapport aux pilotes plus modernes, mais
+il permet de multiplexer des sources audio multiples.  On ne sait pas s'il
+fonctionne toujours.
+</p>
+<hr size="6">
+<a name="Raw-1394"></a>
+<a name="SEC34"></a>
+<h3 class="subsection"> 3.2.6 Raw 1394 </h3>
+
+<p>C'était la première interface entre les logiciels GNU/Linux et les caméscopes
+firewire.  C'est la méthode la moins fiable pour reproduire l'audio vers un
+caméscope et elle consiste en une bibliothèque reposant sur des commandes du
+noyau.
+</p>
+<hr size="6">
+<a name="DV-1394"></a>
+<a name="SEC35"></a>
+<h3 class="subsection"> 3.2.7 DV 1394 </h3>
+
+<p>Deuxième réécriture de la gestion des caméscopes DV sous GNU/Linux.  C'est la
+méthode la plus fiable de reproduire l'audio vers un caméscope et elle consiste
+en des commandes directes du noyau.
+</p>
+<hr size="6">
+<a name="IEC-61883"></a>
+<a name="SEC36"></a>
+<h3 class="subsection"> 3.2.8 IEC 61883 </h3>
+
+<p>Troisième réécriture de la gestion DV pour GNU/Linux.  C'est une bibliothèque
+résidant au-dessus de RAW 1394 qui est lui même au-dessus des commandes du
+noyau.  Elle est moins fiable que DV 1394 mais plus fiable que RAW 1394.  La
+prochaine réécriture devrait résoudre cela.  Consultez
+<a href="http://www.linux1394.org">http://www.linux1394.org</a> pour plus d'information sur les derniers
+pilotes.
+</p>
+<hr size="6">
+<a name="Pilotes-vid_00e9o"></a>
+<a name="SEC37"></a>
+<h2 class="section"> 3.3 Pilotes vidéo </h2>
+
+<p>Les pilotes vidéo sont utilisés pour la visualisation dans le compositeur et la
+visionneuse
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC38">3.3.1 Attributs communs aux pilotes vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> Paramètres qui ne sont pas restreints à un seul pilote.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC39">3.3.2 X11</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC40">3.3.3 X11-XV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC41">3.3.4 X11-OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC42">3.3.5 Buz</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC43">3.3.6 Lecture vidéo raw 1394</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC44">3.3.7 Lecture vidéo DV 1394</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC45">3.3.8 Lecture vidéo IEC 61883</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Attributs-communs-aux-pilotes-vid_00e9o"></a>
+<a name="SEC38"></a>
+<h3 class="subsection"> 3.3.1 Attributs communs aux pilotes vidéo </h3>
+
+<ul>
+<li> <b>Affichage</b><br>
+<a name="IDX8"></a>
+L'interface est conçue pour les systèmes à deux moniteurs.  Selon la valeur de
+ce paramètre, la fenêtre de composition apparaîtra sur un moniteur différent du
+reste des autres fenêtres.
+
+</li><li> <b>Chemin vers le périphérique</b><br>
+C'est habituellement un fichier du répertoire <tt>`/dev/'</tt> qui contrôle le
+périphérique.
+
+</li><li> <b>Permuter les champs</b><br>
+Rendre pairs les champs impairs et impairs les champs pairs lors de leur envoi
+vers le périphérique.  Sur un moniteur NTSC ou 1080i les champs doivent être
+permutés pour éviter les sautillements lors des déplacements.
+
+</li><li> <b>Canal de sortie</b><br>
+Vous pouvez avoir besoin d'un connecteur spécifique pour envoyer de la vidéo
+vers des périphériques ayant plusieurs sorties.
+
+</li><li> <b>Port</b><br>
+La norme IEEE1394 indique quelque chose appelé le <b>port</b>.  C'est probablement
+le numéro de la carte firewire du système à utiliser.
+
+</li><li> <b>Canal</b><br>
+La norme IEEE1394 précise quelque chose appelé <b>channel</b>.  Pour les
+caméscopes DV, il s'agit toujours de <b>63</b>.
+</li></ul>
+
+<hr size="6">
+<a name="X11"></a>
+<a name="SEC39"></a>
+<h3 class="subsection"> 3.3.2 X11 </h3>
+
+<p>Ce fut la première méthode pour afficher de la vidéo sur les systèmes UNIX.  Le
+triplet RVB de chaque pixel est simplement envoyé directement vers la fenêtre.
+C'est la méthode de lecture la plus lente.  Elle est encore utilisée comme
+méthode de repli lorsque le matériel de gestion graphique ne permet pas de
+gérer de très grandes images.
+</p>
+<hr size="6">
+<a name="X11_002dXV"></a>
+<a name="SEC40"></a>
+<h3 class="subsection"> 3.3.3 X11-XV </h3>
+
+<p>Ce fut une amélioration de X11 en 1999.  Elle convertit le signal YUV en RVB au
+niveau matériel avec mise à l'échelle.  C'est la méthode conseillée pour la
+lecture vidéo mais elle ne peut pas gérer de très grandes images.  La taille
+maximale des vidéo avec XV est habituellement de 1920x1080.
+</p>
+<hr size="6">
+<a name="X11_002dOpenGL"></a>
+<a name="SEC41"></a>
+<h3 class="subsection"> 3.3.4 X11-OpenGL </h3>
+
+<p>Le méthode la plus puissante pour reproduire la vidéo est OpenGL.  Avec ce
+pilote, la plupart des effets effectués par le matériel.  OpenGL permet des
+dimensions de vidéo jusqu'à la taille maximale des textures, qui est
+généralement plus grande que ce que permet XV, en fonction du pilote graphique
+utilisé.  Pour l'activer, vous devrez utiliser un binaire compilé avec la
+gestion d'OpenGL.  L'option de la commande <code>configure</code> pour activer
+OpenGL est <samp>`--enable-opengl'</samp>.  Il vous faudra une carte graphique qui
+gère OpenGL 2.0.  Les cartes récentes de Nvidia devraient fonctionner.  Il vous
+faudra aussi utiliser un pilote vidéo gérant OpenGL 2.0, tel que le pilote
+binaire de Nvidia.  Pour savoir si votre pilote vidéo gère OpenGL 2.0, utilisez
+la commande suivante : <code>glxinfo | grep &quot;OpenGL version&quot;</code>
+</p>
+<ul>
+<li> Pilote vidéo gérant le rendu matériel OpenGL 2.0 :<br>
+<code>OpenGL version string: 2.0.2 NVIDIA 87.74</code>
+</li><li> Pilote vidéo ne gérant pas le rendu matériel OpenGL 2.0 :<br>
+<code>OpenGL version string: <b>1.4</b> (2.0.2 NVIDIA 87.74)</code>
+</li></ul>
+
+<p>OpenGL repose sur des PBuffers et des shaders afin d'effectuer le rendu vidéo.
+Le pilote graphique doit pouvoir gérer OpenGL 2.0 et Cinelerra doit avoir été
+explicitement compilé avec la gestion OpenGL 2.0.  Ceci demande à ce qu'il soit
+compilé sur un système avec les en-têtes OpenGL 2.  Les PBuffers sont connus
+pour être incohérents.  Si la carte graphique ne possède pas assez de mémoire
+ni les bons visuels, les PBuffers ne fonctionneront pas.  Si OpenGL ne
+fonctionne pas, essayez de vous déplacer de quelques images ou de redémarrer
+Cinelerra.
+</p>
+<p><b>Limitations :</b>
+</p><ul>
+<li> OpenGL n'affecte pas le rendu.  Il permet juste d'accélérer la
+visualisation.
+</li><li> X11-OpenGL traite tout dans un modèle colorimétrique de 8 bit, cependant
+la différence entre YUV et RVB est conservée.
+</li><li> OpenGL ne fonctionne pas avec les images dont la taille est supérieure à
+4096x4096.<br>
+Voici ce qui est affiché à l'écran de la console lorsque vous travaillez avec
+de grandes images :<br>
+<code>BC_Texture::create_texture frame size &lt;frame_width&gt;x&lt;frame_height&gt; bigger
+than maximum texture 4096x4096.</code>
+</li><li> L'équation de mise à l'échelle définie dans la fenêtre des préférences
+est ignorée par OpenGL.
+OpenGL utilise toujours une mise à l'échelle linéaire.
+</li><li> La taille du projet et des pistes doit être un multiple de quatre pour
+qu'OpenGL puisse fonctionner.
+</li><li> Afin d'obtenir le maximum d'accélération, les effets utilisant OpenGL
+doivent être placés après les effets purement logiciels.  Tout le rendu placé
+avant le dernier effet purement logiciel sera effectué par logiciel.  Le coeur
+des opérations de Cinelerra comme la caméra et le projecteur sont sous OpenGL.
+</li><li> Les effets ne gèrent pas tous l'accélération OpenGL.  Les effets suivants
+supportent OpenGL : Luminosité, clé chromatique, clé chromatique hsv, équilibre
+des couleurs, Déentrelacement, Clé différence, Fondu enchaîné, Images vers
+Champs, Figer l'image, Gamma, Dégradé, Histogramme, Teinte/Saturation,
+Interpoler les Pixels,  Vidéo inverdée, Flou linéaire, Overlay, Perspective,
+Flou Radial, RVB601, Rotation, Redimensionner, Seuil, Flou de zoom.
+</li></ul>
+
+<hr size="6">
+<a name="Buz"></a>
+<a name="SEC42"></a>
+<h3 class="subsection"> 3.3.5 Buz </h3>
+
+<p>C'est une méthode pour reproduire directement les fichiers animés de type
+JPEG-A sous la forme d'un signal analogique composite.  Il utilise une astuce
+populaire du pilote Video4Linux 1 depuis 2000 pour décompresser le JPEG au
+niveau matériel.  Bien que la vidéo analogique soit largement obsolète, des
+pilotes plus récents ont remplacé BUZ.
+</p>
+<hr size="6">
+<a name="Lecture-vid_00e9o-raw-1394"></a>
+<a name="SEC43"></a>
+<h3 class="subsection"> 3.3.6 Lecture vidéo raw 1394 </h3>
+
+<p>Première interface entre le logiciel GNU/Linux et les caméscopes firewire.
+C'est la méthode la moins fiable de transmettre de la vidéo vers un caméscope
+et elle consiste en une bibliothèque reposant sur des commandes du noyau.
+</p>
+<hr size="6">
+<a name="Lecture-vid_00e9o-DV-1394"></a>
+<a name="SEC44"></a>
+<h3 class="subsection"> 3.3.7 Lecture vidéo DV 1394 </h3>
+
+<p>Deuxième réécriture de la gestion des caméscopes DV sous GNU/Linux.  C'est la
+méthode la plus fiable pour transmettre de la vidéo vers un caméscope et elle
+consiste en des commandes directes du noyau.
+</p>
+<hr size="6">
+<a name="Lecture-vid_00e9o-IEC-61883"></a>
+<a name="SEC45"></a>
+<h3 class="subsection"> 3.3.8 Lecture vidéo IEC 61883 </h3>
+
+<p>Troisième réécriture de la gestion DV pour GNU/Linux.  C'est une bibliothèque
+au-dessus de RAW 1394 et qui est moins fiable que DV 1394 mais plus fiable que
+RAW 1394.  La prochaine réécriture devrait résoudre cela.  Consultez
+<a href="http://www.linux1394.org">http://www.linux1394.org</a> pour plus d'information et les derniers
+pilotes.
+</p>
+<hr size="6">
+<a name="Lecture"></a>
+<a name="SEC46"></a>
+<h2 class="section"> 3.4 Lecture </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC47">3.4.1 Sortie audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC48">3.4.2 Sortie vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Sortie-audio"></a>
+<a name="SEC47"></a>
+<h3 class="subsection"> 3.4.1 Sortie audio </h3>
+
+<p>Ceci détermine ce qui se passe lorsque vous jouez un son depuis la timeline.
+</p>
+<a name="IDX9"></a>
+<ul>
+<li> <b>Echantillons à envoyer à la console</b><br>
+Pour reproduire l'audio, de petits segments sonores sont lus depuis le disque
+et traités séquentiellement dans une console virtuelle.  Une plus grande valeur
+engendre davantage de latence lorsque vous modifierez les paramètres de mixage
+mais permettra une lecture plus fiable.<br>
+Certains pilotes audio ne permettent pas de changer la fragmentation de la
+console, la latence demeure donc inchangée quelque soit la valeur.<br>
+Précédemment, une bonne manière de s'assurer de la bonne qualité de la lecture
+était de lire de plus gros fragments depuis le disque et de les découper en
+plus petits fragments pour la carte son.  Ceci a changé lorsque la console
+virtuelle est passée d'un modèle &quot;push&quot; à un modèle &quot;pull&quot;.  Comme différentes
+étapes du pipeline de rendu peuvent modifier le taux des données entrantes, il
+serait difficile de différencier la taille des fragments de la console de la
+taille de ceux lus sur le disque.
+
+<a name="IDX10"></a>
+</li><li> <b>Décalage audio</b><br>
+La possibilité d'indiquer la position de lecture exacte avec les pilotes de
+GNU/Linux est mauvaise.  Comme cette information est nécessaire pour une
+synchronisation correcte de la vidéo, elle doit être précise.  Le <b>décalage
+audio</b> permet à l'utilisateur d'ajuster la position retournée par le pilote
+audio afin de rendre compte de la réalité.  Le décalage audio ne modifie en
+rien la lecture audio ni le rendu.  Il modifie simplement la synchronisation de
+la lecture vidéo.<br>
+La manière la plus simple de définir le décalage audio est de créer une
+timeline avec une piste vidéo et une piste audio.  D'étendre la piste audio et
+de centrer sa commande de panoramique (stéréo).  Le débit des images doit être
+supérieur à 24 i/s et le taux d'échantillonnage doit être supérieur à 32000.
+Les images doivent être de petite taille pour que votre ordinateur puisse en
+effectuer le rendu en temps réel.  Mettez en surbrillance la région de la
+timeline commençant à 10 secondes et se terminant à 20 secondes.  Déposez un
+effet <b>Dégradé</b> sur la piste vidéo et configurez-le de façon à ce qu'il soit
+clairement visible.  Déposez une effet <b>Synthétiseur</b> sur l'audio et
+configurez-le de façon à ce qu'il soit clairement audible.<br>
+Lisez la timeline à partir de 0 et regardez si l'effet de dégradé et le son
+commencent en même temps.  Si ce n'est pas le cas, étendez la piste audio et
+ajustez le décalage.  Si le son commence avant la vidéo, diminuez la valeur de
+décalage.  Si le son commence après la vidéo, augmentez la valeur de décalage.
+Une fois la lecture des pistes synchronisée, copiez la valeur du décalage dans
+la valeur du <b>décalage audio</b> des préférences.<br>
+<b>Note :</b> si vous changez de pilotes audio ou si vous modifiez la valeur de
+<b>Utiliser le logiciel pour les informations de positionnement</b>, vous devrez
+modifier le décalage audio parce que les différents pilotes audio présentent
+des imprécisions différentes.
+
+<a name="IDX11"></a>
+</li><li> <b>L'affichage suit la lecture</b><br>
+Ceci fait défiler la fenêtre de la timeline lorsque le curseur de visualisation
+se déplace.  Ceci peut bloquer le serveur X ou figer la fenêtre de la timeline
+durant de longues périodes lors du dessin des objets graphiques.
+
+<a name="IDX12"></a>
+</li><li> <b>Utiliser le logiciel pour les informations de positionnement</b><br>
+La plupart des cartes son et des pilotes audio ne donnent pas une information
+fiable concernant le nombre d'échantillons que la carte a joué.  Vous avez
+besoin de cette information pour la synchronisation lorsque vous visualisez de
+la vidéo.  Grâce à cette option le pilote audio est ignoré et un temporisateur
+logiciel est utilisé pour la synchronisation.
+
+<a name="IDX13"></a>
+</li><li> <b>Lecture audio en temps réel</b><br>
+Lorsque 150 MHz était la vitesse maximum d'un ordinateur personnel, ce
+paramètre permettait d'avoir une lecture non saccadée lorsque la charge de la
+machine était élevée.  Cette option force la plus haute priorité dans le noyau
+pour la lecture sonore.  Aujourd'hui, ceci a plutôt son utilité pour obtenir
+une très faible latence entre les réglages de la console et la sortie de la
+carte son.  Vous devez être administrateur (root) pour pouvoir obtenir la
+priorité temps réel.
+
+<a name="IDX14"></a>
+</li><li> <b>Pilote audio</b><br>
+Il y a de nombreux pilotes audio pour GNU/Linux.  Cette option permet de
+choisir un pilote et ses paramètres spécifiques.  Les pilotes audio et leurs
+paramètres sont décrits dans la section des pilotes audio.  Voir la section <a href="#SEC28">Pilotes audio</a>.
+</li></ul>
+
+<hr size="6">
+<a name="Sortie-vid_00e9o"></a>
+<a name="SEC48"></a>
+<h3 class="subsection"> 3.4.2 Sortie vidéo </h3>
+
+<p>Ceci détermine comment la vidéo est affichée depuis la timeline.
+</p>
+<a name="IDX15"></a>
+<a name="IDX16"></a>
+<ul>
+<li> <b>Reproduire toutes les images</b><br>
+Ceci forcera l'affichage de toutes les images de la vidéo, même si cela lui
+fait prendre du retard par rapport à l'audio.  Cette option devrait toujours
+être activée à moins que vous n'utilisiez principalement des codecs non
+compressés.  La plupart des codecs compressés n'autorisent plus de sauter des
+d'images.  Au 1/2007, la plupart des codecs compressés ne supportent plus le
+saut d'images.
+
+<a name="IDX17"></a>
+</li><li> <b>Fréquence des images obtenues</b><br>
+Nombre d'images par seconde affichées lors d'une lecture.  Ce n'est mis à jour
+que lors de la lecture uniquement.
+
+<a name="IDX18"></a>
+</li><li> <b>Décoder les images de manière asynchrone</b><br>
+Si vous avez beaucoup de mémoire et plus d'un processeur, cette option peut
+améliorer les performances en lecture en décodant la vidéo aussi rapidement que
+possible sur l'un des processeurs tout en dédiant l'autre processeur à
+l'affichage vidéo.  Ceci suppose que toutes les opérations de lecture se font
+dans le sens normal et qu'on ne saute aucune image.  Les opérations demandant
+une lecture en sens inverse ou sautant des images seront impactées de manière
+négative.<br>
+Comme cette option demande énormément de mémoire, Cinelerra peut planter si les
+images en entrée sont très grandes.
+
+<a name="IDX19"></a>
+</li><li> <b>Equation de mise à l'échelle</b><br>
+Cet algorithme est utilisé lorsque la lecture de la vidéo nécessite une mise à
+l'échelle ou une translation dans la console virtuelle.  La lecture à l'échelle 1:1 n'est pas affectée
+par cet algorithme.
+<ul>
+<li> <b>Plus proche voisin utilisé pour la réduction et l'agrandissement</b><br>
+Qualité d'affichage relativement médiocre, mais lecture rapide.  Produit des
+bordures irrégulières et des déplacements saccadés.
+</li><li> <b>Agrandissement bicubique et réduction bilinéaire</b><br>
+Haute qualité d'affichage, accompagnée d'une lecture plus lente.  Une
+interpolation bicubique est utilisée pour l'agrandissement ce qui ajoute un peu
+de flou mais ne crée pas d'effet d'escalier sur l'image.  Une interpolation
+bilinéaire et utilisée pour la réduction, ce qui donne des images très piquées
+et réduit le bruit.  Les images réduites avec une interpolation bilinéaire
+peuvent être accentuées à l'aide d'un effet de netteté avec moins de bruit que
+des images normalement redimensionnées.
+</li><li> <b>Agrandissement bilinéaire et réduction bilinéaire</b><br>
+Lorsque de faibles agrandissements sont nécessaires, un agrandissement
+bilinéaire donne de meilleurs résultats qu'un agrandissement bicubique.
+</li></ul>
+
+<a name="IDX20"></a>
+<a name="IDX21"></a>
+</li><li> <b>Tampon pour Quicktime</b><br>
+Le décodeur Quicktime/AVI peut mieux gérer des sources DVD si cette valeur est
+fixée aux alentours de 10000000.  Ceci diminue le nombre de déplacements
+nécessaires.  Malheureusement, lors de la lecture depuis le disque dur de
+sources ayant un débit binaire élevé, ceci tend à impacter négativement les
+performances en ralentissant le décodage de l'image.  Dans le cadre d'une
+utilisation normale, la valeur devrait être de 0.
+
+<a name="IDX22"></a>
+</li><li> <b>Sous-titres du DVD à afficher</b><br>
+Les fichiers IFO DVD contiennent généralement des pistes de sous-titres.  Elles
+doivent être décodées par le décodeur MPEG.  Sélectionnez <b>Activer les
+sous-titres</b> afin d'activer le décodage des sous-titres.  Il y a habituellement
+plusieurs pistes de sous-titres, indexées par un chiffre commencent à 0.
+Entrez le numéro de l'index de la piste de sous-titres à décoder dans la case
+&quot;Sous-titre à afficher&quot; ou utilisez le curseur pour augmenter sa valeur.  Allez
+à l'objet correspondant au fichier MPEG dans la fenêtre des ressources et
+faites un clic droit.  Cliquez sur Info.  Le numéro de la piste de sous-titres
+est indiqué en bas.
+
+<a name="IDX23"></a>
+</li><li> <b>Interpoler les images CR2</b><br>
+Activer l'interpolation des images CR2.  Une interpolation est nécessaire car
+les images brutes dans un fichier CR2 se présentent sous forme d'une matrice de
+Bayer.  L'interpolation utilise l'algorithme d'interpolation de dcraw qui est
+très lente.  Cette opération peut être désactivée et l'effet <b>Interpoler les
+Pixels</b> utilisé en remplacement afin d'obtenir un aperçu plus rapide.
+
+<a name="IDX24"></a>
+</li><li> <b>Balance des blancs des images CR2</b><br>
+Ceci active la balance des blancs des images CR2 si l'interpolation est aussi
+activée.  En effet une bonne balance des blancs nécessite un mélange de
+l'ensemble des 3 couleurs primaires.  La balance des blancs utilise la matrice
+de l'appareil photo qui est contenue dans le fichier CR2.<br>
+Désactiver la balance des blancs est utile pour des opérations qui mettent en
+oeuvre la soustraction d'images d'obscurité.  L'image d'obscurité et
+l'exposition longue doivent avoir la même matrice de couleurs.<br>
+Si vous désactivez <b>Interpoler les images CR2</b> et utilisez l'effet
+<b>Interpoler les Pixels</b>, soyez conscient que l'effet <b>Interpoler les
+Pixels</b> effectue à la fois l'interpolation et la balance des blancs en
+utilisant la matrice de l'appareil photo, indépendamment des paramètres définis
+dans les préférences.  La soustraction d'une image d'obscurité doit être
+effectuée avant <b>Interpoler les pixels</b>.
+
+<a name="IDX25"></a>
+</li><li> <b>Pilote vidéo</b><br>
+Normalement, la vidéo sur la timeline est dirigée vers la fenêtre de
+composition à la fois lors de lecture en continu et lorsque le point
+d'insertion est repositionné.  Plutôt que d'envoyer la vidéo vers la fenêtre du
+Compositeur, le pilote vidéo peut être configuré pour l'envoyer vers un autre
+périphérique de sortie lors de la lecture en continu.  Cependant, ceci
+n'affecte pas la destination de la vidéo lorsque le point d'insertion est
+repositionné.<br>
+Les pilotes vidéo et leurs paramètres sont décrits dans la section des pilotes
+vidéo.  Voir la section <a href="#SEC37">Pilotes vidéo</a>.
+</li></ul>
+
+<hr size="6">
+<a name="Acquisition"></a>
+<a name="SEC49"></a>
+<h2 class="section"> 3.5 Acquisition </h2>
+
+<p>Ces paramètres permettent de rendre la fonction <b>Fichier-&gt;Enregistrer...</b>
+aussi rapide que possible en permettant à l'utilisateur de pré-configurer le
+format de fichier à enregistrer.  Le format de fichier est appliqué à tous les
+enregistrements.  Le matériel utilisé pour l'enregistrement est aussi défini
+ici, puisque le matériel détermine le format du fichier dans la plupart des
+cas.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC50">3.5.1 Format de fichier</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC51">3.5.2 Entrée audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC52">3.5.3 Entrée vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Format-de-fichier"></a>
+<a name="SEC50"></a>
+<h3 class="subsection"> 3.5.1 Format de fichier </h3>
+
+<p>Ceci détermine le format des fichiers utilisé lors de l'acquisition.  Il dépend
+largement du type de pilote utilisé.  Les menus sont les mêmes que ceux de
+l'interface de rendu.  Voir la section <a href="cinelerra_cv_manual_fr_19.html#SEC256">Le rendu de fichiers</a>.  La case à cocher
+<b>Enregistrer les pistes audio</b> doit être validée pour enregistrer l'audio.
+La case à cocher <b>Enregistrer les pistes vidéo</b> doit être validée pour
+enregistrer la vidéo.  Le bouton &quot;clé anglaise&quot; situé à gauche de chacune des
+cases ouvre une boîte de dialogue de configuration permettant de définir la
+méthode de compression (codec) à utiliser pour chaque flux audio et vidéo en
+sortie.  L'audio et la vidéo sont encapsulées dans in conteneur défini par le
+menu <b>Format de fichier</b>.  Certains conteneurs ne permettent d'enregistrer
+que de l'audio, d'autres que de la vidéo, ou bien des deux.
+</p>
+<p>Certains pilotes vidéo ne peuvent enregistrer que vers un certain conteneur.
+DV, par exemple ne peut enregistrer que vers Quicktime avec une compression
+vidéo de type DV.  Si le pilote vidéo est changé, le format de fichier peut
+devoir être modifié afin d'obtenir une sortie gérée.  Si vous changez le format
+du fichier pour un format non géré, il peut ne pas fonctionner avec le pilote
+vidéo.
+</p>
+<hr size="6">
+<a name="Entr_00e9e-audio"></a>
+<a name="SEC51"></a>
+<h3 class="subsection"> 3.5.2 Entrée audio </h3>
+
+<p>Ceci détermine ce qui se passe lorsque vous enregistrez de l'audio.
+</p>
+<a name="IDX26"></a>
+<a name="IDX27"></a>
+<a name="IDX28"></a>
+<ul>
+<li> <b>Pilote d'enregistrement</b><br>
+Il est utilisé pour enregistrer de l'audio dans la fenêtre d'acquisition.  Il
+peut être configuré de façon identique au pilote d'enregistrement pour la vidéo
+si l'audio et la vidéo sont encapsulées dans le même flux.  Les paramètres
+disponibles dépendent du pilote.  A noter que les pilotes sont les mêmes que
+ceux qui sont disponibles dans Préférences-&gt;Lecture.
+<ul>
+<li> <b>Chemin vers le périphérique</b><br>
+C'est habituellement un fichier dans le répertoire <tt>`/dev/'</tt> qui contrôle le
+périphérique.
+</li><li> <b>Bits</b><br>
+Nombre de bits de précision avec lequel Cinelerra doit configurer le
+périphérique.  La signification en est parfois figurée.  Certains pilotes audio
+ont besoin d'être configurés avec 32 bits pour effectuer des enregistrements 24
+bit et n'enregistreront rien lorsqu'ils seront configurés avec 24 bits.
+Certains pilotes audio doivent être configurés avec 24 bits pour enregistrer en
+24 bit.
+</li></ul>
+
+</li><li> <b>Canaux</b><br>
+Nombre de canaux que Cinelerra doit configurer pour le périphérique.
+Indépendamment du nombre de canaux du projet, ce nombre de canaux indique ceux
+qui seront écrits vers le périphérique.  Lorsqu'il est configuré à 2 et que le
+projet comporte 1 canal, vous entendrez le son dans le haut-parleur de gauche
+et non centré comme on pourrait s'y attendre avec un projet monophonique.
+Lorsqu'il est défini à 1 et que le projet possède deux canaux, vous pourrez
+entendre le canal de gauche centré et non pas les deux canaux mélangés.
+
+<a name="IDX29"></a>
+</li><li> <b>Echantillons à écrire en une fois</b><br>
+Tout d'abord, l'audio est lue sous forme de petits fragments depuis le
+périphérique.  Ensuite, de nombreux petits fragments sont combinés en un gros
+fragment avant d'être écrits sur le disque.  L'écriture sur disque est effectué
+par un autre processus système (&quot;thread&quot;).  La valeur indiquée ici détermine la
+taille de la combinaison des fragments utilisée lors de chaque opération
+d'écriture sur disque.
+
+<a name="IDX30"></a>
+</li><li> <b>Taux d'échantillonage pour l'enregistrement</b><br>
+Indépendamment des paramètres du projet, la valeur définie ici est le taux
+d'échantillonnage utilisé pour l'enregistrement.  Le taux d'échantillonnage
+devrait être égal à la valeur la plus élevée que puisse gérer le périphérique
+audio.
+</li></ul>
+
+<hr size="6">
+<a name="Entr_00e9e-vid_00e9o"></a>
+<a name="SEC52"></a>
+<h3 class="subsection"> 3.5.3 Entrée vidéo </h3>
+
+<p>Ceci détermine ce qui se passe lorsque vous enregistrez de la vidéo.
+</p>
+<a name="IDX31"></a>
+<ul>
+<li> <b>Pilote d'enregistrement</b><br>
+Il est utilisé pour enregistrer de la vidéo dans la fenêtre d'acquisition.  Il
+peut être configuré à l'identique du pilote d'enregistrement de l'audio si
+l'audio et la vidéo sont encapsulées dans le même flux.  Les paramètres
+disponibles dépendent du pilote.  A noter que les pilotes disponibles sont les
+mêmes que ceux disponibles dans Préférences-&gt;Lecture.
+
+<a name="IDX32"></a>
+</li><li> <b>Images à enregistrer à la fois sur le disque</b><br>
+Les images sont enregistrées dans un pipeline.  Tout d'abord, les images sont
+mises en tampon dans le périphérique.  Ensuite, elles sont lues dans un tampon
+de taille plus importante afin d'être écrites sur le disque.  L'écriture sur
+disque est effectuée par un processus système (&quot;thread&quot;) différent de celui
+effectuant la lecture depuis le périphérique.  Pour certains codecs, l'écriture
+disque utilise plusieurs processeurs.  La valeur définie ici détermine combien
+d'images sont écrites simultannément sur le disque.
+
+<a name="IDX33"></a>
+</li><li> <b>Images à mettre en tampon dans le périphérique</b><br>
+Il s'agit du nombre d'images à enregistrer dans le périphérique avant d'en
+effectuer la lecture, et cette valeur détermine le temps de latence qu'il peut
+y avoir dans le système avant que des images ne soient sautées.
+
+<a name="IDX34"></a>
+</li><li> <b>Utiliser le logiciel pour les informations de positionnement</b><br>
+La vidéo utilise l'audio pour la synchronisation, mais la plupart des cartes
+son ne donnent pas d'information de position suffisamment précise.
+Sélectionner cette option fait que Cinelerra calcule une estimation de la
+position de l'audio par le logiciel plutôt que d'utiliser le matériel pour la
+synchronisation.
+
+<a name="IDX35"></a>
+</li><li> <b>Synchroniser les disques automatiquement</b><br>
+Pour les enregistrements à un débit binaire élevé, les disques durs que vous
+utilisez peuvent être suffisamment rapides pour enregistrer les données, mais
+le système d'exploitation peut attendre plusieurs minutes avant d'effectuer
+l'opération d'écriture, il semble alors être figé alors qu'il est en train
+d'écrire plusieurs minutes de données en une seule fois.  Cette option permet
+de forcer le système d'exploitation à vider ses tampons chaque seconde plutôt
+que toutes les quelques minutes afin d'avoir un comportement temps réel un peu
+meilleur.
+
+<a name="IDX36"></a>
+</li><li> <b>Taille de l'image capturée</b><br>
+C'est la taille des images enregistrées, exprimée en pixels.  Ceci est
+indépendant de la taille d'image du projet parce que la plupart des
+périphériques vidéo ne permettent d'enregistrer qu'une taille fixe d'image.  Si
+la taille d'image indiquée ici n'est pas gérée par le périphérique, Cinelerra
+peut planter.
+
+<a name="IDX37"></a>
+</li><li> <b>Fréquence des images en enregistrement</b><br>
+La fréquence des images enregistrées est différente de celle des paramètres du
+projet.  Ceci définit le débit des images enregistrées.
+</li></ul>
+
+<hr size="6">
+<a name="Performances"></a>
+<a name="SEC53"></a>
+<h2 class="section"> 3.6 Performances </h2>
+
+<p>Vous allez passer la plupart de votre temps à configurer cette section.  Le but
+principal de cette section est de configurer les paramètres qui ne sont pas
+disponibles dans le dialogue de rendu.
+</p>
+<a name="IDX38"></a>
+<ul>
+<li> <b>Entités en cache</b><br>
+Pour accélérer le rendu, certains objets sont conservés ouverts simultanément.
+Ceci détermine combien peuvent être conservés ouverts.  Une valeur trop grande
+va très vite vous faire dépasser la capacité mémoire de votre machine et
+provoquer un plantage.  Une valeur trop petite entraînera une visualisation
+lente car les objets devront être réouverts plus fréquemment.
+
+<a name="IDX39"></a>
+</li><li> <b>Durée d'anticipation de rendu</b><br>
+Certains effets ont besoin d'un certain temps pour être appliqués.  En
+utilisant cette option, vous pouvez définir la durée de la vidéo, exprimée en
+secondes, dont il faut effectuer le rendu sans écrire sur le disque avant que
+le rendu de la région sélectionnée ne soit effectué.  Lors de l'utilisation
+d'une grappe de rendu, vous devrez parfois utiliser l'anticipation de rendu
+pour avoir des transitions sans heurt.  Chaque tâche d'une grappe de calcul est
+anticipée de cette valeur.  Ceci n'affecte cependant pas le rendu en tâche de
+fond.  Le rendu en tâche de fond utilise une valeur d'anticipation différente.
+
+<a name="IDX40"></a>
+<a name="IDX41"></a>
+</li><li> <b>Forcer l'utilisation d'un seul processeur</b><br>
+Par défaut Cinelerra essaie d'utiliser tous les processeurs du système, mais
+vous voudrez peut-être parfois n'en utiliser qu'un seul, par exemple pour le
+client d'une grappe de calcul.  Ceci force l'utilisation d'un seul processeur.
+De plus, le système d'exploitation utilise quand même le second processeur pour
+les accès disque.  Donc cette option est en fait un mode avec 1,25 processeurs.
+La valeur de ce paramètre est utilisée par les clients de la grappe de calcul.
+</li></ul>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC54">3.6.1 Rendu en tâche de fond</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC55">3.6.2 La grappe de calcul</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Rendu-en-t_00e2che-de-fond"></a>
+<a name="SEC54"></a>
+<h3 class="subsection"> 3.6.1 Rendu en tâche de fond </h3>
+
+<p>Le rendu en tâche de fond a été conçu à l'origine pour permettre aux effets
+HDTV (TV Haute Définition) de pouvoir être affichés en temps réel.  Le rendu en
+tâche de fond effectue en permanence le rendu lorsque la timeline est modifiée.
+La sortie temporaire est affichée lors de la visualisation lorsque cela est
+possible.  Ceci est utile pour les transitions et pour prévisualiser les effets
+qui seraient trop lents à afficher en temps réel.  Si une grappe de calcul est
+activée, elle est utilisée pour le rendu en tâche de fond.  Ceci vous offre
+tout le potentiel des effets en temps réel si la bande passante du réseau et le
+nombre de noeuds de calcul sont suffisants.
+</p>
+<p>Le rendu en tâche de fond est activé depuis l'onglet <b>Performances</b> de la
+fenêtre des <b>Préférences</b>.  Il possède une fonction interactive
+<b>Configuration -&gt; Point de départ du rendu en tâche de fond</b>.  Ceci définit
+comme l'endroit où le rendu en tâche de fond commence, jusqu'au point
+d'insertion.  S'il y a de la vidéo, une barre rouge apparaît dans la barre
+temporelle indiquant qu'un rendu en tâche de fond est en cours.
+</p>
+<p>Il est souvent utile d'insérer un effet ou une transition et de sélectionner
+ensuite <b>Configuration -&gt; Point de départ du rendu en tâche de fond</b> juste
+avant l'effet dont on veut l'aperçu en temps réel et à la fréquence d'images
+normale.
+</p>
+<a name="IDX42"></a>
+<ul>
+<li> <b>Nombre d'images par processus de rendu en tâche de fond</b><br>
+Ceci ne fonctionne que si une grappe de calcul est utilisée, sinon, le rendu en
+tâche de fond ne crée qu'une seule tâche pour toute la timeline.  Le nombre
+d'images indiqué ici est rendu proportionnel à la vitesse des processeurs des
+noeuds de calcul et utilisé pour chacune des tâches de la grappe de calcul.  Le
+nombre optimum est compris entre 10 et 30 car la bande passante du réseau est
+utilisée pour initialiser chaque tâche.
+
+<a name="IDX43"></a>
+</li><li> <b>Nombre d'images d'anticipation en tâche de fond</b><br>
+C'est le nombre d'images à rendre au début de chacune des tâches de rendu en
+tâche de fond.  Le rendu en tâche de fond est dégradé lorsque l'anticipation
+est utilisée en raison de la petite taille des tâches.  Lorsque le rendu en
+tâche de fond est utilisé, ce nombre est idéalement de 0.  Certains effets ont
+besoin de 3 images d'anticipation.
+
+<a name="IDX44"></a>
+</li><li> <b>Sortie pour le rendu en tâche de fond</b><br>
+Le rendu en tâche de fond crée une séquence de fichiers images dans un
+répertoire donné.  Ce paramètre détermine le préfixe du nom des fichiers
+d'images.  Le répertoire doit se trouver sur un disque rapide, accessible par
+le même chemin depuis n'importe quel noeud de la grappe de calcul.  Comme des
+centaines de milliers de fichiers images sont habituellement créés, la commande
+<code>ls</code> ne fonctionne pas dans le répertoire de rendu.  Le bouton de
+recherche de fichiers <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> ne fonctionne
+habituellement pas non plus, mais le bouton de configuration
+<img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> fonctionne avec cette option.
+
+<a name="IDX45"></a>
+</li><li> <b>Format de fichier</b><br>
+Le format de fichier pour le rendu en tâche de fond doit être une séquence
+d'images.  Le format de la séquence d'images détermine la qualité et la vitesse
+de la lecture.  La plupart du temps, le format JPEG est un bon choix.
+</li></ul>
+
+<hr size="6">
+<a name="La-grappe-de-calcul"></a>
+<a name="SEC55"></a>
+<h3 class="subsection"> 3.6.2 La grappe de calcul </h3>
+
+<p>Définissez ces options si vous utilisez une grappe de calcul.  Ignorez-les sur
+un système isolé.
+</p>
+<a name="IDX46"></a>
+<ul>
+<li> <b>Utiliser la grappe de calcul pour le rendu</b><br>
+Lorsque cette option est choisie, toutes les opérations de <b>Fichier-&gt;Rendu</b>
+utiliseront la grappe de calcul.
+
+<a name="IDX47"></a>
+</li><li> <b>Noeuds</b><br>
+Affiche tous les noeuds de la grappe de calcul et indique ceux qui sont sont
+actifs.  Des noeuds sont ajoutés en entrant le nom d'hôte du noeud, en
+vérifiant le numéro du <b>port</b> et en cliquant sur <b>Ajouter le noeud</b>.  Si
+vous avez à disposition des centaines de noeufs, les utilisateurs expérimentés
+préféreront éditer le fichier <tt>`~/.bcast/.Cinelerra_rc'</tt> plutôt que
+d'utiliser cette méthode s'ils ont des centaines de noeuds à configurer.
+Souvenez-vous que <tt>`.Cinelerra_rc'</tt> est écrasé chaque fois qu'une instance
+de Cinelerra se termine.<br>
+Une fois que les noeuds sont créés, sélectionner la colonne <b>Actif</b> pour
+activer ou désactiver des noeuds.  Les noeuds peuvent être modifiés en mettant
+leur ligne en surbrillance et en cliquant sur <b>Appliquer les modifications</b>.
+
+<a name="IDX48"></a>
+</li><li> <b>Nom d'hôte</b><br>
+Editer le nom d'hôte d'un noeud existant ou entrer ici le nom d'un nouveau
+noeud.
+
+<a name="IDX49"></a>
+</li><li> <b>Port</b><br>
+Editer le numéro de port d'un noeud existant ou entrer ici le port d'un nouveau
+noeud.
+
+<a name="IDX50"></a>
+</li><li> <b>Remplacer le noeud</b><br>
+Lors de l'édition d'un noeud existant, cliquez ici pour appliquer les
+modifications de <b>nom d'hôte</b> et de <b>port</b>.  Les modifications ne seront
+pas appliquées si vous ne cliquez pas sur ce bouton.
+
+<a name="IDX51"></a>
+</li><li> <b>Ajouter un noeud</b><br>
+Créer un nouveau noeud avec les paramètres de <b>nom d'hôte</b> et de <b>port</b>.
+
+<a name="IDX52"></a>
+</li><li> <b>Supprimer le noeud</b><br>
+Supprime le noeud qui se trouve en surbrillance dans la liste des <b>noeuds</b>.
+
+<a name="IDX53"></a>
+<a name="IDX54"></a>
+</li><li> <b>Trier les noeuds</b><br>
+Trier les <b>noeuds</b> en fonction de leur nom d'hôte.
+
+<a name="IDX55"></a>
+</li><li> <b>Réinitialiser les fréquences</b><br>
+Ceci réinitialise la fréquence des images de tous les noeuds à 0.  Les
+fréquences des images sont utilisées pour calibrer la taille des tâches en
+fonction de la vitesse CPU.  Les fréquences des images ne sont calculées que
+lorsque la grappe de calcul est en service.
+
+<a name="IDX56"></a>
+<a name="IDX57"></a>
+</li><li> <b>Nombre total de travaux à créer</b><br>
+Détermine le nombre total de travaux à répartir sur la grappe de calcul.  Plus
+vous créez de travaux, plus la grappe de calcul sera finement équilibrée.<br>
+Déterminez le nombre total de travaux à créer en multipliant le nombre de
+noeuds, y-compris le noeud principal par un certain nombre.  En les multipliant
+par 1 vous obtenez un seul travail affecté à chaque noeud.  Multipliez-le par 3
+pour avoir 3 travaux affectés à chacun des noeuds.  Si vous avez 10 noeuds
+secondaires et un noeud principal, indiquez 33 pour avoir une grappe de calcul
+bien équilibrée.
+</li></ul>
+
+<hr size="6">
+<a name="Interface"></a>
+<a name="SEC56"></a>
+<h2 class="section"> 3.7 Interface </h2>
+
+<p>Ces paramètres permettent simplement de modifier le comportement de l'interface
+utilisateur.
+</p>
+<a name="IDX58"></a>
+<a name="IDX59"></a>
+<ul>
+<li> <b>Emplacement des fichiers d'index</b><br>
+Au temps où 4 Mo/s était un débit très élevé pour un disque dur, les fichiers
+d'index ont été introduits pour accélérer le dessin des pistes audio.  Cette
+option détermine où sont placés les fichiers d'index sur le disque dur.
+
+<a name="IDX60"></a>
+</li><li> <b>Taille des fichiers d'index</b><br>
+Ceci détermine la taille d'un fichier d'index.  Des tailles d'index plus
+grandes permettent de dessiner plus rapidement les petits fichiers, tout en
+ralentissant le dessin des fichiers les plus gros.  De plus petites tailles
+d'index permettent aux gros fichiers d'être représentés rapidement en
+ralentissant le dessin des petits fichiers.
+
+<a name="IDX61"></a>
+</li><li> <b>Nombre de fichiers d'index à conserver</b><br>
+Pour que le répertoire d'index ne se surcharge pas, les anciens fichiers
+d'index sont effacés.  Ce paramètre détermine le nombre maximum de fichiers
+d'index à conserver dans le répertoire en question.
+
+<a name="IDX62"></a>
+</li><li> <b>Effacer tous les index</b><br>
+Lorsque vous modifiez la taille de l'index ou lorsque vous désirez nettoyer un
+nombre excessif de fichiers d'index, ceci vous permet de supprimer tous les
+fichiers d'index.
+
+<a name="IDX63"></a>
+</li><li> <b>Utiliser heures:minutes:secondes.xxx</b><br>
+Des représentations variées du temps sont proposées.  Choisissez celle qui vous
+convient le mieux.  La représentation du temps peut aussi être modifiée par un
+<kbd>Ctrl</kbd> + clic sur la barre temporelle.
+
+<a name="IDX64"></a>
+</li><li> <b>Utiliser les vignettes</b><br>
+La fenêtre des ressources affiche par défaut des vignettes des objets.  Cet
+affichage peut être assez long.  Cette option désactive l'affichage des
+vignettes.
+
+<a name="IDX65"></a>
+</li><li> <b>Action d'un clic sur les points d'entrée/sortie</b><br>
+Cinelerra ne vous permet pas seulement de réaliser le montage en glissant les
+points d'entrée et de sortie, mais aussi de définir trois opérations séparées
+qui se produiront lorsque vous glisserez un point d'entrée ou de sortie.  Vous
+pouvez pouvez définir ici le comportement de chacun des boutons de la souris.
+L'utilisation de chacun des modes de montage est décrite dans la section
+montage.
+
+<a name="IDX66"></a>
+</li><li> <b>Valeur minimum pour les vu-mètres</b><br>
+Certaines sources audio ont un seuil de bruit moins élevé que d'autres.  Tout
+ce qui se trouve en-dessous du seuil de bruit est non significatif.  Cette
+option règle les vu-mètres pour couper en-dessous d'un certain niveau.  Les
+cartes son grand public ont en général un niveau minimum de -65 dB.  Les cartes
+son professionnelles descendent à -90 dB.  Voir la section <a href="cinelerra_cv_manual_fr_10.html#SEC136">La fenêtre des vu-mètres</a>.
+
+<a name="IDX67"></a>
+</li><li> <b>Valeur maximum pour les vu-mètres</b><br>
+Ceci permet de définir le niveau sonore maximum représenté par les vu-mètres.
+Indépendemment de cette valeur, il n'y a aucune carte son capable de délivrer
+des niveaux supérieurs à 0 dB.  Cette valeur n'est indiquée que pour monter à
+quelle distance de cette valeur se trouve le niveau de l'onde sonore.
+Voir la section <a href="cinelerra_cv_manual_fr_10.html#SEC136">La fenêtre des vu-mètres</a>.
+
+<a name="IDX68"></a>
+</li><li> <b>Thème</b><br>
+Différents thèmes peuvent être utilisés avec Cinelerra.  Choisissez-en un ici
+et redémarrez Cinelerra pour l'activer.
+</li></ul>
+
+<hr size="6">
+<a name="A-propos"></a>
+<a name="SEC57"></a>
+<h2 class="section"> 3.8 A propos </h2>
+
+<p>Cette section vous donne des informations concernant le copyright, la date et
+heure de compilation du binaire utilisé, l'absence de garantie et les versions
+de certaines bibliothèques.  Assurez-vous d'être en accord avec les termes
+d'absence de garantie.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC26" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_4.html#SEC58" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

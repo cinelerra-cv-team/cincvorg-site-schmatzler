@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 18. Multimediaren kaptura</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 18. Multimediaren kaptura">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 18. Multimediaren kaptura">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_17.html#SEC243" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Multimediaren-kaptura"></a>
+<a name="SEC250"></a>
+<h1 class="chapter"> 18. Multimediaren kaptura </h1>
+
+
+<hr size="6">
+<a name="Cinelerra_002drekin-kapturatzea"></a>
+<a name="SEC251"></a>
+<h2 class="section"> 18.1 Cinelerra-rekin kapturatzea </h2>
+
+
+<hr size="6">
+<a name="Cinelerra_002dren-grabazio_002dfuntzioak"></a>
+<a name="SEC252"></a>
+<h3 class="subsection"> 18.1.1 Cinelerra-ren grabazio-funtzioak </h3>
+
+<p>Hoberenik hoberenean, eduki guztia disko gogorretan, CD-ROMetan, flash memorietan
+edo DVDtan gordeta egongo zatekeen, Cinelerra-n kargatzea edozein artxibo bezala
+kargatzeko. Tamalez munduak ez du honela funtzionatzen, eta jatorrizko multimediaren
+iturri gutxi daude fitxategi-sistema bat bezala atzi daitezkeenak: gehienetan
+zinta edo ordenagailuen artean datuak transferitzeko sarrera/irteera prozedimendu
+bitxietan fidatzen dira. Mota honetako edukiak Cinelerra-ra inportatzeko erabiltzen
+da Grabazioa elkarrizketa-koadroa.
+</p>
+<p>Grabazio bat egiteko aurreneko urratsa sarrerako gailua konfiguratzea da.
+<b>Ezarpenak -&gt; Hobespenak</b> menuan parametro batzuk agertzen dira, See section <a href="cinelerra_cv_manual_eu_3.html#SEC49">Grabazioa</a>
+atalean azaldutakoak. Grabazioari aplikatzen zaizkion parametroak proiektuaren
+konfiguraziotik independenteak dira, grabazioaren parametroak hardwarearen
+gehienezko gaitasunarekin bat etortzen diren bitartean, proiektuaren
+konfigurazioa proiektu bakoitzeko aldatzen da.
+</p>
+<p>Joan <b>Fitxategia -&gt; Grabatu</b> menura sarrerako/irteerako iturburu bat grabatzeko.
+Elkarrizketa-koadro bat agertuko da irteeraren formatua eskatuz, errendatzean
+gertatzen den bezala. Formatua hautatutakoan, grabazioaren leihoa eta monitorea
+agertzen dira.
+</p>
+<p>Grabazioaren leihoa ataletan zatitzen da. Parametro asko fitxategi motaren (audioa,
+bideoa) arabera aldatzen diren arren, leihoaren atalak berdinak dira beti.
+</p>
+<ul>
+<li> Irteerako formatuaren areak irteerako fitxategi-formatua azalten du,
+eta bertako uneko posizioa.
+</li><li> Batch arearen edizioak uneko batch-aren parametroak aldatzea uzten du.
+</li><li> Nabegazioko kontrolak modu desberdinetan hasi eta gelditzen dute grabazioa.
+</li><li> Batch-en zerrendak definitutako batch guztiak erakusten ditu.
+</li><li> Berresteko areak irteerako fitxategiak denbora-lerroan nola inportatuko
+diren zehaztea uzten du.
+</li></ul>
+
+<p align="center"> <img src=".././manual_images_en/recording.png" alt="manual_images_en/recording">
+</p><p align="center"> <b>Grabazio-leihoaren atalak</b>
+</p>
+<p>Cinelerra-n grabazioa batch kontzeptuaren inguruan antolatzen da. Bere baitan, 
+grabazioaren emaitzaren irteerako fitxategi desberdin bat definitzeko balio
+du batch batek. Gaur egun, kontzeptu honi ez ikusi egin dezaiokegu, eta grabatu
+grabazioaren <img src=".././manual_images_en/record.png" alt="manual_images_en/record"> botoia sakatuz.
+</p>
+<p>Grabazioaren botoiak uneko irteerako fitxategia irekitzen du (aurretik irekita
+ez badago), eta kapturatutako datuak idazten ditu fitxategi horretan. Gelditzeko
+botoiak grabazioa gelditzen du. Grabatzen jarraitzeko, sakatu berriro grabazioaren
+botoia, eta honela grabazioaren datu berriak irteerako fitxategiaren amaierari
+gehituko zaizkio. Bideoaren fitxategi bat grabatzen ari bada, fotograma bakarra
+grabatzeko aukera dago, <img src=".././manual_images_en/singleframe.png" alt="manual_images_en/singleframe"> botoia erabiliz.
+</p>
+<p>Nahikoa material grabatu denean, eta prozesua gelditzea nahi denean, <b>Txertatzeko
+estrategia</b> bat hautatu behar da eta <b>Itxi</b> botoia sakatu.
+</p>
+<hr size="6">
+<a name="Batch-grabazioa"></a>
+<a name="SEC253"></a>
+<h3 class="subsection"> 18.1.2 Batch grabazioa </h3>
+
+<p>Orain 'Batch' kontzeptura iritsi gara. Batch-ak sarrerako/irteerako datuak
+fitxategi-sistema bat bezalakoak izatea saiatzen dira. Garai batean, batch-ak
+zinta bat hainbat programa desberdinetan zatitzen zuten, eta hauetako
+bakoitza fitxategi desberdin batean gordetzen zen (datu guztiak zinta baten
+jarraian gorde ordez). Fotogramen doitasuna kontrolatzeko mekanismoak garatzea
+koste izugarria duenez, gaur egungo batch-en erabilpena programa desberdinak
+grabatzea da eguneko ordu desberdinetan. Oso egokia da telebistako programak
+edo filmeak grabatzeko (gailu sofistikatuagoak ezin dutenak erosi ongi dakiten
+bezala).
+</p>
+<p>Grabazioaren leihoak batch-zerrenda eta bi grabazio modu onartzen ditu:
+elkarreragilea eta batch. Grabazio botoia sakatzean hasten da grabazioa, eta
+uneko batch-a erabiltzen da gauza guztiak zehazteko, hasierako ordua ezik.
+Uneko batch-a lehenetsi gisa konfiguratuta dago zinta baten antzeko portaera
+izateko.
+</p>
+<p>Batch moduan grabazioa <b>Hasi</b> botoia sakatzean hasten da. Batch moduko grabazioan,
+<b>hasierako denbora</b> batch grabazioaren hasierako ordua da.
+</p>
+<p>Baliteke aurrenik zenbait batch sortu nahi izatea. Batch bakoitzak parametro eta
+doitzeko metodo batzuk ditu.
+</p>
+<ul>
+<li> <b>Aktibo</b> <br>
+Batch-en grabazioaren eragiketetan batch-a sartuta dagoen zehazten du.
+Zerrendan klik eginez, <b>Aktibo</b> zutabean batch-a aktibatzeko edo
+desaktibatzeko.
+
+</li><li> <b>Bide-izena</b> <br>
+Fitxategiaren bide-izena batch-aren grabazioa hor gordetzeko. Grabazioaren
+elkarrizketa-koadroan zehaztutako fitxategi-izena aurreneko batch-aren izena
+da, elkarreraginkortasunaren grabazioa errazteko, baina grabazioaren leihoan
+alda daiteke, <b>Batch edizioa</b> atalean.
+
+</li><li> <b>Albisteak</b> <br>
+Fitxategia existitzen den edo ez erakusten du. Atributu oso interesgarria
+da, bestela ez baita berresteko elkarrizketa-koadrorik agertuko fitxategia
+existitzen bada. Grabazioaren botoia aurreneko aldiz sakatzean fitxategia
+irekiko da. Fitxategia lehendik ere badago, une horretan ezabatu egingo da.
+'Albisteak' zutabeak <b>Fitxategia badago</b> erakusten du fitxategia existitzen
+bada, bestela <b>Ados</b> erakutsiko du. Grabazioa batch berdinean jarraitzea nahi
+duzun bakoitzean, 'Albisteak' zutabeak <b>Ireki</b> bistaratu beharko luke, fitxategia
+jadanik irekita dagoela eta grabazioaren botoia sakatzean ez dela ezabatuko adieraziz. <br>
+Baten grabatu ondoren, batch-ez aldatzen bazara, grabatzen aritu den fitxategia itxi
+egingo da. Batch horretan grabatzea nahi duzun hurrengoan, fitxategia ezabatu egingo
+da hasi aurretik.
+
+</li><li> <b>Hasiera-denbora</b> <br>
+Egunaren ordua da, 24 ordutako ordulari batekin, batch-a grabatzen hasteko, batch
+grabazio moduan. Hasierako denbora zintaren ordua izan daiteke, eta bobinaren zenbakia
+ere, egunen batean kontrol egokirik garatzen bada ere. Oraingoz ordea, egunaren ordua da.
+
+</li><li> <b>Iraupena</b> <br>
+Batch-aren luzera da. Batch-aren <b>Modua</b> <b>Kronometratua</b> denean edukiko du zentzua. 
+Grabazioaren iraupenak <b>Iraupena</b>-ren balioa gainditzean geldituko da grabazioa, 
+bai modu elkarreraginkorrean bai batch moduan.
+
+</li><li> <b>Iturburua</b> <br>
+Hardwareak hainbat iturburu kapturatzen dituenean soilik du zentzua. Normalean,
+iturburua kanal igorle bat edo sarrera fisiko desberdina izaten da. Uneko batch-a
+amaitzen denean, eta batch berri baten grabazioa hasten denean, iturburua aldatu
+egiten da (hurrengo batch-ean ezarritakoarekin). Honela, ordu desberdinetan
+telebistako kanal desberdinak graba daitezke.
+</li></ul>
+
+<p>Grabazioaren leihoak <b>uneko batch</b>-ari buruz informazioa ematen du. Uneko batch-ak
+ez dauka zer batch-zerrendan nabarmendutakoarekin bat etorri beharrik. Uneko
+batch-aren testua gorri kolorez agertzen da batch-zerrendan. Nabarmendutako
+batch-a editatzen ari da batch-en edizioaren atalean. Honela, hainbat batch-en
+atributuak alda daitezke uneko batch-a aldatu gabe.
+</p>
+<p>Grabazioaren eragiketa guztiak uneko batcha-rengain gertatzen dira. Hainbat batch
+badaude, bat aukera daiteke unekoa izateko. Horretarako, batch hori hautatu eta
+dagokion errenkadako <b>Aktibo</b> zutabean klik egin. Grabazioaren botoian sakatzean
+berehala uneko batch-a grabatzen da modu elkarreraginkorrean.
+</p>
+<p>Grabazio elkarreraginkorrean edo batch-ean, uneko batch-aren grabazioa amaitzen
+denean hurrengo batch-a aktibatzen da. Etorkizuneko grabazio guztiak batch moduan
+egingo dira. Aurreneko batch-a amaitzean, hurrengoa keinuka gelditzen da bere
+hasierako ordua iritsi zai.
+</p>
+<p>Gelditu botoiak grabazioa gelditzen du, bai modu elkarreaginkorrean bai batch moduan.
+</p>
+<p>Birbobinatzeko botoia ere badago, <img src=".././manual_images_en/rewind.png" alt="manual_images_en/rewind">. bai modu
+elkarreraginkorrean bai batch moduan, botoi honek uneko batch-aren fitxategia
+ixten du. Uneko batch-aren gaineko hurrengo grabazioaren eragiketak fitxategia
+ezabatuko du.
+</p>
+<hr size="6">
+<a name="Sintonizatzailearen-informazioa-editatzea"></a>
+<a name="SEC254"></a>
+<h3 class="subsection"> 18.1.3 Sintonizatzailearen informazioa editatzea </h3>
+
+<p>Batzuetan, grabazioaren edo konfiguratzeko prozesuan sintonizatuko diren kanalak
+hautatu eta definitu behar dira grabatzeko edo erreproduzitzeko. Grabazioaren
+kontrolatzaileen kasuan (Video4Linux eta Buz) iturburuak definitzen ditu 
+sintonizazio-kanalak. Buz kontrolatzailea erabiltzen bada erreproduzitzeko,
+sintonizazio-kanalak helburuan zehazten dira.
+</p>
+<p>Sintonizazio-kanalak defini daitezke <img src=".././manual_images_en/channel.png" alt="manual_images_en/channel"> kanalen
+botoia sakatuz, grabazioaren monitorearen leihoan aurkitzen da. Botoi hau sakatzean
+kanalen edizioaren leihoa bistaratzen da. Leiho honetan kanalak gehitu, editatu
+eta ordena ditzakezu. Gainera, bideo-kontrolatzaile batzuekin posiblea da irudiaren
+kalitatea doitzea.
+</p>
+<p><b>Gehitu</b> eragiketak kanala editatzeko leihoa bistaratzen du. Kanalaren izena
+kanal-zerrendan agertzen da. Kanalaren iturburua sintonien taulako izenari dagokion
+maiztasunaren balio fisikoa da.
+</p>
+<p>Kanalaren edizioaren elkarrizketa-koadroan 'fina' graduatzailea erabil daiteke
+kanalaren maiztasuna pittin bat aldatzeko, kontrolatzaileak onartzen badu behintzat.
+Normak eta maiztasunen taulak biak batera iturburuak definitzeko zein maiztasun
+taula erabiliko den definitzen dute. Gailuak hainbat sarrera onartzen baditu,
+sarreraren menuak hauek hautatzea utziko du.
+</p>
+<p>Hautatutako kanalak ordena daitezke, kanaletariko bat hautatuz zerrendan
+eta <b>Eraman gora</b> edo <b>Eraman behera</b> sakatuz zerrendan gora edo behera
+eramateko.
+</p>
+<p>Behin kanalak definituta daudela, grabazioaren leihoan <b>Iturburua</b> elementua
+erabil daiteke grabazioko kanalak hautatzeko. Grabazioaren monitorearen leihoan
+ere kanalak hautatzeko gaitasun berdina dago. Gogoan izan, grabazioaren leihoan
+edo monitorearen leihoan egindako kanalen hautapenak uneko batch-ean gordetzen
+direla.
+</p>
+<p>Kontrolatzaile batzuekin baliteke <b>Trukatu eremuak</b> aukera ikusgai egotea.
+Kontrolatzaile hauek ez dute beti asmatzen eremuen ordena zuzenekin, gizakien
+laguntzik gabe. Lerro bakoitiak eta bikoitiak nahastuta badaude, hautatu
+aukera hau zuzeneko ordenean grabatzeko.
+</p>
+<hr size="6">
+<a name="dvgrab_002dekin-kapturatzea"></a>
+<a name="SEC255"></a>
+<h2 class="section"> 18.2 dvgrab-ekin kapturatzea </h2>
+
+<p>'dvgrab' tresna oso eraginkorra da DV kameretik bideoak kapturatzeko. 'dvgrab' tresna
+komando-lerroan exekutatzen da. Tresna honek, exekutatzen hasten bezain laster, kamera
+erreprodukzio moduan jarriko du automatikoki, eta bideoak sistemako disko gogorrean
+gordetzen hasiko da. Bideoaren fitxategiak sekuentzialki etiketatuko dira, 
+adibidez: <tt>`001.avi'</tt>, <tt>`002.avi'</tt>, e.a...
+</p>
+<p>'dvgrab' instalatzeko, GNU/Linux banaketaren tresna egokia erabili (apt, rpm, deb, e.a.), edo
+galdetu dvgrab-en web gunean.
+</p>
+<p>Kapturatu bideoak lau urrats errazekin:
+</p>
+<ol>
+<li> Sortu direktorio bat bideoen kapturak gordetzeko
+</li><li> <code>cd</code> direktorio horretara
+</li><li> Idatzi: <code>dvgrab --buffers 500</code> eta sakatu <kbd>Sartu</kbd> tekla
+</li><li> Sakatu <kbd>Ktrl+C</kbd> bideoa kapturatzea gelditzeko
+</li></ol>
+
+<p><samp>`--autosplit'</samp> aukera oso erabilgarria da. Eszenak denbora-kodearen
+arabera zatitzen ditu. Tamalez, DV motako kamera digitaletik grabatzean soilik
+funtzionatzen du. Ez du funtzionatzen bihurgailu analogiko-digitaletik grabatzean
+(adib Canopus ADVC110), ezin baitu jatorrizko multimediaren denbora-koderik erabili.
+</p>
+<p>Irakurri dvgrab-en eskuliburua, tresna honen funtzionalitateari buruzko xehetasun
+gehiago ezagutzeko.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC250" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

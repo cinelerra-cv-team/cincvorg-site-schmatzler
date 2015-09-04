@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 15 Rendered effects</title>
+
+<meta name="description" content="Cinelerra CV Manual: 15 Rendered effects">
+<meta name="keywords" content="Cinelerra CV Manual: 15 Rendered effects">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_14.html#Realtime-effects" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_16.html#Ladspa-effects" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Rendered-effects"></a>
+<a name="Rendered-effects-1"></a>
+<h1 class="chapter">15 Rendered effects</h1>
+<a name="index-Rendered-effects"></a>
+<a name="index-Effects_002c-rendered"></a>
+<p>Another type of effect is performed on a section of the track and the result
+stored somewhere before it is played back.  The result is usually pasted into
+the track to replace the original data.
+</p>
+<p>The rendered effects are not listed in the resource window but instead are
+accessed through the <b>Audio-&gt;Render effect</b> and <b>Video-&gt;Render effect</b> menu
+options.  Each of these menu options brings up a dialog for the rendered
+effect.  Rendered effects apply to only one type of track, either audio or
+video.  If no tracks of the type exist, an error pops up.
+</p>
+<p>A region of the timeline to apply the effect to must be defined before
+selecting <b>Render effect...</b>.  If no in/out points and no highlighted region
+exist, the entire region after the insertion point is treated as the affected
+region.  Otherwise, the region between the in/out points or the highlighted
+region is the affected region.
+</p>
+<p>Secondly, the tracks to apply the rendered affect to need to be <b>armed</b>.  All
+other tracks are ignored.
+</p>
+<p>Finally, the rendered affect processes certain track attributes when it reads
+its input data but not others.  Transitions in the affected track are applied.
+Nudge is not and effects are not.  This allows the new data to be pasted into
+the existing position without changing the nudge value.
+</p>
+<p>In the render effect dialog is a list of all the realtime and all the rendered
+effects.  The difference here is that the realtime effects are rendered to disk
+and not applied under the track.  Highlight an effect in the list to designate
+it as the one being performed.
+</p>
+<p>Define a file to render the effect to in the <b>Select a file to render to</b>
+box.  The <img src="manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> magnifying glass allows file selection
+from a list.
+</p>
+<p>Select a file format which can handle the track type.  The
+<img src="manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> wrench allows configuration specific to the
+file format.
+</p>
+<p>There is also an option for creating a new file at each label.  If you have a
+CD rip on the timeline which you want to divide into different files, the
+labels would become dividing points between the files if this option were
+selected.  When the timeline is divided by labels, the effect is re-initialized
+at every label.  Normalize operations take the peak in the current file and not
+in the entire timeline.
+</p>
+<p>Finally there is an insertion strategy just like in the render dialog.  It
+should be noted that even though the effect applies only to audio or video, the
+insertion strategy applies to all tracks just like a clipboard operation.
+</p>
+<p>When you click <b>OK</b> in the effect dialog, it calls the GUI of the effect.  If
+the effect is also a realtime effect, a second GUI appears to prompt for
+acceptance or rejection of the current settings.  After accepting the settings,
+the effect is processed.
+</p>
+
+<hr>
+<a name="Rendered-audio-effects"></a>
+<a name="Rendered-audio-effects-1"></a>
+<h2 class="section">15.1 Rendered audio effects</h2>
+<a name="index-Rendered-audio-effects"></a>
+
+
+<hr>
+<a name="Resample"></a>
+<a name="Resample-1"></a>
+<h3 class="subsection">15.1.1 Resample</h3>
+<a name="index-Resample-effect"></a>
+
+<p>This multiplies the number of each output sample by a scale factor to arrive at
+the number of the input sample.  The output file&rsquo;s sample rate is set to the
+project sample rate but its length is changed to reflect the scaled number of
+samples.  It also filters the resampled audio to remove aliasing.
+</p>
+<p>If the scale factor is 2, every 2 input samples will be reduced to 1 output
+sample and the output file will have half as many samples as the input
+sequence.  If it is 0.5, every 0.5 input samples will be stretched to 1 output
+sample and the output file will have twice as many samples as the input
+sequence.
+</p>
+<hr>
+<a name="Rendered-video-effects"></a>
+<a name="Rendered-video-effects-1"></a>
+<h2 class="section">15.2 Rendered video effects</h2>
+<a name="index-Rendered-video-effects"></a>
+
+
+<hr>
+<a name="Reframe"></a>
+<a name="Reframe-1"></a>
+<h3 class="subsection">15.2.1 Reframe</h3>
+<a name="index-Reframe-video-effect"></a>
+
+<p>This does exactly the same thing as <b>ReframeRT</b> in <b>Stretch</b> mode.  It
+multiplies the output frame number by the scale factor to arrive at the input
+frame number and changes the length of the sequence.  Unlike ReframeRT, this
+must run from the <b>Video</b> menu and render its output.
+</p>
+<p>Be aware <b>Reframe</b> does not write the scaled frame rate as the frame rate of
+the rendered file.  It produces a file of scaled length and equal frame rate as
+the project.  The new length is 1/scale factor as big as the original sequence.
+</p>
+<p><b>To create a slow-motion of fast moving video:</b>
+</p><ol>
+<li> Select the video clip you wish to re-frame and put it on a
+video track
+</li><li> Select the area you wish to reframe
+</li><li> From the Video menu, select the Render Effect option
+</li><li> From the effect list, select Reframe
+</li><li> Enter the output format and insertion strategy for the new
+clip to be created
+</li><li> Press ok
+</li><li> At the popup menu, enter the scale factor 2 to run twice as
+fast, and .5 to run at half speed
+</li></ol>
+
+<hr>
+<a name="GreyCStoration-Plugin"></a>
+<a name="GreyCStoration-2"></a>
+<h3 class="subsection">15.2.2 GreyCStoration</h3>
+<a name="index-GreyCStoration-video-effect"></a>
+
+<p>GREYCstoration is an image regularization algorithm which is able to process a
+color image by locally removing small variations of pixel intensities while preserving
+significant global image features, such as edges and corners. The most direct
+application of image regularization is image denoising.
+</p>
+<p>GREYCstoration is based on state-of-the-art image processing methods using
+nonlinear multi-valued diffusion PDE (Partial Differential Equations). This kind of
+method generally outperforms basic image filtering techniques (such as convolution,
+median filtering, etc.), classically encountered in image painting programs.
+</p>
+<p>GREYCstoration is a rendered plugin, but it can be optionally used as a realtime effect.
+It is important to note, however, that as a realtime effect, GreyCStoration is very slow.
+</p>
+<p><b>Parameters:</b>
+</p><ol>
+<li> <i>Amplitude (dt):</i> This parameter represents the average amount of smoothing
+ that is performed. GREYCstoration performs a spatial averaging of pixel values, and
+ Amplitude represents a kind of dimension of the area where the smoothing is computed.
+ It is related to the PDE time step. Default value is 40. Prefer using a larger value than
+  using multiple iterations when possible (at least until undesirable artifacts appear),
+  it will speed up the whole process.
+ </li><li> <i>Sharpness (p):</i> This parameter tells GREYCstoration about structure
+  preservation. Once the local structures of the image have been detected,
+  GREYCstoration has to decide how much he will smooth image pixels. Basically, it
+  decreases the smoothing when the local structure is contrasted. The Sharpness
+  parameter simply tells how this decreasing must be considered. When Sharpness is
+  high, even low-contrasted structures will be preserved. Do not set Sharpness too high
+  or the noise may be preserved. On the contrary, when Sharpness is low, the structures
+  have to be very contrasted to avoid local smoothing. Do not set p too low or existing
+  image structures will be over-smoothed. As you can see, there is a (sometimes difficult)
+  trade-off to find when setting this parameter. Default value is 0.8 and typical values
+  range from 0 to 5.
+ </li><li> <i>Anisotropy (a):</i> This parameters set the anisotropy level of the considered
+ smoothing. It ranges from 0 (which means &rsquo;purely isotropic&rsquo;) to 1 (which means &rsquo;purely
+ anisotropic&rsquo;). The anisotropy notion relates to the way the performed smoothing
+ orientation will extend locally in space : a purely isotropic smoothing (0) will be performed
+  in all possible directions, while a purely anisotropic smoothing (1) will be performed only
+   along the directions of the structures. Values of anisotropy between 0 and 1 tell
+   GREYCstoration to smooth the image mainly along the structure directions, but with a
+   certain percentage of tolerance. Default value for a if 0.8 (which is already very anisotropic).
+  </li><li> <i>Noise scale (alpha):</i> This parameter is mathematically defined as the standard
+   deviation of a blurring gaussian kernel applied to the original image before estimating its
+   geometry. In other words, it defines a kind of scale under which details won&rsquo;t be
+   considered as structures but much more as noise. This parameter highly depends on the
+   level of noise present on your image. Remember that increasing too much this parameter
+   will tell GREYCstoration to smooth more structures. It can be useful for special visual effects
+   though. Default value of alpha is 0.8, which is relatively low (many details should be
+   preserved). Note how the details are ignored for high values of alpha.
+</li></ol>
+
+<p>More details on the GreyCStoration functionality can be found here:
+<i>http://cimg.sourceforge.net/greycstoration/guide.shtml</i>
+</p>
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Rendered-effects" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_16.html#Ladspa-effects" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

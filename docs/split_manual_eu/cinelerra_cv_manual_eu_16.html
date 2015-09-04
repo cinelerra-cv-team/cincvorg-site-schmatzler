@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 16. Trantsizioak</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 16. Trantsizioak">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 16. Trantsizioak">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_15.html#SEC239" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_17.html#SEC243" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Trantsizioak"></a>
+<a name="SEC240"></a>
+<h1 class="chapter"> 16. Trantsizioak </h1>
+
+
+<hr size="6">
+<a name="Trantsizioak-erabiltzea"></a>
+<a name="SEC241"></a>
+<h2 class="section"> 16.1 Trantsizioak erabiltzea </h2>
+
+<p>Sekuentzia edo klip bat amaitzean eta beste bat hastean, portaera nagusia
+aurrenekoa amaitzea eta bigarrenarekin zuzenean hastea da. Trantsizioak
+batetik bestera igarotzeko modu bat da aldaketa bisual (edota soinu
+aldaketekin) desberdinekin.
+</p>
+<p>Cinelerra-k audioaren eta bideoaren trantsizioak onartzen ditu. Guztiak
+daude zerrendatuta baliabideen leihoan.
+</p>
+<p align="center"> <img src=".././manual_images_en/resources_video_transitions.png" alt="manual_images_en/resources_video_transitions">
+</p><p align="center"> <b>Bideoaren trantsizioak baliabideen leihoan</b>
+</p>
+<p>Trantsizioak pista mota batean soilik aplika daitezke: <b>Audioaren trantsizioak</b>
+karpetako trantsizioak audioko pistetan soilik aplika daitezke. 
+<b>Bideoaren trantsizioak</b> karpetakoak berriz bideoko pistei.
+</p>
+<p>Trantsizioak erabiltzeko modurik errazena, bideo-fitxategi bat kargatu eta
+erdialdeko eskualde bat ebaki, edizio-puntua ikusgai egoteko denbora-lerroan.
+Baliabideen leihoan ireki <b>Bideoen trantsizioa</b> karpeta, eta arrastatu
+trantsizio bat zerrendatik denbora-lerroko bideoaren pistara. Orain,
+kutxa bat agertuko da trantsizioak beteko duen lekuan. Trantsizioa bideoaren
+bigarren zatian jaregin dezakezu, eta kasu horretan lehenengo eta bigarren zatien
+artean aplikatuko da trantsizioa.
+</p>
+<p align="center"> <img src=".././manual_images_en/drop_transition.png" alt="manual_images_en/drop_transition">
+</p><p align="center"> <b>Disolbatu trantsizioa denbora-lerrora arrastatzen</b>
+</p>
+
+<p>Orain, trantsizioan zehar mugi zaitezke nabigatzeko komandoak erabiliz, eta emaitza
+<b>Konposaketa-leihoan</b> ikusi. Normalean txertatzeko puntuarekin mugitzean
+ez da trantsizioa erakusten, bere iraupena laburregia izan ohi delako.
+</p>
+<a name="IDX144"></a>
+<a name="IDX145"></a>
+
+<p>Ohartu beharko zatekeen denbora-lerroan trantsizioak bideo-gailuetan hardware bidezko
+azelerazioarekin erreproduzitzean, hardware bidezko azelerazioa aldi batean ez dela
+erabiliko, trantsizioa ongi errendatzeko. Behin tratsizioa amaitutakoan, hardware bidezko
+azelerazioa berriro aktibatuko da. Azeleraziorik ez duen gailu bat erabiltzean eragin
+hau ez da nabarituko.
+</p>
+<p>Trantsizio bat gehitzen denean, efektu baten antzera edita daiteke. Saguaren eskuineko
+botoiarekin egin klik trantsizioan eta laster-menu bat agertuko da. <b>Erakutsi</b> aukerak
+elkarrizketa-koadro bat bistaratzen du, trantsizio horri dagozkion parametroekin (edukiz
+gero). <b>Luzera</b> parametroak trantsizioaren iraupena zehatzen du segundotan. Parametro
+horiek konfigura daitezke, trantsizio honi aplikatuko zaie eta baita antzekoak diren
+beste trantsizio batzuei ere (parametroak aldatzen ez badituzu bederen). <b>Kendu</b>
+aukerak trantsizioa kentzen du denbora-lerrotik.
+</p>
+<p>Baliabideen leihotik trantsizioak arrastatzea eta jaregitea nahiko geldoa eta
+nekagarria gerta daiteke. Zorionez, baliabideen leihotik trantsizio bat arrastatzean,
+teklatuko <kbd>U</kbd> eta <kbd>u</kbd> teklek trantsizio hori itsatsiko dute. <b>U</b> teklak
+bideoaren azkeneko trantsizioa itsasten du, <b>u</b> teklak berriz audioaren trantsizioa
+grabazioko pista guztietan itsasten du. Txertatzeko puntua, edo sarrerako puntua,
+bideoaren edo audioaren zati baten gainean badago, trantsizioa zati horren hasieratik
+aplikatuko da.
+</p>
+<p><b>Garrantzitsua:</b> trantsizioa txertatzen den puntu zehatza ez da hain nabaria.
+Bideoaren (edo audioaren) bigarren zatiaren hasieran hasten da, eta zati horretan
+mugatutako denbora kopuru batean luzatzen da. Beraz, aurreneko klipak nahikoa
+datu eduki behar ditu bigarren zatira egingo den trantsizioan erabiltzeko. Hau da,
+denbora-lerroan erakusten den aurreneko zatiaren luzera diskoan gordetakoaren
+luzera baino txikiagoa izan behar da.
+</p>
+<p>Adibidez, 'Disolbatu' trantsizioa denbora-lerroan kokatuta dagoen posizioan hasten da.
+Trantsizio honen iraupena segundo 1ekoa hautatzen bada, aurreneko zatiaren amaieratik
+<b>ez da</b> 0.5 segundo baino lehenago hasiko, eta ez da 0.5 segundotan jarraituko
+bigarren zatian. Gogoratu trantsizioa denbora lerroan kokatutako posizioan hasiko dela
+(aurreneko zatia amaitzen eta bigarrena hasten den posizioa hain zuzen), eta une horretatik
+segundo 1 iraungo duela. Hori dela eta, beharrezkoa da diskoan aurreneko bideo-zatiaren
+segundo bat gehiago egotea, denbora-lerroan agertzen dena baino.
+</p>
+<p>Akats nahiko arrunta da 'Disolbatu' trantsizioa klip baten azkenengo fotogramaren atzean
+jartzea. Demagun A eta B klipen arteko trantsizio bat, A kliparen azkenengo fotogramaren
+atzean jartzeari buruz ari gara.
+</p>
+<p>'Disolbatu' trantsizioa kokatuta dagoen posizio zehatzean hasten denez, ez dago A kliparen
+fotogramarik B kliparen hasierarekin iraungipena lantzeko. Beraz, Cinelerra-k A kliparen
+azkenengo fotograma izozten du eta B kliparen hasierako fotogramekin iraungitzen du.
+</p>
+<p>A kliparen nahikoa fotograma daudela ziurtatu behar da trantsizioa hastean bistaratzeko.
+Fotograma horien iraupena trantsizioaren iraupenaren berdina edo handiagoa izan beharko luke.
+</p>
+<hr size="6">
+<a name="Disolbatu-bideoaren-trantsizioak"></a>
+<a name="SEC242"></a>
+<h2 class="section"> 16.2 Disolbatu bideoaren trantsizioak </h2>
+
+<p><img src=".././manual_images_en/video_disolve_icon.png" alt="manual_images_en/video_disolve_icon">
+</p>
+<p>Bideoaren bi zatiren arteko trantsizio leuna da. Zati hauei sarrerako eta irteerako
+zatiak deituko diegu. Trantsizioak zati batetik bestera iraungitzea eragiten du.
+Sarrerako zatia piskanaka gardentzen joaten da, eta bere ordez irteerakoa bistaratzen
+da piskanaka ere. Efektu osoak eragina izateko <b>Luzera</b> parametroarekin
+kontrola daiteke.
+</p>
+<p><b>Kontrol erabilgarriak:</b> <br>
+Denbora-lerroko trantsizioaren ikonoan saguaren eskuineko botoiarekin
+klik egitean, honako kontrolak dituen laster-menua bistaratuko da:
+</p><ul>
+<li> <b>Erakutsi:</b> trantsizioari dagokion elkarrizketa-koadroa
+bistaratuko du (parametrorik badu)
+</li><li> <b>Gaitu:</b> trantsizioaren efektua gaitu/desgaitu egiten du
+</li><li> <b>Luzera:</b> trantsizio osoaren iraupena zehazten du
+</li><li> <b>Kendu:</b> trantsizioa denbora-lerrotik kentzen du
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC240" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_17.html#SEC243" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

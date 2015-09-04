@@ -1,0 +1,1021 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 3 Configuration</title>
+
+<meta name="description" content="Cinelerra CV Manual: 3 Configuration">
+<meta name="keywords" content="Cinelerra CV Manual: 3 Configuration">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_2.html#Installation" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_4.html#Project-attributes" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Configuration"></a>
+<a name="Configuration-1"></a>
+<h1 class="chapter">3 Configuration</h1>
+<a name="index-Configuration"></a>
+
+<p>Because of its flexibility, Cinelerra cannot be optimized without
+special configuration for your specific needs.  Unfortunately, very few parameters are
+adjustable at compile time.  Therefore, runtime configuration is the only option for most
+users because of the multitude of parameters available.<br>
+Below are configuration options as well as the supported API&rsquo;s in GNU/Linux.<br>
+In Cinelerra, go to <b>settings-&gt;preferences</b> to see the options.
+</p>
+
+<hr>
+<a name="Environment-variables"></a>
+<a name="Environment-variables-1"></a>
+<h2 class="section">3.1 Environment variables</h2>
+<a name="index-Environment-variables"></a>
+<a name="index-Variables_002c-environment"></a>
+<a name="index-Ladspa_002c-path"></a>
+
+<p>In UNIX derivatives, environment variables are global variables in the shell
+which all applications can read.  They are set with a command like <code>set
+VARIABLE=value</code>.  All the environment variables can be viewed with a command
+like <code>env</code>.  Cinelerra recognizes the following environment variables:
+</p>
+<ul>
+<li> <b>LADSPA_PATH</b><br>
+If you want to use LADSPA plugins, this must be defined: a colon separated
+list of directories to search for LADSPA plugins.  These are not native
+Cinelerra plugins.  See section <a href="cinelerra_cv_manual_en_16.html#Ladspa-effects">Ladspa effects</a>.
+
+</li><li> <b>GLOBAL_PLUGIN_DIR</b><br>
+The directory in which Cinelerra should look for native plugins.  The default is
+&lsquo;<tt>/usr/lib/cinelerra</tt>&rsquo; but you may need an alternate directory if you share
+the same executable directory among many machines via NFS.  Plugins of
+different binary formats need to be in different directories.
+
+</li><li> <b>LANG and LANGUAGE</b><br>
+Cinelerra can be localized to display menus and messages in many languages.  
+Cinelerra language settings are normally read from your GNU/Linux language settings.  
+To run Cinelerra on a language different than the one selected on your system 
+just change the LANG and LANGUAGE environment variables.<br>
+For example, open a shell and type: <code>export LANG=es_ES LANGUAGE=es_ES</code>, then run
+<code>cinelerra</code> from the same shell.  It will open set on the Spanish language.<br>
+Available languages are:
+<ul>
+<li> en_EN - English
+</li><li> es_ES - Espanol
+</li><li> sl_SI - Slovenian
+</li><li> fr_FR - Francais
+</li><li> eu_ES - Euskera
+</li><li> de_DE - German
+</li><li> pt_BR - Brazilian Portuguese
+</li><li> it_IT - Italian
+</li></ul>
+
+<p>If your distribution has only UTF-8 support (like Ubuntu), first you must create
+the language charset with this command:<br>
+<code>localedef -c -i (language_prefix) -f (your ISO-8859 variant)
+(language_prefix).(your ISO-8859 variant)</code><br>
+This is an example for Italian language:<br>
+<code>localedef -c -i it_IT -f ISO-8859-15 it_IT.ISO-8859-15</code>
+</p>
+<p>Then you can run cinelerra with this command:<br>
+<code>env LANG=$(echo $LANG | sed -e s/UTF-8/(your ISO-8859 variant)/g)
+cinelerra</code><br>
+This is an example for Italian language:<br>
+<code>env LANG=$(echo $LANG | sed -e s/UTF-8/ISO-8859-15/g) cinelerra</code>
+</p>
+<p>In some cases (e.g. if you compiled Cinelerra specifying a &lsquo;<samp>--prefix=</samp>&rsquo; option different from &lsquo;<tt>/usr/local</tt>&rsquo;) the translated .po files are not installed. If you can&rsquo;t run Cinelerra in your chosen language, try running the following commands before changing the LANG and LANGUAGE environment variables:<br>
+<code>cd hvirtual</code><br>
+<code>./configure prefix=/usr</code><br>
+<code>cd po</code><br>
+<code>sudo make install</code><br>
+</p></li></ul>
+
+<hr>
+<a name="Audio-drivers"></a>
+<a name="Audio-drivers-1"></a>
+<h2 class="section">3.2 Audio drivers</h2>
+<a name="index-Audio-drivers"></a>
+<a name="index-Drivers_002c-audio"></a>
+
+<p>The audio drivers are used for both recording and playback.  Their
+functionality is described below:
+</p>
+
+<hr>
+<a name="Sound-driver-attributes"></a>
+<a name="Sound-driver-attributes-1"></a>
+<h3 class="subsection">3.2.1 Sound driver attributes</h3>
+<a name="index-Sound-driver-attributes"></a>
+
+<ul>
+<li> <b>Device path</b> <br>
+Usually a file in the &lsquo;<tt>/dev/</tt>&rsquo; directory which controls the device.
+
+</li><li> <b>Bits</b><br>
+The number of bits of precision Cinelerra should set the device for.  This
+sometimes has a figurative meaning.  Some sound drivers need to be set to 32
+bits to perform 24 bit playback and will not play anything when set to 24 bits.
+Some sound drivers need to be set to 24 bits for 24 bit playback.
+
+</li><li> <b>Port</b><br>
+The IEEE1394 standard specifies something known as the <b>port</b>.  This is
+probably the firewire card number.
+
+</li><li> <b>Channel</b><br>
+The IEEE1394 standard specifies something known as the channel. For DV cameras
+it is always 63. 
+
+</li><li> <b>Device</b><br>
+The chosen device.
+
+</li><li> <b>Stop playback locks up</b><br>
+This ALSA only checkbox is needed if stopping playback causes the software to lock up.
+</li></ul>
+
+<hr>
+<a name="OSS"></a>
+<a name="OSS-1"></a>
+<h3 class="subsection">3.2.2 OSS</h3>
+<a name="index-OSS"></a>
+
+<p>This was the first GNU/Linux sound driver.  It had an open source
+implementation and a commercial implementation with more sound cards supported.
+It was the standard sound driver up to GNU/Linux 2.4.  It still is the only
+sound driver which an i386 binary can use when running on an x86_64 system.
+</p>
+<hr>
+<a name="OSS-Envy24"></a>
+<a name="OSS-Envy24-1"></a>
+<h3 class="subsection">3.2.3 OSS Envy24</h3>
+<a name="index-OSS-Envy24"></a>
+<a name="index-Envy24"></a>
+
+<p>The commercial version of OSS had a variant for 24 bit 96 KHz soundcards.  This
+variant required significant changes to the way the sound drivers were used,
+hence the need for the new driver.
+</p>
+<hr>
+<a name="Alsa"></a>
+<a name="Alsa-1"></a>
+<h3 class="subsection">3.2.4 Alsa</h3>
+<a name="index-Alsa"></a>
+
+<p>ALSA is the most common sound driver in GNU/Linux 2.6.  It supports most
+of soundcards now.  It takes advantage of low latency features in GNU/Linux 2.6
+to get better performance than OSS had in 2.4, but roughly the same performance
+that OSS had in 2.0.  Unfortunately ALSA is constantly changing.  A program
+which works with it one day may not the next day.  New wrappers are being
+developed on top of ALSA.  We plan to support them at regular
+intervals, though not at every new release of a new wrapper.<br>
+ALSA is no longer portable between i386 and x86_64.  If an i386 binary tries to
+play back on an x86_64 kernel, it will crash.  For this scenario, use OSS.
+</p>
+<hr>
+<a name="Esound"></a>
+<a name="Esound-1"></a>
+<h3 class="subsection">3.2.5 Esound</h3>
+<a name="index-Esound"></a>
+
+<p>ESOUND was a sound server that sat on top of OSS.  It was written for a window
+manager called Enlightenment.  It supports a limited number of bits and has
+high latency compared to more modern drivers, but it does have the ability to 
+multiplex multiple audio sources. It is unknown whether it still works.
+</p>
+<hr>
+<a name="Raw-1394"></a>
+<a name="Raw-1394-1"></a>
+<h3 class="subsection">3.2.6 Raw 1394</h3>
+<a name="index-Raw-1394"></a>
+
+<p>The was the first interface between GNU/Linux software and firewire camcorders.
+It is the least reliable way to play audio to a camcorder and consists of
+a library on top of the kernel commands.
+</p>
+<hr>
+<a name="DV-1394"></a>
+<a name="DV-1394-1"></a>
+<h3 class="subsection">3.2.7 DV 1394</h3>
+<a name="index-DV-1394"></a>
+
+<p>This is the second rewrite of DV camcorder support in GNU/Linux.  This is the most
+reliable way to play audio to a camcorder and consists of direct kernel
+commands.
+</p>
+<hr>
+<a name="IEC-61883"></a>
+<a name="IEC-61883-1"></a>
+<h3 class="subsection">3.2.8 IEC 61883</h3>
+<a name="index-IEC-61883"></a>
+
+<p>The third rewrite of DV camcorder support in GNU/Linux.  This is a library on
+top of RAW 1394 which is a library on top of the kernel commands.  It is less
+reliable than DV 1394 but more reliable than RAW 1394.  The next rewrite ought
+to fix that.  Visit <a href="http://www.linux1394.org">http://www.linux1394.org</a> for more information and
+the latest drivers.
+</p>
+<hr>
+<a name="Video-drivers"></a>
+<a name="Video-drivers-1"></a>
+<h2 class="section">3.3 Video drivers</h2>
+<a name="index-Video-drivers"></a>
+<a name="index-Drivers_002c-video"></a>
+
+<p>The video drivers are used for video playback in the compositor and the viewer.
+</p>
+
+<hr>
+<a name="Video-driver-attributes"></a>
+<a name="Video-driver-attributes-1"></a>
+<h3 class="subsection">3.3.1 Video driver attributes</h3>
+<a name="index-Video-driver-attributes"></a>
+
+<ul>
+<li> <b>Display</b><br>
+<a name="index-Dual-monitor-displays"></a>
+The interface is intended for dual monitor displays.  Depending on the value of
+Display, the Compositor window will appear on a different monitor from the rest
+of the windows.
+
+</li><li> <b>Device path</b><br>
+Usually a file in the &lsquo;<tt>/dev/</tt>&rsquo; directory which controls the device.
+
+</li><li> <b>Swap fields</b><br>
+Make the even lines odd and the odd lines even when sending to the device.  On
+an NTSC or 1080i monitor the fields may need to be swapped to prevent jittery
+motion.
+
+</li><li> <b>Output channel</b><br>
+You may need a specific connector to send video out to devices with multiple outputs.
+
+</li><li> <b>Port</b><br>
+The IEEE1394 standard specifies something known as the <b>port</b>.  This is
+probably the firewire card number.
+
+</li><li> <b>Channel</b><br>
+The IEEE1394 standard specifies something known as the <b>channel</b>.  For DV
+cameras it is always <b>63</b>.
+</li></ul>
+
+<hr>
+<a name="X11"></a>
+<a name="X11-1"></a>
+<h3 class="subsection">3.3.2 X11</h3>
+<a name="index-X11"></a>
+
+<p>This was the first method of graphical display on any UNIX system.
+It just writes the RGB triplet for each pixel directly to the
+window.  It is the slowest playback method.  It is still useful as a fallback
+when graphics hardware can not handle very large frames.
+</p>
+<hr>
+<a name="X11_002dXV"></a>
+<a name="X11_002dXV-1"></a>
+<h3 class="subsection">3.3.3 X11-XV</h3>
+<a name="index-X11_002dXV"></a>
+
+<p>This was an enhancement to X11 in 1999.  It
+converts YUV to RGB in hardware with scaling.  It is the preferred playback
+method but can not handle large frame sizes.  The maximum video size for XV is
+usually 1920x1080.
+</p>
+<hr>
+<a name="X11_002dOpenGL"></a>
+<a name="X11_002dOpenGL-1"></a>
+<h3 class="subsection">3.3.4 X11-OpenGL</h3>
+<a name="index-X11_002dOpenGL"></a>
+<a name="index-OpenGL"></a>
+
+<p>The most powerful video playback method is OpenGL.  With this driver, most
+effects are done in hardware.  OpenGL allows video sizes up to the maximum
+texture size, which is usually larger than what XV supports, depending on the
+graphics driver.  To enable it you will need a binary built with OpenGL
+support.  The <code>configure</code> option to enable OpenGL is
+&lsquo;<samp>--enable-opengl</samp>&rsquo;.  You need a video card which supports OpenGL 2.0.
+Recent Nvidia video cards should work.  You also need to use a video driver
+supporting OpenGL 2.0, such as Nvidia&rsquo;s binary driver.  To know if your video
+driver supports OpenGL 2.0, type the following command: <code>glxinfo | grep
+&quot;OpenGL version&quot;</code>
+</p>
+<ul>
+<li> Video driver supporting hardware OpenGL 2.0 rendering:<br>
+<code>OpenGL version string: 2.0.2 NVIDIA 87.74</code>
+</li><li> Video driver not supporting hardware OpenGL 2.0 rendering:<br>
+<code>OpenGL version string: <b>1.4</b> (2.0.2 NVIDIA 87.74)</code>
+</li></ul>
+
+<p>OpenGL relies on PBuffers and shaders to do video rendering.  The graphics
+driver must support OpenGL 2.0 and Cinelerra needs to be explicitly compiled with
+OpenGL 2.0 support.  This requires compiling it on a system with the OpenGL 2.0
+headers.  PBuffers are known to be fickle.  If the graphics card does not have
+enough memory or does not have the right visuals, PBuffers will not work.  If
+OpenGL does not work, try seeking several frames or restarting Cinelerra.
+</p>
+<p><b>Limitations:</b>
+</p><ul>
+<li> OpenGL does not affect rendering.  It just accelerates playback.
+</li><li> X11-OpenGL processes everything in 8 bit color models, although the
+difference between YUV and RGB is retained.
+</li><li> OpenGL does not work with frames whose size is larger than 4096x4096.<br>
+Here is what is written in the console when working with large frames:<br>
+<code>BC_Texture::create_texture frame size &lt;frame_width&gt;x&lt;frame_height&gt; bigger
+than maximum texture 4096x4096.</code>
+</li><li> The scaling equation set in the preferences window is ignored by OpenGL.
+OpenGL always uses linear scaling.
+</li><li> Project and track sizes need to be multiples of four for OpenGL to work.
+</li><li> To get the most acceleration, OpenGL-enabled effects must be placed after
+software-only effects.  All rendering before the last software-only effect is
+done in software.  The core Cinelerra operations like camera and projector are
+OpenGL.
+</li><li> Not all of the effects support OpenGL acceleration.  The following effects
+support OpenGL: Brightness, Chromakey, Chromakeyhsv, Color balance,
+Deinterlace, Diffkey, Dissolve, Flip, Frames to fields, Freeze frame, Gamma,
+Gradient, Histogram, Hue saturation, Interpolate Pixels, Invert video, Linear
+blur, Overlay, Perspective, Radial blur, RGB601, Rotate, Scale, Threshold,
+Zoomblur.
+</li></ul>
+
+<hr>
+<a name="Buz"></a>
+<a name="Buz-1"></a>
+<h3 class="subsection">3.3.5 Buz</h3>
+<a name="index-Buz"></a>
+<a name="index-Video4Linux"></a>
+
+<p>This is a method for playing motion JPEG-A files directly to a composite analog
+signal.  It uses a popular hack of the Video4Linux 1 driver from 2000 to
+decompress JPEG in hardware.  Even though analog output is largely
+obsolete, newer drivers have replaced BUZ.
+</p>
+<hr>
+<a name="Raw-1394-video-playback"></a>
+<a name="Raw-1394-video-playback-1"></a>
+<h3 class="subsection">3.3.6 Raw 1394 video playback</h3>
+<a name="index-Raw-1394-1"></a>
+
+<p>This was the first interface between GNU/Linux software and firewire
+camcorders.  It is the least reliable way to play video to a camcorder and it
+consists of a library on top of the kernel commands.
+</p>
+<hr>
+<a name="DV-1394-video-playback"></a>
+<a name="DV-1394-video-playback-1"></a>
+<h3 class="subsection">3.3.7 DV 1394 video playback</h3>
+<a name="index-DV-1394-1"></a>
+
+<p>The second rewrite of DV camcorder support in GNU/Linux.  This was the most
+reliable way to play video to a camcorder and consists of direct kernel
+commands.
+</p>
+<hr>
+<a name="IEC-61883-video-playback"></a>
+<a name="IEC-61883-video-playback-1"></a>
+<h3 class="subsection">3.3.8 IEC 61883 video playback</h3>
+<a name="index-IEC-61883-1"></a>
+
+<p>The third rewrite of DV camcorder support in GNU/Linux.  This is a library on
+top of RAW 1394 and is less
+reliable than DV 1394 but more reliable than RAW 1394.  The next rewrite ought
+to fix that.  Visit <a href="http://www.linux1394.org">http://www.linux1394.org</a> for more information and
+the latest drivers.
+</p>
+<hr>
+<a name="Playback"></a>
+<a name="Playback-1"></a>
+<h2 class="section">3.4 Playback</h2>
+<a name="index-Playback"></a>
+
+
+<hr>
+<a name="Audio-out"></a>
+<a name="Audio-out-1"></a>
+<h3 class="subsection">3.4.1 Audio out</h3>
+<a name="index-Audio-out"></a>
+<a name="index-Audio-samples"></a>
+
+<p>These determine what happens when you play sound from the timeline.
+</p>
+<a name="index-Playback-buffer-size"></a>
+<a name="index-Buffer-size_002c-Playback"></a>
+<ul>
+<li> <b>Playback buffer size</b><br>
+For playing audio, small fragments of sound are read from disk and processed 
+sequentially in a virtual console.  A larger value here causes more latency when
+you change mixing parameters but yields more reliable playback.<br>
+Some sound drivers do not allow changing of the console fragment, so latency is
+unchanged no matter what the value.<br>
+Previously, a good way of ensuring high quality playback was to read bigger 
+fragments from the disk and break them into smaller fragments for the soundcard. 
+That changed when the virtual console moved from the push model to the pull model. 
+Since different stages of the rendering pipeline can change the rate of the incoming
+data, it would be difficult to disconnect the size of the console fragments
+from the size of the fragments read from disk.
+
+<a name="index-Audio-offset"></a>
+<a name="index-Offset_002c-audio"></a>
+</li><li> <b>Audio offset</b><br>
+The ability to tell the exact playback position on GNU/Linux sound drivers is
+poor, if it is provided at all.  Since this information is required for
+proper video synchronization, it has to be accurate.  The <b>audio offset</b>
+allows users to adjust the position returned by the sound driver in order to reflect
+reality.  The audio offset does not affect the audio playback or rendering at
+all.  It merely changes the synchronization of video playback.<br>
+The easiest way to set the audio offset is to create a timeline with one video
+track and one audio track.  Expand the audio track and center the audio pan.
+The frame rate should be larger than 24 fps and the sampling rate should be
+greater than 32000.  The frame size should be small enough for your computer to render
+it at the full frame rate.  Highlight a region of the timeline starting at 10
+seconds and ending at 20 seconds.  Drop a <b>gradient</b> effect on the video
+track and configure it to be clearly visible.  Drop a <b>synthesizer</b> effect on
+the audio and configure it to be clearly audible.<br>
+Play the timeline from 0 and watch to see if the gradient effect starts exactly
+when the audio starts.  If it does not, expand the audio track and adjust the
+nudge.  If the audio starts ahead of the video, decrease the nudge value.  If
+the audio starts after the video, increase the nudge value.  Once the tracks
+play back synchronized, copy the nudge value to the <b>audio offset</b> value in
+preferences.<br>
+<b>Note:</b> if you change sound drivers or you change the value of <b>Use
+software for positioning information</b>, you will need to change the audio offset
+because different sound drivers are unequally inaccurate.
+
+<a name="index-View-follows-playback"></a>
+<a name="index-Playback_002c-view-follows"></a>
+</li><li> <b>View follows playback</b><br>
+This causes the timeline window to scroll when the playback cursor moves.  This
+can bog down the X Server or cause the timeline window to lock up for long
+periods of time while drawing the assets.
+
+<a name="index-Use-software-for-positioning-information"></a>
+<a name="index-Positioning-information_002c-use-software-for"></a>
+</li><li> <b>Use software for positioning information</b><br>
+Most soundcards and sound drivers do not give reliable information on the number
+of samples the card has played.  You need this information
+for synchronization when playing back video.  This option causes the sound driver 
+to be ignored and a software timer to be used for synchronization.
+
+<a name="index-Audio-playback-in-realtime"></a>
+<a name="index-Realtime_002c-audio-playback-in"></a>
+</li><li> <b>Audio playback in realtime</b><br>
+Back in the days when 150 MHz was the maximum speed for a personal computer, this 
+setting allowed uninterrupted playback during periods of heavy load.  It forces 
+the audio playback to the highest priority in the kernel.  Today, it is most 
+useful for achieving very low latency between console tweaks and soundcard output.
+You must be root to get real-time priority.
+
+<a name="index-Audio-driver"></a>
+</li><li> <b>Audio driver</b><br>
+There are many sound drivers for GNU/Linux.  This allows selecting one sound
+driver and setting parameters specific to it.  The sound drivers and their
+parameters are described in the sound driver section.  See section <a href="#Audio-drivers">Audio drivers</a>.
+</li></ul>
+
+<hr>
+<a name="Video-out"></a>
+<a name="Video-out-1"></a>
+<h3 class="subsection">3.4.2 Video out</h3>
+<a name="index-Video-out"></a>
+
+<p>These determine how video gets from the timeline to your eyes.
+</p>
+<a name="index-Play-every-frame"></a>
+<a name="index-Frame_002c-play-every"></a>
+<ul>
+<li> <b>Play every frame</b><br>
+This causes every frame of video to be displayed even if it means that the playback 
+of the video track(s) will fall behind.  This option should always be enabled 
+unless you use uncompressed codecs.  As of 1/2007, most compressed codecs do not 
+support frame dropping anymore.
+
+<a name="index-Framerate-achieved"></a>
+</li><li> <b>Framerate achieved</b><br>
+The number of frames per second being displayed during playback.  This is
+updated during playback only.
+
+<a name="index-Decode-frames-asynchronously"></a>
+</li><li> <b>Decode frames asynchronously</b><br>
+If you have lots of memory and more than one CPU, this option can improve
+playback performance by decoding video on one CPU as fast as possible while
+dedicating the other CPU to playing back video.  It assumes all playback
+operations are forward and no frames are dropped.  Operations involving reverse
+playback or frame dropping are negatively impacted.<br>
+Since this option requires enormous amounts of memory, Cinelerra may crash if the
+input frames are very large.
+
+<a name="index-Scaling-equation"></a>
+<a name="index-Equation_002c-scaling"></a>
+</li><li> <b>Scaling equation</b><br>
+This algorithm is used when video playback involves any kind of scaling or
+translation in the virtual console.  This does not affect 1:1 playback.
+<ul>
+<li> <b>Nearest neighbor enlarge and reduce</b><br>
+Low quality output with fast playback.  Produces jagged edges and uneven motion.
+</li><li> <b>Bicubic enlarge and bilinear reduce</b><br>
+High quality output with slow playback.  Bicubic interpolation is used for enlarging,
+which blurs slightly but does not show stair step artifacts.  A bilinear
+interpolation is used for reduction, which produces very sharp images and reduces noise.
+Bilinearly reduced images can be sharpened with a sharpen effect with less noise
+side effects than a normal sized image.
+</li><li> <b>Bilinear enlarge and bilinear reduce</b><br>
+When slight enlargement is needed, a bilinear enlargement looks better than a
+bicubic enlargement.
+</li></ul>
+
+<a name="index-Preload-buffer-for-Quicktime"></a>
+<a name="index-Quicktime_002c-preload-buffer-for"></a>
+</li><li> <b>Preload buffer for Quicktime</b><br>
+The Quicktime/AVI decoder can handle DVD sources better when this is set to around
+10000000.  This reduces the amount of seeking required.  When
+reading high bitrate sources from a hard drive, this tends to impair performance 
+by slowing down decoding. For normal use this should be 0.
+
+<a name="index-DVD-subtitles"></a>
+<a name="index-Subtitles_002c-DVD"></a>
+</li><li> <b>DVD subtitle to display</b><br>
+DVD IFO files usually contain subtitle tracks.  These must be decoded with
+the MPEG decoder.  Select <b>Enable subtitles</b> to enable subtitle decoding.
+There are usually multiple subtitle tracks indexed by number and starting from
+0.  Enter the index number of the subtitle track to be decoded in the &quot;DVD
+Subtitle to display&quot; text box or use the tumbler to increase the index value.
+Go to the asset corresponding to the MPEG file in the Resources window and
+right click.  Click on Info.  The number of subtitle tracks is shown at the
+bottom.
+
+<a name="index-CR2-images"></a>
+<a name="index-Images_002c-CR2"></a>
+</li><li> <b>Interpolate CR2 images</b><br>
+Enables interpolation of CR2 images.  Interpolation is required since the raw 
+image in a CR2 file is a Bayer pattern.  The interpolation uses dcraw&rsquo;s built-in
+interpolation and is very slow.  This operation can be disabled and the
+<b>Interpolate Pixels</b> effect used instead for faster previewing.
+
+<a name="index-White-balance_002c-CR2-images"></a>
+</li><li> <b>White balance CR2 images</b><br>
+This enables white balancing for CR2 images if interpolation is also enabled.
+This is because proper white balancing needs a blending of all 3 primary colors.
+White balance uses the camera&rsquo;s matrix which is contained in the CR2 file.<br>
+Disabling white balancing is useful for operations involving dark frame
+subtraction.  The dark frame and the long exposure need to have the same color
+matrix.<br>
+If you disable <b>Interpolate CR2 Images</b> and use the <b>Interpolate Pixels</b>
+effect, be aware the <b>Interpolate Pixels</b> effect always does both
+interpolation and white balancing using the camera&rsquo;s matrix, regardless of the
+settings in Preferences.  Dark frame subtraction needs to be performed before
+<b>Interpolate Pixels</b>.
+
+<a name="index-Video-device-driver"></a>
+</li><li> <b>Video driver</b><br>
+Normally video on the timeline goes to the compositor window during both continuous
+playback and when the insertion point is repositioned.  Instead of sending
+video to the Compositor window, the video driver can be set to send video to
+another output device during continuous playback.  However, this does not affect 
+where video is routed when the insertion point is repositioned.<br>
+The video drivers and their parameters are described in the video drivers
+section.  See section <a href="#Video-drivers">Video drivers</a>.
+</li></ul>
+
+<hr>
+<a name="Recording"></a>
+<a name="Recording-1"></a>
+<h2 class="section">3.5 Recording</h2>
+<a name="index-Recording"></a>
+
+<p>The parameters here expedite the <b>File-&gt;Record...</b> function by allowing the
+user to pre-configure the file format.  The file format is applied to all
+recordings.  Also set here is the hardware for recording, since the hardware
+determines the supported file format (in most cases).
+</p>
+
+<hr>
+<a name="File-format"></a>
+<a name="File-format-1"></a>
+<h3 class="subsection">3.5.1 File format</h3>
+<a name="index-File-format"></a>
+<a name="index-Format_002c-file"></a>
+
+<p>This determines the output file format for recordings.  It depends heavily on
+the type of driver used.  The menu selections are the same as the rendering 
+interface.  See See section <a href="cinelerra_cv_manual_en_20.html#Rendering-files">Rendering files</a>.
+The <b>Record audio tracks</b> toggle must be enabled to record audio.  The
+<b>Record video tracks</b> toggle must be enabled to record video.  The wrench
+button left of each toggle opens a configuration dialog in order to set the 
+compression scheme (codec) for each audio and video output stream.  The audio 
+and video is wrapped in a container format defined by the <b>File Format</b> menu. 
+Different wrappers may record audio only, video only, or both.
+</p>
+<p>Some video drivers can only record to a certain container.  DV, for example, can
+only record to Quicktime with DV as the video compression scheme.  If the video driver
+is changed, the file format may be updated to give the supported output.  If
+you change the file format to an unsupported format, it may not work with the
+video driver.
+</p>
+<hr>
+<a name="Audio-in"></a>
+<a name="Audio-in-1"></a>
+<h3 class="subsection">3.5.2 Audio in</h3>
+<a name="index-Audio-in"></a>
+
+<p>These determine what happens when you record audio.
+</p>
+<a name="index-Record-driver"></a>
+<a name="index-Driver_002c-record"></a>
+<a name="index-Device-path"></a>
+<a name="index-Bits"></a>
+<ul>
+<li> <b>Record driver</b><br>
+This is used for recording audio in the Record window.  It may be configured the same as
+the Record Driver for video if the audio and video are wrapped in the same
+stream.  Available parameters vary depending on the driver.  Note that the drivers
+are the same as those available in Preferences-&gt;Playback. See section <a href="#Audio-drivers">Audio drivers</a>.
+
+<a name="index-Samples-to-write-to-disk-at-a-time"></a>
+</li><li> <b>Samples to write to disk at a time</b><br>
+First, audio is read in small fragments from the device.  Then, many small fragments
+are combined into a large fragment before writing to disk.  The disk writing
+process is done in a different thread.  The value here determines how large the
+combination of fragments is for each disk write.
+
+<a name="index-Sample-rate-for-recording"></a>
+<a name="index-Recording_002c-sample-rate-for"></a>
+</li><li> <b>Sample rate for recording</b><br>
+Regardless of what the project settings are, the value set here will be the sample rate used for
+recording.  The sample rate should be set to the highest value the audio device supports.
+</li></ul>
+
+<hr>
+<a name="Video-in"></a>
+<a name="Video-in-1"></a>
+<h3 class="subsection">3.5.3 Video in</h3>
+<a name="index-Video-in"></a>
+
+<p>These determine what happens when you record video.
+</p>
+<a name="index-Record-driver-1"></a>
+<a name="index-Driver_002c-record-1"></a>
+<ul>
+<li> <b>Record driver</b><br>
+This is used for recording video in the Record window.  It may be configured the same as
+the Record Driver for video if the audio and video are wrapped in the same
+container.  Available parameters vary depending on the driver.  Note that the drivers available
+are the as those available in Preferences-&gt;Playback.  See section <a href="#Video-drivers">Video drivers</a>.
+
+<a name="index-Frames-to-record-to-disk-at-a-time"></a>
+</li><li> <b>Frames to record to disk at a time</b><br>
+Frames are recorded in a pipeline.  First, frames are buffered in the device.
+Then, they are read into a larger buffer for writing to disk.  The disk writing
+is done in a separate thread from the device reading.  For certain codecs the
+disk writing uses multiple processors.  The value set here determines how many frames
+are written to disk at a time.
+
+<a name="index-Frames-to-buffer-in-device"></a>
+</li><li> <b>Frames to buffer in device</b><br>
+This is the number of frames to store in the device before reading and determines
+how much latency there can be in the system before frames are dropped.
+
+<a name="index-Use-software-for-positioning-information-1"></a>
+</li><li> <b>Use software for positioning information</b><br>
+Video uses audio for synchronization, but most soundcards do not give accurate
+position information.  Selecting this options makes Cinelerra calculate an 
+estimation of audio position in software instead of hardware for synchronization.
+
+<a name="index-Sync-drives-automatically"></a>
+</li><li> <b>Sync drives automatically</b><br>
+For high bitrate recording, the disk drives you use may be fast enough to store the data but
+your operating system may wait several minutes and stall as it writes several minutes of
+data at a time.  This forces the operating system to flush its buffers every second
+instead of every few minutes to produce slightly better real-time behavior.
+
+<a name="index-Size-of-captured-frame"></a>
+<a name="index-Captured-frame_002c-size-of"></a>
+</li><li> <b>Size of captured frame</b><br>
+This is the size of the recorded frames in pixels.  It is independent of the project
+frame size because most video devices only record a fixed frame size.  If the
+frame size given here is not supported by the device, Cinelerra may crash.
+
+<a name="index-Frame-rate-for-recording"></a>
+<a name="index-Recording_002c-frame-rate-for"></a>
+</li><li> <b>Frame rate for recording</b><br>
+The frame rate recorded is different from the project settings.  This sets the
+recorded frame rate.
+</li></ul>
+
+<hr>
+<a name="Performance"></a>
+<a name="Performance-1"></a>
+<h2 class="section">3.6 Performance</h2>
+<a name="index-Performance"></a>
+
+<p>You will spend most of your time configuring this section.  The main focus of
+the performance section is rendering parameters not available in the rendering dialog.
+</p>
+<a name="index-Cache-items"></a>
+<ul>
+<li> <b>Cache items</b><br>
+To speed up rendering, several assets are kept open simultaneously. This
+determines how many are kept open. A number too large may exhaust your memory
+pretty fast and result in a crash. A number too small may result in slow
+playback as assets need to be reopened more frequently.
+
+<a name="index-Seconds-to-preroll-renders"></a>
+</li><li> <b>Seconds to preroll renders</b><br>
+Some effects need a certain amount of time to settle in.  Checking this option 
+sets a number of seconds to render without writing to disk before the selected 
+region is rendered.  When using the renderfarm, you will sometimes need to 
+preroll to get seemless transitions between the jobs.  Every job in a renderfarm 
+is prerolled by this value.  This does not affect background rendering, however. 
+Background rendering uses a different preroll value.
+
+<a name="index-Force-single-processor-use"></a>
+<a name="index-SMP_002c-force-single-processor-use"></a>
+</li><li> <b>Force single processor use</b><br>
+Cinelerra tries to use all processors on the system by default, but sometimes
+you will only want to use one processor, like in a renderfarm client.  This
+forces only one processor to be used.  In addition, the operating system usually
+uses the second processor for disk access.  So this option is really a
+1.25 processor mode.  The value of this parameter is used in renderfarm
+clients.
+</li></ul>
+
+
+<hr>
+<a name="Background-rendering"></a>
+<a name="Background-rendering-1"></a>
+<h3 class="subsection">3.6.1 Background rendering</h3>
+<a name="index-Background-rendering"></a>
+<a name="index-Rendering_002c-background"></a>
+
+<p>Background rendering was originally conceived to allow HDTV effects to be
+displayed in real-time.  Background rendering causes temporary output to
+be rendered constantly while the timeline is being modified.  The temporary
+output is displayed during playback whenever possible.  This is useful for
+transitions and previewing effects that are too slow to display in
+real time.  If a renderfarm is enabled, the renderfarm is used
+for background rendering.  This gives you the potential for real-time effects if
+enough network bandwidth and CPU nodes exist.
+</p>
+<p>Background rendering is enabled in the <b>Performance</b> tab of the
+<b>Preferences</b> window.  It has one interactive function <b>Settings menu -&gt;
+Set background render</b>.  This sets the point where background rendering starts
+up to the position of the insertion point.  If any video exists, a red bar appears 
+in the time ruler showing what has been background rendered.
+</p>
+<p>It is often useful to insert an effect or a transition and then select
+<b>Settings menu -&gt; Set background render</b> right before the effect to preview
+it in real time and full frame rates.
+</p>
+<a name="index-Frames-per-background-rendering-job"></a>
+<ul>
+<li> <b>Frames per background rendering job</b><br>
+This only works if a renderfarm is being used; otherwise, background rendering
+creates a single job for the entire timeline.  The number of frames specified
+here is scaled to the relative CPU speed of rendering nodes and used in a
+single renderfarm job.  The optimum number is 10 - 30 since network bandwidth
+is used to initialize each job.
+
+<a name="index-Frames-to-preroll-background"></a>
+</li><li> <b>Frames to preroll background</b><br>
+This is the number of frames to render ahead of each background rendering job.
+Background rendering is degraded when preroll is used since the jobs are small.
+When using background rendering, this number is ideally 0.  Some effects may
+require 3 frames of preroll.
+
+<a name="index-Output-for-background-rendering"></a>
+</li><li> <b>Output for background rendering</b><br>
+Background rendering generates a sequence of image files in a certain
+directory.  This parameter determines the filename prefix of the image files.
+It should be on a fast disk, accessible to every node in the renderfarm by the
+same path.  Since hundreds of thousands of image files are usually created,
+<code>ls</code> commands will not work in the background rendering directory.  The
+<img src="manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> browse button for this option normally will not
+work either, but the <img src="manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> configuration button for
+this option works.
+
+<a name="index-File-format-1"></a>
+</li><li> <b>File format</b><br>
+The file format for background rendering has to be a sequence of images.  The
+format of the image sequences determines the quality and speed of playback.
+JPEG is good most of the time.
+</li></ul>
+
+<hr>
+<a name="Renderfarm"></a>
+<a name="Renderfarm-1"></a>
+<h3 class="subsection">3.6.2 Renderfarm</h3>
+<a name="index-Renderfarm"></a>
+
+<p>To use the renderfarm, set these options.  Ignore them for a standalone system
+</p>
+<a name="index-Use-render-farm-for-rendering"></a>
+<ul>
+<li> <b>Use render farm for rendering</b><br>
+When selected, all the <b>file-&gt;render</b> operations use the renderfarm.
+
+<a name="index-Nodes"></a>
+</li><li> <b>Nodes</b><br>
+Displays all the nodes on the renderfarm and shows which ones are active.  Nodes are
+added by entering the host name of the node, verifying the value of <b>port</b>
+and selecting <b>add node</b>.  If you have hundreds of nodes, experienced
+users may be better off editing the
+&lsquo;<tt>~/.bcast/.Cinelerra_rc</tt>&rsquo; file rather than using configuration dialog.
+Remember that &lsquo;<tt>.Cinelerra_rc</tt>&rsquo; is overwritten whenever a copy of Cinelerra
+exits.<br>
+Once nodes are created, select the <b>ON</b> column to activate and deactivate nodes.
+Nodes may be edited by highlighting a row and hitting <b>apply
+changes</b>.
+
+<a name="index-Hostname_002c-renderfarm"></a>
+</li><li> <b>Hostname</b><br>
+Edit the hostname of an existing node or enter the hostname of a new node here.
+
+<a name="index-Port_002c-renderfarm"></a>
+</li><li> <b>Port</b><br>
+Edit the port number of an existing node or enter the port number of a new node here.
+
+<a name="index-Changes_002c-apply"></a>
+</li><li> <b>Apply changes</b><br>
+When editing an existing node, select this to commit the changes to <b>hostname</b>
+and <b>port</b>.  The changes will not be committed if you do not click this button.
+
+<a name="index-Node_002c-add-a"></a>
+</li><li> <b>Add node</b><br>
+Create a new node with the <b>hostname</b> and <b>port</b> settings.
+
+<a name="index-Node_002c-delete-a"></a>
+</li><li> <b>Delete node</b><br>
+Deletes whatever node is highlighted in the <b>nodes</b> list.
+
+<a name="index-Sort-nodes"></a>
+<a name="index-Nodes_002c-sort"></a>
+</li><li> <b>Sort nodes</b><br>
+Sorts the <b>nodes</b> list based on the hostname.
+
+<a name="index-Rates_002c-reset"></a>
+</li><li> <b>Reset rates</b><br>
+This sets the framerate for all the nodes to 0.  Frame rates are used to scale
+job sizes based on CPU speed of the node.  Frame rates are calculated only when
+renderfarm is enabled.
+
+<a name="index-Total-jobs-to-create"></a>
+<a name="index-Jobs_002c-total-number-to-create"></a>
+</li><li> <b>Total jobs to create</b><br>
+Determines the number of jobs to dispatch to the renderfarm.  The more jobs you
+create, the more finely balanced the renderfarm becomes.<br>
+You can determine the total jobs to create by multiplying the number of nodes
+including the master node by some number.  Multiply them by 1 to have one job
+dispatched for every node.  Multiply them by 3 to have 3 jobs dispatched for
+every node.  If you have 10 slave nodes and one master node, specify 33 to have
+a well balanced renderfarm.
+</li></ul>
+
+<hr>
+<a name="Interface"></a>
+<a name="Interface-1"></a>
+<h2 class="section">3.7 Interface</h2>
+<a name="index-Interface"></a>
+
+<p>These parameters affect purely how the user interface works.
+</p>
+<a name="index-Time-representation"></a>
+<ul>
+<li> <b>Time format</b><br>
+Various representations of time are given.  Select the most convenient one.
+The time representation can also be changed by &lt;CTRL&gt; clicking on the
+timebar.
+
+<a name="index-Index-files_002c-location"></a>
+<a name="index-Index-files"></a>
+
+</li><li> <b>Index files go here</b><br>
+Back in the days when 4 MB/sec was extremely fast for a hard drive, index
+files were introduced to speed up drawing the audio tracks.  This option
+determines where index files are placed on the hard drive.
+
+<a name="index-Index-file_002c-size-of"></a>
+</li><li> <b>Size of index file</b><br>
+This determines the size of an index file.  Larger index sizes allow smaller files
+to be drawn faster, while slowing down the drawing of large files.  Smaller
+index sizes allow large files to be drawn faster, while slowing down small
+files.
+
+<a name="index-Index-files_002c-number-to-keep"></a>
+</li><li> <b>Number of index files to keep</b><br>
+To keep the index directory from becoming unruly, old index files are deleted.
+This determines the maximum number of index files to keep in the directory.
+
+<a name="index-Index-files_002c-delete-all"></a>
+</li><li> <b>Delete existing indexes</b><br>
+When you change the index size or you want to clean out excess index files,
+this deletes all the index files.
+
+<a name="index-Thumbnails"></a>
+</li><li> <b>Use thumbnails</b><br>
+The Resource Window displays thumbnails of assets by default.  Drawing asset 
+thumbnails can take a while.  This option disables thumbnail drawing.
+
+<a name="index-Edt-boundaries_002c-dragging-does-what"></a>
+</li><li> <b>Dragging edit boundaries does what</b><br>
+Cinelerra not only allows you to perform editing by dragging edit boundaries, 
+but also defines three separate operations that occur when you drag an edit boundary.  
+Here you can select the behavior of each mouse button.  The usage of
+each editing mode is described in the editing chapter.  See section <a href="cinelerra_cv_manual_en_7.html#Trimming">Trimming</a>.
+
+<a name="index-Meter_002c-Min-dB"></a>
+</li><li> <b>Min dB for meter</b><br>
+Some sound sources have a lower noise threshold than others.  Everything below
+the noise threshold is meaningless.  This option sets the meters to clip below
+a certain level.  Consumer soundcards usually bottom out at -65.  Professional
+soundcards bottom out at -90.  See section <a href="cinelerra_cv_manual_en_11.html#Sound-level-meters-window">Sound level meters window</a>.
+
+<a name="index-Meter_002c-Max-dB"></a>
+</li><li> <b>Max dB for meter</b><br>
+This sets the maximum sound level represented by the sound meters.  No matter
+what this value is, no soundcard can play sound over 0 dB.  This value is
+presented merely to show how far over the limit a sound wave is.  See section <a href="cinelerra_cv_manual_en_11.html#Sound-level-meters-window">Sound level meters window</a>.
+
+<a name="index-Theme"></a>
+</li><li> <b>Theme</b><br>
+Cinelerra supports variable themes.  Select one here and restart Cinelerra to
+see it.
+</li></ul>
+
+<hr>
+<a name="About"></a>
+<a name="About-window"></a>
+<h2 class="section">3.8 About window</h2>
+
+<p>This section gives you information about the copyright, the time of the current
+build, the lack of a warranty, and the versions of some of the libraries.  Be
+sure to agree to the terms of the lack of the warranty.
+</p>
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Configuration" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_4.html#Project-attributes" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

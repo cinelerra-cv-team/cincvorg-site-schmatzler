@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 15. Ladspa efektuak</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 15. Ladspa efektuak">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 15. Ladspa efektuak">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_14.html#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_16.html#SEC240" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Ladspa-efektuak"></a>
+<a name="SEC239"></a>
+<h1 class="chapter"> 15. Ladspa efektuak </h1>
+
+<p>LADSPA efektuak audioko efektuak dira, bai denbora errealekoak, bai errendatuak.
+LADSPA efektuak (plugin-ak ere deitzen zaie) internetetik lortzen dira, eta kalitate
+aldakorrekoak dira. Gehienak ezin diran denbora errealean aldatu, eta hobeto
+funtzionatzen dute errendatuta. Batzuk ez dute funtzionatzen edo hainbat errore
+dituzte. Beste batzuk pista bakar baten gainean aplika daitezke, berrabiorik ez
+dutelako. Nahiz eta Cinelerra-k LADSPAren interfazea ahalik eta xehetasun gehienarekin
+garatu, denbora errealeko hainbat pista edo aldi bereko prozesamenduak erabiltzaile
+arruntek LADSPArekin egiten dutena baino harutzago doaz. LADSPA efektua <b>Audioa</b>
+karpetan agertzen dira mailu eta bihurkin bat duen ikonoarekin, GNU/Linux-eko
+audio arloko garatzaileek landutako plugin-ak direla adierazteko.
+</p>
+<p>LADSPA efektuak gaitzeko, nahikoa da inguruneko <b>LADSPA_PATH</b> aldagaiak plugin-en
+kokalekua edukitzearekin. Edo bestela, jarri plugin horiek <tt>`/usr/lib/cinelerra'</tt>
+direktorioan.
+</p>
+<p>Debian GNU/Linux banaketa erabiltzen baduzu, plugin asko eskura
+ditzakezu <b>apt</b> tresna erabiliz: <br>
+<code>apt-cache search ladspa</code> <br>
+<code>apt-get install jack-rack cmt blop swh-plugins</code>
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_14.html#SEC234" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_16.html#SEC240" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

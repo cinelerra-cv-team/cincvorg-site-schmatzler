@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 14. Les effets rendus</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 14. Les effets rendus">
+<meta name="keywords" content="Manuel de Cinelerra CV: 14. Les effets rendus">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_13.html#SEC139" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_15.html#SEC239" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Les-effets-rendus"></a>
+<a name="SEC234"></a>
+<h1 class="chapter"> 14. Les effets rendus </h1>
+<p>Un autre type d'effet est réalisé sur une portion de la piste et le résultat
+est enregistré quelque part avant d'être joué.  Le résultat est collé sur la
+piste en remplacement des données d'origine.
+</p>
+<p>Les effets rendus ne sont pas listés dans la fenêtre des ressources mais sont
+accessibles depuis les options <b>Audio-&gt;Rendu d'effet...</b> et <b>Vidéo-&gt;Rendu
+d'effet...</b>.  Chacune de ces options de menu affiche un dialogue pour le rendu
+de l'effet.  S'il n'y a pas de piste du type correspondant, une fenêtre
+d'erreur apparaît.
+</p>
+<p>La région de la timeline sur laquelle appliquer l'effet doit être préalablement
+définie avant de choisir <b>Rendu d'effet...</b>.  S'il n'y a pas de points
+d'entrée/sortie ni de zone en surbrillance, la région toute entière située
+après le point d'insertion sera traitée comme étant la région affectée.  Sinon,
+la région affectée sera soit la région se trouvant entre les points
+d'entrée/sortie, soit la région en surbrillance.
+</p>
+<p>Ensuite, les piste auxquelles appliquer le rendu d'effet doivent être
+<b>armées</b>.  Toutes les autres pistes sont ignorées.
+</p>
+<p>Enfin, le rendu d'effet affecte le traitement de certains attributs de piste
+lorsqu'il lit ses données d'entrées mais pas d'autres.  Les transitions de la
+piste affectée sont appliquées.  Le décalage ne l'est pas et les effets ne le
+sont pas non plus.  Ceci permet aux nouvelles données d'être collées à
+l'emplacement existant sans modifier la valeur de décalage.
+</p>
+<p>Dans le dialogue de rendu d'effets, il y a une liste de tous les effets en
+temps réel et de tous les effets rendus.  La différence ici est que les effets
+en temps réel sont rendus vers le disque dur et ne sont pas appliqués sous la
+piste.  Mettez un effet en surbrillance pour le désigner comme celui qui doit
+être exécuté.
+</p>
+<p>Définissez un fichier vers lequel effectuer le rendu de l'effet dans la boîte
+de dialogue <b>Choisir un fichier de destination pour le rendu :</b>.  La
+<img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> loupe permet de choisir le fichier dans
+une liste.
+</p>
+<p>Choisissez un format de fichier qui permet de gérer le type de piste.  La
+<img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> clé permet une configuration compatible
+avec le format de fichier indiqué.
+</p>
+<p>Il existe aussi une option pour <b>Créer un nouveau fichier à chaque marque</b>.
+Si vous avez un CD rippé sur la timeline et que vous voulez le diviser en
+fichiers séparés, les marques deviennent les points de séparation entre les
+fichiers si cette option a été choisie.  Lorsque la timeline est divisée à
+l'aide des marques, l'effet est réinitialisé à chacune des marques.  Les
+opérations de normalisation prennent la valeur crête du fichier en cours et non
+la timeline toute entière.
+</p>
+<p>Enfin, il y a une <b>stratégie d'insertion</b> comme dans le dialogue de rendu.
+Il faut noter que même si l'effet ne s'applique qu'à de l'audio ou qu'à de la
+vidéo, la stratégie d'insertion s'applique à toutes les pistes exactement comme
+pour une opération avec le presse-papiers.
+</p>
+<p>Lorsque vous cliquez sur <b>Accepter (OK)</b> dans le dialogue de l'effet,
+l'interface utilisateur graphique de l'effet est appelée.  Si l'effet est aussi
+un effet en temps réel, une seconde interface graphique est affichée pour
+demander si vous acceptez ou rejetez les paramètres actuels.  Une fois les
+paramètres acceptés, l'effet est traité.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC235">14.1 Les effets audio rendus</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     Effets audio rendus
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC237">14.2 Les effets vidéo rendus</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     Effets vidéo rendus
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Les-effets-audio-rendus"></a>
+<a name="SEC235"></a>
+<h2 class="section"> 14.1 Les effets audio rendus </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC236">14.1.1 Réchantillonner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        Comment réduire la plage dynamique de l'audio.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="R_00e9_00e9chantillonner"></a>
+<a name="SEC236"></a>
+<h3 class="subsection"> 14.1.1 Réchantillonner </h3>
+
+<p>Ceci multiplie le numéro de chaque échantillon de sortie par un facteur
+d'échelle pour arriver au numéro de l'échantillon en entrée.  Le taux
+d'échantillonnage du fichier de sortie est positionné au taux d'échantillonnage
+du projet mais sa durée est modifiée pour refléter la renumérotation des
+échantillons.  Il filtre aussi l'audio afin de supprimer le repliement de
+spectre.
+</p>
+<p>Si le facteur d'échelle est de 2, tous les deux échantillons en entrée, on aura
+un échantillon en sortie et le fichier de sortie aura moitié moins
+d'échantillons que la séquence d'entrée.  S'il est de 0.5, tous les 0,5
+échantillons en entrée seront étirés de manière à ce que le fichier de sortie
+ait deux fois plus d'échantillons que la séquence en entrée.
+</p>
+<hr size="6">
+<a name="Les-effets-vid_00e9o-rendus"></a>
+<a name="SEC237"></a>
+<h2 class="section"> 14.2 Les effets vidéo rendus </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC238">14.2.1 Reframe</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"></td></tr>
+</table>
+
+<hr size="6">
+<a name="Reframe"></a>
+<a name="SEC238"></a>
+<h3 class="subsection"> 14.2.1 Reframe </h3>
+
+<p>Il réalise exactement la même chose que <b>ReframeRT</b> en mode <b>Etirer</b>.  Il
+multiplie le numéro de l'image en sortie par un facteur d'échelle pour obtenir
+le numéro de l'image en entrée et il modifie la durée de la séquence.
+Contrairement à ReframeRT, il doit être lancé depuis le menu <b>Vidéo</b> et sa
+sortie doit être rendue.
+</p>
+<p>Soyez conscient du fait que <b>Reframe</b> n'écrit pas la fréquence des images
+avec la fréquence des images du fichier rendu.  Il produit un fichier dont la
+durée est modifiée dans la fréquence des images du projet.  La nouvelle durée
+est affectée d'un coefficient de 1/facteur d'échelle par rapport à la séquence
+d'origine.
+</p>
+<p><b>Pour créer un effet de ralenti ou d'accéléré :</b>
+</p><ol>
+<li> Sélectionnez le clip vidéo dont vous désirez modifier la fréquence des
+images et mettez-le sur une piste vidéo
+</li><li> Sélectionnez la zone dont vous désirez modifier la fréquence des images
+</li><li> Depuis le menu Vidéo, sélectionnez l'option <b>Rendu d'effet</b>
+</li><li> Depuis la liste des effets, sélectionnez Reframe
+</li><li> Entrez le format de sortie et la stratégie d'insertion pour le nouveau
+clip à créer
+</li><li> Pressez OK
+</li><li> Sur le fenêtre des options de l'effet, entrez un facteur d'échelle de 2
+pour avoir un déroulement deux fois plus rapide et de 0,5 pour avoir un
+déroulement deux fois plus lent
+</li></ol>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC234" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_15.html#SEC239" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

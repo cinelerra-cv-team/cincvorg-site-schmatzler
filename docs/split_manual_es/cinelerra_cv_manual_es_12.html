@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 12. La barra de tiempos</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 12. La barra de tiempos">
+<meta name="keywords" content="Manual de Cinelerra CV: 12. La barra de tiempos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_11.html#SEC137" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_13.html#SEC139" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="La-barra-de-tiempos"></a>
+<a name="SEC138"></a>
+<h1 class="chapter"> 12. La barra de tiempos </h1>
+
+<p>Las funcionalidades de navegación del Visor y el Compositor son muy similares.
+Cada uno tiene una barra de tiempos con una regleta deslizante bajo la salida
+de vídeo. La barra de tiempos y la regleta deslizante son críticas para la navegación.
+</p>
+<p align="center"> <img src=".././manual_images_en/timebarslider.png" alt="manual_images_en/timebarslider">
+</p>
+<a name="IDX132"></a>
+<p>La barra de tiempos representa todo el tiempo que dura el programa. También representa
+la posición de las etiquetas y los puntos de entrada y salida. Por último, 
+la barra de tiempos define lo que se conoce como <b>región de previsualización</b>.
+</p>
+<p>La  <b>región de previsualización</b> es la región de la línea de tiempos a la que 
+afecta la regleta deslizante. La regleta determina el intervalo de tiempo que se 
+puede mostrar en la región de previsualización. Usando una región de previsualización
+en el programa entero y usando la regleta dentro de la región de previsualización
+se puede buscar rápida y eficientemente un instante determinado en el compositor y
+el visor.
+</p>
+
+<p>Si se reemplaza el proyecto actual con un fichero nuevo, la región de previsualización
+automáticamente se redimensiona para cubrir el contenido entero del fichero.
+Si se añaden nuevos datos o se cambia el tamaño del proyecto actual, la 
+región de previsualización permanece del mismo tamaño (lo que implica que se
+encoge proporcionalmente). Puede ser necesario redimensionar la 
+región de previsualización en algunos casos.
+</p>
+<p>Pruebe a cargar un fichero y desplazar la regleta del compositor. El punto
+de inserción en la ventana del programa sigue al compositor. Mueva el 
+ratón sobre la barra de tiempos del compositor hasta que se convierta en una
+flecha hacia la izquierda. Pulse y arrastre entonces. La región de previsualización 
+ha cambiado y la regleta se ha redimensionado proporcionalmente.
+</p>
+<p>Se puede hacer lo mismo a la derecha de la barra de tiempos, haciendo aparecer
+una flecha hacia la derecha que encoje el tamaño de la región de previsualización.
+</p>
+<p>También puede probar a mover la región de previsualización, simplemente situando 
+el ratón sobre el centro de la misma y arrastrándola. 
+</p>
+<p><b>Nota:</b> Al añadir datos o modificar el tamaño del proyecto actual,
+la región de previsualización permanece del mismo tamaño, por lo que se percibe 
+que encoge. En ocasiones, puede ser necesario redimensionarla.
+</p>
+<p align="center"> <img src=".././manual_images_intl/previewregion.png" alt="manual_images_intl/previewregion">
+</p><p align="center"> <b>Región de previsualización en el compositor.</b>
+</p>
+<p>Si desplaza la barra deslizante de navegación (justo bajo la región de previsualización)
+observará que su movimiento sólo afecta a la región de previsualización. La barra
+de tiempos y la barra deslizante de navegación en el visor funcionan exactamente igual.
+</p>
+<p>Las etiquetas y los puntos de entrada y salida poseen plena funcionalidad en el visor
+y el compositor. La única diferencia entre ambos es que el compositor refleja el 
+estado del programa mientras que el visor muestra el estado de un clip o película
+original (tal y como se cargó), pero no del programa que estamos creando.
+</p>
+<p>Al pulsar el botón <b>etiqueta</b> en el compositor, la etiqueta aparece tanto en la
+barra de tiempos del compositor como en la del programa.
+</p>
+<p>Al escoger una etiqueta o punto de entrada o salida en el compositor, el punto de
+inserción en la ventana del programa salta a esa posición. Para desplazar el vídeo
+y así mover el punto de inserción a la parte visible de la línea de tiempos, use el
+botón <b>Saltar manualmente</b> del compositor.
+</p>
+<p align="center"> <img src=".././manual_images_intl/viewer_labels.png" alt="manual_images_intl/viewer_labels">
+</p><p align="center"> <b>Etiquetas y puntos de entrada y salida en el visor</b>.
+</p>
+<p>En el visor y el compositor las etiquetas y los puntos de entrada y salida se 
+muestran en la barra de tiempos. En lugar de mostrar sólo una región del programa,
+aquí la barra de tiempos muestra el programa entero.
+</p>
+<p>Al igual que la ventana del programa, el compositor tiene la capacidad de hacer zoom.
+Puede hacerse mediante el menú desplegable al pie de la ventana del compositor, que
+ofrece cierto número de opciones de zoom. Si se escoge <b>Auto</b>, el vídeo hará el zoom
+necesario para encajar tan apretadamente como le sea posible en la ventana del compositor.
+Si se escoge cualquier otro porcentaje, se aplica zoom al vídeo en potencias de 2, 
+apareciendo barras deslizantes que facilitan inspeccionar la salida resultante. Si
+debido al zoom la salida de vídeo resulta más grande que el tamaño de la ventana, además
+de aparecer las barras deslizantes para permitir inspeccionar la imagen, arrastrando 
+con el botón intermedio del ratón (a menudo una rueda que hay que apretar) se puede 
+mover la imagen a voluntad, igual que en el programa El Gimp.
+</p>
+<p>Más aún, el botón de zoom <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> activa el &quot;modo zoom&quot; 
+en la ventana del compositor. En este modo, al pulsar con el ratón en la salida de vídeo aumenta
+el zoom (la cámara se acerca a la imagen), mientras que la pulsar con la ratón mientras
+se mantiene apretada la tecla <b>CTRL</b> disminuye el zoom (la cámara se aleja de la
+imagen). Si su ratón tiene rueda central, al girarla en un sentido u otro también se acercará
+o alejará el zoom.
+</p>
+<p>Acercar o alejar el zoom con cualquiera de estas herramientas no cambia la salida
+al renderizar. La única utilidad del zoom es facilitar la observación del vídeo o
+hacerlo encajar en su monitor adecuadamente.
+</p>
+<p>Para visualizar el vídeo en el compositor con un zoom cualquiera, diferente del 
+100% (del tamaño original) requiere un procesamiento adicional por parte del programa.
+En sistemas lentos, antiguos o sin buena tarjeta de vídeo, esto puede afectar
+al rendimiento del programa. En particular, es posible que la película se vea &quot;a trompicones&quot;.
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_11.html#SEC137" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_13.html#SEC139" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

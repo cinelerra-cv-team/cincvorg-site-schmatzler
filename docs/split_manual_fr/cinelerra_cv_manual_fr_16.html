@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 16. Les transitions</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 16. Les transitions">
+<meta name="keywords" content="Manuel de Cinelerra CV: 16. Les transitions">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_15.html#SEC239" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_17.html#SEC243" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Les-transitions"></a>
+<a name="SEC240"></a>
+<h1 class="chapter"> 16. Les transitions </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC241">16.1 Utiliser les transitions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC242">16.2 Fondu enchaîné vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Utiliser-les-transitions"></a>
+<a name="SEC241"></a>
+<h2 class="section"> 16.1 Utiliser les transitions </h2>
+
+<p>Lorsqu'un plan se termine et qu'un autre commence, le comportement par défaut
+est d'avoir la sortie du premier plan remplacée immédiatement par la sortie du
+second lorsqu'il sont joués.  Les transitions sont un moyen pour la sortie du
+deuxième plan de remplacer celle du premier avec différentes variations.
+</p>
+<p>Cinelerra peut gérer des transitions audio et vidéo, elles sont toutes listées
+dans la fenêtre des ressources.
+</p>
+<p align="center"> <img src=".././manual_images_intl/resources_video_transitions.png" alt="manual_images_intl/resources_video_transitions">
+</p><p align="center"> <b>Transitions vidéo dans la fenêtre des ressources</b>
+</p>
+<p>Les transitions ne s'appliquent qu'aux pistes de même type.  Les transitions
+qui se trouvent dans la rubrique des transitions audio (<b>Audio transitions</b>
+ne peuvent s'appliquer qu'aux pistes audio.  Les transitions qu'on trouve dans
+la rubrique des transitions vidéo <b>Video transitions</b> ne s'appliquent qu'aux
+pistes vidéo.
+</p>
+<p align="center"> <img src=".././manual_images_intl/drop_transition.png" alt="manual_images_intl/drop_transition">
+</p><p align="center"> <b>Glissé d'une transition de fondu enchaîné sur la timeline</b>
+</p>
+<p>Chargez un fichier vidéo et coupez-en une section près du centre de façon à ce
+que le point de coupe soit visible sur la timeline.  Allez dans la fenêtre des
+ressources et cliquez sur le dossier <b>Video transition</b>.  Glissez une
+transition depuis la liste des transitions sur le deuxième plan de vidéo
+présent sur la timeline.  Une boîte en surbrillance entoure l'endroit où
+apparaîtra la transition.  Si vous la déposez sur le deuxième plan, elle
+s'appliquera entre le premier et le deuxième plan.
+</p>
+<p>Vous pouvez vous déplacer le long de la transition avec les commandes de
+déplacement et visionner la sortie dans la <b>fenêtre de composition</b>.  Les
+déplacements du point d'insertion ne permettent en général pas de voir les
+transitions car elles sont habituellement de trop courte durée.
+</p>
+<a name="IDX121"></a>
+<a name="IDX122"></a>
+<p>Une fois la transition en place, elle peut être modifiée de la même manière
+qu'un effet.  Survolez la transition avec le pointeur de la souris et faites un
+clic droit pour afficher le menu de la transition.  L'option <b>Afficher les
+options</b> permet d'afficher les paramètres propres à la transition en question,
+s'il y en a.  L'option de <b>Durée</b> permet d'en ajuster la durée en secondes.
+Une fois ces deux paramètres définis, ils seront appliqués aux futures
+transitions jusqu'à ce qu'ils soient de nouveau modifiés.  Enfin, l'option
+<b>Détacher</b> permet de supprimer la transition de la timeline.
+</p>
+<p>Glisser et déposer des transitions depuis la fenêtre des ressources vers la
+fenêtre de programme peut être long et fastidieux.  Heureusement, une fois que
+vous avez glissé une transition depuis la fenêtre des ressources, les touches
+<b>U</b> et <b>u</b> permettent de coller une transition identique.  La touche <b>U</b>
+colle la dernière transition vidéo et la touche <b>u</b> permet de coller la
+dernière transition audio sur toutes les pistes enregistrables.  Si le point
+d'insertion ou le point d'entrée se trouve sur un plan, le début de ce plan
+sera couvert par la transition.
+</p>
+<p>Il faut noter que lorsque l'on rejoue des transitions depuis la timeline vers
+un périphérique vidéo bénéficiant d'une accélération matérielle, l'accélération
+matérielle sera momentanément désactivée pendant la durée de la transition et
+réactivée après la transition de façon à ce que le rendu puisse se faire.
+L'utilisation d'un périphérique sans accélération pour l'ensemble de la
+timeline supprime cet inconvénient.
+</p>
+<p><b>Important :</b> L'instant exact où la transition prend effet n'est pas évident.
+Elle commence lorsque le second plan débute et se termine un certain temps
+après, à l'intérieur du second plan.  Il faut donc que le premier objet
+contienne suffisamment de données après le point de coupe pour remplir la
+transition à l'intérieur du second plan.
+</p>
+<p>Par exemple, la transition de fondu enchaîné commence à l'emplacement exact où
+elle est placée sur la timeline.  Si vous définissez une durée d'une seconde
+pour cette transition, elle ne démarrera <b>pas</b> 0,5 secondes avant la
+transition pour se poursuivre 0,5 secondes après ce point.  En fait, elle
+commencera exactement au point où elle est située sur la timeline, et elle
+durera 1 seconde à partir de cet emplacement.
+</p>
+<p>Un erreur courante est de mettre une transition de fondu enchaîné juste après
+la dernière image d'un objet.  Imaginons que la transition de fondu enchaîné
+soit placée entre l'objet A et l'objet B, juste après la dernière image de
+l'objet A.
+</p>
+<p>Comme l'effet de fondu enchaîné démarre exactement à l'endroit où il est placé,
+il n'y a plus d'images de l'objet A à afficher lorsque la transition de fondu
+enchaîné démarre.  Il n'y a donc pas d'autre choix pour Cinelerra que de figer
+la dernière image de l'objet A et de la fondre avec l'objet B.
+</p>
+<p>Vous devez donc vous assurer qu'il y a suffisamment d'images de l'objet A
+susceptibles d'être affichées lorsque la transition de fondu enchaîné démarre.
+La durée de ces images devant être supérieure ou égale à la durée de la
+transition.
+</p>
+<hr size="6">
+<a name="Fondu-encha_00een_00e9-vid_00e9o"></a>
+<a name="SEC242"></a>
+<h2 class="section"> 16.2 Fondu enchaîné vidéo </h2>
+
+<p><img src=".././manual_images_intl/video_disolve_icon.png" alt="manual_images_intl/video_disolve_icon">
+</p>
+<p>C'est une transition de fondu entre deux segments de vidéo, que nous
+appellerons les segments d'entrée et de sortie.  Le segment s'entrée devient
+progressivement transparent alors que le segment de sortie apparaît
+progressivement.  La durée complète de l'effet peut être contrôlée par &quot;Durée
+de la transition&quot;.
+</p>
+<p><b>Commandes disponibles :</b><br>
+En effectuant un clic droit sur l'icône de la transition sur la timeline, vous
+obtiendrez un menu avec les commandes suivantes
+</p><ul>
+<li> <b>Afficher les options :</b> permet d'afficher le menu spécifique à la
+transition (il n'y en a pas pour cette transition particulière)
+</li><li> <b>Actif :</b> active ou désactive l'action de la transition
+</li><li> <b>Durée de la transition :</b> définit la durée de la transition, en
+secondes
+</li><li> <b>Détacher :</b> supprime la transition de la timeline
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC240" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_17.html#SEC243" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

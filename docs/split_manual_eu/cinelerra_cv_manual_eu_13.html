@@ -1,0 +1,2306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 13. Denbora errealeko efektuak</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 13. Denbora errealeko efektuak">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 13. Denbora errealeko efektuak">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_12.html#SEC138" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_14.html#SEC234" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Denbora-errealeko-efektuak"></a>
+<a name="SEC139"></a>
+<h1 class="chapter"> 13. Denbora errealeko efektuak </h1>
+
+<p>Efektu hauek eragiten duten pisten azpian jartzen dira geruzetan. Hauek pista prozesatzen dute
+pista erreproduzitzen ari denean, baina ez dira irteeran gordetzen. Proiektua
+errendatzean efektu hauek gordetzen dira irteeran.
+</p>
+<p>Denbora errealeko efektu guztiak baliabideen leihoan zerrendatzen dira, bi taldetan
+banatuta: audioaren efektuak eta bideoaren efektuak. Audioaren efektuak
+audio motako pistetara arrastatu behar dira baliabideen leihotik. Bideoaren
+efektuak bideo motako pistetara arrastatu behar dira.
+</p>
+<p>Helburuko pistan datuak egonez gero, efektua pista osoari aplikatuko zaio.
+Pistan daturik ez balego, efektua ezabatu egingo litzateke. Pistaren eskualde
+bat hautatuta egonez gero, efektua eskualdean itsatsiko da (berdin dio
+eskualdean daturik dagoen edo ez).
+</p>
+<p>Efektu batzuk ez dute datuak prozesatzen, sintetizatu egiten dituzte. Sintesiaren
+efektuaren kasuan, pistaren eskualde bat hautatu eta horrela arrastatzearen
+eragiketak bertan itsatsiko du efektua datuak ezabatu gabe.
+</p>
+<p>Pista baten gainera efektu bat baino gehiago arrastatzean, pistaren behean
+efektuak geruzetan ikusiko dituzu goitik beherako ordenean. Pista erreproduzitzen
+denean, efektuak goitik behera prozesatzen dira. Gaineko efektuaren irteera azpikoaren
+sarrera izatera bihurtuko da, eta horrela bata bestearen ondoren.
+</p>
+<p>Pista bati efektuak aplikatzeko beste bide bat laster-menua erabiltzea da.
+Saguaren eskuineko botoiarekin klik egin pistaren gainean eta hautatu <b>Erantsi efektua</b>
+laster-menuan. Efektua eransteko elkarrizketa-koadroak arrastatu eta jaregin metodoak
+baino kontrol gehiago eskaintzen dizu. Elkarrizketa-koadro honek bi efektu mota
+gehiago eranstea uzten dizu: partekatutako efektuak eta partekatutako pistak.
+Hautatu plugin bat <b>Plugin-ak</b> zutabean eta plugin-en zutabearen azpian
+dagoen <b>Erantsi</b> botoia sakatu (hautatutako plugin-a eransteko). Efektu
+hori baliabideen leihotik arrastatutako efektuaren berdina izango da.
+</p>
+<p>Pista batek efektu bat badu, efektua konfiguratzea komeni da. Joan
+efektura eta saguaren eskuineko botoiarekin egin klik efektuaren laster-leihoa
+bistaratzeko. Efektuaren laster-leihoan <b>Erakutsi</b> aukera dago. Aukera honek
+efektuaren interfazea kurtsorearen azpian bistaratzea eragiten du. Efektu
+gehienek interfazea eduki arren, batzuk ez daukate interfazerik. Efektuak ez
+badu interfazerik, ez da ezer erakutsiko <b>Erakutsi</b> aukera hautatzean. Efektuaren
+interfazean parametroak doitzean, efektuaren iraupen osoari eragin ohi diote 
+parametroek.
+</p>
+
+<hr size="6">
+<a name="Denbora-errealeko-efektu-motak"></a>
+<a name="SEC140"></a>
+<h2 class="section"> 13.1 Denbora errealeko efektu motak </h2>
+
+<p><b>Erantsi efektuaren</b> elkarrizketa-koadroak onartzen dituen beste bi efektu
+mota efektu birziklatuak dira. Efektu birziklatuak erabiltzeko, hiru betekizun
+bete behar dira:
+</p><ul>
+<li> Denbora-lerroan beste efektu batzuk egon behar dira.
+</li><li> Efektua eransten ari zaren pistaren mota berdinekoak izan behar dira
+beste efektuak. Pista audio motakoa bada, efektuak audio motakoak izan behar dira.
+Pista bideo motakoa bada, efektuak bideo motakoak izan behar dira.
+</li><li> Txertatzeko puntua edo hautatutako eskualdea beste efektuen barruan
+hasi behar dira.
+</li></ul>
+
+<p>Partekatutako efektu baten kasuan, baldintza hauek egia izan behar dute.
+Partekatutako pista baten kasuan, efektua eransten ari zaren pistaren mota
+berdineko beste pista bat egon behar da denbora-lerroan. Bideoaren pista baten
+gainean saguaren eskuineko botoiarekin klik egiten baduzu, 
+<b>partekatutako pista</b> zutabean ez da ezer egongo beste bideo-pistarik ez
+badago. Audioaren pista baten gainean saguaren eskuineko botoiarekin klik egiten baduzu, 
+<b>partekatutako pista</b> zutabean ez da ezer egongo beste audio-pistarik ez
+badago. 
+</p>
+<p>Partekatutako efektuak edo pistak erabilgarri badaude, <b>Partekatutako efektuak</b>
+eta <b>Partekatutako pistak</b> zutabeetan agertuko dira. Zutabe bakoitzaren
+azpian dagoen <b>Erantsi</b> botoiak zutabean nabarmendutako edozer erantsiko
+dio uneko pistari.
+</p>
+<p>Partekatutako efektuek eta pistek gauza esklusiboak egitea uzten dute. Partekatutako
+efektu baten kasuan, partekatutako efektua jatorrizko efektuaren kopia bat bezala
+tratatzen da (partekatutako efektuak ordea ez dauka interfazerik bistaratzeko).
+Jatorrizko efektuaren interfazeak zehazten du partekatutako efektuaren konfigurazio
+guztia, eta jatorrizko efektuaren interfazea soilik bistara daiteke.
+</p>
+<p>Partekatutako efektu bat erreproduzitzen denean, efektu normal baten antzera
+prozesatzen da, bere konfigurazioa ordea jatorrizko efektutik kopiatzen da.
+Efektu batzuk partekatuta daudela detektatzen dute, 'oihartzuna' edo 'konpresorea'
+efektuak bezala. Efektu hauek zein pista partekatzen ari diren zehazten dute, eta
+bi pista batera nahasten dute, edo pista bat erabiltzen dute balio bat gordetzeko.
+'Oihartzuna' efektuak pistak batera nahasten ditu ingurua simulatzeko. 'Konpresorea'
+efektuak partekatutako pista bat erabiltzen du abiarazle gisa.
+</p>
+<a name="IDX134"></a>
+<a name="IDX135"></a>
+<p>Jatorrizko pista batek <b>partekatutako pista</b> badu bere efektuen artean, 
+partekatutako pista bera erabiliko da denbora errealeko efektu gisa. Normalean 
+honi <b>Lotutako pistak</b> deitzen zaio, baina Cinelerra-k eragiketa berdina lortzen
+du partekatutako pista erantsiz. Partekatutako pistak dituen iraungitze eta beste
+edozein efektu jatorrizko pistari eragiten zaio. Partekatutako pista baten
+datuak prozesatutakoan, jatorrizko pistak partekatutako pistaren edozein efektu
+lantzen du, eta gero irteeran konposatzen du.
+</p>
+<p>Gainera, partekatutako pistak jatorrizko pistaren irteera denbora errealeko
+efektu gisa prozesatutakoan, partekatutako pistak bere burua irteeran nahasten du
+panoramikoaren, moduaren eta proiektorearen ezarpenekin. Honela, bi pista nahasten dira
+irteeran datu berdinekin. Gehienetan ez duzu nahiko partekatutako irteera jatorrizko
+pistaren datu berdinekin irteeran nahasterik. Nahasketaren urratsa baino lehenago
+gelditzea eta datuak jatorrizko pistari itzultzea nahiko duzu. Hau egiteko, 
+gaitu pista bakoitzaren <img src=".././manual_images_en/mutepatch_up.png" alt="manual_images_en/mutepatch_up"> mututu txandakaria. Honela, 
+<b>mututu</b> gaituta duen pista ez da irteeran nahastuko.
+</p>
+<p>Demagun bideo bat sortzen ari zarela, eta partekatutako pista jatorrizko pistaren
+datuekin konposatzea nahi duzula irteeran bigarren aldiz. Bideoaren kasuan, 
+partekatutako pistako bideoa beti agertuko da jatorrizko pistaren bideoaren azpian, 
+baldin eta ez badago jatorrizko pistaren gainean denbora-lerroan.
+Partekatutako pistak erantsitako ordenean konposatzen dira.
+Jatorrizko pistaren zati denez, jatorrizko pista konposatu baino lehenago
+konposatu behar da partekatutako pista.
+</p>
+<hr size="6">
+<a name="Denbora-errealeko-efektuak-editatzea"></a>
+<a name="SEC141"></a>
+<h2 class="section"> 13.2 Denbora errealeko efektuak editatzea </h2>
+<p>Eragiketa asko existitzen dira efektuak ikutzeko, behin efektuak denbora-lerroan
+daudela. Efektuak eta multimedia nahastea nahiko gauza konplikatua denez, 
+efektuak editatzeko metodoak ez dira 'ebaki eta itsatsi' bezain labur eta 
+zehatzak. Ediziotariko batzuk sarrerako/irteerako puntuak arrastatzeaz bat
+gertatzen dira, beste batzuk laster-menuen bidez, eta beste batzuk efektuak
+arrastatuz. 
+</p>
+<p>Pistak muntatzean, normalean, efektuek muntatze-erabakiei jarraitzen diete.
+Pista batetik ebakitzen baduzu, efektua murriztu egiten da. Sarrerako/irteerako
+puntuak arrastatzen badituzu, efektuak bere luzera aldatzen du. Portaera hau
+desgaitzeko hautatu <b>Ezarpenak -&gt; Editatu efektuak</b> elementua proiektuaren leihoan.
+</p>
+<p>Mugitu denbora-lerroko erakuslea efektuaren ertzen gainera, formaz aldatu arte
+(ezkerrera edo eskuinera tamainaz aldatzeko ikonoa, &lt;= edo =&gt; bezalakoa).
+Egoera honetan, efektu baten amaiera arrastatzen baduzu, muntaketa bat lantzen da,
+pista baten amaiera arrastatzean gertatzen den bezala.
+</p>
+<p>Pistaren iraupena aldatzeko hiru portaerak efektuaren iraupenari eta saguaren hiru botoiei
+lotuta daude, <b>Interfazearen hobespenetan</b> ezarri duzun arabera. See section <a href="cinelerra_cv_manual_eu_3.html#SEC56">Interfazea</a>.
+Efektu baten iraupena lantzen duzunean, efektuaren muga mugitu egiten da beraren
+gainean arrastatzean. Pistaren muntaketan gertatzen ez den bezala, efektuak ez du
+jatorrizko luzerarik. Efektu baten luzera nahi haina zabal dezakezu mugarik jasan gabe.
+</p>
+<p>Gainera, eta pistaren muntaketan gertatzen ez den bezala, arrastatze eragiketaren
+hasierako posizioak ez dio lotuta dagoen muntatze-erabakien zerrenda multimediari eragiten.
+Lotuta dagoen multimediaren efektuak ez dio efektuaren edizioari jarraitzen.
+Beste efektu batzuk, hala ere, efektu batean sortutako muntatze-erabakiei jarraitzen diete.
+Beste pistetako efektuekin lerrokatuta dagoen efektu baten amaiera arrastatzen baduzu, 
+beste pistetako efektuak eraldatu egingo diren arren, multimediak berdin jarraituko du.
+</p>
+<p>Zer gertatzen da sarrerako efektu baten amaiera doitzen baduzu, pistaren amaiera inguruko
+denbora asko eraginik gabe utziz? Kasu horretan, baliabideen leihotik beste efektu
+bat arrastatzen baduzu, efektu hori hutsik dagoen errenkadaren arean txerta dezakezu. 
+Denbora errealeko efektuak errenkadetan antolatzen dira pistaren
+barruan. Errenkada bakoitzak hainbat efektu eduki ditzake.
+</p>
+<p>Kasu batzuetan, efektuen errenkada bat soilik aldatzeko bere iraupena aldatzea nahi izan
+dezakezu. Horretarako, aurrenik txertatzeko puntua efektuaren hasieran edo amaieran
+kokatu. Gero, sakatu <b>Maius</b> tekla iraupenaren eragiketa hasten den bitartean.
+Metodo honekin eragiketak efektuen errenkada bakar bat aldatzen du.
+</p>
+<p>Doitzeaz gain, efektuak gora edo behera eraman ditzakezu. Pista bakoitzak efektuen
+pila bat eduki dezake bere baitan. Efektu bat gora edo behera eramatean, pilan
+efektuak zein ordenetan prozesatuko diren aldatzen da. Joan efektu batera
+eta saguaren eskuineko botoiarekin bistaratu efektuaren menua. <b>Eraman gora</b>
+eta <b>Eraman behera</b> aukerek efektua gora edo behera eramaten dute.
+</p>
+<a name="IDX136"></a>
+<a name="IDX137"></a>
+<p>Efektuak gora edo behera eramatean, kontu handiz ibili <b>partekatutako efektuak</b>
+gisa partekatuta egonez gero, eragiketa hauen ondoren edozein erreferentzia
+efektu desberdin batengana jo baitezake.
+</p>
+<p>Azkenik, efektuak ere arrasta daitezke. Efektuak arrastatzea planoak arrastatzea
+bezalakoa da. Hautatu <img src=".././manual_images_en/arrow.png" alt="manual_images_en/arrow"> gezia
+'arrastatu eta jaregin' moduan sartzeko  efektuak arrastatu baino lehen. Efektuak
+multimediaren mugetara, efektuen mugetara eta pistetara atxiki daitezke. Argi ibili
+gauza batekin, erreferentzia bat partekatutako efektu batera arrastatzen baduzu,
+erreferentziak okerreko efektura zuzenduko du hasieran erreferentziatutako efektua
+arrastatu ondoren.
+</p>
+<p>Efektu baten gainean saguaren eskuineko botoiarekin klik egitean efektuaren
+laster-menua bistaratuko da. Hautatu <b>Erantsi</b> elementua efektua aldatzeko,
+edo erreferentzia aldatzeko (partekatutako efektua bada).
+</p>
+<hr size="6">
+<a name="Denbora-errealeko-audio_002defektuak"></a>
+<a name="SEC142"></a>
+<h2 class="section"> 13.3 Denbora errealeko audio-efektuak </h2>
+
+
+<hr size="6">
+<a name="Konpresorea"></a>
+<a name="SEC143"></a>
+<h3 class="subsection"> 13.3.1 Konpresorea </h3>
+
+<p><img src=".././manual_images_en/compressor.png" alt="manual_images_en/compressor">
+</p>
+<p>Ordenagailuen zientziaren esperientziaren aurka, audioaren konpresoreak ez du
+audioa gordetzeko behar den datu kopurua murrizten. Audioaren konpresoreak
+audioaren barruti dinamikoa murrizten du. Cinelerra-n konpresoreak zabaltzearen
+eta konpresioaren funtzioak lantzen ditu.
+</p>
+<p>Uneko posizioaren denbora-periodo zehatz batean dagoen gehienezko soinu-maila
+kalkulatuz lan egiten du konpresoreak. Gehienezko soinu-maila sarrerako
+soinu-maila gisa hartzen da. Sarrerako soinu-maila bakoitzak irteerako
+soinu-maila bat du, erabiltzaileak zehaztutakoa. Uneko posizioaren irabazia
+doitu egiten da, denbora-barrutiko gehienezko soinu-maila erabiltzaileak
+zehaztutako balioa izanik.
+</p>
+<p>Konpresoreak grafiko bat du, sarrerako soinu-maila bakoitza irteerako
+soinu-mailari korrelatiboa izanik. Norabide horizontala sarrerako soinu-maila
+da, dB unitateetan. Norabide bertikala irteerako soinu-maila da, dB unitateetan.
+Erabiltzaileak zehazten ditu irteerako soinu-mailak, grafikoan puntuak sortuz.
+Grafikoan klik egitean puntu bat sortzen da. 2 puntu existitzen badira,
+puntu bat arrastatu bestearen gainera ezabatzeko. Hautatu den azken puntuak
+bere balioa testu-eremuan bistaratuta dauka (zehaztasun gehiagoz doitzeko).
+</p>
+<p>Konpresoreak audioaren barruti dinamikoa murrizteko, irteerako balioak
+sarrerako balioen baino handiagoak izatea egin, 0 dB izan ezik.
+Konpresoreak audioaren barruti dinamikoa zabaltzeko, irteerako balioak
+sarrerako balioen baino txikiagoak izatea egin, 0 dB izan ezik.
+Algoritmoak 0 dB gainditzen duten soinu-maila guztiak 0 dB mailara
+mugatzen ditu, gainkargaren efektua lortzeko jarri 'irabazia' efektua
+konporesorearen aurretik maila guztiak murrizteko, eta beste 'irabazia'
+efektua konpresorearen atzetik 0 dB maila gainditzeko.
+</p>
+<p><b>Erantzun-denbora:</b> uneko posizioarekiko gehienezko soinu-maila non
+hartzen den, eta zein bizkor doitzen den irabazia gailur hura lortzeko
+zehazten du eremu honek. Segundotan adierazten da. Balio negatiboa bada,
+konpresoreak uneko posiziotik aurrera irakurtzen du etorkizuneko gailurra
+lortzeko. Irabazia gailu horretara iritsiko da erantzun-denbora batean.
+Honek nahi den irteerako maila atzematen uzten du, sarrerako gailurra
+gertatzen denean uneko posizioan.
+</p>
+<p>Erantzun-denbora positiboa bada, konpresoreak uneko posizioa soilik arakatzen du
+irabaziaren bila, eta erantzun-denbora bateko maldarekin igoko du irabazia nahi
+den irteerako mailara iristeko. Sarrerako gailua dektektatu ondoren 
+erantzun-denbora bat igatotakoan iritsiko da irteerako mailara.
+</p>
+<p><b>Gainbehera-denbora:</b> gailurra uneko maila baino altuagoa bada, konpresoreak
+irabazia maldan igoko du gailurraren balioraino. Gero, etorkizuneko gailur
+bat uneko gailurra baino baxuagoa bada, irabazia maldan behera jaitsiko du.
+Irabazia maldan behera jaisten igaro dezakeen denbora maldan gora igotzea
+baino handiagoa izan daiteke. Maldan behera jaisteko denborari gainbehera-denbora
+deitzen zaio, eta segundotan adierazten da.
+</p>
+<p><b>Abiarazle mota:</b> konpresorea kanal anitzeko efektu bat da.
+Hainbat pistek parteka dezakete konpresore bat. Hainbat pisten
+seinalea nola interpretatzeko erabiltzen da abiarazle mota.
+</p>
+<p><b>Abiarazle motak</b> behar duen balioa <b>Abiarazlea</b> testu-eremuak ematen dio,
+konpresorearen sarrera bezala erabiliko den pistaren zenbakia adieraziz.
+Entzun ez den pista bati beste pisten bolumen-maila detektatzea uzten dio.
+</p>
+<p><b>Gehienezkoa</b> abiarazleak bolumen-maila altuena duen pista hartu eta 
+konpresorearen sarrera gisa erabiltzen du.
+</p>
+<p><b>Guztira</b> abiarazle motak pista guztien seinaleak gehitzen ditu, eta
+batura hori konpresorearen sarreran erabiltzen du. Soinuaren konpresio
+naturalena da hau, eta oso erabilgarria da hainbat pisten bolumenaren
+batez bestekoa bozgorailu bakarrean doitzeko.
+</p>
+<p><b>Abiarazlea:</b>  konpresorea kanal anitzeko efektu bat da.
+Hainbat pistek parteka dezakete konpresore bat. Normalean
+pista bat bakarrik arakatzen da sarrerako gailurra bilatzeko.
+Pista hori zehazteko erabiltzen da <b>Abiarazlea</b>. Abiarazlearen
+balioarekin hainbat pista partekatu eta erreproduzitzean, pista batean
+sinu formako uhina sor dezakezu beste pista bateko danborraren anplituteari
+jarraitzeko, adibidez.
+</p>
+<p><b>Leundu soilik:</b> konpresoreak soinu-mailari zer egiten dion bistaratzeko,
+aukera honek soinuaren uhina uneko gailurraren balioarekin bakarrik ordezten du.
+Oso ongi erakusten du nola eragiten dien <b>Erantzun-denborak</b> detektatutako
+gailurren balioei.
+</p>
+<hr size="6">
+<a name="Audio_002datzerapena"></a>
+<a name="SEC144"></a>
+<h3 class="subsection"> 13.3.2 Audio-atzerapena </h3>
+
+<p><img src=".././manual_images_en/delayaudio.png" alt="manual_images_en/delayaudio">
+</p>
+<p>Zehaztu bideoaren pista zenbat segundokin atzeratzea nahi duzun.
+</p>
+<hr size="6">
+<a name="Zarata-kentzea"></a>
+<a name="SEC145"></a>
+<h3 class="subsection"> 13.3.3 Zarata kentzea </h3>
+
+<p><img src=".././manual_images_en/denoise.png" alt="manual_images_en/denoise">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="FFT-zarata-kentzea"></a>
+<a name="SEC146"></a>
+<h3 class="subsection"> 13.3.4 FFT zarata kentzea </h3>
+
+<p><img src=".././manual_images_en/denoisefft.png" alt="manual_images_en/denoisefft">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Kendu-parasitoak"></a>
+<a name="SEC147"></a>
+<h3 class="subsection"> 13.3.5 Kendu parasitoak </h3>
+
+<p><img src=".././manual_images_en/despike.png" alt="manual_images_en/despike">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Eku_002e-parametrikoa"></a>
+<a name="SEC148"></a>
+<h3 class="subsection"> 13.3.6 Eku. parametrikoa </h3>
+
+<p><img src=".././manual_images_en/parametric.png" alt="manual_images_en/parametric">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Freeverb"></a>
+<a name="SEC149"></a>
+<h3 class="subsection"> 13.3.7 Freeverb </h3>
+
+<p><img src=".././manual_images_en/freeverb.png" alt="manual_images_en/freeverb">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Irabazia"></a>
+<a name="SEC150"></a>
+<h3 class="subsection"> 13.3.8 Irabazia </h3>
+
+<p><img src=".././manual_images_en/gain.png" alt="manual_images_en/gain">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Heroine-College"></a>
+<a name="SEC151"></a>
+<h3 class="subsection"> 13.3.9 Heroine College </h3>
+
+<p><img src=".././manual_images_en/reverb.png" alt="manual_images_en/reverb">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Interpolatu"></a>
+<a name="SEC152"></a>
+<h3 class="subsection"> 13.3.10 Interpolatu </h3>
+
+<p><img src=".././manual_images_en/interpolateaudio.png" alt="manual_images_en/interpolateaudio">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Alderantzikatu-audioa"></a>
+<a name="SEC153"></a>
+<h3 class="subsection"> 13.3.11 Alderantzikatu audioa </h3>
+
+<p><img src=".././manual_images_en/invertaudio.png" alt="manual_images_en/invertaudio">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Zuzeneko-audioa"></a>
+<a name="SEC154"></a>
+<h3 class="subsection"> 13.3.12 Zuzeneko audioa </h3>
+
+<p><img src=".././manual_images_en/liveaudio.png" alt="manual_images_en/liveaudio">
+</p>
+<p>Efektu honek audioa zuzenean soinu-txartelaren sarreratik irakurtzen du.
+Pistan egon daitekeen audioa ordezten duenez, pista hutsei aplikatu ohi da.
+</p>
+<p><b>Zuzeneko audioa</b> erabiltzeko, nabarmendu eskualde horizontala audioaren pista batean,
+edo definitu sarrerako eta irteerako pistak. Gero, jaregin 'Zuzeneko audioa' efektua
+eskualdean. Sortu pista gehigarriak eta aurreneko 'Zuzeneko audioa' efektuaren
+partekatutako pistak erantsi beste pistei grabazioan kanal gehigarriak edukitzeko.
+</p>
+<p>Zuzeneko audioak grabazioan erabiliko duen soinu-kontrolatzailea <b>Ezarpenak -&gt; Hobespenak -&gt; 
+Erreprodukzioa -&gt; Audio-irteera</b> menuan hautatzen da. Baina grabazio baten ez bezala,
+<b>Erreproduzitzeko buffer-tamaina</b> erabiltzen du grabazioaren bufferraren tamaina gisa, 
+eta <b>proiektuaren lagin-tasa</b> erabiltzen du lagin-tasa gisa.
+</p>
+<p>Ezarpen hauek kritikoak dira, soinu-kontrolatzaile batzuk ezin dute grabatu
+erreprodukzioan erabiltzen den buffer-tamaina berdinarekin. 'Zuzeneko audioa' askoz ere
+fidagarriagoa da grabazioko kontrolatzailea ALSA denean, eta erreprodukzioko
+fragmentu-tamaina 2048 denean.
+</p>
+<p>Jaregin beste efektuak 'Zuzenko audioa'ren ondoren, soinu-txartelaren sarrera denbora
+errealean prozesatzeko.
+</p>
+<p>Orain, albiste txarrak. 'zuzeneko audioak' ezin du aurrez irakurri, eta ondorioz
+konpresorea bezalako efektuek atzerapena izango dute aurrez irakurtzea gaituta izanez
+gero, edo erreprodukzioa exekutatzen ari bada.
+</p>
+<p>Beste arazo bat. Batzuetan soinu-txartelaren grabazio-ordularia erreprodukzio-ordularia
+baino apur bat motelagoa da. Grabazioa atzean erortzen da noizbehinka, eta erreprodukzioa
+moztuta bezala entzuten da.
+</p>
+<p>Azkenik, 'zuzeneko audioak' ez du atzetik aurrera moduan lan egiten.
+</p>
+<hr size="6">
+<a name="Audioa-begiztan"></a>
+<a name="SEC155"></a>
+<h3 class="subsection"> 13.3.13 Audioa begiztan </h3>
+
+<p><img src=".././manual_images_en/loopaudio.png" alt="manual_images_en/loopaudio">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Gainjarri"></a>
+<a name="SEC156"></a>
+<h3 class="subsection"> 13.3.14 Gainjarri </h3>
+
+<p><img src=".././manual_images_en/overlay.png" alt="manual_images_en/overlay">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Garaieraren-desplazamendua"></a>
+<a name="SEC157"></a>
+<h3 class="subsection"> 13.3.15 Garaieraren desplazamendua </h3>
+
+<p><img src=".././manual_images_en/pitch.png" alt="manual_images_en/pitch">
+</p>
+<p>Denbora tiratzeko metodoen antzera, hiru metodo daude garaieraren desplazamenduan:
+<b>Garaieraren desplazamendua</b>, <b>Berriz lagindu</b> eta <b>Kliparen informazioaren leihoa</b>.
+Garaieraren desplazamendua denbora errealeko efektu bat da, grabazioko audioaren pistetara
+arrastatu eta jaregin daiteke. Garaieraren desplazamenduak Fourier-en eraldaketa
+azkarra erabiltzen du garaiera aldatzen saiatzeko (iraupena aldatu gabe), baina honek
+'leihoen artefaktuak' sortzen ditu.
+</p>
+<p>Garaieraren desplazamendua aplikatzen zaien audioei 'leihoen artefaktuek' traba
+guxtiago eragiten diete. Garaieraren desplazamendua asko erabiltzen da 
+garaieran sekulako aldaketak lantzeko. Garaieran aldaketa arinagoak lantzeko,
+<b>Audioa -&gt; Errendatu efektua</b> menuko <b>Berriz lagindu</b> efektua erabili.
+<b>Berriz lagindu</b> efektuak garaiera arinki aldatzen du, %5 inguruan, 
+iraupenean aldaketa nabarmenik egin gabe.
+</p>
+<p>Garaiera piskat aldatzeko beste modu bat: <b>Baliabideak</b> leihora joan, 
+nabarmendu <b>Multimedia</b> (media) karpeta, saguaren eskuineko botoiarekin
+klik egin audio-fitxategi batean, eta aukeratu <b>Informazioa</b> elementua.
+Ondoren, doitu lagin-tasa <b>Informazioaren</b> elkarrizketa-koadroa garaiera
+egokitzeko. Saguaren ezkerreko botoiarekin audioaren pistaren
+eskuineko mugan klik egitea, eta luzeraren aldaketarekin bat etortzeko,
+ezkerrera edo eskuinera arrastatzea eskatzen du metodo honek.
+</p>
+
+<hr size="6">
+<a name="Atzekoz-aurrera-audioa"></a>
+<a name="SEC158"></a>
+<h3 class="subsection"> 13.3.16 Atzekoz aurrera audioa </h3>
+
+<p><img src=".././manual_images_en/reverseaudio.png" alt="manual_images_en/reverseaudio">
+</p>
+<p>Aplikatu <b>Atzekoz aurrera audioa</b> efektua audioaren pista bati, eta atzerantz
+erreproduzituko da. Soinua aurrerantz erreproduzituko da.
+</p>
+<p>Argi ibili audioa atzekoz aurrera jartzearekin, denbora-lerroko uhin-formak
+ez baitu uneko atzekoz aurrera jarritako irteera adierazten.
+</p>
+<hr size="6">
+<a name="Soinu_002dmaila"></a>
+<a name="SEC159"></a>
+<h3 class="subsection"> 13.3.17 Soinu-maila </h3>
+
+<p><img src=".././manual_images_en/level.png" alt="manual_images_en/level">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Espektograma"></a>
+<a name="SEC160"></a>
+<h3 class="subsection"> 13.3.18 Espektograma </h3>
+
+<p><img src=".././manual_images_en/spectrogram.png" alt="manual_images_en/spectrogram">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Sintetizadorea"></a>
+<a name="SEC161"></a>
+<h3 class="subsection"> 13.3.19 Sintetizadorea </h3>
+
+<p><img src=".././manual_images_en/synthesizer.png" alt="manual_images_en/synthesizer">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Tiratu-denbora"></a>
+<a name="SEC162"></a>
+<h3 class="subsection"> 13.3.20 Tiratu denbora </h3>
+
+<p><img src=".././manual_images_en/timestretch.png" alt="manual_images_en/timestretch">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Denbora-errealeko-bideo_002defektuak"></a>
+<a name="SEC163"></a>
+<h2 class="section"> 13.4 Denbora errealeko bideo-efektuak </h2>
+
+
+<hr size="6">
+<a name="g_t1080_002dtik-480_002dra"></a>
+<a name="SEC164"></a>
+<h3 class="subsection"> 13.4.1 1080-tik 480-ra </h3>
+
+<p><img src=".././manual_images_en/1080to540.png" alt="manual_images_en/1080to540">
+</p>
+<p>Telebista kanal gehienak 1920x1080 bereizmenarekin jasoten diren arren, estudioan 
+duten iturburuaren bereizmena 720x480 izan ohi da. Lekua alferrik galtzea da 
+1920x1080 konpresatzea, benetan 720x480 bereizmeneko xehetasunak baditu. Tamalez,
+1920x1080 bereizmeneko bideoa tamainaz aldatzea 720x480-ra ez da murriztea bezain
+sinplea.
+</p>
+<p>Telebista estazio batean, jatorrizko 720x480 muntaia aurrenik 720x240 tamainako
+eremuetara bihurtzen dia. Gero, eremu bakoitza 1920x540 tamainara eskalatzen da.
+Ondoren, 1920x540 bereizmeneko bi eremuak konbinatu egiten dira gurutzelarkatuz,
+eta 1920x1080 tamainako irudia lortzen da. Teknika honekin telebista kontsumilatzaile
+batek berriro lagindutako irudia ikus dezake zirkukitu gehigarririk erabili gabe
+(720x480 irudia 1920x1080 batean kudeatzeko).
+</p>
+<p>1920x1080 tamainako irudiak desgurutzelarkatzen badituzu, 720x240 bereizmeneko
+irudiak lortuko dituzu. <b>1080-tik 480-ra</b> efektuak iruditik 1920x540 tamainako
+bi eremu erauzten ditu, gero irudiak bereiztuta tamainaz aldatu eta berriro
+konbinatuz gurutzelarkatutako 1920x480 irudia berreskuratzen da. <b>Eslaka</b>
+efektuak aplikatu behar da ondoren, tamaina horizontala 960 edo 720
+tamainara (jatorrizko aspektu-erlazioaren arabera) murrizteko.
+</p>
+<p><b>1080-tik 480-ra</b> efektua aplikatzen zaien pistak 1920x1080 bereizmenekoa
+izan behar dute. Proiektuaren ezarpenak, <b>Ezarpenak -&gt; Formatua</b> menuan, 
+gutxienez 720x480 bereizmenekoa izan behar du.
+</p>
+<p>Efektuak ez daki 1920x1080 irudiaren aurreneko errenkada jatorrizko 720x480
+bereizmenaren aurreneko errenkadari al dagokion. Aurreneko errenkada zein den
+zehaztu behar duzu efektuaren konfigurazioan.
+</p>
+<p>Efektu honen irteera irudi txiki bat da, jatorrizko 1920x1080 fotogramaren
+erdian. Erabili proiektorea irteerako irudia erreprodukzioan zentratzeko.
+</p>
+<p>Azkenik, behin gurutzelarkatutako 720x480 bideoa duzunean, <b>Fotogramak eremuetara</b>
+edo <b>Alderantzikatu Telezinema</b> efektua aplika dezakezu jatorrizko fotograma
+progresiboak berreskuratzeko.
+</p>
+<hr size="6">
+<a name="Filma-zahartzea"></a>
+<a name="SEC165"></a>
+<h3 class="subsection"> 13.4.2 Filma zahartzea </h3>
+
+<p><img src=".././manual_images_en/aging.png" alt="manual_images_en/aging">
+</p>
+<p>&quot;Filma zaharraren&quot; edo telebistako saio baten itxura lortzeko erabil daitekeen
+efektuetariko bat da hau. Efektu honek filmean marrak gora eta behera mugitzen
+jartzen ditu, bideoan ere 'elurra' jar dezake. Erabili efektu hau
+distira/kontrastea edo kolore-balantzea efektuekin zuri-beltzeko filma
+zahar baten itxura lortzeko.
+</p>
+<hr size="6">
+<a name="Lausotzea"></a>
+<a name="SEC166"></a>
+<h3 class="subsection"> 13.4.3 Lausotzea </h3>
+
+<p><img src=".././manual_images_en/blur.png" alt="manual_images_en/blur">
+</p>
+<p>Efektu honek bideoaren pista bat lausotzen du. Parametroak honakoak dira:
+</p><ul>
+<li> <b>Horizontala eta bertikala</b> <br>
+Lausotze efektuak eremuetariko zeini eragingo dion zehazten dute parametro hauek. 
+Bi eremuak izan daitezke.
+</li><li> <b>Erradioa</b> <br>
+Erabili graduatzailea aplikatuko den lauso kopurua zehazteko.
+</li><li> <b>Lauso urdina, gorria, berdea, alfa</b> <br>
+Zehaztu zein kolore-kanal lausotu behar den.
+</li></ul>
+
+<hr size="6">
+<a name="Distira_002fkontrastea"></a>
+<a name="SEC167"></a>
+<h3 class="subsection"> 13.4.4 Distira/kontrastea </h3>
+
+<p><img src=".././manual_images_en/brightness.png" alt="manual_images_en/brightness">
+Kaptura ilun bat argitzea nahi baduzu, tresna hau erabili behar duzu.
+Efektu hau gehiegi ez erabili, bestela bideoaren kalitatea galtzeko arriskua edukiko
+baituzu. Erabili efektu hau gako-fotogramekin, hasiera iluna baina amaiera argitsua duen
+kaptura bati distira emateko. Normalean distira eta kontrastea kopuru berdinarekin
+(adib. distira: 28, kontrastea: 26) aldatzea nahi izango duzu, jatorrizko
+koloreak ukitu gabe uzteko.
+</p>
+<hr size="6">
+<a name="Filma-erretzen"></a>
+<a name="SEC168"></a>
+<h3 class="subsection"> 13.4.5 Filma erretzen </h3>
+
+<p><img src=".././manual_images_en/burn.png" alt="manual_images_en/burn">
+</p>
+<p>Bideoa erretzearen efektuak zure bideoa 'erretzen' du, bertan bideoari erantsitako
+argi txiki koloredunak daude, kamiseta zuri baten ertzetan adibidez. Efektu polita
+izan daiteke musika arloko bideo batean, eta bideoak jorratzean zure irudipena
+askatzen lagun zaitzake.
+</p>
+<hr size="6">
+<a name="Gako-kromatikoa"></a>
+<a name="SEC169"></a>
+<h3 class="subsection"> 13.4.6 Gako kromatikoa </h3>
+
+<p><img src=".././manual_images_en/chromakey.png" alt="manual_images_en/chromakey">
+</p>
+<p>Efektu honek hautatutako kolorearekin bat etortzen diren pixelak ezabatzen ditu.
+Alfa kanalik ez badago, kolore beltzarekin ordeztuko ditu. Alfa kanala egonez
+gero, gardentasunarekin ordeztuko ditu. Kolore-ereduaren hautapena oso garrantzitsua
+da portaera zehazteko.
+</p>
+<a name="IDX138"></a>
+<a name="IDX139"></a>
+<p>Gako kromatikoak argitasuna edo ñabardura erabiltzen du zer ezabatu den zehazteko.
+<b>Erabili balioa</b> aukerak gardentasuna zehazteko balioa balioa da.
+Ezabatuko den kolore zentral bat <b>Kolorea</b> botoiarekin hautatu. Beste modu bat
+irteerako fotogramatik kolorea hautatzea da, horretarako aurrenik konposaketa-leihoan
+<b>kolore-hautatzailea</b> erabili, eta gero hautatu <b>Erabili kolore-hautatzailea</b> botoia.
+Kolore-hautatzailearen uneko kolorea ezartzen du gako kromatiko gisa erabiltzeko.
+</p>
+<p>Argi ibili, gako kromatikoaren irteera konposatzailera atzeraeragiten baita,
+eta ondorioz, berriro konposatzailean kolore bat hautatzean gako kromatikoaren
+efektuaren irteera erabiliko baita. Kolore-hautatzailearekin koloreak hautatutakoan
+gako kromatikoa desgaitu egin behar da.
+</p>
+<p>Atalase batean dagoen argitasuna edo ñabardura ezabatu egingo da. Atalasea handitzeak
+ezabatuko den koloreen barrutia zehazten du. Hala ere, ez da piztu/itzali bezain erraza.
+Kolorea atalasearen mugara gerturatzen doan heinean, gradualki ezabatuko da malda altua
+bada, edo azkar ezabatuko da malda baxua bada. Hemen definitutako malda balio gehigarri
+kopurua da, opakotasunetik gardentasunera joateko behar den atalasearen mugakidea.
+</p>
+<p>Normalean, atalasea oso motela izaten da malda altu bat erabiltzean. Bi parametroak
+esklusiboak izateko joera dute, maldak betetzen duela atalase gehigarria.
+</p>
+<p>Maldak gako kromatikoaren ertzak leuntzen saiatzen den arren, ez du ongi funtzionatzen
+konpresioa duten iturburuetan. 
+</p>
+<p>Leuntzeko teknika ospetsuenetarikoa honakoa da: erabili malda handiena, eta 
+kateatu lausotzeko efektua gako kromatikoa efektuaren azpian, alfa kanala lausotzeko.
+</p>
+<hr size="6">
+<a name="Gako-kromatikoa-_0028_00c3_0091SB_0029"></a>
+<a name="SEC170"></a>
+<h3 class="subsection"> 13.4.7 Gako kromatikoa (ÑSB) </h3>
+
+<p><img src=".././manual_images_en/chromakeyhsv.png" alt="manual_images_en/chromakeyhsv">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Kolore_002dbalantzea"></a>
+<a name="SEC171"></a>
+<h3 class="subsection"> 13.4.8 Kolore-balantzea </h3>
+
+<p><img src=".././manual_images_en/colorbalance.png" alt="manual_images_en/colorbalance">
+</p>
+<p>Bideoaren kolore-balantzea efektu dotorea da distira/kontrastea eta ñabardura/saturazioa
+efektuekin batera erabiltzeko, filmaren grabazioan sor daitezkeen erroreak (argitasun baxua,
+e.a.) konpensatzen saiatzeko. Bideoaren kalitatea asko gutxiagotu gabe gauza asko egin ditzake.
+Gimp programak duen kolore-balantzea efektuaren antzekoa da. Irteerara bidaltzen 
+den kolorea CMY (cyana, magenta, horia) edo GBU (gorria, berdea, urdina) alda dezakezu 
+efektu hau erabiliz.
+</p>
+<hr size="6">
+<a name="Dezimala"></a>
+<a name="SEC172"></a>
+<h3 class="subsection"> 13.4.9 Dezimala </h3>
+
+<p><img src=".././manual_images_en/decimate.png" alt="manual_images_en/decimate">
+</p>
+<p>Efektu honek oso antzekoak diren fotogramak jaregiten ditu pistatik, fotograma-tasa
+murrizteko.  Efektu hau DVD bati aplikatzen zaio, bideoaren 29.97 f/s fotograma-tasatik
+filmaren 23.97 f/s tasara bihurtzeko. Dezimala efektuak sarrerako edozein tasa hartu
+eta irteerako tasa baxuago batera bihur dezake.
+</p>
+<p><b>Dezimala</b> efektuaren irteerako tasa proiektuaren fotograma-tasa da. Sarrerako tasa
+<b>dezimala</b> interfazean ezartzen da. 29.97 f/s duen bideo progresiboa filmaren 23.97 f/s
+tasara bihurtzeko, aplikatu dezimala efektua pistari. Ezarri dezimala efektuaren sarrerako
+tasa 29.97 balioarekin, eta proiektuaren tasa 23.97 balioarekin.
+</p>
+<p><b>Oharra:</b> dezimala efektuaren gainean geruzatuta dagoen efektu bakoitza dezimala efektuaren
+sarrerako tasarekin prozesatuko da. Eta azpian geruzatuta dauden efektuak
+proiektuaren fotograma-tasarekin prozesatuko dira. Kalkulu asko behar dituzten efektuak
+dezimala efektuaren azpian egon beharko lukete.
+</p>
+<hr size="6">
+<a name="Desgurutzelarkatu"></a>
+<a name="SEC173"></a>
+<h3 class="subsection"> 13.4.10 Desgurutzelarkatu </h3>
+
+<p><img src=".././manual_images_en/deinterlace.png" alt="manual_images_en/deinterlace">
+</p>
+<p>Desgurutzelarkatzeko efektua asko garatu da azken urteotan. Gaur egun,
+desgurutzelarkatzeko bi metodoak, <b>Alderantzikatu Telezinema</b> eta
+<b>Fotogramak eremuetara</b>, banadutako efektuak dira. Desgurutzelarkatzeko
+efektuak marren erreplikazioaren hainbat aldaerak ditu orrazi-artefaktuak ezabatzeko
+gurutzelarkatutako bideoan. Marrak trukatzeko tresna batzuk ditu kapturatutako bideoa
+hobeto finkatzeko, edo atzekoz aurrera efektuaren emaitzak ordena egokian
+bistaratzeko eremuak.
+</p>
+<hr size="6">
+<a name="Bideo_002datzerapena"></a>
+<a name="SEC174"></a>
+<h3 class="subsection"> 13.4.11 Bideo-atzerapena </h3>
+
+<p><img src=".././manual_images_en/delayvideo.png" alt="manual_images_en/delayvideo">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Kendu-bideoaren-zarata"></a>
+<a name="SEC175"></a>
+<h3 class="subsection"> 13.4.12 Kendu bideoaren zarata </h3>
+
+<p><img src=".././manual_images_en/denoisevideo.png" alt="manual_images_en/denoisevideo">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="g_t2_002e-bideoaren-zarata-kentzea"></a>
+<a name="SEC176"></a>
+<h3 class="subsection"> 13.4.13 2. bideoaren zarata kentzea </h3>
+
+<p><img src=".././manual_images_en/denoisemjpeg.png" alt="manual_images_en/denoisemjpeg">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Gako-diferentzia"></a>
+<a name="SEC177"></a>
+<h3 class="subsection"> 13.4.14 Gako diferentzia </h3>
+
+<p><img src=".././manual_images_en/diffkey.png" alt="manual_images_en/diffkey">
+</p>
+<p>Gako diferentzia efektuak gardentasuna sortzen du bi fotogramen arteko antzeko
+areetan. Efektu hau 2 pistetan aplikatu behar da. Pista batek aurreko planoan
+ekintza dauka (eta atzeko planoa konstantea); beste pistak atzeko planoa soilik
+dauka (ezer ez aurreko planoan). Aplikatu gako diferentzia ekintza duen pistari
+eta aplikatu partekatutako kopia atzeko planoa soilik duen pistari. Atzeko
+planoa duen pista mututu egin beharda, eta ekintza duen pistaren azpian egon. 
+Kolore-ereduak alfa kanala eduki beharko luke.
+</p>
+<p>Atzeko planoa duen pistaren eta ekintzaren pistaren artean desberdinak diren
+pixelak opako gisa tratatuko dira. Antzekoak diren pixelak gardenak bezala
+tratatuko dira. Gako diferentziaren <b>atalasea</b> aldatu, kolore berdinekoak ez diren
+pixel gehiago garden jartzeko. Aldatu <b>malda</b> tasa aldatzeko, zerekin gardentasuna
+gutxiagotzen joaten den pixelak geroz eta desberdinagoak diren heinean.
+</p>
+<p>Hemen definitutako malda balio gehigarri kopurua da, opakotasunetik gardentasunera
+joateko behar den atalasearen mugakidea. Malda altua erabilgarriagoa da atalase
+baxu batekin, maldak betetzen baitu atalase gehigarria.
+</p>
+<p><b>Erabili balioa</b> aukerak pixelen kolorearen ordez intentsitatea konparatzea eragiten du.
+</p>
+<p>Alfa kanala lausotuta duen pista baten gainean lausoa aplikatzeak gardentasunaren ertza
+leuntzen du.
+</p>
+<p><b>Oharra:</b> unean efektu honek aplikazioa krakastu egiten du YUV moduarekin erabiltzean.
+</p>
+<hr size="6">
+<a name="TB-puntuekin"></a>
+<a name="SEC178"></a>
+<h3 class="subsection"> 13.4.15 TB puntuekin </h3>
+
+<p><img src=".././manual_images_en/dot.png" alt="manual_images_en/dot">
+</p>
+<p>Kentaro-k (effectTV) garatutako beste efektu bat.
+</p>
+<hr size="6">
+<a name="Lagin_002dmurrizketa"></a>
+<a name="SEC179"></a>
+<h3 class="subsection"> 13.4.16 Lagin-murrizketa </h3>
+
+<p><img src=".././manual_images_en/downsample.png" alt="manual_images_en/downsample">
+</p>
+<p>Lagin-murrizketa efektuak irudi baten tamaina txikiagotzen du, datuak botaz,
+lagin-tasa murriztuz.
+</p>
+<p>Honako parametroak erabiltzen ditu: <br>
+Horizontala <br>
+Desplazamendu horizontala <br>
+Berticala <br>
+Desplazamendu bertikala <br>
+Kanalak
+</p>
+<hr size="6">
+<a name="Eremuak-fotogrametara"></a>
+<a name="SEC180"></a>
+<h3 class="subsection"> 13.4.17 Eremuak fotogrametara </h3>
+
+<p><img src=".././manual_images_en/fieldframe.png" alt="manual_images_en/fieldframe">
+</p>
+<p>Efektu honek fotogramak proiektuaren fotograma-tasaren bikoitzarekin irakurtzen ditu, 
+sarrerako 2 fotograma irteerako gurutzelarkatutako fotograma batean konbinatuz.
+<b>Eremuak fotogrametara</b> efektuaren aurretik dauden efektuek proiektuaren fotograma-tasaren
+bikoitzarekin prozesatuko dituzte fotogramak. Sarrerako fotograma bakoitzari eremua
+deitzen zaio.
+</p>
+<p><b>Eremuak fotogrametara</b> efektuak jakin egin behar du zein eremu dagokion irteerako
+fotogramako marrei. Jakiteko modurik errazena leihoko bi aukerak probatzea da.
+Sarrerako eremuak marra bikoiztuaren prozesuaren ondorioak badira, <b>fotogramak eremuetara</b>
+bezalakoarekin, okerreko ezarpenak irteera lausoa eragingo du. Sarrerako eremuak
+bihurketa prozesu estandar baten ondorioak badira, <b>1080-tik 480-ra</b> bezalakoa,
+okerreko ezarpenak ez du desberdintasunik sortuko.
+</p>
+<p>&quot;Debobber&quot; efektuak, gurutzelarkatutako 720x480 bihurtzen du gurutzelarkatutako 
+1920x1080 edo 1280x720 progresiboa modura, badirudi bereizmen bertikala hainbeste
+degradatzen duela, ze ezinezkoa izaten dela berreskuratzea.
+</p>
+<hr size="6">
+<a name="Irauli"></a>
+<a name="SEC181"></a>
+<h3 class="subsection"> 13.4.18 Irauli </h3>
+
+<p><img src=".././manual_images_en/flip.png" alt="manual_images_en/flip">
+</p>
+<p>Efektu honek bideoaren pista bat (edo zati bat) iraultzen du, ezkerretik eskuinera,
+eskuinetik ezkerrera, goitik behera, behetik gora.
+</p>
+<p>Elkarrizketa-koadroa nahiko bakuna da, parametro horizontala eta bertikalak soilik
+behar baitira.
+</p>
+<hr size="6">
+<a name="Fotogramak-eremuetara"></a>
+<a name="SEC182"></a>
+<h3 class="subsection"> 13.4.19 Fotogramak eremuetara </h3>
+
+<p><img src=".././manual_images_en/framefield.png" alt="manual_images_en/framefield">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Izoztu-fotograma"></a>
+<a name="SEC183"></a>
+<h3 class="subsection"> 13.4.20 Izoztu fotograma </h3>
+
+<p><img src=".././manual_images_en/freezeframe.png" alt="manual_images_en/freezeframe">
+</p>
+<p>Bere forma bakunenean, nabarmendu pistaren eskualde bat izozteko, jaregin
+'izoztu fotograma' efektua nabarmendutako eskualdearen gainean, eta eragindako
+arean zenbaki txikiena duen fotograma eskualde osoan erreproduzituko da.
+</p>
+<p>'Izoztu fofograma' efektuak <b>gaituta</b> aukera du, gako-fotograma bati esleitu
+dakiokeena. 'Izoztu fotograma' efektua duten eskualdeak, gaituta daudenak, 
+azken gako-fotogramaren ondoren zenbaki txikiena duen fotograma errepikatzen dute.
+Hauxe da efektuak duen posibilitate bakarra.
+</p>
+<ul>
+<li> 'Izoztu fotograma' efektuak gako-fotograma bat badu bere erdian, ezarri <b>gaituta</b>, 
+erdiko fotograma errepikatuko da efektu osoan.
+</li><li> 'Izoztu fotograma' efektuak hainbat gako-fotograma baditu, ezarri bakoitza
+<b>gaituta</b> egoerarekin, gako-fotograma bat aurkitzen den bakoitzean fotograma hori
+izoztuta bistaratuko da.
+</li><li> 'Izoztu fotograma' efektuan <b>gaitutako</b> eta <b>desgaitutako</b> gako-fotogramak
+tartekatuta baditu, <b>gaitutako</b> gako-fotograma bat aurkitzean, fotograma hori bistaratuko
+da hurrengo <b>desgaitutako</b> gako-fotograma aurkitu arte. Desgaitutako eskualdeak
+normalki erreproduzituko dira.
+</li></ul>
+
+<hr size="6">
+<a name="Gamma"></a>
+<a name="SEC184"></a>
+<h3 class="subsection"> 13.4.21 Gamma </h3>
+
+<p><img src=".././manual_images_en/gamma.png" alt="manual_images_en/gamma">
+</p>
+<p>Kameraren irudi gordinek eskala logaritmikoa erabiliz gordetzen dituzte argazkiak. 
+Kolore beltzak 0 baliora gerturatzen dira, eta zuriak berriz ia infinituraino
+iristen dira. Txartel-grafikoek eta bideoen kodekek eskala lineala erabiltzen dute
+koloreak gordetzeko. Cinelerra-k ordea irudi gordinen jatorrizko eskala logaritmikoa
+mantenten du hauek errendatzean. Hau beharrezkoa da, irudi gordinen analizatzaileak
+ez baitu irudien gamma balioak beti ongi dekodetzen. Gainera, 16 bit-eko zenbaki
+osokoekin prozesatzen duenez, informazio pila bat hartzen du.
+</p>
+<p>Gamma efektuak kolore logaritmikoak lineal bihurtzen ditu, gammaren balioa eta gehienezko
+balioan oinarrituz. Gammaren balioak irteerako kurbaren pikoa zehazten du. Irteerako 
+1.0 balioari dagokion sarrerako gehienezko distira da gehienezko balioa.
+</p>
+<p>Gamma efektuak beste 2 parametro gehiago ditu gammaren zuzenketa errazteko. 
+<b>Automatikoa</b> aukerak irudiaren histogramaren <b>gehiengoa</b> kalkulatu arazten
+du. Erabili aukera hau irudien zerrenda luze baten aurrebista lantzeko, irudi batetik
+bestera aldatzen baita.
+</p>
+<p><b>Erabili kolore-hautatzailea</b> aukerak kolore-hautatzailearen uneko balioa erabiltzen du
+<b>gehienezko</b> balioa ezartzeko. Kontutan izan konposaketa-leihotik kolore bat hautatzen
+den bakoitzean, <b>Erabili kolore-hautatzailea</b> botoia sakatu behar dela balio berria aplikatzeko.
+</p>
+<hr size="6">
+<a name="Gradientea"></a>
+<a name="SEC185"></a>
+<h3 class="subsection"> 13.4.22 Gradientea </h3>
+
+<p><img src=".././manual_images_en/gradient.png" alt="manual_images_en/gradient">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Histograma"></a>
+<a name="SEC186"></a>
+<h3 class="subsection"> 13.4.23 Histograma </h3>
+
+<p><img src=".././manual_images_en/histogram.png" alt="manual_images_en/histogram">
+</p>
+<p>Kolore bakoitzaren gertaera kopurua erakusten du histogramaren marrazkian.
+</p>
+<p>GBU koma mugikorrean kalkulatzen da beti, eta berdin dio proiektuak darabilen
+kolore-eredua. Histogramak bi transferentzi-parametro multzo ditu: sarrerako
+transferentzia, eta irteerakoa.
+</p>
+<p>Histogramaren ikustailean 4 histograma posible daude. Histograma gorria, berdea eta urdinak
+gorriaren, berdearen eta urdinaren sarrerako histogramak erakusten ditu. Eta sarrerako
+transferentziarekin bidertzen ditu irteerako gorria, berdea eta urdina lortzeko.
+Gero irteerako gorria, berdea eta urdina irteerako transferentziarekin eskalatzen dira.
+Eskalatutako gorria, berdea eta urdina balio bihurtzen dira, eta histogramaren 
+balioan marrazten dira. Honela, histogramaren balioa aldatu egiten da gorriaren,
+berdearen eta urdinaren ezarpenen arabera. Transferentziaren balioa uniformeki
+aplikatzen zaie G, B eta U-ri (beraien kolore-transferentzia aplikatu ondoren).
+</p>
+<p>Histogramaren goian dauden kanaletariko bat hautatuz transferentzia bat ikus
+ahalko duzu.
+</p>
+<p>Sarrerako transferentzia histograman gainjarritako grafiko batekin definitzen da.
+norabide horizontalak sarrerako koloreei dagokie, norabide bertikala berriz
+irteerako koloreei. Histograman sartzen den bideoa aurrenik histograman marrazten da.
+Gero, bihurtu egiten da, eta honela sarrerako balioek sarrerako grafikoko
+sarrerako balio bakoitzaren irteerako balioen berdinak izango dira.
+</p>
+<p>Sarrerako grafikoa edita daiteke edozein puntu kopuru gehitzeko eta kentzeko.
+Egin klik eta arrastatu sarrerako grafikoko edozein lekutan puntu bat sortu eta
+lekuz aldatzeko. Egin klik existitzen den puntu batean aktibatzeko eta lekuz
+aldatzeko. Puntu aktiboa beti adierazten da betegarri batekin. Puntu aktiboaren
+sarrerako eta irteerako coloreak leihoaren goian dauden testu-eremuetan
+ematen dira. Puntuaren sarrerako eta irteerako koloreak aldatzeko erabili
+testu-eremu hoiek.
+</p>
+<p>Puntuak ezabatzeko lehenbizi hautatu puntu bat, gero eraman aldameneko puntu baten
+beste albora. Puntuak hautatu eta <b>Ezabatu</b> tekla sakatuz ere ezaba daitezke.
+</p>
+<p>Sarrerako transferentziaren ostean, irteerako transferentziak prozesatuko du irudia.
+Irteerako transferentzia gutxienekoa eta gehienezkoa da, irteerako balioak
+eskalatzeko. %100-aren sarrerako balioak beherantz eskalatzen dira
+irteeraren gehienezkora. %0-ren sarrerako balioak irteerako gutxienekora gorantz
+eskalatzen dira.
+</p>
+<p>0 azpiko sarrerako balioak 0 baliora lotzen dira, eta %100 gainditzen duten sarrerako
+balioak %100-era lotzen dira. Egin klik eta arrastatu sarrerako gradientearen triangeluak
+aldatzeko. Honek ere testu-eremuak ditu balioak sartzeko.
+</p>
+<p>Gaitu <b>automatikoa</b> txandakaria histogramak kalkulatzeko gorriaren,
+berdearen eta urdinaren (baina ez balioaren) sarrerako transferentzi automatikoak.
+Hau lantzeko pixelen %99-ren erdiak eskalatzen ditu histogramaren zabaleraren %100 hartzeko.
+Pasatuko diren pixel kopurua <b>Atalasea</b> testu-eremuan ezartzen da.
+0.99 balioko atalaseak sarrera eskalatzen du pixelen %99a pasatzeko.
+Atalase txikiagoak pixel gutxiago pasatzea uzten du, eta irteera kontraste
+handiagoarekin bistaratzen du.
+</p>
+<p>Sarrerako transferentzia automatikoa G, B eta U kanalentzako kalkulatzen da, baina
+ez balioarentzako. <br>
+<b>Marraztu histograma</b> <br>
+<b>Zatitu irteera</b>
+</p>
+<hr size="6">
+<a name="Filma-holografikoa"></a>
+<a name="SEC187"></a>
+<h3 class="subsection"> 13.4.24 Filma holografikoa </h3>
+
+<p><img src=".././manual_images_en/holo.png" alt="manual_images_en/holo">
+</p>
+<p>Garatzailea: Kentarou effectTV
+</p>
+<hr size="6">
+<a name="g_t_00c3_0091abarduraren-saturazioa"></a>
+<a name="SEC188"></a>
+<h3 class="subsection"> 13.4.25 Ñabarduraren saturazioa </h3>
+
+<p><img src=".././manual_images_en/huesaturation.png" alt="manual_images_en/huesaturation">
+</p>
+<p>Efektu honekin ñabardura, saturazioa eta balioa alda ditzakezu. Parametroak
+aldatzeko erabili hiru graduatzaileak.
+</p>
+<hr size="6">
+<a name="Interpolatu-bideoa"></a>
+<a name="SEC189"></a>
+<h3 class="subsection"> 13.4.26 Interpolatu bideoa </h3>
+
+<p><img src=".././manual_images_en/interpolatevideo.png" alt="manual_images_en/interpolatevideo">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Interpolatu-pixelak"></a>
+<a name="SEC190"></a>
+<h3 class="subsection"> 13.4.27 Interpolatu pixelak </h3>
+
+<p><img src=".././manual_images_en/interpolate.png" alt="manual_images_en/interpolate">
+</p>
+<p>'Interpolatu pixelak' efektuak fotograma-tasa oso baxua duen muntaiaren iturburutik 
+fotograma-tasa handiago baten ilusioa sortzen saiatzen da denboran zehar batez besteko
+fotogramak kalkulatuz. Sarrerako bi fotogramen batez bestekoa lantzen du irteerako
+fotograma bakoitzeko. Sarrerako fotogramak denbora desberdinean daude, sarrerako
+fotogramen artean dauden irteerako fotograma guztiak disolbatuz. Bi modu daude
+sarrerako fotogramak zehazteko. Proiektuaren fotograma-tasa baino baxuagoa den 
+sarrerako fotograma-tasa bat zehaz dezakezu. Honen ondorioz, sarrerako fotogramak
+bitarte erregularretan hartuko dira.
+</p>
+<p>Gako-fotogramen kokalekuak zehatz ditzakezu, sarrerako fotogramen posizio gisa.
+Modu honetan, sarrerako fotograma-tasa gisa erabiltzen da irteerako fotograma-tasa,
+eta nonnahi gako-fotogramak sor ditzakezu sarrerako fotograma bat zehazteko.
+</p>
+<hr size="6">
+<a name="Alderantzikatu-Telezinema"></a>
+<a name="SEC191"></a>
+<h3 class="subsection"> 13.4.28 Alderantzikatu Telezinema </h3>
+
+<p><img src=".././manual_images_en/ivtc.png" alt="manual_images_en/ivtc">
+</p>
+<p>Desgurutzelarkatzeko tresnarik eraginkorrena da efektu hau, bideo batetik
+filma batera transferitutako muntaia denean. Hemen filma 24 f/s tasatik
+60 f/s tasara bihurtu da. Gero, 60 f/s murriztu egin da 30 f/s tasara
+lerro bakoitiak eta bikoitiak erauziz eta lerroak gurutzelarkatuz.
+IVTC (alderantzikatu telezinema) efektua modu nagusienetarikoa da
+gurutzelarkatutako bideoa bihurtzeko bideo progresiboan. Gurutzelarkatzearen 
+hiru eredu desegiten ditu. <br>
+<code>A AB BC CD D</code> <br>
+<code>AB CD CD DE EF</code> <br>
+<code>Automatikoa</code>
+</p>
+<p>Lehenbiziko bi aukerek eredu finkoak dira, eta <b>ereduaren despl.</b>
+eta <b>Eremu bakoitiak aurrenik</b> parametroek eragiten diete.
+Azken aukerak lerroen hainbat konbinazio sortzen ditu fotograma bakoitzarentzako, 
+eta konbinazio progresiboena hartzen du. Indarraren indarrezko algoritmo bat da.
+</p>
+<p>Teknika hau ez da eredu batean oinarritzen, ez beste teknika batzuk egiten duten bezala,
+eta ez da horien bezain suntsitazilea. Baina denboralizazioan nahasmendua sortzen du
+fotograma-tasaren murrizketaren faltagatik. Denboralizazioa hobetzeko helburuarekin
+'Alderantzikatu telezinema' efektuari 'dezimala' efektuak jarraitu behar dio.
+</p>
+<hr size="6">
+<a name="Alderantzikatu-bideoa"></a>
+<a name="SEC192"></a>
+<h3 class="subsection"> 13.4.29 Alderantzikatu bideoa </h3>
+
+<p><img src=".././manual_images_en/invertvideo.png" alt="manual_images_en/invertvideo">
+</p>
+<p>Bideoaren pista baten koloreak alderantzikatzen ditu. Kanaletariko bakoitza
+alderantzika daiteke: gorria, berdea, urdina eta alfa.
+</p>
+<hr size="6">
+<a name="Lausotze-lineala"></a>
+<a name="SEC193"></a>
+<h3 class="subsection"> 13.4.30 Lausotze lineala </h3>
+
+<p><img src=".././manual_images_en/linearblur.png" alt="manual_images_en/linearblur">
+</p>
+<p>Lausotzeak hiru estilo ditu: lineala, erradiala eta zooma
+</p>
+<p>Honako parametroak ditu:
+</p><ul>
+<li> <b>Luzera</b> <br>
+Jatorrizko irudiaren eta amaierako lausotze urratsaren arteko diferentzia.
+</li><li> <b>Angelua</b> <br>
+Mugimenduaren angelua, lausotze linealean erabiltzeko.
+</li><li> <b>Urratsak</b> <br>
+Lausotzearen urrats kopurua.
+</li><li> <b>Kanalak</b> <br>
+Zein kanal lausotuko diren.
+</li></ul>
+
+<hr size="6">
+<a name="Zuzeneko-bideoa"></a>
+<a name="SEC194"></a>
+<h3 class="subsection"> 13.4.31 Zuzeneko bideoa </h3>
+
+<p><img src=".././manual_images_en/livevideo.png" alt="manual_images_en/livevideo">
+</p>
+<p>Efektu honek bideoa irakurtzen du zuzenean sarrerako kaptura-txarteletik.
+Pistan dagoen edozein bideo ordezten duenez, pista huts bati aplikatu ohi zaio.
+Kaptura-txartelaren konfigurazioa grabazioko hobespenetatik hartzen da. Joan
+<b>Ezarpenak -&gt; hobespenak -&gt; Grabazioa</b> menura kaptura-txartela konfiguratzeko.
+</p>
+<p>Joan <b>Bideo-sarrera</b> ataleko <b>Kontrolatzailea</b> eremura. Eremu horretan
+<b>Video4Linux2</b> edo <b>IEC 61883</b> hautatu. Beste bideo-kontrolatzaileak ez dira
+probatu 'Zuzeneko bideoa' efektuarekin, eta baliteke ez funtzionatzea.
+</p>
+<p>Denbora-lerroak erabil dezakeen formatuan ezarri behar dira 
+<b>Formatua</b> eta <b>Bideoa</b>. Fitxategi-formatuak <b>Quicktime 
+Linux-entzako</b> izan behar du, eta bideoaren grabazioa gaitu behar da. Egin klik
+<img src=".././manual_images_en/wrench.png" alt="manual_images_en/wrench"> giltzan bideo-konpresioa konfiguratzeko.
+</p>
+<p>Bideo-konpresioa grabazioaren kontrolatzailearen mende dago. <b>Video4Linux2</b>
+bideo-kontrolatzailearekin konpresioa <b>JPEG A mugimendua</b> izan behar da.
+<b>IEC 61883</b> bideo-kontrolatzilearen kasuan konpresioa <b>DV</b> izan behar da.
+Honela, denbora-lerroak erabil dezakeen kolore-ereduan irteera sortzea uzten dio
+kontrolatzaileari.
+</p>
+<p>Txartel batzuk kolorearen eta kanalaren ezarpenak eskaintzen dituzte.
+'Zuzeneko bideoa' efektuak <b>Bideo-sarrera</b> leihoan ezarritako balioetatik
+hartzen ditu kolorearen ezarpenak. Joan <b>Fitxategia -&gt; Grabatu</b> menura
+grabazioaren eta bideo-sarreraren leihoak bistaratzeko.
+</p>
+<p><b>Bideo-sarrera</b> leihoan ezarritako balioak erabiliko ditu <b>Zuzeneko bideoa</b>
+efektuak. Kaptura-txartelak onartzen dituen edozein kanal <b>Bideo-sarrera</b> leihoan
+konfiguratu behar da, <b>Zuzeneko bideoa</b> efektuak erabiltzeko kanal berdinak.
+</p>
+<p>Bideoaren grabazioa konfiguratuta dagoela, nabarmendu eskualde horizontala
+bideoaren pistan, edo definitu sarrerako eta irteerako puntuak. Gero, jaregin
+'Zuzeneko bideoa' efektua eskualde horretan. Jaregin beste efektuak 'Zuzeneko bideoa'
+efektuaren ondoren, zuzeneko bideoa denbora errealean prozesatzeko.
+Emaitza hoberena lortzeko, OpenGL eta GL itzalduraren hizkuntza onartzen duen
+bideo-txartela erabiltzea gomendatzen da. Joan <b>Ezarpenak -&gt; Hobespenak -&gt; Erreproduzkioa 
+-&gt; Bideo-irteera</b> menura OpenGL kontrolatzailea gaitzeko.
+</p>
+<p><b>Oharra:</b> 'Zuzeneko bideoa' efektu bakarra egon daiteke denbora-lerroko aldi bakoitzean. 
+Ezin da pista bat baino gehiagokin partekatu.
+</p>
+<hr size="6">
+<a name="Bideoa-begiztan"></a>
+<a name="SEC195"></a>
+<h3 class="subsection"> 13.4.32 Bideoa begiztan </h3>
+
+<p><img src=".././manual_images_en/loopvideo.png" alt="manual_images_en/loopvideo">
+</p>
+<p>Bideoaren zati bat behin eta berriz errepika dezake zati horretan <b>begizta</b>
+efektua jareginez. <b>Ezarpenak -&gt; Erreproduzitu begiztan</b> aukeraren alderantziz,
+begizta efektuak errenda dezake. Erreproduzitu begiztan aukerak bideoa muntatzean
+bideoa ikusteko modu bat da, baina ez du amaierako irteeran errendatzen. <b>Begizta</b>
+efektuak ordea, amaierako irteeran errendatzen du. Begizta efektua asko erabiltzen da
+eskualde laburretan.
+</p>
+<p>Begizta efektuak aukera bat du: begiztan sartuko den <b>fotograma</b>
+edo <b>lagin</b> kopurua. Aukera honek begiztan egongo den eskualdearen luzera
+zehazten du, efektuaren hasieratik edo azkeneko gako-fotogramatik hasiz.
+Eskualdea errepikatu egiten da behin eta berriro efektuaren iraupenean zehar.
+</p>
+<p>Begizta efektuan gako-fotograma bat aurkitzen den bakoitzean, aurkitutako
+gako-fotograma hori errepikatuko den eskualdearen hasieran bihurtzen da.
+Hainbat gako-fotograma jarraian jartzean, hainbat eskualde errepikatzea
+eragitun da. Gako-fotograma bakarra jartzean, gako-fotograma horren ondoren dagoen
+eskualdea behin eta berriro errepikatuko da begiztaren efektuaren luzeran.
+Efektuaren amaierak hasierako fotogramak har ditzake, gako-fotograma efektuaren
+amaieratik gertu badago.
+</p>
+<hr size="6">
+<a name="Mugimendua"></a>
+<a name="SEC196"></a>
+<h3 class="subsection"> 13.4.33 Mugimendua </h3>
+
+<p><img src=".././manual_images_en/motion.png" alt="manual_images_en/motion">
+</p>
+<p>Mugimenduaren aztarnaria aplikazio oso bat da bere baitan. Efektu honek
+bi mugimendu mota aztertzen ditu: translazioa eta biraketa. Bien jarraipena batera
+egin dezake, edo bakarrarena nahi izanez gero. Pixelaren 1/4-aren jarraipena
+egin dezake, edo pixel bakar batean. Mugimendua estabiliza dezake, edo baita ere
+pistak batek beste baten mugimenduari jarrai eraztea.
+</p>
+<p>Nahiz eta mugimenduaren aztarnaria denbora errealeko efektu gisa aplikatu, 
+errendatu izan ohi da emaitza erabilgarriak lortzeko. Errendatzeak denbora asko
+eskatzen du, batizpat mugimendua detektatzeko.
+</p>
+<p>Fotogramaren eskualde bat erabiltzen du mugimenduaren aztarnariak eskualdearen
+jarraipena lantzeko. Efektu honek eskualde hau 2 fotogramen artean konparatzen
+du mugimendua kalkulatzeko. Eskualde hau pantailako edozein lekutan defini
+daiteke. Bi fotograma arteko mugimendua kalkulatutakoan, gauza batzuk egin
+daitezke mugimenduaren bektorearekin. Erabiltzailearen balio batekin eskala daiteke
+eta gehienezko barruti batera lotu daiteke. Bota daiteke, edo mugimenduko beste
+bektore guztiekin pilatu uneko posizioa lortzeko.
+</p>
+<p>Denbora aurrezteko, mugimenduaren aztarnariaren emaitza gorde daiteke beste batean erabiltzeko, 
+edo aurrez landutako kalkulu bat berreskuratu, edo baztertu.
+</p>
+<p>Pistaren aztarnariak bi pistekin lan egin dezake: geruza nagusia eta helburuko 
+geruza. Geruza nagusian lantzen da bi fotogramen arteko konparazioa. Helburuko
+geruzan kalkuluaren emaitza aplikatzen da, nagusian mugimendua jarraitzeko edo
+konpentsatzeko (zuzentzeko).
+</p>
+<p>Mugimenduaren jarraipenaren konplexotatsuna nahikoa da enpresa osoei jan emateko eta garatzaileak
+arlo horretan bakarrik espezializatzeko. Cinelerra-ren garapenaren jarraitzailea ez da munduan
+dagoen kategoria maila altueneko bezain sofiztikatua, baina nahikoa da kamera digitalekin
+egindako pelikulak leuntzeko.
+</p>
+<p>Mugimenduaren aztarnariaren parametroak honakoak dira:
+</p>
+<ul>
+<li> <b>Pistaren translazioa</b> <br>
+Translazioaren eragiketak gaitzen ditu. Mugimenduaren aztanariak X eta Y
+mugimenduen jarraipena aztertzen du geruza nagusian, eta X eta Y mugimenduak doitzen
+ditu helburuko geruzan.
+
+<a name="IDX140"></a>
+<a name="IDX141"></a>
+</li><li> <b>Translazioaren bloke-tamaina</b> <br>
+Translazioaren eragiketetan bloke bat inguruko bloke kopuru batekin konpara daiteke,
+desberdintasun gutxiena duena aurkitzeko. Parametro honek blokearen tamaina
+ezartzen du bilaketan erabiltzeko.
+
+</li><li> <b>Translazioaren bilaketa-erradioa</b> <br>
+Arearen tamaina translazioaren blokea hor bilatzeko.
+
+</li><li> <b>Translazioaren bilaketa-urratsak</b> <br>
+Hoberenik hoberenean, bilaketako eragiketak translazioaren blokea bilaketa-erradioko pixel
+bakoitzarekin konparatu beharko luke. Eragiketa hau bizkortzeko posizio posible guztien azpimultzo
+baten lantzen da bilaketa. Aurreneko bilaketa hau amaitutakoan, eta gutxi gorabeherako emaitz batekin,
+bilaketako area murrizten da eta berriro aztertzen da hautatutako area berria. Urrats hauek
+errepikatu egiten dira 1/4 pixeleko doitasunarekin mugimendua aurkitu arte.
+
+</li><li> <b>X, Y blokea</b> <br>
+Koordenatu hauek translazioaren blokearen zentrua zehazten dute, irudiaren
+zabaleraren eta altueraren ehunekotan oinarrituz. Beti ikusgai den irudiaren
+zati izan behar du blokearen zentruak.
+
+</li><li> <b>Geh. desplazamendu absolutua</b> <br>
+Mugimenduaren aztarnariak detektatutako mugimendu kopurua mugagabea da
+parametro hau 100 balioarekin ezartzen bada. 100 balioaren azpitik,
+irudiaren tamainaren ehuneko horrek mugatuko du mugimenduaren gehienezko kopurua.
+
+</li><li> <b>Jaulkipen abiadura</b> <br>
+Fotograma bakoitzean detektatutako mugimendua pilatu daiteke mugimendu absolutuaren
+bektorea osatzeko. Jaulkipenaren abiadura (&quot;settling speed&quot;) 100 bada, bektorea dagoen
+bezala gehituko zaio hurrengo fotogramari. Jaulkipenaren abiadura 100 baino txikiagoa bada,
+jaulkipen abiadurarekiko proportzionalki gutxiagotuko da bektorea hurrengo fotogramari
+gehitu aurretik.
+
+</li><li> <b>Pistaren biraketa</b> <br>
+Biraketako eragiketak gaitzen ditu. Mugimenduaren aztarnariak geruza nagusian gertatutako
+biraketa kalkulatzen du, eta helburuko pistan doitzen du.
+
+</li><li> <b>Biraketaren bloke-tamaina</b> <br>
+Biraketako eragiketetan bloke bakar bat konparatzen da tamaina berdineko beste blokeekin, 
+bakoitza angelu desberdin batekin biratuta. Parametro honek biraketaren blokearen tamaina
+zehazten du.
+
+</li><li> <b>Biraketaren bilaketa-erradioa</b> <br>
+Sistemak detekta dezakeen biraketaren gehienezko angelua da (jatorrizko fotogramarekiko
+biraketa erlatiboa). Baliozko biraketak erlojuaren norantzakoan biratutako angelutik
+aurkakora biratutako angeluraino izan daitezke. Ondorioz, biraketa bilatzeko erradioa
+eskaneatutako angeluaren erdia da.
+
+</li><li> <b>Biraketaren bilaketa-urratsak</b> <br>
+Hoberenik hoberenean, angelu posible bakoitza egiaztatu beharko litzateke
+biraketaren balioa doitasunez aurkitzeko. Bilaketaren prozesua bizkortze arren,
+bilaketaren erradioa angelu finitu batzuetan zatitzen da, eta angelu horiek
+jatorrizko fotogramarekin konparatzen dira. Gero, bilaketaren angelua murrizten da,
+eta angelu kopuru berdinean zatitzen da, doitasuna ahalik eta altuena izan arte. <br>
+Normalean, nahikoa izaten da bilaketaren erradioaren gradu bateko urratsarekin.
+Sistemak bilaketa bi norabideetan lantzen duenez (erlojuaren norantzan eta aurkako
+norantzan), benetan bi urrats behar dira bilaketaren erradioko gradu bakoitzarentzako
+eta horrela barruti osoan bilaketa osatzeko.
+
+</li><li> <b>Marraztu bektoreak</b> <br>
+Translazioa gaituta dagoenean, bi kutxa marrazten dira fotograman. Kutxa batek
+translazioaren blokea adierazten du. Beste kutxak, translazio-kutxatik kanpo,
+translazioaren bilaketaren erradioaren zabalgunea adierazten du. Kutxa hauen
+zentruan gezi bat dago, bi fotograma nagusien arteko translazioa erakusten du.
+Biraketa gaitzen denean, biraketaren blokearen tamainako kutxa bakarra marrazten da.
+Kutxa hau biratuta marrazten da, detektatutako biraketaren graduaren arabera.
+
+</li><li> <b>Fotograma bakarraren jarraipena</b> <br>
+Aukera hau erabiltzean, hasierako fotograma bakarraren eta txertatzeko puntupean
+dagoen uneko fotogramaren arteko mugimendua kalkulatzen da. Hasierako fotograma
+<b>Fotograma zenbakia</b> eremuan zehazten da. Mugimendu absolutuaren bektore gisa
+interpretatzen da honela kalkulatutako mugimendua. Fotograma bakoitzaren
+mugimendu absolutuaren bektoreak aurreko fotogramaren mugimendu absolutuaren
+bektorea ordezten du. Jaulkipenaren abiadurak ez du eraginik bektore honetan,
+ez baitu aurreko mugimenduaren bektorerik. Erreprodukzioa denbora-lerroko
+edozein lekutan has daiteke, aurreko emaitzekiko mendekotasunik ez baitu.
+
+</li><li> <b>Aurreko fotogramaren jarraipena</b> <br>
+Aurreko fotogramaren eta unekoaren arteko mugimendu erlatiboa soilik kalkulatzen da.
+Mugimendu hau mugimendu absolutu bati gehitzen zaio, sekuentziaren hasieratik
+uneko posiziorarte pilatutako mugimendua ezagutzeko. Fotograma bakoitza honela
+prozesatu ondoren, blokearen posizioa desplazatzen da irudiaren eskualde berdina
+estaltzeko. Erreprodukzioa Mugimendua efektuaren hasieratik abiarazi behar da, emaitza
+zuzena izateko, beharrezko mugimenduaren bektoreak honela soilik kalkula daitekeelako.
+
+</li><li> <b>Aurreko fotograma, bloke berdina</b> <br>
+Kamera digital batekin grabatutako dardara duten filmeak egonkortzeko aukera oso
+erabilgarria da hau. Modu honekin, aurreko eta uneko fotogramen arteko mugimendua
+kalkulatzen da. Baina blokearen posizioa doitu beharrean (irudiaren kokaleku berria
+adierazteko), 'Aurreko fotogramaren jarraipena' aukeran bezala, blokearen posizioa
+ez da aldatzen fotograma batetik bestera. Hori dela eta, 
+fotograma bakoitzean eskualde berri bat konparatzen da.
+
+</li><li> <b>Geruza nagusia</b> <br>
+Hasierako fotograma eskaintzen duen pista zehazten du, mugimenduaren kalkulua egiteko.
+<b>Behean</b> bada, efektu hau partekatzen duten pista guztien azpikoa da geruza nagusia,
+eta efektu hau partekatzen duten pista guztien gainekoa izango da helburuko pista.
+
+</li><li> <b>Kalkulua</b> <br>
+Mugimendua kalkulatu behar duen edo ez zehazten du, eta diskoan gorde behar den baita ere.
+<b>Ez kalkulatu</b> aukerak mugimenduaren kalkulua saihesten du. <b>Kalkulatu berriro</b>
+aukerak fotograma bat errendatzen den bakoitzean kalkulu berria lantzen du. <b>Gorde</b>
+aukerak kalkulua beti lantzeaz gain, disko gogorrean gordetzen du bere emaitza.
+<b>Kargatu</b> aukerak aurrez landutako mugimenduaren kalkulua (disko gogorrean gordeta
+dagoena) kargatzen du. Disko gogorrean aurrez landutako kalkulurik ez balego,
+kalkulu berri bat landuko litzateke.
+
+</li><li> <b>Ekintza</b> <br>
+Mugimenduaren bektorea ezagutzen denean, zehaztu egin behar da helburuko geruzak mugituko
+den helburuko bektoreari jarraituz, edo alderantzizko norantzan mugituko den.
+<b>Ez egin ezer</b> aukerak ezer ez du egiten eta helburuko geruza ez du ikutzen.
+<b>Pista...</b> aukerak helburuko geruza mugitzen du geruza nagusiaren kopuru berdinarekin.
+Oso erabilgarria izaten da tituluak eta objektuak fotograman mugitzeko, adibidez.
+<b>Egonkortu...</b> aukerak helburuko geruza mugitzen du bektore nagusiaren aurkako norantzan,
+eta oso erabilgarria izan ohi da fotogramaren objektu bat egonkortzeko. Mugimenduaren
+eragiketek pixel edo azpipixeletako doitasuna eduki dezakete, hautatutako ekintzaren arabera.
+</li></ul>
+
+
+<hr size="6">
+<a name="Mugimenduaren-jarraipenaren-sekretuak"></a>
+<a name="SEC197"></a>
+<h4 class="subsubsection"> 13.4.33.1 Mugimenduaren jarraipenaren sekretuak </h4>
+
+<p>Efektu oso motela denez, metodo bat dago efektu honen gehienezko errendimendua
+lortzeko. Lehenbizi, mugimenduaren jarraipena aplikatuko zaion pistaren erreprodukzioa
+desgaitu egin behar da. Gero, mugimendua duen bideoaren eskualde bati gehitu efektua.
+Atzera eraman txertazeko puntua, eskualdea hasten den posiziorarte. Hautatu <b>Ekintza</b>
+eremuan <b>Ez egin ezer</b>. Ezarri <b>Kalkulua</b> eremuan <b>Ez kalkulatu</b>.
+Gaitu <b>Marraztu bektoreak</b>. Gero, gaitu pistaren erreprodukzioa mugimenduaren
+jarraipenaren areak ikusteko.
+</p>
+<p>Gaitu <b>translazioaren mugimendua</b> edo <b>biraketaren mugimendua</b> bektorea, jarraipena
+lantzeko. Konposaketa-leihoa gainbegiratuz eta <b>X, Y blokea</b> ezarpenak doituz,
+jarraipena egitea nahi duzun irudiaren zatian zentratu blokea. Azkenik, ezarri
+bilaketaren erradioa, blokearen tamaina eta blokearen koordenatuak translazioarentzako
+eta biraketarentzako.
+</p>
+<p>Behin konfiguratutakoan, ezarri kalkulua <b>Gorde koordenatuak '/tmp'-en</b> elementuarekin,
+eta egiaztatu mugimenduaren jarraipena funtzionatzen duela. Ondoren gorde mugimenduko
+bektoreak. Hau egin ostean, desgaitu pistaren erreprodukzioa, desgaitu <b>Marraztu bektoreak</b>,
+helburuko geruzaren gainean landu beharreko ekintza ezarri, eta aldatu kalkulua
+<b>Kargatu koordenatuak</b> elementura. Azkenik, gaitu berriro pistaren erreprodukzioa.
+</p>
+<p>Hasierako fotograma bakarra erabiltzean, sekuentzia bateko mugimendua kalkulatzeko,
+hasierako fotogramak beste fotogramekiko mugimendu erlatibo gutxiena duena izan beharko luke.
+Normalean ez da 0. fotograma izaten, sekuentziaren erdialdeko fotograma bat baizik.
+Honela, bilaketaren erradioa filmaren erdiraino soilik zabalduko da, gutxi gorabehera.
+</p>
+<p>Mugimenduaren jarraipena errendategi batean erabiltzen bada, <b>Gorde koordenatuak</b> eta
+<b>aurreko fotograma</b> moduak ez dute funtzionatuko. 'Gorde koordenatuak' eragiketaren emaitzak
+errendategiko nodoen disko gogorretan gordetzen dira, baina ez nodo maisuan. Ondorioz, 
+nodo hauetan etorkizuneko errendatze-eragiketek fotograma desberdinak prozesatuko
+dituzte, eta okerreko koordenatuak irakurriko dituzte nodoen fitxategietatik.
+Errendategi bateko nodo bakoitzak denbora-lerroaren zati bat bistaratzeak ere
+<b>aurreko fotogramak</b> funtzionatzea saihesten dute, 0. fotograman hasitako
+mugimendu absolutuaren bektorea kalkulatzea behar dutelako.
+</p>
+<hr size="6">
+<a name="g_t2-urratsetako-jarraipena"></a>
+<a name="SEC198"></a>
+<h4 class="subsubsection"> 13.4.33.2 2 urratsetako jarraipena </h4>
+
+<p>Arestian aipatutako metodoa bi urratsetako jarraipenaren metodoa da. Urrats bat
+mugimenduaren bektoreak kalkulatzeko erabiltzen da, beste berriz, bektore horiek
+muntaiari aplikatzeko. Urrats bakarrean egitea azkarragoa da, mugimenduaren bektoreen
+kalkuluaren erroreak azkarrago aurkitzen direlako.
+</p>
+<p>Gainera, kolore-eredu ez hain zorrotza erabiltzea uzten dio mugimenduaren jarraipenari,
+RGB888 bezalakoa (GBU888), aurreneko urratsean, eta beste bat osatuagoa (koma mugikorreko GBU)
+bigarrenean. Aurreneko urratsak (bilaketak) bigarrenak baino gehiago irauten du.
+</p>
+<p>Metodo hau ordea, ez da eraginkorra sekuentzia oso luzeetan, errore batzuk onar
+daitezkeenak eta irudiaren kalitatea zaratatsua denean. Adibidez, kamera digital
+batekin grabatutako muntaiaren egonkortasunean.
+</p>
+<p>Beste metodo bat dago, askoz ere motelagoa dana: mugimenduaren bektoreak aldi berean
+kalkulatzea eta aplikatzea. Metodo honek pista bat erabil dezake mugimenduaren
+bektorea kalkulatzeko, eta beste pista bat ekintzen helburuko pista bezala.
+Metodo hau oso erabilgarria da sekuentzia luzeetan, non errore gradu bat onargarria den.
+</p>
+<hr size="6">
+<a name="Erabili-lausotzea-jarraipena-hobetzeko"></a>
+<a name="SEC199"></a>
+<h4 class="subsubsection"> 13.4.33.3 Erabili lausotzea jarraipena hobetzeko </h4>
+<p>Oso zaratatsua den edo gurutzelarkatua dagoen muntai batean mugimenduaren jarraipearen
+doitasuna hobetu daiteke lausotzearen efektu bat erabiliz jarraipenaren aurretik. 
+Horretarako, mugimenduaren bektoreak <b>pistaren urrats</b> batean gorde daitezke, 
+eta desgaitu lausotzea <b>ekintzaren urratsean</b>, edo lausotzearen efektua
+<b>geruza nagusian</b> aplikatuz.
+</p>
+<hr size="6">
+<a name="Erabili-histograma-jarraipena-hobetzeko"></a>
+<a name="SEC200"></a>
+<h4 class="subsubsection"> 13.4.33.4 Erabili histograma jarraipena hobetzeko </h4>
+
+<p>Mugimenduaren jarraipenaren aurretik histograma bat erabili ohi da ia beti, zarata
+pixel ilunetara bihurtzeko. Horretarako gorde mugimenduaren bektoreak <b>pistaren
+urratsean</b> eta desgaitu histograma <b>ekintzaren urratsean</b>, edo aplikatu histograma
+<b>geruza nagusian</b>.
+</p>
+<hr size="6">
+<a name="Jarraipena-ekintzan"></a>
+<a name="SEC201"></a>
+<h4 class="subsubsection"> 13.4.33.5 Jarraipena ekintzan </h4>
+
+<p>Lehenbizi, gehitu mugimenduaren efektua pista bati. Arrastatu baliabideen leihotik
+eta jaregin zuzenean bideoaren gainera (Cinelerra-ren leiho nagusian). Honelako
+zerbait ikusi ebharko zenuke:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_timeline_eff_clip.png" alt="manual_images_en/cin_timeline_eff_clip">
+</p>
+<p>Ondoren, saguaren eskuineko botoiarekin klik egin denbora-lerroko mugimenduaren
+efektuaren markatzailearen gainean, mugimenduaren jarraipenaren leihoa bistaratzeko:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_motion_win.png" alt="manual_images_en/cin_motion_win">
+</p>
+<p>Konposaketa-leihoari begiratzen badiozu, bideoaren gainean kutxa berri batzuk
+agertzen dira. Garrantzitsuak dira mugimenduaren jarraipena kontrolatzeko.
+Begiratu dezagun funtzionatzen ari denean nolako itxura duen:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_comp_action_small.png" alt="manual_images_en/cin_comp_action_small">
+</p>
+<p>Mugimenduaren jarraipenak objektuaren aztarna nola galtzen ari den erakusten
+du irudi honek, bilaketako leihoa txikiegia delako. Honi buruz beranduago mintzatuko gara.
+Orain ikus dezagun sarrera txiki bat:<br>
+</p><ul>
+<li> Aztarnariaren helburua erdinko kutxa txikia da.
+</li><li> Tarteko kutxa handia aztarnariaren bilaketa-barrutia da. Mugimendua gertatzen den
+barruti osoa eduki beharko luke.
+</li><li> Adibide honetan, esekita dagoen heldulekuaren jarraipena egiten saiatzen ari gara.
+Huts egin dugu bideoaren fotograma honetan, heldulekua fotogramaren zentrutik oso
+urrun dagoelako.
+</li><li> Ezkerrerantz zuzentzen duen bektoreak mugimenduaren aztarnariak helburua bilatzen
+ari dela adierazten du. Geroago azalduko dugu.
+</li></ul>
+
+<p>Joan bideoaren kliparen hasierara
+</p>
+<p>Ziurtatu mugimenduaren aztarnariaren elkarrizketa-koadroa irekita dagoela
+</p>
+<p>Begiratu konposaketa-leihoari
+</p>
+<p>Hasi honako lau helduleku doitzen:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_motion_track.png" alt="manual_images_en/cin_motion_track">
+</p>
+<p>Ziurtatu 'Pistaren translazioa' gaituta dagoela, eta 'Pistaren biraketa' desgaituta
+</p>
+<p>Hasi bigarren heldulekuarekin, Translazioaren bloke-tamaina, eta biratu zer
+aldatzen den ikusteko. Ohartu bi koadroak tamainaz aldaten direla. Bereziki,
+begiratu barneko koadro txikiari. Doitu ezazu helburuaren tamainara (helburuari
+dakogion mugimenduaren jarraipena lantzeko). Ez larritu oraindik objektua ez badu estaltzen.
+</p>
+<p>Joan hirugarren eta laugarren heldulekuetara, X eta Y blokeak. Erabili helduleku hauek
+helburua-hautatzailea helburuaren gainean jartzeko.
+</p>
+<p>Azkenik, erabili goiko heldulekua, Translazioaren bilaketa-erradioa. Zabaldu ezazu
+behar adina, fotogramaren barruti osoa helburua estaltzeko (adibidean biradera gorria).
+Hau da, ziurtatu esekitako biradera mugituko den barruti osoa hartzen duela.
+Jatorrizko argazkiari begiratzen badiozu, bilaketaren erradioa txikiegia zen, eta
+helburua bertatik kanpora mugituta zegoen. Hau ez gertatzeko, denbora-lerroa
+erreproduzitu, eta ikusi emaitzak (ordenagailuak ahalmenik badu emaitzak denbora
+errealean erakusteko bederen), edo errendatu eta bideoaren irteerako helburuaren
+(biradera gorria) posizioak aztertu.
+</p>
+<p>Bideoaren aurreneko fotogramak honakoaren antzekoa izan beharko luke:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_comp_first_setup_small.png" alt="manual_images_en/cin_comp_first_setup_small">
+</p>
+<p>Irudi honek xehetasun asko erakusten ditu. Ikusi marko txikia biraderan
+zentratuta dagoela, eta larriki inguratzen duela. Horrela egoteko
+bigarren, hirugarren eta laugarren heldulekuak doitu dira. Gainera,
+filmearen iraupenean zehar, biradera gorriak osatzen duen pendulu-mugimendu erabat
+estaltzen duela kanpoko kutxak.
+</p>
+<p>Azkenik, beharrezkoak diren beste ezarpen batzuk daude efektua ikusteko:
+</p>
+<p align="center"> <img src=".././manual_images_en/cin_motion_set_output1.png" alt="manual_images_en/cin_motion_set_output1">
+</p>
+<ul>
+<li> <b>Marraztu bektoreak</b> Aukera hau gaituta egonez gero, bektoreak
+eta kutxak errendatutako bideoan agertuko dira. Ziurtatu aukera hau
+desgaituta dagoela, mugimenduaren bektoreak eta kutxak amaierako filmean
+agertzea saihesteko.
+</li><li> <b>Fotograma bakarraren jarraipena</b> Adibide honetan, 0 balioko
+fotograma zenbakiarekin agertzen da (hau da, aurreneko fotograma).
+</li><li> <b>Geruza nagusia</b> Efektua bi pisten artean partekatu bada,
+aukera honek mugimenduaren jarraipena zein pistetan landuko den
+(geruza nagusia) zehazten du, eta emaitzeko mugimenduaren bektoreak zeini
+eragingo dioten (helburuko geruza). Efektua ez badago partekatuta,
+orduan geruza nagusia eta helburuko geruza pista berdina izango da.
+</li><li> <b>Ekintza</b> Hautatu Egonkortzeko aukera errendatutako bideoak
+helburuaren mugimenduari jarraitzeko. Hautatu 'Pista'-ren aukera bat
+mugimenduaren jarraipena lantzeko, baina bideoa doitu gabe.
+</li><li> <b>Kalkulua</b>
+<ul>
+<li> <b>Ez kalkulatu</b> hautatu aukera hau bideoaren doiketa desgaitzeko.
+</li><li> <b>Kalkulatu berriro</b> Mugimenduaren jarraipena landu eta bideoa eguneratzen du.
+</li><li> <b>GOrde eta kargatu</b> Translazioko edota biraketako bektoreak (absolutuak edo erlatiboak)
+fitxategietan gorde edo fitxategietatik kargatu egiten ditu. Fotograma bakoitzak
+fitxategi bereizi (bektorea daukana) bat du /tmp direktorioan.
+</li></ul>
+</li></ul>
+
+<hr size="6">
+<a name="Egonkortasuna-ekintzan"></a>
+<a name="SEC202"></a>
+<h4 class="subsubsection"> 13.4.33.6 Egonkortasuna ekintzan </h4>
+
+<p>Atal honetan bideo bat nola egonkortzen den azalduko da. Oso beharrezkoa izaten
+da kasu askotan, adibidez mugitzen ari den ibilgailu batetik grabatutako bideoan.
+</p>
+<p>Aurrenik hautatu denbora-lerroan egonkortzea nahi den muntaiaren zatia, sarrerako
+eta irteerako puntuak erabiliz. Ondoren, aplikatu mugimenduaren efektua bideoaren
+zati horri.
+</p>
+<p>Hautatu &quot;Aurreko fotograma, bloke berdina&quot; aukera. Kamera digital batekin
+hartutako dardara duen muntaia egonkortzeko gomendatutako aukera da. Bere
+helburua ez bada mugitzen ari den objektu baten jarraipena egitea, efektuaren
+iraupen osoan blokea posizio berdinean egotea ziurtatzea baizik.
+</p>
+<p>Handitu blokea eta hautatu fotogramaren tamainaren ia erdia. Hautatu
+&quot;Egonkortu azpipixelak&quot; aukera: egonkortasun xehetuena eskaintzen du.
+Gutxiagotu &quot;Geh. desplazamendu absolutua&quot; balioa egonkortasunaren anplitutea
+mugatzeko. Normalean bideoaren leku batzuetan egokiagoa da egonkortasun
+inperfektua lortzea, filmearen alboetan ertz beltz handi bat agertzea baino
+(filmaren oszilazioa handiagoa denean). Ezarri &quot;Translazioaren bilaketa-urratsak&quot;
+128 balioarekin. Balio hori handitzeak ez du emaitz hobeagorik eskainiko,
+eta errendatzeko behar den denbora asko igotzen du. Ziurtatu &quot;Marraztu bektoreak&quot;
+gaituta dagoela, eta mugimenduaren efektua aplikatu zaion bideoaren zatia
+errendizatu .
+</p>
+<p>Emaitza egokia bada, desgaitu &quot;Marraztu bektoreak&quot; aukera. Blokea eta bektoreak
+ez dira bideoan gehiago marraztuko. Gero, errendatu filmea <tt>`.dv'</tt> formatuko
+fitxategi batean, eta inportatu zure proiektura.
+</p>
+<p>Ikus ahal izango duzunez, bideoa egonkortu egin da, baina ertz beltzak ageri
+dira fotogramaren alboetan. Orain beharrezkoa da zooma handitzea eta gako-fotogramak
+definitzea proiektorea pantailan zehar mugitzeko (eta bide batez ertz beltzak
+kentzeko). Jatorrizko muntaiak zenbat eta dardara gehiago izan, orduan eta
+gehiago handitu beharko da zooma ertz beltzak kentzeko. Emaitzik onena HDV
+formatuko muntaiarekin lortzen da, DV formatuarekin baino hobeto.
+</p>
+<hr size="6">
+<a name="Mugimendu_002dlausotzea"></a>
+<a name="SEC203"></a>
+<h3 class="subsection"> 13.4.34 Mugimendu-lausotzea </h3>
+
+<p><img src=".././manual_images_en/motionblur.png" alt="manual_images_en/motionblur">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Olioz-pintatzea"></a>
+<a name="SEC204"></a>
+<h3 class="subsection"> 13.4.35 Olioz pintatzea </h3>
+
+<p><img src=".././manual_images_en/oilpainting.png" alt="manual_images_en/oilpainting">
+</p>
+<p>Efektu honek bideoa olioz pintatuta egon balitz bezala egiten du. Erradioa
+graduatzailearekin kontrola daiteke. Koloreen intentsitatea hauta daiteke
+aukera gisa.
+</p>
+<hr size="6">
+<a name="Gainjarri-bideoa"></a>
+<a name="SEC205"></a>
+<h3 class="subsection"> 13.4.36 Gainjarri bideoa </h3>
+
+<p><img src=".././manual_images_en/overlay.png" alt="manual_images_en/overlay">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Perspektiba"></a>
+<a name="SEC206"></a>
+<h3 class="subsection"> 13.4.37 Perspektiba </h3>
+
+<p><img src=".././manual_images_en/perspective.png" alt="manual_images_en/perspective">
+</p>
+<p>Perpektibaren efektuarekin objektu baten perpektiba alda daiteke, eta oso
+erabilgarria izaten da objektuak urrunean iraungitzen ari balira bezalako
+ilusioa sortzeko.
+</p>
+<hr size="6">
+<a name="Polarra"></a>
+<a name="SEC207"></a>
+<h3 class="subsection"> 13.4.38 Polarra </h3>
+
+<p><img src=".././manual_images_en/polar.png" alt="manual_images_en/polar">
+</p>
+<p>Bideoa modu bitxi batean okertu eta desitxuratzen ditu <b>Polarra</b> efektuak.
+Matematikoki, filmea koordenatu polarretatik koordenatu cartesiarretara
+bihurtzen du, edo alderantziz.
+</p>
+<hr size="6">
+<a name="GBU_002d601"></a>
+<a name="SEC208"></a>
+<h3 class="subsection"> 13.4.39 GBU-601 </h3>
+
+<p><img src=".././manual_images_en/rgb601.png" alt="manual_images_en/rgb601">
+</p>
+<p>Bideo analogikoen edo MPEG-en (DVDak barne) irteeran, G, B eta U kanalen
+gehienezko barrutia [16, 235] (8 bit) da. YUV-en kasuan, intentsitatearen
+(Y) gehienezko barrutia [16, 235] (8 bit) da. Barruti hau grisaren
+mailari dagokio, %6-tik %92-rarte. Errendatzean, barrutitik kanpo dauden
+balioak moztu egingo dira muga hauetara.
+</p>
+<p>MPEG errendatzeko, GBU-601 efektua gehitu intentsitatearen eskala 
+osoa (%0-%100) erabiltzen duten bideoaren pista guztiei, eta gaitu
+<b>GBU -&gt; 601 konpresioa</b>. 
+GBU-601 efektuaren ondoren aplikatu <b>Bideoaren esparrua</b> efektua,
+GBU-601 efektuak zure barruti dinamikoari nola eragiten dion ikusteko.
+See section <a href="#SEC227">Bideoaren esparrua</a>.
+</p>
+<p>(Errendatutako MPEG-ek zein itxura edukiko duen GBU-601 konpresiorik
+<i>gabe</i> aurrikusteko, gaitu <b>601 -&gt; GBU hedapena</b>. Kontrastea nabarmenki
+handiagotzen dela ikusiko duzu.)
+</p>
+<p>Nahiz eta GBU-601 efektuak bideoaren pisten kontrastea gutxiagotu,
+MPEG erreproduzitzean kontrastea leheneratuko da.
+</p>
+<hr size="6">
+<a name="Lausotze-erradiala"></a>
+<a name="SEC209"></a>
+<h3 class="subsection"> 13.4.40 Lausotze erradiala </h3>
+
+<p><img src=".././manual_images_en/radialblur.png" alt="manual_images_en/radialblur">
+</p>
+<p>Zurrunbilo formako lausoa sortzen du, kamera biratzen ari balitz bezala
+simulatuz. Lausoaren kokalekua, mota eta kalitatea alda dezakezu.
+</p>
+<hr size="6">
+<a name="Aldatu-fotograma_002dtasa-_002d-RT"></a>
+<a name="SEC210"></a>
+<h3 class="subsection"> 13.4.41 Aldatu fotograma-tasa - RT </h3>
+
+<p><img src=".././manual_images_en/reframert.png" alt="manual_images_en/reframert">
+</p>
+<p>&quot;Aldatu fotograma-tasa - RT&quot; efektuak bideoaren sekuentzia bateko fotograma
+kopurua aldatzen du zuzenean denbora-lerrotik. Lan egiteko bi modu ditu,
+elkarrizketa-koadroko 2 txandakariek zehaztuta..
+</p>
+<p><b>Tiratu</b> moduak bere irteerako uneko fotogramaren zenbakia eskalaren faktorearekin
+bidertzen du, bere sarreratik irakurri behar duen fotograma kalkulatzeko. Bere uneko
+irteerako fotograma 55garrena bada, eta eskalaren faktorea 2, orduan emaitza
+110garren fotograma irakurriko du bere sarreratik. Ondorioz, 'Tiratu' efektuak
+bideoaren iraupena luzatzen du eskalaren faktorearen alderantzikoarekin. Eskalaren
+faktorea 1 baino handiagoa bada, jatorrizko sekuentzia baino lehenago amaituko
+da irteera denbora-lerroan. Faktorea 1 baino txikiagoa da, jatorrizko sekuentzia
+baino beranduago amaituko da irteera denbora-lerroan. &quot;Aldatu fotograma-tasa - RT&quot;
+efektua luzatu egin behar da eskalaren faktoreari egokitu arte. Bere luzera aldatzeko
+efektuaren amaierako puntua arrastatu.
+</p>
+<p>'Tiratu' moduak sarrerako fotogramaren zenbakia aldatzen duen arren, ez du sarrerako
+fotograma-tasa aldatzen. &quot;Aldatu fotograma-tasa - RT&quot; baino lehenagoko efektuek
+&quot;Aldatu fotograma-tasa - RT&quot; efektuaren fotograma-tasa berdina dutela suposatzen
+dute.
+</p>
+<a name="IDX142"></a>
+
+<p>&quot;Aldatu fotograma-tasa - RT&quot; efektua, 'tiratu' moduan, <b>Kamera azkarraren</b>
+efektu gisa erabil daiteke. Horretarako eskalaren faktorea 1 baino handiagoa
+izan behar du.
+</p>
+<a name="IDX143"></a>
+
+<p><b>Kamera motalaren</b> efektua lortzeko, erabili &quot;Aldatu fotograma-tasa - RT&quot; efektua
+'tiratu' moduarekin, eta eskalaren faktorea 1 baino txikiagoarekin. <b>Adibidez</b>, demagun
+filme bateko klip bat kamera motelean jartzea nahi duzula. Klip hau 33.792 segundoan
+hasten dela, eta 39.765 segundoan amaitu. Beraz, bere iraupena 5.973 segundotakoa da.
+Bere jatorrizko abiaduraren 4/10-rekin erreproduzitzea nahi da. Kliparen luzera
+erreprodukzioaren abiadurarekin zatituz (5.973/0.4) emaitzeko kliparen amaierako
+luzera lortzen da: 14.9325 segundo. Kliparen hasieran sarrerako puntua sor daiteke
+(33.792 segundoan), eta irteerako puntua 14.9325 segundo beranduago, 48.7245 
+(33.792 + 14.9325) posizioan. Ondoren, &quot;Aldatu fotograma-tasa - RT&quot; efektua
+gehitzen zaio, gero 'tiratu' modua doitu eta eskalaren faktorea 0.4 balioarekin
+ezarri. Azkenik, nahikoa da irteerako puntua sarrerako puntuarekin ordeztea,
+eta hurrengo klipa kamera motelaren ondoren hastea, hau da, 48.7245 segundoan.
+</p>
+<p><b>Baliabideen leihoan</b> (Multimedia edo Klipak karpetan) saguaren eskuineko
+botoiarekin klik eginez eta <b>Informazioa</b> aukera hautatuz kliparen
+fotograma-tasa alda daiteke baita ere. Aurrenik zerrendatik elementurik ez
+baduzu hautatzen, fotograma-tasaren balioa ezar dezakezu testu-eremuan.
+Proiektuaren fotograma-tasarentzako fotograma egokiak hartuko ditu Cinelerra-k,
+kamera azakarraren edo motelaren efektua automatikoki landuz.
+</p>
+<p><b>Lagin-murrizketa</b> ez du irteerako sekuentziaren iraupena aldatzen.
+Irteerako fotograma-tasa eskalaren faktorearekin bidertzen du, sarreratik
+irakurri behar duen fotograma-tasa aurkitzeko (zein abiadurarekin irakurri
+behar dituen fotogramak efektuaren sarreran). Efektu honekin sarrerako
+fotogramak irteeran kopiatzen dira, baina eskalak adierazitako abiadurarekin.
+Ez du irteeraren iraupena aldatzen (sarrerakoaren berdina da). Eskalaren
+faktoreak 0.5 balio badu, eta irteerako fotograma-tasa 30 f/s bada, orduan
+15 fotograma segundoko erakutsiko dira eta sarreratik 15 fotograma irakurriko
+dira segundoko. modu hau erabilgarria da baldin eta eskalaren faktorea 1
+baino txikiagoa bada, hortik bere izena: ingelesez 'downsample', lagina
+murriztea adierazten du.
+</p>
+<p>Lagin-murrizketa moduak sarrerako fotograma-tasa aldatzen du, irakurri
+beharreko fotograma kopuruaz gain. Hori dela eta, &quot;Aldatu fotograma-tasa - RT&quot; 
+efektuaren (Lagin-murrizketa moduarekin) aurretik dauden efektuek fotograma-tasa
+desberdina ikusiko dute (efektu hau ez balego egongo zen tasarekin konparatuz).
+Jatorrizko fotograma-tasa bider eskalaren faktoreak eragiketaren emaitza da
+sarrerako fotograma-tasaren balioa. Eskalaren faktorea 2 bada, eta irteerako
+fotograma-tasa 30 f/s bada, sarrerako fotograma-tasa 60 f/s izango da,
+eta sarreran egongo den fotograma kopurua bikoiztu egingo da. Normalean
+honek ez du eraginik edukitzen, hala ere efektu batuzk modu desberdin bateko
+portaera izan dezakete fotograma-tasa altuekin.
+</p>
+<hr size="6">
+<a name="Atzekoz-aurrera-bideoa"></a>
+<a name="SEC211"></a>
+<h3 class="subsection"> 13.4.42 Atzekoz aurrera bideoa </h3>
+
+<p><img src=".././manual_images_en/reversevideo.png" alt="manual_images_en/reversevideo">
+</p>
+<p>Edukia denbora errealean atzekoz aurrera erakuts daiteke denbora-lerroan.
+Efektu hau ez da programaren nabigazioko kontrolekin filmea erreproduzitzearekin
+nahastu behar. 'Atzekoz aurrera bideoa' efektuak erreprodukzioaren norantza
+alderantzikatzen du, ez du nabigazioaren norabidea kontutan hartzen.
+</p>
+<p>Atzekoz aurrera efektua aplikatuko zaion eskualdea efektuaren pistaren gaineko
+kokapenak zehazten du, eta gero efektuan kokatutako gako-fotogramek. 'Atzekoz
+aurrera bideoa' efektuak <b>gaituta</b> aukera du, gako-fotogramak erabiliko diren
+edo ez adierazteko. Honek hainbat posibilitate eskaintzen ditu.
+</p>
+<p><b>Gaitutako</b> gako-fotograma bakoitza 'atzekoz aurrera' motako eskualde
+berri bateko hasiera bezala tratatzen da, eta aurreko eskualdearen amaiera.
+<b>Gaituta</b> dauden hainbat gako-fotogramek independenteak diren hainbat
+'atzekoz aurrera' motako eskualdeak eskaintzen dituzte. <b>Gaitutako</b> gako-fotograma
+baten atzetik <b>desgaitutako</b> gako-fotograma egonez gero, eskualde bat 'atzekoz
+aurrera' egongo da, eta hurrengoa aurrera (erreprodukzio normala).
+</p>
+<hr size="6">
+<a name="Biratu"></a>
+<a name="SEC212"></a>
+<h3 class="subsection"> 13.4.43 Biratu </h3>
+
+<p><img src=".././manual_images_en/rotate.png" alt="manual_images_en/rotate">
+'Biratu' efektuak bideoa 90 gradutako gehikuntzarekin bira dezake, bideoa
+alderantzikatu edo irauli.
+</p>
+<hr size="6">
+<a name="SVG-_0028Inkscape_0029"></a>
+<a name="SEC213"></a>
+<h3 class="subsection"> 13.4.44 SVG (Inkscape) </h3>
+
+<p><img src=".././manual_images_en/svg.png" alt="manual_images_en/svg">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Eskala"></a>
+<a name="SEC214"></a>
+<h3 class="subsection"> 13.4.45 Eskala </h3>
+
+<p><img src=".././manual_images_en/scale.png" alt="manual_images_en/scale">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Aldi-baterako-hautapenaren-batez-bestekoa"></a>
+<a name="SEC215"></a>
+<h3 class="subsection"> 13.4.46 Aldi baterako hautapenaren batez bestekoa </h3>
+
+<p><img src=".././manual_images_en/timeavg.png" alt="manual_images_en/timeavg">
+</p>
+<p>Sekuentzia batean mugimendurik ez duten areak leuntzeko erabil daiteke plugin
+hau. Pixel bakoitzaren kolorearen osagaiaren tarteko balioa fotograma kopuru
+baten zehar kalkulatuz lantzen da leuntzea. Uneko fotogramaren kolorearen
+balioaren eta tarteko balioaren arteko bai desbideraketa estandarra bai diferentzia
+atalase baten azpitik badaude, orduan erabiliko da honela leundutako balioa.
+</p>
+<p>Batez bestekoa eta desbideraketa tipikoa bidearen osagai bakoitzarentzako
+kalkulatzen direnez, proiektuaren kolore-ereduaren mende egongo dira. Fotogramen
+batez bestekoa eta desbideraketa tipikoa azter daitezke efektuaren elkarrizketa-koadroko
+botoi egokia hautatuz.
+</p>
+<p>Fotogramen batez bestekoa kalkulatzeko erabiltzen den eskualdea desplazamendu finkoarekin
+edo 'Berrabiarazteko marka-sistema'-rekin zehazten da. Berrabiarazteko marka-sistema
+batean gako-fotograma batzuk markatu egiten dira ataleko abiapuntu gisa. Atal bakoitzean
+uneko fotogramaren inguruko fotogramak erabiltzen dira batez bestekoa kalkulatzeko, 
+atalaren hasierara edo amaierara gerturatzean ezik (kasu horietan batez bestekoa kalkulatzeko
+hasierako edo amaierako <i>N</i> fotograma erabiltzen baitira).
+</p>
+<p><b>Ohizko erabilera:</b>
+</p>
+<p>Leuntzeko fotograma kopuru bat hautatzea nahi baduzu (bere batez bestekoa kalkulatzeko):
+</p>
+<ol>
+<li> Sartu zentzuzko fotograma kopurua batez bestekoa kalkulatzeko (adib. 10)
+</li><li> Hautatu <b>Aldi baterako hautapenaren batez bestekoa</b> metodoa eta sartu
+1 eta 10 balioak <b>Batez.best. atal.</b> eta <b>D.E. atal.</b> (desbideraketa
+estandarraren atalasea) hurrenez hurren. Balio hauekin pixel guztiek erabiliko
+dute batez besteko balioa.
+</li><li> Gaitu aurreneko osagaiaren maskara. Honela fotograma osoak osagai horren
+kolorea eduki beharko luke.
+</li><li> Desbideraketa tipikoaren (<b>D.E. atal.</b>) balioa piskanaka gutxiagotu. Hau
+egitean batez bestekotik oso desberdinak diren eskualdeetan maskararen egoera
+alderantzikatzen da. Jarraitu desbideraketaren atalasea gutxiagotzen, bideoaren
+eskualde mugikaitzek alderantzikatutako maskara izan arte. Balio hau <b>zarataren
+atalasea</b> bezala ezagutzen da, eta kameraren CCD-ak modu naturalean sortzen duen
+zarata maila da.
+
+</li><li> Errepikatu aurreko prozedimendua batez bestekoaren atalasea
+(<b>Batez.best. atal.</b>) aurkitzeko.
+</li><li> Kendu maskara
+</li><li> Errepikatu hau kanal guztientzat
+</li></ol>
+
+<hr size="6">
+<a name="Enfokatu"></a>
+<a name="SEC216"></a>
+<h3 class="subsection"> 13.4.47 Enfokatu </h3>
+
+<p><img src=".././manual_images_en/sharpen.png" alt="manual_images_en/sharpen">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Gurutzelarkatze_002ddesplazamendua"></a>
+<a name="SEC217"></a>
+<h3 class="subsection"> 13.4.48 Gurutzelarkatze-desplazamendua </h3>
+
+<p><img src=".././manual_images_en/shiftinterlace.png" alt="manual_images_en/shiftinterlace">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Trukatu-kanalak"></a>
+<a name="SEC218"></a>
+<h3 class="subsection"> 13.4.49 Trukatu kanalak </h3>
+
+<p><img src=".././manual_images_en/swapchannels.png" alt="manual_images_en/swapchannels">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Atalasea"></a>
+<a name="SEC219"></a>
+<h3 class="subsection"> 13.4.50 Atalasea </h3>
+
+<p><img src=".././manual_images_en/threshold.png" alt="manual_images_en/threshold">
+</p>
+<p>Irudia erabateko luminantzia bihurtzen du atalaseak. Atalasearen azpitik eta
+gainetik dauden luminantziaren balioak beltzera bihurtzen dira, eta atalase
+barruan dauden luminantziaren balioak zuri. Atalasea efektuaren elkarrizketa-koadroak
+uneko fotogramaren luminantziaren balioen histograma erakusten du. Histograman 
+klik egin eta arrastatzean zurira bihurtzeko barrutia sortzen da. <b>Maius+klik egitean</b>
+barruti honen ertza zabaltzen da. Atalasearen barrutiaren balioak testu-eremuan ere
+zehaz daitezke.
+</p>
+<p>Efektu hau, bere oinarrian, luminantziaren jatorrizko gakoa da. Eragindako pista
+gainean dagoen beste pista batekin bidertu daiteke, eta honela atalasearen barrutian
+dauden bigarren pistako zatiak bakarrik bistaratuko dira.
+</p>
+<hr size="6">
+<a name="Denboraren-batez-bestekoa"></a>
+<a name="SEC220"></a>
+<h3 class="subsection"> 13.4.51 Denboraren batez bestekoa </h3>
+
+<p><img src=".././manual_images_en/timeavg.png" alt="manual_images_en/timeavg">
+</p>
+<p>'Denboraren batez bestekoa' erabilpen asko dituen efektua da, mugimenduan
+dauden irudimen handiko ereduak sortzeko erabiltzeaz gain. Bere benetako
+zeregina irudi finkoetan zarata murriztea da. Nahikoa da bideo-kamera batekin
+sujetu egonkorra 30 bat segundotan enkokatzea, fotograma horiek kapturatzea
+eta <b>denboraren batez besteko</b> efektua aplikatzea kalitate oso altuko irudi bat
+lortzeko. Koma mugikorreko kolore-ereduetan, denboraren batez bestekoak zarata asko
+duten kameren barruti dinamikoa handiagotu dezakete.
+</p>
+<p>Denboraren batez bestekoa efektuaren barruan pilatzeko bufferra eta zatitzaile
+bat dago. Bufferrean fotograma kopuru bat gordetzen da, eta zatitzailearekin
+zatitzen dira beraien batez bestekoa kalkulatzeko.
+</p>
+<p>Denboraren batez bestekoak memoria kopuru ikaragarria behar dezakeenez, lehenbizi
+pistaren erreprodukzioa desgaitzea gomendatzen da, gero efektua pistaren gainean
+jaregin, nahi den fotograma kopuruaren denboraren batez bestekoa konfiguratu eta
+berriro pistaren erreprodukzioa gaituz.
+</p>
+<ul>
+<li> <b>Fotogramak batez bestean erabiltzeko</b> <br>
+Bufferrean pilatuko den fotograma kopurua zehazten du. Integrazio oso handietan,
+errazagoa da muntai-erabakien zerrenda (EDL) bat editatzea testu-editore batekin
+eta bertan fotograma kopurua idaztea.
+
+</li><li> <b>Pilatu</b> <br>
+Zatiketa burutu gabe fotogramak bufferretik irtetzea uzten du.
+
+</li><li> <b>Batez bestekoa</b> <br>
+Bufferrean pilatutako edukia zatitzen da irteerara bidali aurretik. Emaitza
+fotograma guztien batez bestekoa da.
+
+</li><li> <b>EDO inklusiboa</b> <br>
+Bufferra ordezten du gardenak ez diren pixelekin. Mugimenduaren jarraipenarekin
+konbinatuz, sekuentzia osoak konbinatzea uzten du panoramikoak sortzeko.
+
+</li><li> <b>Prozesatu fotograma berriro</b> <br>
+Denboraren batez besteko efektuaren aurretik dagoen beste efektu bat doitzen bada,
+honek ez du bufferra berriro irakurtzen aldaketen berri jakiteko. Aukera hau gaitzean
+efektuari derrigortu egiten zaio bufferra berriro irakurtzea, beste efektuek aldaketak
+sortzen dituztenean filmean.
+
+</li><li> <b>Desgaitu kenketa</b> <br>
+
+<p>Zehaztutako fotograma kopuruaren pilaketa adierazteko, denboraren batez bestekoak
+aurreko fotograma guztiak memorian gordetzen ditu, eta filmea erreproduzitzean
+kenketak egiten ditu. Egoera batean, portaera honek milaka fotograma pilatzera bultzatzen badu,
+baliteke sistemak nahikoa memoria ez izatea. Kenketa desgaitzean, aurreko fotogramak
+ez dira memorian gordetzen, eta soilik batez bestekoaren kalkulua egongo da
+eraginda fotogramen zenbaketarekin.
+</p></li></ul>
+
+<hr size="6">
+<a name="AurreDenbora"></a>
+<a name="SEC221"></a>
+<h3 class="subsection"> 13.4.52 AurreDenbora </h3>
+
+<p><img src=".././manual_images_en/timefront.png" alt="manual_images_en/timefront">
+</p>
+<p>Irudia desitxuratzen duen efektu bat da, honako artikuluan oinarritutako
+efektua da: <br>
+<a href="http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf">http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf</a>
+</p>
+<hr size="6">
+<a name="Titulua"></a>
+<a name="SEC222"></a>
+<h3 class="subsection"> 13.4.53 Titulua </h3>
+
+<p><img src=".././manual_images_en/titler.png" alt="manual_images_en/titler">
+</p>
+<p>Nahiz eta posiblea izan Gimp aplikazioan sortutako testuak filmera inportatzea
+eta konposatzea, Cinelerra-k berak 'Titulua' efektua eskinatzen du testua gehitzeko.
+</p>
+<p>'Titulua' efektuak aukera estandarrak ditu: <b>letra-tipoa, tamaina eta estiloa</b>.
+Letra-tipo egokiena orokorra da, Arial bezalakoa, tamaina handiarekin.
+</p>
+<p><b>Justifikatu</b> eragiketak testua fotograma osoarekiko justifikatzen du. Behin
+testua justifikatutakoan, <b>X</b> eta <b>Y</b> desplazamenduak aplikatzen dira. Honela
+testua justifikatzeaz gain, eskualde seguruan kokatzea uzten du.
+</p>
+<p><b>Mugimendu mota</b>k testua lau norabidetariko batean animatzen du. Hau
+erabiltzean testua desager daiteke. Ziurtatu abiadura zentzuzko balio
+batekin dagoela (zalantzarik izanez gero, probatu 150 balioarekin),
+eta aldatu txertatzeko puntua denbora-lerroan zehar, testua animaziotik
+nahiko urrun egon arte (testua berriro agertu daikeenerarte). 
+</p>
+<p><b>Begizta</b> aukerak testuari mugimendua ematen dio testua erabat desagertu
+arte, eta berriro hasiko da. Aukera hau gabe (begizta), testua pantailatik irtetzean
+ez da berriro sartuko.
+</p>
+<p>Animazioaren abiadura zehazteko erabili <b>Abiadura</b> aukera (pixelak segundoko).
+Zenbat eta handiagoa izan balio hau, orduan eta azkarrago mugituko da testua.
+</p>
+<p><b>Jaregin itzala</b> aukerak testuaren kopia beltz bat marrazten du jatorrizko
+testuaren eskuinean eta behean. Oso erabilgarria da bideo aldakorrean testua
+marraztea nahi denean, bere ertza beti ikusgai mantentzeko.
+</p>
+<p>Beste animazio mota bat, desplazamenduaz gain, <b>Pixkanaka agertu/Piskanaka
+desagertu</b> da. Bere balioak 0 badira, ez da irungituko.
+</p>
+<p><b>Kolorea</b> aukerak kolore bat hautatzea uzten du, testua kolore horrekin
+marrazteko. Kolore erabilgarriena zuria izan ohi da.
+</p>
+<p><b>Markatu denbora-kodea</b> aukerak testua ordezten du denbora-lerroko uneko
+posizioarekin (segundotan eta fotogrametan).
+</p>
+
+<hr size="6">
+<a name="Letra_002dtipoak-gehitzea-_0027Titulua_0027-efektuari"></a>
+<a name="SEC223"></a>
+<h4 class="subsubsection"> 13.4.53.1 Letra-tipoak gehitzea 'Titulua' efektuari </h4>
+
+<p>Jatorrizko X Windows sistemak ez dauka letra-tipoak bideoan bistaratzeko modu
+egokirik. Uneko bit sakonerara mugatuta dago. Letra-tipoen ikustailean zein
+letra-tipo funtzionatzen duten (nahi den bit sakonerarekin) jakiteko modu
+egokirik ez dago. Aurkitu den modurik errazena 'Titulua' efektuan letra-tipoak
+onartzeko direktorio bat eskaintzea da: <tt>`/usr/lib/cinelerra/fonts'</tt>.
+</p>
+<p>'Titulua' efektuak batizpat <b>TTF</b> (&quot;True Type Fonts&quot;) mota onartzen du.
+Beste mota batzuk ere onartzen dituen arren TTF motakoak dira fidagarrienak.
+TTF motako letra-tipoak gehitzeko nahikoa da <b>.TTF</b> luzapeneko fitxategia
+<tt>`/usr/lib/cinelerra/fonts'</tt> direktorioan kopiatzea. Gero, direktorio horretan
+<code>ttmkfdir &amp;&amp; mv fonts.scale fonts.dir</code> komandoa exekutatu, eta berrabiarazi
+Cinelerra aplikazioa. Honela, letra-tipo berriak erabilgarri egon beharko lukete.
+<b>ttmkdir</b> tresnaren erabilera maiz aldatu izan ohi denez, baliteke arestian
+aipatutako komandoak ez funtzionatzea dagoen moduan.
+</p>
+<hr size="6">
+<a name="Titulua-eskualde-seguruan"></a>
+<a name="SEC224"></a>
+<h4 class="subsubsection"> 13.4.53.2 Titulua eskualde seguruan </h4>
+
+<p>Bideoa etxeko telebista batean erreproduzituko bada, kanpoko ertza %5-ean
+moztuko da albo bakoitzean. Gainera, ertzetik gertu dagoen testua
+bikoiztuta ager daiteke. Guzti hau kontutan izanda, tituluak gehitzean
+ziurtatu <b>eskualde segurua</b> tresna gaituta dagoela <b>konposaketa-leihoan</b>.
+Testuak ez luke inoiz barneko kutxatik irten behar.
+</p>
+<hr size="6">
+<a name="Eraldatu"></a>
+<a name="SEC225"></a>
+<h3 class="subsection"> 13.4.54 Eraldatu </h3>
+
+<p><img src=".././manual_images_en/translate.png" alt="manual_images_en/translate">
+</p>
+<p>Efektu honek jatorrizko bideoa desplazatu, moztu edota eskalatzen du
+horizontalki eta bertikalki. Sarrerako eta irteerako parametroek
+<b>Konposaketa-leihoko</b> kameraren eta proiektorearen funtzioak
+bezala lan egiten dute:
+</p>
+<ul>
+<li> <b>Sarrerako X eta Y</b> parametroek iturburuaren (kamera) goi-ezkerretik zenbat
+pixelekin hasten den zehazten dute.
+</li><li> <b>Irteerako X eta Y</b> parametroek pantailaren (proiektorea) irteera non hasiko
+den zehazten dute.
+</li><li> <b>Sarrerako Z eta A</b> (zabalera eta altuera) parametroek iturburuko zenbat pixel
+erabiliko diren norabide bakoitzean zehazten dute.
+</li><li> <b>Irteerako Z eta A</b> parametroek iturburu horrek pantailan zenbat pixel
+beteko dituen zehazten dute.
+</li></ul>
+
+<p>Sarrerako eta irteerako balio berdinak, baina jatorrizko filmaren baino txikiagoek,
+iturburua murriztuko dute. Balio desberdinek irudia tiratu edo estutu egingo dute
+hautatutako norabideetan. Sarrerako balioak jatorrizko filmea baino txikiagoak badira,
+irudi hori murriztu egingo dute.
+</p>
+<p>Efektu honek gako-fotogramak onartzen ditu, eta ondorioz parametro hauekin denbora-lerroan
+zehar efektua leundu daiteke.
+</p>
+<p>Efektu hau gauza askotarako erabil daiteke, filme baten zatia pantailan zehar mugitzeko,
+edo bere tamaina aldatzen joatea mugitzen den bitartean.
+</p>
+<hr size="6">
+<a name="Zorroztasun-gabe"></a>
+<a name="SEC226"></a>
+<h3 class="subsection"> 13.4.55 Zorroztasun gabe </h3>
+
+<p><img src=".././manual_images_en/unsharp.png" alt="manual_images_en/unsharp">
+</p>
+<p>Efektu honek bideoa zorroztasunik gabe uzten du, lausotu egiten du alegia.
+Bere parametroak honakoak dira:
+</p><ul>
+<li> <b>Kopurua</b> <br>
+Graduatzailea eskuinera eramatean area ilunak ilunagoak egiten ditu, eta
+area argia argitsuagoak.
+
+</li><li> <b>Erradioa</b> <br>
+Graduatzaile honek ertzen inguruan aplikatuko den lausoa kontrolatzen du.
+Ilundu edo argituko den eskualdea nolako handia izango den zehazten du.
+
+</li><li> <b>Atalasea</b> <br>
+Graduatzaile honek jatorrizko kopiako eta lausotutako kopiako pixel baten
+diferentzia kontrolatzen du, pixel horri iluntasun edo argitasun gehiago
+aplikatzeko.
+</li></ul>
+
+<hr size="6">
+<a name="Bideoaren-esparrua"></a>
+<a name="SEC227"></a>
+<h3 class="subsection"> 13.4.56 Bideoaren esparrua </h3>
+
+
+<p><img src=".././manual_images_en/videoscope.png" alt="manual_images_en/videoscope">
+</p>
+<p><b>Bideoaren esparrua</b> tresnak argiaren eta koloreen mailak adierazten ditu
+kalibratutako pantailan. Oso erabilgarria da, gizakien begiek ez baitaude
+prestatuta argiaren eta koloreen mailak egokiro doitzeko, baizik eta
+argiaren eta koloreen arteko diferentziak detektatzeko.
+</p>
+<p>Bideoaren esparrua Cinelerra-ko beste efektu batzuekin batera erabil daiteke
+(YUV, Ñabardura, Distira, Kolore-balantzea edo Histograma bezalakoak),
+bideoaren kontrastea, argitasuna, konformantzia (argi desberdinekin lortutako
+bideo kaptura batzuk normalizatzeko) zuzentzeko, edo helburu zinematikoentzako.
+</p>
+<p>Batzuk bideoaren esparrua grabazioan erabiltzeko aukera eskaintzea pentsatu dute.
+Zoritxarrez, proposamen honek bideoaren esparruan aldaketa izugarriak lantzea
+eskatzen du, hainbat bideo-kontrolatzailekin lan egin ahal izateko.
+</p>
+<p>Bideoaren esparruaren leihoak bi zati ditu: <b>Uhin-formaren esparrua</b> eta
+<b>Bektore-esparrua</b>.
+</p>
+<hr size="6">
+<a name="Uhin_002dformaren-esparrua"></a>
+<a name="SEC228"></a>
+<h4 class="subsubsection"> 13.4.56.1 Uhin-formaren esparrua </h4>
+
+<p>Ezkerreko grafikoa da, marra horizontalak dituena. Y ardatzean argitasunaren maila
+adierazten da, X ardatzean berriz irudia. Marra horizontal bakoitzak
+argitasunaren maila bat adierazten du, behekoa %0 izanez, eta goikoa %100.
+%0 mailako argitasunak argirik ez dagoela adierazten du, beheko marrak
+egon daitekeen gehienezko iluntasuna adierazten du: beltza. Goiko marrak berriz
+argitasunaren %100 adierazten du, hau da, egon daitekeen gehienezko zuria.
+</p>
+<p align="center"> <img src=".././manual_images_en/videoscope_waveform_bars.png" alt="manual_images_en/videoscope_waveform_bars">
+</p>
+<p>Grafiko honetan zerbait ikusteko, txertatzeko puntua fotograma zehatz baten
+gainean jarri. Eskualde bat hautatuta badago, egin klik denbora-lerroko
+puntu batean (efektu honek eragiten dion eskualdean). Fotograma bat hautatzean,
+bideoaren esparruak bideoaren jatorrizko irudia marra bertikaletan deskonposatzen
+du. Jatorrizko irudiaren pixel-zutabe bakoitza uhin-formaren esparruko pixel-zutabe
+bakoitzari dagokio. Beraz, uhin-formaren esparruak hainbat marra bertikal erakutsiko
+ditu, hautatutako bideoaren irudiaren zabalera adina.
+</p>
+<p>Bideoaren esparruak pixel bakoitzaren argitasunaren balioa neurtzen du zutabe
+bertikal hauetako bakoitzean, eta uhin-formaren esparruan bistaratuko du. Hau da,
+zutabe batean pixel beltzak soilik egongez gero, bideoaren esparruak zutabe hori
+uhin-formaren esparruan puntu bat bezala marraztuko luke, %0 marran. Beste zutabe
+batean pixel zuriak soilik egongez gero, bideoaren esparruak zutabe hori
+uhin-formaren esparruan puntu bat bezala marraztuko luke, %100 marran. Zutabea
+ordea gris kolorekoa izanez gero (tartekatutako pixel zuri eta beltzekin),
+uhin-forman bi puntu marraztuko ditu: bata %100 mailan (pixel zuri guztien
+adierazgarri); eta besta %0 mailan (pixel beltz guztien adierazgarri).
+</p>
+<p>Uhin-formaren esparruak irudiaren argitasun maila zuzentzen lagun gaitzake,
+kontrasteekin jolasean ibiltzeko edo konformantzia ziurtatzeko (argi desberdinekin
+lortutako bideo kaptura batzuk normalizatzeko).
+</p>
+<p>Argitasun maila (luminantzia) doitzeko:
+</p><ol>
+<li> Txertatu Distira/Kontrastea, YUV edo beste efektu bat pistan.
+</li><li> Txertatu Bideoaren esparrua efektua azpiko pistan. Ziurtatu azpiko
+pistan jarri dela, doiketaren emaitzak ikusteko. Ez bada horrela, saguaren
+eskuineko botoiarekin egin klik, eta eraman behera.
+</li><li> Bistaratu bai efektua bai bideoaren esparrua.
+</li><li> Doitu efektua uhin-forma gainbegiratzen duzun bitartean, nahi duzun
+argitasun mailarekin bat jartzeko.
+</li></ol>
+
+<p>Kontrastearen barrutia hobetzea nahi baduzu, Distiraren/Kontrastearen maila
+doitu esparruko puntu ilunena %0 mailararekin lerrokatuz, eta zati argitsuena 
+%100 mailarekin lerrokatuz. %100 baino gorago dagoen edozer gainsaturatua
+dago. Kontrol-laukiekin nabarmendu behar diren mugak:
+</p>
+<ul>
+<li> <b>HDTV edo sGBU (ITU-R BT.709)</b> <br>
+HDTV edo sGBU-ren gehienezko pixel barrutia [0, 255] da. Barruti hau
+%0 eta %100 mailei dagozkio.
+
+</li><li> <b>MPEG edo bideo analogikoa (ITU-R BT.601)</b> <br>
+Bideo analogiko edo MPEG-ntzako (DVDak barne), GBUren gehienezko barrutia
+[16, 235] (8 bit) da. YUV-aren gehienezko barrutia ere [16, 235] (8 bit)
+da. Barruti hau gris-mailari dagokio, %6-tik %92-ra. Irakurri See section <a href="#SEC208">GBU-601</a> atala.
+
+</li><li> <b>NTSC telebista igorpena</b> <br>
+Bideo bat ekoizten ari bazara NTSC telebista igorpenerako, mantendu
+argitasuna %7.5 eta %100 artean. Igorri daitekeen beltzaren gutxieneko
+balioa IRE %7.5 da, eta maila honen azpitik dauden balioak ez dira
+beltzagoak.
+
+</li></ul>
+
+<hr size="6">
+<a name="Bektore_002desparrua"></a>
+<a name="SEC229"></a>
+<h4 class="subsubsection"> 13.4.56.2 Bektore-esparrua </h4>
+
+<p>Bektore-esparrua tresna kolorea gainbegiratzeko erabiltzen da. Zirkulu zentrokideez
+osatuta dago, fotogramaren pixel bakoitzaren balioa adierazteko. Kolore bakoitza
+marra erradial bat da, zirkuluaren zentrutik kanpoko ertzerainokoa. Erradio txikiena
+zuri hutsa da, eta kanpoko ertza kolorearen intentsitate altuenak ditu (adib.
+urdin hutsa, gorri hutsa). Zentrutik dagoen distantzia kolorearen saturazioa da.
+</p>
+<p>Kolorearen tindua gurpilean kolorea agertzen den angeluaren graduarekin adierazten
+da. Angelu desberdinak tindu desberdinak adierazten dute.
+</p>
+<p>Bektore-esparrua beste efektu batzuekin erabil daiteke kolorea zuzentzeko, irudiaren
+tindua doitzeko eta beste efektu zinematikoak aplikatzeko, irudia zuzentzeko edo
+filma desberdinak berdintsu agertzeko.
+</p>
+<p align="center"> <img src=".././manual_images_en/videoscope_vectorscope_color_correct.png" alt="manual_images_en/videoscope_vectorscope_color_correct">
+</p>
+<p>Adibide honetan, gaineko irudiak zuri-balantzea du. Bektore-esparruak
+pixel ugari erakusten ditu horia eskualdean, eta gutxi batzuk zuria
+eskualdean. Horia tindua kentzeko, Kolore-balantzea efektua erabiltzen
+da aurrenik bektore-esparrua magentaruntz joateko, eta gero
+urdinera, zentrutik gertu zegoen eskualdea zentrua inguratu arte.
+Irudiaren azpian, nabarmendutako horiak zuri (geziak) bihurtu dira.
+Jakin ezazu dagokion funtzionalitatea uhin-forman baita ere zuriagoa
+agertzen dela.
+</p>
+<p>Bektore-esparrua bideoaren irteera hainbat monitoreetan zuzen bistaratzen
+dela ziurtatzeko ere erabiltzen da. Barneko erradioko puntuak monitore
+gehienetan zuri hutsa bezala ikusiko dira, eta %100 erradiotik kanpo
+daudenak baliteke pantaila askotan ez ikustea.
+</p>
+<hr size="6">
+<a name="Uhina"></a>
+<a name="SEC230"></a>
+<h3 class="subsection"> 13.4.57 Uhina </h3>
+
+<p><img src=".././manual_images_en/wave.png" alt="manual_images_en/wave">
+</p>
+<p>Uhina efektuak uhinak gehitzen dizkio irudiari.
+</p>
+<p align="center"> <img src=".././manual_images_en/effect_wave_before_after.png" alt="manual_images_en/effect_wave_before_after">
+</p>
+<p>Honako parametroak doi ditzakezu:
+</p>
+<p align="center"> <img src=".././manual_images_en/effect_wave_window.png" alt="manual_images_en/effect_wave_window">
+</p>
+<hr size="6">
+<a name="Bihurritu"></a>
+<a name="SEC231"></a>
+<h3 class="subsection"> 13.4.58 Bihurritu </h3>
+
+<p><img src=".././manual_images_en/whirl.png" alt="manual_images_en/whirl">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="YUV"></a>
+<a name="SEC232"></a>
+<h3 class="subsection"> 13.4.59 YUV </h3>
+
+<p><img src=".././manual_images_en/yuv.png" alt="manual_images_en/yuv">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<a name="Zooma-lausotzea"></a>
+<a name="SEC233"></a>
+<h3 class="subsection"> 13.4.60 Zooma lausotzea </h3>
+
+<p><img src=".././manual_images_en/zoomblur.png" alt="manual_images_en/zoomblur">
+</p>
+<p>FINKATZEKO
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC139" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_14.html#SEC234" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 5. Fitxategiak kargatzea eta gordetzea</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 5. Fitxategiak kargatzea eta gordetzea">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 5. Fitxategiak kargatzea eta gordetzea">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_4.html#SEC58" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_6.html#SEC88" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Fitxategiak-kargatzea-eta-gordetzea"></a>
+<a name="SEC63"></a>
+<h1 class="chapter"> 5. Fitxategiak kargatzea eta gordetzea </h1>
+
+
+<hr size="6">
+<a name="Onartutako-fitxategi_002dformatua"></a>
+<a name="SEC64"></a>
+<h2 class="section"> 5.1 Onartutako fitxategi-formatua </h2>
+
+<p>Hemen onartutako fitxategi-formatu gehienak aipatzen dira, dagokien
+konpresioei buruzko oharrekin batera. Hemen aipatu ez diren beste formatuak
+ere karga ditzakezu. <br>
+</p>
+<p>Fitxategiaren formatuak badu eraginik Cinelerra-k berarekin zer egiten duenarekin.
+Muntatze-erabakien zerrendak, XML formatukoa, proiektuaren ezarpenak gordetzen ditu.
+Multimedia duten formatuak, baina muntatze-erabakirik ez dutenak, datu gisa gehitzen zaie
+pistei. Zure proiektuaren lagin-tasa 48 KHz bada, eta kargatzen duzun soinu-fitxategia
+96 Khz-koa bada, 48 KHz-rekin erreproduzituko duzu. 96KHz duen EDL-a
+(muntatze-erabakien zerrenda) kargatzen baduzu eta uneko proiektuaren lagin-tasa 48 KHz bada,
+96KHz-tara alda dezakezu. <br>
+</p>
+<p>Fitxategi-formatu batzuk oso motelak dira denbora-lerroan bistaratzeko. Hauek
+normalean konpresio altua edukitzen dute. Konpresio altuko bideoaren koadro-txikiak
+denbora-lerroan bistaratzea oso motela izan daiteke. Desgaitu koadro txikiak
+<b>Marraztu multimedia</b> erabiliz eragiketak bizkortzeko.
+</p>
+<p align="center"> <img src=".././manual_images_en/track_attributes.png" alt="manual_images_en/track_attributes">
+</p><p align="center"> <b>Pistaren atributuak</b>
+</p>
+<p>Unean onartutako fitxategi-formatuako honakoak dira:
+</p><ul>
+<li> WAV
+</li><li> PCM
+</li><li> AIFF
+</li><li> AC3 audioa
+</li></ul>
+
+
+<hr size="6">
+<a name="Quicktime"></a>
+<a name="SEC65"></a>
+<h3 class="subsection"> 5.1.1 Quicktime </h3>
+
+<p>Quicktime formatua UNIX sistemetako estandarra ez izan arren erabil daiteke,
+ongi dokumentuatuta baitago. Interneten dauden Quicktime formatuko filme
+guztiak konprimituta daude. Cinelerra-k konprimitutako zenbait Quicktime
+filma onartzen ditu. Quicktime formatuko filma bat kargatzean Cinelerra
+kraskatzen bada, formatua ez dagoela onartuta adierazi ohi da. <br>
+</p>
+<p>Quicktime formatua bi korronteen ontzia da: bideo-korrontea eta audio-korrontea.
+Korronte hauek kodeketa-eskema desberdinak erabiliz konprimitzen dira.
+Quicktime-ren kodeketa hobetsia MPEG-4 da, bai bideoarentzako bai audioarentzako.
+Formatu hau Windows sistema eragileko erreproduzigailu komertzialekin bateragarria da,
+konpresio-kalitate ona du eta irteerako kalitatea ere ona da. Konpresio
+hobeagorako erabili H-264 bideoa. Zoritxarrez, H-264 dekodetzea hain motela denez
+tamaina oso handiko fotogramak ezin ditu erreproduzitu. <br>
+Cinelerra-k estandarrak ez diren bi kodeka onartzen ditu: MPEG-4 bideo bikoitza eta
+H.264 bideo bikoitza. Cinelerra eta XMovie aplikazioekin soilik erreproduzi daitezke.
+Fotogramak bi eremuetan zatitzen diren filmeetan soilik erabiltzen dira, eremu bakoitza
+sekuentzian erreproduzituz. Kodeka bikoitzek bi bideo korronte tartekatzen dituzte
+errendimendua hobetzeko erreproduzigailuan aldaketa nagusirik eskatu gabe.
+</p>
+<hr size="6">
+<a name="MPEG_002d4-audioa"></a>
+<a name="SEC66"></a>
+<h3 class="subsection"> 5.1.2 MPEG-4 audioa </h3>
+
+<p>Audioaren kodeka gisa, Quicktime MPEG-4 audioaren bezalakoa da.
+</p>
+<hr size="6">
+<a name="Irudi_002dsekuentzia"></a>
+<a name="SEC67"></a>
+<h3 class="subsection"> 5.1.3 Irudi-sekuentzia </h3>
+
+<p>Irudi-sekuentzia bat errendatzea ez da irudi bakar bat errendatzea bezala.
+Irudi-sekuentzia bat errendatzean Cinelerra-k fitxategien edukiaren taula sortzen du
+eta irudi-fitxategi desberdin bat sortzen du denbora-lerroko posizio bakoitzarentzako.
+Errendimendua hobetzeko, edukiaren taula karga daiteke banakako irudiak kargatu ordez.
+Irudi-sekuentzian onartutako irudi-formatu desberdinak ezagutzeko jarraitu 'sekuentzia finkoa'
+atala irakurtzen.
+</p>
+<hr size="6">
+<a name="Sekuentzia-finkoa"></a>
+<a name="SEC68"></a>
+<h3 class="subsection"> 5.1.4 Sekuentzia finkoa </h3>
+
+
+<hr size="6">
+<a name="Sekuentzia-finkoa-kargatzea"></a>
+<a name="SEC69"></a>
+<h4 class="subsubsection"> 5.1.4.1 Sekuentzia finkoa kargatzea </h4>
+
+<p>Irudi bakarra errendatzeak denbora-lerroko posizio bakoitzeko irudi-fitxategia
+gainidaztea eragiten du. Ez da edukiaren taularik sortzen. Kargatutakoan irudiak
+fotograma baten luzera hartzen du. Irudia ikusteko, zooma handiagotu denbora-lerroan
+eta fotograma bakarra ikusiko duzu. Irudiaren luzera zabaltzeko, arrastatu ezazu
+bideo arruntarekin egiten den bezala. Irudi-finko bat nahi adina arrastatu dezakezu.
+Irudiak luzera infinituraino arrasta daitezke Cinelerra-n. <br>
+kargatutako irudiaren hasierako tamaina zehaztea uzten dizu Cinelerra-k.
+Parametro hau Irudiak ataleko <b>Konfigurazioa -&gt; Hobespenak -&gt; Grabazioa</b>
+menuan ezar daiteke. <br>
+Zure jatorrizko materiala ez badator euskarri digitaletik (argazki kamera
+digital bat adibidez), aurrenik klipak euskarri digitalera bihurtu edo kapturatu
+beharko dituzu. <br>
+Argazki zaharrak, paperezko mapak, marrazkiak edo diagramak euskarri digitalera
+bihurtzeko eskanerra erabil dezakezu, emaitzak PNG, TIF, TGA edo JPG formatuetan
+lortuz. Nahi baduzu, GIMP aplikazioa erabil dezakezu irudiak ikutzeko, hondatutako
+areak garbitzeko edo klipen kolorea konpontzeko. <br>
+Zure klipak iturburu digitaletik (kamera digitala edo pantailaren kaptura)
+badatoz, ziurtatu materialek bereizmen onena erabiltzen dutela.
+Horrela, irteerako kalitate onena lortuko duzu Cinelerra proiektuarekin.
+</p>
+<hr size="6">
+<a name="Irudi_002dfinkoen-tamaina"></a>
+<a name="SEC70"></a>
+<h4 class="subsubsection"> 5.1.4.2 Irudi-finkoen tamaina </h4>
+
+<p><b>Garrantzitsua:</b> inportatutako irudiak beti egoten dira jatorrizko tamainarekin.
+Kontutan eduki beharko duzu Cinelerra-n zehaztutako bideoaren aspektu-erlazioa, eta
+eskalatu irudiak Cinelerra-ra inportatu aurretik. <br>
+Adibidez, PAL moduko irudien aspektu-erlazioa 4/3 da, baina 720x576 pixel 5/4 dira.
+Inportatutako irudiak zuzen bistaratzeko, beraien tamaina horizontala
+eskalatu behar duzu: <br>
+tamaina horizontal berria=<em>(5 / 4) / (4 / 3)</em> x jatorrizko tamaina horizontala <br>
+PAL bideoetan irudien tamaina horizontala bidertu behar da 0.9375 koefizientearekin. <br>
+</p>
+<p>Ondoren, komando-lerroko script txiki bat idatzi da jpg formatuko fitxategiak
+dituen karpetan exekutatu eta bertako irudiak tamainaz aldatu eta irudi berriak
+<tt>`eskalatuak'</tt> karpetan gordetzen ditu:
+</p><pre class="verbatim">#/bin/sh
+mkdir -p eskalatuak
+for elementua in `ls . | grep jpg`;
+do
+    tamaina=`identify ${elementua}`
+    zabalera=`echo ${tamaina} | sed '+s+.*JPEG ++' | sed '+s+x.*++'`
+    altuera=`echo ${tamaina} | sed '+s+.*JPEG [0-9]*x++' | sed '+s+DirectClass.*++'`
+    let zabalera_berria=${zabalera}*9375/10000
+    convert -resize ${zabalera_berria}x${altuera} -quality 100 ${elementua} eskalatuak/${elementua}
+done
+</pre>
+<hr size="6">
+<a name="Open-EXR-irudiak"></a>
+<a name="SEC71"></a>
+<h4 class="subsubsection"> 5.1.4.3 Open EXR irudiak </h4>
+
+<p>Baliteke zuk ezer ez jakitea Open EXR-i buruz. Formatu honek koma mugikorreko GBU
+irudiak gordetzen ditu. Horretaz gain, konpresio kopuru txikia onartzen du.
+EXR formatura errendatuko duten proiektuek koma mugikorreko kolore-ereduan egon
+beharko lukete, EXR See section <a href="cinelerra_cv_manual_eu_4.html#SEC58">Proiektuaren atributuak</a>-en onuren abantailak eskuratu ahal izateko.
+EXR-ek hainbat konpresio aukera ditu erabilgarri.
+</p>
+
+<a name="IDX89"></a>
+<a name="IDX90"></a>
+<ul>
+<li> <b>PIZ:</b> Galerarik gabeko uhintxo konpresioa. Konpresio onena da.
+<a name="IDX91"></a>
+</li><li> <b>ZIP:</b> Galerarik gabeko gzip algoritmoa.
+<a name="IDX92"></a>
+</li><li> <b>RLE:</b> Galerarik gabeko exekuzio-luzera kodeketa.  Azkarrena da,
+baina konpresiorik txarrena.
+<a name="IDX93"></a>
+</li><li> <b>PXR24:</b> Galeradun konpresioa. Honek koma mugikorreko zenbakiak 24 bit-era bihurtu
+eta gzip-ekin konprimitzen du.
+</li></ul>
+
+<p>Hautatu <b>Erabili alfa</b> proiektuaren kolore-ereduak alfa kanala badu eta
+fitxategian edukitzea nahi baduzu. Bestela, kolore primarioak alfa kanalarekin
+bidertzen dira.
+</p>
+<hr size="6">
+<a name="Kamera-digitalen-irudi-gordinak"></a>
+<a name="SEC72"></a>
+<h4 class="subsubsection"> 5.1.4.4 Kamera digitalen irudi gordinak </h4>
+
+<p>Kamera digitalaren irudi gordinak (RAW) mota bereziko irudi-fitxategiak dira,
+Cinelerra soilik inporta ditzakenak. Behin denbora-lerroan kokatuta daudela
+koma mugikorreko kolore-espazioan soilik prozesa daitezke. Canon hornitzailearen
+irudi gordinak bakarrik probatu dira. <b>Gamma</b> efektua aplikatu behar zaie 
+gamma zuzentzeko. Irudi gordinak denbora luzea behar dutenez interpolatzeko,
+aurrenik proxy fitxategian ikusten dira, eta gero ikutzen dira.
+</p>
+<p>Lehenbizi aplikatu Gamma efektua irudi gordinen pistari, eta ezarri hau
+<b>automatikoa</b>  <b>0.6</b> gamma-rekin. Ondoren, errendatu denbora-lerroa
+Quicktime JPEG fitxategira. Erantsi Quicktime JPEG fitxategia pista berri batean
+eta desgaitu pista zaharra erreproduzitzea. Orain gamma zuzenduta duen
+irudi gordin bakoitzaren kopia nahiko azkar aurrikus daiteke denbora-lerroko
+jatorrizko irudiaren posizio berdinean.
+</p>
+<hr size="6">
+<a name="AVI"></a>
+<a name="SEC73"></a>
+<h3 class="subsection"> 5.1.5 AVI </h3>
+
+<p>AVI (Audio-Video Interleave) ontzia hainbat pusketatan dagoenez, 
+hainbat audio eta bideo kodekekin, ezin izango dituzu AVI formatuko
+fitxategi guztiak erreproduzitu.
+</p>
+<hr size="6">
+<a name="Bideodun-MPEG-fitxategiak"></a>
+<a name="SEC74"></a>
+<h3 class="subsection"> 5.1.6 Bideodun MPEG fitxategiak </h3>
+
+<p>Bideoa duten MPEG fitxategiak zuzenean karga daitezke Cinelerra-n.
+Fitxategiaren formatua onartuta badago, edukiaren taula eraikiko da.
+Fitxategia ez badago onartuta, normalean kraskatu egiten da, edo pista
+oso txikiak erakusten ditu. Zoritxarrez, MPEG fitxategiak kargatzeko metodo hau
+ez da nahiko ona fitxategiak errendategi batean erabiltzea nahi badituzu. <br>
+MPEG fitxategiak errendategi batean erabiltzeko, aurrenik mpeg3toc tresna exekutatu
+behar duzu fitxategiaren edukiaren taula sortzeko eta gero kargatu edukiaren taula.
+'mpeg3toc' tresnak MPEG fitxategiaren bide-izen absolutua behar du.
+Ez baduzu bide-izen absolutua erabiltzen, MPEG fitxategia Cinelerra exekutatzen den
+direktorioan kokatuta dagoela suposatzen du mpeg3toc tresnak. <br>
+MPEG korronteak pista anitzetan egituratuta daude. Pista bakoitza bideoa
+edo audioa izan daiteke. Audioaren pista bakoitzak 1-6 kanal izan ditzake.
+Cinelerra-k audioaren kanal bakoitza pista batean bihurtzen du.
+</p>
+<a name="IDX94"></a>
+<p><b>MPEG bideoa kodetzeari buruzko oharrak:</b> <br>
+MPEG bideoaren kodeketa MPEG audioaren kodeketatik bereiztuta lantzen da.
+MPEG bideoan bi kolore-eredu daude. YUV 4:2:0 kolore-eredua kodetzeko
+mpeg2enc tresnaren bertsio oso optimizatua erabiltzen da. Mpeg2enc tresnak
+kontsumorako elektronika estandarrentzako aurrehautaketak ditu.
+'mpeg2enc' tresna optimizatzeko prozesuan, YUV 4:2:2 kodeketa kendu zuten.
+YUV 4:2:2 kolore-eredua gutxiago optimizatutako mpeg2enc tresnarekin kodetzen da. <br>
+YUV 4:2:2 kodeketa mantendu egin da DV bideoaren NTSC bertsioak
+kalitate asko galtzen baitu YUV 4:2:0 kolore-eredura bihurtzean.
+DV bideoa YUV 4:2:2 kolore-eredura transferitu behar da. <br>
+YUV 4:2:0 kolore-eredura kodetzean bit-tasaren parametroaren esanahia aldatu
+egiten da finkatu den bit-tasa edo kuantizazioaren arabera.
+Bit-tasa finkatuta dagoenean helburuko bit-tasa adierazten da.
+Kuantizazioa finkatzean baimendutako gehienezko bit-tasa adierazten da.
+Hau mpeg2enc bertsioaren bitxikeria da.
+</p>
+<hr size="6">
+<a name="DVD-filmak"></a>
+<a name="SEC75"></a>
+<h3 class="subsection"> 5.1.7 DVD filmak </h3>
+
+<p>DVDa programa kopuru batean zatitzen da, bakoitza <tt>`IFO'</tt> fitxategi esklusibo
+batekin identifikatuz. DVD bat kargatzea nahi baduzu, bilatu intereseko programari
+dagokion <tt>`IFO'</tt> fitxategia. Kargatu IFO fitxategia zuzenean eta edukiaren
+taula eraikiko da. Edukiaren taula bereiztuta sor daiteke errendategian erabiltzeko. <br>
+</p>
+<a name="IDX95"></a>
+<p>Exekutatu: <code>mpeg3toc -v /cdrom/video_ts/vts_01_0.ifo dvd.toc</code> <br>
+edo antzeko zerbait. Gero kargatu <tt>`dvd.toc'</tt>.
+</p>
+<hr size="6">
+<a name="MPEG-1-audioa"></a>
+<a name="SEC76"></a>
+<h3 class="subsection"> 5.1.8 MPEG 1 audioa </h3>
+
+<p>Hauek .mp2 eta .mp3 luzapeneko fitxategiak dira. Fitxategiak kodetzeko finkatutako
+bit-tasa erabiltzen bada, zuzenean karga daitezke edukiaren taularik gabe.
+Bit-tasa aldagaien korronteek mpeg3toc tresnarekin sortutako edukiaren taulak behar dituzte.
+</p>
+<hr size="6">
+<a name="Ogg-Theora_002fVorbis"></a>
+<a name="SEC77"></a>
+<h3 class="subsection"> 5.1.9 Ogg Theora/Vorbis </h3>
+
+<p>OGG formatua audioa eta bideoa konprimitzeko ustez patentatu gabeko modu
+zaharkitu bat da. Bere kalitatea ez da H.264 edo MPEG-4 audioaren bezain ona.
+Egia esanda, nahikoa diru eta gogo duen edonork patente bat bortxatu duela aurki
+dezakeenez OGG formatuaren justifikazioa zalantzan jar daiteke.
+</p>
+<hr size="6">
+<a name="Muntatze_002derabakien-zerrenda-_0028EDL_0029"></a>
+<a name="SEC78"></a>
+<h3 class="subsection"> 5.1.10 Muntatze-erabakien zerrenda (EDL) </h3>
+
+<p>Cinelerra-k EDL edo muntatze-erabakien zerrenda sortzen du proiektuak gordetzeko.
+EDL fitxategiek .xml luzapena darabilte. Kargatutakoan, uneko proiektuaren
+atributuak aldatzen dituzte. Muntatze-erabakien zerrendak testuz osatuta daudenez
+edozein testu-editorekin edita daitezke.
+</p>
+<hr size="6">
+<a name="Fitxategiak-kargatzea"></a>
+<a name="SEC79"></a>
+<h2 class="section"> 5.2 Fitxategiak kargatzea </h2>
+
+<p>Cinelerra-rekin lan egiteko datu guztiak <b>gailu batetik grabatuz</b>
+edo <b>disko gogorretik kargatuz</b> eskuratzen dira. Atal honek fitxategiak
+nola kargatzen diren azaltzen du. <br>
+Fitxategiak kargatzea eta erreproduzitzea espero duzun bezalakoa da.
+Joan <b>Fitxategia -&gt; Kargatu</b> menura, hautatu fitxategi bat kargatzeko
+eta egin klik <b>Ados</b> botoian. Egin klik aurrera erreproduzitzeko botoian
+eta erreproduzitzen hasiko da, berdin diolarik progresio-barra agertu den edo ez.
+</p>
+<p align="center"> <img src=".././manual_images_en/load.png" alt="manual_images_en/load">
+</p><p align="center"> <b>'Kargatu' leihoa</b>
+</p>
+<p>Fitxategia irudi finkoa bada, proiektuaren atributuak ez dira aldatuko eta
+pistako aurreneko fotograma irudian bihurtuko da. Fitxategiak audioa badu,
+Cinelerra-k indize-fitxategia sortuko du marrazketa azkartzeko.
+Fitxategia editatu eta erreproduzitu dezakezu indize-fitxategia eraikitzen ari
+den bitartean.
+</p>
+
+<hr size="6">
+<a name="Txertatzeko-estrategia"></a>
+<a name="SEC80"></a>
+<h3 class="subsection"> 5.2.1 Txertatzeko estrategia </h3>
+
+<p>Normalean hiru gauza gerta daitezke fitxategi bat kargatzean:
+</p><ol>
+<li> existitzen den proiektua garbitzen da pantailatik
+</li><li> proiektuaren atributuak aldatu egiten dira fitxategiaren atributuekin
+bat etortzeko
+</li><li> fitxategi berriaren pistak sortzen dira denbora-lerroan
+</li></ol>
+
+<p>Hala eta guztiz, Cinelerra-k fitxategi bat kargatzean zer egitea nahi duzun zehaztea
+uzten dizu. <br>
+Fitxategia hautatzeko elkarrizketa-koadroan joan <b>Txertatzeko estrategia</b>
+goitibeherako zerrendara eta hautatu elementu bat. Zerrendatutako elementu
+bakoitzak modu desberdinean kargatzen du fitxategia.
+</p><ul>
+<li> <b>Ordeztu uneko proiektua</b> <br>
+Uneko proiektuaren pista guztiak ezabatu egiten dira eta pista berriak
+sortzen dira iturburuarekin bat egiteko. Proiektuaren atributuak
+XML fitxategia kargatzean soilik aldatzen dira. Hainbat fitxategi
+hautatzen badira, Cinelerra-k pista berriak gehitzen ditu fitxategiko.
+
+</li><li> <b>Ordeztu uneko proiektua eta kateatu pistak</b> <br>
+'Ordeztu uneko proiektua' bezalakoa da, hainbat fitxategi hautatzean ordea
+Cinelerra-k fitxategi bakoitzaren pistak kateatuko ditu, bata bestearen atzetik, ordena alfabetikoan.
+
+</li><li> <b>Erantsi pista berrietan</b> <br>
+Uneko proiektua ez da ezabatzen eta pista berriak sortzen dira
+iturburuarentzako.
+
+</li><li> <b>Kateatu dauden pistei</b> <br>
+Uneko proiektua ez da ezabatzen eta fitxategi berriak existitzen diren pistekin
+kateatzen dira.
+
+</li><li> <b>Itsatsi txertatzeko puntuan</b> <br>
+Denbora-lerroko txertatzeko puntuan itsasten da fitxategia.
+
+</li><li> <b>Sortu baliabide berriak soilik</b> <br>
+Denbora-lerroa ez da aldatzen eta baliabide berriak sortzen dira
+baliabideen leihoan.
+</li></ul>
+
+<p>'Txertatzeko estrategia' aukera Cinelerra-ren funtzio askotan erabiltzen da.
+Leku bakoitzean aukera honek gauza bera egiten du. Aukera hauek erabiltzean
+zure muntaketa guztiak egin ditzakezu fitxategiak kargatuz. Cinelerra-ri
+komando-lerroko argumentuak emanez fitxategiak kargatzen badituzu, fitxategiak
+<b>Ordeztu uneko proiektua</b> arauarekin kargatuko dira.
+</p>
+<hr size="6">
+<a name="Hainbat-fitxategi-kargatzea"></a>
+<a name="SEC81"></a>
+<h3 class="subsection"> 5.2.2 Hainbat fitxategi kargatzea </h3>
+
+<p>Fitxategia hautatzeko elkarrizketa-koadroan joan fitxategien zerrendara.
+Hautatu fitxategi bat. Joan beste fitxategi batera eta hautatu <kbd>Ktrl</kbd>
+tekla sakatuta edukiz. Honela beste fitxategi bat hautatzen da, baina tartekoak
+ez dira hautatzen. Tarteko beste fitxategiak hautatzeko eduki <kbd>Maius</kbd>
+tekla sakatuta eta hautatu beste fitxategi bat. Portaera hau zerrenda-koadro
+gehienetan dago erabilgarri. <br>
+Erabili metodo hau <b>Kateatu dauden pistei</b> txertatzeko estrategiarekin
+irudien aurkezpena edo abestien erreprodukzio-zerrenda sortzeko.
+</p>
+<hr size="6">
+<a name="Fitxategiak-kargatzea-komando_002dlerrotik"></a>
+<a name="SEC82"></a>
+<h3 class="subsection"> 5.2.3 Fitxategiak kargatzea komando-lerrotik </h3>
+
+<p>Fitxategiak kargatzeko beste bide bat fitxategi-izenak komando-lerroko
+argumentu gisa ematea da. <br>
+<code>cinelerra nirebideoa.mov nirebestebideoa.mov</code> <br>
+Honek fitxategi bakoitzeko pista berriak sortzen ditu eta programa
+kargatutako argumentu guztiekin abiarazten du.
+</p>
+<hr size="6">
+<a name="Fitxategiak-luzapenaren-arabera-iragaztea"></a>
+<a name="SEC83"></a>
+<h3 class="subsection"> 5.2.4 Fitxategiak luzapenaren arabera iragaztea </h3>
+
+<p>Multimediaren direktorioan fitxategi gehiegi egonez gero, nahi dituzun fitxategiak
+aurkitzea zaila izan daiteke. Hori dela eta, <b>'Kargatu' leihoak</b> direktorioko
+fitxategiak iragaziko ditu luzapenaren arabera nahi dituzun fitxategiak bistaratzeko. <br>
+Egin klik goitibeherako zerrendan (fitxategi-izena idazteko eremuaren azpian)
+eta hautatu fitxategiaren luzapena (adib. mpg, mov, mp3, avi, e.a.).
+Fitxategien zerrendan hautatutako luzapeneko fitxategiak soilik erakutsiko dira.
+</p>
+<hr size="6">
+<a name="Beste-formatuak-kargatzea"></a>
+<a name="SEC84"></a>
+<h3 class="subsection"> 5.2.5 Beste formatuak kargatzea </h3>
+
+<p>Ezin baduzu bideo-kliparen formatu zehatz bat kargatu, eta ez baduzu fitxategiaren
+jatorrizko iturbururik, Cinelerra-k onartzen duen formatura bihurtu beharko duzu.
+</p>
+<ul>
+<li> <b>ffmpeg</b> <br>
+Sintaxia: <br>
+<code>ffmpeg -sameq -i JATORRIZKOA.avi bideo_berria.mpeg</code> <br>
+<samp>`-sameq'</samp> aukerak jatorrizkoaren kalitatea mantentzen du.
+
+</li><li> <b>mjpegtools</b> <br>
+Sintaxia: <br>
+Bideoa: <code>lav2yuv jatorrizkoa.avi | mpeg2enc -o irteera.m1v</code> <br>
+Audioa: <code>lav2wav jatorrizkoa.avi | mp2enc -o irteera.mp2</code> <br>
+Bideoa eta audioa nahastea: <code>mplex irteera.mp2 irteera.m1v -o bideo_berria.m1v</code>
+
+</li><li> <b>mencoder</b> <br>
+Aurreneko aukera: <br>
+<code>mencoder SARRERAKO_FITXATEGIA.avi -ovc lavc -lavcopts vcodec=mpeg4:
+vhq:vbitrate=300 -oac mp3lame -lameopts br=64:vol=1 -o IRTEERAKO_FITXATEGIA.avi</code> <br>
+Bigarren aukera: <br>
+<code>mencoder sarrera.avi -ovc rawyuv -oac copy -o irteera.avi</code>
+
+</li><li> <b>dv-utils</b> <br>
+Sintaxia: <br>
+<code>dv2dv -o qt sarrerako_fitxat.avi irteerako_fitxat.qt</code>
+
+</li><li> <b>Transcode</b> <br>
+Aurreneko aukera: <br>
+<code>transcode -i proba.avi -o proba_divx4mp3.avi -y divx4</code> <br>
+Bigarren aukera: <br>
+<code>transcode -i proba.mov -x mplayer -o irteera.mpg -y yuv4mpeg</code> <br>
+Transcode tresnari buruzko informazio gehiago honako helbidean aurki dezakezu: <br>
+<a href="http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode">http://www.theorie.physik.uni-goettingen.de/~ostreich/transcode</a>
+</li></ul>
+
+<hr size="6">
+<a name="Babeskopia-kargatzea"></a>
+<a name="SEC85"></a>
+<h2 class="section"> 5.3 Babeskopia kargatzea </h2>
+
+<p>XML fitxategi berezi bat dago diskoan denbora guztian. Muntatze-eragiketa
+bakoitzaren ostean Cinelerra-k uneko proiektuaren babeskopia gordetzen du
+<tt>`$HOME/.bcast/backup.xml'</tt> fitxategian. Cinelerra kraskatzen denean, 
+Cinelerra berrabiarazi bezain laster <b>Fitxategia -&gt; Kargatu babeskopia</b> menua
+aukeratu babeskopia kargatzeko. Programa kraskatu aurretik lantzen ari zinen
+muntatze-eragiketak zuzenean kargatuko ditu. Garrantzitsua da kraskadura
+baten ostean Cinelerra inolako muntatze-eragiketarik gabe berrabiaraztea,
+bestela babeskopia gainidatziko lukeelako.
+</p>
+<hr size="6">
+<a name="Fitxategiak-gordetzea"></a>
+<a name="SEC86"></a>
+<h2 class="section"> 5.4 Fitxategiak gordetzea </h2>
+
+<p>Cinelerra-k fitxategi bat gordetzean, uneko proiektuaren mutatze-erabakien zerrenda
+gordetzen du baina ez multimediarik. Joan <b>Fitxategia -&gt; Gorde honela...</b> menura,
+hautatu fitxategi bat gainidazteko edo idatzi fitxategi berri baten izena.
+Cinelerra-k automatikoki kateatuko dio <samp>`.xml'</samp> luzapena fitxategiari, 
+fitxategi-izenean <samp>`.xml'</samp> luzapenik ez bada eman.
+</p>
+<p>Gordetako fitxategiak proiektuaren ezarpen eta muntaketaren kokaleku guztiak
+ditu. Multimedia eduki ordez, fitxategiak disko gogorreko jatorrizko multimediaren
+fitxategietara zuzentzen dituzten erakusleak ditu.
+</p>
+<p>Multimediako fitxategi bakoitzagatik XML fitxategiak hauen bide-izen absolutua
+edo erlatiboa gordetzen du. XML fitxategia kokatuta dagoen direktorio berdinean
+badago multimediako fitxategia, bide-izen erlatiboa gordeko da. Bestela, direktorio
+desberdinean aurkituz gero, bide-izen absolutua gordeko da.
+</p>
+<p>XML fitxategia direktorioz aldatzeko, multimediarako estekarik hautsi gabe, 
+multimediako fitxategia XML dagoen direktorio berdinean egon behar dute. Honela
+direktorio osoa lekuz alda dezakezu. Bestela, erabili direktorio berezia multimediako
+fitxategiak edukitzeko, eta ondorioz, XML fitxategiak bide-izen absolutua erabili beharko
+du, eta nahi duzunean lekuz alda dezakezu XML fitxategia (hori bai, multimediako fitxategiak
+ez itzazu lekuz aldatu, bestela bide-izen absolutuen estekak hondatuko bailirateke).
+</p>
+<p>Audioaren erreprodukzio-zerrenda sortu eta eta CD-ROM batean grabatzea nahi baduzu,
+gorde XML fitxategia audioko fitxategiak dauden direktorioan eta grabatu
+direktorio osoa. Honela multimediaren bide-izenak erlatiboak izango dira.
+</p>
+<p>XML fitxategiak oso erabilgarriak dira Cinelerra-ren uneko egoera gordetzeko
+muntatze-saiotik irten baino lehenago.
+</p>
+<p>XML fitxategi hauek Cinelerra-k soilik erabil ditzake. Ezin duzu XML fitxategi bat
+filmak erreproduzitzeko beste aplikazio batekin erreproduzitu. XML fitxategiko
+denbora errealeko efektuak berriro sintetizatu behar dira erreproduzitzen
+den bakoitzean. Klipen iturburu guztien kopia disko gogorrean edukitzea
+eskatzen du XML fitxategiak. Multimediako fitxategi guztiak disko gogorrean
+edukitzeak leku asko betetzen du. Zure proiektua amaierako formatuan errendatu
+irteeraren biltegi egonkorragoa lortzeko.
+</p>
+<hr size="6">
+<a name="Proiektuak-batzea"></a>
+<a name="SEC87"></a>
+<h2 class="section"> 5.5 Proiektuak batzea </h2>
+
+<p>Bereiztutako hainbat proiektu batzeko proiektu handi batean:
+</p><ol>
+<li> Ireki cinelerra
+</li><li> Kargatu A proiektua
+</li><li> Ireki Cinelerraren bigarren kopia
+</li><li> Kargatu B proiektua
+</li><li> Ebaki eta itsatsi A-tik B-ra
+</li></ol>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC63" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_6.html#SEC88" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 6. Janela de Programa</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 6. Janela de Programa">
+<meta name="keywords" content="Manual do Cinelerra CV: 6. Janela de Programa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_5.html#SEC68" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_7.html#SEC107" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Janela-de-Programa"></a>
+<a name="SEC97"></a>
+<h1 class="chapter"> 6. Janela de Programa </h1>
+
+
+<p>Esta janela contém a Linha do Tempo e o ponto de entrada para todas as operações baseadas em menu. A Linha do Tempo consiste em um conjunto vertical de trilhas com representação horizontal de tempo. Define a saída das operações de render e o que é salvo quando você salva arquivos. À esquerda de Linha do Tempo está o patchbay, que contém opções que afetam cada trilha.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>A linha do tempo</b>
+</p>
+<p>Abaixo da <b>Janela</b> de menu, você encontrará operações que afetam as janelas principais. A opção <b>posições padrão</b> reposiciona todas as janelas para uma configuração de edição em quatro janelas. Em configurações com dois monitores, a operação <b>posições padrão</b> preenche apenas um monitor com janelas.
+</p>
+<hr size="6">
+<a name="Navegando-na-janela-de-programa"></a>
+<a name="SEC98"></a>
+<h2 class="section"> 6.1 Navegando na janela de programa </h2>
+
+<p>A janela de programa contém várias funções para navegação e exibe a Linha do Tempo conforme está estruturada na memória: trilhas juntas verticalmente e se extendendo por sobre o tempo na forma horizontal. A barra de rolagem horizontal permite que você busque pelo tempo. A barra de rolagem vertical permite que você busque pelas trilhas.
+</p>
+
+<hr size="6">
+<a name="Trilhas-de-v_00eddeo-e-_00e1udio"></a>
+<a name="SEC99"></a>
+<h3 class="subsection"> 6.1.1 Trilhas de vídeo e áudio </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_video.png" alt="manual_images_intl/track_video">
+</p><p align="center"> <b>Uma trilha de vídeo</b>
+</p>
+<p>Trilhas de vídeo representam a Linha do Tempo de seus vídeos, como se você efetivamente despusesse um filme fotográfico real horizontalmente em uma mesa. As imagens individuais que você vê na trilha são uma amostra do que está localizado naquele momento particular da Linha do Tempo.
+</p>
+<p align="center"> <img src=".././manual_images_intl/track_audio.png" alt="manual_images_intl/track_audio">
+</p><p align="center"> <b>Uma trilha de áudio</b>
+</p>
+<p>Trilhas de áudio representam a sua mídia de áudio como uma onda sonora; seguindo a analogia do filme, seria como se você &quot;visse&quot; a fita magnética horizontalmente na sua mesa.
+Você pode ajustar o aumento ou diminuição vertical ou horizontal das trilhas e da exibição da &quot;onda sonora&quot; usando os controles da <b>barra de aproximação de painel</b>. <br>
+Cada trilha na linha do tempo possui um conjunto de atributos à esquerda, chamado de <b>patch bay</b>. Eles é usado para controlar o comportamento das trilhas. O atributo mais importante é o de <b>armar trilha</b>.
+</p>
+<hr size="6">
+<a name="Navega_00e7_00e3o-por-trilhas"></a>
+<a name="SEC100"></a>
+<h3 class="subsection"> 6.1.2 Navegação por trilhas </h3>
+
+<p>A navegação por trilhas envolve tanto chegar a uma trilha específica (áudio ou vídeo) quanto chegar a um certo momento no tempo da trilha. A janela de programa contém várias funções para navegação e exibe a Linha do Tempo conforme ela está estruturada na memória.
+</p>
+<p>A barra de rolagem horizontal permite que você faça buscas pelo tempo. Para rolagem vertical, você também pode usar a rodinha do mouse.
+</p>
+<p>A barra de rolagem horizontal permite que você busque pelo tempo. Para rolagem horizontal você também pode usar a rodinha do mouse com a tecla <kbd>CTRL</kbd> pressionada.
+</p>
+<p>Além das ferramentas gráficas, você provavelmente vai usar mais o teclado para navegar. Use <kbd>PAGE UP</kbd> e <kbd>PAGE DOWN</kbd> para rolar para cima e para baixo nas trilhas.
+</p>
+<p>Você freqüentemente terá de rolar para além do final da Linha do Tempo, mas as barras de rolagem não permitirão que você faça isso. Ao invés, use a SETA-PARA-A-DIREITA para rolar para além do final da linha do tempo.
+</p>
+<p>Use as teclas <kbd>HOME</kbd> e <kbd>END</kbd> para chegar instantaneamente para o início ou final da linha do tempo. No modo <b>barra</b>, mantenha a tecla <kbd>SHIFT</kbd> pressionada enquanto pressiona o <kbd>HOME</kbd> ou <kbd>END</kbd> para selecionar a região da linha do tempo entre o ponto de inserção e a tecla pressionada.
+</p>
+<hr size="6">
+<a name="O-painel-de-aproxima_00e7_00e3o"></a>
+<a name="SEC101"></a>
+<h3 class="subsection"> 6.1.3 O painel de aproximação </h3>
+
+<p>Abaixo da linha do tempo, você encontrará o painel de aproximação. O painel de aproximação contém valores para <b>aproximação de amostra</b> (duração visível na linha do tempo), <b>amplitude</b> (escala da onda sonora), <b>aproximação de trilha</b> (altura das trilhas na linha do tempo), e <b>aproximação de curva</b> (abrangência da automação).  Em adição às barras de rolagem, essas aproximações são as ferramentas principais para posicionar a linha do tempo.
+</p>
+<p align="center"> <img src=".././manual_images_en/zoompanel.png" alt="manual_images_en/zoompanel">
+</p>
+<a name="IDX83"></a>
+<p>Mudar o <b>aproximação de amostra</b> faz mudar a quantidade de tempo visível. Isso permite que você veja sua mídia desde a partir de uma configuração quadro a quadro quanto uma disposição completa de toda a linha do tempo. Quanto mais alta a configuração, mais quadros você poderá ver por tela. O valor de aproximação de amostra não é uma referência absoluta para a unidade de tempo, já que ele se refere à duração visível na linha do tempo e portanto também muda conforme você modifica a duração da janela do programa horizontalmente.<br>
+Use as setas <kbd>PARA-CIMA</kbd> e <kbd>PARA-BAIXO</kbd> para mudar a aproximação de amostra por uma razão de dois.<br>
+Caso seu mouse possua uma rodinha e ela funciona no X11, vá para as pré-vizualizações em miniatura e use a rodinha para aproximar ou afastar.
+</p>
+<a name="IDX84"></a>
+<p>A <b>amplitude</b> afetará apenas o áudio. Ela determina quão grande será a onda sonora. <br>
+<kbd>CTRL-PARACIMA</kbd> e <kbd>CTRL-PARABAIXO</kbd> fazem a aproximação de amostra mudar.
+</p>
+<a name="IDX85"></a>
+<p>A <b>aproximação de trilha</b> afeta todas as trilhas. Ela determina a altura de cada trilha. Se você mudar a aproximação da trilha, a aproximação de amplitude será compensada, de forma que as ondas sonoras pareçam proporcionais. <br>
+<kbd>CTRL-PGUP</kbd> e <kbd>CTRL-PGDOWN</kbd> fazem a aproximação de trilha mudar.
+</p>
+<a name="IDX86"></a>
+<p>A <b>Aproximação de curvas</b> afeta as curvas em todas as trilhas do mesmo tipo. Ela determina a abrangência de valor para as curvas. Primeiro selecione o tipo de automação (fade de áudio, fade de vídeo, aproximação, X ou Y) e então use os valores à esquerda como mínimos e os da direita como máximos; ou informe manualmente os valores na caixa de texto. Normalmente, você usará -40.0 a 6.0 para fade de áudio e 0.0 a 100.0 para fade de vídeo. See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC108">O patchbay</a>.<br>
+Esses valores mudam a amplitude da curva, mas o único modo de deslocar as curvas é usar o botão <b>Enquadrar autos à exibição</b>.
+<img src=".././manual_images_intl/fit_curves.png" alt="manual_images_intl/fit_curves">.<br>
+<kbd>ALT-PARACIMA</kbd> e <kbd>ALT-PARABAIXO</kbd> fazem a amplitude de curvas mudar.
+</p>
+<hr size="6">
+<a name="O-menu-relacionado-_00e0s-trilhas"></a>
+<a name="SEC102"></a>
+<h3 class="subsection"> 6.1.4 O menu relacionado às trilhas </h3>
+
+<p>Cada trilha possui um menu relacionado a ela. Para ativar o <b>menu da trilha</b>, clique com o botão direito do mouse na trilha (o menu relacionado afeta a trilha caso ela esteja armada no <b>patch bay</b> ou não). O menu de trilha contém um número de opções para lidar com várias trilhas simultaneamente:
+</p><ul>
+<li> Adicionar efeito
+</li><li> Mover para cima move a trilha selecionada um passo acima no conjunto.
+</li><li> Mover para baixo move a trilha selecionada um passo abaixo no conjunto.
+</li><li> Apagar trilha remove a trilha da linha do tempo.
+</li><li> Adicionar trilha adiciona uma trilha do mesmo tipo de mídia (áudio/vídeo) a partir do qual o menu foi ativado.
+</li><li> Redimensionar trilha redimensiona a trilha.
+</li><li> Ajustar ao Tamanho de Saída redimensiona a trilha para se ajustar ao tamanho de saída atual.
+</li></ul>
+
+<hr size="6">
+<a name="O-ponto-de-inser_00e7_00e3o"></a>
+<a name="SEC103"></a>
+<h3 class="subsection"> 6.1.5 O ponto de inserção </h3>
+
+<p>O ponto de inserção é esse fio branco piscante que aparece se estendendo verticalmente na linha do tempo. Análogo ao cursor de seu editor de texto, o ponto de inserção marca o lugar na linha do tempo onde a próxima atividade do programa será iniciada. É o ponto onde ocorre uma operação de colar. Quando se renderiza um arquivo, ele define o início da região da linha do tempo a ser renderizada. Ele também é o ponto de início de todas as operações de reprodução.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>O ponto de inserção na janela principal,</b>
+</p><p align="center"> <b>representado como um fio branco vertical no ponto 00:00.500</b>
+</p>
+<p>O ponto de inserção normalmente é movido ao se clicar no interior da barra de tempo principal. Qualquer região da linha do tempo não obscurecida por marcadores e pontos de entrada ou saída é uma região válida para se reposicionar o ponto de inserção. No modo de recortar e colar somente, o ponto de inserção também pode ser movido ao se clicar na linha do tempo.
+</p>
+<p align="center"> <img src=".././manual_images_intl/main_timebar.png" alt="manual_images_intl/main_timebar">
+</p><p align="center"> <b>A barra de tempo principal</b>
+</p>
+<p>Quando se move o ponto de inserção, a posição será ou alinhada aos quadros ou alinhada às amostragens (&quot;samples&quot;). Quando se edita um vídeo, é melhor alinhá-lo aos quadros. Quando se edita um áudio, é melhor alinhá-lo às amostragens. Selecione sua preferência em <b>Configurações-&gt;Alinhar cursor aos quadros</b>.
+</p>
+<hr size="6">
+<a name="Modos-de-edi_00e7_00e3o"></a>
+<a name="SEC104"></a>
+<h3 class="subsection"> 6.1.6 Modos de edição </h3>
+
+<p>Modos de edição são dois métodos diferentes de operação que afetam o ponto de inserção e a edição na linha do tempo.<br>
+São eles:<br>
+</p><ul>
+<li> modo de arrastar e soltar
+</li><li> modo de recortar e colar
+</li></ul>
+
+<p>O modo de funcionamento é determinado ao se selecionar a seta ou a barra (&quot;i-beam&quot;) na barra de botões. Alternativamente, você pode usar a tecla <kbd>e</kbd> como um atalho de teclado para alternar entre os modos.
+</p>
+<p align="center"> <img src=".././manual_images_intl/editing_mode.png" alt="manual_images_intl/editing_mode">
+</p><p align="center"> <b>Os botões do modo de edição</b>
+</p>
+<a name="IDX87"></a>
+<p>Se a seta estiver selecionada, ela habilita o modo <b>arrastar e soltar</b>. <br>
+No modo arrastar e soltar, clicar na linha do tempo não reposiciona o ponto de inserção. <br>
+Um duplo-clique na linha do tempo seleciona todo o bloco de edição em cima do qual o mouse estiver posicionado. <br> 
+Arrastar na linha do tempo reposiciona o bloco de edição para onde o apontador do mouse estiver passando. Isto é útil para reordenar as listas de reprodução de áudio, ordenar cenas de vídeos, mover efeitos por aí.<br>
+Para recortar e colar no modo de arrastar e soltar, você precisa marcar <b>pontos de entrada/saída</b> para definir uma região a ser afetada. See section <a href="#SEC105">Os pontos de entrada/saída</a>. <br>
+See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC115">Edição de arrastar e soltar</a>. 
+</p>
+<a name="IDX88"></a>
+<p>Se a barra (&quot;i-beam&quot;) estiver selecionada, ela habilita o <b>modo recortar e colar</b>. <br>
+No modo de recortar e colar, clicar na linha do tempo reposiciona o ponto de inserção. <br>
+Dar um duplo-clique na linha do tempo seleciona todo o bloco de edição por sobre o qual o cursor estiver sobre. <br>
+Arrastar na linha do tempo seleciona uma região. A região em destaque se torna a região afetada pelas operações de recortar e colar e a abrangência da reprodução durante a próxima operação de exibição. Clicar com a tecla <kbd>SHIFT</kbd> pressionada na linha do tempo estende a região em destaque.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_highlight.png" alt="manual_images_intl/program_highlight">
+</p><p align="center"> <b>Trilhas com área destacada, mostradas dentro do contorno verde</b>
+</p>
+<p>Quando se destaca uma região, os pontos de início e fim são ou alinhados aos quadros ou a amostras. Quando você estiver editando vídeo, você provavelmente vai querer que este alinhamento seja feito aos quadros. Quando editar áudio, você quererá alinhá-los a amostras. Isso pode ser configurado em <b>configurações-&gt;Alinhar cursor aos quadros</b>. <br>
+See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC116">Edição de recortar e colar</a>.
+</p>
+<p><a name="r943_005fr944_005fmodos_005fde_005fedi_00e7_00e3o"></a><b>Observação:</b> As revisões do Cinelerra CV 943 e 944 (checkouts do SVN de 19 a 21 de outubro de 2006) não possuíam botões de modos de edição. Os modos de ediçaõ &quot;Copiar e colar&quot; e &quot;Arrastar e soltar&quot; estavam unidos em um só, sendo a tecla shift a diferenciação entre eles. Este é o caso do ebuild do Gentoo media-video/cinelerra-cvs-20061020.
+</p>
+<hr size="6">
+<a name="Os-pontos-de-entrada_002fsa_00edda"></a>
+<a name="SEC105"></a>
+<h3 class="subsection"> 6.1.7 Os pontos de entrada/saída </h3>
+
+<p>Em ambos os modos de edição, você pode marcar pontos de entrada e saída. Os pontos de entrada/saída definem a região afetada. No modo arrastar e soltar, eles são o único meio de definir uma região afetada. Nos dois modos, de recortar e colar e arrastar e soltar, a área em destaque sobrescreve os pontos de entrada/saída. Se uma área em destaque e pontos de entrada/saída estiverem marcados, a área selecionada é afetada pelas operações de edição e os pontos de entrada/saída são ignorados. Se nenhuma região estiver em destaque, os pontos de entrada/saída são usados.
+Para evitar confusões, é melhor usar ou o destaque ou os pontos de entrada/saída, mas não ambos simultaneamente.
+</p>
+<p>Normalmente, os pontos de entrada/saída não afetam a região de reprodução. Apenas se você manter a tecla <kbd>CTRL</kbd> pressionada enquanto envia um comando de reprodução é que os pontos de entrada/saída determinam a região de reprodução.
+</p>
+<p>Para marcar os pontos de entrada/saída, vá para a barra de tempo e posicione o ponto de inserção em algum lugar. Pressione o <img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>botão de ponto de entrada</b>. Mova o ponto de inserção para uma posição depois do ponto de entrada e pressione o <img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>botão do ponto de saída</b>.
+Ao invés de usar a barra de botões, você pode usar as teclas <kbd>[</kbd> e <kbd>]</kbd> para colocar/retirar pontos de entrada/saída.
+</p>
+<p align="center"> <img src=".././manual_images_intl/inout_points.png" alt="manual_images_intl/inout_points">
+</p><p align="center"> <b>Barra de tempo com pontos de entrada/saída marcados</b>.
+</p>
+<p>Se você marcar o ponto de inserção em algum outro lugar quando pontos de entrada/saída já existirem, quando você clicar os botões de entrada/saída, os pontos existentes serão reposicionados.
+</p>
+<p>Se você clicar nos pontos de entrada/saída quando uma região estiver em destaque, o ponto de inserção será ignorado e pontos de entrada/saída serão marcados ao início e ao fim da área destacada.
+</p>
+<p>Se você selecionar o ponto de entrada ou o ponto de saída, o ponto de inserção pulará para aquela localização. Depois de selecionar um ponto de entrada, se você pressionar o <b>botão de ponto de entrada</b>, o ponto de entrada será apagado. Depois de selecionar um ponto de saída, se você pressionar o <b>botão de ponto de saída</b>, o ponto de saída será apagado. 
+</p>
+<p><b>Dica:</b> Para se livrar rapidamente dos pontos de entrada/saída, sem se preocupar onde eles estão ou se eles estão marcados ou não, simplesmente dê um duplo-clique nos botões [ e ]. O primeiro clique posicionará um novo ponto ou reposicionará um existente no ponto de inserção; o segundo clique o apagará. Obviamente, este truque não funcionará se o ponto de entrada ou de saída já estiverem marcados no ponto de inserção.
+</p>
+<p>Clicar deixando o <kbd>SHIFT</kbd> pressionado em um ponto de entrada/saída destaca a região entre o ponto de inserção e aquele ponto de entrada/saída.
+</p>
+<p>O ponto de inserção e os pontos de entrada/saída permitem que você defina uma região afetada mas eles não permitem que você salte para pontos exatos na linha do tempo tão facilmente. Para essa função, use os marcadores.
+</p>
+<hr size="6">
+<a name="Usando-marcadores-na-janela-de-programa"></a>
+<a name="SEC106"></a>
+<h3 class="subsection"> 6.1.8 Usando marcadores na janela de programa </h3>
+
+<p>Marcadores são um jeito fácil de marcar localizações exatas na linha do tempo para onde você quer chegar. Quando você posiciona um ponto de inserção em algum lugar e pressiona o <img src=".././manual_images_intl/label_button.png" alt="manual_images_intl/label_button"> <b>botão de marcador</b>, um novo marcador aparece na linha do tempo.
+</p>
+<p align="center"> <img src=".././manual_images_intl/timebar_label.png" alt="manual_images_intl/timebar_label">
+</p><p align="center"> <b>Barra do tempo com um marcador nela</b>
+</p>
+<p>Independentemente de quais forem as configurações de aproximação, clicar no marcador o coloca em evidência e posiciona o ponto de inserção exatamente onde você havia colocado o marcador. Apertar o botão de marcador novamente quando um marcador estiver selecionado remove-o.
+</p>
+<p>Marcadores podem reposicionar o ponto de inserção quando forem selecionados, mas também pode haver uma navegação entre eles com os botões de <img src=".././manual_images_intl/label_traversal.png" alt="manual_images_intl/label_traversal"> <b>marcador traversal</b>. Quando um marcador estiver fora de visão, os botões de movimentação entre marcadores reposicionam a linha do tempo de modo que o marcador fique visível. Há atalhos de teclado para movimentação entre marcadores também.
+</p>
+<p><kbd>CTRL-ESQUERDA</kbd> reposiciona o ponto de inserção no marcador anterior.
+</p>
+<p><kbd>CTRL-DIREITA</kbd> reposiciona o ponto de inserção no próximo marcador.
+</p>
+<p>Com a movimentação entre marcadores, você pode rapidamente buscar pontos anteriores e posteriores na linha do tempo.
+</p>
+<p>A aba <b>Marcadores</b> na janela de recursos lista a marcação de tempo de cada marcador. Você pode editar a lista de marcadores e adicionar um título para cada item usando o menu que aparece. Para abrir o diálogo <b>Informação de Marcador</b>, clique com o botão direito do mouse no ícone do marcador na janela de Recursos, ou diretamente no símbolo do marcador na barra de tempo.
+</p>
+<p>Com marcadores, você também pode selecionar regiões.
+</p>
+<p><kbd>SHIFT-CTRL-ESQUERDA</kbd> destaca a região entre o ponto de inserção e o marcador anterior.
+</p>
+<p><kbd>SHIFT-CTRL-DIREITA</kbd> destaca a região entre o ponto de inserção e o próximo marcador.
+</p>
+<p>Um <b>duplo-clique</b> na barra de tempo entre dois marcadores evidencia a região entre os marcadores.
+</p>
+<p>Clicar com o <b>SHIFT</b> em um marcador coloca em evidência a região entre aquele marcador e o ponto de inserção. Se uma região já estiver em destaque, isso estenderá a região em evidência para até aquele marcador.
+</p>
+<p>Se você pressionar o botão de marcador quando uma região estiver em evidência, os marcadores serão criados ao final de cada região em destaque. Entretanto, se um final já tiver um marcador, então o marcador existente será apagado.
+</p>
+<p>Pressionar o botão de marcador novamente quando um marcador estiver selecionado o apaga.
+Pressionar o botão de marcador manualmente ou a tecla <kbd>l</kbd> de novo e de novo para apagar uma série de marcadores pode ser bastante tedioso. Para apagar um conjunto de marcadores, primeiro selecione a região e depois use a função <b>Editar...-&gt;Limpar marcadores</b>. Se pontos de entrada/saída existirem, os marcadores entre os pontos de entrada/saída serão limpos e a região destacada ignorada.
+</p>
+<p>Apenas no modo de edição <b>Recortar e Colar</b>, ao habilitar &quot;Editar marcadores&quot; no menu de configurações, ou ao desabilitar o botão <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked"> <b>&quot;Lock labels from moving&quot;</b> na barra de ferramentas do programa, os marcadores serão recortados, copiados ou colados ao londo da área selecionada da primeira trilha armada. <br>
+De forma similar, se uma área selecionada de um recurso for dividida do Visor para a linha do tempo em uma posição antes dos marcadores, estes marcadores serão empurrados para a direita na linha do tempo conforme a duração da área selecionada. <br>
+Para manter presos os marcadores em suas posições na barra de tempo, desabilite a opção &quot;Editar marcadores&quot; ou habilite o botão <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked"> <b>&quot;Impedir marcadores de se mover&quot;</b>. <br>
+No modo de edição <b>Arrastar e soltar</b>, os marcadores sempre ficarão presos à barra de tempo, mesmo com a opção &quot;Editar marcadores&quot; habilitada.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_7.html#SEC107" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

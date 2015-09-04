@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 11. Controles de navegación</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 11. Controles de navegación">
+<meta name="keywords" content="Manual de Cinelerra CV: 11. Controles de navegación">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_10.html#SEC136" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_12.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Controles-de-navegaci_00f3n"></a>
+<a name="SEC137"></a>
+<h1 class="chapter"> 11. Controles de navegación </h1>
+
+<p>Los controles de navegación son tan útiles para navegar como para reproducir
+metraje, así que se describen en esta sección sobre navegación. Cada una de
+las ventanas Visor, Compositor y Programa tiene un panel de navegación.
+</p>
+<p align="center"> <img src=".././manual_images_en/transport_panel.png" alt="manual_images_en/transport_panel">
+</p><p align="center"> <b>El panel de navegación</b>.
+</p>
+<p>El panel de navegación se controla tanto con el teclado como con el ratón.
+Para cada una de las operaciones que realiza la posición inicial es la posición
+del punto de inserción en la ventana del Programa y la barra deslizante en 
+la ventana del Compositor. La posición final es el principio o el final de 
+la línea de tiempos o bien el principio o final de la región seleccionada, si
+es que hay una.
+</p>
+<p>La definición de &quot;principio&quot; y &quot;final&quot; realmente depende de la dirección en
+la que se esté reproduciendo la película. Si es hacia delante (como se suele
+ver una película), la reproducción acaba cuando se llega al final de la región
+seleccionada. Pero si es hacia atrás (viéndola marcha atrás), la reproducción 
+acaba cuando se llega al principio de la región seleccionada.
+</p>
+<p>El punto de inserción avanza a la vez que la reproducción. Al parar la reproducción,
+el punto de inserción se queda donde se ha parado la película. Al reproducir hacia
+atrás, el punto de inserción retrocede en la línea de tiempos.
+</p>
+<p>El teclado es más rápido que la interfaz gráfica, y ofrece más velocidades
+para rebobinar. Las teclas de navegación están dispuestas formando una <b>T</b>
+torcida sobre el teclado numérico.
+</p>
+<table>
+<tr><td><p> <kbd>4</kbd>
+</p></td><td><p> Retroceder un fotograma
+</p></td><td><p> <kbd>5</kbd>
+</p></td><td><p> Retroceder despacio
+</p></td><td><p> <kbd>6</kbd>
+</p></td><td><p> Retroceder 
+</p></td><td><p> <kbd>+</kbd>
+</p></td><td><p> Retroceder rápido
+</p></td></tr>
+<tr><td><p> <kbd>1</kbd>
+</p></td><td><p> Avanzar un fotograma
+</p></td><td><p> <kbd>2</kbd>
+</p></td><td><p> Avanzar despacio
+</p></td><td><p> <kbd>3</kbd>
+</p></td><td><p> Reproducir
+</p></td><td><p> <kbd>Enter</kbd>
+</p></td><td><p> Avanzar rápido
+</p></td></tr>
+<tr><td><p> <kbd>0</kbd>
+</p></td><td><p> Parar
+</p></td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</table>
+
+<p>Si se pulsa cualquier tecla dos veces seguidas, se detiene la navegación.
+</p>
+<p>Al avanzar o retroceder fotograma a fotograma el comportamiento puede parecer
+extraño. Si se avanza un fotograma y luego se retrocede un fotograma, el 
+fotograma que se muestra no cambia. Esto se debe a que la posición de reproducción
+no es el fotograma propiamente dicho, sino el instante entre dos fotogramas. 
+El fotograma que se muestra es el área que cruza la posición de reproducción.
+Al incrementar el tiempo entre dos fotogramas en uno y luego disminuirlo en uno,
+se cruza el mismo fotograma dos veces y por lo tanto es el mismo fotograma lo que se muestra.
+</p>
+<p>El comportamiento de los comandos de navegación cambia si se está pulsando la tecla 
+<kbd>CTRL</kbd> mientras se da la orden.  En este caso el punto de principio será el 
+punto de entrada si se reproduce hacia delante, o el de salida si se reproduce la
+película hacia atrás. Al reproducir hacia delante de esta manera, el punto de salida
+es el final de la película. Si se reproduce hacia atrás de esta manera, el punto
+de entrada es el punto final de la película. Si no hay puntos de entrada o salida,
+el comportamiento es el normal (punto de inserción y fronteras de la selección 
+como puntos inicial y final).
+</p>
+<p>Es posible usar un periférico hardware tipo JogShuttle.<a name="DOCF1" href="cinelerra_cv_manual_es_fot.html#FOOT1">(1)</a>
+</p>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_10.html#SEC136" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_12.html#SEC138" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 12. La barre temporelle</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 12. La barre temporelle">
+<meta name="keywords" content="Manuel de Cinelerra CV: 12. La barre temporelle">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_11.html#SEC137" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_13.html#SEC139" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="La-barre-temporelle"></a>
+<a name="SEC138"></a>
+<h1 class="chapter"> 12. La barre temporelle </h1>
+
+<p>Les fonctions de navigation dans la visionneuse et le compositeur se comportent
+de manière très semblables.  Chacune comporte une barre temporelle avec un
+curseur sous la sortie vidéo.  La barre temporelle et le curseur sont
+fondamentaux pour la navigation.
+</p>
+<p align="center"> <img src=".././manual_images_fr/timebarslider.png" alt="manual_images_fr/timebarslider">
+</p>
+<a name="IDX112"></a>
+<p>La barre temporelle représente l'ensemble de la plage de temps couverte par le
+programme.  Lorsque vous définissez des marques et des points d'entrée/sortie,
+elle les indique aussi.  Enfin on trouve sur la barre temporelle une région
+appelée <b>zone de prévisualisation</b>.
+</p>
+<p>La <b>zone de prévisualisation</b> est la partie de la timeline qui peut être
+parcourue à l'aide de la navette.  La navette ne peut parcourir que la période de
+temps qui se trouve dans la zone de prévisualisation.  En utilisant une zone de
+prévisualisation à l'intérieur de l'ensemble du programme et en utilisant la navette
+à l'intérieur de cette zone, vous pouvez vous déplacer rapidement et
+avec précision dans la visionneuse et le compositeur.
+</p>
+<p>Lorsque vous remplacez le projet en cours par un fichier, la zone de
+prévisualisation est automatiquement redimensionnée pour couvrir l'ensemble du
+fichier.  Lorsque vous ajoutez des données ou que vous modifiez la taille du
+projet en cours, la zone de prévisualisation garde la même taille et se réduit.
+Il vous faut donc redimensionner la zone de prévisualisation.
+</p>
+<p>Chargez un fichier et déplacez-vous en utilisant la navette du compositeur.  Le point
+d'insertion de la fenêtre principale suit le compositeur.  Survolez la barre temporelle
+du compositeur avec la souris jusqu'à ce que le pointeur change de forme et se
+présente sous la forme d'une flèche de redimensionnement orientée vers la gauche.
+Cliquez alors et glissez vers la droite.  La zone de prévisualisation devrait avoir
+changé et la navette s'être redimensionné proportionnellement.
+</p>
+<p>Déplacez-vous vers la droite de la barre temporelle jusqu'à ce qu'une flèche
+droite de redimensionnement apparaisse.  Glissez-la vers la gauche de façon à
+réduire la taille de la zone de prévisualisation.
+</p>
+<p>Déplacez-vous au centre de la région de prévisualisation sur la barre
+temporelle et glissez-là de façon à vous convaincre qu'elle peut être déplacée.
+</p>
+<p><b>Note :</b> lorsque vous ajoutez des données ou que vous modifiez les dimensions
+du projet en cours, la zone de prévisualisation conserve les mêmes dimensions
+et se réduit.  Il vous faudra donc la redimensionner.
+</p>
+<p align="center"> <img src=".././manual_images_intl/previewregion.png" alt="manual_images_intl/previewregion">
+</p><p align="center"> <b>La zone de prévisualisation dans le compositeur</b>
+</p>
+<p>Si vous utilisez la navette et que vous la déplacez avec la zone de
+prévisualisation réduite, vous verrez que la navette n'affecte que la zone de
+prévisualisation.  La barre temporelle et la fenêtre de visualisation
+fonctionnent exactement de la même manière.
+</p>
+<p>Les marques et les points d'entrée/sortie sont totalement gérés dans la
+visionneuse et le compositeur.  La seule différence entre la visionneuse et le
+compositeur est que le compositeur reflète l'état du programme alors que la
+visionneuse reflète l'état d'un clip mais pas celui du programme.
+</p>
+<p>Lorsque vous cliquez le <b>bouton de marque</b> dans le compositeur, la marque
+apparaît à la fois dans la barre temporelle du compositeur et dans la barre
+temporelle du programme.
+</p>
+<p>Lorsque vous sélectionnez une marque ou un point d'entrée/sortie dans le
+compositeur, la fenêtre de programme est déplacée jusqu'à cette position.
+</p>
+<p align="center"> <img src=".././manual_images_intl/viewer_labels.png" alt="manual_images_intl/viewer_labels">
+</p><p align="center"> <b>Marques et points d'entrée/sortie dans la visionneuse</b>.
+</p>
+<p>Dans la visionneuse et le compositeur, les marques et les points
+d'entrée/sortie sont affichés sur la barre temporelle.  Au lieu de n'afficher
+qu'une région du programme, la barre temporelle affiche ici l'ensemble du
+programme.
+</p>
+<p>Comme la fenêtre de programme, le compositeur possède une possibilité de zoom.
+On trouve d'abord un certain nombre d'options de zoom dans le menu qui se
+trouve en bas de la fenêtre de composition.  Lorsque le zoom est configuré sur
+<b>Auto</b>, la vidéo est zoomée pour s'adapter autant que possible à la taille de
+la fenêtre.  Lorsqu'il est fixé à un autre pourcentage quelconque, la vidéo est
+zoomée par puissances de 2, et les barres de défilement peuvent alors être
+utilisées pour faire défiler la sortie.  Lorsque la vidéo est zoomée à des
+dimensions plus grandes que celles de la fenêtre, les barres de défilement
+ainsi que la souris permettent de la parcourir.  C'est exactement ce que fait
+Gimp.
+</p>
+<p>De plus, le <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> bouton de zoom fait entrer le
+compositeur en mode zoom.  En mode zoom, cliquer dans la sortie vidéo permet de
+zoomer alors que <b>CTRL-clic</b> permet de dézoomer.  Si vous avez une souris à
+molette, les opérations de zoom peuvent aussi être réalisées en tournant la
+molette.
+</p>
+<p>Zoomer ou dézoomer avec l'outil de zoom ne modifie pas la sortie rendue.  Cela
+ne sert qu'à examiner votre vidéo ou à lui permettre de s'adapter à votre
+bureau.
+</p>
+<p>Lire de la vidéo dans le compositeur alors qu'il se trouve avec un facteur de
+zoom autre que 100% de la taille d'origine exige que Cinelerra effectue des
+calculs supplémentaires.  Ceci peut affecter les performances sur les systèmes
+les plus lents.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_11.html#SEC137" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_13.html#SEC139" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

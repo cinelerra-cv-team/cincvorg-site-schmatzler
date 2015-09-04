@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 21. Arazoen ebazpena</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 21. Arazoen ebazpena">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 21. Arazoen ebazpena">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_20.html#SEC271" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_22.html#SEC305" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Arazoen-ebazpena"></a>
+<a name="SEC295"></a>
+<h1 class="chapter"> 21. Arazoen ebazpena </h1>
+
+
+<hr size="6">
+<a name="Erroreen-berri-ematea"></a>
+<a name="SEC296"></a>
+<h2 class="section"> 21.1 Erroreen berri ematea </h2>
+
+<p>Errore bat aurkitzean, aurrenik <a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> gunea (ingelesez)
+bisitatu, beste norbaitek errore berdinari buruz berri eman duen jakiteko. 
+Beste inork ez badu errorearen berri eman, erroreari buruzko txostena bete dezakezu.
+<a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a> gunean ez bazaude harpidetuta, kontu berri bat
+sortu beharko duzu. Behin harpidetuta zaudela, erroreari buruz berri eman ahal
+izango duzu, honako informazioa eskainiz:
+</p>
+<ul>
+<li> Cinelerra CV-ren gainbegiratze zenbakia.  Adibidez: r959
+</li><li> Banaketaren izena eta bertsioa.  Adibidez: Debian SID
+</li><li> Jorratu behar diren urratsak errorea errepikatzeko. Informazio hau oso
+garrantzitsua da, erroreak finkatzeko asko laguntzen duelako. Gogoratu
+informazioa ingelesez idatzi behar dela. Adibidez:
+<ol>
+<li> launch cinelerra (abiarazi cinelerra)
+</li><li> open the recording window (ireki grabazioaren leihoa)
+</li><li> click on OK (egin klik Ados botoian)
+</li><li> Cinelerra crashes (Cinelerra kraskatu egin da)
+</li></ol>
+</li><li> Cinelerra CV kraskatzen denean, araztailearen irteera asko estimatzen da. Exekutatu: <br>
+<code>gdb cinelerra</code> <br>
+<code>run</code> <br>
+(Orain errepikatu urrats guztiak Cinelerra CV kraskatu arte) <br>
+<code>thread apply all bt</code> <br>
+Kopiatu agertu den informazio guztia erroreari buruzko txostenean.
+</li></ul>
+
+<p>Ez izan zalantzarik, errorea finkatzeko erabilgarria izan daitekeen edozein
+fitxategi erantsi, adibidez pantailaren kaptura bat. <b>gdb</b> tresnaren
+irteera erabilgarriagoa da Cinelerra arazteko ikurrekin konpilatu denean.
+Irakurri See section <a href="cinelerra_cv_manual_eu_2.html#SEC13">Arazketako ikurrekin konpilatzea</a> atala konpilazioaren xehetasunak ezagutzeko.
+</p>
+<p>Gainera, Cinelerra CV-ek fitxategi zehatz bat kargatzean errorea gertatzen bada,
+laguntza handikoa izango da fitxategi horren zati txiki bat bidaltzen baduzu.
+Honela, erroreak finkatzen aritzen diren bolondresek fitxategi horrekin probak egin
+eta arazoa non dagoen errazago aurkituko dute.
+</p>
+<hr size="6">
+<a name="Buz-kontrolatzailea-krastatuta"></a>
+<a name="SEC297"></a>
+<h2 class="section"> 21.2 Buz kontrolatzailea krastatuta </h2>
+
+<p>Aurrenik, ZORAN-en kapturaren taula atzitu behar da <b>Buz</b> bideo-kontrolatzailea
+erabiliz <b>Ezarpenak -&gt; Hobespenak -&gt; Grabazioa</b> eta <b>Hobespenak -&gt; Grabazioa</b> menuan.
+Errendimendua hobetzeko trikimailu batzuk azaldu dira See section <a href="cinelerra_cv_manual_eu_20.html#SEC280">Errendimendua hobetzea</a> atalean.
+</p>
+<p>Behin doitutakoan, Buz kontrolatzailea blokeatu egin ohi da grabazioaren buffer kopurua
+handiegia bada. Ziurtatu <b>Hobespenak -&gt; Grabazioa -&gt; Gailuaren bufferreko fotogramak</b>
+eremuak 10 balioa baino txikiagoa edukitzeaz.
+</p>
+<hr size="6">
+<a name="Sarrerako-eta-irteerako-puntuak-ezin-arrastatu"></a>
+<a name="SEC298"></a>
+<h2 class="section"> 21.3 Sarrerako eta irteerako puntuak ezin arrastatu </h2>
+
+<p>Batzuetan bi klip edo filmaren zati bata bestearengandik oso gertu egongo dira.
+Arrastatzea nahi den muntaketaren muga aurreko mugatik oso gertu egon daiteke.
+Arrastatzen saiatzean, aurrekoa edo hurrengoa arrastatu ohi da. Arazo hau gainditzeko
+denbora-lerroaren zoomaren maila handiagotu.
+</p>
+<hr size="6">
+<a name="Blokeatu-da-fitxategiak-kargatzean"></a>
+<a name="SEC299"></a>
+<h2 class="section"> 21.4 Blokeatu da fitxategiak kargatzean </h2>
+
+<p>Fitxategi bat kargatzean Cinelerra blokeatzeko arrazoi nagusiena fitxategia sortzeko
+erabilitako kodeka Cinelerra-k ez duela onartzen izan daiteke. Beste arrazoi bat
+Cinelerra koadro txikiak sortzen ari dela baliabideen leihoan izan daiteke.
+Irudi kopuru handia kargatzen ari bada, programak irudi bakoitza deskonprimitu behar
+du dagokion koadro txikia sortzeko. <b>Ezarpenak -&gt; Hobespenak -&gt; Interfazea</b> menuan
+desgaitu <b>Erabili koadro txikiak baliabideen leihoan</b> aukera arazo hau saihesteko.
+</p>
+<hr size="6">
+<a name="Sinkronizazioaren-galera-grabatzean"></a>
+<a name="SEC300"></a>
+<h2 class="section"> 21.5 Sinkronizazioaren galera grabatzean </h2>
+
+<p>Grabazioko fotogramen kapturaren abiadura bideoaren jatorrizko fotograma-tasa baino
+askoz ere motelagoa bada, denbora igarotzean grabazioaren bufferrean pilatzen joango
+dira, eta piskanaka audioaren eta bideoaren arteko sinkronizazioa galtzen joango da.
+Arazo hau saihesteko, gutxiagotu <b>Gailuaren bufferreko fotogramak</b> eremuko
+kopurua (<b>Hobespenak -&gt; Grabazioa</b> elkarrizketa-koadroan), honela soberan dauden
+fotogramak baztertu egingo dira bufferran gorde beharrean.
+</p>
+<hr size="6">
+<a name="Gammaren-ostean-lausoak-ez-du-funtzionatzen"></a>
+<a name="SEC301"></a>
+<h2 class="section"> 21.6 Gammaren ostean lausoak ez du funtzionatzen </h2>
+
+<p>Bi efektuek matematikako kalkuluak burutzeko liburutegi berdina erabiltzen dute.
+Gamma efektuak <i>pow</i> funtzioa erabiltzen du zenbaki bat berretzeko, lausoa
+efektuak berriaz <i>exp</i> funtzioa erabiltzen du berreketak kalkulatzeko.
+Arrazoi bitxi bat dela eta, pow funtzioa erabiltzean exp funtzioak funtzionatzeari
+utzi egiten dio. Cinelerra-k erabiltzen duen liburutegi matematikoaren arazo
+esklusiboa da, eta Cinelerra-k ez dauka honekin inolako ardurarik. Arazo
+hau gainditzeko, egokiena Gamma efektua Lausotu efektuaren atzetik erabiltzea da.
+</p>
+<hr size="6">
+<a name="Hautapena-kopiatzeak_002fitsasteak-ez-du-funtzionatzen"></a>
+<a name="SEC302"></a>
+<h2 class="section"> 21.7 Hautapena kopiatzeak/itsasteak ez du funtzionatzen </h2>
+
+<p>KDE mahaigainean Klipper aplikazioa erabiltzen ari bazara, desgaitu ezazu edo
+saguaren eskuineko botoiarekin ataza-barrako bere ikonoan klik egin eta hautatu
+<b>Konfiguratu Klipper</b>, eta ziurtatu <b>Saihestu arbela hutsa</b> ez dagoela
+hautatuta.
+</p>
+<hr size="6">
+<a name="Cinelerra-askotan-kraskatzen-da"></a>
+<a name="SEC303"></a>
+<h2 class="section"> 21.8 Cinelerra askotan kraskatzen da </h2>
+
+<p>Instalazio berri bat landu. Ziurtatu aurreko instalazioko liburutegiak ez daudela
+instalatuta. Ezabatu  <tt>`$HOME/.bcast/'</tt>  direktorioa ere. <br>
+<code>rm -f /usr/local/lib/libguicast*</code> <br>
+<code>rm -f /usr/lib/libguicast*</code> <br>
+<code>rm -f /usr/local/lib/libquicktimehv*</code> <br>
+<code>rm -f /usr/lib/libquicktimehv*</code> <br>
+<code>rm -f /usr/local/lib/libmpeg3hv*</code> <br>
+<code>rm -f /usr/lib/libmpeg3hv*</code>
+</p>
+<hr size="6">
+<a name="Ez-da-Blond-gaia-aurkitzen"></a>
+<a name="SEC304"></a>
+<h2 class="section"> 21.9 Ez da Blond gaia aurkitzen </h2>
+
+<p>Honako errorea agertzen bada: <code>Aborted, MWindow::init_theme:
+Theme Blond not found</code>, orduan:
+</p><ul>
+<li> Begiratu <tt>`defaulttheme.*'</tt> fitxategia <tt>`/usr/lib/cinelerra'</tt>
+edo <tt>`/usr/local/lib/cinelerra'</tt> direktorioan dagoela. Ez bada existitzen,
+plugin-ak berriro instalatu beharko dituzu.
+</li><li> Saiatu <tt>`$HOME/.bcast/'</tt> direktorioa ezabatzen.
+</li><li> Begiratu <tt>`$HOME/.bcast/Cinelerra_rc'</tt> fitxategian eta bilatu THEME, hor 
+'=&gt; THEME Blond' agertu beharko luke.
+</li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC295" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_22.html#SEC305" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

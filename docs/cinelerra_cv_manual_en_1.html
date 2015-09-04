@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 1 Introduction</title>
+
+<meta name="description" content="Cinelerra CV Manual: 1 Introduction">
+<meta name="keywords" content="Cinelerra CV Manual: 1 Introduction">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_2.html#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Introduction"></a>
+<a name="Introduction-1"></a>
+<h1 class="chapter">1 Introduction</h1>
+<a name="index-Introduction"></a>
+
+
+<hr>
+<a name="About-Cinelerra"></a>
+<a name="About-Cinelerra-1"></a>
+<h2 class="section">1.1 About Cinelerra</h2>
+<a name="index-About-Cinelerra"></a>
+<a name="index-Cinelerra_002c-about"></a>
+
+<p>For years, some people have wanted a way to edit their audio and video in one
+place as fluidly as writing text.  Cinelerra tries to be a single location for
+all your audio and video editing needs.  All the recording, editing, and
+playback are handled here.  It can be used as an audio player.  It can be used
+to record audio or video.  It can even be used as a photo retoucher.
+</p>
+<p>There are two types of moviegoers: producers who create new content and revisit it
+for further refinement, and consumers who
+want to acquire the content and watch it.  Cinelerra is not intended for
+consumers.  Cinelerra has many features for uncompressed content, high
+resolution processing, and compositing.  Producers need these features in order to 
+retouch many generations of footage, which makes Cinelerra very complex.  
+Consumers should consider other tools such as Avidemux (<a href="http://www.avidemux.org/">http://www.avidemux.org/</a>), 
+Kino (<a href="http://kinodv.org/">http://kinodv.org/</a>) or Kdenlive (<a href="http://kdenlive.org/">http://kdenlive.org/</a>).
+</p>
+<p>Quote from Miro&rsquo;s Wiki (<a href="http://www.mitvwiki.org/Cinelerra">http://www.mitvwiki.org/Cinelerra</a>):<br>
+&quot;The key difference between Cinelerra and many of the commercial editors is that 
+Cinelerra hides much less from the user, exposing much of the inner workings to 
+direct interaction. This can be harder to use, but does make it tremendously powerful,
+and for some operations blistering fast.&quot;
+</p>
+<hr>
+<a name="The-two-versions-of-Cinelerra"></a>
+<a name="The-two-versions-of-Cinelerra-1"></a>
+<h2 class="section">1.2 The two versions of Cinelerra</h2>
+<a name="index-Cinelerra_002c-the-two-versions-of"></a>
+
+<p>There are two branches of Cinelerra.  One can be found at
+<a href="http://www.heroinewarrior.com">http://www.heroinewarrior.com</a> and the other at
+<a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>.  This documentation is focused on
+<b>Cinelerra-CV (Community Version)</b>.
+</p>
+<p>The official Cinelerra source code is developed &quot;upstream&quot; by Heroine Virtual, Ltd (HV).
+HV shares its code base with a community version of Cinelerra (Cinelerra-CV), but does not
+actively participate with the community of developers responsible for Cinelerra-CV.
+HV likes to work on its own copy
+of Cinelerra, releasing code on a periodic basis every 6 months or
+so.
+</p>
+<p>Cinelerra-CV was founded by developers who wanted to extend the functionality
+and fix bugs inherent in the HV code base.  They decided to develop Cinelerra
+in a community fashion and not create a separate fork of the original HV code.
+So, the Cinelerra CV code is very similar to the official release.  CV coders
+apply bug fixes (<a href="http://bugs.cinelerra-cv.org">http://bugs.cinelerra-cv.org</a>), enhancements to the SVN and
+compliance fixes.  Programmers occasionally send patches upstream.  In this
+way, Cinelerra CV has a number of features that the official version does not.
+</p>
+<p>Unlike other programs, the HV release can not be described as &quot;stable&quot;.  After
+HV&rsquo;s Cinelerra is released, there are often bugs or unusable new features.
+When there is a new release, a CV member (j6t) merges HV&rsquo;s code with Cinelerra
+CV code, taking the enhancements from HV and reformatting the CV code (white
+spaces, function naming, directory naming) to be more similar to HV&rsquo;s with
+slight changes to implementations.  After the merge, the latest Cinelerra CV
+release is a little unstable as users find bugs.  Time permitting, the CV
+programmers will address as many of these bugs as possible.  In this way,
+Cinelerra CV can be seen as the community&rsquo;s attempt to stabilize HV&rsquo;s release.
+</p>
+<p>As mentioned, the community adds new enhancements to the HV source.  Members
+will comment on each other&rsquo;s implementations in order to create a more fully
+functional and stable product.  Occasionally, HV will give feedback on
+implementations that the members of the CV submit to it.  However, not all of
+the enhancements that the community create make it upstream; for example, YUV
+pipe rendering.
+</p>
+<p>Given the above discussion, obtaining the SVN just before a merge will
+generally be more stable than a post-merge CV version.  Be aware that existing
+project description files, or Edit Decision Lists (discussed below), may not be
+compatible with the newly merged CV version.  With any version of Cinelerra,
+the task of finding bugs is relatively easy.  However, clearly and concisely
+documenting these bugs for the community that fixes them is a task that we ask
+of all users of the software.  The community is very responsive.  Please help
+them by creating well-formed bug reports.  You may join our mailing list at
+<a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>.
+</p>
+<hr>
+<a name="About-this-manual"></a>
+<a name="About-this-manual-1"></a>
+<h2 class="section">1.3 About this manual</h2>
+<a name="index-Manual_002c-about-this"></a>
+
+<p>This manual edition is 1.59.EN, for Cinelerra CV version
+2.2.  You may redistribute it and/or modify it under the terms of
+the GNU General Public License, as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+</p>
+<p>This manual originates from &quot;Secrets of Cinelerra&quot;, an excellent primer written
+by Adam&nbsp;<small>WILLIAMS</small> from <small>HEROINE&nbsp;VIRTUAL&nbsp;LTD</small>.  In 2003 Alex
+<small>FERRER</small> created a Wiki based on that manual and added many screenshots and 
+topic descriptions.  At that time, Cinelerra CV still did not have its own manual 
+and information regarding the Community Version of Cinelerra was scattered across 
+the Internet (mailing-list, IRC, websites, wiki, etc).  In 2006, Nicolas <small>MAUFRAIS</small>
+combined the original &quot;Secrets of Cinelerra&quot; with the contents from Alex <small>FERRER</small>&rsquo;s 
+Wiki into a unified document.
+</p>
+<p>Cinelerra-CV documentation maintainers:<br>
+English: Nicolas <small>MAUFRAIS</small> (coordinator), Raffaella <small>TRANIELLO</small>
+(apprentice sorcerer)<br>
+</p>
+<p>Manual translators:
+French: Jean-Luc <small>COULON</small><br>
+Brazilian Portuguese: Flavio <small>SOARES</small> (maintainer), Willie <small>MARCEL</small><br>
+Spanish: Alberto <small>RAMALLO</small>, Gustavo I&ntilde;iguez <small>GOYA</small> (chapter 17 -
+Keyframes)<br>
+Basque: I&ntilde;aki Larra&ntilde;aga <small>MURGOITIO</small> &quot;Dooteo&quot;.
+</p>
+
+<p>Other contributors: Alexandre <small>BOURGET</small>, Kevin <small>BROSIUS</small>, Carlos <small>DAVILA</small>, 
+Cillian <small>DE ROISTE</small>, Rafael <small>DINIZ</small>, Pierre <small>DUMUID</small>, Mike <small>EDWARDS</small>, 
+Martin <small>ELLISON</small>, Graham <small>EVANS</small>, Alex <small>FERRER</small>, Scott <small>FRASE</small>, Joe
+<small>FRIEDRICHSEN</small>, gour, Gus Gus, Terje <small>HANSSEN</small>, Mikko <small>HUHTALA</small>, Ben <small>JORDEN</small>, 
+Nathan <small>KIDD</small>, Marcin <small>KOSTUR</small>, Joseph <small>L.</small>, David <small>MCNAB</small>, Valentina <small>MESSERI</small>, 
+Sean <small>PAPPALARDO</small>, Paolo <small>RAMPINO</small>, Herman <small>ROBAK</small>, Dana <small>ROGERS</small>, Jim <small>SCOTT</small>, Andraz <small>TORI</small>, 
+Raffaella <small>TRANIELLO</small>, Hermann <small>VOSSELER</small>, Norval <small>WATSON</small>.
+</p>
+<p>Thanks to the GNU project team, and particularly to Karl <small>BERRY</small>, maintainer
+of GNU Texinfo, for the precious help he gave us during the elaboration of this
+manual.
+</p>
+<p>The sources of the manuals are Texinfo files. They are in the same SVN repository 
+as Cinelerra&rsquo;s source code (hvirtual/doc folder). They can be converted in many 
+formats. The doc/README_en file contains instructions for building the manual in 
+PDF, HTML (single page) HTML (one page per chapter, in a folder), plain TXT, TXT 
+in DokuWiki sintax (one file per chapter, in a folder), Docbook.
+</p>
+<p>You can participate on editing this manual by making changes in the
+Cinelerra-CV wiki:<br>
+<a href="http://cinelerra-cv.org/docs/wiki/doku.php">http://cinelerra-cv.org/docs/wiki/doku.php</a>
+</p>
+<p>If you would like to translate this manual in your language, see the doc/TRANSLATIONS 
+file and contact the Cinelerra-CV Community.
+</p>
+
+<hr>
+<a name="Getting-help"></a>
+<a name="Getting-help-1"></a>
+<h2 class="section">1.4 Getting help</h2>
+<a name="index-Getting-help"></a>
+<a name="index-Help_002c-getting"></a>
+
+<p>Help can be found at:
+</p><ul>
+<li> <b>IRC channel:</b> #cinelerra on Freenode
+</li><li> <b>Mailing list:</b> <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra</a>
+</li><li> <b>Cinelerra-CV website:</b> <a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>
+</li></ul>
+
+<hr>
+<a name="Tutorials"></a>
+<a name="Tutorials-1"></a>
+<h2 class="section">1.5 Tutorials</h2>
+<a name="index-Tutorials"></a>
+
+<p>Some Cinelerra tutorials are available on the internet:
+</p><ul>
+<li> <b>Cinelerra Tutorial - Getting Started</b>, by Rob <small>FISHER</small><br>
+<a href="http://www.robfisher.net/video/cinelerra1.html">http://www.robfisher.net/video/cinelerra1.html</a>
+</li><li> <b>Cinelerra video tutorials</b>, by The Source - tutorials (talk and screencast) 
+inside The Source Show<br>
+<a href="http://www.thesourceshow.org/node/11">http://www.thesourceshow.org/node/11</a><br>
+#1 is in Episode 6 &quot;The Return Of The Pixel&quot; from min 45 to min 60 (Introduction 
+  to Cinelerra and non linear editing, the 4 windows interface, project attributes, 
+  loading files).<br>
+#2 is in Episode 1 &quot;The Filesystem Menace&quot; from min 32 to min 54 (Arming tracks, 
+  sample zoom, selection boxes, two screen editing, cut and paste editing, adding 
+  and moving tracks, drag and drop editing, trimming, transitions). <br>
+#3 is in Episode 2 &quot;Attack Of The Elephants (Dream)&quot; from min 45 to 1:12 (Keyframes, 
+  camera and projector, masks, titles, effects). 
+</li><li> <b>Edicion de video bajo GNU/Linux (Cinelerra)</b>, in Spanish, by Gustavo 
+I&ntilde;iguez <small>GOYA</small><br>
+<a href="http://kutxa.homeunix.org/cinelerra">http://kutxa.homeunix.org/cinelerra</a>
+</li><li> <b>Guide d&rsquo;utilisation de Cinelerra</b>, in French<br>
+<a href="http://www.funix.org/fr/linux/cinelerra.htm">http://www.funix.org/fr/linux/cinelerra.htm</a>
+</li><li> <b>Faire un montage video</b> French tutorial for beginners on Cinelerra HV,
+by Laurent <small>BELLEGARDE</small><br>
+<a href="http://laurent.bellegarde.free.fr/lprod/tutoriels/tutoriel_cinelerra_niv1_debutant.pdf">http://laurent.bellegarde.free.fr/lprod/tutoriels/tutoriel_cinelerra_niv1_debutant.pdf</a>
+</li><li> <b>Capturando e editando video usando Software Livre</b>, in Portuguese, by Rafael 
+<small>DINIZ</small><br>
+<a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">https://docs.indymedia.org/view/Sysadmin/Cinelerra</a>
+</li><li> <b>Tutorial Cinelerra</b>, in Portuguese, by Leo <small>GERMANI</small><br>
+<a href="http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">http://www.estudiolivre.org/tiki-index.php?page=Cinelerra</a>
+</li><li> <b>Cinelerra is very easy</b>, Introduction to Cinelerra, for beginners, by
+Paolo <small>RAMPINO</small> <br>
+<a href="http://project.akirad.net/node/12">http://project.akirad.net/node/12</a>
+</li></ul>
+
+<hr>
+<a name="HOWTOs"></a>
+<a name="HOWTOs-1"></a>
+<h2 class="section">1.6 HOWTOs</h2>
+<a name="index-HOWTOs"></a>
+
+<p>Some HOWTOs for specific needs are available on the internet:
+</p><ul>
+<li> <b>Beginner&rsquo;s Guide to Exporting Video from Cinelerra</b>, by Scott <small>FRASE</small><br>
+<a href="http://content.serveftp.net/video/renderTest/guideToCinExport.html">http://content.serveftp.net/video/renderTest/guideToCinExport.html</a>
+</li><li> <b>Capturing desktop screens in Cinelerra</b>, screencast by Scott <small>FRASE</small><br>
+<a href="http://www.youtube.com/watch?v=MhaOgNQ0Bbc">http://www.youtube.com/watch?v=MhaOgNQ0Bbc</a>
+</li><li> <b>HOWTO use the Chromakey (HSV) plugin</b>, by Jerome <small>CORNET</small><br>
+<a href="http://jcornet.free.fr/linux/chromakey.html">http://jcornet.free.fr/linux/chromakey.html</a>
+</li><li> <b>HOWTO make professional looking Scrolled Credits in Cinelerra</b>, by
+David <small>MCNAB</small><br>
+<a href="http://www.freenet.org.nz/misc/cintitles/">http://www.freenet.org.nz/misc/cintitles/</a>
+</li><li> <b>Crear títulos diferentes con Cinelerra</b> in Spanish, by Gustavo 
+I&ntilde;iguez <small>GOYA</small> - how to add effects to titles. With downloadable sample
+projects.<br> 
+<a href="http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra/#more-246">http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra/#more-246</a>
+</li><li> <b>SimAV&rsquo;s HOWTOs</b>, by Simeon <small>VOLKEL</small> - How to create a picture in picture 
+effect, How to create overlays, How to change theme.<br>
+<a href="http://g-raffa.eu/SimAV/">http://g-raffa.eu/SimAV/</a>
+</li><li> <b>Tips for Transcoding Cinelerra Compatible Video with FFmpeg,
+MEncoder</b>, by Alexander <small>GRUNDNER</small> <br>
+<a href="http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder">http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder</a>
+</li><li> <b>FFMPEG compatibility</b> - HOWTO produce videos that can be played in common 
+proprietary multimedia players<br>
+<a href="http://ffmpeg.mplayerhq.hu/compat.html">http://ffmpeg.mplayerhq.hu/compat.html</a>
+</li></ul>
+
+<hr>
+<a name="Miscellaneous-links"></a>
+<a name="Miscellaneous-links-1"></a>
+<h2 class="section">1.7 Miscellaneous links</h2>
+<a name="index-Miscellaneous-links"></a>
+
+<p>Miscellaneous links:
+</p><ul>
+<li> <b>Interlacing</b><br>
+<a href="http://neuron2.net/LVG/interlacing.html">http://neuron2.net/LVG/interlacing.html</a>
+</li><li> <b>What is Deinterlacing? Facts, solutions, examples</b><br>
+<a href="http://www.100fps.com">http://www.100fps.com</a>
+</li><li> <b>MPEG-2 FAQ</b><br>
+<a href="http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html">http://bmrc.berkeley.edu/frame/research/mpeg/mpeg2faq.html</a>
+</li><li> <b>&quot;Exporting edited HD content back to the camcorder&quot; (HDV related)</b><br>
+<a href="http://dvinfo.net/conf/showthread.php?t=76674">http://dvinfo.net/conf/showthread.php?t=76674</a>
+</li><li> <b>A Quick Guide to Digital Video Resolution and Aspect Ratio Conversions</b><br>
+<a href="http://lipas.uwasa.fi/~f76998/video/conversion">http://lipas.uwasa.fi/~f76998/video/conversion</a>
+</li><li> <b>Colour specification and image coding</b><br>
+<a href="http://www.poynton.com/notes/colour_and_gamma/ColorFAQ.html">http://www.poynton.com/notes/colour_and_gamma/ColorFAQ.html</a>
+</li><li> <b>DVD Video</b> - about DVD structure <br>
+<a href="http://wlug.org.nz/DVDVideo">http://wlug.org.nz/DVDVideo</a>
+</li><li> <b>Creating DVD videos on Linux and Unix</b> - an excellent high level overview of 
+DVD authoring in general on Linux <br>
+<a href="http://womble.decadent.org.uk/talks/dvd-ukuug06/dvd-talk-ukuug06-paper.html">http://womble.decadent.org.uk/talks/dvd-ukuug06/dvd-talk-ukuug06-paper.html</a>
+</li><li> <b>lprod - Libre Production</b> a French Wiki full of resources for Open
+Source video editing, especially for Cinelerra HV (among them an Ubuntu package)<br>
+<a href="http://fr.lprod.org/wiki/doku.php">http://fr.lprod.org/wiki/doku.php</a>
+</li><li> <b>Cinelerra CV Glossary</b> for newbies<br>
+<a href="http://g-raffa.eu/Cinelerra/cin_glossary.html">http://g-raffa.eu/Cinelerra/cin_glossary.html</a>
+</li></ul>
+
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Introduction" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_2.html#Installation" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

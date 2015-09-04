@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual do Cinelerra CV: 13. Barra de tempo</title>
+
+<meta name="description" content="Manual do Cinelerra CV: 13. Barra de tempo">
+<meta name="keywords" content="Manual do Cinelerra CV: 13. Barra de tempo">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_12.html#SEC147" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_14.html#SEC149" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Barra-de-tempo"></a>
+<a name="SEC148"></a>
+<h1 class="chapter"> 13. Barra de tempo </h1>
+
+<p>As funções de navegação das janelas de Visualização e Composição comportam-se de maneira muito similar. Cada uma possui uma barra de tempo e um slider abaixo da saída de vídeo. Ambos são críticos para a navegação.
+</p>
+<p align="center"> <img src=".././manual_images_en/timebarslider.png" alt="manual_images_en/timebarslider">
+</p>
+<a name="IDX113"></a>
+<p>A barra de tempo representa todo o tempo coberto pelo programa. Quando você define marcadores e pontos de entrada/saída, eles também aparecem nela. Finalmente, a barra de tempo define uma região conhecida como a <b>região de previsão</b>.
+</p>
+<p>A <b>região de previsão</b> é a região da Linha do Tempo que é afetada pelo slider. O slider cobre apenas o tempo coberto pela região de previsão. Ao usar uma região de previsão dentro do programa inteiro e usar o slider dentro da região de previsão, você pode buscar rápida e precisamente no Compositor e no Visualizador.
+</p>
+<p>Quando você substitui o projeto atual por um arquivo, a região de previsão automaticamente se redimensiona para cobrir todo o arquivo. Quando você insere novos dados ou muda o tamanho do projeto atual, a região de previsão fica do mesmo tamanho ou encolhe. Portanto, você precisará redimensionar a região de previsão.
+</p>
+<p>Carregue um arquivo e então deslize por ele usando o slider do Compositor. O ponto de inserção na janela principal segue o Compositor. Mova o apontador por sobre a barra de tempo do Compositor até que ele se torne um apontador de redimensionamento à esquerda. Clique nele e arraste-o para a direita. A região de previsão deve ter mudado e o slider redimensionado proporcionalmente.
+</p>
+<p>Vá para a direita da barra de tempo até que um apontador de redimensionamento à direita apareça. Arraste-o para a esquerda de modo que a região de previsão encolha.
+</p>
+<p>Vá para o centro da região de previsão na barra de tempo e arraste-a em volta para se convencer de que ela pode ser movida.
+</p>
+<p><b>Nota:</b> Quando você insere coisas ou muda o tamanho do projeto atual, a região de previsão fica do mesmo tamanho e encolhe. Portanto, você precisa redimensioná-la.
+</p>
+<p align="center"> <img src=".././manual_images_intl/previewregion.png" alt="manual_images_intl/previewregion">
+</p><p align="center"> <b>Região de previsão no compositor</b>
+</p>
+<p>Se você for para o slider e deslizá-lo por sobre a região de previsão diminuída, você verá o que slider afeta apenas a região de previsão. Abarra de tempo e o slider na janela de visualização funcionam exatamente do mesmo modo.
+</p>
+<p>Marcadores e pontos de entrada/saída são totalmente suportados pelo Visualizador e pelo Compositor. A única diferença entre o visualizador e o compositor é que o compositor reflete o estado do programa enquanto o visualizador reflete o estado de um recorte mas não do programa.
+</p>
+<p>Quando você pressiona o <b>botão de marcador</b> no Compositor, o marcador aparece tanto na barra de tempo do compositor quanto na barra de tempo do programa.
+</p>
+<p>Quando você seleciona um marcador ou ponto de entrada/saída no Compositor, o ponto de inserção na janela de Programa pula para aquela posição. Para &quot;folhear&quot; seu vídeo e então mover o ponto de inserção para a parte visível da linha do tempo, use o botão <b>Ir para manual</b> do compositor.
+</p>
+<p align="center"> <img src=".././manual_images_intl/viewer_labels.png" alt="manual_images_intl/viewer_labels">
+</p><p align="center"> <b>Marcadores e pontos de entrada/saída no visor</b>.
+</p>
+<p>Nas janelas de Visualização e Composição, marcadores e pontos de entrada/saída são dispostos na barra de tempo. Ao invés de exibir apenas uma região do programa, a barra de tempo exibe todo o programa aqui.
+</p>
+<p>Como a janela de programa, o Compositor possui a função de aproximação. Primeiro, o menu que se abre à base da janela de Composição possui um número de opções de aproximação. Quando marcado para <b>Auto</b>, o vídeo é aproximado para se ajustar o mais próximo possível ao tamanho da Janela de Composição. Quando marcado para qualquer outra porcentagem, o vídeo é aproximado por uma razão de 2 e barras de rolagem podem ser usadas para navegarem pela saída de vídeo. Quando o vídeo for aproximado de modo que fique maior que o tamanho da janela, você pode usar tanto as barras de rolagem quanto o <b>botão do meio do mouse</b> para navegar pelo vídeo. Isso é exatamente como o programa Gimp faz.
+</p>
+<p>Além disso, o botão de aproximação <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> faz com que a janela de Composição entre no modo de aproximação. No modo de aproximação, clicar nas aproximações da saída de vídeo enquanto faz um <b>clicar-com-o-ctrl</b> na saída de vídeo faz o vídeo se afastar. Se você possui uma rodinha no mouse, rodá-la aproxima ou afasta o vídeo também.
+</p>
+<p>Aproximar ou afastar com a ferramenta de aproximação não muda a saída renderizada. Esta função serve apenas para observar detalhes no vídeo ou para redimensioná-lo para caber na área de trabalho.
+</p>
+<p>Reproduzir vídeo no Compositor quando aproximado para qualquer tamanho que não 100% (o tamanho original), faz com que o Cinelerra use mais passos de processamento. Isso pode afetar a performance em sistemas mais lentos.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_12.html#SEC147" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_14.html#SEC149" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[&Iacute;ndice]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

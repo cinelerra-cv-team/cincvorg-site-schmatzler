@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 2. Installation</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 2. Installation">
+<meta name="keywords" content="Manuel de Cinelerra CV: 2. Installation">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_1.html#SEC1" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_3.html#SEC26" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Installation"></a>
+<a name="SEC8"></a>
+<h1 class="chapter"> 2. Installation </h1>
+
+
+<p>Vous trouverez ci-dessous le contenu général des paquets de Cinelerra.
+</p>
+<ul>
+<li> <b>Traduction vers les langues étrangères</b> - on les trouve dans
+<tt>`/usr/share/locale'</tt>
+</li><li> <b>Exécutable Cinelerra</b> - on le trouve dans <tt>`/usr/bin'</tt>
+</li><li> <b>Greffons Cinelerra</b> - on les trouve dans <tt>`/usr/lib/cinelerra'</tt>
+pour les systèmes 32 bits, et dans <tt>`/usr/lib64/cinelerra'</tt> pour les
+systèmes 64 bits.
+<a name="IDX1"></a>
+<a name="IDX2"></a>
+</li><li> <b>soundtest</b> - utilitaire pour déterminer la taille de tampon de la
+carte-son.
+<a name="IDX3"></a>
+</li><li> <b>mplexlo</b> - multiplexage des flux MPEG élémentaires sans conformité
+avec les normes mais plus efficacement.
+<a name="IDX4"></a>
+</li><li> <b>mpeg3cat</b> - utilitaire pour copier un fichier MPEG à partir d'une
+certaine norme vers la sortie standard (stdout).
+<a name="IDX5"></a>
+<a name="IDX6"></a>
+</li><li> <b>mpeg3toc, mpeg3cat, mpeg3dump</b> - utilitaires pour indexer et lire des
+fichiers MPEG
+<a name="IDX7"></a>
+</li><li> <b>mpeg3peek</b> - utilitaire pour afficher le décalage en octets d'une
+image dans un flux MPEG.
+</li></ul>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC9">2.1 Prérequis matériels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC10">2.2 Prérequis logiciels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC11">2.3 Compiler Cinelerra CV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC14">2.4 Lancer Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC15">2.5 Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC18">2.6 Ubuntu</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC19">2.7 Gentoo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC20">2.8 Live CD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC21">2.9 Fedora</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC22">2.10 Mandriva</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC23">2.11 Slackware</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC24">2.12 Suse</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC25">2.13 MacOSX</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Pr_00e9requis-mat_00e9riels"></a>
+<a name="SEC9"></a>
+<h2 class="section"> 2.1 Prérequis matériels </h2>
+
+<p>Cinelerra est exigeant en terme de ressources matériel, puisque les demandes de
+lecture, de décodage, de lecture de la vidéo peuvent être
+assez pénalisantes et consommatrices de ressources.  En conséquence de quoi les performances et donc
+la facilité d'utilisation de Cinelerra sont directement liées au format vidéo utilisé (SVCD/DV/HDV/HD/etc), à la puissance du processeur,
+aux vitesses des bus d'entrées/sorties, à la capacité mémoire de votre système et l'architecture de son bus vidéo.
+Ainsi, un système peu puissant sera suffisant pour les utilisateurs travaillant sur de l'audio uniquement ou bien sur
+des vidéos en basse résolution.  Cependant, le même système pourra s'avérer insuffisant lors de la lecture
+de vidéos en plus haute résolution, comme la vidéo DV.  La présence d'effets et de plusieurs pistes audio
+vont accentuer ces problèmes.  En prenant en compte ces contraintes, voici quelques suggestions pour faire
+fonctionner Cinelerra :
+</p>
+<ul>
+<li> <b>Vitesse CPU</b><br>
+Une vitesse de processeur d'au moins 500 MHz, toute valeur inférieure sera
+inutilisable.  Les processeurs à double coeurs et les systèmes multi-processeurs
+améliorent sensiblement les performances de Cinelerra.
+</li><li> <b>Memoire</b><br>
+Lorsqu'on travaille avec de la vidéo, une grande quantité de mémoire
+disponsible peut aider à améliorer la vitesse en évitant les échanges non
+nécessaires avec les disques et en rendant les matériaux toujours disponibles.
+Vous devez disposer d'au moins 256 Mégaoctets de mémoire.  Afin de vraiment
+utiliser Cinelerra avec des projets plus importants et des résolutions plus
+élevées, un espace mémoire beaucoup plus important (&gt; 1 Go) est recommandé.
+</li><li> <b>Espace disque</b><br>
+L'édition vidéo peut être à l'origine de fréquents accès aux disques durs.  La
+demande en espace disque dépend de vos besoins particuliers en montage vidéo.
+Si vous pensez produire de longues vidéos dans des formats non compressés ou
+bien en haute résolution, vous devriez utiliser un disque dur de grande
+capacité (&gt;200Go) et rapide (&lt;10ms).  Par exemple le format DV utilise environ
+3.5 Megs par seconde, soit 12 Go par heure.  Pour des projets plus petits 1Go
+peut suffire.  Le RAID0, RAID 1+0 ou RAID5 améliorer aussi la vitesse de
+lecture.
+</li><li> <b>Adaptateurs vidéo</b><br>
+Depuis la version 2.1, Cinelerra tire profit de l'accélération matérielle
+OpenGL.  Assurez-vous que la carte vidéo que vous utilisez puisse gérer OpenGL
+2.0 pour bénéficier de cette accélération.  Les cartes Nvidia série 7 (par
+exemple 7600GS) sont connues pour bien fonctionner.  Malheureusement, les
+pilotes ATI pour Linux ne supportent pas complètement l'OpenGL 2.0.  Si vous
+êtes intéressé dans la production d'un signal vidéo composite à envoyer
+directement vers un téléviseur ou un magnétoscope, assurez-vous que la carte
+vidéo que vous avez choisi possède cette fonctionnalité.
+</li><li> <b>Moniteurs multiples</b><br>
+Vous pouvez utiliser la fonctionnalité Xinerama de XFree86 afin de travailler
+avec plusieurs moniteurs.  Cette fonctionnalité peut être une manière très
+efficace d'améliorer votre productivité.
+</li><li> <b>Sortie TV</b><br>
+Si votre adaptateur dispose d'une sortie TV, y connecter un téléviseur ou un
+moniteur S-Vidéo est une bonne manière de visualiser votre matériau tel qu'il
+le sera sur un écran de télévision.
+</li><li> <b>Cartes d'acquisition vidéo</b><br>
+Si vous avez un caméscope analogique, ou si vous voulez faire l'acquisition de
+vidéo depuis un magnétoscope vraiment ancien, il vous faut disposer d'une carte
+d'acquisition.  Les cartes d'acquisition vidéo sont gérées sous Cinelerra au
+travers de Video4Linux.
+</li><li> <b>Firewire</b><br>
+Le firewire est le moyen le plus rapide de télécharger votre matériau dans
+votre système.  A moins que vous ne chargiez votre matériau depuis un CD, d'un
+autre format pré-capturé ou bien utilisiez un système d'acquisition vidéo
+analogique, il vous faudra disposer du firewire sur votre système.
+</li><li> <b>Caméscopes DV</b><br>
+Il existe une grande variété de caméscopes DV pouvant être utilisés avec
+Cinelerra.  La plupart des caméscopes ayant une connexion firewire
+fonctionnent.  Soyiez sûr de définir correctement les paramètres du système
+d'acquisition vidéo afin qu'il corresponde à votre caméscope.
+<a href="http://www.linux1394.org">http://www.linux1394.org</a> pour une liste exhaustive des camescopes
+supportés.
+</li></ul>
+
+<hr size="6">
+<a name="Pr_00e9requis-logiciels"></a>
+<a name="SEC10"></a>
+<h2 class="section"> 2.2 Prérequis logiciels </h2>
+
+<p>Afin de pouvoir installer Cinelerra, vous devriez avoir une version récente de
+Linux avec XFree86 et un logiciel de gestion audio fonctionnant correctement.
+Les bibliothèques suivantes devraient aussi être installées sur votre système
+(liste non exhaustive) :
+</p><ul>
+<li> a52dec
+</li><li> dv
+</li><li> faac
+</li><li> ffmpeg
+</li><li> fftw
+</li><li> lame
+</li><li> libavc1394
+</li><li> libfaad2
+</li><li> libraw1394
+</li><li> mjpegtools
+</li><li> OpenEXR
+</li><li> theora
+</li><li> x264
+</li></ul>
+
+<hr size="6">
+<a name="Compiler-Cinelerra-CV"></a>
+<a name="SEC11"></a>
+<h2 class="section"> 2.3 Compiler Cinelerra CV </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC12">2.3.1 Processus de compilation habituel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC13">2.3.2 Compiler avec les symboles de débogage</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Processus-de-compilation-habituel"></a>
+<a name="SEC12"></a>
+<h3 class="subsection"> 2.3.1 Processus de compilation habituel </h3>
+
+<p>Vous pouvez installer Cinelerra CV en récupérant les sources et en les
+compilant vous-même.  C'est la méthode à utiliser si vous désirez utiliser la
+version de Cinelerra CV la plus à jour.
+</p>
+<ol>
+<li> Vous devez d'abord récupérer les sources de Cinelerra CV depuis le dépôt
+SVN (environ 170Mo).  Lancez :<br>
+<code>svn checkout svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code><br>
+Si vous avez déjà récupéré précédemment les sources d'une ancienne antérieure,
+vous pouvez effectuer la mise à jour vers la dernière version en lançant,
+depuis le dossier <tt>`hvirtual'</tt> :<br>
+<code>svn update</code><br>
+Si vous désirez récupérer une ancienne version, lancez :<br>
+<code>svn checkout -r &lt;révision&gt;
+svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code>
+
+</li><li> Allez dans le répertoire hvirtual :<br>
+<code>cd hvirtual</code>
+
+</li><li> Créez le fichier <tt>`./configure'</tt> en utilisant la commande :<br>
+<code>autoreconf -i --force</code>
+
+</li><li> Lancez ensuite <tt>`.configure'</tt> :<br>
+<code>./configure --with-buildinfo=svn/recompile</code><br>
+Vous pouvez afficher les options disponibles à l'aide de la commande :<br>
+<code>./configure --help</code>
+
+</li><li> Et lancez make :<br>
+<code>make</code>
+Si vous désirez enregistrer dans un fichier la sortie de make, afin de pouvoir
+rechercher les erreurs, vous pouvez utiliser cette commande :<br>
+<code>make 2&gt;&amp;1 | tee logfile</code>
+
+</li><li> Finallement, installez Cinelerra CV :<br>
+<code>sudo make install</code>
+</li></ol>
+
+<p><b>Note :</b>
+</p><ul>
+<li> <b>Machine SMP :</b><br>
+Si vous compilez Cinelerra CV sur une machine multiprocesseur (SMP), nous vous
+recommandons d'ajouter l'option <samp>`-j 3'</samp> afin de tirer bénéfice de la
+présence de processeurs supplémentaires.
+</li><li> <b>Pour les processeurs x86 uniquement :</b><br>
+Vous voudrez probablement activer la gestion MMX.  Afin de le faire, lancez la
+commande <code>./configure</code> avec l'option <samp>`--enable-mmx'</samp>.  Si vous le
+faites, vous devrez utiliser conjointement l'option <samp>`--without-pic'</samp>,
+sinon, la compilation peut échouer.
+</li><li> <b>Pour les Pentium-M :</b><br>
+Voici quelques options de compilation :<br>
+<code>./configure --prefix=/usr --enable-x86 --enable-mmx --enable-freetype2
+--with-buildinfo=svn/recompile CFLAGS='-O3 -pipe -fomit-frame-pointer
+-funroll-all-loops -falign-loops=2 -falign-jumps=2 -falign-functions=2
+-ffast-math -march=pentium-m -mfpmath=sse,387 -mmmx -msse'</code>
+</li><li> <b>Installer plusieurs versions :</b><br>
+Si vous désirez installer plusieurs versions de Cinelerra CV sur votre
+ordinateur, créez un dossier <tt>`/usr/local_cinelerra'</tt>, et utilisez les
+options suivantes avec la commande <code>./configure</code> (remplacer
+<samp>`xxx'</samp> par le numéro de la révision que vous compilez) :<br>
+<samp>`--prefix=/usr/local_cinelerra/rxxx
+--exec-prefix=/usr/local_cinelerra/rxxx --program-suffix=_rxxx'</samp><br>
+Si vous installez Cinelerra en utilisant cette méthode, les fichiers de
+traduction <tt>`.po'</tt> ne seront pas correctement installés.  Allez dans le
+répertoire <tt>`hvirtual'</tt> où se trouvent les sources et lancez :<br>
+<code>./configure prefix=/usr</code><br>
+<code>cd po</code><br>
+<code>sudo make install</code><br>
+Vous devrez lancer Cinelerra CV depuis le répertoire où il est installé :
+<br>
+<code>cd /usr/local_cinelerra/r960</code><br>
+<code>./cinelerra_r960</code>
+</li><li> <b>Version d'automake :</b><br>
+Pour compiler le programme, vous aurez besoin de la version 1.7 d'automake.  La
+version 1.4 ne fonctionnera pas.  Il est nécessaire aussi d'avoir autoconf
+2.57.
+</li></ul>
+
+<hr size="6">
+<a name="Compiler-avec-les-symboles-de-d_00e9bogage"></a>
+<a name="SEC13"></a>
+<h3 class="subsection"> 2.3.2 Compiler avec les symboles de débogage </h3>
+
+<p>Lorsque Cinelerra CV plante, on peut le compiler avec les symboles de débogage
+et le lancer depuis gdb.  Les informations affichées par gdb sont beaucoup plus
+détaillées et aideront les développeurs à résoudre les bogues plus rapidement.
+</p>
+<p>D'abord, récupérez les sources comme d'habitude.  Ensuite, lancez les commandes
+suivantes :<br>
+<code>cd hvirtual</code><br>
+<code>nice -19 autoreconf -i --force</code><br>
+<code>mkdir ../hvdbg</code><br>
+<code>cd ../hvdbg</code><br>
+<code>nice -19 ../hvirtual/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g'
+--with-buildinfo=svn/recompile</code><br>
+<code>cd quicktime/ffmpeg</code><br>
+<code>nice -19 make CFLAGS='-O3'</code><br>
+<code>cd ../..</code><br>
+<code>nice -19 make</code><br>
+<code>nice -19 make install</code>
+</p>
+<p>Voir la section <a href="cinelerra_cv_manual_fr_21.html#SEC307">Signaler des bogues</a>, pour avoir plus d'informations concernant
+l'exécution de Cinelerra depuis gdb.
+</p>
+<hr size="6">
+<a name="Lancer-Cinelerra"></a>
+<a name="SEC14"></a>
+<h2 class="section"> 2.4 Lancer Cinelerra </h2>
+
+<p>La manière la plus simple de lancer Cinelerra est de lancer la commande
+<code>/usr/bin/cinelerra</code><br>
+Les options en ligne de commande sont aussi disponibles en tapant
+<code>cinelerra -h</code>.  Ces options sont décrites dans d'autres sections
+ci-dessous.  Pour effectuer le rendu en ligne de commande Voir la section <a href="cinelerra_cv_manual_fr_19.html#SEC256">Le rendu de fichiers</a>.
+</p>
+<p>Si l'erreur suivante s'affiche lorsque vous lancez Cinelerra pour la première
+fois :
+</p><pre class="verbatim">WARNING:/proc/sys/kernel/shmmax is 0x2000000, which is too low}
+</pre><p>Voir la section <a href="cinelerra_cv_manual_fr_20.html#SEC285">Libérer davantage de mémoire partagée</a>, pour plus d'information.
+</p>
+<hr size="6">
+<a name="Debian"></a>
+<a name="SEC15"></a>
+<h2 class="section"> 2.5 Debian </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC16">2.5.1 Binaires Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC17">2.5.2 Prérequis pour Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Binaires-Debian"></a>
+<a name="SEC16"></a>
+<h3 class="subsection"> 2.5.1 Binaires Debian </h3>
+
+<p>Andraz <small>TORI</small> maintient les règles de constructions pour Debian Sid.  Il
+construit également des paquets binaires .deb pour Sid.  Ils sont construits
+depuis les versions SVN non officielles.  Les paquets pour Debian Sid se
+trouvent ici :
+</p><ul>
+<li> <b>Source apt pour i386 :</b><br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./</code>
+</li><li> <b>Source apt pour Pentium4 (optimisé) :</b><br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentium4/ ./</code>
+</li><li> <b>Source apt pour Pentium-M (optimisé) :</b><br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentiumm/ ./</code>
+</li><li> <b>Source apt pour AthlonXP (optimisé) :</b><br>
+<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/athlonxp/ ./</code>
+</li><li> <b>Source apt pour Athlon64 (optimisé) :</b><br>
+<code>deb http://labbs.net/~vale/debian ./</code>
+</li></ul>
+
+<p><b>Note :</b> Si Cinelerra retourne l'erreur suivante :<br>
+<code>cinelerra: relocation error: /usr/lib/libavcodec.so.0.4.8: undefined
+symbol: faacDecOpen</code><br>
+Vous pouvez résoudre ce problème en entrant la commande suivante en tant
+qu'administrateur (root) :<br>
+<code>apt-get install --reinstall libfaad2-0=2.0.0-0.5</code>
+</p>
+<hr size="6">
+<a name="Pr_00e9requis-pour-Debian"></a>
+<a name="SEC17"></a>
+<h3 class="subsection"> 2.5.2 Prérequis pour Debian </h3>
+
+<p>Vous aurez besoin de certains logiciels prérequis qui ne se trouvent pas dans
+les dépôts officiels de Debian.  Vous pouvez ajouter à votre fichier
+<tt>`/etc/apt/sources.list'</tt> la ligne suivante qui est le dépôt de Christian
+Marillat :<br>
+<code>deb http://www.debian-multimedia.org/ sid main</code>
+</p>
+<p>Pour pouvoir utiliser ce miroir, vous devrez ajouter la clé gpg de Marillat à
+votre trousseau de clés gpg :<br>
+<code>gpg --keyserver hkp://wwwkeys.eu.pgp.net --recv-keys 1F41B907</code><br>
+<code>gpg --armor --export 1F41B907 | sudo apt-key add -</code><br>
+Si vous n'utilisez pas sudo, faites ce qui suit en tant qu'administrateur
+(root) :<br>
+<code>gpg --armor --export 1F41B907 | apt-key add -</code>
+</p>
+<hr size="6">
+<a name="Ubuntu"></a>
+<a name="SEC18"></a>
+<h2 class="section"> 2.6 Ubuntu </h2>
+
+<p><small>MUZZOL</small> a fabriqué des paquets pour Cinelerra sous Ubuntu Edgy.  Pour
+réaliser l'installation au moyen du <b>gestionnaire de paquets Synaptic</b>, allez
+dans <b>Configuration -&gt; Dépôts</b>.  Dans la fenêtre de gestion des paquets,
+cliquez sur le bouton <b>Ajouter</b> et renseignez les dépôts suivants :
+</p>
+<pre class="verbatim">deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
+</pre>
+<p>En cliquant sur <b>Ajouter le dépôt</b> vous verrez le nouveau dépôt activé dans
+la fenêtre de gestion des paquets.  Vous pouvez aussi ajouter directement les
+lignes suivantes dans le fichier <tt>`/etc/apt/sources.list'</tt> :
+</p>
+<pre class="verbatim">deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
+</pre>
+<p>Vous verrez alors apparaître Cinelerra dans Synaptic.
+</p>
+<p>Pour installer Cinelerra avec <b>GDebi</b>, consultez cette page :<br>
+<a href="http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/">http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/</a>.<br>
+Cliquez sur le lien <b>cinelerra_2.1.0+svn20070109-0ubuntu1_i386.deb</b>.  Une
+fenêtre de dialogue va alors s'ouvrir vous demandant de confirmer votre
+intention d'ouvrir ce fichier avec GDebi.  Si durant l'installation vous
+rencontrez des problèmes de dépendances non satisfaites, essayez d'installer
+les librairies manquantes en utilisant la même méthode, et la même page
+internet.
+</p>
+<p>Valentina <small>MESSERI</small> a aussi construit des paquets pour Ubuntu Edgy :
+</p>
+<p><b>Pour Ubuntu Edgy:</b>
+</p><pre class="verbatim">deb http://giss.tv/~vale/ubuntu32 ./
+deb-src http://giss.tv/~vale/ubuntu32 ./
+</pre>
+<p><b>Pour Ubuntu Edgy AMD64:</b>
+</p><pre class="verbatim">deb http://giss.tv/~vale/ubuntu64 ./
+deb-src http://giss.tv/~vale/ubuntu64 ./
+</pre>
+<p>Les personnes désirant compiler Cinelerra peuvent consulter le tutoriel dédié à
+l'installation de Cinelerra sur Ubuntu (en anglais) à cet endroit :<br>
+<a href="http://www.ubuntuforums.org/showthread.php?t=320701&amp;highlight=cinelerra">http://www.ubuntuforums.org/showthread.php?t=320701&amp;highlight=cinelerra</a>
+</p>
+<hr size="6">
+<a name="Gentoo"></a>
+<a name="SEC19"></a>
+<h2 class="section"> 2.7 Gentoo </h2>
+
+<p>L'installation sur Gentoo GNU/Linux est assez simple.  Lancez simplement :
+</p><pre class="verbatim">emerge cinelerra-cvs
+</pre><p>avec le compte root et l'installation devrait s'effectuer sans problème.  Notez
+que vous pouvez avoir besoin de placer Cinelerra dans le fichier
+<tt>`/etc/portage/package.keywords'</tt> afin de pouvoir l'utiliser :
+</p><pre class="verbatim">echo &quot;=media-video/cinelerra-cvs-20061020&quot; &gt;&gt; /etc/portage/package.keywords
+</pre>
+<p>Voyez
+<a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&amp;chap=3">http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&amp;chap=3</a>
+pour plus d'information.
+</p>
+<p><b>Note:</b> L'ebuild Gentoo media-video/cinelerra-cvs-20061020 ne possède pas
+d'icônes de modes d'édition.  Voir <a href="cinelerra_cv_manual_fr_6.html#r943_005fr944_005fediting_005fmodes">The insertion point</a>, pour plus d'information.
+</p>
+<p>L'installation pour Gentoo GNU/Linux est aisée.  Lancez simplement :<br>
+<code>emerge cinelerra</code><br>
+en tant qu'administrateur et il devrait s'installer et fonctionner sans
+problème.
+</p>
+<hr size="6">
+<a name="Live-CD"></a>
+<a name="SEC20"></a>
+<h2 class="section"> 2.8 Live CD </h2>
+
+<p>Vous pouvez essayer et utiliser Cinelerra sur votre ordinateur sans avoir à
+l'installer sur le disque-dur.  Ceci est rendu possible grâce aux Live CD, qui
+sont des distributions GNU/Linux démarrant à partir d'un CD, sans qu'il soit
+nécessaire d'installer quoi que ce soit sur l'ordinateur.  Voici quelques
+distributions Live CD qui contiennent Cinelerra :
+</p>
+<ul>
+<li> <b>Knoppix</b> - la distribution LiveCD &quot;originale&quot;, basée sur Debian -
+<a href="http://www.knoppix.org">http://www.knoppix.org</a>
+</li><li> <b>dyne:bolic</b> - pour la production multimédia - repose sur l'utilisation
+du gestionnaire de fenêtres Window Maker - <a href="http://www.dynebolic.org">http://www.dynebolic.org</a>
+</li><li> <b>Elive</b> - distribution basée sur Debian, qui utilise le gestionnaire de
+fenêtres Enlightenment - <a href="http://www.elivecd.org">http://www.elivecd.org</a>
+</li><li> <b>Mediainlinux</b> - basée sur Knoppix - <a href="http://www.mediainlinux.org/">http://www.mediainlinux.org/</a>
+</li><li> <b>pho</b> (garbure) - dédiée à l'édition vidéo -
+<a href="http://garbure.org/pho/">http://garbure.org/pho/</a>   
+</li><li> <b>Slo-Tech</b> - basée sur Debian et Morphix -
+<a href="http://linux.slo-tech.com">http://linux.slo-tech.com</a>
+</li></ul>
+
+
+<p>Knoppix est un CD amorçable comportant une collection de logiciels GNU/Linux,
+une détection automatique du matériel, et la gestion de nombreuses cartes
+graphiques, cartes son, périphériques SCSI, USB ou autres.  Knoppix peut être
+utilisé comme démonstration de GNU/Linux, comme CD éducatif, comme système de
+dépannage, ou adapté et utilisé comme plateforme pour des démonstrations de
+logiciels commerciaux.  Il n'est pas nécessaire d'installer Knoppix sur le
+disque dur.  (source : <a href="http://www.knoppix.org">http://www.knoppix.org</a>)
+</p>
+<p>Distributions Knoppix connues incluant Cinelerra :
+</p><ul>
+<li> <a href="http://www.dynebolic.org">http://www.dynebolic.org</a>
+</li><li> <a href="http://linux.slo-tech.com">http://linux.slo-tech.com</a>
+</li><li> <a href="http://garbure.org/pho">http://garbure.org/pho</a>
+</li></ul>
+
+<hr size="6">
+<a name="Fedora"></a>
+<a name="SEC21"></a>
+<h2 class="section"> 2.9 Fedora </h2>
+
+<p>Cinelerra est inclu dans le dépôt Freshrpms à l'adresse
+<a href="http://freshrpms.net">http://freshrpms.net</a>.  La méthode la plus simple pour installer des
+paquets depuis Freshrpms est d'inclure ce dépôt dans la configuration de
+<b>yum</b>.  Vérifiez bien que le dépôt &quot;Extras&quot; de Fedora est activé.  C'est le
+cas par défaut pour Fedora 5 et 6, et les dépôts Core et Extras ne font plus
+qu'un pour Fedora 7.
+</p>
+<p>Sous Fedora 6, tapez depuis le compte root :
+</p><pre class="verbatim">rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/6/\
+freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
+</pre>
+<p>Sous Fedora 5, tapez :
+</p><pre class="verbatim">rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/5/\
+freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
+</pre>
+<p>Ensuite, tapez :
+</p><pre class="verbatim">yum -y install cinelerra
+</pre><p>afin de récupérer et installer Cinelerra et ses dépendances, y compris ffmpeg
+et mjpegtools.  Si cela ne fonctionne pas, examinez le fichier
+<tt>`/etc/yum.conf'</tt> et vérifiez que le paramétrage pour Freshrpms et bien
+récupéré depuis <tt>`/etc/yum.repos.d'</tt>.
+</p>
+<p><b>Notes :</b>
+</p><ul>
+<li> 
+La collection de paquets du dépôt Freshrpms peut entrer en conflit avec des
+dépôts tiers tels que Livna ou RPMForge, qui peuvent eux-aussi fournir des
+librairies audio et vidéo, ainsi que Cinelerra.  Il est préférable de se
+contenter de l'utilisation d'un seul dépôt, et de ne pas mélanger des paquets
+provenant de dépôts tiers différents.
+</li><li> Les fichies d'entête de plusieurs librairies sont nécessaires pour
+compiler Cinelerra depuis son code-source.  Les fichiers d'entête sont présents
+dans des paquets de développement qui sont disponibles dans les dépôts de
+Fedora et Freshrpms, et peuvent être installés avec yum.  Les paquets suivants
+sont nécessaires (il ne s'agit pas d'une liste exhaustive) :<br>
+OpenEXR-devel SDL-devel a52dec-devel alsa-lib-devel e2fsprogs-devel faac-devel
+faad2-devel ffmpeg-devel fftw-devel imlib2-devel lame-devel libXv-devel
+libXxf86vm-devel libavc1394-devel libdv-devel libiec61883-devel libogg-devel
+libraw1394-devel libsndfile-devel libtheora-devel libvorbis-devel
+mjpegtools-devel x264-devel xvidcore-devel
+</li></ul>
+
+<hr size="6">
+<a name="Mandriva"></a>
+<a name="SEC22"></a>
+<h2 class="section"> 2.10 Mandriva </h2>
+
+<p>Des paquets Cinelerra pour Mandriva sont mis à disposition par PLF et prêts à
+être installés.  Lisez la page <a href="http://plf.zarb.org/packages.php">http://plf.zarb.org/packages.php</a> pour
+plus d'information.
+</p>
+<hr size="6">
+<a name="Slackware"></a>
+<a name="SEC23"></a>
+<h2 class="section"> 2.11 Slackware </h2>
+
+<p>Rafael <small>DINIZ</small> construit des paquets Slackware de Cinelerra.
+</p>
+<ul>
+<li> <b>Pour x86 :</b><br>
+<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/">http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/</a>
+</li><li> <b>Pour slackintosh :</b><br>
+<a href="http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/">http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/</a>
+</li></ul>
+
+<hr size="6">
+<a name="Suse"></a>
+<a name="SEC24"></a>
+<h2 class="section"> 2.12 Suse </h2>
+
+<p>Des RPM pour SuSE 9 sont construit depuis les sources SVN par Kevin
+<small>BROSIUS</small>, ils sont disponibles à <a href="http://cin.kevb.net/files/RPM/">http://cin.kevb.net/files/RPM/</a>
+</p>
+<p>Des RPMs pour OpenSUSE 10.1 et 10.2, architecture i586 et x86_64, sont
+construits à partir des sources SVN par Leon <small>FREITAG</small> chez Packman.  Ils
+sont disponibles à
+<a href="http://packman.links2linux.org/package/cinelerra/16413">http://packman.links2linux.org/package/cinelerra/16413</a>.
+</p>
+<p>Les packages RPM peuvent être installés avec le compte root dans une console en
+utilisant cette commande :
+</p><pre class="verbatim">rpm -Uvh package_name.rpm
+</pre>
+<p>L'exemple qui suit montre quatre copies d'écrans d'installation graphique de
+Cinelerra sur OpenSUSE 10.2 i586 en utilisant YaST2.  Tout d'abord en ajoutant
+le répertoire YaST2 de Packman aux sources d'installation, et ensuite en
+ajoutant le paquet d'installation avec le gestionnaire de logiciels YaST2.
+</p>
+<p>Démarrez le centre de contrôle YaST sur OpenSUSE 10.2 et entrez le mot de passe de root
+lorsqu'on vous le demande :
+</p>
+<p align="center"> <img src=".././manual_images_intl/yast2_control_center.png" alt="manual_images_intl/yast2_control_center">
+</p>
+<p>Démarrez l'outil YaST2 d'installation des sources, et sélectionnez le protocole
+HTTP et ajoutez le nom du serveur pour Packman, comme indiqué.  La
+synchronisation avec Zenworks peut prendre quelque temps, attendez que cela
+soit terminé.
+</p>
+<p align="center"> <img src=".././manual_images_intl/yast2_installation_source.png" alt="manual_images_intl/yast2_installation_source">
+</p>
+<p>Démarrez le gestionnaire de logiciel de YaST2.  Entrez &quot;Cinelerra&quot; dans le
+champs de recherche situé à gauche et ensuite cochez les paquets Cinelerra
+situés dans la fenêtre de droite.  Si une ancienne version de Cinelerra est
+installée, elle est indiquée avec une icône représentant un cadenas.
+Effacez-la ou bien tentez une mise à jour.
+</p>
+<p align="center"> <img src=".././manual_images_intl/yast2_cinelerra_installation.png" alt="manual_images_intl/yast2_cinelerra_installation">
+</p>
+<p>Cliquez sur Accepter pour lancer l'installation du paquet, puis cliquez sur
+Suivant pour terminer l'installation.
+</p>
+<p align="center"> <img src=".././manual_images_intl/yast2_package_installation.png" alt="manual_images_intl/yast2_package_installation">
+</p>
+<hr size="6">
+<a name="MacOSX"></a>
+<a name="SEC25"></a>
+<h2 class="section"> 2.13 MacOSX </h2>
+
+<p>FIXME
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC8" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_3.html#SEC26" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

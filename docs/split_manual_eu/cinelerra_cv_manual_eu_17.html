@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 17. Gako-fotogramak</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 17. Gako-fotogramak">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 17. Gako-fotogramak">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_16.html#SEC240" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_18.html#SEC250" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Gako_002dfotogramak"></a>
+<a name="SEC243"></a>
+<h1 class="chapter"> 17. Gako-fotogramak </h1>
+
+<p>Iraungitzea, kamera, proiektorea edo pistaren beste parametro batzuk aldatzean,
+lehenetsi gisa denbora-lerroaren iraupen osoan mantentzen dira. Batzuetan parametro
+estatikoak ezartzea ez da oso erabilgarria izaten. Normalean, kamera edo maskaren
+posizioak denboran zehar aldatu behar izaten dira. Maskarek objektuei jarraitu
+behar izaten diete. Aldaketa dinamikoak sortzen dira gako-fotogramak definituz.
+Gako-fotograma bat denboraren puntu zehatz bat da, eragiketa baten ezarpenak
+aldatzen diren puntua. Cinelerra-n ia edozein konposaketa eta efektuen parametroentzako
+daude gako-fotogramak.
+</p>
+<a name="IDX146"></a>
+<a name="IDX147"></a>
+
+<p>Parametro bat doitzen duzun edonon, balioa gako-fotograma batean gordetzen da.
+Balioa gako-fotograma batean gordetzen bada, zergatik ez da beti aldatzen?
+Lehenetsi gisa gordetzen den gako-fotogramari <b>Gako-fotograma lehenetsia</b>
+deitzen zaio. Gako-fotograma lehenetsia iraupen osoari aplikatzen zaio, beste
+gako-fotogramarik ez badago. Gako-fotograma lehenetsia ez da inon agertzen,
+beti existitzen delako. Aldatzeko modu bakarra beste gako-fotograma ez-lehenetsiak
+jartzea da.
+</p>
+<p><b>Ikusi</b> menua erabiliz edozein parametroren gako-fotogramak erakusten dira.
+<b>Leihoa -&gt; Erakutsi gainjarpen-leihoa</b> menua aukeratuz hainbat gako-fotograma
+mota aktiba ditzakezu era azkarrean. Leiho honetan 'Ikusi' menuko parametro bakoitza
+aktiba dezakezu. Gako-fotogramak hautatzean, denbora-lerroan marrazten dira,
+aplikatzen diren pisten gainean.
+</p>
+<p>Gako-fotogramak modu desberdinean erakusten dira: kurbak, aktiboak, moduak, e.a.
+Jarraian gako-fotograma mota desberdinak nola kudeatzen diren azaltzen da.
+</p>
+
+<hr size="6">
+<a name="Gako_002dfotograma-kurboak"></a>
+<a name="SEC244"></a>
+<h2 class="section"> 17.1 Gako-fotograma kurboak </h2>
+
+<p>Parametro asko Bezier-en kurbetan gordetzen dira. Joan <b>Ikusi -&gt; iraungitu</b>
+edo <b>Ikusi -&gt; ...zooma</b> menura  parametro horien kurbak bistaratzeko
+denbora-lerroan. Hautapen edo arrastatze moduan, denbora-lerroan mugitu
+kurtsorea kurben gainean, kurba aldatu arte. Orduan, egin klik
+eta arrastatu kurba emandako posizioan gako-fotograma sortzeko.
+</p>
+<p>Gako-fotograma sortutakoan, egin klik eta arrastatu posizioz aldatzeko.
+Bigarren gako-fotograman klik egin eta kurbaren gainera arrastatzean, malda
+leun bat sortzen da. Gako-fotograma baten gainean klik eginez eta <b>Ktrl+arrastatuz</b> 
+sarrerako edo irteerako kontrolaren balioa aldatzen da. Honek maldaren
+leuntasunari eragiten dio. Sarrerako eta irteerako kontrola bai horizontalki
+bai bertikalki posizioz alda daitezkeen bitartean, mugimendu horizontala
+irakurtzeko soilik erabiltzen da eta ez da kurbaren balioan erabiltzen.
+</p>
+<p>Gogora dezakezu Gimp eta konposaketako maskarak <kbd>Maius</kbd> erabiltzen dutela
+kontrol-puntuak hautatzeko, beraz, zergatik denbora-lerroak <kbd>Ktrl</kbd> erabiltzen du?
+Denbora-lerroan <b>Maius+arrastatu</b> egiten baduzu, gako-fotograma aurreko edo
+hurrengo gako-fotogramaren baliora doitzen da (zein existitzen den arabera).
+Honela, balio konstantea duen kurba bat jar daiteke, aurreko edo hurrengo
+gako-fotograma kopiatu gabe.
+</p>
+
+<hr size="6">
+<a name="Gako_002dfotograma-kurboetan-nabigatzea"></a>
+<a name="SEC245"></a>
+<h3 class="subsection"> 17.1.1 Gako-fotograma kurboetan nabigatzea </h3>
+
+<p>Denbora-lerroan ez dago nahikoa leku kurbaren barruti zabala edukitzeko. Kurben
+gainean zoom bertikala egin behar duzu aldagarritasun bat lortzeko. Hau bi tresnekin
+lantzen da: doitzeko botoiarekin eta <img src=".././manual_images_en/autozoom.png" alt="manual_images_en/autozoom"> zoomaren automatizazio
+menuarekin.
+</p>
+<p>Doitzeko botoiak barruti bertikala eskalatzen du, hautatutako kurbaren area denbora-lerroan
+bistaratuz. Denbora-lerroko eskualde bat kurtsoreakin nabarmentzen bada, eskualde hori
+soilik eskalatuko da. Sarrerako eta irteerako puntuek ez dute eraginik zooma egin zaion
+eskualdeari. <kbd>Alt+f</kbd> sakatuz doiketaren eragiketak lantzen dira.
+</p>
+<p>Zoomaren menuak kurben eskalatze bertikala aldatzen dute eskuz (2-ren multiploekin).
+Egin klik botoian zooma aldatzeko. Teklatuko <kbd>Alt+Gora</kbd> eta <b>Alt+Behera</b> sakatuz
+zooma aldatzen da.
+</p>
+<hr size="6">
+<a name="Gako_002dfotograma-txandakariak"></a>
+<a name="SEC246"></a>
+<h2 class="section"> 17.2 Gako-fotograma txandakariak </h2>
+
+<p>'Mututu' da gako-fotograma bakarra aktibatu edo desaktibatu daitekeena. 'Mututu'
+gako-fotogramek zehazten dute pista prozesatuko den baina ez irteeran bistaratu.
+Egin klik eta arrastatu kurba hauek gako-fotograma bat sortzeko. Gako-fotogramak
+bi balio dituzte, ez kurben bezala: aktibo edo desaktibo. <kbd>Ktrl</kbd> eta <kbd>Maius</kbd>
+teklek ez dute ezer egiten gako-fotograma txandakarietan.
+</p>
+<hr size="6">
+<a name="Gako_002dfotograma-automatikoak"></a>
+<a name="SEC247"></a>
+<h2 class="section"> 17.3 Gako-fotograma automatikoak </h2>
+
+<p>Ohartuko zinen iraungitzeko kurba gutxi batzuk konfiguratzean, txertatzeko puntua
+kurben inguruan mugitzean, txertatzeko puntuaren azpian iraungitzaileak kurbaren
+balioa adierazten duela. Portaera hau ez da bakarrik itxura polita izateko. 
+Iraungitzaileak beraien kasa gako-fotogramak sor ditzakete gako-fotograma
+automatikoaren moduan. Gako-fotogramen modu automatikoa erabilgarriagoa izan ohi
+da kurbak arrastatze baino.
+</p>
+<p>Gako-fotogramaren modu automatikoa gaitzeko aktibatu <img src=".././manual_images_en/autokeyframe.png" alt="manual_images_en/autokeyframe"> botoia.
+Gako-fotograma automatikoaren moduan, parametro bat aldatzen den bakoitzean gako-fotograma
+bat sortzen da denbora-lerroan. Modu honek parametro askori eragiten dionez, hobeto da
+gako-fotograma bat behar denean soilik gaitzean, eta gero berriro desgaitzea.
+</p>
+<p>Erabilgarria izan ohi da <b>Ikusi</b> menura joatea eta nahi den parametroa ikusgai jartzea
+aldaketa bat egin aurretik. Gako-fotograma automatikoa sortzen den posizioa txertatzeko
+puntuarena da. Denbora-lerroa aldatu egiten bada erreproduzitzen ari dela, hainbat
+gako-fotograma sortuko dira parametroa aldatzen duzun arabera.
+</p>
+<p>Gako-fotograma automatikoaren modua desgaituta dagoenean, antzeko zerbait gertatzen da.
+Parametro bat konfiguratzeak txertatzeko puntuaren aurretik dagoen gako-fotograma
+doitzen du. Iraungitzeko bi gako-fotograma badaude, eta txertatzeko puntua hauen
+artean badago, iraungitzailea aldatzean aurreneko gako-fotograma aldatuko da.
+</p>
+<p>Parametro asko daude gako-fotograkikoak modu automatikoan soilik sor daitezkeenak.
+Kurbek pistan leku gehiegi beharko luketeen parametroak dira, edo kurba batekin
+erraz ezin adierazi daitezkeenak.
+</p>
+<p>Efektuen kasuan ere gako-fotogramak modu automatikoan soilik sor daitezke, 
+efektu bakoitzak dituen parametro kopurua dela eta.
+</p>
+<p>Kameraren eta proiektorearen mugimendua gako-fotograma automatikoaren moduan soilik
+animatu daitezkeen bitartean, hauen zooma kurbekin animatzen da. Hemen amaitzen da
+konposaketari buruzko azalpenak, konposaketa denboran zehar aldatzeko trebetasunaren
+mende baitago.
+</p>
+<hr size="6">
+<a name="Konposaketako-gako_002dfotogramak"></a>
+<a name="SEC248"></a>
+<h2 class="section"> 17.4 Konposaketako gako-fotogramak </h2>
+
+<p>Kamera eta proiektorearen translazioa bi parametroekin adierazten da: X eta Y.
+Kurbak doitzea zerbait korapilotsua gerta daiteke. Cinelerra-k arazo hau
+gako-fotograma automatikoekin gainditzen du. Bideoaren pista bat kargatuta dagoela,
+txertatzeko puntua eraman pistaren hasierara, eta gaitu gako-fotograma automatikoaren
+modua.
+</p>
+<p>Mugitu proiektorea piska bat Konposaketa-leihoan, gako-fotograma bat sortzeko.
+Aurreratu txertatzeko puntua segundo batzuk. Mugitu proiektorea distantzia
+handiago batekin, beste gako-fotograma sortzeko eta mugimendua nabarmentzeko. 
+Honek proiektorea adierazten duen bigarren kutxa sortuko du Konposaketa-leihoan,
+bi kutxak lotzen dituen marra batekin. Loturaren marra mugimenduaren bidea da.
+Gako-fotograma gehiago sortzen badituzu, kutxa gehiago sortuko dira. Nahi
+dituzun gako-fotograma guztiak sortutakoan, desgaitu gako-fotograma automatikoaren
+modua.
+</p>
+<p>Orain, Konposaketa-leihoko graduatzailea desplazatzen baduzu, bideoaren proiekzioa
+denboran zehar mugituko da. Bi gako-fotograma arteko edozein puntutan, mugimenduaren
+bidea gorria da denbora guztian txertatzeko puntuaren aurretik, eta berde kolorekoa
+txertatzeko puntuaren atzetik. Funtzionalitate hau erabilgarria den edo ez zalantzan
+jar dezakezu, hala ere, eroso sentituko zara proiektorearen hurrengo aldaketan
+zein gako-fotogramak eragingo diren jakitearekin.
+</p>
+<p>Aurreko gako-fotograma doitzeko, egin klik eta arrastatu gako-fotograma automatikoaren
+modua desgaituta dagoenean. Bi gako-fotogramen tartean bazaude, proiektorearen aurreneko
+kutxa doitzen da, bigarrena ukitu gabe mantentzen delarik. Gako-fotogramen arteko
+proiektorearen mugimendua interpolatua delako gertatzen da. Bigarren gako-fotograma
+doitzeko, bigarren gako-fotogramararte desplazatu beharko zara.
+</p>
+<p>Lehenetsi gisa, mugimenduaren bidea marra zuzena izaten da, baina kurba bat izan daiteke
+kontrolen puntuak erabiliz. <b>Ktrl+arrastatu</b> aurreko gako-fotogramaren sarrerako edo
+irteerako kontrol-puntua ezarri arte. Berriro ere, Gimp-en oinarritzen gara, <b>Maius</b>
+tekla zooma egiteko erabiltzen baita. Gako-fotogramatik sarrerako edo irteerako
+kontrol-puntuak estrapolatu ondoren, bideoaren edonon <b>Ktrl+arrastatuz</b> kontrol-puntu
+gertuena doituko da. Kontrol-puntu bat erabat bistaz kanpo egon daitekeen arren, oraindik
+ere kontrolagarria izan daiteke.
+</p>
+<p>Kameraren mugimendua editatzen denean, kamera adierazten duten kutxen portaera piska bat
+desberdina da. Kameraren animazioa argazki baten panoramikoa lantzeko erabiltzen da.
+Uneko kameraren kutxa ez da mugitzen arrastatzean, baina hainbat gako-fotograma badaude,
+kameraren kutxa bakoitza (unekoa ezik) mugitzen ari direla dirudi. Kameraren leihoak
+kamera bakoitzaren posizio erlatiboa unekoarekiko erakusten duelako gertatzen da.
+</p>
+<p>Egoera intuitiboagoa da bi gako-fotogramen arteko mugimenduaren bidea tolesten baduzu,
+eta bi gako-fotogramen artean desplazatzen baduzu. Gorria eta berdearen arteko zatiketa,
+gako-fotogramen arteko uneko posizioa, beti dago zentratua kameraren kutxa mugitzen
+den bitartean.
+</p>
+<hr size="6">
+<a name="Gako_002dfotogramen-edizioa"></a>
+<a name="SEC249"></a>
+<h2 class="section"> 17.5 Gako-fotogramen edizioa </h2>
+
+<p><b>Garrantzitsua:</b> gako-fotogramak kopiatzean edo itsastean, ziurtatu <b>ez dagoela
+sarrerako edo irteerako punturik denbora-lerroan</b>.
+</p>
+<p>Gako-fotogramak kendu daitezke, edo denbora-lerroko pisten artean mugitu bideoaren
+ebaki eta itsatsi eragiketen antzekoak erabiliz. Hala ere, <b>Ikusi</b> menuan hautatutako
+gako-fotogramak soilik jasoko dute gako-fotogramen edizioko eragiketen eragina.
+</p>
+<p>Edizioko eragiketa ospetsuena kurba bat pista batetik bestera erreplikatzea da,
+estereo bikotea sortzeko. Aurreneko urratsa jatorrizko pista gaitzea da
+<img src=".././manual_images_en/recordpatch_up.png" alt="manual_images_en/recordpatch_up"> bertan <b>Maius+klik</b> eginez. Gero,
+gako-fotogramen sarrerako edo irteerako puntuak doitu, edo nahi den eskualdea hautatu.
+Hautatu <b>Gako-fotogramak -&gt; Kopiatu gako-fotogramak</b> menua arbelean kopiatzeko.
+Gaitu helburuko pista <b>Maius+klik</b> eginez <img src=".././manual_images_en/recordpatch_up.png" alt="manual_images_en/recordpatch_up">
+botoian, eta joan <b>Gako-fotogramak -&gt; Itsatsi gako-fotogramak</b> menura arbeletik
+itsasteko
+</p>
+<p>Edizioko komandoak gako-fotogramen edizioko komandoekin lotuta daude <kbd>Maius</kbd> tekla
+erabiliz lasterbideak erabili ordez.
+</p>
+<p>Gako-fotogramaren zatirik konplikatuenera eramaten gaitu honek, gako-fotograma lehenetsia.
+Gogoratu gako-fotogramarik ez dagoenean, oraindik ere gako-fotograma lehenetsi bat
+existitzen dela, non parametro globalak denbora-lerroaren iraupen osorako gordetzen dituen.
+Gako-fotograma lehenetsia ez da erakusten, beti existitzen delako. Zer gertaten da
+gako-fotograma lehenetsiaren balioa ona bada eta beste gako-fotograma ez-lehenetsien
+artean jartzea nahi baduzu? <b>Gako-fotogramak -&gt; Kopiatu gako-fotograma lehenetsia</b>
+eta <b>Gako-fotogramak -&gt; Itsatsi gako-fotograma lehenetsia</b> aukerek gako-fotograma
+lehenetsia bihurtzen dute gako-fotograma ez-lehenetsira.
+</p>
+<p><b>Gako-fotogramak -&gt; Kopiatu gako-fotograma lehenetsia</b> aukerak gako-fotograma
+lehenetsia kopiatzen du arbelean, denbora-lerroko zein eskualde hautatuta dagoen
+kontutan izan gabe. <b>Gako-fotogramak -&gt; Itsatsi gako-fotograma lehenetsia</b> aukera
+erabil daiteke orduan arbeletik gako-fotograma ez-lehenetsia bezala itsasteko.
+</p>
+<p>Gako-fotograma noramala (ez-lehenetsia) kpoiatu baduzu, gako-fotograma lehenetsi
+gisa gorde dezakezu <b>Gako-fotogramak -&gt; Itsatsi gako-fotograma lehenetsia</b>
+aukera erabiliz. Aukera hau erabili ondoren, gako-fotograma normala bihurtu
+lehenetsira. Ez duzu gako-fotograma lehenetsiaren balioa ikusiko gako-fotograma
+normal guztiak kendu arte.
+</p>
+<p>Azkenik, badago modu bat gako-fotogramak kentzeko (eskualde bat hautatu eta 
+<b>gako-fotogramak -&gt; garbitu gako-fotogramak</b> aukera erabili ordez). Nahikoa
+da pistan gako-fotograma bat hautatu eta arrastatzea aurreko gako-fotograma baino
+aurrerago, edo hurrengo gako-fotograma baino harutzago.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC243" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_18.html#SEC250" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

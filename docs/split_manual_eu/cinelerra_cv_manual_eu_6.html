@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on December, 31 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV - Eskuliburua: 6. Programaren leihoa</title>
+
+<meta name="description" content="Cinelerra CV - Eskuliburua: 6. Programaren leihoa">
+<meta name="keywords" content="Cinelerra CV - Eskuliburua: 6. Programaren leihoa">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_5.html#SEC63" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_7.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Programaren-leihoa"></a>
+<a name="SEC88"></a>
+<h1 class="chapter"> 6. Programaren leihoa </h1>
+
+
+<p>Denbora-lerroa eta gailuen eragiketen menu guztien sarrerako puntuak ditu.
+Denbora-lerroak pisten pila bertikal bat du denboraren adierazpen horizontalarekin.
+Honek errendatze-eragiketen irteera eta fitxategiak gordetzean zer gordetzen den
+definitzen du. Denbora-lerroaren ezkerretara atributuen panela dago, pista bakoitzari
+eragiten dieten aukerekin.
+</p>
+<p align="center"> <img src=".././manual_images_en/program_insertion_point.png" alt="manual_images_en/program_insertion_point">
+</p><p align="center"> <b>Denbora-lerroa</b>
+</p>
+<p><b>Leihoa</b> menuan menu nagusiei eragiten dien aukerak aurki ditzakezu.
+Menuko <b>Posizio lehenetsiak</b> elementuak leiho guztien posizioak aldatzen ditu
+4 pantailako muntatze-konfiguraziora. Bi monitore edukiz gero, 
+<b>Posizio lehenetsiak</b> aukerarekin leiho guztiak monitore batean kokatzen dira.
+</p>
+<hr size="6">
+<a name="Programaren-leihoan-nabigatzea"></a>
+<a name="SEC89"></a>
+<h2 class="section"> 6.1 Programaren leihoan nabigatzea </h2>
+
+<p>Programaren leihoak nabigatzeko hainbat funtzionalitate ditu,
+eta denbora-lerroa memorian egituratua dagoen bezala bistaraten du:
+pistak bertikalki pilatu eta denbora horizontalean zabaltzen dira.
+Korritze-barra horizontalarekin denboran zehar mugi zaitezke.
+Korritze-barra bertikalarekin pisten artean mugi zaitezke.
+</p>
+
+<hr size="6">
+<a name="Bideoaren-pistak"></a>
+<a name="SEC90"></a>
+<h3 class="subsection"> 6.1.1 Bideoaren pistak </h3>
+
+<p align="center"> <img src=".././manual_images_en/track_video.png" alt="manual_images_en/track_video">
+</p><p align="center"> <b>Bideoaren pistak</b>
+</p>
+<p>Bideoaren pistak zure bideo eta klipen iraupena adierazten dute,
+benetako argazkiak taula batean hasieratik amaierara gordeko bazenitu bezala.
+Pistan ikus ditzakezun banakako irudiak denbora-lerroko une zehatz bateko laginak
+dira.
+</p>
+<hr size="6">
+<a name="Audioaren-pistak"></a>
+<a name="SEC91"></a>
+<h3 class="subsection"> 6.1.2 Audioaren pistak </h3>
+
+<p align="center"> <img src=".././manual_images_en/track_audio.png" alt="manual_images_en/track_audio">
+</p><p align="center"> <b>Audioaren pistak</b>
+</p>
+<p>Audioaren pistak zure multimediaren soinua adierazten dute uhin formarekin.
+Filmaren analogiari jarraituz, zinta magnetoskopikoa horizontalki 'ikustea'
+bezalakoa da. <br>
+Pistaren zooma horizontalki eta bertikalki doi dezakezu, <b>zoomaren panel-barra</b>
+erabiliz. <br>
+Audioaren 'uhin formaren' zooma doi dezakezu <b>zoomaren panel-barra</b> erabiliz. <br>
+Pistaren ezkerreko kontrolak <b>atributu-panela</b> izena jasotzen du. Atributuen panela
+pisten protaera kontrolatzeko erabiltzen da.
+</p>
+<hr size="6">
+<a name="Pistan-nabigatzea"></a>
+<a name="SEC92"></a>
+<h3 class="subsection"> 6.1.3 Pistan nabigatzea </h3>
+
+<p>Pistan nabigatzeak bai audioaren bai bideoaren pistarekin du zerikusia,
+audio edo bideoaren pista bat hautatzean pistan zehar denbora batera joan zaitezke.
+Programaren leihoak nabigatzeko funtzionalitate asko ditu, eta
+denbora-lerroa memorian egituratua dagoen bezala bistaraten du.
+</p>
+<p>Korritze-barra horizontala denboran zehar mugitzeko erabiltzen da.
+</p>
+<p>Korritze-barra bertikala pisten artean mugitzeko erabiltzen da.
+</p>
+<p>Tresna grafikoetaz gain, teklatua erabil dezakezu nabigatzeko.
+Arau orokorra bezala, teklatuarekin nabigatzea azkarragoa da saguarekin nabigatzea baino.
+Erabili teklatuko <kbd>Orrialdea gora</kbd> eta <kbd>Orrialdea behera</kbd> teklak pistetan
+gora eta behera mugitzeko.
+</p>
+<p>Denbora-lerroaren amaiera baino harutzago joan behar denean korritze-barrak ez du uzten.
+Erabili teklatuko <kbd>Eskuinera</kbd> tekla denbora-lerroaren amaiera igarotzeko.
+</p>
+<p>Erabili teklatuko <kbd>Hasiera</kbd> eta <kbd>Amaiera</kbd> teklak denbora-lerroaren hasierara
+eta amaierara joateko. <b>I-beam</b> moduan eduki <kbd>Maius</kbd> tekla sakatuta
+<kbd>Hasiera</kbd> edo <kbd>Amaiera</kbd> tekla sakatzen duzun bitartean denbora-lerroko
+txertatzeko puntutik tekla sakatu den arteeko eskualdea hautatzeko.
+</p>
+<p>Denbora-lerroaren azpian zoomaren panela aurki dezakezu. Zoomaren panelak
+balio hauek ditu: <b>laginaren zooma</b>, <b>anplitudea</b>, <b>pistaren zooma</b> eta
+<b>kurbaren zooma</b>. Korritze-barren funtzionalitateaz gain, balio hauek
+denbora-lerroan kokatzeko tresna nagusiak dira.
+</p>
+<p align="center"> <img src=".././manual_images_en/zoompanel.png" alt="manual_images_en/zoompanel">
+</p>
+<p><b>Laginaren zooma</b> aldatzeak denbora-lerroan bistaratutako denboraren unitatea
+tamainaz aldatzea dakar. Multimedia banakako fotogrametan ikus dezakezu, edo baita
+proiektuaren luzera osoa ere. Balioa zenbat eta txikiagoa izan, are eta fotograma
+gehiago bistaratuko dira pantailan. <b>Saguak gurpila badu eta X11, edo Xorg,
+zerbitzariarekin funtzionatzen badu, sagua laginaren zoomaren gainean kokatu eta
+gurpilarekin zooma handiagotu edo txikiagotu dezakezu.</b>
+</p>
+<a name="IDX96"></a>
+<p><b>Anplitudeak</b> audioari soilik eragiten dio. Uhin formaren luzera zehazten du,
+uhin forma marrazten bada.
+</p>
+<a name="IDX97"></a>
+<p><b>Pistaren zoomak</b> pista guztiei eragiten die. Pista bakoitzaren altuerari
+eragiten dio. Pistaren zooma aldatzean, anplitudearen zoomak konpentsatzen du
+audioaren uhin forma proportzionalki bistaratzeko.
+</p>
+<a name="IDX98"></a>
+<p><b>Kurbaren zoomak</b> pista guztietako kurbei eragiten die.
+Kurben anplitudea eta desplazamendua zehazten ditu.
+Zoomaren geziek kurbaren anplitudea aldatzen dute, 
+hala ere kurbaren desplazamendua aldatzeko bide bakarra
+<b>doitu kurbak</b> botoia erabiltzea da.
+<img src=".././manual_images_en/fit_curves.png" alt="manual_images_en/fit_curves">
+</p>
+<p>Erabili <kbd>Ezkerrera</kbd> eta <kbd>Eskuinera</kbd> teklak denboran zehar
+urrats txikieta mugitzeko. Denbora-lerroaren amaiera baino harutzago
+joan behar denean korritze-barrak ez du uzten. Erabili teklatuko
+<kbd>Eskuinera</kbd> tekla denbora-lerroaren amaiera igarotzeko.
+</p>
+<p>Erabili teklatuko <kbd>Gora</kbd> eta <kbd>Behera</kbd> geziak laginaren zooma aldatzeko
+(2 balioarekin bidertuz/zatituz).
+</p>
+<p><kbd>Ktrl+Gora</kbd> eta <kbd>Ktrl+Behera</kbd> teklak aldi berean sakatzean anplitudearen
+zooma aldatzen da.
+</p>
+<p><kbd>Ktrl+OrriGora</kbd> eta <kbd>Ktrl+OrriBehera</kbd> teklak aldi berean sakatzean
+pistaren zooma aldatzen da.
+</p>
+<p><kbd>Alt+Gora</kbd> eta <kbd>Alt+Behera</kbd> teklak aldi berean sakatzean
+kurbaren anplitudea aldatzen da.
+</p>
+<hr size="6">
+<a name="Pistaren-laster_002dmenua"></a>
+<a name="SEC93"></a>
+<h3 class="subsection"> 6.1.4 Pistaren laster-menua </h3>
+
+<p>Pista bakoitzak bere laster-menua du. <b>Pistaren laster-menua</b> bistaratzeko
+egin klik saguaren eskuineko botoiarekin pistan. Laster-menuak pistari eragiten
+dio, pista atributuen panelean ainguratuta egon edo ez. 
+Pistaren menuak honako aukerak eskaintzen ditu:
+</p>
+<ul>
+<li> Erantsi efektua - pistaren motari aplika dakiokeen efektuen elkarrizketa-koadroa irekitzen du 
+</li><li> Eraman gora - hautatutako pista urrats bat igotzen du pilan.
+</li><li> Eraman behera - hautatutako pista urrats bat jaisten du pilan.
+</li><li> Ezabatu pista - pista kentzen du programatik
+</li><li> Gehitu pista - pista bat gehitzen du, hautatutako pistaren multimediaren motakoa (audioa/bideoa).
+</li><li> Aldatu pistaren tamaina - Pistaren tamaina aldatzen du
+</li><li> Doitu irteeraren tamaina - Pistaren tamaina aldatzen du uneko irteeraren tamainarekin bat etortzeko
+</li></ul>
+
+<hr size="6">
+<a name="Txertatzeko-puntua"></a>
+<a name="SEC94"></a>
+<h3 class="subsection"> 6.1.5 Txertatzeko puntua </h3>
+
+<p>Cinelerra abiatzen den aurreneko aldiz txertatzeko puntu keinukaria agertzen da programaren leihoan. Testu-prozesadore baten kurtsore baten bezala, txertatzeko puntuak denbora-lerroko
+lekua markatzen du programaren hurrengo aktibitatea non hasiko den adieraziz.
+Gainera, erreproduzitzeko abiapuntua adierazten du. Errendatzean,
+errendatuko den denbora-lerroko eskualdea zehazten du.
+</p>
+<p align="center"> <img src=".././manual_images_en/program_insertion_point.png" alt="manual_images_en/program_insertion_point">
+</p><p align="center"> <b>Txertatzeko puntua programa nagusian,</b>
+</p><p align="center"> <b>marra bertikal batekin markatuta 00:00.500 puntuan.</b>
+</p>
+
+<p>Normalean txertatzeko puntua lekuz alda daiteke denbora-barra barruan klik eginez.
+Etiketekin eta sarrerako edo irteerako puntuekin ilunduta ez dagoen
+denbora-barrako edozein eskualde puntu-beroa da, txertatzeko puntua berriro kokatzeko.
+</p>
+<p align="center"> <img src=".././manual_images_en/main_timebar.png" alt="manual_images_en/main_timebar">
+</p><p align="center"> <b>Denbora-barra nagusia</b>
+</p>
+<p>Eragiketa moduaren arabera, txertatzeko puntua denbora-lerroan klik eginez
+posizioz alda daiteke.
+</p>
+<p>Txertatzeko puntuak bi eragiketa modu ditu:
+</p><ul>
+<li> arrastatu eta jaregin modua
+</li><li> ebaki eta itsatsi modua
+</li></ul>
+
+<p>Atributuen panelean gezia edo i-beam hautatzen den arabera zehazten da eragiketaren modua.
+</p>
+<p align="center"> <img src=".././manual_images_en/editing_mode.png" alt="manual_images_en/editing_mode">
+</p><p align="center"> <b>Muntatzeko moduaren botoiak</b>
+</p>
+<a name="IDX99"></a>
+<a name="IDX100"></a>
+<p>Gezia nabarmenduta bada, <b>arrastatu eta jaregin</b> modua gaitzen da.
+Arrastatu eta jaregin moduan, denbora-lerroan klik egitean ez da txertatzeko
+puntua posizioz aldatzen. Horren ordez, muntaketa osoa hautatzen da.
+Denbora-lerroan arrastatzean muntaketa aldatzen posizioz da, 
+beste muntaketen mugetara atxikituz. Oso erabilgarria da audioaren
+erreprodukzio-zerrenda berriro ordenatzeko eta efektuak lekuz
+aldatzeko.
+</p>
+<a name="IDX101"></a>
+<a name="IDX102"></a>
+<p>I-beam nabarmentzen bada, <b>ebaki eta itsatsi</b> modua gaitzen da.
+Ebaki eta itsatsi moduan, denbora-barran klik egitean txertatzeko puntua
+posizioz aldatzen da. Denbora-lerroan arrastatzean eskualde bat nabarmentzen da.
+Nabarmendutako eskualdea erreproduzituko den eskualdea izango da hurrengo erreprodukzioan,
+edo errendatuko den eskualdea errendatzean. Gainera, nabarmendutako eskualdean
+eragingo dute ebaki eta itsatsi eragiketek.
+</p>
+<p align="center"> <img src=".././manual_images_en/program_highlight.png" alt="manual_images_en/program_highlight">
+</p><p align="center"> <b>Pistak nabarmendutako eskualdearekin area berdearen barruan
+</b> </p><p><b>erakusten dira</b>
+</p>
+<p>Denbora-lerroan <b>Maius+klik egitea</b> nabarmendutako eskualdea zabaltzen du.
+</p>
+<p>Denbora-lerroan <b>Klik bikoitza eginez</b> kurtsorea kokatuta dagoen
+muntaketa osoa hautatzen da.
+</p>
+<p>Txertatzeko puntua lekuz aldatzean eta eskualdeak hautatzean
+posizioak fotogrametara edo laginetara lerrokatzen dira.
+Bideoa muntatzean fotogrametara lerrokatzea nahi izango duzu. Audioa muntatzean
+laginetara lerrokatzea berriz. Hautatu zure hobespenak
+<b>Ezarpenak -&gt; Lerrokatu kurtsorea fotogrametara</b> menuan.
+</p>
+<p>Nabarmendutako eskualdea ebaki eta itsatsi eragiketek eragina izateko eskualdea bada,
+nola ebaki eta itsas dezaket <b>arrastatu eta jaregin</b> moduan? Kasu honetan,
+<b>sarrerako/irteerako puntuak</b> ezarri behar dituzu eragina izango duen eskualdea
+definitzeko.
+</p>
+<hr size="6">
+<a name="Sarrerako_002fIrteerako-puntuak"></a>
+<a name="SEC95"></a>
+<h3 class="subsection"> 6.1.6 Sarrerako/Irteerako puntuak </h3>
+
+<p>Bi muntaketa moduetan ezar ditzakezu sarrerako/irteerako puntuak.
+Sarrerako/irteerako puntuek zehazten dute eragina izango duen eskualdea.
+Arrastatu eta jaregin moduan eragina izango duen eskualdea definitzeko soilik
+erabiltzen dira. Bai <b>ebaki eta itsatsi</b> moduan bai <b>arrastatu eta jaregin</b> moduan
+nabarmendutako eskualdeak sarrerako/irteerako puntuak gainjartzen ditu.
+Nabarmendutako eskualdea eta sarrerako/irteerako puntuak ezartzen badira, 
+muntatze-eragiketek nabarmendutako eskualdean eragingo dute, eta ez ikusi
+egingo die sarrerako/irteerako puntuei. Eskualderik ez bada nabarmentzen,
+sarrerako/irteerako puntuak erabiliko dira.
+</p>
+<p>Normalean, sarrerako/irteerako puntuek ez dute erreproduzioaren eskualdean
+eragiten. Sarrerako/irteerako puntuek erreprodukzioaren eskualdea zehazten
+dute baldin eta <kbd>Ktrl</kbd> tekla sakatuta edukitzen baduzu erreproduzitzeko
+komandoari deitzean.
+</p>
+<p>Sarrerako/irteerako puntuak ezartzeko, joan denbora-barrara eta kokatu
+txertatzeko puntua posizio batean. Hautatu  <img src=".././manual_images_en/in_point_button.png" alt="manual_images_en/in_point_button"> <b>sarrerako puntuaren botoia</b>. 
+Gero, joan sarrerako puntutik eskuinera
+eta egin klik <img src=".././manual_images_en/out_point_button.png" alt="manual_images_en/out_point_button"> <b>irteerako puntuaren botoian</b>.
+</p>
+<p align="center"> <img src=".././manual_images_en/inout_points.png" alt="manual_images_en/inout_points">
+</p><p align="center"> <b>Denbora-barra sarrerako/irteerako puntuekin</b>.
+</p>
+<p>Sarrerako edo irteerako puntua hautatzen baduzu, txertatzeko puntua posizio horretara
+joango da. Sarrerako puntu bat hautatu ostean, <b>sarrerako puntuaren botoian</b> klik
+egitean sarrerako puntua ezabatu egingo da. Irteerako puntu bat hautatu ostean, 
+<b>irteerako puntuaren botoian</b> klik egitean irteerako puntua ezabatu egingo da.
+</p>
+<p>Sarrerako/irteerako puntuak existitzen diren unean, edonon eskualde
+bat hautatzen baduzu, puntu horiek posizioz aldatu egingo dira 
+sarrerako/irteerako botoietan klik egitean.
+</p>
+<p>Sarrerako/irteerako puntu batean <b>Maius+klik egitean</b>, txertatzeko
+puntuaren eta sarrerako/irteerako puntuaren arteko eskualdea nabarmenduko da.
+</p>
+<p>Sarrerako/irteerako botoiak erabili ordez, <kbd>[</kbd> eta <kbd>]</kbd> teklak
+erabil ditzakezu sarrerako/irteerako puntuak txandakatzeko.
+</p>
+<p>Bai <b>ebaki eta itsatsi</b> moduan bai <b>arrastatu eta jaregin</b> moduan
+sarrerako/irteerako puntuek nabarmendutako eskualdea gainjartzen dute.
+Nabarmendutako eskualdea eta sarrerako/irteerako puntuak ezartzen badira, 
+nabarmendutako eskualdeak erreprodukzioari eragingo dio, eta 
+sarrerako/irteerako puntuek muntatze-eragiketei. Nahasketarik ez sortze arren,
+une berean bi moduak batera ez edukitzea gomendatzen da.
+</p>
+<p>Txertatzeko puntua eta sarrerako/irteerako puntuak erabili eragina izango duen
+eskualdea definitzeko, baina ez dizute denbora-lerroko posizio zehatzetan
+errez kokatzen utziko. Horretarako etiketak erabili.
+</p>
+<hr size="6">
+<a name="Etiketak-erabiltzea-programaren-leihoan"></a>
+<a name="SEC96"></a>
+<h3 class="subsection"> 6.1.7 Etiketak erabiltzea programaren leihoan </h3>
+
+<p>Denbora-lerroko posizio zehatzetara joateko erabiltzen dira etiketak.
+Leku batean txertatzeko puntua jartzean eta <img src=".././manual_images_en/label_button.png" alt="manual_images_en/label_button"> <b>etiketa botoian</b>
+klik egitean etiketa berri bat agertzen da denbora-lerroan.
+</p>
+<p align="center"> <img src=".././manual_images_en/timebar_label.png" alt="manual_images_en/timebar_label">
+</p><p align="center"> <b>Denbora-barra etiketarekin</b>
+</p>
+<p>Berdin dio zein diren zoomaren ezarpenak, etiketaren posizioan klik egitean
+txertatzeko puntua zehatz mehatz kokatuko da posizio horretan. Etiketa bat
+hautatuta dagoela etiketa botoian berriro klik egitean, hautatutako
+etiketa ezabatu egingo da.
+</p>
+<p>Etiketa batean <b>Maius+klik egitean</b> nabarmendutako eskualdea zabaltzen da.
+</p>
+<p>Etiketen artean <b>klik bikoitza egitean</b> etiketen arteko eskualdea nabarmentzen da.
+</p>
+<p>Teklatuko <kbd>l</kbd> tekla sakatzeak etiketa botoiaren eragin berdina du.
+</p>
+<p>Eskualdea nabarmenduta dagoenean etiketa botoia sakatzen baduzu, 
+nabarmendutako eskualdearen hasieran eta amaieran etiketak sortuko dira.
+Hala ere, hasierak edo amaierak etiketa bat badu, existitzen den etiketa
+ezabatu egingo da.
+</p>
+<p>Etiketek txertatzeko puntua posizioz alda dezakete hautatzen direnean,
+baina etiketaren <img src=".././manual_images_en/label_traversal.png" alt="manual_images_en/label_traversal"> <b>zeharkako botoiekin</b> ere zeharkatu daitezke. Etiketa ikuspegitik kanpo dagoenean, etiketaren zeharkako botoiek
+denbora-lerroa berriro jartzen dute etiketa ikusgai izateko. Zeharkako etiketekin aritzeko
+ere badaude laster-teklak.
+</p>
+<p><kbd>Ktrl+Ezkerrera</kbd> teklak sakatuz txertatzeko puntua aurreko etiketan jartzen da.
+</p>
+<p><kbd>Ktrl+Eskuinera</kbd> teklak sakatuz txertatzeko puntua hurrengo etiketan jartzen da.
+</p>
+<p>Zeharkako etiketarekin atzera eta aurrera azkar joan zaitezke denbora-lerroan zehar.
+Horretaz gain, eskualdeak hautatzeko ere erabil ditzakezu.
+</p>
+<p><kbd>Maius+Ktrl+Ezkerrera</kbd> teklak sakatuz txertatzeko puntuaren eta aurreko
+etiketaren arteko eskualdea nabarmentzen da.
+</p>
+<p><kbd>Maius+Ktrl+Eskuinera</kbd> teklak sakatuz txertatzeko puntuaren eta hurrengo
+etiketaren arteko eskualdea nabarmentzen da.
+</p>
+<p>Etiketa botoian edo <kbd>l</kbd> tekla eskuz sakatuz banan bana etiketa multzo bat
+ezabatzea nahiko nekagarria gerta daiteke. Etiketa multzo bat ezabatzeko
+aurrenik nabarmendu eskualdea. Gero erabili <b>Editatu -&gt; Garbitu etiketak</b> menua.
+Sarrerako/irteerako puntuak existitzen badira, hauen arteko etiketak garbituko dira, 
+nabarmendutako eskualdeari ez ikusi eginez.
+</p>
+<p><b>Etiketak editatzea edo blokeatzea lekuz aldatzeko:</b> <br>
+<b>Ebaki eta itsatsi</b> edizio moduan soilik, <b>Ezarpenak</b> menuan 
+&quot;Editatu etiketak&quot; gaituz edo desgaituz programaren tresna-barrako 
+<img src=".././manual_images_en/locklabels_unlocked.png" alt="manual_images_en/locklabels_unlocked"> <b>Blokeatu etiketak mugitzea</b> botoia
+ebaki, kopiatu edo itsatsi egingo da ainguratutako pistaren hautatutako eskualdean. <br>
+Honen antzera, baliabide baten hautatutako area ikustailetik denbora-lerroko
+etiketen aurreko posizio batean lotzen bada, etiketa hauek denbora-barran
+eskuinera eramango dira hautatutako arearen luzera kontutan izanik. <br>
+</p>
+<p>Etiketak denbora-barran mugitzea saihesteko, desgaitu &quot;Editatu etiketak&quot; aukera
+edo gaitu <img src=".././manual_images_en/locklabels_unlocked.png" alt="manual_images_en/locklabels_unlocked"> <b>Blokeatu etiketak mugitzea</b> botoia. <br>
+<b>Arrastatu eta jaregin</b> edizio moduan etiketak beti daude blokeatuta denbora-barran, 
+nahiz eta &quot;Editatu etiketak&quot; aukera gaituta egon.
+</p>
+<hr size="6">
+<a name="Muntaketa"></a>
+<a name="SEC97"></a>
+<h2 class="section"> 6.2 Muntaketa </h2>
+
+<p>Muntaketak denboraren eta pisten domeinua eskatzen du. Denbora-lerroak
+pisten pila duenez, pistak nola sortu eta ordenatzen diren buruzko ardura
+hartzeaz gain, multimedia bat pista batean zenbat denboran agertzen den ere
+kontrolatu beharko duzu.
+</p>
+<p>Denboraren domeinuan, Cinelerra-k hainbat bide eskaintzen ditu
+muntaketa prozesura hurbitzeko. Hiru metodo nagusiak honakoak dira:
+bi pantailetako muntaketa, arrastatu eta jaregin muntaketa eta
+ebaki eta itsatsi muntaketa.
+</p>
+<p>Metodo guztiei aplikatzen zaien hainbat kontzeptu erabiltzen ditu
+Cinelerra-k muntaketan. <b>Denbora-lerroa</b> muntatze-erabaki guztiak adierazteko
+erabiltzen da. Denbora-lerroak leiho nagusiaren erdian pisten pila bat dauka.
+Gora, behera, ezkerrera eta eskuinera korritu daiteke eskuinean eta behean dituen
+korritze-barrekin. Saguaren gurpilarekin ere gora eta behera korritu daiteke.
+</p>
+<p><b>Eskualde aktiboa</b>: denbora-lerroan muntaketako komandoek eragiten dioten
+denbora eskualdea da. Denbora-lerroan egon daitezkeen sarrerako/irteerako
+puntuek zehazten dute eskualde aktiboa. Sarrerako/irteerako punturik ez badaude,
+nabarmendutako eskualdea erabiliko da. Nabarmendutako eskualderik ez balego
+txertatzeko puntua erabiliko da eskualde aktiboaren hasiera gisa.
+Komando batzuk, adibidez <b>Errendatu</b>, txertatzeko puntutik hasita eskuinera
+dagoen eskualde guztia hartzen du aktibo gisa. Beste efektu batzuk luzera
+aktiboa 0 bezala hartzen dute eskualde aktiboaren amaierako punturik ez bada
+definitzen.
+</p>
+<p>Azkenik, muntatze-erabakiek ez dute eraginik materialaren iturburuan.
+Honi <b>Muntaketa ez suntsitzailea</b> deitzen zaio, eta oso ospetsua egin da
+audioaren arloan multimedia guztia kopiatu eta editatzea baino askoz ere
+azkarragoa baita. Muntaketak materialaren iturburura zuzentzen dituzten erakusleak
+ditu, hori dela eta, muntatze-erabakiak adierazten duen multimediako fitxategi
+bat edukitzea nahi baduzu, <b>Errendatu</b> egin beharko duzu. See section <a href="cinelerra_cv_manual_eu_19.html#SEC256">Fitxategiak errendatzea</a>.
+</p>
+<p>Denbora-lerroko pista bakoitzak atributu multzoa du ezkerrean, garrantzitsuena
+<b>Ainguratu pista</b> atributua da.
+</p>
+
+<hr size="6">
+<a name="Atributu_002dpanela"></a>
+<a name="SEC98"></a>
+<h3 class="subsection"> 6.2.1 Atributu-panela </h3>
+
+<p>Denbora-lerroaren ezkerretara atributu-panela izeneko eskualdea dago.
+Atributu-panelak pista bakoitzaren ezaugarriak gaitzen ditu. Pista guztiek
+testu-eremua dute pistaren izenarekin.
+</p>
+<p>Pista guztiak dute <b>zabaltzailea</b> <img src=".././manual_images_en/expandpatch_checked.png" alt="manual_images_en/expandpatch_checked">,
+aukera gehiago eta pistaren efektuak ikusteko. Egin klik zabaltzailean pista
+zabaltzeko edo tolesteko. Zabaltzailearen gezia albora zuzentzen badu, pista
+tolestuta dago. Beherantz zuzentzen badu, pista zabalduta dagoela adierazten du.
+Existitzen diren efektuak pistaren multimediaren azpian agertuko dira.
+</p>
+<p>Pista bakoitzak honako hainbat funtzionalitateen txandakatzaileen errenkada ditu.
+</p>
+<p align="center"> <img src=".././manual_images_en/track_attributes.png" alt="manual_images_en/track_attributes">
+</p><p align="center"> <b>Pistaren atributuak</b>
+</p>
+<p>Txandakatzailea koloreztuta dagoenean gaituta dagoela adierazten du.
+Txandakatzailea atzeko planoko kolorearekin egonez gero, desgaituta dagoela
+adierazten du. Egin klik txandakatzailean funtzionalitatea gaitzeko edo desgaitzeko.
+Saguaren zenbait eragiketek hainbat pisten aldi bereko konfigurazioa bizkortzen dute.
+</p>
+<p>Egin klik atributu batean eta arrastatu alboko pistetara atributu hori
+beste pistetan kopiatzeko.
+</p>
+<p>Mantendu <kbd>Maius</kbd> tekla sakatuta pistaren atributuan klik egitean
+uneko pistaren atributua gaitu eta beste pista guztien atributua
+txandakatzeko.
+</p>
+<p>Mantendu <kbd>Maius</kbd> tekla sakatuta atributuan klik egitean. Egin klik
+hautatutako ez beste pista guztiak desgaitu arte. Gero, arrastatu
+kurtsorea alboko pistara dagokion atributua gaitzeko.
+</p>
+<p>Beste atributuek pistaren irteerari eragiten diote:
+<a name="IDX103"></a>
+<a name="IDX104"></a>
+</p><ul>
+<li> <b>Erreproduzitu pista</b> <br>
+Pista errendatu den edo ez zehazten du. Desgaituta egonez gero,
+pista ez da errendatuko. Hala ere, pista beste pista bati kateatuta badago,
+beste pistak efektu guztiak lantzen ditu kateatutako pistetan, 
+erreprodukzioaren egoera kontutan izan gabe.
+
+<a name="IDX105"></a>
+<a name="IDX106"></a>
+</li><li> <b>Ainguratu pista</b> <br>
+Pista ainguratuta dagoen edo ez zehazten du. <b>Ainguratutako pistei</b>
+soilik eragiten dizkie muntaketako eragiketek. Ziurtatu helburuko nahikoa
+pista ainguratuta dituzula materiala itsastean edo lotzean, bestela materialaren
+pista batzuk kanpoan utziko baitira. <br>
+
+<p>Muntaketako eragiketak murrizteaz gain, ainguratutako pistak eskualde aktiboarekin
+konbinatuz fitxategiak kargatzean materiala non txertatuko den zehazten du.
+Fitxategiak txertatzeko estrategitariko batekin (existitzen den proiektua
+ezabatzen ez duena) kargatzen badira, ainguratutako pistak helburuko pista gisa erabiliko
+dira. <br>
+<kbd>Tabulatzailea</kbd> tekla sakatuz kurtsorea pistaren gainean edozein lekutan dagoela,
+pistaren ainguraren egoera txandakatzen da. <br>
+<kbd>Maius+Tabulatzailea</kbd> laster-tekla sakatuz kurtsorea pistaren gainean edozein
+lekutan dagoela, beste pista guztien ainguraren egoera txandakatzen da.
+</p>
+<a name="IDX107"></a>
+<a name="IDX108"></a>
+</li><li> <b>Elkartu audio-maila</b> <br>
+
+<p>Audio-maila doitzen ari zaren beste audio-mailari jarraitzea eragiten du.
+<b>Ainguratu pista</b> gaituta dagoenean soilik audio-maila bat elkartuko da.
+Normalean hau pista guztien audio-mailak aldi berean doitzeko erabiltzen da.
+Elkartutako pista guztien <b>Desplazamendua</b> parametroak sinkronitzatzea
+eragiten du elkartzeak.
+</p>
+<a name="IDX109"></a>
+<a name="IDX110"></a>
+</li><li> <b>Marraztu multimedia</b> <br>
+
+<p>Irudien fotogramak edo uhin-formak pistan marraztuko diren edo ez zehazten du.
+Lehenetsi gisa, fitxategi-formatu batzuk atributu hau desgaituta kargatzen dira,
+beste fitxategi-formatu batzuk berriz atributua gaituta kargatzen direlarik.
+Fitxategi-formatu batek denbora-lerroan marrazteko behar duen denboraren arabera dago.
+Gaitu atributu hau baldin eta edozein fitxategi-formaturen irudien fotogramak ikustea
+nahi badituzu.
+</p>
+<a name="IDX111"></a>
+<a name="IDX112"></a>
+</li><li> <b>Pista mutua</b> <br>
+
+<p>Irteera botatzea eragiten du behin pista erabat errendatutakoan.
+Berdin dio <b>erreproduzitu pista</b> gaituta dagoen edo ez, beti gertatzen da
+atributu hau gaituta egonez gero. 
+Pista efektu-kate baten zati bada, efektu-katearen pistaren irteera amaierako
+irteeran gainjartzen da, nahiz eta beste pista batera bideratuta egon. 
+Efektu-katearen pista pistaren iturburuaren irteeran 
+gainjartzea saihesteko erabiltzen da pista mutua.
+</p>
+<a name="IDX113"></a>
+</li><li> <b>Iraungitzailea</b> <br>
+Pista guztiek dute iraungitzaile bat, baina iraungitzaile bakoitzaren unitateak
+pistaren motak zehazten du: bideoa edo audioa den arabera. Klik egin eta arrastatu
+iraungitzailea, pista piskanaka agertzeko edo desagertzeko. Multimedia mota
+berdineko beste pista batzuekin elkartuta badago, <b>ainguratu</b> atributua gaituta,
+beste pisten iraungitzaileak hemengoari jarrituko diote. Eduki <kbd>Maius</kbd> tekla
+sakatuta eta arrastatu iraungitzailea 0 baliora zentratzeko.
+</li></ul>
+
+<hr size="6">
+<a name="Pistak-desplazatzea"></a>
+<a name="SEC99"></a>
+<h3 class="subsection"> 6.2.2 Pistak desplazatzea </h3>
+
+<p>Pista bakoitzak desplazamenduaren testu-eremua du atributuen panelean.
+Pista zabaldu behar duzu desplazamendua bistaratzeko. Atributuen panela
+zabaltzen denean agertuko diren ikuspegiak honakoak dira.
+</p>
+<p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
+</p><p align="center"> <b>Audioko pistaren panoramikoa eta desplazamendua</b>
+</p>
+<p align="center"> <img src=".././manual_images_en/vpatches.png" alt="manual_images_en/vpatches">
+</p><p align="center"> <b>Bideoko pistaren gainjartze modua eta desplazamendua</b>
+</p>
+<p>Pista erreproduzitzean ezkerrera edo eskuinera desplazatuko den kopurua
+da desplazamendua. Pista ez da desplazatuta agertzen denbora-lerroan,
+erreproduzitzean soilik bistaratzen da desplazatuta. Oso erabilgarria
+da bideoa eta audioa sinkronizatzeko, estereo faltsua sortzeko, edo
+denbora desplazatzen duen efektu bat konpentsatzeko, guzti hau muntaketan
+eragiketarik egin gabe.
+</p>
+<p>Denboran desplazatzeko kopurua soilik sartu, pista berehala desplazatzeko.
+Balio negatiboek pista beranduago erreproduzitzea eragiten dute.
+Balio positiboek berriz pista lehenago erreproduzi arazten dute.
+Desplazamenduaren unitatea <b>segundoa</b> edo pistaren jatorrizko
+unitatea da. Unitateak hautatzeko <b>saguaren eskuineko botoiarekin egin klik</b>
+desplazamenduaren testu-eremuan eta testuinguruko menua erabiliz.
+</p>
+<p>Desplazamenduaren ezarpenak elkar daitezke <b>Elkartu iraungitzaileak</b> eta
+<b>Ainguratu pista</b> txandakatzaileekin.
+</p>
+<p>Erabili saguaren gurpila desplazamenduaren testu-eremuan balioa handitzeko
+edo gutxiagotzeko.
+</p>
+<hr size="6">
+<a name="Pista-panoramikoak"></a>
+<a name="SEC100"></a>
+<h3 class="subsection"> 6.2.3 Pista panoramikoak </h3>
+
+<p>Audioko pistek panoramikoaren kutxa dute beraien atributu-panelean.
+Atributu-panela zabaldu behar da panoramikoaren kutxa bistaratzeko.
+</p>
+<p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
+</p><p align="center"> <b>Bideoko pistaren gainjartze modua eta desplazamendua</b>
+</p>
+<p>Jarri kurtsorea panoramikoaren kutxan, egin klik eta arrastatu
+audioaren irteera posizioz aldatzeko bozgorailuen antolamenduan.
+Bozgorailu bakoitzaren ozentasuna arrastatzean bistaratzen da.
+Panoramikoaren kutxak algoritmo berezia erabiltzen du bozgorailu batean
+edo, bi bozgorailu baino gehiago erabiltzen badira, bozgorailu gertuenetan
+audioa fokatzeko.
+</p>
+<hr size="6">
+<a name="Pistak-panoramiko-automatikoarekin"></a>
+<a name="SEC101"></a>
+<h3 class="subsection"> 6.2.4 Pistak panoramiko automatikoarekin </h3>
+
+<p>Zenbait funtzio erabilgarri eskaintzen dira panoramikoa automatikoki
+hainbat estandar arruntekin ezartzeko. Hauek <b>Audioa</b> menuan zerrendatzen
+dira. Funtzio hauek <b>Grabazioa</b> gaituta duten audioko pistei soilik eragiten die.
+</p>
+<ul>
+<li> <b>Audioa -&gt; 1:1 erlazioa</b> <br>
+
+<p>Pista bakoitza bere kanal propiora mapatzen du, eta itzulbiratu egiten du
+kanal guztiak esleitutakoan. Gehien bat 2 kanaleko 2 pista estereora
+mapatzeko erabiltzen da, baita 6 kanaleko 6 pista 6 kanaleko
+soinu-txartelera mapatzeko ere.
+</p>
+</li><li> <b>Audioa -&gt;5.1:2 erlazioa</b> <br>
+Honek 6 pista 2 kanaletara mapatzen ditu. Proiektuak 2 kanal eduki behar
+ditu funtzio hau erabiltzeko. Joan <b>Ezarpenak -&gt; Formatua</b> menura
+irteera 2 kanalekin ezartzeko. Gehien bat 5.1 motako audioa estereora
+bihurtzeko erabiltzen da.
+</li></ul>
+
+<hr size="6">
+<a name="Audio_002dmapaketa-estandarra"></a>
+<a name="SEC102"></a>
+<h3 class="subsection"> 6.2.5 Audio-mapaketa estandarra </h3>
+
+<p>Nahiz eta Cinelerra-k edozein audioko pista edozein bozgorailura mapatzen utzi,
+erlazio edo mapa estandarrak daude. Mapa estandar hauek erabiltzea gomendatzen
+dizugu multimedia edonon erreproduzi daitekeela ziurtatzeko. Gainera, 
+audioaren kodetzaile gehienek audioko pistak bozgorailu kopuru estandarrera
+mapatzea eskatzen dute, bestela ez dutelako funtzionatuko.
+</p>
+<a name="IDX114"></a>
+<a name="IDX115"></a>
+<p><b>Kanalaren posizioa</b> trepetan, See section <a href="cinelerra_cv_manual_eu_4.html#SEC58">Proiektuaren atributuak</a>, 
+kanalak dagokien irteerako pistari egokitzeko zenbatzen dira.
+Estereoarentzako, 1.go kanalaren iturbura ezkerreko pista izan behar du, 
+eta 2.go kanalaren iturburua eskuineko pista.
+5.1 inguruko soinuan, 6 kanaletako iturburua honako ordenean egon behar dute:
+zentrua, aurre-ezkerra, aurre-eskuina, atze-ezkerra, atze-eskuina eta maiztazun baxuaren
+efektuak. Eskuineko pistak ez badira eskuineko bozgorailuekin mapatzen, 
+audioaren kodetzaile gehienek ez dute eskuineko informaziorik kodetuko.
+Kasu gehienetan, maiztasun baxuaren efektuen pistan ezin dira maiztasun altuak gorde.
+</p>
+<hr size="6">
+<a name="Pistak-ikutzea"></a>
+<a name="SEC103"></a>
+<h3 class="subsection"> 6.2.6 Pistak ikutzea </h3>
+
+<p>Cinelerra-ko pistek bideoa edo audioa eduki dezakete. Pistek ez dute ezer
+berezirik, multimedia motako edukia soilik. Proiektu berri bat sortzean,
+pista kopuru lehenetsia du. Menua erabiliz pistak gehitu edo ezaba ditzakezu.
+<b>Pistak</b> menuan aukera batzuk agertzen dira hainbat pista aldi berean
+tratatzeko. Pista bakoitzak bere laster-menua du, pista bakarrari
+eragiten diolarik.
+</p>
+<p>Laster-menua bistaratzeko mugitu sagua pistaren gainean eta egin klik
+saguaren eskuineko botoiarekin. Laster-menuak dagokion pistari eragingo dio, 
+pista ainguratuta dagoen edo ez kontutan hartu gabe. <br>
+<a name="IDX116"></a>
+<a name="IDX117"></a>
+<b>Eraman gora</b> eta <b>Eraman behera</b> aukerek pista urrats bat gora edo behera
+eramaten du pilan. <b>Ezabatu pista</b> aukerak pista ezabatzen du.
+</p>
+<p><b>Pistak</b> menuko eragiketek ainguratutako pistei soilik eragiten diete:
+</p><ul>
+<li> <b>Eraman pistak gora</b> eta <b>Eraman pistak behera</b> ainguratutako pista
+guztiak urrats bat gora edo behera eramaten ditu pilan.
+<a name="IDX118"></a>
+<a name="IDX119"></a>
+</li><li> <b>Ezabatu pistak</b> ainguratutako pistak ezabatzen ditu.
+</li><li> <b>Ezabatu azken pista</b> aukerak azken pista ezbatzen du (ainguratuta egon edo ez). 
+<kbd>d</kbd> tekla sakatuta edukiz pista guztiak ezabatzen ditu.
+<a name="IDX120"></a>
+<a name="IDX121"></a>
+</li><li> <b>Kateatu pistak</b> korapilotsuagoa da. Erreproduzi daitekeen pista bakoitza
+hartu eta ainguratutako aurreneko pistaren amaieran kateatzen da. Ainguratutako
+bi pista badaude bi pista erreproduzigarriekin, kateatzeko eragiketak bi pista
+erreproduzigarriak ainguratutako bi pisten atzetik jarriko ditu. Hauen ordez hiru
+pista erreproduzigarriak egonez gero, bi pista ainguratutako pisten atzetik jarriko
+dira, eta hirugarrena ainguratutako aurreneko pistaren atzean. Helburuko pista
+itzulbiratzen egongo da pista erreproduzigarri guztiak kateatu arte.
+</li></ul>
+
+<p>Azkenik, pista berriak sortzea nahi izan dezakezu. <b>Audioa</b> eta <b>Bideoa</b> menuek
+dagokien motako pista bat gehitzeko aukera dute. Audioaren kasuan, 
+pista berria denbora-lerroko pilaren behean kokatuko da eta audioaren irteerako
+kanala 1 balioarekin gehituko da. Bideoaren kasuan, pista berria denbora-lerroaren
+goian jarriko da. Honela, bideoak konposatzeko ordena naturala izango du. Bideoaren
+pista berriak pista zaharren gainean gainjarriko dira.
+</p>
+<hr size="6">
+<a name="Bi-pantailako-muntaketa"></a>
+<a name="SEC104"></a>
+<h3 class="subsection"> 6.2.7 Bi pantailako muntaketa </h3>
+
+<p>Filmeen fitxategiekin muntaketa bat lantzeko modurik azkarrena da.
+Honen helburua pantaila batean filmea eta beste pantailan programa ikustea da.
+Filmearen azpiatalak leiho batean definitzen dira eta beste pantailako
+programaren amaierara bidaltzen dira.
+</p>
+<p>Bi pantailako muntaketaren saioa hasteko zenbait baliabide kargatu behar dira.
+<b>Fitxategia -&gt; Kargatu</b> menuan kargatu zenbait filma <b>Sortu baliabide berriak</b>
+txertatzeko moduarekin. Denbora-lerroa aldatu gabe mantentzea nahiko duzu
+baliabide berriak bertara eramatean. Joan 'Baliabidea' leihora eta hautatu
+<b>multimedia</b>ren (Media) karpeta. Kargatu berri diren baliabideak agertu beharko
+lukete. Arrastatu baliabide bat multimediaren leihotik 'Ikustailea' leihora.
+</p>
+<p>Ainguratutako nahikoa pista egon beharko lukete denbora-lerroan, materialaren
+iturburuen azpiatalak jartzeko. Ez egonez gero, sortu pista berriak edo
+ainguratu pista gehiago.
+</p>
+<p>Ikustailearen leihoan, erabiltzea nahi duzun kliparen hasierako puntuan kokatu.
+<b>graduatzailea</b> edo <b>desplazatzeko komandoak</b> erabil ditzakezu.
+Erabili <b>Aurrebistaren eskualdea</b> bilaketa mugatzeko. Ezarri hasierako
+puntua <img src=".././manual_images_en/in_point_button.png" alt="manual_images_en/in_point_button"> <b>sarrerako puntua</b> botoiarekin.
+</p>
+<p>Erabiltzea nahi duzun kliparen amaierako puntuan kokatu. Ezarri amaierako
+puntua <img src=".././manual_images_en/out_point_button.png" alt="manual_images_en/out_point_button"> <b>amaierako puntua</b> botoiarekin.
+Orain, bi puntuak denbora-barran agertuta egon beharko lukete, klip bat definituz.
+</p>
+<p>Kliparekin hainbat gauza egin ditzakezu orain.
+</p>
+<ul>
+<li> <b>Lotu</b> <br>
+<img src=".././manual_images_en/splice_button.png" alt="manual_images_en/splice_button"> Klipa txertatzen du denbora-lerroan,
+beste guztia atzera bultzatuz. Denbora-lerroan <b>sarrerako edo irteerako puntua</b>
+existitzen bada, posizio horretan txertatuko da. Bestela, txertatzeko puntuaren
+ondoren txertatuko da. Txertatu eta gero, txertatzeko puntua kliparen amaieran
+kokatuko da. Ez badago sarrerako/irteerako punturik, txertatzeko puntua erabiliko da
+hurrengo lotzeko eragiketaren posizio gisa. Honela, klipak bata bestearen atzetik
+lotuz filmea osa dezakezu.
+
+</li><li> <b>Gainidatzi</b> <br>
+<img src=".././manual_images_en/overwrite_button.png" alt="manual_images_en/overwrite_button"> Denbora-lerroko eskualdea kliparekin
+gainidazten du. Denbora-lerroan <b>sarrerako edo irteerako puntua</b>
+existitzen bada, posizio horretan gainidatziko da. Eskualde bat nabarmenduta
+egonez gero, edo sarrerako eta irteerako puntuak existitzen badira, 
+eskualde aktiboaren eta kliparen luzeraren arteko desberdintasuna ezabatu
+egingo da.
+
+</li><li> <b>Sortu klipa</b> <br>
+<img src=".././manual_images_en/toclip_button.png" alt="manual_images_en/toclip_button"> Baliabideen lehioan klip berria
+sortzen du, bere edukia eragindako eskualdea delarik, baina ez du denbora-lerroa aldatzen.
+Klip bakoitzak titulu eta azalpen bat du (hauek aukerazkoak dira).
+</li><li> Kopiatzearen portaera 'ebaki eta itsatsi' muntaketan gertatzen den bezalakoa da.
+</li></ul>
+<p>Teklatuko lasterbideak erabiliz bi pantailako muntaketa erabat landu daiteke.
+Saguaren erakuslea botoi baten gainera eramatean argibidea agertzen da,
+botoi horri dagokion laster-tekla erakutsiz. 'Ikustailea' leihoan, 
+teklatu numerikoko teklek kontrolatzen dute desplazamendua;
+<kbd>[</kbd>, <kbd>]</kbd> eta <kbd>v</kbd>  teklek sarrerako/irteetako puntuak eta
+lotzea lantzen dituzte.
+</p>
+<hr size="6">
+<a name="Arrastatu-eta-jaregin-muntaketa"></a>
+<a name="SEC105"></a>
+<h3 class="subsection"> 6.2.8 Arrastatu eta jaregin muntaketa </h3>
+
+<p><b>Arrastatu eta jaregin muntaketa</b> Cinelerra-n lan egiteko modu azkar
+eta erosoa da, sagua soilik erabiliz. Oinarrizko kontzeptua klip sorta bat
+sortzea da, gero klip hauek denbora-lerroan arrastatu,  filmaren prototipoa
+eraiki eta konposaketa-leihoan ikusteko. Prototipoa ikusi ostean klipak
+berrantolatzea nahi izanez gero, arrastatu eta jaregin itzazu denbora-lerroan.
+</p>
+<ol>
+<li> Kargatu fitxategi batzuk <b>Fitxategia -&gt; Kargatu</b> menua erabiliz.
+</li><li> Ezarri <b>Sortu baliabide berriak</b> txertatzeko modua. Honekin fitxategiak
+baliabideen leihoan kargatuko dira.
+</li><li> Sortu audio eta bideoko hainbat pista denbora-lerroan (bideo eta
+audioaren menuak erabiliz).
+</li><li> Ireki <b>Media</b> (multimedia) karpeta baliabideen leihoan.
+</li><li> Ziurtatu beharrezko pistak ainguratuta daudela eta arrastatu multimediaren
+fitxategia baliabideen leihotik denbora-lerrora. Multimediaren fitxategia bideoa
+bada, arrastatu bideoaren pista batera. Audio motako fitxategia bada, arrastatu
+audioaren pista batera.
+
+<p align="center"> <img src=".././manual_images_en/drag_to_program.png" alt="manual_images_en/drag_to_program">
+</p>
+</li></ol>
+<p>Saguaren erakuslearekin arrastatu diren audio eta bideoen pistak betetzen ditu
+Cinelerra-k fitxategiaren datuekin. Hasieran sortutako pistei eta multimedia
+jaso duten pistei eragiten die honek. Multimediaren fitxategiak bideoaren pista bat
+eta audioaren bi pista baditu, denbora-lerroan bideoaren pista bat eta
+audioaren bi pista beharko dira, eta multimedia aurreneko bideo pistara
+arrastatu beharko duzu. Multimediak audioa bakarrik badu, denbora-lerroan
+egon beharreko audio pisten kopurua multimedian dagoen audio pisten kopuruaren
+berdina izan behar du, eta multimedia aurreneko audioaren pistara arrastatu beharko
+duzu.
+</p>
+<p>Arrastatzean, multimedia pistaren hasieran atxikitzen da pista hutsik egonez gero.
+Pistan planoak egonez gero, multimedia planoaren muga gertuenera atxikituko da.
+</p>
+<p>Gainera, hainbat fitxategi arrasta ditzakezu baliabideen leihotik.
+Fitxategien inguruan kutxa bat marraz dezakezu <kbd>Maius</kbd> erabiliz, edo
+erabili <kbd>Ktrl</kbd> tekla fitxategiak hautatzeko.
+<kbd>Maius</kbd> eta <kbd>Ktrl</kbd> teklen portaera aldatu egingo da baliabideak
+testu edo ikono gisa agertzen diren arabera.
+</p>
+<p>Baliabideak testu edo ikono gisa bistaratzeko, egin klik saguaren eskuineko
+botoiarekin multimedia-zerrendan. Hautatu <b>Erakutsi ikonoak</b> edo <b>Erakutsi testua</b>
+zerrendaren ikuspegia aldatzeko.
+</p>
+<p>Baliabideen leihoan elementuak testu gisa bistaratzean, <b>Maius+egin klik</b>
+multimediaren fitxategietan nabarmendutako hautapena kopurua zabaltzeko.
+Multimediaren fitxategietan <b>Ktrl+klik</b> egitean, aldiko beste fitxategi bat
+gehiago hautatzen da.
+</p>
+<p>Baliabideen leihoan elementuak ikono gisa bistaratzean, <b>Maius+klik</b>
+edo <b>Ktrl+klik</b> eginez multimediaren fitxategi bat hautatzen da aldiko.
+</p>
+<p>Klipak sortu, <b>klip</b> karpeta ireki eta klipak denbora-lerrora arrasta
+ditzakezu.
+</p>
+<p>Denbora-lerroan arrastatzeko funtzionalitate gehiago daude. Planoak denbora-lerroan
+arrastatzean musikaren erreprodukzio-zerrrenda edo filmaren eszenak ordena ditzakezu,
+eta NAB erakusketa hobeagoak eman, baina ez askoz ere gehiago. Denbora-lerroan
+arrastatzeko funtzionalitatea gaitzeko hautatu <img src=".././manual_images_en/arrow.png" alt="manual_images_en/arrow"> gezi 
+txandakatzailea. Arrastatzeko eragiketan plano bat muga gertuenera atxikituko da.
+</p>
+<p align="center"> Hautatu pista bat hainbat eszenekin.
+</p>
+<p align="center"> <img src=".././manual_images_en/drop_before.png" alt="manual_images_en/drop_before">
+</p>
+<p align="center"> Jatorrizko pista hiru eszenekin.
+</p>
+<p align="center"> Joan 3. eszenara, egin klik eta arrastatu erdira.
+</p>
+<p align="center"> <img src=".././manual_images_en/drag_track.png" alt="manual_images_en/drag_track">
+</p>
+<p align="center"> Gero jaregin 3. eszena
+</p>
+<p align="center"> <img src=".././manual_images_en/drop_concept.png" alt="manual_images_en/drop_concept">
+</p>
+<p align="center"> 2. eszena eskuinera desplazatuko da
+</p>
+<p align="center"> <img src=".././manual_images_en/drop_after.png" alt="manual_images_en/drop_after">
+</p>
+<p align="center"> Hor amaierako sekuentziaren itxura agertzen da.
+</p>
+<p>Pista bat baino gehiago ainguratuta egonez gero, saguaren erakuslea kokatua 
+dagoen planoaren posizio berdinean hasten den edozein plano arrasta dezake
+Cinelerra-k. Hau da, plano sorta bat arrastatu eta jaregin dezakezu.
+Ainguratutako pistetako hasierak lerrokatuta dituzten planoak talde gisa
+onartzen ditu Cinelerra-k, berdin diolarik iturburu berdinekoak diren, edo amaierak
+lerrokatuta dituzten edo ez.
+</p>
+<p>Arrastatu eta jaregin muntaketa moduan, ezin dituzu etiketak arrastatu eta jaregin.
+Etiketak beti egongo dira denbora-barran blokeatuta, nahiz eta &quot;Editatu etiketak&quot;
+aukera gaituta egon. Horretaz gain, &quot;Editatu etiketak&quot; aukera gaituta egon arren,
+baliabide baten hautatutako eskualdea Ikustailetik denbora-lerrora lotzen bada
+etiketen aurreko posizioan, etiketa hauek eskuinera bultzatuko dira 
+hautatutako eskualdearen luzeerarekin.
+</p>
+<hr size="6">
+<a name="Ebaki-eta-itsatsi-muntaketa"></a>
+<a name="SEC106"></a>
+<h3 class="subsection"> 6.2.9 Ebaki eta itsatsi muntaketa </h3>
+
+<p>Hau ohizko metodoa da muntaketak lantzeko audioko editoreetan.
+Cinelerra-ren kasuan, Cinelerra-ren bigarren instantzia abiarazi behar duzu eta
+instantzia batetik bestera kopiatu, instantzia berdinean pista desberdinak kopiatu
+edo multimediaren fitxategia Ikustailean kargatu eta hortik kopiatu.
+</p>
+<p>Kargatu fitxategi batzuk denbora-lerroan. Ebaki eta itsatsi moduko muntaketa lantzeko
+hautatu <img src=".././manual_images_en/ibeam.png" alt="manual_images_en/ibeam"> i-beam txandakaria. Hautatu
+denbora-lerroko eskualde bat eta hautatu <img src=".././manual_images_en/cut.png" alt="manual_images_en/cut"> ebaki botoia
+eskualdea ebakitzeko. Eraman txertatzeko puntua denbora-lerroko beste posizio batera
+eta hautatu <img src=".././manual_images_en/paste.png" alt="manual_images_en/paste"> itsatsi botoia.
+Denbora-lerroan sarrerako eta irteerako punturik ez daudela definituta suposatuz,
+ekintza honek ebaki eta itsatsi eragiketa lantzen du.
+</p>
+<p>Sarrerako eta irteerako puntuak definituta egonez gero, txertatzeko puntua
+eta nabarmendutako eskualdea gainjarriko dira sarrerako/irteerako puntuekin
+arbelaren eragiketan. Honela, sarrerako/irteerako puntuekin ebaki eta itsatsi
+eragiketak lan daitezke bai arrastatu eta jaregin moduan bai ebaki eta
+itsatsi moduan ere.
+</p>
+<p>Audioa muntatzean, normalena audioaren uhin zati bat ebaki eta beste uhin batean
+itsastea da. Ebaki eragiketaren sarrerako eta irteerako puntuak berdinak dira
+uhin bakoitzean, eta pittin bat desplazatu behar dira, uhinaren datuak ordea
+desberdinak dira. Nahiko zaila da uhin bat nabarmentzea ebakitzeko
+eta bigarren uhina nabarmentzea bertan itsasteko, eta guzti hau
+hasierako eta amaierako posizio erlatiboak aldatu gabe.
+</p>
+<p>Eragiketa hau errazteko modu bat Cinelerra-ren bigarren instantzia abiaraztea da, 
+bi instantzien artean multimedia zatia ebaki eta itsasteko. Honela, eta aldi berean,
+nabarmendutako bi eskualde egon daitezke.
+</p>
+<p>Uhinaren iturburuaren jatorrizko eskualdean sarrerako/irteerako puntuak
+ezartzea da beste aukera, eta helburuko uhinaren helburuko eskualdean
+etiketak ezartzea. Landu ebaki eragiketa, garbitu sarrerako/irteerako
+puntuak, etiketen arteko eskualdea hautatu eta landu itsatsi eragiketa.
+</p>
+<p>Ebaki eta itsatsi muntaketako azken eragiketa <b>Editatu -&gt; Garbitu</b> da.
+Eskualde bat nabarmenduta badago edo sarrerako/irteerako puntuak existitzen
+badira, eragindako eskualdea garbitzen da <b>Editatu -&gt; Garbitu</b> eragiketarekin.
+Txertatzeko puntua plano baten mugaren gainean badago ordea, eta planoaren mugaren
+alboko planoak baliabide berdinekoak badira, baliabideak planoak konbinatuko ditu
+konprimitutako plano bat osatzeko. Plano honen hasiera aurreneko planoaren hasiera
+izango da, eta plano honen amaiera bigarrengo planoaren amaiera izango da.
+Ondorio hau bai planoa zabaltzean bai txikiagotzean gertatzen da.
+</p>
+<hr size="6">
+<a name="Iraupena-aldatzea"></a>
+<a name="SEC107"></a>
+<h3 class="subsection"> 6.2.10 Iraupena aldatzea </h3>
+
+<p>Denbora-lerroko sekuentzia batzuen iraupena alda daiteke. Arrastatu eta jaregin
+moduan, edo ebaki eta itsatsi moduan, saguaren erakuslearekin (kurtsorea) plano
+edo sekuentzia baten mugak arrastatuz bere iraupena luzatu edo murriztu egiten da. 
+Mugitu saguaren erakuslea plano baten mugaren inguruan erakuslearen forma
+aldatu arte. Erakuslea formaz aldatzean, ezkerrera edo eskuinera zuzentzen duen
+geziaren forma hartuko du erakusleak. Gezia ezkerrera formakoa bada, arrastatzearen
+eragiketak planoaren hasierari eragingo dio. Gezia eskuinera formakoa bada,
+arrastatzearen eragiketak planoaren amaierari eragingo dio.
+</p>
+<p>Plano baten mugan klik egitean, arrastatzearen portaera saguaren botoiak
+zehaztuko du. 3 portaera daude erabilgarri hobespenaren <b>Interfazea</b> fitxan,
+saguaren botoiei atxikitutako portaera doitu dezakezu. Irakurri See section <a href="cinelerra_cv_manual_eu_3.html#SEC56">Interfazea</a>
+atala.
+</p>
+<p>Arrastatzeko eragiketaren eragina ez da botoiaren portaeran soilik oinarritzen,
+planoaren hasiera edo amaiera arrastatzeak ere eragina baitu. Saguaren
+botoia askatzean, iraupenaren aldaketaren eragiketa lantzen da.
+</p>
+<p><b>Arrastatu hurrengo plano guztiak</b> eragiketan, planoaren hasierak 
+planoaren datuak ebakitzen ditu aurrera eramatean, edo planoaren aurretik
+datu berriak itsasten ditu atzera eramatean. Planoaren amaierak datuak
+planoan itsasten ditu aurrera eramatean, edo planoaren amaieratik
+datuak ebaki atzera eramatean. Honen ondorioz, honen atzeko plano guztiak desplazatuko dira.
+Azkenik, planoaren amaiera arrastatzen baduzu planoaren hasieraren aurrera pasatuz,
+plano osoa ezabatu egingo da.
+</p>
+<p><b>Arrastatu plano bakarra</b> eragiketan, portaera berdina da bai
+planoaren hasiera bai amaiera arrastatzean. Kasu honetan ordea,
+pistako beste planoak ez dira desplazatzen. Horren ordez,
+uneko planoaren alboan dagoen edozein plano zabaldu edo murriztuko da
+arrastatzearen eragiketak utzitako hutsuneak betetzeko.
+</p>
+<p><b>Arrastatu iturburua soilik</b> eragiketan, ezer ez da ebakitzen edo itsasten.
+Planoaren hasiera edo amaiera aurrera eramatean, planoko iturburuaren erreferentzia
+(edukia) aurrera desplazaten da. Planoaren hasiera edo amaiera atzera eramatean
+iturburuaren edukia atzera desplazatuko da. Planoa denbora-lerroko
+leku berdinean egongo da, iturburuaren edukia desplazatuko da ordea.
+</p>
+<p>Beste fitxategi-formatu guztientzat, irudi-finkoak izan ezik, aldaketa hauek ez
+dute inoiz jatorrizko iturburuaren fitxategiaren luzerara gaindituko. Plano baten haisera
+iturburuaren fitxategiaren hasiera baino harutzago arrastatzea saiatzen bada, ezinezkoa
+dela ikusiko duzu.
+</p>
+<p>Iraupena aldatzeko eragiketa guztietan, erakuslea kokatuta dagoen posizio berdinean
+dauden plano guztietan eragiten dira arrastatzeko eragiketa hastean. Baldintza hauek
+plano batzuetan saihesteko, kendu aingura dagokien pistei
+</p>
+<p>Cinelerra-ren efektu gehienak nola funtzionatzen duten jakiteko, probak egin.
+Ondoren esperientzia gehiago eduki arte erabili behar ez zenukeen efektuen
+azalpen laburrak idatzi dira.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC88" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_7.html#SEC108" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_eu_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffaella Traniello</em> on <em>December, 31 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

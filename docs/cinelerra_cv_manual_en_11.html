@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created on May 12, 2015 by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Cinelerra CV Manual: 11 Sound level meters window</title>
+
+<meta name="description" content="Cinelerra CV Manual: 11 Sound level meters window">
+<meta name="keywords" content="Cinelerra CV Manual: 11 Sound level meters window">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_10.html#Resources-window" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_12.html#Transport-controls" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr>
+<a name="Sound-level-meters-window"></a>
+<a name="Sound-level-meters-window-1"></a>
+<h1 class="chapter">11 Sound level meters window</h1>
+<a name="index-Sound-level-meters-window"></a>
+
+<p>An additional window, the <b>levels window</b> can be brought up from the
+<b>Window</b> menu.  The <b>levels</b> window displays the output audio levels after
+all mixing is done.
+</p>
+<img src="manual_images_intl/sound_level_meters_window.png" alt="manual_images_intl/sound_level_meters_window">
+
+<p align="center"><b>The sound level meters window</b>
+</p>
+<p>Sound level meters appear in many locations.  They can be toggled in the viewer
+and compositor windows with the level toggle.  They appear in the patchbay when
+a track is expanded (See section <a href="cinelerra_cv_manual_en_7.html#The-patchbay">The patchbay</a>.)  They appear in the recording
+monitor when audio is being recorded.
+</p>
+<p>The sound levels in the <b>levels window, compositor, and viewer</b> correspond to
+the final output levels before they are clipped to the soundcard range.  In the
+<b>record monitor</b> they are the input values from the sound card.  In the
+<b>patchbay</b> they are the sound levels for each track after all effects are
+processed and before down-mixing for the output.
+</p>
+<p>Most of the time, audio levels have numerical markings in dB but in the
+patchbay there is not enough room.
+</p>
+<p>The sound level is color coded as an extra means of determining the sound
+level.  Even without numerical markings, the sound level color can distinguish
+between several ranges and overload.  Look at the color codings in a meter with
+numerical markings to see what colors correspond to what sound level.  Then for
+meters in the patchbay in expanded audio tracks, use the color codings to see
+if it is overloading.
+</p>
+<p>Be aware that sound levels in Cinelerra can go above 0 dB.  This allows not
+only seeing if a track is overloading but how much information is being lost by
+the overloading.  Overloading by less than 3 dB is usually acceptable.  While
+overloading is treated as positive numbers in Cinelerra, it is clipped to 0
+when sent to a sound card or file.
+</p>
+<p>The visible range of the sound level meters is configurable in
+<b>settings-&gt;preferences-&gt;interface</b> (See section <a href="cinelerra_cv_manual_en_3.html#Interface">Interface</a>.)
+</p>
+<hr>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_10.html#Resources-window" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_12.html#Transport-controls" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>May 12, 2015</i> using <a href="http://www.nongnu.org/texi2html/"><i>texi2html 5.0</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

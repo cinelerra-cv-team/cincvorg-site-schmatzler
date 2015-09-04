@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 18. Faire l'acquisition de média</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 18. Faire l'acquisition de média">
+<meta name="keywords" content="Manuel de Cinelerra CV: 18. Faire l'acquisition de média">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_17.html#SEC243" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_19.html#SEC256" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Faire-l_0027acquisition-de-m_00e9dia"></a>
+<a name="SEC250"></a>
+<h1 class="chapter"> 18. Faire l'acquisition de média </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC251">18.1 Acquisition en utilisant Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC255">18.2 Acquisition en utilisant dvgrab</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Acquisition-en-utilisant-Cinelerra"></a>
+<a name="SEC251"></a>
+<h2 class="section"> 18.1 Acquisition en utilisant Cinelerra </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC252">18.1.1 Fonctions d'enregistrement de Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC253">18.1.2 Enregistrement par lots</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC254">18.1.3 Editer les informations du tuner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Fonctions-d_0027enregistrement-de-Cinelerra"></a>
+<a name="SEC252"></a>
+<h3 class="subsection"> 18.1.1 Fonctions d'enregistrement de Cinelerra </h3>
+
+<p>Idéalement, tous les médias sont enregistrés sur disque-dur, CD-ROM, flash ou
+DVD et le chargement dans Cinelerra ne consiste qu'à charger un fichier.  En
+réalité, il n'y a que très peu de sources de médias qui puissent être accédées
+comme un système de fichiers ; ils utilisent plutôt des mécanismes de transport
+et des mécanismes d'E/S basiques pour transférer les données vers les
+ordinateurs.  Ces types de média sont importés dans Cinelerra par
+l'intermédiaire du dialogue d'enregistrement.
+</p>
+<p>La première étape lors de l'enregistrement est de configurer le périphérique
+d'entrée.  Dans <b>Configuration-&gt;Préférence</b> se trouvent de nombreux
+paramètres d'enregistrement décrits dans la configuration Voir la section <a href="cinelerra_cv_manual_fr_3.html#SEC49">Acquisition</a>.
+Ces paramètres s'appliquent à l'enregistrement quelque soient les paramètres du
+projet, car les paramètres d'enregistrement utilisent habituellement les
+pleines capacités du matériel d'enregistrement alors que les paramètres du
+projet peuvent varier.
+</p>
+<p>Allez dans le menu <b>Fichier-&gt;Enregistrer</b> pour effectuer l'enregistrement
+depuis une source externe.  Un format de sortie vous sera demandé comme pour le
+rendu.  Ensuite, la fenêtre d'enregistrement et le moniteur d'enregistrement
+vont s'afficher.
+</p>
+<p>La fenêtre d'enregistrement comporte un certain nombre de sections.  Alors que
+de nombreux paramètres changent selon que le fichier contienne de l'audio ou de
+la vidéo, les sections elles-mêmes restent toujours les mêmes.
+</p>
+<ul>
+<li> La zone de <b>format de sortie</b> décrit le format du fichier de sortie et
+la position en cours dans ce fichier.
+</li><li> La zone <b>éditer le lot</b> vous permet de modifier les paramètres du lot
+en cours.
+</li><li> Les commandes de transport permettent de démarrer et d'arrêter
+l'enregistrement de différentes manières.
+</li><li> La <b>liste des lots</b> affiche les lots ayant été définis.
+</li><li> La zone de <b>confirmation</b> vous permet de déterminer comment les
+fichiers de sortie seront importés sur la timeline et de quitter.
+</li></ul>
+
+<p align="center"> <img src=".././manual_images_fr/recording.png" alt="manual_images_fr/recording">
+</p><p align="center"> <b>Zones de la fenêtre d'enregistrement</b>
+</p>
+<p>L'enregistrement dans Cinelerra est organisé par lots.  Un lot définit
+essentiellement un fichier de sortie distinct pour l'enregistrement.  Pour
+l'instant, vous pouvez ignorer complètement le concept de lot et effectuer
+l'enregistrement simplement en cliquant le <img src=".././manual_images_intl/record.png" alt="manual_images_intl/record">
+bouton d'enregistrement.
+</p>
+<p>Le bouton d'enregistrement ouvre le fichier de sortie en cours s'il n'est pas
+déjà ouvert et y écrit les données capturées.  Le bouton arrêt permet d'arrêter
+l'enregistrement.  L'enregistrement peut être repris à ce point avec le bouton
+d'enregistrement, sans effacer le fichier.  Dans le cas d'un fichier vidéo, il
+y a un bouton d'enregistrement d'une seule image
+<img src=".././manual_images_intl/singleframe.png" alt="manual_images_intl/singleframe"> qui permet de n'enregistrer qu'une seule
+image.
+</p>
+<p>Lorsque vous avez enregistré suffisamment de données, choisissez la méthode
+d'insertion dans le menu <b>stratégie d'insertion</b> et cliquez sur le bouton de
+fermeture.
+</p>
+<hr size="6">
+<a name="Enregistrement-par-lots"></a>
+<a name="SEC253"></a>
+<h3 class="subsection"> 18.1.2 Enregistrement par lots </h3>
+
+<p>Nous arrivons maintenant au concept de lots.  Les lots permettent d'essayer de
+rendre le comportement d'entrées/sorties simples plus proche de celui d'un
+système de fichiers.  Les lots sont traditionnellement utilisés pour diviser
+une bande en différents programmes et enregistrer différents programmes sous
+forme de fichiers séparés plutôt que d'enregistrer la bande sous la forme d'un
+fichier d'un seul tenant.  En raison du coût élevé de développement d'un
+mécanisme de contrôle de banc de montage précis à l'image près, la seule
+utilisation actuelle des lots est l'enregistrement de différents programmes à
+différentes heures de la journée.  C'est aussi utile pour enregistrer des
+émissions de télévision ou des films en différé comme le savent bien tous ceux
+qui n'ont pas les moyens d'acquérir les appareils adéquats.
+</p>
+<p>La fenêtre d'enregistrement gère une liste de lots et deux modes
+d'enregistrement : le mode interactif et le mode par lots.  Le mode interactif
+est utilisé lorsque le bouton d'enregistrement est pressé.  L'enregistrement
+interactif démarre immédiatement et utilise le lot en cours pour tout
+déterminer sauf l'instant de départ.  Par défaut, le lot en cours est configuré
+pour se comporter comme une bande magnétique.
+</p>
+<p>L'enregistrement par lots se produit lorsque le bouton <b>Démarrer</b> est pressé.
+Dans l'enregistrement par lots, l'instant de départ est le moment où le lot
+commence à s'enregistrer.
+</p>
+<p>Il vous faudra d'abord créer un certain nombre de lots.  A chaque lot
+s'appliquent certains paramètres et certaines méthodes d'ajustement.
+</p>
+<ul>
+<li> <b>Activer</b><br>
+Indique que le lot doit faire partie d'une opération d'enregistrement.  Un clic
+sur la ligne de la liste sous <b>Activer</b> active ou désactive le lot.
+
+</li><li> <b>Chemin</b><br>
+C'est le chemin vers le fichier que vous allez enregistrer.  Le nom de fichier
+indiqué dans le dialogue d'enregistrement est le nom du premier lot, pour
+simplifier l'enregistrement interactif, mais le nom de fichier peut être
+modifié dans la fenêtre d'enregistrement pour chaque lot dans la zone
+d'<b>édition du lot</b>.
+
+</li><li> <b>Nouveau</b><br>
+Indique si le fichier existe ou pas.  Comme il n'y a pas de dialogue de
+confirmation si le fichier existe déjà, c'est un attribut très important.  La
+première fois que vous pressez Enregistrer, le fichier est ouvert.  Si à ce
+moment, le fichier existe déjà, il est supprimé.  Ce champs aura la valeur
+<b>fichier existant</b> s'il existe et <b>Ok</b> s'il n'existe pas.  Chaque fois que
+vous reprenez un enregistrement dans le même lot, <b>Ouvert</b> devrait être
+indiqué, signifiant que le fichier est déjà ouvert et qu'il ne sera pas effacé
+la prochaine fois que vous presserez le bouton d'enregistrement.<br>
+Si vous modifiez la sortie du lot en cours après l'enregistrement, le fichier
+est fermé.  La prochaine fois que vous modifierez le lot, le fichier sera
+effacé.
+
+</li><li> <b>Instant de départ</b><br>
+C'est l'heure du jour, en format 24 heures, à laquelle l'enregistrement en mode
+par lots doit commencer.  L'instant de départ peut devenir un instant sur bande
+et un numéro de bobine si un contrôle de banc est implémenté mais pour
+l'instant, il ne s'agit que de l'heure du jour.
+
+</li><li> <b>Durée</b><br>
+Ceci est la durée du lot.  Il n'a de signification que si le <b>mode</b> du lot
+est <b>temporisé</b>.  Une fois que la longueur de l'enregistrement a atteint
+<b>durée</b>, l'enregistrement s'arrête, que ce soit en mode interactif ou en mode
+par lots.
+
+</li><li> <b>Source</b><br>
+Ceci n'a de signification que lorsque la matériel effectuant l'acquisition
+possède plusieurs sources.  Habituellement, la source est le canal ou l'entrée
+d'un tuner.  Lorsque le lot en cours se termine et que le lot suivant commence
+son enregistrement, la source est modifiée en fonction de ce qui est indiqué
+pour le lot suivant.  De cette manière, de nombreuses chaînes de télévision
+peuvent être enregistrées à des moments différents.
+</li></ul>
+
+<p>La fenêtre d'enregistrement comporte la notion de <b>lot en cours</b>.  Le lot en
+cours n'est pas le même que le lot en surbrillance dans la liste des lots.  Le
+lot en cours est de couleur rouge dans la liste des lots.  Le lot en
+surbrillance est simplement affiché dans la section d'édition du lot pour
+pouvoir être édité.
+</p>
+<p>En mettant en rouge le lot en cours, chaque lot peut être édité en le mettant
+en surbrillance, sans pour autant modifier le lot qui doit être enregistré.
+</p>
+<p>Toutes les opérations d'enregistrement sont effectuées dans le lot en cours.
+S'il y a plusieurs lots, mettez le lot désiré en surbrillance et cliquez
+<b>Activer</b> afin qu'il devienne le lot en cours.  Si le bouton <b>Démarrer</b> est
+pressé, le lot en cours clignote pour indiquer qu'il est en attente de
+l'instant de départ en mode de traitement par lots.  Si le bouton
+<b>Enregistrer</b> est pressé, le lot en cours est enregistré immédiatement en
+mode interactif.
+</p>
+<p>Dans les modes d'enregistrement par lot ou interactif, lorsque le lot en cours
+se termine, le lot suivant est activé et exécuté.  Tous les enregistrements
+suivants sont effectués en mode de traitement par lots.  Lorsque le premier lot
+se termine, le lot suivant clignote jusqu'à ce que l'instant de départ soit
+atteint.
+</p>
+<p>Le bouton <b>Arrêter</b> permet d'arrêter le lot ou l'opération interactive en
+cours.
+</p>
+<p>Enfin, il y a le bouton <img src=".././manual_images_intl/rewind.png" alt="manual_images_intl/rewind"> de retour arrière.
+Dans les modes d'enregistrement par lots ou interactif, le bouton de retour
+arrière permet de fermer le fichier du lot en cours.  L'opération
+d'enregistrement suivante du lot en cours effacera le fichier.
+</p>
+<hr size="6">
+<a name="Editer-les-informations-du-tuner"></a>
+<a name="SEC254"></a>
+<h3 class="subsection"> 18.1.3 Editer les informations du tuner </h3>
+
+<p>Vous aurez parfois besoin, dans le processus d'enregistrement et dans le
+processus de configuration, de définir et de sélectionner des canaux du tuner
+soit pour l'enregistrement, soit pour la lecture.  Dans le cas de
+l'enregistrement avec les pilotes d'enregistrement Video4Linux et Buz, les
+canaux du tuner définissent la source.  Lorsque le pilote Buz est aussi utilisé
+pour la lecture, les canaux du tuner définissent la destination.
+</p>
+<p>La définition des canaux du tuner est obtenue en pressant le bouton de canal
+<img src=".././manual_images_intl/channel.png" alt="manual_images_intl/channel">.  Ceci permet d'afficher la fenêtre d'édition
+des canaux.  Dans cette fenêtre, vous pouvez ajouter, modifier et classer les
+canaux.  Avec certains pilotes vidéo, vous pouvez aussi ajuster la qualité de
+l'image.
+</p>
+<p>L'opération d'<b>ajout</b> provoque l'affichage d'une boîte d'édition du canal.
+Le titre du canal apparaît dans la liste des canaux.  La source du canal est
+l'entrée physique dans la table de fréquences du tuner correspondant au titre.
+</p>
+<p>L'ajustement fin dans le dialogue d'édition ajuste légèrement la fréquence si
+le pilote le gère.  La norme et la table de fréquences définissent ensemble la
+table de fréquences qui sera choisie pour définir les sources.  Si le
+périphérique peut gérer plusieurs entrées, le menu d'entrée permet de la
+sélectionner.
+</p>
+<p>Pour trier les canaux, mettez le canal en surbrillance et pressez <b>déplacer
+vers le haut</b> ou <b>déplacer vers le bas</b> afin de le déplacer.
+</p>
+<p>Une fois les canaux définis, l'entrée <b>source</b> dans la fenêtre
+d'enregistrement peut être utilisée pour choisir les canaux vers lesquels sera
+effectué l'enregistrement.  Une possibilité identique existe aussi dans la
+fenêtre d'enregistrement.  Notez que les sélections de canaux dans la fenêtre
+d'enregistrement et dans la fenêtre du moniteur sont enregistrées dans le lot
+en cours.
+</p>
+<p>Avec certains pilotes, une option permettant de <b>permuter les champs</b> est
+affichée.  Ces pilotes ne permettent pas d'avoir les champs dans le bon ordre
+sans une intervention humaine.  Cochez cette option pour avoir les lignes
+paires et impaires enregistrées dans l'ordre correct.
+</p>
+<hr size="6">
+<a name="Acquisition-en-utilisant-dvgrab"></a>
+<a name="SEC255"></a>
+<h2 class="section"> 18.2 Acquisition en utilisant dvgrab </h2>
+
+<p>Dvgrab est un très bon outil en ligne de commande simple à utiliser pour faire
+de l'acquisition vidéo depuis un caméscope DV.  Lorsqu'il est appelé, il va
+automatiquement mettre votre caméscope en mode lecture, et commencer à
+enregistrer les vidéo sur votre disque dur.  Les fichiers vidéos seront
+numérotés séquentiellement comme ceci : <tt>`001.avi'</tt>, <tt>`002.avi'</tt> et
+ainsi de suite.
+</p>
+<p>Pour installer dvgrab, utilisez le mécanisme d'installation de votre
+distribution préférée (apt, rpm, deb, etc.) ou référez-vous à la page Web de
+dvgrab.
+</p>
+<p>Faire l'acquisition vidéo en quatre étapes simples :
+</p><ol>
+<li> Créer un répertoire où vous désirez enregistrer les vidéos
+</li><li> <code>cd</code> dans ce répertoire
+</li><li> Entrez : <code>dvgrab --buffers 500</code> et <kbd>Entrée</kbd>
+</li><li> Pressez <kbd>CTRL-C</kbd> pour interrompre l'acquisition vidéo
+</li></ol>
+
+<p>L'option <samp>`--autosplit'</samp> est très utile.  Elle découpe les scènes en
+fonction du code temporel.  Cependant, ceci ne fonctionne que lors de
+l'acquisition depuis un caméscope DV.  Ceci ne fonctionnera pas depuis un
+convertisseur analogique/numérique tel qu'un Canopus ADVC110.
+</p>
+<p>Lisez le manuel de dvgrab afin d'obtenir davantage d'informations concernant
+ses fonctionnalités.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC250" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_19.html#SEC256" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 17. Fotogramas clave</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 17. Fotogramas clave">
+<meta name="keywords" content="Manual de Cinelerra CV: 17. Fotogramas clave">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_16.html#SEC240" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_18.html#SEC250" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Fotogramas-clave"></a>
+<a name="SEC243"></a>
+<h1 class="chapter"> 17. Fotogramas clave </h1>
+
+<p>Cuando cambias el difuminado, la cámara, el proyector u otros parámetros de una pista, 
+por defecto no cambian durante toda la duración de la línea de tiempo. Algunas veces 
+mantener parámetros estáticos no es muy útil. Normalmente necesitas mover la camara
+o cambiar la posición de las máscaras. Las máscaras necesitan seguir objetos. Creamos
+cambios dinámicos definiendo fotogramas clave. Un fotograma clave es un punto concreto en el tiempo
+donde los ajustes para una operación cambian. En Cinelerra, hay fotogramas clave para casi 
+cualquier parámetro de composición y efectos.
+</p>
+<a name="IDX145"></a>
+<a name="IDX146"></a>
+<p>Donde quiera que ajustes un parámetro, el valor es almacenado en un fotograma clave. Si el 
+valor es guardado en un fotograma clave, ¿por qué no cambia siempre? El fotograma clave en el que
+es guardado por defecto se conoce como el <b>fotogramas clave por defecto</b>. El fotograma clave por defecto
+se aplica a toda la duración si no hay otros fotogramas clave. El fotograma clave por defecto no se 
+muestra en ningún lado porque siempre existe. La única forma de cambiarlo ocurre si hay
+otros fotogramas clave.
+</p>
+<p>Muestra los fotogramas clave para cualquier parámetro usando el menú <b>Ver</b>. Una manera más 
+rápida de activar múltiples tipos de fotogramas clave es mostrar <b>ventana-&gt;overlays</b>. Esta
+ventana permite activar cada parámetro del menú ver. Cuando los fotogramas clave son seleccionados,
+son dibujados en la línea de tiempo sobre las pistas a las que se aplican.
+</p>
+<p>Los fotogramas clave se muestran de diferentes maneras: curvas, activos, modos, etc. Cómo manejar
+los diferentes tipos de fotogramas clave se describe a continuación.
+</p>
+
+<hr size="6">
+<a name="Fotogramas-clave-de-curva"></a>
+<a name="SEC244"></a>
+<h2 class="section"> 17.1 Fotogramas clave de curva </h2>
+
+<p>Muchos parámetros se guardan en curvas Bezier. Vete a <b>Ver-&gt;fade</b> o a 
+<b>Ver-&gt;...zoom</b> para mostrar las curvas en la línea de tiempo para esos parámetros.
+En el modo selección o en el de arrastrar, mueve el cursor sobre las curvas
+en la línea de tiempo hasta que cambie la curva. Entonces simplemente pinchando y 
+arrastrando sobre la curva puedes crear un fotograma clave en la posición dada.
+</p>
+<p>Una vez creado el fotograma clave, pincha y arrástralo para reposicionarlo. Cuando pinchas y
+arrastras un segundo fotograma clave sobre la curva, crea una rampa suave. <b>arrastrar presionando CTRL</b> sobre un fotograma clave cambia el valor del control de entrada o de salida. Esto afecta a la suavidad de la curva. Mientras que el control de entrada y salida se puede mover 
+horizontalmente así como verticalmente, el movimiento horizontal es puramente por legibi-
+lidad y no se usa en el valor de la curva.
+</p>
+<p>Puedes recordar que The Gimp y las máscaras de composición usan <kbd>SHIFT</kbd> para seleccionar puntos de control por lo que, ¿por qué la línea de tiempo usa <kbd>CTRL</kbd>? Cuando <b>arrastras presionando SHIFT</b> en una curva de la línea de tiempo, el fotograma clave se ajusta al valor del siguiente o del anterior keyframe, dependiendo de cuál exista. Esto te permite poner una curva de valor constante sin tener que copiar el siguiente o el anterior fotograma clave.
+</p>
+
+<hr size="6">
+<a name="Navegando-por-los-fotogramas-clave-de-curva"></a>
+<a name="SEC245"></a>
+<h3 class="subsection"> 17.1.1 Navegando por los fotogramas clave de curva </h3>
+
+<p>No hay suficiente espacio en la línea de tiempo para un amplio rango de valores de curva. 
+Necesitas hacer zoom de las curvas verticalmente para obtener alguna variabilidad. Esto se 
+hace con 2 herramientas: el botón de ajuste y el menú de zoom de automatizaciones 
+<img src=".././manual_images_en/autozoom.png" alt="manual_images_en/autozoom">.
+</p>
+<p>El botón de ajuste escala el rango vertical de manera que el área de curva seleccionada aparece 
+en la línea de tiempo. Si una región de la línea de tiempo es resaltada por el cursor, solo esa 
+región es escalada. Los puntos de Entrada/Salida no afectan a la región afectada. <kbd>ALT-f</kbd>
+también realiza las operaciones de ajuste.
+</p>
+<p>El menú de zoom cambia manualmente el escalado de las curvas en múltiplos de 2. Clickea en el
+botón para cambiar el zoom. <kbd>ALT-UP</kbd> y <kbd>ALT-DOWN</kbd> cambia el zoom desde el teclado.
+</p>
+<hr size="6">
+<a name="Fotogramas-clave-activables"></a>
+<a name="SEC246"></a>
+<h2 class="section"> 17.2 Fotogramas clave activables </h2>
+
+<p>Mute es el único fotograma clave que se puede activar/desactivar. Los fotogramas clave Mute determinan si la 
+pista es procesada pero no mostrada. Clickea y arrastra en estas curvas para crear un fotograma clave.
+A diferencia de las curvas, el fotograma clave tiene solo 2 valores: activo o inactivo. <kbd>CTRL</kbd> y
+<kbd>SHIFT</kbd> no hacen nada sobre los fotogramas clave activables.
+</p>
+
+<hr size="6">
+<a name="Fotogramas-clave-automaticos"></a>
+<a name="SEC247"></a>
+<h2 class="section"> 17.3 Fotogramas clave automaticos </h2>
+
+<p>Puedes haber notado cuando unas pocas curvas de fusión se configuran, que moviendo 
+el punto de inserción alrededor de las curvas causa que las fusiones reflejen el 
+valor de la curva debajo del punto de inserción. Esto no es solo para que parezca 
+bonito. Las fusiones en sí mismas pueden crear fotogramas clave en el modo de fotogramas clave 
+automáticos. El modo automático de fotogramas clave es normalmente más útil que arrastrar 
+curvas.
+</p>
+<p>Activa el modo automático de fotograma clave activando el botón <img src=".././manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">. 
+En este modo, cada vez que modificas un parámetro se crea un fotograma clave en la línea de 
+tiempo. Como este modo afecta a muchos parámetros, es mejor activarlo solamente cuando
+necesites un fotograma clave y desactivarlo inmediatamente después.
+</p>
+<p>Es útil entrar en el menú <b>Ver</b> y hacer visible el parámetro deseado antes de 
+realizar un cambio. El lugar donde es generado el fotograma clave automático es debajo del 
+punto de inserción. Si la línea de tiempo se modifica mientras está el play activado, 
+se crearán varios fotogramas clave segun modifiques el parámetro.
+</p>
+<p>Cuando el modo automático de fotogramas clave está deshabilitado, pasa algo parecido. 
+Configurar un parámetro ajusta el fotograma clave que precede inmediatamente al punto de 
+inserción. Si existen dos fotogramas clave de fusión y el punto de inserción está entre ellos, 
+al modificarlo cambiará el primer fotograma clave.
+</p>
+<p>Hay muchos parámetros de los cuales solo se pueden generar fotogramas clave en el modo
+automático de fotogramas clave. Son parámetros para los cuales las curvas tomarían demasiado 
+espacio en la pista o que no se pueden representar fácilmente con una curva.
+</p>
+<p>Para los efectos solo se pueden generar fotogramas clave en el modo automático de fotogramas clave 
+debido  a la cantidad de parámetros que tiene cada efecto.
+</p>
+<p>El movimiento de la cámara y el proyector solo se puede animar en el modo automático de
+fotogramas clave mientras que el zoom de estos puede ser animado con curvas. Aquí es donde
+terminamos la discusión de composición, ya que la composición es altamente dependiente
+de la habilidad de cambiar durante el tiempo.
+</p>
+<hr size="6">
+<a name="Fotogramas-clave-del-Compositor"></a>
+<a name="SEC248"></a>
+<h2 class="section"> 17.4 Fotogramas clave del Compositor </h2>
+
+<p>El movimiento de la cámara y el proyector se representa con 2 parámetros: x e y.
+Ajustar las curvas es algo engorroso. Cinelerra resuelve este problema con los fotogramas clave 
+automáticos. Con una pista de video creada, mueve el punto de inserción al inicio de la
+pista y activa el modo de fotogramas clave automático.
+</p>
+<p>Mueve el proyector ligeramente en la ventana Compositor para crear un fotograma clave. Avanza
+el punto de inserción varios segundos. Mueve el proyector una distancia mayor para crear
+otro fotograma clave y enfatizar el movimiento. Esto crea una segunda caja representando el
+proyector en el compositor, con una línea uniendo las dos cajas. La línea de unión es
+la ruta del movimiento. Si creas más fotogramas clave, se crean más cajas. Una vez que todos
+los fotogramas clave que quieras se hayan creado, desactiva el modo de fotogramas clave automático.
+</p>
+<p>Ahora cuando desplazas la barra de desplazamiento de la ventana Compositor, la proyección
+del video se mueve durante el tiempo. En cualquier punto entre dos fotogramas clave, la ruta del
+movimiento es roja durante todo el tiempo antes del punto de inserción, y verde después
+del punto de inserción. Es cuestionable si esto es una característica útil pero te hace
+sentir bien saber qué fotograma clave va a verse afectado por la próxima modificación del proyector.
+</p>
+<p>Para ajustar el fotograma clave anterior pincha y arrastra cuando los fotogramas clave automáticos estén
+desactivados. Si estás a mitad de camino entre dos fotogramas clave, la primera caja de proyector
+es ajustada mientras que la segunda se mantiene intacta. Esto es porque el movimiento
+del proyector entre dos fotogramas clave es interpolado. Para ajustar el segundo fotograma clave tendrás
+que desplazarte hasta el segundo fotograma clave.
+</p>
+<p>Por defecto la ruta del movimiento es una línea recta, pero puede ser curvada mediante
+puntos de control. <b>Arrastra presionando CTRL</b> para poner el punto de control entrada o salida del
+keyframe anterior. Una vez más, partimos del Gimp porque <kbd>SHIFT</kbd> ya se usa para
+hacer zoom. Después de que los puntos de control entrada o salida son extrapolados
+del fotograma clave, <b>si arrastras presionando CTRL</b> en cualquier parte del video ajusta el punto de control
+más cercano. Un punto de control puede estar totalmente fuera de la vista, pero todavía
+ser controlable.
+</p>
+<p>Cuando se edita el movimiento de la cámara, el comportamiento de las cajas que representan
+la cámara es ligeramente diferente. La animación de la cámara se usa normalmente para
+hacer un paneo de una foto. La caja de cámara actual no se mueve durante un movimiento,
+pero si hay múltiples fotogramas clave, cada caja de cámara excepto la actual parecen moverse.
+Esto es debido a que el display de la cámara muestra la posición de cada cámara relativa
+a la actual.
+</p>
+<p>La situación se vuelve más intuitiva doblas la ruta del movimiento entre 2 fotogramas clave y lo 
+deslizas entre los dos fotogramas clave. La divisón entre rojo y verde, la posición actual entre los
+fotogramas clave, es siempre centrada mientras que la cámara se mueve.
+</p>
+<hr size="6">
+<a name="Edici_00f3n-de-fotogramas-clave"></a>
+<a name="SEC249"></a>
+<h2 class="section"> 17.5 Edición de fotogramas clave </h2>
+
+<p><b>IMPORTANTE:</b> cuando copies o pegues fotogramas clave, asegúrate de que <b>no haya puntos
+de ENTRADA o SALIDA definidos en la línea de tiempo</b>.
+</p>
+<p>Los fotogramas clave se pueden quitar y mover entre pistas en la línea de tiempo usando 
+operaciones similares de cortado y pegado de videos. Sin embargo solo se ven afectados 
+por las operaciones de edición los fotogramas clave que estén seleccionados en el menú <b>Ver</b>.
+</p>
+<p>La operación de edición más popular es el replicado de alguna curva de una pista a otra,
+para realizar un par stereo. El primer paso es activar solamente la pista origen 
+<img src=".././manual_images_en/recordpatch_up.png" alt="manual_images_en/recordpatch_up"> <b>presionando SHIFT</b> sobre el botón. Después ajustar
+los puntos de entrada/salida o seleccionar la región deseada de fotogramas clave. Ir a 
+<b>fotogramas clave-&gt;copiar fotogramas clave</b> para copiarlos al portapapeles. Activar la pista destino
+<b>presionando SHIFT</b> sobre el botón <img src=".././manual_images_en/recordpatch_up.png" alt="manual_images_en/recordpatch_up"> e ir a
+<b>fotogramas clave-&gt;pegar fotogramas clave</b> para pegar lo copiado al portapapeles.
+</p>
+<p>Los comandos de edición están mapeados a los comandos de edición de fotogramas clave usando la
+tecla <kbd>SHIFT</kbd> en lugar de los atajos de teclado.
+</p>
+<p>Esto nos lleva a la parte más complicada de la edición de fotogramas clave, el fotograma clave por defecto.
+Recuerda que cuando no hay ningún fotograma clave, aún existe un fotograma clave por defecto el cual guarda
+parámetros globales para toda la duración. El fotograma clave por defecto no se muestra porque
+siempre existe. ¿Qué pasa si el fotograma clave por defecto es un buen valor el cual quieres 
+interponer entre otros fotogramas clave no por defecto? Las opciones <b>fotogramas clave-&gt;copiar fotogramas clave por defecto</b>
+y <b>fotogramas clave-&gt;pegar fotogramas clave por defecto</b> permiten la conversión de un fotograma clave por 
+defecto a uno normal.
+</p>
+<p>La opción <b>fotogramas clave-&gt;copiar fotogramas clave por defecto</b> copia el fotograma clave por defecto al portapapeles,
+sin importar qué región de la línea de tiempo es seleccionada. La función
+<b>fotogramas clave-&gt;pegar fotogramas clave</b> puede usarse entonces para pegar el portapapeles como
+un fotograma clave no por defecto.
+</p>
+<p>Si has copiado un fotograma clave normal, puede ser guardado como fotograma clave por defecto usando 
+la función <b>fotogramas clave-&gt;pegar fotogramas clave por defecto</b>. Después de usar esta opción para convertir
+un fotograma clave normal en uno por defecto, no verás reflejado el valor del fotograma clave por defecto 
+hasta que todos los fotogramas clave normales se eliminen.
+</p>
+<p>Finalmente, hay una manera correcta de eliminar fotogramas clave además de seleccionar una región
+y usar la función <b>fotogramas clave-&gt;clear fotogramas clave</b>. Simplemente pinchando y arrastrando
+un fotograma clave antes del que le precede o del que le sigue en la pista.
+</p>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC243" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_18.html#SEC250" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

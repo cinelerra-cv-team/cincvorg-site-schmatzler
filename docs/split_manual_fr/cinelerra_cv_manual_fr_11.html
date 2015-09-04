@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 11. Les commandes de transport</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 11. Les commandes de transport">
+<meta name="keywords" content="Manuel de Cinelerra CV: 11. Les commandes de transport">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_10.html#SEC136" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_12.html#SEC138" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Les-commandes-de-transport"></a>
+<a name="SEC137"></a>
+<h1 class="chapter"> 11. Les commandes de transport </h1>
+
+<p>Les commandes de transport sont aussi utiles pour la navigation qu'elles le
+sont pour la lecture, c'est pourquoi elles sont décrites dans cette section qui
+concerne la navigation.  Chacune des fenêtres de visionneuse, de composition et
+de programme possède un panneau de navigation.
+</p>
+<p align="center"> <img src=".././manual_images_fr/transport_panel.png" alt="manual_images_fr/transport_panel">
+</p><p align="center"> <b>Le panneau de transport</b>.
+</p>
+<p>Le panneau de transport peut être contrôlé par le clavier ou par l'interface
+graphique.  Pour chacune des opérations qu'il permet d'effectuer, la position
+de départ est le point d'insertion dans la fenêtre du programme et la navette
+dans la fenêtre de composition.  La position de fin est soit la fin soit le
+début de la timeline ou la fin ou le début de la région sélectionnée si elle
+existe.
+</p>
+<p>L'orientation du départ ou de la fin dépend du sens de la lecture.  Si elle se
+déroule vers l'avant, la position de fin est la fin de la région sélectionnée.
+En cas de la lecture en arrière, la position de fin est le début de la région
+sélectionnée.
+</p>
+<p>Le point d'insertion se déplace de façon à suivre la lecture de la piste.
+Lorsque la lecture s'arrête, le point d'insertion reste à l'endroit où s'est
+arrêtée la lecture.  Ce qui signifie que lorsque vous effectuez une lecture,
+vous modifiez la position du point d'insertion.
+</p>
+<p>L'interface clavier est habituellement la plus rapide et comporte différents
+raccourcis.  Les touches de transport sont disposées sous la forme d'un <b>T</b>
+renversé sur le pavé numérique.
+</p>
+<table>
+<tr><td><p> <kbd>4</kbd>
+</p></td><td><p> Déplacement arrière d'une image (image par image)
+</p></td><td><p> <kbd>5</kbd>
+</p></td><td><p> Déplacement arrière lent
+</p></td><td><p> <kbd>6</kbd>
+</p></td><td><p> Déplacement arrière normal (lecture arrière)
+</p></td><td><p> <kbd>+</kbd>
+</p></td><td><p> Déplacement arrière rapide
+</p></td></tr>
+<tr><td><p> <kbd>1</kbd>
+</p></td><td><p> Avancer d'une image (image par image)
+</p></td><td><p> <kbd>2</kbd>
+</p></td><td><p> Déplacement avant lent
+</p></td><td><p> <kbd>3</kbd>
+</p></td><td><p> Déplacement avant normal (lecture avant)
+</p></td><td><p> <kbd>Entrée</kbd>
+</p></td><td><p> Avance rapide
+</p></td></tr>
+<tr><td><p> <kbd>0</kbd>
+</p></td><td><p> Arrêt
+</p></td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</table>
+
+<p>Presser une touche quelconque du clavier deux fois permet d'entrer en mode
+pause.
+</p>
+<p>Lorsque l'on utilise la fonction d'avance image par image, le comportement peut
+sembler étrange.  Si vous avancez d'une image, puis reculez d'une image,
+l'image affichée ne change pas.  En effet la position de lecture n'est pas
+l'image mais l'instant entre deux images.  L'image rendue est la zone que la
+tête de lecture traverse.  Lorsque vous incrémentez le temps entre deux images
+puis le décrémentez, vous rencontrez deux fois la même image et c'est donc la
+même image qui est affichée.
+</p>
+<p>Le comportement des commandes de déplacement change si vous maintenez la touche
+<kbd>CTRL</kbd> enfoncée en utilisant une de ces touches.  Ceci fait que le point de
+départ devient le point d'entrée si vous effectuez une lecture avant et le
+point de sortie si vous faites une lecture arrière.  Lors d'une lecture avant,
+le point de sortie devient le point de fin et lors d'une lecture arrière, le
+point d'entrée devient le point de fin.  S'il n'y a pas de point
+d'entrée/sortie indiqué, le comportement revient alors à utiliser le point
+d'insertion et les limites de pistes comme points de départ et de fin.
+</p>
+<p>Il est possible d'utiliser un périphérique de type Jog/Shuttle<a name="DOCF1" href="cinelerra_cv_manual_fr_fot.html#FOOT1">(1)</a>
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_10.html#SEC136" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_12.html#SEC138" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

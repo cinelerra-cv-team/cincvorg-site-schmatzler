@@ -1,0 +1,2550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 13. Les effets en temps réel</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 13. Les effets en temps réel">
+<meta name="keywords" content="Manuel de Cinelerra CV: 13. Les effets en temps réel">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_12.html#SEC138" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_14.html#SEC234" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Les-effets-en-temps-r_00e9el"></a>
+<a name="SEC139"></a>
+<h1 class="chapter"> 13. Les effets en temps réel </h1>
+
+<p>Ils sont empilés sous la piste à laquelle ils s'appliquent.  Ils appliquent un
+traitement à la piste lors de sa lecture, sans enregistrement permanent de la
+sortie sauf lors du rendu final du projet.
+</p>
+<p>Tous les effets en temps réel sont regroupés dans la fenêtre des ressources,
+séparés en deux groupes : les effets audio et les effets vidéo.  Les effets
+audio doivent être glissés depuis la fenêtre des ressources vers des pistes
+audio.  Les effets vidéo doivent être glissés sur des pistes vidéo.
+</p>
+<p>S'il y a des données sur la piste de destination, l'effet est appliqué à
+l'ensemble de la piste.  S'il n'y a pas de données sur la piste, l'effet est
+supprimé.  Enfin, si une région de la piste est sélectionnée, l'effet est collé
+sur cette région, qu'il y ait ou non des données présentes sur la piste.
+</p>
+<p>Certains effets ne traitent pas les données mais synthétisent des données.
+Dans le cas d'un effet de synthèse, il vous faudra sélectionner une région de
+la piste de façon à ce que, lors de l'opération de glisser, il puisse être
+collé sans être supprimé.
+</p>
+<p>Si vous glissez plus d'un seul effet sur une piste, ils apparaîtront empilés du
+haut vers le bas, sous la piste.  Lorsque la piste est jouée, les effets sont
+traités du haut vers le bas.  La sortie de l'effet du haut devient l'entrée de
+l'effet qui se trouve en-dessous et ainsi de suite.
+</p>
+<p>En plus du glisser depuis la fenêtre des ressources, les effets peuvent être
+appliqués à une piste par l'intermédiaire d'un menu contextuel.  Faites un clic
+droit sur une piste et choisissez <b>Attacher un effet</b> dans le menu.  Le
+dialogue d'attachement de l'effet vous donne davantage de possibilités que le
+simple glisser-déposer.  Il vous permet d'attacher deux types d'effets
+supplémentaires : les effets partagés et les pistes partagées.  Choisissez
+un greffon depuis la colonne des <b>greffons</b> et cliquez sur <b>Attacher</b>,
+en-dessous de la colonne des greffons, pour l'attacher.  L'effet est le même
+que s'il avait été glissé depuis la fenêtre des ressources.
+</p>
+<p>Lorsqu'un effet est présent sous une piste, il doit la plupart du temps être
+configuré.  Placez le curseur sur l'effet et effectuez un clic droit pour
+afficher son menu contextuel.  Dans ce menu est présente l'entrée <b>Afficher
+les options</b>.  Celle-çi permet d'afficher l'interface graphique associée à
+l'effet qui se trouve sous le curseur.  La plupart des effets ont une interface
+graphique, mais pas tous.  Si l'effet n'a pas d'interface graphique, vous
+n'obtiendrez pas de fenêtre d'options lorsque vous cliquerez sur <b>Afficher
+les options</b>.  Lorsque vous ajustez les paramètres dans l'interface graphique,
+les paramètres affectent normalement toute la durée de l'effet.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC140">13.1 Types d'effets en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC141">13.2 Editer les effets en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC142">13.3 Les effets audio en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     Effets audio en temps réel
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC163">13.4 Les effets vidéo en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     Effets vidéo en temps réel
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Types-d_0027effets-en-temps-r_00e9el"></a>
+<a name="SEC140"></a>
+<h2 class="section"> 13.1 Types d'effets en temps réel </h2>
+
+<p>Les deux autres types d'effets gérés par le dialogue <b>Attacher un effet</b> sont
+les effets recyclés.  Pour pourvoir utiliser un effet recyclé, trois conditions
+doivent être remplies :
+</p><ul>
+<li> Il doit y avoir d'autres effets sur la timeline.
+</li><li> Les autres effets doivent être du même type que la piste sur laquelle
+vous êtes en train d'attacher l'effet.  Si la piste est une piste audio, les
+effets doivent être des effets audio.  Si la piste est une piste vidéo, les
+effets doivent être des effets vidéo.
+</li><li> Le point d'insertion ou la zone sélectionnée doivent commencer à
+l'intérieur des autres effets.
+</li></ul>
+
+<p>Dans le cas d'un effet partagé, ces conditions doivent être remplies.  Dans le
+cas d'une piste partagée, il doit y avoir une autre piste sur la timeline, qui
+soit du même type que la piste à laquelle vous appliquez l'effet.  Si vous
+faites un clic droit sur une piste vidéo pour attacher un effet, il n'y aura
+rien dans la colonne <b>Pistes partagées</b> s'il n'y a pas d'autre piste vidéo.
+Si vous faites un clic droit sur une piste audio, il n'y aura rien dans la
+colonne <b>Pistes partagées</b> s'il n'y a pas d'autre piste audio.
+</p>
+<p>S'il existe des effets partagés ou des pistes partagées, ils apparaîtront dans
+les colonnes <b>Pistes partagées</b> ou <b>Effets partagés</b>.  Le bouton
+<b>Attacher</b> sous chacune des colonnes permettra d'attacher sous la piste en
+cours, tout ce qui se trouve en surbrillance dans la colonne.
+</p>
+<p>Les effets partagés et les pistes partagées permettent de réaliser des choses
+uniques.  Dans le cas d'un effet partagé, l'effet partagé est traité comme une
+copie de l'effet d'origine sauf que vous ne pouvez pas afficher l'interface
+utilisateur graphique de l'effet.  Toute la configuration de l'effet partagé se
+fera depuis l'interface utilisateur de l'effet d'origine et on ne pourra
+afficher l'interface utilisateur que pour l'effet d'origine.
+</p>
+<p>Lorsqu'un effet partagé est lu, il effectue le traitement exactement comme un
+effet normal à l'exception de la configuration qui est copiée depuis l'effet
+d'origine.  Certains effets détectent qu'ils sont partagés, comme l'effet de
+réverbération ou le compresseur.  Ces effets déterminent quelles sont les
+pistes qui les partagent et soit ils mélangent les deux pistes entre-elles,
+soit ils utilisent l'une des piste pour déterminer certaines valeurs.  La
+réverbération mélange les pistes pour simuler une ambiance.  Le compresseur
+utilise l'une des pistes partagées comme déclencheur.
+</p>
+<a name="IDX113"></a>
+<p>Lorsqu'une piste d'origine possède une <b>piste partagée</b> pour l'un de ses
+effets, la piste partagée elle-même est utilisée comme effet temps réel.  C'est
+souvent appelé <b>piste renvoyée</b> mais Cinelerra permet de réaliser la même
+opération en attachant des pistes partagées.  Le fondu et tous les effets de la
+piste partagée sont appliqués à la piste d'origine.  Une fois que la piste a
+effectué le traitement des données, la piste d'origine traite tous les effets
+qui se trouvent sous la piste partagée et les compose ensuite sur la sortie.
+</p>
+<p>De plus, une fois qu'une piste partagée à traité la sortie de la piste
+d'origine comme un effet temps réel, la piste partagée se mélange elle-même sur
+la sortie avec ses paramètres de panoramique, de mode et de projecteur.  De
+cette manière, deux pistes effectuent le mélange des mêmes données vers la
+sortie.  La plupart du temps, vous ne souhaiterez pas que la piste partagée
+mélange vers la sortie les mêmes données que la piste d'origine, vous voudrez
+qu'elle s'arrête juste avant l'étape de mélange et qu'elle restitue les données
+vers la piste d'origine.  Ceci est obtenu en activant le
+<img src=".././manual_images_intl/mutepatch_up.png" alt="manual_images_intl/mutepatch_up"> bouton de sourdine associé à chaque piste
+dont vous ne voulez pas effectuer le mélange vers la sortie.
+</p>
+<p>Supposons que vous réalisiez une vidéo et que vous désiriez que la piste
+partagée mixe la piste d'origine vers la sortie une seconde fois.  Dans le cas
+de la vidéo, la vidéo de la piste partagée apparaîtra toujours sous la vidéo de
+la piste d'origine, indépendamment du fait qu'elle soit au dessus de la piste
+d'origine.  Ceci en raison du fait que les pistes partagées sont mixées dans
+l'ordre de leur attachement.  Comme c'est une partie de la piste d'origine,
+elle doit être mixée avant que la piste d'origine ne le soit.
+</p>
+<hr size="6">
+<a name="Editer-les-effets-en-temps-r_00e9el"></a>
+<a name="SEC141"></a>
+<h2 class="section"> 13.2 Editer les effets en temps réel </h2>
+<p>Il existe de nombreuses opérations pour manipuler des effets une fois qu'ils
+ont été déposés sur la timeline.  Parce que le mélange des effets et des médias
+est une chose très compliquée, les méthodes utilisées pour éditer les effets ne
+sont pas aussi concises que le couper/coller.  Certaines opération sont
+effectuées en glissant les points d'entrée/sortie, certaines par
+l'intermédiaire de menus, et certaines en glissant des effets.
+</p>
+<p>Normalement, lorsque faites du montage avec des pistes, les effets suivent les
+décisions de montage.  Si vous effectuez un couper sur une piste, l'effet va se
+raccourcir.  Si vous glissez les points d'entrée/sortie, les effets vont voir
+leur durée varier.  Ce comportement peut être désactivé en choisissant
+<b>configuration-&gt; Editer les effets</b> dans la fenêtre du projet.  Ceci découple
+les effets des opérations de montage, mais comment faire pour ne modifier que
+les effets ?
+</p>
+<p>Déplacez le curseur de la timeline sur les bords d'un effet jusqu'à ce qu'il
+change de forme pour s'afficher sous la forme d'une icône de redimensionnement
+vers la gauche ou vers la droite.  Dans cet état, si vous glissez la fin de
+l'effet, il réalise une opération de montage exactement comme si vous glissiez
+la fin de la piste.
+</p>
+<p>Les trois comportements de l'ajustement des pistes s'appliquent à l'ajustement
+des effets et sont liés aux boutons de la souris tels que vous les avez
+configurés dans les préférences de l'<b>interface utilisateur</b>.
+Voir la section <a href="cinelerra_cv_manual_fr_3.html#SEC56">Interface</a>.  Lorsque vous effectuez l'ajustement d'un effet, les limites
+de l'effet sont déplacées en les glissant.  A l'inverse de l'édition des
+pistes, l'effet n'a pas de dimensions source.  Vous pouvez donc étendre la fin
+d'un effet autant que vous le désirez sans être limité.
+</p>
+<p>De même, à l'inverse de l'édition de pistes, la position de départ d'une
+opération de glisser ne lie pas la décision de montage au média.  Le média
+auquel est lié l'effet ne suit pas les modifications de l'effet.  Les autres
+effets, cependant, suivent les décisions de montage faites sur cet effet.  Si
+vous glissez la fin d'un effet qui est aligné avec des effets se trouvant sur
+d'autres pistes, les effets des autres pistes seront modifiés bien que le média
+reste le même.
+</p>
+<p>Que se passe-t-il si vous ajustez la fin d'un effet en laissant beaucoup de
+temps non affecté vers la fin de l'effet ? Lorsque vous glissez un effet depuis
+la fenêtre des ressources, vous pouvez insérer l'effet dans la portion de la
+ligne non occupée par l'opération d'ajustement.  Les effets en temps réel sont
+organisés en lignes sous la piste.  Chaque ligne pouvant comporter plusieurs
+effets.
+</p>
+<p>Dans certains cas, vous désirerez que l'opération d'ajustement ne change qu'une
+seule ligne d'effets.  Ceci peut être obtenu en plaçant d'abord le point
+d'insertion au début ou à la fin de l'effet.  Pressez ensuite la touche
+<kbd>MAJ</kbd> en commençant l'opération d'ajustement.  Ceci permet à l'opération de
+ne modifier qu'une seule ligne d'effets.
+</p>
+<p>En plus de l'ajustement, vous pouvez déplacer un effet vers le haut ou vers le
+bas.  Chaque piste possède, à sa partie inférieure, une pile contenant les
+effets.  En déplaçant les effets vers le haut ou vers le bas, vous modifiez
+l'ordre dans lequel ils sont traités sur la pile.  Allez sur l'un des effets et
+faites un clic droit pour afficher le menu de l'effet.  Les options <b>Déplacer
+vers le haut</b> et <b>Déplacer vers le bas</b> déplacent les effets dans la
+direction souhaitée.
+</p>
+<a name="IDX114"></a>
+<a name="IDX115"></a>
+<p>Lorsque vous déplacez des effets vers le haut ou vers le bas, prêtez attention
+au fait que s'ils sont partagés en tant qu'<b>effets partagés</b>, toutes les
+références pointeront alors vers un effet différent après l'opération de
+déplacement.
+</p>
+<p>Enfin, il y a les glisser d'effets.  Glisser des effets fonctionne exactement
+comme glisser des plans.  Vous devez sélectionner la
+<img src=".././manual_images_intl/arrow.png" alt="manual_images_intl/arrow"> flèche pour passer dans le mode
+glisser-déposer avant de pouvoir glisser des effets.  Les effets se collent aux
+limites des médias, aux limites des effets et des pistes.  Faites attention si
+vous glissez la référence d'un effet partagé, après cela, la référence pointera
+habituellement vers le mauvais effet.
+</p>
+<p>Faites un clic droit sur un effet pour afficher le menu de l'effet.  Choisissez
+<b>Remplacer...</b> pour remplacer l'effet ou pour modifier la référence si c'est
+un effet partagé.
+</p>
+<hr size="6">
+<a name="Les-effets-audio-en-temps-r_00e9el"></a>
+<a name="SEC142"></a>
+<h2 class="section"> 13.3 Les effets audio en temps réel </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC143">13.3.1 Compresseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	        Comment réduire la dynamique de l'audio.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC154">13.3.12 Audio en direct</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Passer l'audio directement de la carte son à la timeline.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC157">13.3.15 Décalage de hauteur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC158">13.3.16 Audio arrière</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Comment lire des régions à l'envers.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC144">13.3.2 Retard audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC145">13.3.3 Supprimer le bruit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC146">13.3.4 Supprimer le bruit FFT</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC147">13.3.5 Déparasiter</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC148">13.3.6 Egaliseur paramétrique</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC149">13.3.7 Freeverb</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC150">13.3.8 Gain</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC151">13.3.9 Heroine College</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC152">13.3.10 Interpoler</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC153">13.3.11 Audio inversée</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC155">13.3.13 Boucle audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC156">13.3.14 Overlay</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC159">13.3.17 Niveau audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC160">13.3.18 Spectrogramme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC161">13.3.19 Synthétiseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC162">13.3.20 Etirement du temps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Compresseur"></a>
+<a name="SEC143"></a>
+<h3 class="subsection"> 13.3.1 Compresseur </h3>
+
+<p><img src=".././manual_images_intl/compressor.png" alt="manual_images_intl/compressor">
+</p>
+<p>Au contraire de ce qu'on fait avec les ordinateurs, le compresseur audio ne
+réduit pas la quantité de données nécessaires pour enregistrer de l'audio sur
+disque.  Le compresseur audio diminue la plage dynamique de l'audio.  Dans le
+cas de Cinelerra, le compresseur remplit à la fois le rôle d'un expanseur et
+d'un compresseur.
+</p>
+<p>Le compresseur fonctionne en calculant le niveau sonore maximum à l'intérieur
+d'une certaine période de temps autour de la position actuelle.  Le niveau
+sonore maximum est pris comme niveau sonore d'entrée.  Pour chaque niveau
+sonore d'entrée, il y a un niveau sonore de sortie indiqué par l'utilisateur.
+Le gain à la position actuelle est ajusté de façon à ce que le niveau sonore
+maximum dans la plage de temps ait la valeur indiquée par l'utilisateur.
+</p>
+<p>Le compresseur possède une représentation graphique indiquant la corrélation
+entre la niveau sonore d'entrée et le niveau sonore de sortie.  L'axe
+horizontal est le niveau d'entrée en dB.  L'axe vertical représente le niveau
+de sortie en dB.  L'utilisateur indique les niveaux sonores en sortie en créant
+des points sur le graphique.  Cliquez sur le graphique pour créer un point.  Si
+deux points existent, glissez l'un des points sur le second pour l'effacer.  La
+valeur du point le plus récent est affichée dans des boîtes de texte pour
+permettre un ajustement plus précis.
+</p>
+<p>Pour que le compresseur réduise la dynamique de l'audio, il faut que les
+valeurs en sortie soient plus grandes que les valeurs en entrée sauf pour 0
+dB.  Pour que la plage dynamique soit étendue, il faut que toutes les valeurs
+de sortie, à l'exception du point 0 dB, soient plus faibles que les valeurs
+d'entrée.  L'algorithme limite tous les niveaux sonores au-dessus de 0 dB à 0
+dB.  Donc, pour à obtenir un effet de saturation, appliquez un effet de gain
+avant le compresseur pour réduire tous les niveaux et faites-le suivre avec un
+autre effet de gain qui amplifie tous les niveaux au-dessus de 0 dB.
+</p>
+<p><b>Temps de réaction :</b> ceci détermine la position à laquelle est prise la
+valeur maximale par rapport à la position actuelle et la vitesse à laquelle le
+gain est ajusté pour atteindre cette crête.  Il est noté en secondes.  S'il est
+négatif, le compresseur va lire en avant de la position actuelle pour obtenir
+les crêtes futures.  Le gain est affecté d'une rampe vers le maximum de cette
+durée.  Ceci lui permet d'atteindre le niveau désiré en sortie exactement quand
+la crête d'entrée se produit à la position actuelle.
+</p>
+<p>Si le temps de réaction est positif, le compresseur ne balaie que la position
+actuelle pour le gain et le gain est affecté d'une rampe de cette durée pour
+attendre le niveau de sortie désiré.  Il atteint le niveau de sortie désiré au
+moment exact de la détection de la crête en entrée, auquel se rajoute le temps
+de réaction.
+</p>
+<p><b>Temps de décroissance :</b> si la crête est plus élevée que le niveau actuel,
+le compresseur affecte le gain d'une rampe vers la valeur crête.  Ensuite, si
+une crête future est inférieure à la crête actuelle, le gain est affecté d'une
+rampe décroissante.  Le temps pris par la rampe pour atteindre le gain en
+descendant peut être supérieur au temps pris par la rampe croissante.  Il
+s'agit de ce temps de décroissance de la rampe en secondes.
+</p>
+<p><b>Type de déclenchement :</b> le compresseur est un effet multicanal.  Plusieurs
+pistes se partagent le même compresseur.  La manière dont le signal en
+provenance de plusieurs pistes est interprété dépend du type de déclenchement.
+</p>
+<p>Le <b>Type de déclenchement</b> utilise la valeur fournie dans la boîte de texte
+<b>Déclencheur</b> comme numéro de la piste à utiliser en entrée pour le
+compresseur.  Ceci permet à une piste qu'on n'entend pas de déterminer le
+volume sonore des autres pistes.
+</p>
+<p>Un déclenchement sur le <b>Maximum</b> prend la piste qui donne le niveau sonore
+le plus élevé et l'utilise en entrée du compresseur.
+</p>
+<p>Un déclenchement sur le <b>Total</b> ajoutera les signaux de toutes les piste et
+utilisera ce total comme entrée pour le compresseur.  C'est la compression qui
+donne le rendu le plus naturel et c'est l'idéal lorsque l'on fait la moyenne de
+plusieurs pistes vers un seul haut-parleur.
+</p>
+<p><b>Déclencheur :</b> le compresseur est un effet multicanal.  Plusieurs pistes
+peuvent partager un même compresseur.  Normalement, une seule piste est
+parcourue à la recherche de la valeur crête.  Cette piste est appelée le
+<b>Déclencheur</b>.  En partageant plusieurs pistes et en jouant sur la valeur du
+déclencheur, vous pouvez faire suivre une onde sinusoïdale sur une piste par un
+bruit de batterie sur une autre, par exemple.
+</p>
+<p><b>Lisser seulement :</b> pour afficher ce que fait le compresseur dans les
+indicateurs de niveau, cette option permet de remplacer l'onde sonore par
+uniquement la valeur crête actuelle.  Il est alors très facile de voir l'action
+du <b>temps de réaction</b> sur la détection des valeurs de crête.
+</p>
+<hr size="6">
+<a name="Retard-audio"></a>
+<a name="SEC144"></a>
+<h3 class="subsection"> 13.3.2 Retard audio </h3>
+
+<p><img src=".././manual_images_intl/delayaudio.png" alt="manual_images_intl/delayaudio">
+</p>
+<p>Indiquez simplement de combien de secondes vous désirez que la piste audio soit
+retardée.
+</p>
+<hr size="6">
+<a name="Supprimer-le-bruit"></a>
+<a name="SEC145"></a>
+<h3 class="subsection"> 13.3.3 Supprimer le bruit </h3>
+
+<p><img src=".././manual_images_intl/denoise.png" alt="manual_images_intl/denoise">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Supprimer-le-bruit-FFT"></a>
+<a name="SEC146"></a>
+<h3 class="subsection"> 13.3.4 Supprimer le bruit FFT </h3>
+
+<p><img src=".././manual_images_intl/denoisefft.png" alt="manual_images_intl/denoisefft">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="D_00e9parasiter"></a>
+<a name="SEC147"></a>
+<h3 class="subsection"> 13.3.5 Déparasiter </h3>
+
+<p><img src=".././manual_images_intl/despike.png" alt="manual_images_intl/despike">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Egaliseur-param_00e9trique"></a>
+<a name="SEC148"></a>
+<h3 class="subsection"> 13.3.6 Egaliseur paramétrique </h3>
+
+<p><img src=".././manual_images_intl/parametric.png" alt="manual_images_intl/parametric">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Freeverb"></a>
+<a name="SEC149"></a>
+<h3 class="subsection"> 13.3.7 Freeverb </h3>
+
+<p><img src=".././manual_images_intl/freeverb.png" alt="manual_images_intl/freeverb">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Gain"></a>
+<a name="SEC150"></a>
+<h3 class="subsection"> 13.3.8 Gain </h3>
+
+<p><img src=".././manual_images_intl/gain.png" alt="manual_images_intl/gain">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Heroine-College"></a>
+<a name="SEC151"></a>
+<h3 class="subsection"> 13.3.9 Heroine College </h3>
+
+<p><img src=".././manual_images_intl/reverb.png" alt="manual_images_intl/reverb">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Interpoler"></a>
+<a name="SEC152"></a>
+<h3 class="subsection"> 13.3.10 Interpoler </h3>
+
+<p><img src=".././manual_images_intl/interpolateaudio.png" alt="manual_images_intl/interpolateaudio">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Audio-invers_00e9e"></a>
+<a name="SEC153"></a>
+<h3 class="subsection"> 13.3.11 Audio inversée </h3>
+
+<p><img src=".././manual_images_intl/invertaudio.png" alt="manual_images_intl/invertaudio">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Audio-en-direct"></a>
+<a name="SEC154"></a>
+<h3 class="subsection"> 13.3.12 Audio en direct </h3>
+
+<p><img src=".././manual_images_intl/liveaudio.png" alt="manual_images_intl/liveaudio">
+</p>
+<p>Cet effet lit directement l'audio depuis l'entrée de la carte son.  Il remplace
+toute l'audio de la piste il est donc en général appliqué sur une piste vide.
+</p>
+<p>Afin d'utiliser <b>audio en direct</b>, mettez en surbrillance une zone
+horizontale d'une piste audio ou placez les points d'entrée et de sortie.
+Déposez-y ensuite l'effet d'audio en direct.  Créez des pistes supplémentaires
+et attachez à ces autres pistes des copies partagées du premier effet d'audio
+en direct afin d'enregistrer des canaux supplémentaires.
+</p>
+<p>L'audio en direct utilise le pilote audio sélectionné dans
+<b>Configuration-&gt;Préférences-&gt;Lecture-&gt;Sortie audio</b> pour enregistrer, mais au
+contraire le l'acquisition il utilise la <b>taille de tampon en lecture</b> comme
+tampon d'enregistrement et le <b>taux d'échantillonage du projet</b> comme taux
+d'échantillonnage.
+</p>
+<p>Ces paramètres sont critiques car certaines cartes son ne peuvent pas
+enregistrer dans un tampon dimensionné de la même manière que celui dans lequel
+elle effectuent la restitution.  L'audio en direct est plus fiable lorsque le
+pilote d'enregistrement est ALSA et que la taille de fragment de lecture est de
+2048.
+</p>
+<p>Déposez les autres effets après l'effet audio en direct afin de traiter
+l'entrée de la carte son en temps réel.
+</p>
+<p>Aux mauvaises nouvelles maintenant.  Avec l'audio en direct, il n'y a pas
+d'anticipation, donc des effets tels que le compresseur auront un retard si
+l'anticipation est activée ou il manquera des données lors de la lecture.
+</p>
+<p>Un autre problème provient du fait que l'horloge de la carte son est parfois
+légèrement plus lente que l'horloge de la lecture.  L'enregistrement sera alors
+en avance et le son reproduit sera saccadé.
+</p>
+<p>Enfin, l'audio en direct ne fonctionne pas en inverse.
+</p>
+<hr size="6">
+<a name="Boucle-audio"></a>
+<a name="SEC155"></a>
+<h3 class="subsection"> 13.3.13 Boucle audio </h3>
+
+<p><img src=".././manual_images_intl/loopaudio.png" alt="manual_images_intl/loopaudio">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Overlay"></a>
+<a name="SEC156"></a>
+<h3 class="subsection"> 13.3.14 Overlay </h3>
+
+<p><img src=".././manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="D_00e9calage-de-hauteur"></a>
+<a name="SEC157"></a>
+<h3 class="subsection"> 13.3.15 Décalage de hauteur </h3>
+
+<p><img src=".././manual_images_intl/pitch.png" alt="manual_images_intl/pitch">
+</p>
+<p>Comme pour les méthodes d'étirement du temps, il y a trois méthodes de décalage
+de hauteur : <b>Décalage de hauteur</b>, <b>Rééchantillonner</b>, et le <b>Dialogue
+des informations de l'objet</b>.  Le décalage de hauteur est un effet temps-réel
+qui peut être glissé et collé sur une piste audio enregistrable.  Le décalage
+de hauteur utilise une transformation rapide de Fourier afin d'essayer de
+modifier la hauteur sans toucher à la durée, mais ceci introduit des &quot;artefacts
+de fenêtre&quot;.
+</p>
+<p>Parce que les artefacts de fenêtre sont moins obstrusive #FIXME# quand l'audio
+est décalée en hauteur de manière évidente, le décalage de hauteur est surtout
+utilisé pour des modifications de hauteur extrêmes.  Pour des modifications de
+hauteur moyennes, utiliser le <b>rééchantillonnage</b> depuis l'interface
+<b>Audio-&gt;Rendu d'effet</b>.  Le rééchantillonnage peut modifier la hauteur dans
+les limites de 5% sans modification notable de la durée.
+</p>
+<p>Une autre manière de modifier légèrement la hauteur est d'aller dans la fenêtre
+des <b>Resources</b>, de mettre en surbrillance le dossier <b>media</b>, de faire un
+clic droit sur un fichier audio, puis de cliquer sur <b>Info</b>.  Ajustez le taux
+d'échantillonnage dans le dialogue <b>Info</b> pour ajuster la hauteur.  Cette
+méthode demande aussi d'effectuer un clic gauche sur la limite droite des
+pistes audio et de glisser cette limite vers la gauche ou vers la droite afin
+de déterminer la durée de la modification.
+</p>
+<hr size="6">
+<a name="Audio-arri_00e8re"></a>
+<a name="SEC158"></a>
+<h3 class="subsection"> 13.3.16 Audio arrière </h3>
+
+<p><img src=".././manual_images_intl/reverseaudio.png" alt="manual_images_intl/reverseaudio">
+</p>
+<p>Appliquer <b>audio arrière</b> à une piste audio et lisez-la en sens inverse.  Le
+son sera reproduit normalement.
+</p>
+<p>Soyez conscient, en inversant l'audio, que la forme d'onde sur la timeline ne
+reflète pas la sortie inversée.
+</p>
+<hr size="6">
+<a name="Niveau-audio"></a>
+<a name="SEC159"></a>
+<h3 class="subsection"> 13.3.17 Niveau audio </h3>
+
+<p><img src=".././manual_images_intl/level.png" alt="manual_images_intl/level">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Spectrogramme"></a>
+<a name="SEC160"></a>
+<h3 class="subsection"> 13.3.18 Spectrogramme </h3>
+
+<p><img src=".././manual_images_intl/spectrogram.png" alt="manual_images_intl/spectrogram">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Synth_00e9tiseur"></a>
+<a name="SEC161"></a>
+<h3 class="subsection"> 13.3.19 Synthétiseur </h3>
+
+<p><img src=".././manual_images_intl/synthesizer.png" alt="manual_images_intl/synthesizer">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Etirement-du-temps"></a>
+<a name="SEC162"></a>
+<h3 class="subsection"> 13.3.20 Etirement du temps </h3>
+
+<p><img src=".././manual_images_intl/timestretch.png" alt="manual_images_intl/timestretch">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Les-effets-vid_00e9o-en-temps-r_00e9el"></a>
+<a name="SEC163"></a>
+<h2 class="section"> 13.4 Les effets vidéo en temps réel </h2>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC164">13.4.1 1080 vers 540</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       	Comment convertir de la HDTV en SD.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC165">13.4.2 Vieillissement TV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Comment obtenir un aspect de vieux film.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC166">13.4.3 Flou</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC167">13.4.4 Luminosité/contraste</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Comment ajuster la luminosité et le contraste.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC168">13.4.5 Brûlage TV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">			Comment &quot;brûler&quot; votre vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC169">13.4.6 Clé chromatique</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">		Créer de la transparence en se basant du des similitudes de couleurs.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC170">13.4.7 Clé chromatique (TSV)</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC171">13.4.8 Balance des couleurs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC174">13.4.11 Retard vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC175">13.4.12 Supprimer le bruit de la vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC176">13.4.13 Supprimer le bruit de la vidéo 2</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC172">13.4.9 Décimer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          		Comment réduire la fréquence des images en éliminant les images semblables.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC173">13.4.10 Désentrelacer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       	Comment convertir de la vidéo entrelacée en vidéo progressive.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC177">13.4.14 Clé de différence</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Créer de la transparence en se basant sur des différences de couleurs.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC178">13.4.15 DotTV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             		Comment donner un effet &quot;DotTV&quot; à votre vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC179">13.4.16 Sous-échantillonner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        	Comment réduire la taille d'une image en éliminant des données.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC180">13.4.17 Champs vers images</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  	Comment récupérer l'entrelacement depuis de la vidéo bobbed.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC181">13.4.18 Retourner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">              	Comment retourner une piste vidéo
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC182">13.4.19 Images vers champs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC183">13.4.20 Figer l'image</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC184">13.4.21 Gamma</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC185">13.4.22 Dégradé</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC186">13.4.23 Histogramme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">			Comment modifier la cartographie de différentes valeurs de luminosité.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC187">13.4.24 TV holographique</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC188">13.4.25 Teinte/Saturation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Comment ajuster la teinte et la saturation.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC189">13.4.26 Interpoler la vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC190">13.4.27 Interpoler les pixels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Comment créer l'illusion de fréquence d'images plus élevées.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC191">13.4.28 Télécinéma inverse</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  	Comment convertir des images pulled down en images progressives
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC192">13.4.29 Inverser la vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC193">13.4.30 Flou linéaire</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC194">13.4.31 Vidéo en direct</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        	Passer la vidéo directement depuis la carte d'acquisition à la timeline.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC195">13.4.32 Boucle vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">        	Comment reboucler des régions de la timeline.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC196">13.4.33 Suivi de mouvement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          L'art du suivi de mouvement.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC203">13.4.34 Flou de mouvement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC204">13.4.35 Peinture à l'huile</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      	Comment faire ressembler vos vidéos à de la peinture à l'huile.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC205">13.4.36 Overlay video</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC206">13.4.37 Perspective</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       		Comment modifier la perspective d'uen piste vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC207">13.4.38 Polaire</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">             	Comment plier et enrouler votre vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC208">13.4.39 RVB-601</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC209">13.4.40 Flou radial</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC210">13.4.41 ReframeRT</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         		Modifier le nombre d'images d'une séquence.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC211">13.4.42 Vidéo en arrière</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">     	Comment reproduire en arrière des régions.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC212">13.4.43 Rotation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">            	Comment effectuer une rotation de votre vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC213">13.4.44 SVG via Inkscape</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC214">13.4.45 Redimensionner</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC215">13.4.46 Moyenne temporelle sélective</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC216">13.4.47 Netteté</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC217">13.4.48 Décalage d'interlacement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC218">13.4.49 Permuter les canaux</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC219">13.4.50 Seuil</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">         		Comment obtenir une sortie monochrome à partir d'une région de l'image.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC220">13.4.51 Moyenne temporelle</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">      	Comment ajouter des motifs de traînée afin d'améliorer la qualité des images fixes.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC221">13.4.52 Front temporel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC222">13.4.53 Titreur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">			Comment ajouter un titre
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC225">13.4.54 Translation</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC226">13.4.55 Défocaliser</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">           	Comment rendre moins nette votre vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC227">13.4.56 Vidéoscope</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">			Comment afficher la plage dynamique de l'intensité et de la teinte.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC230">13.4.57 Vagues</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC231">13.4.58 Tourbillon</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC232">13.4.59 YUV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC233">13.4.60 Flou de zoom</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="g_t1080-vers-540"></a>
+<a name="SEC164"></a>
+<h3 class="subsection"> 13.4.1 1080 vers 540 </h3>
+
+<p><img src=".././manual_images_intl/1080to540.png" alt="manual_images_intl/1080to540">
+</p>
+<p>La plupart des émissions de télévision sont reçues avec une résolution de
+1920x1080 mais sont issue d'une source 720x480 au studio.  C'est du gaspillage
+de place que de compresser l'ensemble du 1920x1080 si les détails visibles sont
+en 720x480.  Malheureusement, la retranscription de 1920x1080 vers 720x480 ne
+se borne pas à une simple réduction.
+</p>
+<p>A la station de télévision, le métrage d'origine en 720x480 est d'abord
+converti en champs de 720x240.  Chaque champ et alors &quot;gonflé&quot; à
+1920x540.  Les deux champs de 1920x540 sont enfin combinés par entrelacement
+pour former une image de 1920x1080.  Cette technique permet à un téléviseur
+grand public d'afficher l'image rééchantillonnée sans nécessiter de circuits
+supplémentaires pour gérer l'entrelacement 720x480 dans une image 1920x1080.
+</p>
+<p>Si vous vous contentez de désentrelacer les images 1920x1080, vous obtiendrez à
+la fin un niveau de détail correspondant à une résolution de 720x240.  L'effet
+<b>1080 vers 540</b> extrait correctement de l'image les deux champs d'une taille
+de 1920x540, les redimensionne séparément et les recombine pour restaurer
+l'original de 720x480.  L'effet <b>Redimensionner</b> doit alors être appliqué
+afin de réduire la taille d'origine à 960 ou 720 selon le rapport d'aspect
+d'origine.
+</p>
+<p>Les pistes auxquelles <b>1080 vers 540</b> est appliqué doivent se trouver dans
+une résolution de 1920x1080.  Les paramètres du projet dans <b>Configuration-&gt;
+format...</b> doivent avoir une résolution d'au moins 720x480.
+</p>
+<p>Cet effet ne sait pas si la première ligne de l'image 1920x1080 correspond à la
+première ligne dans l'original de 720x480.  Vous devez indiquer quelle est la
+première ligne dans la configuration de l'effet.
+</p>
+<p>La sortie de cet effet est une petite image au centre de l'image originale en
+1920x1080.  Utilisez le projecteur pour centrer l'image de sortie lors de la
+lecture.
+</p>
+<p>Enfin, une fois que vous avez obtenu la vidéo entrelacée en 720x480, vous
+pouvez soit appliquer un effet de <b>trames vers champs</b> ou <b>Télécinéma
+inverse</b> pour récupérer encore davantage les images progressives d'origine.
+</p>
+<hr size="6">
+<a name="Vieillissement-TV"></a>
+<a name="SEC165"></a>
+<h3 class="subsection"> 13.4.2 Vieillissement TV </h3>
+
+<p><img src=".././manual_images_intl/aging.png" alt="manual_images_intl/aging">
+</p>
+<p>Cet effet est celui à utiliser si vous désirez obtenir un aspect de &quot;vieux
+film&quot; ou d'émission de télévision.  Il va ajouter des lignes ondulantes en
+haut et en bas du film ainsi que de la &quot;neige&quot; sur la vidéo.  Utilisez-le
+conjointement avec Luminosité/Contraste et Equilibre des couleurs afin de faire
+ressembler votre film à un très vieux film en noir et blanc.
+</p>
+<hr size="6">
+<a name="Flou"></a>
+<a name="SEC166"></a>
+<h3 class="subsection"> 13.4.3 Flou </h3>
+
+<p><img src=".././manual_images_intl/blur.png" alt="manual_images_intl/blur">
+</p>
+<p>Cet effet rend floue une piste vidéo.  Ses paramètres sont :
+</p><ul>
+<li> <b>Horizontal et vertical</b><br>
+Ces paramètres sont utilisés pour indiquer lequel des champs sera affecté par
+le flou.  Il peut s'agir des deux champs.
+</li><li> <b>Rayon</b><br>
+Utiliser ce curseur pour définir le niveau de flou à appliquer.
+</li><li> <b>Flou alpha, rouge, vert, bleu</b><br>
+Indique les canaux de couleurs qui devront être rendus flous.
+</li></ul>
+
+<hr size="6">
+<a name="Luminosit_00e9_002fcontraste"></a>
+<a name="SEC167"></a>
+<h3 class="subsection"> 13.4.4 Luminosité/contraste </h3>
+
+<p><img src=".././manual_images_intl/brightness.png" alt="manual_images_intl/brightness">
+</p>
+<p>Si vous désirez éclaircir une prise de vue sombre, ou ajouter de la lumière,
+cet effet est fait pour vous.  N'utilisez pas trop cet effet ou bien vous
+risquez de dégrader la qualité de votre vidéo.  Utilisez-le avec les images-clé afin
+d'éclaircir une longue prise de vue qui est trop sombre au début mais claire à
+la fin.  Généralement, vous devrez modifier la luminosité et le contraste dans
+des proportions équivalentes (par exemple, luminosité 28 contraste 26) de
+manière à ce que vos couleurs d'origine demeurent intactes.
+</p>
+<hr size="6">
+<a name="Br_00fblage-TV"></a>
+<a name="SEC168"></a>
+<h3 class="subsection"> 13.4.5 Brûlage TV </h3>
+
+<p><img src=".././manual_images_intl/burn.png" alt="manual_images_intl/burn">
+</p>
+<p>L'effet de brûlage vidéo fait &quot;brûler&quot; votre vidéo lorsqu'il y a de petits
+éléments lumineux et colorés dans la vidéo, sur les bords d'un T-shirt par
+exemple.  Ce peut être un très bon élément dans une vidéo musicale ou juste un
+bon moyen de libérer votre imagination.
+</p>
+<hr size="6">
+<a name="Cl_00e9-chromatique"></a>
+<a name="SEC169"></a>
+<h3 class="subsection"> 13.4.6 Clé chromatique </h3>
+
+<p><img src=".././manual_images_intl/chromakey.png" alt="manual_images_intl/chromakey">
+</p>
+<p>Cet effet efface tous les pixels qui correspondent à une certaine couleur.  Ils
+sont remplacés par du noir s'il n'y a pas de canal alpha et par de la
+transparence s'il y a un canal alpha.  Le choix du modèle colorimétrique est
+important pour en déterminer le comportement.
+</p>
+<a name="IDX116"></a>
+<p>La clé chromatique utilise soit la luminosité soit la teinte pour définir ce
+qui sera effacé.  <b>Utiliser la valeur</b> permet de n'utiliser que la valeur pour
+déterminer la transparence.  Choisissez la couleur centrale à effacer en
+utilisant le bouton <b>Couleur</b>.  Vous pouvez aussi sélectionner directement
+une couleur dans l'image depuis la fenêtre de composition à l'aide de la
+<b>Pipette à couleurs</b> et en cliquant le bouton <b>Utiliser la pipette à
+couleur</b>.  Ceci permet d'utiliser la couleur actuelle de la pipelle à couleurs
+comme couleur à utiliser pour la clé chromatique.
+</p>
+<p>Soyez conscient que la sortie de la clé chromatique est ensuite réinjectée dans
+le compositeur, si vous choisissez donc de nouveau une couleur depuis le
+compositeur, la sortie de l'effet clé chromatique sera utilisée.  L'effet clé
+chromatique doit être désactivée lorsque vous choisissez une couleur à l'aide
+de la pipette.
+</p>
+<p>Si la luminosité ou la teinte se trouvent à l'intérieur d'un certain seuil,
+elle est effacée.  L'augmentation du seuil détermine la plage de couleurs à
+effacer.  Ce n'est cependant pas pas un simple commutateur marche/arrêt.
+Lorsque la couleur s'approche de la limite du seuil, elle est graduellement
+effacée si la pente est forte et rapidement effacée si la pente est faible.  La
+pente définie ici est le nombre de valeurs supplémentaires, de part et d'autre
+du seuil, nécessaires pour passer de l'opacité à la transparence.
+</p>
+<p>Normalement le seuil est très faible lorsqu'on utilise une pente élevée.  Ces
+deux paramètres tendent à être mutuellement exclusifs parce que la pente
+remplit le seuil supplémentaire.
+</p>
+<p>La pente permet d'adoucir les bords de la clé chromatique mais cela ne
+fonctionne pas très bien sur des sources compressées.  Une technique courante
+pour adoucir ces bords est d'utiliser une pente maximale et d'enchaîner sous la
+clé chromatique, un effet de flou afin de ne rendre flou que le canal alpha.
+</p>
+<hr size="6">
+<a name="NOD171"></a>
+<a name="SEC170"></a>
+<h3 class="subsection"> 13.4.7 Clé chromatique (TSV) </h3>
+
+<p><img src=".././manual_images_intl/chromakeyhsv.png" alt="manual_images_intl/chromakeyhsv">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Balance-des-couleurs"></a>
+<a name="SEC171"></a>
+<h3 class="subsection"> 13.4.8 Balance des couleurs </h3>
+
+<p><img src=".././manual_images_intl/colorbalance.png" alt="manual_images_intl/colorbalance">
+</p>
+<p>La balance des couleurs est l'effet adéquat à utiliser conjointement à
+Luminosité/contraste et Teinte/Saturation, afin de compenser les erreurs
+possibles lors du tournage (faible éclairement, etc.).  Il ne peut cependant
+pas faire tout ça sans dégrader la qualité de la vidéo.  C'est exactement comme
+l'effet de &quot;balance des blancs&quot; dans un programme de retouche d'images,
+tel que GIMP.  Avec cet effet, vous pouvez modifier les couleurs qui seront
+envoyées vers une sortie CMJ (Cyan, Magenta, Jaune) ou RVB (Rouge, Vert, Bleu).
+</p>
+<hr size="6">
+<a name="D_00e9cimer"></a>
+<a name="SEC172"></a>
+<h3 class="subsection"> 13.4.9 Décimer </h3>
+
+<p><img src=".././manual_images_intl/decimate.png" alt="manual_images_intl/decimate">
+</p>
+<p>Cet effet abandonne les images d'une piste qui sont les plus semblables de
+manière à diminuer la fréquence des images.  C'est habituellement appliqué à un
+DVD pour convertir la vidéo de 29,97 i/s à la fréquence d'un film de 23,97 i/s
+mais cet effet de décimation peut prendre n'importe quelle fréquence en entrée
+et la convertir pour obtenir une fréquence de sortie plus faible.
+</p>
+<p>La fréquence de sortie de l'effet de <b>décimation</b> est la fréquence du projet.
+La fréquence d'entrée est définie par l'interface utilisateur de configuration
+de l'effet.  Pour effectuer la conversion d'une vidéo progressive de 29,97 i/s
+en une fréquence de film de 23,97 i/s film, appliquer l'effet de décimation à
+la piste, définissez la fréquence d'entrée de l'effet à 29,97 et la fréquence
+du projet à 23,97.
+</p>
+<p>Soyez attentif au fait que chaque effet empilé avant l'effet de décimation
+effectuera le traitement de la vidéo à la fréquence d'entrée et que chaque
+effet se trouvant après l'effet de décimation effectuera le traitement de la
+vidéo à la fréquence du projet.  Les effets qui demandent beaucoup de
+ressources de calcul devraient se trouver en-dessous de l'effet de décimation.
+</p>
+<hr size="6">
+<a name="D_00e9sentrelacer"></a>
+<a name="SEC173"></a>
+<h3 class="subsection"> 13.4.10 Désentrelacer </h3>
+
+<p><img src=".././manual_images_intl/deinterlace.png" alt="manual_images_intl/deinterlace">
+</p>
+<p>L'effet de désentrelacement a évolué au cours des années vers le
+désentrelacement et bien plus encore.  En fait, deux des méthodes de
+désentrelacement, le <b>Télécinéma inverse</b> et <b>Images vers Champs</b>, sont des
+effets différents.  L'effet de désentrelacement met à disposition plusieurs
+variantes de réplication des lignes pour éliminer l'artefact en peigne de la
+vidéo entrelacée.  Il dispose aussi d'outils de permutation des lignes pour
+corriger de la vidéo qui aurait été capturée de manière incorrecte ou pour
+remettre dans le bon ordre l'affichage des champs d'un effet inversé.
+</p>
+<hr size="6">
+<a name="Retard-vid_00e9o"></a>
+<a name="SEC174"></a>
+<h3 class="subsection"> 13.4.11 Retard vidéo </h3>
+
+<p><img src=".././manual_images_intl/delayvideo.png" alt="manual_images_intl/delayvideo">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Supprimer-le-bruit-de-la-vid_00e9o"></a>
+<a name="SEC175"></a>
+<h3 class="subsection"> 13.4.12 Supprimer le bruit de la vidéo </h3>
+
+<p><img src=".././manual_images_intl/denoisevideo.png" alt="manual_images_intl/denoisevideo">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Supprimer-le-bruit-de-la-vid_00e9o-2"></a>
+<a name="SEC176"></a>
+<h3 class="subsection"> 13.4.13 Supprimer le bruit de la vidéo 2 </h3>
+
+<p><img src=".././manual_images_intl/denoisemjpeg.png" alt="manual_images_intl/denoisemjpeg">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Cl_00e9-de-diff_00e9rence"></a>
+<a name="SEC177"></a>
+<h3 class="subsection"> 13.4.14 Clé de différence </h3>
+
+<p><img src=".././manual_images_intl/diffkey.png" alt="manual_images_intl/diffkey">
+</p>
+<p>La clé de différence crée de la transparence dans les zones qui sont similaires
+entre deux images.  L'effet de clé de différence doit être appliqué à deux
+pistes.  Une piste comporte l'action qui se déroule devant un fond uniforme et
+l'autre piste comporte un fond sans premier plan.  Appliquez l'effet de clé de
+différence à la piste qui comporte l'action et appliquez-en une copie partagée
+à la piste comportant le fond.  La piste avec le fond doit être rendue muette
+et se trouver sous la piste avec l'action.  Le modèle colorimétrique doit avoir
+un canal alpha.
+</p>
+<p>Les pixels qui sont différents sur la piste comportant l'arrière-plan et la
+piste comportant l'action seront considérés comme étant opaques.  Les pixels
+qui sont similaires sont considérés comme étant transparents.  Une modification
+du <b>seuil</b> dans la fenêtre de clé de différence permettra de rendre
+transparent davantage de pixels alors qu'ils ne sont pas de la même couleur.
+Modifiez la <b>pente</b> pour modifier la vitesse avec laquelle la transparence
+diminue lorsque les pixels deviennent plus transparents.
+</p>
+<p>La pente telle que définie ici est le nombre de valeurs supplémentaires, de
+part et d'autre du seuil, nécessaires pour aller d'opaque vers transparent.
+Une pente élevée est plus utile avec un seuil faible parce que la pente remplit
+le seuil supplémentaire.
+</p>
+<p>L'<b>utilisation de la valeur</b> permet d'effectuer une comparaison sur
+l'intensité des pixels et non la couleur.
+</p>
+<p>L'application de flou à la piste du dessus, en ne rendant flou que le canal
+alpha, peut permettre d'adoucir les limites de la transparence.
+</p>
+<p><b>Note :</b> actuellement cet effet provoque des plantages lorsqu'il est utilisé
+dans les modes YUV.
+</p>
+<hr size="6">
+<a name="DotTV"></a>
+<a name="SEC178"></a>
+<h3 class="subsection"> 13.4.15 DotTV </h3>
+
+<p><img src=".././manual_images_intl/dot.png" alt="manual_images_intl/dot">
+</p>
+<p>Un autre effet de Kentaro (effectTV).
+</p>
+<hr size="6">
+<a name="Sous_002d_00e9chantillonner"></a>
+<a name="SEC179"></a>
+<h3 class="subsection"> 13.4.16 Sous-échantillonner </h3>
+
+<p><img src=".././manual_images_intl/downsample.png" alt="manual_images_intl/downsample">
+</p>
+<p>Le sous-échantillonnage est le processus qui réduit la taille d'une image en
+supprimant des données par une réduction de l'échantillonnage.
+</p>
+<p>Les paramètres de cet effet sont :<br>
+Horizontal<br>
+Décalage horizontal<br>
+Vertical<br>
+Décalage vertical<br>
+Canaux
+</p>
+<hr size="6">
+<a name="Champs-vers-images"></a>
+<a name="SEC180"></a>
+<h3 class="subsection"> 13.4.17 Champs vers images </h3>
+
+<p><img src=".././manual_images_intl/fieldframe.png" alt="manual_images_intl/fieldframe">
+</p>
+<p>Cet effet lit les images à deux fois la fréquence des images du projet,
+combinant 2 images en entrée en une seule image interlacée.  Les effets qui
+précèdent <b>champs vers images</b> traitent les images à deux fois la fréquence
+des images du projet.  Chaque image en entrée est appelée un champ.
+</p>
+<p><b>Champs vers images</b> a besoin de connaître à quelles lignes correspond quel
+champ dans l'image en sortie.  La manière la plus simple est d'essayer les deux
+options qui se trouvent dans la fenêtre.  Si les champs en entrée proviennent
+d'un traitement de duplication des lignes comme avec <b>images vers champs</b>, le
+mauvais choix pour le paramètre donnera une image floue en sortie.  Si les
+champs en entrée proviennent d'une conversion entre normes telle que <b>1080
+vers 540</b>, une mauvaise valeur de paramètre ne fera pas de différence.
+</p>
+<p>Le debobber qui convertit un format 720x480 entrelacé en 1920x1080 entrelacé ou
+en 1280x720 progressif semble dégrader la résolution verticale au point qu'elle
+ne puisse pas être récupérée.
+</p>
+<hr size="6">
+<a name="Retourner"></a>
+<a name="SEC181"></a>
+<h3 class="subsection"> 13.4.18 Retourner </h3>
+
+<p><img src=".././manual_images_intl/flip.png" alt="manual_images_intl/flip">
+</p>
+<p>Cet effet permet de retourner une piste vidéo (ou une portion de piste vidéo)
+de la gauche sur la droite, du haut sur le bas ou du bas vers le haut.
+</p>
+<p>La fenêtre de dialogue est simple, puisque seuls les paramètres horizontal et
+vertical sont nécessaires.
+</p>
+<hr size="6">
+<a name="Images-vers-champs"></a>
+<a name="SEC182"></a>
+<h3 class="subsection"> 13.4.19 Images vers champs </h3>
+
+<p><img src=".././manual_images_intl/framefield.png" alt="manual_images_intl/framefield">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Figer-l_0027image"></a>
+<a name="SEC183"></a>
+<h3 class="subsection"> 13.4.20 Figer l'image </h3>
+
+<p><img src=".././manual_images_intl/freezeframe.png" alt="manual_images_intl/freezeframe">
+</p>
+<p>Dans sa forme la plus simple, mettez en surbrillance une région de la piste à
+figer, déposez l'effet figer l'image sur la région en surbrillance, et la
+première image de la région affectée sera jouée pendant toute la durée de la
+région.
+</p>
+<p>Figer l'image possède une option <b>Activé</b> qui peut être associée à une
+image-clé.  Les régions où un effet <b>figer l'image</b> est activé répéteront la
+première image située après la dernière image-clé.  Ceci permet des
+possibilités uniques.
+</p>
+<ul>
+<li> Si un effet <b>figer l'image</b> possède une image-clé en son milieu,
+configurez-le sur <b>Activé</b>, l'image du milieu est répétée pour toute la durée
+de l'effet.
+</li><li> Si un effet de <b>figer l'image</b> possède plusieurs images-clés, toutes
+étant <b>Actives</b>, chaque fois qu'une image-clé est rencontrée, l'image qui se
+trouve à cet emplacement se fige.
+</li><li> Si un effet de <b>figer l'image</b> est alternativement <b>Activé</b> et
+<b>Désactivé</b>, chaque fois qu'une image-clé <b>Active</b> est rencontrée, l'image
+qui s'y trouve est répliquée jusqu'à l'image-clé <b>Désactivée</b> suivante.  Les
+régions désactivées se déroulent normalement.
+</li></ul>
+
+<hr size="6">
+<a name="Gamma"></a>
+<a name="SEC184"></a>
+<h3 class="subsection"> 13.4.21 Gamma </h3>
+
+<p><img src=".././manual_images_intl/gamma.png" alt="manual_images_intl/gamma">
+</p>
+<p>Les images brutes (format RAW) des appareils numériques enregistrent les images
+avec une échelle logarithmique.  Les noirs de ces images se trouvent proches de
+0 et les blancs sont supposés à l'infini.  Les cartes graphiques et la plupart
+des codecs vidéo enregistrent les couleurs selon une échelle linéaire mais
+Cinelerra conserve aux images brutes leur échelle logarithmique d'origine
+lorsqu'il en effectue le rendu.  Ceci est nécessaire car l'analyseur d'images
+brutes ne peut pas toujours décoder la valeur correcte du gamma des images.  Il
+effectue aussi son traitement sous 16 bits, ce qui fait perdre beaucoup
+d'informations.
+</p>
+<p>L'effet gamma convertit les couleurs logarithmique en couleurs linéaires à
+l'aide d'une valeur de gamma et d'une valeur maximum.  La valeur de gamma
+détermine la raideur de la courbe de sortie, et la valeur maximale est
+l'endroit où la valeur 1.0 en sortie correspond au maximum de luminosité en
+entrée.
+</p>
+<p>L'effet gamma possède deux autres paramètres qui permettent de simplifier la
+correction de gamma.  L'option <b>Automatique</b> détermine la valeur <b>max</b> à
+partir de l'histogramme de l'image.  Utilisez-la lorsque vous effectuez la
+prévisualisation d'une longue liste d'images puisqu'elle change pour chaque
+image.
+</p>
+<p>L'option <b>Utiliser la pipette à couleurs</b> utilise la valeur qui se trouve
+actuellement dans la pipette à couleurs pour définir la valeur <b>max</b>.  Notez
+que chaque fois que vous prenez une couleur dans la fenêtre de composition,
+vous devrez cliquer <b>Utiliser la pipette à couleurs</b> afin d'utiliser la
+nouvelle valeur.
+</p>
+<hr size="6">
+<a name="D_00e9grad_00e9"></a>
+<a name="SEC185"></a>
+<h3 class="subsection"> 13.4.22 Dégradé </h3>
+
+<p><img src=".././manual_images_intl/gradient.png" alt="manual_images_intl/gradient">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Histogramme"></a>
+<a name="SEC186"></a>
+<h3 class="subsection"> 13.4.23 Histogramme </h3>
+
+<p><img src=".././manual_images_intl/histogram.png" alt="manual_images_intl/histogram">
+</p>
+<p>Il permet d'afficher le nombre d'occurrences de chaque couleur sur un graphique
+d'histogramme.
+</p>
+<p>Le calcul est toujours effectué en RVB virgule flottante indépendamment de
+l'espace colorimétrique du projet.  L'histogramme comporte deux jeux de
+paramètres de transfert : le transfert en entrée et le transfert en sortie.
+</p>
+<p>4 histogrammes sont possibles dans le visualisateur d'histogramme.  Les
+histogrammes rouge, vert et bleu affichent les histogrammes en entrée pour les
+canaux rouge, vert et bleu en les multipliant par une fonction de transfert
+d'entrée afin d'obtenir les sorties rouge, verte et bleue.  Les valeurs bleue,
+verte et rouge mises à l'échelle sont convertie en une valeur qui est affichée
+sur l'histogramme des valeurs.  L'histogramme des valeurs est alors modifié en
+fonction des paramètres du rouge, du vert et du bleu.  Les transferts de
+valeurs sont appliqués uniformément à R, V et B après que les transferts de
+couleurs aient été appliqués.
+</p>
+<p>Sélectionnez quel transfert afficher en sélectionnant l'un des canaux en haut
+de l'histogramme.
+</p>
+<p>Le transfert d'entrée est défini par un graphique superposé à l'histogramme.
+L'axe horizontale correspond à toutes les valeurs possible de la couleur
+d'entrée.  L'axe vertical correspond aux couleurs de sorties de chaque couleur
+d'entrée.  La vidéo qui entre dans l'histogramme est d'abord affichée sur
+l'histogramme, et ensuite elle est transformée de manière à ce que les valeurs
+des couleurs de sortie soient égales aux valeurs de sortie correspondant à
+chaque valeur sur le graphique d'entrée.
+</p>
+<p>Le graphique d'entrée est édité en ajoutant et en supprimant un nombre
+quelconque de points.  Cliquez et glissez n'importe où dans le graphique pour
+créer un point et le déplacer.  Cliquez sur un point existant pour le rendre
+actif et le déplacer.  Le point actif est toujours marqué par son remplissage.
+Les couleurs d'entrée et de sortie du point actif sont indiquées dans des
+boîtes de texte en haut de la fenêtre.  Les couleurs d'entrée et de sortie du
+point peuvent être modifiées à l'aide de ces boîtes de texte.
+</p>
+<p>Les points peuvent être supprimés en sélectionnant d'abord un point et en le
+glissant de l'autre côté d'un point adjacent.  Ils peuvent aussi être supprimés
+en les sélectionnant et en pressant <b>Suppr</b>.
+</p>
+<p>Après le transfert d'entrée, l'image est traitée par le transfert de sortie.
+Le transfert de sortie est simplement un minimum et un maximum pour mettre à
+l'échelle correspondante les couleurs d'entrée.  Les valeurs d'entrée de 0%
+sont remontées à la valeur du minimum en sortie.
+</p>
+<p>Les valeurs en entrée en-dessous de 0 sont toujours alignées à 0 et les valeurs
+au-dessus de 100% sont toujours alignées à 100%.  Cliquez et glissez les
+triangles des dégradés de sortie afin de les modifier.  Les boîtes de texte
+permettent aussi d'entrer directement des valeurs.
+</p>
+<p>Cochez la case <b>Automatique</b> afin que l'histogramme calcule un transfert
+automatique pour le rouge, le vert et le bleu mais pas la valeur.  Il fait une
+mise à l'échelle pour que les 99% de pixels du milieu occupent 100% de la
+largeur de l'histogramme.  Le nombre de pixels autorisés à passer au travers de
+l'effet filtre est défini par la boîte de texte <b>Seuil</b>.  Un seuil de 0.99
+redimensionne l'entrée de manière à ce que 99% des pixels passent au travers.
+Des seuils plus faibles permettent à moins de pixels de passer au travers et
+rendent la sortie plus contrastée.  Le transfert automatique d'entrée est
+calculé pour les canaux R, V et B mais pas pour la valeur.<br>
+<b>Afficher l'histogramme</b><br>
+<b>Diviser la sortie</b>
+</p>
+<hr size="6">
+<a name="TV-holographique"></a>
+<a name="SEC187"></a>
+<h3 class="subsection"> 13.4.24 TV holographique </h3>
+
+<p><img src=".././manual_images_intl/holo.png" alt="manual_images_intl/holo">
+</p>
+<p>De Kentarou effectTV
+</p>
+<hr size="6">
+<a name="Teinte_002fSaturation"></a>
+<a name="SEC188"></a>
+<h3 class="subsection"> 13.4.25 Teinte/Saturation </h3>
+
+<p><img src=".././manual_images_intl/huesaturation.png" alt="manual_images_intl/huesaturation">
+</p>
+<p>Avec cet effet, vous pouvez modifier la teinte, la saturation et la valeur.
+Les paramètres sont modifiés en utilisant 3 simples curseurs.
+</p>
+<hr size="6">
+<a name="Interpoler-la-vid_00e9o"></a>
+<a name="SEC189"></a>
+<h3 class="subsection"> 13.4.26 Interpoler la vidéo </h3>
+
+<p><img src=".././manual_images_intl/interpolatevideo.png" alt="manual_images_intl/interpolatevideo">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Interpoler-les-pixels"></a>
+<a name="SEC190"></a>
+<h3 class="subsection"> 13.4.27 Interpoler les pixels </h3>
+
+<p><img src=".././manual_images_intl/interpolate.png" alt="manual_images_intl/interpolate">
+</p>
+<p>L'effet d'interpolation des pixels essaie de créer l'illusion d'une fréquence
+d'images plus élevée depuis un métrage ayant une fréquence d'images très
+faible, en effectuant la moyenne au cours du temps.  Pour chaque image de
+sortie, il effectue la moyenne entre deux images en entrée.  Les images en
+entrée sont prises à des instants différents ce qui provoque un fondu pour
+chacune des images de sortie se trouvant entre deux images en entrée.  Il y a
+deux manières d'indiquer les images en entrée.  Vous pouvez indiquer une
+fréquence d'images d'entrée qui soit plus faible que celle du projet.  Ceci
+permet de prendre les images en entrée à des intervalles réguliers.  Vous
+pouvez indiquer une fréquence d'images en entrée qui soit inférieure à la
+fréquence des images du projet.  Ceci permettra de prendre les images en entrée
+à intervalle régulier.
+</p>
+<p>Vous pouvez aussi indiquer des emplacements d'images-clés comme positions des
+images d'entrée.  Dans ce mode, la fréquence des images en sortie est utilisée
+comme fréquence d'entrée et vous n'avez qu'à créer des images-clés aux
+emplacements où vous désirez indiquer une image d'entrée.
+</p>
+<hr size="6">
+<a name="T_00e9l_00e9cin_00e9ma-inverse"></a>
+<a name="SEC191"></a>
+<h3 class="subsection"> 13.4.28 Télécinéma inverse </h3>
+
+<p><img src=".././manual_images_intl/ivtc.png" alt="manual_images_intl/ivtc">
+</p>
+<p>C'est l'outil de désentrelacement le plus efficace lorsque le métrage est un
+transfert vidéo de film.  Dans ce cas, le film a été converti de 24 im/s vers
+60 trames/s (pour la norme NTSC, en PAL, il s'agit de 50 trames/s).  Ensuite
+les 60 trames/s (respectivement 50) sont rééchantillonnées vers 30 im/s
+(respectivement 25) en extrayant les lignes paires et impaires, et en
+entrelaçant les lignes.  L'effet IVTC (Téléciméma inverse) est d'abord un moyen
+de convertir de la vidéo entrelacée en vidéo progressive.  Il défait trois
+motifs d'entrelacement.<br>
+<code>A AB BC CD D</code><br>
+<code>AB CD CD DE EF</code><br>
+<code>Automatique</code>
+</p>
+<p>Les deux premières options sont des motifs fixes et sont affectées par les
+paramètres de <b>décalage de motif</b> et de <b>champs impairs d'abord</b>.  Cette
+dernière option crée plusieurs combinaisons de lignes pour chaque trame et
+prend la combinaison la plus progressive.  C'est un algorithme de force brute.
+</p>
+<p>Cette technique ne repose pas sur un motif comme pour les autres techniques et
+elle est moins destructive mais le déroulement du temps peut être un peu
+saccadé en raison de l'absence de réduction de la fréquence des images.  Pour
+lisser le déroulement dans le temps, il faut faire suivre l'effet de télécinéma
+inverse d'un effet de décimation.
+</p>
+<hr size="6">
+<a name="Inverser-la-vid_00e9o"></a>
+<a name="SEC192"></a>
+<h3 class="subsection"> 13.4.29 Inverser la vidéo </h3>
+
+<p><img src=".././manual_images_intl/invertvideo.png" alt="manual_images_intl/invertvideo">
+</p>
+<p>Appelé aussi vidéo inverse, c'est une méthode pour inverser les couleurs d'une
+piste vidéo.
+</p>
+<p>Les quatre paramètres sont les canaux (Rouge, Bleu, Vert, Alpha)
+</p>
+<hr size="6">
+<a name="Flou-lin_00e9aire"></a>
+<a name="SEC193"></a>
+<h3 class="subsection"> 13.4.30 Flou linéaire </h3>
+
+<p><img src=".././manual_images_intl/linearblur.png" alt="manual_images_intl/linearblur">
+</p>
+<p>Le flou possède trois styles : Linéaire, Radial et Zoom
+</p>
+<p>Les paramètres sont :
+</p><ul>
+<li> <b>Distance</b><br>
+Distance entre l'image d'origine et l'étape finale du flou.
+</li><li> <b>Angle</b><br>
+Angle de déplacement, pour le flou linéaire
+</li><li> <b>Pas</b><br>
+Nombre de niveaux de flou
+</li><li> <b>Canaux</b><br>
+Canaux à rendre flous.
+</li></ul>
+
+<hr size="6">
+<a name="Vid_00e9o-en-direct"></a>
+<a name="SEC194"></a>
+<h3 class="subsection"> 13.4.31 Vidéo en direct </h3>
+
+<p><img src=".././manual_images_intl/livevideo.png" alt="manual_images_intl/livevideo">
+</p>
+<p>Cet effet lit directement la vidéo depuis la carte d'acquisition.  Il remplace
+toute la vidéo de la piste, et est donc normalement appliqué sur une piste
+vierge.  La configuration de la carte d'acquisition est prise depuis les
+préférences de l'acquisition.  Allez à
+<b>Configuration-&gt;Préférences-&gt;Acquisition</b> pour configurer votre carte
+d'acquisition.
+</p>
+<p>Allez à la section <b>Entrée vidéo</b> où l'on trouve le <b>Pilote
+d'enregistrement</b>.  Il doit être défini soit à <b>Video4Linux2</b>, soit à <b>IEC
+61883</b>.  Les autres pilotes vidéo n'ont pas été testés avec la vidéo en direct
+et ne fonctionneront probablement pas.
+</p>
+<p>Pour la vidéo en direct, le <b>Format de fichier</b> et la <b>Vidéo</b> doivent avoir
+des valeurs que la timeline peut utiliser.  Le format de fichier doit être
+<b>Quicktime pour Linux</b> et l'enregistrement vidéo doit être activé pour ce
+format.  Cliquez sur la <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> clé afin de
+déterminer la compression vidéo.
+</p>
+<p>La compression vidéo dépend du pilote d'enregistrement.  Pour le pilote
+d'enregistrement <b>Video4Linux2</b>, La compression doit être <b>JPEG animé A</b>.
+Pour le pilote <b>IEC 61883</b>, la compression doit être <b>DV</b>.  Le pilote va
+générer une sortie dans un modèle colorimétrique que la timeline peut utiliser.
+</p>
+<p>Certaines cartes autorisent le paramétrage de la couleur et des canaux.  La
+vidéo en direct prend les paramètres de couleur depuis les valeurs définies
+dans la fenêtre <b>Entrée vidéo</b>.  Allez à <b>Fichier-&gt;Acquisition</b> afin
+d'afficher l'interface d'enregistrement et la fenêtre d'<b>Entrée vidéo</b>.  Les
+valeurs définies dans la fenêtre <b>Entrée vidéo</b> sont utilisées par <b>Vidéo
+en direct</b>.  Tous les canaux que gère la carte d'acquisition doivent être
+configurés dans l'interface <b>Entrée vidéo</b> car ces mêmes canaux sont utilisés
+par l'effet <b>Vidéo en direct</b>.
+</p>
+<p>Lorsque l'acquisition vidéo est configurée, mettez en surbrillance une région
+de la piste vidéo ou définissez les points d'entrée et de sortie.  Déposez-y
+alors l'effet de vidéo en direct.  Déposez les autres effets après l'effet
+vidéo en direct de façon à ce que ce dernier soit traité en temps réel.  Afin
+d'obtenir les meilleurs résultats, vous devriez utiliser OpenGL et une carte
+vidéo qui permet la gestion du langage d'ombrage GL.  Allez à
+<b>Configuration-&gt;Préférences-&gt;Lecture-&gt;Sortie vidéo</b> pour activer le pilote
+OpenGL.
+</p>
+<p>Un seul effet <b>Vidéo en direct</b> peut exister à un moment donné sur la
+timeline.  Il ne peut pas être partagé avec plus d'une piste.
+</p>
+<hr size="6">
+<a name="Boucle-vid_00e9o"></a>
+<a name="SEC195"></a>
+<h3 class="subsection"> 13.4.32 Boucle vidéo </h3>
+
+<p><img src=".././manual_images_intl/loopvideo.png" alt="manual_images_intl/loopvideo">
+</p>
+<p>Des sections de vidéo peuvent être bouclées en y déposant l'effet de <b>boucle</b>
+Au contraire de l'option <b>Configuration-&gt;Jouer en boucle</b>, l'effet de boucle
+peut être rendu alors que l'option <b>Configuration-&gt;Jouer en boucle</b> ne le
+peut pas.  L'effet de boucle est pratique pour de courtes régions.
+</p>
+<p>L'effet de boucle comporte une option : le nombre d'<b>images</b> ou
+d'<b>échantillons</b> à reboucler.  Ceci permet d'indiquer la durée de la région à
+boucler en partant soit du début de l'effet, soit de la dernière image-clé.  La
+région est répliquée pour la durée complète de l'effet.
+</p>
+<p>Chaque fois qu'une image-clé est placée dans un effet de boucle, l'image-clé
+devient le début de la région à boucler.  Placer plusieurs images-clés
+successivement provoque le rebouclage de plusieurs régions.  Placer une seule
+image-clé fait reboucler la région située après l'image-clé pour la durée de
+l'effet, indépendamment de l'emplacement de l'image-clé.  La fin de l'effet
+peut être rebouclée depuis le début en plaçant une image-clé près de la fin.
+</p>
+<hr size="6">
+<a name="Suivi-de-mouvement"></a>
+<a name="SEC196"></a>
+<h3 class="subsection"> 13.4.33 Suivi de mouvement </h3>
+
+<p><img src=".././manual_images_intl/motion.png" alt="manual_images_intl/motion">
+</p>
+<p>Le suivi de mouvement est presque une application à lui tout seul.  Le suivi de
+mouvement permet de suivre deux types de mouvements : la translation et la
+rotation.  Ils peuvent être suivis tous deux simultanément ou bien uniquement
+l'un d'entre-eux.  Il peut faire du suivi par 1/4 de pixel ou par pixel.  Il
+peut stabiliser le mouvement ou faire qu'une piste suive le mouvement d'une
+autre.
+</p>
+<p>Bien que le suivi de mouvement soit appliqué comme un effet en temps réel, il
+doit habituellement être rendu pour se rendre compte des résultats.  Cet effet
+prend beaucoup de temps pour détecter précisément le mouvement.
+</p>
+<p>Le moteur de suivi de mouvement fonctionne en utilisant une région de l'image
+comme région à suivre.  Il compare cette région entre deux images pour en
+calculer le déplacement.  Cette région peut être définie n'importe où sur
+l'écran.  Une fois que le mouvement entre deux images a été calculé, un certain
+nombre de choses peut être effectuées avec ce vecteur de mouvement.  Il peut
+être mis à l'échelle en utilisant une valeur définie par l'utilisateur et
+tronqué à une valeur maximale.  Il peut être ignoré ou accumulé avec tous les
+vecteurs de mouvement qui le précèdent jusqu'à la position actuelle.
+</p>
+<p>Pour gagner du temps, le résultat du suivi de mouvement peut être enregistré
+pour être réutilisé plus tard, rappelé d'un précédent calcul ou bien détruit.
+</p>
+<p>Le moteur de suivi de mouvement possède la notion de deux pistes, le niveau
+maître et la piste de destination.  Le niveau maître est l'endroit où se fait
+la comparaison entre deux images.  La piste de destination est l'endroit où le
+mouvement est appliqué soit pour suivre, soit pour compenser les mouvements du
+niveau maître.
+</p>
+<p>La complexité du suivi de mouvements est suffisante pour faire vivre des
+sociétés entières et pour y construire sa carrière.  Le suivi de mouvement de
+Cinelerra n'est pas aussi sophistiqué que certains logiciels de suivi de
+mouvement de renommée mondiale, mais il est suffisant pour améliorer certaines
+prises de vue au caméscope.
+</p>
+<p>Voici une brève description des paramètre du suivi de mouvement :
+</p>
+<ul>
+<li> <b>Suivre la translation</b><br>
+Active les opérations relatives aux mouvements de translation.  Le moteur
+de suivi recherche les mouvements selon les axes X et Y du niveau maître et
+ajuste le mouvement selon les axe X et Y dans le niveau de destination.
+
+<a name="IDX117"></a>
+<a name="IDX118"></a>
+</li><li> <b>Taille du bloc de translation</b><br>
+Pour les opérations de translation, un bloc est comparé à un certain nombre de
+blocs voisins pour rechercher celui qui comporte le moins de différences.  La
+taille de bloc à rechercher est donnée par ce paramètre.
+
+</li><li> <b>Rayon de recherche pour la translation</b><br>
+C'est la taille de la zone à examiner pour le bloc de translation.
+
+</li><li> <b>Nombre de pas de recherche pour la translation</b><br>
+Idéalement, les opérations de recherche devraient comparer le bloc de
+translation avec chaque autre pixel se trouvant dans le rayon de recherche.
+Pour accélérer les opérations, la recherche est faite dans un sous-ensemble des
+positions possibles.  Ensuite, la zone de recherche est réduite et analysée de
+nouveau avec le même nombre de pas jusqu'à ce que le déplacement soit connu
+avec une précision de 1/4 pixel.
+
+</li><li> <b>X, Y du bloc</b><br>
+Ces coordonnées définissent le centre du bloc de translation basé sur des
+pourcentages de la largeur et de la hauteur de l'image.  Le centre du bloc
+devrait être compris dans une partie de l'image qui est toujours visible.
+
+</li><li> <b>Décalage maximum absolu</b><br>
+La valeur du mouvement détecté par le moteur de suivi de mouvement est
+illimitée si cette valeur est de 100.  Si elle est inférieure à 100, la valeur
+de mouvement est limitée par ce pourcentage des dimensions de l'image.
+
+</li><li> <b>Vitesse d'établissement</b><br>
+Le mouvement détecté entre chaque image peut être accumulé sous forme d'un
+vecteur de mouvement absolu.  Si la vitesse d'établissement est de 100, le
+vecteur absolu est ajouté à l'image suivante.  Si la vitesse d'établissement
+est inférieure à 100, le vecteur absolu est réduit par cette valeur avant
+d'être ajouté à l'image suivante.
+
+</li><li> <b>Suivre la rotation</b><br>
+Activer les opérations relatives aux mouvements rotation.  Le moteur de suivi
+recherche la rotation dans le niveau maître et ajuste la rotation dans la
+piste cible.
+
+</li><li> <b>Taille de bloc pour la rotation</b><br>
+Pour les opérations de rotation, un seul bloc est comparé à des blocs de même
+dimension, chacun étant pivoté d'une valeur différente.  Ceci est la taille des
+blocs de rotation.
+
+</li><li> <b>Rayon de recherche pour la rotation</b><br>
+C'est l'angle de rotation maximum à partir de l'image de départ que le moteur
+d'analyse peut détecter.  L'analyse en rotation commence à cet angle dans le
+sens anti-horaire jusqu'à cet angle dans le sens horaire.  Le rayon de
+recherche indiqué ici est donc la moitié de la plage totale qui sera analysée.
+
+</li><li> <b>Nombre de pas de recherche pour la rotation</b><br>
+Idéalement, tous les angles possibles devraient être testés pour obtenir la
+rotation.  Pour accélérer la recherche de la rotation, le rayon pour la
+recherche de la rotation est divisé en un nombre fini d'angles et seuls ces
+angles seront comparés avec l'image de départ.  Ensuite, le rayon de recherche
+sera diminué et un même nombre d'angles sera comparé avec le plus petit rayon
+jusqu'à ce que la plus grande précision possible soit atteinte.<br>
+Normalement, vous avez besoin d'un pas de recherche pour chaque degré parcouru.
+Comme le moteur de recherche de la rotation parcourt le rayon de recherche dans
+les deux sens, pour pouvoir d'effectuer la recherche sur toute la plage vous
+avez besoin de deux pas pour chaque degré de rayon de recherche.
+
+</li><li> <b>Dessiner les vecteurs</b><br>
+Lorsque la translation est activée, 2 boîtes sont dessinées sur l'image.  Une
+des boîtes représente le bloc de translation, l'autre boîte, en-dehors du bloc
+de translation, représente l'étendue du rayon de recherche en translation.  Au
+centre de ces boîtes figure une flèche indiquant la translation entre les deux
+images principales.<br>
+Lorsque la rotation est activée, une seule boîte de la taille du bloc de
+rotation est dessinée, pivotée de la valeur de la rotation détectée.
+
+</li><li> <b>Suivre une seule image</b><br>
+Lorsque cette option est utilisée, le déplacement entre une seule image de
+départ et l'image actuellement sous le point d'insertion est calculée.  L'image
+de départ est précisée dans l'emplacement <b>numéro d'image</b>.  Le mouvement
+calculé de cette manière est pris comme vecteur de mouvement absolu.  Le
+vecteur de mouvement absolu de chacune des images remplace le vecteur de
+mouvement absolu de l'image précédente.  La vitesse d'établissement n'a pas
+d'action sur lui car il ne comporte aucun vecteur de déplacement précédent.  La
+lecture peut commencer n'importe où sur la timeline puisqu'il n'y a aucune
+dépendance avec des résultats antérieurs.
+
+</li><li> <b>Suivre l'image précédente</b><br>
+Le calcul du mouvement ne sera effectué qu'entre l'image précédente et l'image
+en cours.  Ceci est ajouté à un vecteur de mouvement absolu de façon à obtenir
+le nouveau mouvement depuis le début de la séquence jusqu'à la position
+actuelle.  Après le traitement de chaque image, la position du bloc est décalée
+de façon à toujours couvrir la même région de l'image.  La lecture doit être
+faite depuis le début de l'effet de mouvement de façon à accumuler tous les
+vecteurs de mouvement nécessaires.
+
+</li><li> <b>Image précédente du même bloc</b><br>
+Ceci est utile pour stabiliser la vidéo issue d'un camescope non stabilisé.
+Dans ce mode, le mouvement entre l'image en cours et l'image précédente est
+calculé.  Au lieu d'ajuster la position du bloc pour refléter la nouvelle
+position de l'image, comme le fait <b>Suivre l'image précédente</b>, la position
+du bloc reste inchangée entre les deux images.  Donc une nouvelle région est
+comparée pour chaque image.
+
+</li><li> <b>Niveau maître</b><br>
+Ceci détermine la piste qui procure l'image de départ et l'image finale pour
+les calculs de mouvement.  S'il est positionné à <b>Bas</b>, la piste la plus
+basse de toutes celles qui partagent cet effet sera le niveau maître, la piste
+qui se trouve au-dessus des autres sera le niveau cible.  S'il est positionné à
+<b>Haut</b>, la piste la plus haute de toutes celles qui partagent cet effet sera
+le niveau maître, la piste qui se trouve au-dessous des autres sera le niveau
+cible.
+
+</li><li> <b>Calcul</b><br>
+Ceci détermine s'il faut calculer le déplacement et sous quelle forme
+l'enregistrer sur le disque.  S'il est positionné à <b>Ne pas calculer</b>, le
+calcul de déplacement est omis.  S'il est positionné à <b>Recalculer</b>, le
+calcul de mouvement est effectué chaque fois qu'une image est calculée.  S'il
+est positionné à <b>Enregistrer</b>, le calcul du déplacement est toujours
+effectué et, en plus, une copie en est aussi enregistrée.  S'il est positionné
+à <b>Charger</b>, le calcul du mouvement est chargé depuis le résultat d'un calcul
+précédemment enregistré.  S'il n'y a pas de résultat précédent sur le disque,
+un nouveau calcul est effectué.
+
+</li><li> <b>Action</b><br>
+Une fois que le vecteur de mouvement est connu, l'action détermine s'il faut déplacer
+la piste de destination dans la direction opposée au mouvement ou s'il faut suivre
+le vecteur de mouvement.  Si c'est <b>Ne rien faire</b>, la piste de destination est
+laissé inchangée.  Si c'est <b>Piste...</b>, la piste de destination est déplacée de la
+même valeur que le niveau principal.  C'est utile pour faire correspondre des titres
+à des objets sur l'image.  Si c'est <b>Stabiliser...</b>, le niveau de destination est
+déplacé dans la direction opposée au vecteur de mouvement.  C'est utile pour stabiliser
+un objet dans l'image.  Les opérations de mouvement peuvent être précises au pixel
+ou au sous-pixel près en modifiant les paramètres de l'action.
+</li></ul>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC197">13.4.33.1 Les secrets du suivi de mouvement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC198">13.4.33.2 Suivi de mouvement en deux passes</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC199">13.4.33.3 Utiliser le flou pour améliorer le suivi de mouvement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC200">13.4.33.4 Utiliser l'histogramme pour améliorer le suivi de mouvement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC201">13.4.33.5 Le suivi de mouvement en action</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC202">13.4.33.6 La stabilisation en action</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Les-secrets-du-suivi-de-mouvement"></a>
+<a name="SEC197"></a>
+<h4 class="subsubsection"> 13.4.33.1 Les secrets du suivi de mouvement </h4>
+
+<p>Comme c'est un effet très long à calculer, il y a une méthode pour appliquer le
+suivi de mouvement de façon à en obtenir le maximum.  Désactivez tout d'abord
+la lecture pour la piste sur laquelle vous voulez utiliser le suivi de
+mouvement.  Déposez ensuite l'effet sur une région de la vidéo où se trouve un
+certain mouvement à suivre.  Replacez ensuite le point d'insertion au début de
+cette région.  Configurez <b>Action-&gt;Ne rien faire</b>.  Configurez <b>Calcul-&gt;Ne
+pas calculer</b>.  Activez <b>Dessiner les vecteurs</b>.  Activez ensuite la lecture
+de la piste pour voir les zones de suivi de mouvement.
+</p>
+<p>Activez le type de vecteur de mouvement que vous désirez suivre, soit le
+<b>mouvement de translation</b>, soit le <b>mouvement de rotation</b>.  En visionnant
+la fenêtre de composition et en ajustant les paramètres <b>x, y du bloc</b>,
+centrez le bloc sur la partie de l'image que vous désirez suivre.  Ensuite,
+configurez le rayon de recherche, la taille du bloc et les coordonnées du bloc
+pour la translation et la rotation.
+</p>
+<p>Une fois tout ceci configuré, configurez le calcul à <b>Enregistrer les
+coordonnées</b> et faites des passes de tests sur la séquence pour voir si le
+suivi de mouvement fonctionne et pour enregistrer les vecteurs de mouvement.
+Une fois ceci effectué, désactivez la lecture de la piste, désactivez
+<b>Dessiner les vecteurs</b>, configurez l'action désirée concernant le mouvement
+sur la piste de destination et changez le calcul en <b>Charger les
+coordonnées</b>.  Enfin, activez la lecture de la piste.
+</p>
+<p>Lorsque vous utilisez une seule image pour calculer le mouvement d'une
+séquence, l'image de départ devrait être une image unique présentant le moins
+de mouvement qu'une quelconque des autres images.  C'est rarement le cas de
+l'image 0.  Habituellement, il faut prendre une image vers le milieu de la
+séquence.  De cette manière le rayon de recherche n'a besoin que de couvrir la
+moitié de l'ensemble du mouvement de la séquence.
+</p>
+<p>Si le suivi de mouvement est utilisé avec une grappe de calcul, <b>Enregistrer
+les coordonnées</b> et <b>Image précédente</b> ne fonctionnera pas.  Les résultats de
+l'opération d'enregistrement des coordonnées sont enregistrés sur les disques
+des noeuds de rendu, et non pas sur le noeud principal.  Les opérations de
+rendu ultérieures effectuées sur ces noeuds traiteront des images différentes
+et liront les mauvaises coordonnées depuis le système de fichiers du noeud.  Le
+fait que les noeuds de rendu ne visualisent qu'une portion de la timeline
+empêche aussi l'<b>image précédente</b> de fonctionner car elle dépend du calcul
+d'un vecteur de mouvement absolu ayant l'image 0 comme point de départ.
+</p>
+<hr size="6">
+<a name="Suivi-de-mouvement-en-deux-passes"></a>
+<a name="SEC198"></a>
+<h4 class="subsubsection"> 13.4.33.2 Suivi de mouvement en deux passes </h4>
+
+<p>La méthode ci-dessus décrit le processus de suivi de mouvement en deux passes.
+Une passe est utilisée pour calculer les vecteurs de mouvement.  Une seconde
+passe est utilisée pour appliquer les vecteurs de mouvement à la vidéo.  C'est
+plus rapide qu'une unique passe car les erreurs de calculs des vecteurs de
+mouvement peuvent être rapidement découvertes.
+</p>
+<p>Ceci permet aussi au suivi de mouvement d'utiliser un modèle colorimétrique
+moins exigeant comme RVB888 dans la phase d'examen, et un modèle colorimétrique
+plus exigeant comme RVB flottant dans la phase d'action.  La phase d'examen
+prend beaucoup plus de temps que la phase d'action.
+</p>
+<p>Cette méthode a le désavantage de ne pas être pratique pour de très longues
+séquences, où il est acceptable d'avoir un certain niveau d'erreur, et que la
+qualité de l'image est faible au départ comme c'est le cas pour la
+stabilisation d'images issues d'un caméscope.
+</p>
+<p>La méthode la plus lente est de calculer les vecteurs de mouvement et de les
+appliquer simultanément.  Cette méthode peut utiliser une piste comme piste de
+calcul des vecteurs de mouvement et une autre piste comme piste de destination
+pour les actions des vecteurs de mouvement.  C'est utile pour de longues
+séquences ou il est acceptable d'avoir un certain niveau d'erreur.
+</p>
+<hr size="6">
+<a name="Utiliser-le-flou-pour-am_00e9liorer-le-suivi-de-mouvement"></a>
+<a name="SEC199"></a>
+<h4 class="subsubsection"> 13.4.33.3 Utiliser le flou pour améliorer le suivi de mouvement </h4>
+
+<p>Pour les vidéos très bruités ou entrelacés, l'application d'un effet de flou
+avant le suivi de mouvement peut en améliorer la précision.  Vous pouvez soit
+enregistrer les vecteurs de mouvement dans une <b>passe de suivi</b> et désactiver
+le flou dans la <b>passe d'action</b>, soit n'appliquer le flou qu'au <b>calque
+maître</b>.
+</p>
+<hr size="6">
+<a name="Utiliser-l_0027histogramme-pour-am_00e9liorer-le-suivi-de-mouvement"></a>
+<a name="SEC200"></a>
+<h4 class="subsubsection"> 13.4.33.4 Utiliser l'histogramme pour améliorer le suivi de mouvement </h4>
+<p>Un histogramme est presque toujours appliqué avant le suivi de mouvement pour
+atténuer le bruit généré par les pixels les plus sombres.  Vous pouvez soit
+enregistrer les vecteurs de mouvement dans une <b>passe de suivi</b> et désactiver
+histogramme pour la <b>passe d'action</b>, soit n'appliquer l'histogramme qu'au
+<b>calque maître</b>.
+</p>
+<hr size="6">
+<a name="Le-suivi-de-mouvement-en-action"></a>
+<a name="SEC201"></a>
+<h4 class="subsubsection"> 13.4.33.5 Le suivi de mouvement en action </h4>
+
+<p>Ajouter d'abord un effet de suivi de mouvement à la piste.  Glissez-le depuis
+la fenêtre des ressources et déposez-le directement sur la vidéo dans la
+fenêtre principale de Cinelerra.  Vous devriez voir quelque chose de semblable
+à ceci :
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_timeline_eff_clip.png" alt="manual_images_intl/cin_timeline_eff_clip">
+</p>
+<p>Faites ensuite un clic droit sur le marqueur de l'effet de suivi de mouvement
+sur la timeline et sélectionnez <b>Afficher les options</b> afin d'afficher le
+dialogue du suivi de mouvement :
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_motion_win.png" alt="manual_images_intl/cin_motion_win">
+</p>
+<p>Commencez par regarder dans votre compositeur.  Vous verrez quelques nouvelles
+boîtes dessinée par dessus la vidéo.  Elles sont importantes pour contrôler le
+suivi de mouvement.  Voici un bref aperçu de ce que l'on peut voir lors du
+fonctionnement :
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_comp_action_small.png" alt="manual_images_intl/cin_comp_action_small">
+</p>
+<p>L'image çi-dessus montre le suivi de mouvement ayant perdu l'objet suivi car la
+fenêtre de recherche est trop petite.  Nous reviendrons sur cet aspect plus
+tard, mais rapidement :<br>
+</p><ul>
+<li> La petite boîte du milieu est la cible du moteur de suivi.
+</li><li> La boîte plus grosse au milieu est la plage de recherche du moteur de
+suivi.  Elle devrait contenir l'ensemble de la plage de mouvement de la cible
+de recherche.
+</li><li> Dans cet exemple, nous essayons de suivre les poignées de maintien.  Nous
+avons échoué dans cette image vidéo, parce que les poignées se trouvent trop
+loin du centre de l'image.
+</li><li> Le vecteur dirigé vers la gauche indique que le moteur de suivi tente de
+rechercher la cible.  Nous en dirons davantage sur ce point plus tard.
+</li></ul>
+
+<p>Déplacez-vous au début de votre clip vidéo
+</p>
+<p>Assurez-vous que le dialogue du suivi de mouvement est ouvert
+</p>
+<p>Regardez dans le compositeur
+</p>
+<p>Commencez à ajuster ces quatre boutons :
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_motion_track.png" alt="manual_images_intl/cin_motion_track">
+</p>
+<p>Cochez le suivi en translation
+</p>
+<p>Décochez le suivi de rotation
+</p>
+<p>Commencez avec le deuxième bouton - Taille de bloc pour la translation - et
+tournez-le pour avoir une idée de ce qui change.  Remarquez que les deux boîtes
+sont redimensionnées.  Regardez ce qui se trouve à l'intérieur de la petite
+boîte (l'objet que vous désirez suivre).  Ne vous inquiétez pas si elle ne
+recouvre pas encore l'objet.
+</p>
+<p>Passez aux boutons trois et quatre : X et Y du bloc.  Utilisez-les pour placer
+le désignateur de la cible sur la cible elle-même.
+</p>
+<p>Enfin, utilisez le bouton du haut : Rayon de recherche en translation.
+Agrandissez ce rayon de manière à ce qu'il recouvre la plage entière de
+déplacement que vous attendez de la cible.  Si vous regardez de nouveau la
+première vue de l'action, le rayon de recherche était trop faible et la cible
+s'est déplacée en dehors de la plage.  Vous pouvez le tester en effectuant une
+lecture de la timeline et en regardant les résultats (en temps réel si votre
+machine est assez rapide) ou en effectuant le rendu et en visionnant votre
+poignée stabilisée sur la sortie.
+</p>
+<p>Faites le nécessaire pour que la première image de la vidéo ressemble à ceci
+:
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_comp_first_setup_small.png" alt="manual_images_intl/cin_comp_first_setup_small">
+</p>
+<p>Cette image montre beaucoup de détails.  Remarquez que le petit cadre est
+centré sur la poignée et dimensionné de manière à juste l'inclure.  Ces
+paramètres sont contrôlés par les boutons deux à quatre.  Enfin, le cadre
+extérieur doit être plus grand que les mouvement en avant et arrière de la
+poignée sur la durée complète du clip vidéo.
+</p>
+<p>Enfin, voici les autres paramètres nécessaires pour voir l'effet :
+</p>
+<p align="center"> <img src=".././manual_images_intl/cin_motion_set_output1.png" alt="manual_images_intl/cin_motion_set_output1">
+</p>
+<ul>
+<li> <b>Dessiner les vecteurs</b> Décochez cette option afin d'éviter le rendu
+des boîtes cibles et des vecteurs de mouvement dans votre vidéo finale.  Si
+cette case est cochée, les vecteurs et les boîtes seront rendus dans la vidéo
+en sortie.
+</li><li> <b>Suivre une seule image</b> Dans cet exemple, il est positionné au numéro
+d'image 0 (première image)
+</li><li> <b>Calque maître</b> Si l'effet est partagé entre deux pistes, il indique
+laquelle de ces pistes sera celle pour laquelle le mouvement sera suivi (piste
+maître) et quel piste sera affectée par la translation résultante (piste
+cible).  S'il n'y a pas de seconde piste partageant le mouvement, alors
+Maître=Cible.
+</li><li> <b>Action</b> Sélectionnez les options de stabilisation pour que votre vidéo
+suive les mouvements de la cible.  Sélectionnez une option de suivi qui
+permette le suivi de mouvement sans ajuster la vidéo.
+</li><li> <b>Calcul</b>
+<ul>
+<li> <b>Ne pas calculer</b> Sélectionnez cette option pour désactiver
+l'ajustement de la vidéo.
+</li><li> <b>Recalculer</b> Effectuer le suivi de mouvement et mettre à jour la vidéo
+en fonction des paramètres d'action.
+</li><li> <b>Enregistrer et charger</b> Enregistre/Charge les vecteurs de
+translation/rotation (absolus ou relatifs) de/vers des fichiers.  Chaque image
+crée un fichier séparé contenant son vecteur dans le répertoire <tt>`/tmp'</tt>.
+
+</li></ul>
+</li></ul>
+
+<hr size="6">
+<a name="La-stabilisation-en-action"></a>
+<a name="SEC202"></a>
+<h4 class="subsubsection"> 13.4.33.6 La stabilisation en action </h4>
+
+<p>Dans cette section, nous expliquerons comment stabiliser une vidéo.  On peut
+avoir ce besoin lorsque la vidéo est prise depuis un véhicule par exemple.
+</p>
+<p>Sélectionnez d'abord sur la timeline la partie de la vidéo que vous désirez
+stabiliser en utilisant les points d'entrée et de sortie.  Appliquez ensuite
+l'effet de stabilisation de mouvement sur cette partie de la vidéo.
+</p>
+<p>Sélectionnez l'option <b>image précédente du même bloc</b>.  Cette option est
+recommandée pour stabiliser un vidéo tremblotante issue d'un caméscope.  Son
+but n'est pas de &quot;suivre&quot; un objet.  Le bloc reste exactement à la même
+place durant toute la durée de l'effet.
+</p>
+<p>Agrandissez le bloc et sélectionnez à peu près la moitié des dimensions de la
+vidéo.  Sélectionnez l'option <b>Stabiliser les sous-pixels</b> : elle donnera
+une stabilisation plus précise.  Réduisez la valeur du <b>décalage absolu
+maximum</b> pour limiter l'amplitude de la stabilisation.  Vous préférerez
+probablement avoir une stabilisation imparfaite à certains moments de la vidéo
+plutôt que d'avoir de grandes bordures noires sur les côtés de l'image lors des
+secousses importantes.  Configurez le <b>Nombre de pas de recherche en
+translation</b> à 128.  Augmenter cette valeur ne donnera pas un meilleur
+résultat, mais augmentera de manière considérable le temps de rendu.
+Assurez-vous que l'option <b>Dessiner les vecteurs</b> est sélectionnée, et
+effectuez le rendu de la partie de la vidéo où l'effet de suivi de mouvement a
+été appliqué.
+</p>
+<p>Si le résultat est bon, désactivez l'option <b>Dessiner les vecteurs</b>.  Les
+blocs et les vecteurs ne seront plus affichés sur la vidéo.  Effectuez alors le
+rendu de la vidéo vers un fichier <tt>`.dv'</tt>, et importez-le dans votre projet.
+</p>
+<p>Vous remarquerez que la vidéo est stabilisée mais qu'il y a des bordures noires
+qui apparaissent sur les côtés des images.  Afin de supprimer ces bordures
+noires, vous devrez effectuer un zoom et définir des images-clés de projecteur
+pour déplacer celui-çi sur l'image.  Plus votre vidéo est sautillante, plus
+vous devrez zoomer pour supprimer les bordures noires.  C'est pourquoi le
+résultat est meilleur avec une vidéo HDV qu'avec une vidéo DV.
+</p>
+<hr size="6">
+<a name="Flou-de-mouvement"></a>
+<a name="SEC203"></a>
+<h3 class="subsection"> 13.4.34 Flou de mouvement </h3>
+
+<p><img src=".././manual_images_intl/motionblur.png" alt="manual_images_intl/motionblur">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Peinture-_00e0-l_0027huile"></a>
+<a name="SEC204"></a>
+<h3 class="subsection"> 13.4.35 Peinture à l'huile </h3>
+
+<p><img src=".././manual_images_intl/oilpainting.png" alt="manual_images_intl/oilpainting">
+</p>
+<p>Cet effet donne à vos pistes vidéos un aspect de peinture à l'huile.  Il est
+contrôlé par le curseur de rayon.  Les couleurs peuvent être choisies en
+option.
+</p>
+<hr size="6">
+<a name="Overlay-video"></a>
+<a name="SEC205"></a>
+<h3 class="subsection"> 13.4.36 Overlay video </h3>
+
+<p><img src=".././manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Perspective"></a>
+<a name="SEC206"></a>
+<h3 class="subsection"> 13.4.37 Perspective </h3>
+
+<p><img src=".././manual_images_intl/perspective.png" alt="manual_images_intl/perspective">
+</p>
+<p>L'effet de perspective vous permet de modifier la perspective d'un objet, il
+est parfait pour donner un effet de distance aux objets.
+</p>
+<hr size="6">
+<a name="Polaire"></a>
+<a name="SEC207"></a>
+<h3 class="subsection"> 13.4.38 Polaire </h3>
+
+<p><img src=".././manual_images_intl/polar.png" alt="manual_images_intl/polar">
+</p>
+<p>L'effet polaire courbe et enroule votre vidéo de manière étrange.
+Mathématiquement, il convertit votre vidéo de coordonnées polaires en
+coordonnées rectangulaires ou inversement.
+</p>
+<hr size="6">
+<a name="RVB_002d601"></a>
+<a name="SEC208"></a>
+<h3 class="subsection"> 13.4.39 RVB-601 </h3>
+
+<p>FIXME
+</p>
+<p><img src=".././manual_images_intl/rgb601.png" alt="manual_images_intl/rgb601">
+</p>
+<hr size="6">
+<a name="Flou-radial"></a>
+<a name="SEC209"></a>
+<h3 class="subsection"> 13.4.40 Flou radial </h3>
+
+<p><img src=".././manual_images_intl/radialblur.png" alt="manual_images_intl/radialblur">
+</p>
+<p>Il crée un flou en tourbillon qui simule une caméra faisant des tourbillons.
+Vous pouvez modifier l'emplacement, le type et la qualité du flou.
+</p>
+<hr size="6">
+<a name="ReframeRT"></a>
+<a name="SEC210"></a>
+<h3 class="subsection"> 13.4.41 ReframeRT </h3>
+
+<p><img src=".././manual_images_intl/reframert.png" alt="manual_images_intl/reframert">
+</p>
+<p>ReframeRT modifie le nombre d'images dans une séquence vidéo directement depuis
+la timeline.  Il fonctionne selon deux modes qui peuvent être activés depuis
+l'interface graphique à l'aide de deux cases à cocher.<br>
+</p>
+<p>Le mode <b>Etirer</b> multiplie le numéro de l'image en cours sur sa sortie par un
+facteur d'échelle pour obtenir le numéro d'image à lire sur son entrée.  Si la
+sortie actuelle est l'image n° 55 et que le facteur d'échelle est de 2, l'image
+n° 110 est lue depuis l'entrée.  Le mode <b>Etirer</b> a pour effet de modifier la
+durée de la sortie vidéo par l'inverse du facteur d'échelle.  Si le facteur
+d'échelle est plus grand que 1, la sortie se terminera avant la fin de la
+séquence qui se trouve sur la timeline.  S'il est inférieur à 1, la sorti se
+terminera après la fin de la séquence sur la timeline.  L'effet ReframeRT doit
+être allongé jusqu'à la durée nécessaire pour obtenir le facteur d'échelle.  On
+modifie la durée de l'effet en cliquant sur l'endroit où se termine l'effet et
+en le glissant.
+</p>
+<p>Bien que que l'effet d'étirement modifie le numéro de l'image lue sur son
+entrée, il ne modifie pas la fréquence des images en entrée.  Les effets qui se
+trouvent avant ReframeRT ont la même fréquence d'images que ReframeRT.
+</p>
+<a name="IDX119"></a>
+<p>L'effet ReframeRT en mode <b>Etirer</b> peut être utilisé afin de créer un
+<b>effet d'accéléré</b>.  Sélectionnez le mode <b>Etirer</b> et entrez une valeur
+supérieure à 1 afin d'obtenir une lecture en accéléré
+</p>
+<a name="IDX120"></a>
+<p>Pour un <b>effet de ralenti</b>, utilisez un effet ReframeRT en mode <b>Etirer</b>
+avec une valeur inférieure à 1.  <b>Example</b> : vous avez un clip que vous
+désirez passer en ralenti.  Le clip débute à 33.792 secondes et se termine à
+39.765.  Le clip dure 5.973 secondes.  Vous désirez le reproduire à 4/10ème de
+sa vitesse normale.  Vous divisez la durée du clip par la vitesse de lecture
+(5.973/.4) pour obtenir une durée finale de clip de 14.9325 secondes.  Vous
+créez un point d'entrée au début de votre clip : 33.792 secondes.  Vous
+placez un point de sortie 14.9325 secondes plus tard, à 48.7245 secondes
+(33.792 + 14.9325).  Attachez un effet ReframeRT, configurez-le à .4 en mode
+<b>Etirer</b>.  Modifiez le point de sortie à 48.7245 en point d'entrée.  Vous
+débuterez votre clip suivant après l'effet de ralenti au point de sortie de
+48.7245.
+</p>
+<p>Vous pouvez aussi modifier la fréquence des images du clip en faisant un clic
+droit dans le <b>visualisateur de média</b> et en allant dans <b>Info</b>.  Si vous
+ne cliquez pas le menu, vous pouvez aussi entrer au clavier la fréquence des
+images désirée.  Cinelerra prendra les bonnes images depuis la fréquence des
+images du projet, en faisant en même temps une modification de la vitesse de
+lecture.
+</p>
+<p>Le mode <b>Sous-échantillonner</b> ne modifie pas la durée de la séquence de
+sortie.  Il multiplie la fréquence des images de la sortie par un facteur
+d'échelle de façon à obtenir une fréquence d'image à lire en entrée.  Ceci a
+pour effet de répliquer les images en entrée de façon à ce qu'elles ne changent
+qu'à la fréquence d'images après mise à l'échelle lorsqu'elles sont envoyées
+vers la sortie.  Cela ne modifie pas la durée de la séquence de sortie.  Si le
+facteur d'échelle est de 0,5 et que la fréquence des images en sortie est de 30
+i/s, seules 15 images seront affichées chaque seconde et les données d'entrée
+seront lues à 15 i/s.  Sous-échantillonner n'est utile que pour les facteurs
+d'échelle inférieurs à 1, d'où le terme &quot;sous-échantillonner&quot;.
+</p>
+<p>Le mode Sous-échantillonner modifie la fréquence des images de l'entrée ainsi
+que le numéro de l'image à lire, la fréquence des images des effets qui se
+trouvent avant ReframeRT sera donc la fréquence d'images multipliée par le
+facteur d'échelle.  Si le facteur d'échelle est 2 et que la fréquence des
+images en sortie est de 30, la fréquence des images en entrée sera de 60 et le
+numéro de l'image en entrée sera doublé.  Ceci n'a normalement pas de
+conséquence mais certains effets d'entrée peuvent se comporter différemment à
+des fréquences d'images élevées.
+</p>
+<hr size="6">
+<a name="Vid_00e9o-en-arri_00e8re"></a>
+<a name="SEC211"></a>
+<h3 class="subsection"> 13.4.42 Vidéo en arrière </h3>
+
+<p><img src=".././manual_images_intl/reversevideo.png" alt="manual_images_intl/reversevideo">
+</p>
+<p>Le média peut être inversé sur la timeline en temps réel.  Il ne faut pas le
+confondre avec la lecture arrière des commandes de transport.  L'effet de vidéo
+en arrière inverse la région couverte par l'effet indépendemment du sens de
+lecture.
+</p>
+<p>La région à inverser est d'abord déterminée par la partie de la piste sur
+laquelle l'effet a été placé, et ensuite par l'emplacement des images-clés dans
+l'effet.  L'effet inversé possède une option <b>Activé</b> qui vous permet de
+définir des images-clés.  Ceci permet de nombreuses possibilités.
+</p>
+<p>Chaque image-clé <b>Activée</b> est traité comme le point de départ d'une nouvelle
+région inversée et la fin d'une région inversée précédente.  Plusieurs
+images-clés <b>Activées</b> de suite conduiront à des régions inversées
+indépendemment l'une de l'autre.  Une image-clé <b>Activée</b> suivie d'une
+image-clé <b>désactivée</b> donnera une région inversée suivie d'une région
+normale.
+</p>
+<hr size="6">
+<a name="Rotation"></a>
+<a name="SEC212"></a>
+<h3 class="subsection"> 13.4.43 Rotation </h3>
+
+<p><img src=".././manual_images_intl/rotate.png" alt="manual_images_intl/rotate">
+</p>
+<p>Le filtre rotation fait pivoter la vidéo par incréments de 90°, inverser et
+retourner la vidéo.
+</p>
+<hr size="6">
+<a name="SVG-via-Inkscape"></a>
+<a name="SEC213"></a>
+<h3 class="subsection"> 13.4.44 SVG via Inkscape </h3>
+
+<p><img src=".././manual_images_intl/svg.png" alt="manual_images_intl/svg">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Redimensionner"></a>
+<a name="SEC214"></a>
+<h3 class="subsection"> 13.4.45 Redimensionner </h3>
+
+<p><img src=".././manual_images_intl/scale.png" alt="manual_images_intl/scale">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Moyenne-temporelle-s_00e9lective"></a>
+<a name="SEC215"></a>
+<h3 class="subsection"> 13.4.46 Moyenne temporelle sélective </h3>
+
+<p><img src=".././manual_images_intl/timeavg.png" alt="manual_images_intl/timeavg">
+</p>
+<p>Ce greffon est conçu pour lisser les régions fixes d'un clip vidéo.  Le lissage
+est effectué en faisant la moyenne de la composante de couleur pour chacun des
+pixel sur un certain nombre d'images.  La valeur lissée est utilisée si à la
+fois l'écart-type, et la différence entre la valeur actuelle de la composante
+et la moyenne de la composante se trouve en-dessous d'un certain seuil.
+</p>
+<p>La moyenne et l'écart-type sont calculés pour chaque composante de la vidéo.
+La moyenne est calculée sur des composantes dont le type dépend du modèle
+colorimétrique du projet.  La moyenne et l'écart-type des images peuvent être
+examinés en sélectionnant le bouton radio correspondant dans la fenêtre des
+options du greffon.
+</p>
+<p>La région pour laquelle la moyenne des images est effectuée est déterminée soit
+par un décalage fixe, soit par un système de marqueur de redémarrage.  Dans un
+système de marqueur de redémarrage, certaines images-clés sont marquées comme
+étant le début des sections.  Ensuite, pour chaque section, les images qui
+entourent l'image en cours sont utilisées comme images pour lesquelles la
+moyenne doit être effectuée à l'exception des zones proches du début et de la
+fin d'une section, où la moyenne est effectuée en prenant les <i>N</i> images du
+début ou de la fin respectivement.
+</p>
+<p><b>Utilisation habituelle :</b>
+</p>
+<p>Si vous avez sélectionné un certain nombre d'images dont vous désirez effectuer
+la moyenne.
+</p>
+<ol>
+<li> Entrez un nombre raisonnable d'images dont vous désirez effectuer la
+moyenne (par exemple 10).
+</li><li> Sélectionnez la méthode <b>Moyenne temporelle sélective</b> et entrez 1 et
+10 pour <b>Seuil moy</b> et <b>Seuil sigma</b> respectivement.  Ceci fera que tous
+les pixels utiliseront la valeur moyenne.
+</li><li> Activez le masque pour une première composante.  Il devrait rendre
+l'image entière uniformément de la couleur unie de cette composante.
+</li><li> Réduisez lentement la valeur de <b>Seuil sigma</b>.  Ceci faisant, vous
+constaterez que les régions nettement différentes de la moyenne auront un état
+de masque inversé.  Continuez à réduire le seuil jusqu'à ce que vous atteignez
+le point où les zones de la vidéo qui ne se déplacent pas ont un état de masque
+inversé.  Cette valeur est connue sous le nom de <b>plancher de bruit</b> et c'est
+le niveau du bruit naturel généré par le capteur CCD de la caméra.
+</li><li> Répétez la même procédure pour le <b>Seuil moy</b>
+</li><li> Désactivez le masque
+</li><li> Répétez ceci pour tous les canaux
+</li></ol>
+
+<hr size="6">
+<a name="Nettet_00e9"></a>
+<a name="SEC216"></a>
+<h3 class="subsection"> 13.4.47 Netteté </h3>
+
+<p><img src=".././manual_images_intl/sharpen.png" alt="manual_images_intl/sharpen">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="D_00e9calage-d_0027interlacement"></a>
+<a name="SEC217"></a>
+<h3 class="subsection"> 13.4.48 Décalage d'interlacement </h3>
+
+<p><img src=".././manual_images_intl/shiftinterlace.png" alt="manual_images_intl/shiftinterlace">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Permuter-les-canaux"></a>
+<a name="SEC218"></a>
+<h3 class="subsection"> 13.4.49 Permuter les canaux </h3>
+
+<p><img src=".././manual_images_intl/swapchannels.png" alt="manual_images_intl/swapchannels">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Seuil"></a>
+<a name="SEC219"></a>
+<h3 class="subsection"> 13.4.50 Seuil </h3>
+
+<p><img src=".././manual_images_intl/threshold.png" alt="manual_images_intl/threshold">
+</p>
+<p>L'effet de seuil converti une image en luminance pure.  Les valeurs de
+luminance en-dessous de la plage du seuil seront converties en noir et les
+valeurs de luminance dans la plage du seuil seront convertie en blanc.  La
+fenêtre de seuil affiche un histogramme des valeurs de luminance pour l'image
+en cours.  Cliquer et glisser dans l'histogramme crée une plage à convertir en
+blanc.  <b>MAJ-clic</b> étend l'une des limites de cette plage.  Les valeurs de la
+plage de seuil peuvent aussi être indiquées à l'aides des boîtes de texte.
+</p>
+<p>Cet effet est une clé de luminance basique.  Une seconde piste au-dessus de la
+piste avec l'effet de seuil peut être multipliée, ce qui fera que seules seront
+affichées les parties de la seconde piste qui se trouvent à l'intérieur du
+seuil.
+</p>
+<hr size="6">
+<a name="Moyenne-temporelle"></a>
+<a name="SEC220"></a>
+<h3 class="subsection"> 13.4.51 Moyenne temporelle </h3>
+
+<p><img src=".././manual_images_intl/timeavg.png" alt="manual_images_intl/timeavg">
+</p>
+<p>La moyenne temporelle est un effet qui a de nombreuses applications qui vont
+au-delà de la création de traînées d'objets en mouvement.  Sa principale
+utilisation est de réduire le bruit des images fixes.  Pointez simplement une
+caméra vidéo en direction d'un sujet fixe pour une durée de 30 images, faites
+l'acquisition des images, et faites-en la moyenne en utilisant <b>Moyenne
+temporelle</b> et vous obtiendrez une image de très grande qualité.  Dans les
+modèles colorimétriques en virgule flottante, la moyenne temporelle peut
+améliorer la plage dynamique des caméra de bas de gamme.
+</p>
+<p>L'effet de moyenne temporelle comporte un tampon d'accumulation et un diviseur.
+Un certain nombre d'images sont accumulées dans le tampon d'accumulation et
+divisées par le diviseur afin d'obtenir la moyenne.
+</p>
+<p>Parce que la moyenne temporelle demande une quantité énorme de mémoire, il est
+préférable de l'appliquer en désactivant d'abord la lecture de la piste, en y
+déposant l'effet de moyenne temporelle, en le configurant pour le nombre
+d'images voulu, et en réactivant la lecture de la piste.
+</p>
+<ul>
+<li> <b>Nombre d'images à utiliser pour la moyenne</b><br>
+Ceci détermine le nombre d'images qui seront accumulées dans le tampon
+d'accumulation.  Pour des intégrations très importantes, il est plus facile
+d'éditer l'EDL dans un éditeur de texte et d'y indiquer le nombre d'images.
+
+</li><li> <b>Accumuler</b><br>
+Ceci dirige vers la sortie le tampon d'accumulation sans en effectuer la
+division.
+
+</li><li> <b>Moyenne</b><br>
+Ceci provoque la division du tampon d'accumulation avant de le diriger vers la
+sortie.  Le résultat en est la moyenne de toutes les images.
+
+</li><li> <b>OU inclusif</b><br>
+Ceci remplacera le tampon d'accumulation par tous les pixels qui ne sont pas
+transparents.  En combinaison avec le suivi de mouvement, ceci permet à des
+séquences entières d'être combinées sous forme de panoramas.
+
+</li><li> <b>Traiter de nouveau les images</b><br>
+Si un effet placé avant la moyenne temporelle est ajusté, la moyenne temporelle
+ne relit normalement pas le tampon d'accumulation pour en obtenir les
+modifications.  Ceci le force à relire le tampon d'accumulation lorsque l'autre
+effet change.
+
+</li><li> <b>Désactiver la soustraction</b><br>
+Afin de représenter uniquement l'accumulation du nombre d'images indiquées, la
+moyenne temporelle conserve toutes les images précédentes en mémoire et les
+soustrait lors de la lecture.  Il n'y aurait pas assez de mémoire si il devait
+accumuler des milliers d'images.  En désactivant la soustraction, les images
+précédentes ne sont pas stockées en mémoire et seule la fonction de moyenne est
+affectée par le nombre d'images.
+</li></ul>
+
+<hr size="6">
+<a name="Front-temporel"></a>
+<a name="SEC221"></a>
+<h3 class="subsection"> 13.4.52 Front temporel </h3>
+
+<p><img src=".././manual_images_intl/timefront.png" alt="manual_images_intl/timefront">
+</p>
+<p>C'est un greffon basé sur cet article :<br>
+<a href="http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf">http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf</a>
+</p>
+<hr size="6">
+<a name="Titreur"></a>
+<a name="SEC222"></a>
+<h3 class="subsection"> 13.4.53 Titreur </h3>
+
+<p><img src=".././manual_images_intl/titler.png" alt="manual_images_intl/titler">
+</p>
+<p>Bien qu'il soit possible d'ajouter du texte aux images en important des images
+fixes depuis Gimp et en les composant, le titreur vous permet d'ajouter du
+texte directement depuis Cinelerra.
+</p>
+<p>Le titreur possède des options standard pour <b>police, taille, et style</b>.  La
+meilleure police est une police générique telle qu'Arial dans une grande
+taille.
+</p>
+<p>Le titreur possède aussi des options que vous ne trouvez qu'avec des images
+animées.  L'opération <b>Justifier</b> justifie le texte par rapport à l'image
+entière.  Une fois justifié, les décalages <b>X et Y</b> sont appliqués.  Ceci
+permet au texte de rester justifié pendant que vous le poussez à l'intérieur
+des zones sûres.
+</p>
+<p>Le <b>type de mouvement</b> fait défiler le texte dans l'une des quatre
+directions.  Lorsque vous utilisez cette fonction, le texte peut disparaître.
+Déplacez le point d'insertion le long de la timeline jusqu'à ce que le texte se
+soit suffisamment déplacé dans l'animation pour réapparaître.  Le texte défile
+pour apparaître ou disparaître.
+</p>
+<p>En activant la <b>boucle</b>, le texte se déroulera complètement et recommencera.
+Sans la <b>boucle</b> le texte défile jusqu'à disparaître et réapparaît.
+</p>
+<p>La vitesse de l'animation est déterminée par <b>vitesse</b>.  Indiquez une vitesse
+plus importante pour accélérer l'animation.
+</p>
+<p><b>Ombre portée</b> dessine une copie noire du texte en bas et à droite du texte
+d'origine.  Ceci est utile lorsque le texte est placé sur une vidéo qui change
+car il permet de conserver la bordure toujours visible.
+</p>
+<p>En plus du défilement, les <b>Fonfu entrant / Fondu sortant</b> sont un second
+type d'animation.  Si la durée de fondu est de 0 secondes, il n'y aura pas de
+fondu.
+</p>
+<p><b>Couleur</b> permet de récupérer la couleur avec laquelle tracer le texte.  En
+pratique, la seule couleur utile est habituellement le blanc.
+</p>
+<p><b>Horodater avec le code temporel</b> remplace le texte par la position en cours
+sur la timeline en secondes et images.
+</p>
+<p>Le titreur supporte les images-clés.  Pour ajouter des sous-titres à votre
+film, vous devez utiliser un effet titreur et définir des images-clés.  Si vous
+activez le mode des images-clés automatiques
+<img src=".././manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">, une nouvelle image-clé est créée chaque
+fois que vous éditez le texte.  Dans la boîte de saisie du texte, vous verrez
+le sous-titre apparaissant sous le point d'insertion.
+</p>
+<p><b>Note:</b> Pour ajouter des sous-titres, vous devriez probablement utiliser un
+éditeur de sous-titres.  Voir la section <a href="cinelerra_cv_manual_fr_20.html#SEC305">Ajouter des sous-titres</a>, pour plus
+d'information.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC223">13.4.53.1 Ajouter des polices au titreur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> 	Comment ajouter des polices au titreur
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC224">13.4.53.2 La zone sûre du titre</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">  		Comment conserver le texte visible sur la sortie
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Ajouter-des-polices-au-titreur"></a>
+<a name="SEC223"></a>
+<h4 class="subsubsection"> 13.4.53.1 Ajouter des polices au titreur </h4>
+
+<p>Le système X Window ne possède pas, à l'origine, de fonction de rendu des
+police adapté à la vidéo.  Il est restreint en matière de profondeur de bits.
+Il ne permet pas de savoir simplement quelles sont les polices qui fonctionnent
+avec le système de rendu et avec la profondeur de bits désirée.  La manière la
+plus simple que nous avons trouvé pour gérer les polices dans le titreur est
+d'avoir un répertoire pour celles-ci : <tt>`/usr/lib/cinelerra/fonts'</tt>.
+</p>
+<p>Le titreur gère principalement les police true type <b>TTF</b>.  Il permet aussi
+d'utiliser d'autres types mais les polices TTF sont plus fiables.  Pour ajouter
+des polices true type, copiez les fichier<tt>`.TTF'</tt> dans le répertoire
+<tt>`/usr/lib/cinelerra/fonts'</tt>.  Depuis ce répertoire, lancez la commande
+<code>ttmkfdir &amp;&amp; mv fonts.scale fonts.dir</code> et redémarrez Cinelerra.  Les
+nouvelles polices devraient être disponibles.  La syntaxe de ttmkfdir est
+souvent modifiée, cette technique peut donc ne pas fonctionner.
+</p>
+<hr size="6">
+<a name="La-zone-s_00fbre-du-titre"></a>
+<a name="SEC224"></a>
+<h4 class="subsubsection"> 13.4.53.2 La zone sûre du titre </h4>
+
+<p>Si la vidéo est affichée sur un téléviseur grand public, les bords extérieurs
+seront coupés d'environ 5% de chaque côté.  De plus, le texte ondule s'il se
+trouve trop près des bords.  Assurez-vous, lorsque vous ajoutez des titres, que
+<img src=".././manual_images_intl/titlesafe.png" alt="manual_images_intl/titlesafe"> l'outil <b>zone sûre du titre</b> est actif
+dans le <b>compositeur</b>.  Le texte ne doit jamais sortir du rectangle
+intérieur.
+</p>
+<hr size="6">
+<a name="Translation"></a>
+<a name="SEC225"></a>
+<h3 class="subsection"> 13.4.54 Translation </h3>
+
+<p><img src=".././manual_images_intl/translate.png" alt="manual_images_intl/translate">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="D_00e9focaliser"></a>
+<a name="SEC226"></a>
+<h3 class="subsection"> 13.4.55 Défocaliser </h3>
+
+<p><img src=".././manual_images_intl/unsharp.png" alt="manual_images_intl/unsharp">
+</p>
+<p>Cet effet défocalise la vidéo.  Ses paramètres sont :
+</p><ul>
+<li> <b>Valeur</b><br>
+Déplacer le curseur vers la droite rend les zones sombres plus sombres et les
+zones claires plus claires.
+
+</li><li> <b>Rayon</b><br>
+Ce curseur contrôle le niveau de flou à utiliser dans l'étape de recherche de
+contour.  L'effet concret de ceci est d'indiquer de quelle taille une zone doit
+être assombrie ou éclaircie.
+
+</li><li> <b>Seuil</b><br>
+Ce curseur permet de contrôler quelle doit être la différence de taille entre
+un pixel dans la copie floue de l'original et l'original avant qu'un
+assombrissement ou un éclaircissement soit appliqué.
+</li></ul>
+
+<hr size="6">
+<a name="Vid_00e9oscope"></a>
+<a name="SEC227"></a>
+<h3 class="subsection"> 13.4.56 Vidéoscope </h3>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC228">13.4.56.1 Le visualisateur de forme d'onde</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC229">13.4.56.2 Le vectorscope</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<p><img src=".././manual_images_intl/videoscope.png" alt="manual_images_intl/videoscope">
+</p>
+<p>Le vidéoscope est un outil qui représente de manière numérique les niveaux de
+lumière et de couleur sur un écran calibré.  Il est utile parce que l'oeil
+humain n'est pas adapté à associer précisément des niveaux de luminosité ou des
+couleurs entre eux, mais plutôt à détecter les différences entre la lumière et
+la couleur.
+</p>
+<p>Le vidéoscope peut être utilisé en conjonction avec d'autres greffons de
+Cinelerra, tels que YUV, Teinte, Luminosité, Histogramme afin de corriger de
+manière précise le contraste, la luminosité, la conformité (rendre homogènes
+différentes prises de vue vidéo en des conditions d'éclairement variables), ou
+dans des buts cimématiques.
+</p>
+<p>Quelques réflexions ont été menées pour savoir s'il fallait un vidéoscope pour
+l'enregistrement.  Malheureusement, ceci demanderait beaucoup d'adaptations du
+vidéoscope pour chaque pilote vidéo.
+</p>
+<p>Le vidéoscope comporte deux affichages : le <b>scope de forme d'onde</b> et le
+<b>vectorscope</b>
+</p>
+<hr size="6">
+<a name="Le-visualisateur-de-forme-d_0027onde"></a>
+<a name="SEC228"></a>
+<h4 class="subsubsection"> 13.4.56.1 Le visualisateur de forme d'onde </h4>
+
+<p>L'écran est gradué verticalement du bas vers le haut.  Le bas, ou 0%, est le
+noir maximum, et le haut ou 100% est le blanc maximum.  La source vidéo est
+divisée en colonnes verticales de pixels, ensuite chaque pixel de la colonne
+est mesuré et placé sur la verticale correspondante du visualisateur de forme
+d'onde en fonction de sa valeur d'intensité lumineuse.
+</p>
+<p>Un pixel en bas de l'affichage indique du noir complet, un pixel en haut (100%)
+de l'affichage est du blanc pur.
+</p>
+<p>L'image affiche un ensemble de lignes en escalier sur l'affichage, en indiquant
+les niveaux de luminance correspondants de la mire de barres correspondante.
+Plusieurs niveaux sur la même colonne sont représentés par plusieurs lignes sur
+le visualisateur.
+</p>
+<p>Le visualisateur de forme d'onde aide à corriger les niveaux de luminosité de
+l'image pour la plage de contraste ou pour homogénéiser les niveaux de
+luminosité de différentes scènes prises sous des éclairages différents.
+</p>
+<p>Ajustement des niveaux de luminosité (ajustement de la luminance) *Insérez
+l'effet vidéo xxx sur votre piste, faites un clic droit, Afficher, Insérez
+l'effet vidéscope sur la piste (assurez-vous qu'il soit placé sous l'effet xx,
+de manière à ce qu'il puisse voir le résultat de l'effet xxx.  Si ce n'est pas
+le cas, faites un clic droit et déplacez-le vers le bas pour qu'il le soit).
+Clic droit, afficher.
+</p>
+<p>En regardant les niveaux de luminance affichés sur la forme d'onde, ajustez le
+contrôle xxx afin de faire correspondre le niveau de luminosité désiré pour
+votre image.
+</p>
+<p>Si vous désirez obtenir la meilleure plage de contraste, ajustez le niveau xxx
+du greffon pour aligner le point le plus sombre du visualisateur sur le 0% de
+l'échelle et la partie la claire qui vous intéresse avec le 100%.  Tout ce qui
+se trouve au-dessus de 100% est sursaturé.
+</p>
+<hr size="6">
+<a name="Le-vectorscope"></a>
+<a name="SEC229"></a>
+<h4 class="subsubsection"> 13.4.56.2 Le vectorscope </h4>
+
+<p>Le vectorscope est utilisé pour contrôler la couleur.  L'écran représente un
+cercle de couleurs où la valeur de la couleur des pixels est tracée sur le
+rayon d'une ligne partant du centre ; la plus petite valeur du rayon représente
+le blanc pur et les cercles extérieurs indiquent les valeurs les plus élevées
+de l'intensité.
+</p>
+<p>La teinte de la couleur est aussi affichée, elle est représentée par l'angle en
+degrés sur le cercle des couleurs.
+</p>
+<p>Le vectorscope peut aussi être utilisé avec d'autres greffons pour corriger la
+couleur, ajuster la teinte de l'image et appliquer d'autre effets pour des
+effets cinématiques, la correction d'image ou pour homogénéiser des écrans
+différents afin qu'ils se présentent de manière identique.
+</p>
+<p>Le vectorscope peut aussi être utilisé pour contrôler que la sortie vidéo
+puisse être correctement affichée sur différents moniteurs.  Tous les points
+qui se trouvent près du rayon le plus à l'intérieur seront affichés en blanc
+pur et tous les points au dessus du rayon de 100%, ne seront probablement pas
+correctement affichés sur l'écran.
+</p>
+<hr size="6">
+<a name="Vagues"></a>
+<a name="SEC230"></a>
+<h3 class="subsection"> 13.4.57 Vagues </h3>
+
+<p><img src=".././manual_images_intl/wave.png" alt="manual_images_intl/wave">
+</p>
+<p>L'effet de vague ajoute des vagues dans l'image.
+</p>
+<p align="center"> <img src=".././manual_images_fr/effect_wave_before_after.png" alt="manual_images_fr/effect_wave_before_after">
+</p>
+<p>Vous pouvez ajuster les paramètres suivants :
+</p>
+<p align="center"> <img src=".././manual_images_intl/effect_wave_window.png" alt="manual_images_intl/effect_wave_window">
+</p>
+<hr size="6">
+<a name="Tourbillon"></a>
+<a name="SEC231"></a>
+<h3 class="subsection"> 13.4.58 Tourbillon </h3>
+
+<p><img src=".././manual_images_intl/whirl.png" alt="manual_images_intl/whirl">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="YUV"></a>
+<a name="SEC232"></a>
+<h3 class="subsection"> 13.4.59 YUV </h3>
+
+<p><img src=".././manual_images_intl/yuv.png" alt="manual_images_intl/yuv">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Flou-de-zoom"></a>
+<a name="SEC233"></a>
+<h3 class="subsection"> 13.4.60 Flou de zoom </h3>
+
+<p><img src=".././manual_images_intl/zoomblur.png" alt="manual_images_intl/zoomblur">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC139" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_14.html#SEC234" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

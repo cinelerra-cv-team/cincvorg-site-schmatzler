@@ -1,0 +1,1032 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on octubre, 8 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manual de Cinelerra CV: 20. Trucos</title>
+
+<meta name="description" content="Manual de Cinelerra CV: 20. Trucos">
+<meta name="keywords" content="Manual de Cinelerra CV: 20. Trucos">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="es" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_19.html#SEC256" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_21.html#SEC306" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Trucos"></a>
+<a name="SEC273"></a>
+<h1 class="chapter"> 20. Trucos </h1>
+
+<p>En esta sección encontrará formas de resolver problemas habituales en el uso de 
+Cinelerra. Está ordenada según problemas y herramientas útiles para resolverlos.
+</p>
+
+<hr size="6">
+<a name="Codificar-a-Dolby-Pro-Logic"></a>
+<a name="SEC274"></a>
+<h2 class="section"> 20.1 Codificar a Dolby Pro Logic </h2>
+
+<p>Dolby pro logic es una forma sencilla de producir audio de 6 canales usando una tarjeta de
+sólo 2, con un resultado algo degradado pero útil. Se puede conseguir una codificación
+Dolby Pro Logic rudimentaria mediante un uso inteligente de los efectos. 
+</p>
+<p>En primer lugar, cree los canales frontales a la izquierda y derecha. Cree dos pistas
+de audio, cada una de ellas llevando uno de estos canales. Posicione el canal izquierdo
+a la izquierda y el canal derecho a la derecha, con la vista <b>panorámica</b>.
+</p>
+<p>A continución cree los canales traseros izquierdo y derecho. Cree otras dos pistas
+de audio, como las anteriores; desplace el canal izquierdo a la izquierda, y el canal 
+derecho a la derecha. A continuación aplique <b>invertir audio</b> a ambos canales y 
+la señal procederá de los altavoces traseros.
+</p>
+<p>A continuación cree el canal central, creando una única pista de audio con 
+sonido monofónico (comúnmente llamado &quot;mono&quot;), de una fuente diferente. Céntrelo con el
+control <b>panorámica</b> para que la señal salga del altavoz central.
+</p>
+<p>Si se desea una copia de la señal de los altavoces traseros en el altavoz frontal,
+la señal en los altavoces traseros debe retrasarse al menos 0.05 segundos (5 centésimas)
+y se debe crear al una única pista nueva. Use la vista panorámica para orientar la 
+señal en los altavoces frontales. 
+</p>
+<p>Si se desea la misma señal en todos los altavoces excepto el central, retrase los altavoces
+traseros 0.5 segundos (5 décimas) y retrase el delantero derecho o el delantero iquierdo 
+unos 0.2 segundos (2 décimas).
+</p>
+<p>Si desea escuchar algo en el subwoofer (el canal de bajas frecuencias), cree una nueva pista,
+escoja un intervalo de frecuencias, añada un efecto Sintetizador y ajuste la frecuencia por
+debajo de los 60 Hz. El altavoz de bajos lo único que hace en realidad es reproducir
+cualquier sonido que encuentre por debajo, más o menos, de los 60 Hz.
+</p>
+<p>Otros trucos que puede intentar para separar los altavoces son la ecualización paramétrica
+para reproducir en cada altavoz sólo intervalos de frecuencias concretos y usar 
+filtros de paso bajo para escoger las señales que saldrán del altavoz de bajos.
+</p>
+<hr size="6">
+<a name="Limpiar-la-televisi_00f3n-anal_00f3gica"></a>
+<a name="SEC275"></a>
+<h2 class="section"> 20.2 Limpiar la televisión analógica </h2>
+
+<p>Salvo que usted viva en una nación opulenta como China o sea un terrorista, probablemente
+grabará más televisión analógico que digital. La calidad de la imagen de la televisión
+analógica es horrorosa, pero se puede mejorar algo usando Cinelerra para que se parezca 
+más a lo que se obtendría en un estudio.
+</p>
+<p>En primer lugar, al capturar el vídeo, intente capturarlo a la mayor resolución posible.
+En Europa es 720x576, y en América es 720x480. No se moleste en ajustar el brillo o el 
+contraste en el monitor, aunque maximizar el color sí es útil. Haga la captura en 
+MJPEG o en un modo de componentes no comprimidas, si es posible. Si eso es demasiado
+exigente, capture en JPEG. RGB debería ser sólo el último recurso.
+</p>
+<p>Ahora, en la línea de tiempos, use <b>Preferencias-&gt;Formato...</b> para definir un espacio
+de color YUV. Añada un efecto <b>downsample</b> al metraje, y ajústelo así:
+</p><pre class="verbatim">Horizontal:        2
+Horizontal offset: 0
+Vertical:          2
+Vertical offset:   0
+      rojo
+  x   verde
+  x   azul
+      alfa
+</pre>
+<p>Use la herramienta cámara para para mover la película una línea arriba o abajo, y eliminar
+la mayor interferencia en el color de la imagen. La diferencia que estamos buscando es ésta:
+</p>
+<p align="center"> <img src=".././manual_images_en/cleaning1.png" alt="manual_images_en/cleaning1">
+</p>
+<p>Si tiene informaciones de supresión vertical u ondulaciones que cambian constantemente
+en cada fotograma, bloquéelas con la herramienta <b>Máscara</b>. Esto mejora la relación de
+compresión.
+</p>
+<p>Esto es más o menos todo lo que se puede hacer sin destruir más datos de los que 
+se perderían naturalmente con la compresión. Las técnicas más invasivas de limpieza 
+incluyen el desentrelazado.
+</p>
+<hr size="6">
+<a name="Vencer-el-entrelazado"></a>
+<a name="SEC276"></a>
+<h2 class="section"> 20.3 Vencer el entrelazado </h2>
+
+<p>La mayoría de fuentes de vídeo son entrelazadas, porque cuesta demasiado 
+construir cámaras de escaneado progresivo y CRTs de escaneado progresivo. Más de un 
+consumidor se ha decepcionado al gastarse 5 salarios en una cámara digital y 
+descubrir las imágenes horriblemente distorsionadas que produce en un monitor de ordenador.
+</p>
+<p>En cuanto a las cámaras de escaneado progresivo, mejor olvidarlas. Es probable que 
+los problemas de coste les impidan alcanzar nunca la resolución espacial de las 
+cámaras entrelazadas. El entrelazado está aquí para quedarse. Por eso se implementó
+el desentrelazado en Cinelerra.
+</p>
+<p>No creemos que haya habido nunca un efecto de desentrelazado perfecto. O bien son
+irreversibles, o bien no funcionan. Cinelerra toma una decisión salomónica al 
+proporcionar herramientas para el desentrelazado que a veces son irreversibles y a 
+veces no funcionan, pero no son ni lo uno ni lo otro.
+</p>
+<ul>
+<li>
+<a name="IDX148"></a>
+<b>Duplicado de línea</b>
+Éste es el que realiza el efecto <b>Desentrelazado</b> al ajustarlo a <b>Líneas pares</b>
+o <b>Líneas impares</b>. Al aplicarlo sobre una pista reduce la resolución vertical 
+en 1/2 y proporciona fotogramas progresivos con efecto de &quot;paso de escalera&quot;
+(stairstepping). Sólo es útil si va seguido de un efecto de escalado que reduzca
+la imagen a la mitad de su tamaño, debido a la pérdida de resolución mencionada.
+
+</li><li>
+<a name="IDX149"></a>
+<b>Promediado de línea</b>
+Éste es el que realiza el efecto <b>Desentrelazado</b> al ajustarlo a <b>Promediado de
+líneas pares</b> o <b>Promediado de líneas impares</b>. Hace exactamente lo mismo que 
+el duplicado de líneas, excepto que sustituye las copias exactas de las líneas
+por el valor medio entre ellas. Esto es útil para todas las escalas.<br>
+Hay una opción para promediado adaptativo de línea que selecciona las líneas 
+que promediar y las líneas que mantener entrelazadas, basándose en la diferencia
+entre líneas. No funciona.
+
+</li><li>
+<a name="IDX150"></a>
+<b>Telecine inverso</b>
+Ésta es la herramienta más efectiva para el desentrelazado cuando el metraje es
+una emisión de televisión NTSC de una película.
+
+</li><li>
+<a name="IDX151"></a>
+<b>Correción de la base de tiempos</b>
+Las primeras tres herramientas o bien destruyen el metraje irreversiblemente
+o bien no funcionan en ocasiones. La <b>correción de la base de tiempos</b> viene al 
+final porque es la herramienta de desentrelazado perfecta. Mantiene el metraje 
+intacto. No reduce la resolución, por lo menos perceptiblemente. No causa 
+saltos temporales (avance a trompicones).
+
+</li><li>
+<a name="IDX152"></a>
+El efecto <b>Fotogramas a campos</b> convierte cada fotograma en dos fotogramas, por lo que
+debe usarse en proyectos cuya tasa de fotogramas sea el doble de la tasa de fotogramas
+del metraje original. En el primer fotograma pone una copia con las líneas impares
+promediadas. En el segundo fotograma pone una copia con las líneas pares promediadas.
+Al reproducirlo a dicha tasa de fotogramas, proporciona la sensación de vídeo progresivo
+sin pérdida de detalle.<br>
+Lo mejor de todo es que este efecto se puede revertir con el efecto <b>Campos a fotogramas</b>.
+Ése combina dos fotogramas de metraje en el fotograma original de entrelazado, que
+debe reproducirse a la mitad de fotogramas por segundo.<br>
+Observe que el efecto Fotogramas a campos lee los fotogramas de entrada a la mitad
+de velocidad que el resto del proyecto. Los efectos previos a Fotogramas a campos
+se procesan a la tasa de fotogramas reducida.<br>
+Por desgracia, la salida de Fotogramas a campos no se puede comprimir tan eficientemente
+como el original, debido a que introduce twitter vertical y una tasa de fotogramas muy
+elevada.<br>
+El metraje entrelazado a 29.97 fps se puede hacer parecer como película aplicando el
+efecto Fotogramas a campos y a continuación reduciendo la tasa de fotogramas del proyecto
+desde los resultantes 59.94 fps a 23.97 fps. Esto no produce saltos temporales y 
+el campo par ocasional da sensación de más detalle del que habría si simplemente se 
+promediaran las líneas del original.
+</li></ul>
+
+<a name="IDX153"></a>
+<a name="IDX154"></a>
+<p><b>Excepciones HDTV</b><br>
+La televisión de alta definición, HDTV de 1920x1080, se codifica de una manera especial.
+Si es una emisión de película originalmente HDTV, un telecine inverso funciona bien. 
+Pero si es una emisión de fuente 720x480, es necesario usar una corrección de la base
+de tiempos y un algoritmo de duplicado de línea para desentrelazarlo,
+</p>
+
+<hr size="6">
+<a name="Hacer-que-el-v_00eddeo-parezca-pel_00edcula"></a>
+<a name="SEC277"></a>
+<h2 class="section"> 20.4 Hacer que el vídeo parezca película </h2>
+
+<p>La calidad del vídeo mejora día a día. En estos tiempos, lo mejor que se puede hacer
+con con el vídeo proveniente de una cámara digital doméstica barata es convertirlo a
+salida progresiva de 24 fps. Aunque realmente no se puede hacer eso, se puede llegar 
+muy cerca para lo que cuesta. Pero cuidado, puesto que este procedimiento puede degradar
+el vídeo de alta calidad tan fácilmente como puede mejorar el vídeo de baja calidad, sólo
+debería usarse con vídeo de mala calidad.
+</p>
+<ol>
+<li> Configure la tasa de fotogramas al doble de la del vídeo.
+</li><li> Aplique un efecto <b>Sharpen</b>. Ajústelo a &quot;sharpness&quot; 25, sin entrelazado y 
+sólo horizontal.
+</li><li> Añada un efecto <b>Fotogramas a campos</b> sobre la misma pista. Active <em>Average
+empty rows</em> y reproduzca el vídeo unas cuantas veces para adivinar qué campo va
+primero. Si equivoca el campo que va primero, el movimiento será agitado. Tenga en cuenta que
+cualquier edición que haga sobre el vídeo con  la tasa de fotogramas duplicada es 
+susceptible de estropear el orden de los campos. El equipo de Cinelerra aún está intentando
+descubrir la forma más sencilla de proporcionar avisos ante los cambios en los campos, 
+pero por ahora es necesario realizar toda la edición a la tasa de fotogramas normal
+o editar comprobando una y otra vez si los campos están en orden.
+</li><li> Renderice el vídeo a la calidad más alta posible.
+</li><li> Importe el vídeo en una nueva pista. Ajuste la tasa de fotogramas del proyecto
+a 24. La nueva pista debería mostrar ahora imágenes con un aspecto más de película
+que el metraje original.
+</li></ol>
+
+<p>Se podría implementar este procedimiento entero en un efecto que no sería de tiempo 
+real, pero el mayor problema de hacerlo así es que la gente suele desear conservar
+la salida basada en campos y los 24 fps para la posteridad. Un efecto que no fuera
+de tiempo real necesitaría hacer todo este tratamiento sólo para la copia a 24 fps. 
+Todavía a debate.
+</p>
+
+<hr size="6">
+<a name="Eliminar-la-niebla"></a>
+<a name="SEC278"></a>
+<h2 class="section"> 20.5 Eliminar la niebla </h2>
+
+<p>Lo más normal es fotografiar mucha niebla y no ver nunca el cielo azul. Incluso cuando
+alguien puede permitirse ir brevemente a algún sitio donde haya cielos azules, las
+fotos del horizonte casi siempre podrían tener más profundidad. Para esto es para lo que
+sirve el <b>efecto gradiente</b>. 
+</p>
+<p>Añada un efecto gradiente sobre las pistas nubladas. Ajuste los siguientes parámetros:
+</p><ul>
+<li> Ángulo: 0
+</li><li> Radio interior: 0
+</li><li> Radio exterior: 40
+</li><li> Color interior: azul 100% alfa
+</li><li> Color exterior: azul 0% alfa
+</li></ul>
+
+<p>Es importante ajustar el color de 0% alfa a azul, incluso aunque sea completamente 
+transparente. El color del alfa exterior se interpola usando el color interior. Este 
+es un ajuste de aplicación general para el gradiente. Algunas escenas pueden quedar mejor
+con naranja, o marrón para darle más aire de anochecer.
+</p>
+<hr size="6">
+<a name="Hacer-un-politono-para-m_00f3vil"></a>
+<a name="SEC279"></a>
+<h2 class="section"> 20.6 Hacer un politono para móvil </h2>
+
+<p>Así hicimos tonos para el Motorola V180 y posiblemente funcione en cualquier teléfono
+nuevo. Vaya a <b>Fichero-&gt;Cargar ficheros...</b> y cargue un fichero de sonido con 
+la estrategia de inserción <b>Reemplazar proyecto actual</b>. Vaya al menú 
+<b>Preferencias-&gt;Formato</b> y cambie los <b>Canales</b> a 1 y la <b>Velocidad de muestreo</b>
+a 16000 o 22050.
+</p>
+<p>Ahora puede seleccionar una región de la línea de tiempos o bien añadir puntos de entrada
+y salida para decidir la parte que constituirá el politono. Para mejorar la calidad del
+sonido en el teléfono móvil necesita la máxima amplitud en tantas partes del sonido como
+sea posible. Pulse con el botón derecho del ratón sobre la pista Audio 1 y seleccione 
+<b>Añadir efecto...</b>. Seleccione el efecto <b>Compresor</b> en la ventana que surgirá y pulse 
+el botón <b>Añadir</b>.
+</p>
+<p>Asegúrese de que el punto de inserción o el área seleccionada está en la región con el 
+efecto Compresor. Pulse con el botón derecho del ratón en la pista Audio 2 y escoja 
+<b>Añadir efecto...</b>. Seleccione <b>Audio 1: Compresor</b> y pulse <b>Añadir</b>. Pulse sobre 
+el botón con dibujo de llave inglesa <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> para mostrar
+el diálogo de configuración del compresor.
+</p>
+<p>Ajuste los siguientes parámetros:
+</p><ul>
+<li> Segundos de reacción (<em>reaction secs</em>): <b>-0.1</b>
+</li><li> Segundos de atenuación (<em>retrasar segundos</em>): <b>0.1</b>
+</li><li> Tipo de disparador(<em>Trigger Type</em>): <b>Total</b>
+</li><li> Disparo (<em>Trigger</em>): <b>0</b>
+</li><li> Sólo suavizar: <b>No</b>
+</li></ul>
+
+<p>Pulse <b>Limpiar</b> para limpiar el gráfico. Pulse en cualuquier lugar del área cuadriculada
+y arrastre un nuevo punto a 0 Salida (<em>Output</em>) y -50 Entrada (<em>Input</em>). El gráfico
+debería parecerse a éste:
+</p>
+<p align="center"> <img src=".././manual_images_en/compress.png" alt="manual_images_en/compress">
+</p>
+<p>Vaya ahora a <b>Fichero-&gt;Renderizar</b>. Indique el nombre de un fichero .mp3 al que 
+dirigir la salida. Ajuste el formato de fichero a <b>Audio MPEG</b>. Pulse sobre el botón 
+con forma de llave inglesa junto al formato de audio seleccionado 
+<img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> y ajuste la <b>Capa</b> a <b>III</b> y los 
+<b>Kbits por segundo</b> a <b>24</b> o <b>32</b>. Active <b>Renderizar pistas de audio</b>
+y desactive <b>Renderizar pistas de vídeo</b>. Pulse OK para renderizar el fichero.
+</p>
+<p>El fichero <tt>`.mp3'</tt> resultante debe cargarse a un servidor web. A continuación, el 
+navegador del teléfono debe descargar dicho fichero <tt>`.mp3'</tt> directamente desde la 
+URL. Es posible que, para un teléfono concreto, haya un límite de tamaño en los ficheros
+que puede descargar y usar.
+</p>
+
+<hr size="6">
+<a name="Alargar-el-audio-en-el-tiempo"></a>
+<a name="SEC280"></a>
+<h2 class="section"> 20.7 Alargar el audio en el tiempo </h2>
+
+<p>Podría parecer que alargar el audio en el tiempo es tan sencillo como seleccionar 
+una región de una pista de audio, activar la grabación para la pista deseada, 
+ir a <b>Audio-&gt;Renderizar efecto</b> y aplicar un <b>Time stretch</b>. En realidad hay 
+3 efectos de audio que sirven para alargar el audio en el tiempo: <b>Time Stretch</b>,
+<b>Resample</b> (Nuevo muestreo) y el <b>Diálogo de información del recurso</b>.
+</p>
+<p>El efecto Time Stretch aplica una transformada rápida de Fourier para intentar cambiar
+la duración sin cambiar el tono, pero esto introduce distorsiones en el audio.
+Sólo es útil para cambios significativos en el tiempo, porque cuando el cambio 
+resulta muy obvio al oyente las distorsiones le resultan más aceptables.
+</p>
+<p>Para cambios pequeños de duración, no superiores al 5%, debe usarse un nuevo
+muestreo, <b>Resample</b>. Esto cambia la altura del audio (frecuencia percibida), 
+pero si los cambios son suficientemente pequeños resultan imperceptibles. El nuevo
+muestreo no introduce distorsiones sonoras, así que este efecto es más útil para 
+cambios de poca duración que se pretende que el oyente no llegue a percibir.
+</p>
+<p>Otra forma de cambiar ligeramente la duración es ir a la ventana de <b>Recursos</b>, 
+seleccionar la carpeta <b>Media</b>, pulsar con el botón derecho del ratón en un fichero
+de audio y pulsar en <b>Información</b>. Ajuste la tasa de muestreo en el diálogo de 
+información que surgirá para ajustar la duración. Este método también requiere que se 
+arrastre con el ratón la frontera derecha de las pistas de audio hacia la derecha o
+la izquierda para corresponder a los cambios de duración.
+</p>
+<hr size="6">
+<a name="Capturas-de-pantalla-en-v_00eddeo"></a>
+<a name="SEC281"></a>
+<h2 class="section"> 20.8 Capturas de pantalla en vídeo </h2>
+
+<p>A continuación explicamos cómo grabar un vídeo de lo que aparece en su monitor y 
+editarlo en Cinelerra.
+</p>
+<p>En primer lugar, tiene que grabar el vídeo usando xvidcap. Puede encontrar esta utilidad
+los repositorios de la mayoría de las distribuciones, o descargarlo de aquí:<br>
+<a href="http://xvidcap.sourceforge.net">http://xvidcap.sourceforge.net</a>
+</p>
+<p>En primer lugar, grabe el vídeo:<br>
+<code>xvidcap --fps 10 --cap_geometry 1280x1024+0+0 --file &quot;file1.mpeg&quot;
+--gui no --audio no</code>
+</p>
+<p>No olvide cambiar la opción de geometría para ajustarlo al tamaño de su pantalla.
+A continuación convierta el fichero <tt>`file1.mpeg'</tt> que acaba de obtener en un 
+fichero mpeg que Cinelerra pueda usar:<br>
+<code>ffmpeg -r 10 -i file1.mpeg -s 1280x1024 -b 3000 -aspect 1.33 -r 25
+file2.mpeg</code>
+</p>
+<p>Ahora puede cargar dicho fichero en Cinelerra. Asegúrese de que configura adecuadamente
+el formato de vídeo de su proyecto (tamaño, tasa de fotogramas, relación de aspecto).
+</p>
+<p>Cuando haya acabado de editar el vídeo, debe renderizarlo. Renderícelo como una 
+secuencia de jpeg. Se recomienda escribir los ficheros jpeg en una nueva carpeta, 
+puesto que probablemente se crearán muchos ficheros nuevos.
+</p>
+<p>A continuación abra una consola y muévase (con el comando <code>cd</code>) a dicha carpeta. 
+Codifique los ficheros jpeg usando estos comandos:
+</p>
+<p><b>Primer paso:</b>
+</p><pre class="verbatim">mencoder &quot;mf://*.jpg&quot; -mf fps=25 -oac pcm -sws 2 -vf scale=\
+1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts vcodec=mpeg4:\
+vbitrate=800:aspect=4/3:vpass=1 -ofps 10 -of avi -o /dev/null \
+-ffourcc DIVX
+</pre><p><b>Segundo paso:</b>
+</p><pre class="verbatim">mencoder &quot;mf://*.jpg&quot; -mf fps=25 -oac pcm -sws 2 -vf \
+scale=1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts \
+vcodec=mpeg4:vbitrate=800:aspect=4/3:vpass=2 -ofps 10 -of avi \
+-o ../rendered_file.avi -ffourcc DIVX
+</pre>
+<p>También puede renderizar el vídeo a mpeg4 directamente desde Cinelerra, si desea hacerlo así.
+</p>
+<hr size="6">
+<a name="Mejorar-el-rendimiento"></a>
+<a name="SEC282"></a>
+<h2 class="section"> 20.9 Mejorar el rendimiento </h2>
+
+<p>Por ahora, GNU/Linux no es un escritorio excelente. Es mejor como servidor. La mayoría
+de los programas en las distribuciones GNU/Linux son programas de red, sin rostro, 
+diseñados estratégicamente para contrarrestar una u otra funcionalidad del 
+servidor de Microsoft, pero no pensados para responder especialmente bien a la 
+interacción con el usuario. Hay cierto número de parámetros en GNU/Linux que el usuario
+puede ajustar para hacer que se comporte más como animal de casta en el uso doméstico.
+</p>
+
+<hr size="6">
+<a name="Deshabilitar-el-espacio-de-intercambio"></a>
+<a name="SEC283"></a>
+<h3 class="subsection"> 20.9.1 Deshabilitar el espacio de intercambio </h3>
+
+<p>En los sistemas con mucha memoria es posible que Cinelerra funcione mejor sin una 
+región de intercambio (<em>swap</em>). Si su sistema tiene 4 GB de RAM, probablemente irá mejor
+sin espacio de intercambio. Si tiene poco, como 512 MB de RAM, debería mantener la 
+región de intercambio. Si desea realizar una grabación, probablemente debería deshabilitar
+el intercambio en cualquier caso. Hay una razón para esto: GNU/Linux sólo permite que
+se use la mitad de la memoria disponible. A partir de ahí, empieza a buscar páginas libres
+que intercambiar, para liberar memoria que pueda usar como caché de acceso al disco. En un sistema
+de 4 GB se empieza a sufrir la demora de los intercambios de páginas tras usar sólo 2 GB.
+</p>
+<p>La cuestión es, entonces, cómo ejecutar GNU/Linux sin un espacio de intercambio. 
+En teoría bastaría con ejecutar<br>
+<code>swapoff -a</code>
+</p>
+<p>Por desgracia, sin espacio de intercambio la tarea kswapd normalmente se ejecuta en 
+bucle al 100%. Para eliminar este problema edite <tt>`linux/mm/vmscan.c'</tt>. En este fichero
+añada una línea que diga <code>return 0;</code> antes de donde dice:
+</p><pre class="verbatim">    /*
+     * Kswapd main loop.
+     */
+</pre>
+<p>A continuación recompile el kernel.
+</p>
+<hr size="6">
+<a name="Aumentar-los-buffers-de-sonido"></a>
+<a name="SEC284"></a>
+<h3 class="subsection"> 20.9.2 Aumentar los buffers de sonido </h3>
+
+<p>Para aumentar el rendimiento en tiempo real los buffers de audio de todos los 
+drivers de sonido de GNU/Linux se limitaron de 128k a 64k. En la grabación simultánea de 
+audio y vídeo, y en muchas grabaciones de audio, esto provoca pérdidas de señal. 
+La aplicación de parches para conseguir baja latencia y preminencia de los procesos
+prioritarios puede arreglar la mayoría de los problemas de grabación de audio, pero 
+no mejora la grabación de vídeo y audio simultáneos. Se hace necesario, entonces, 
+modificar el kernel.
+</p>
+<p>Para ver si sus buffers de sonido son adecuados ejecute el programa de prueba de sonido
+que se incluye, asegurándose de que no hay ninguna reproducción de audio o vídeo en 
+marcha. Este programa asigna los buffers de mayor tamaño posible y los muestra. 
+Si los <b>Bytes totales disponibles</b> (Total bytes available) están por debajo de
+131072 necesitará aumentar el tamaño de los buffers en el driver. Aunque la mayoría de los
+drivers son diferentes, de momento hemos elaborado una modificación (<em>hack</em>) para 
+uno de ellos.
+</p>
+<p>Lo que sigue sólo se aplica a la versión OSS del driver Soundblaster Live. Puesto 
+que cada tarjeta de sonido y cada driver de sonido derivado tienen una implementación 
+diferente, necesitará hacer alguna que otra investigación para otras tarjetas de sonido.
+En este caso, edite el fichero <tt>`linux/drivers/sound/emu10k1/audio.c'</tt>.
+</p>
+<p>Donde dice
+</p><pre class="verbatim">if (bufsize &gt;= 0x10000)
+</pre><p>cámbielo a:
+</p><pre class="verbatim">if (bufsize &gt; 0x40000)
+</pre>
+<p>Donde dice
+</p><pre class="verbatim">    for (i = 0; i &lt; 8; i++)
+        for (j = 0; j &lt; 4; j++)
+</pre><p>cámbielo a:
+</p><pre class="verbatim">    for (i = 0; i &lt; 16; i++)
+        for (j = 0; j &lt; 4; j++)
+</pre>
+<p>En el fichero <tt>`linux/drivers/sound/emu10k1/hwaccess.h'</tt>, cambie
+</p><pre class="verbatim">#define MAXBUFSIZE 65536
+</pre><p>a
+</p><pre class="verbatim">#define MAXBUFSIZE 262144
+</pre>
+<p>Finalmente, en el fichero <tt>`linux/drivers/sound/emu10k1/cardwi.h'</tt>, cambie
+</p><pre class="verbatim">#define WAVEIN_MAXBUFSIZE         65536
+</pre><p>a
+</p><pre class="verbatim">#define WAVEIN_MAXBUFSIZE         262144
+</pre>
+<p>A continuación recompile los módulos del kernel.
+</p>
+<hr size="6">
+<a name="Liberar-m_00e1s-memoria-compartida"></a>
+<a name="SEC285"></a>
+<h3 class="subsection"> 20.9.3 Liberar más memoria compartida </h3>
+
+<p>El kernel Linux sólo permite asignar 32 MB de memoria compartida por defecto. Es necesario
+aumentar esto para poder hacer algo útil. Al lanzarlo, Cinelerra se lo recordará con el 
+siguiente mensaje de error:<br>
+</p><pre class="verbatim">The following errors occurred:
+void MWindow::init_shm0: WARNING:/proc/sys/kernel/shmmax is 0x2000000, which is too low.
+Before running Cinelerra do the following as root:
+echo &quot;0x7fffffff&quot;&gt;/proc/sys/kernel/shmmax
+</pre>
+<p>Para hacer el cambio de manera permanente, añada la siguiente línea al fichero 
+<tt>`/etc/sysctl.conf'</tt>:
+</p><pre class="verbatim">kernel/shmmax=0x7fffffff
+</pre>
+<p>La primera vez puede reiniciar su computador o usar el siguiente comando como superusuario:
+</p><pre class="verbatim">sysctl -p
+</pre>
+<hr size="6">
+<a name="Acelerar-el-disco-duro"></a>
+<a name="SEC286"></a>
+<h3 class="subsection"> 20.9.4 Acelerar el disco duro </h3>
+
+<p>Es una secuencia de comandos muy popular entre los gurús de GNU/Linux, que no 
+se utiliza por defecto en las distribuciones de GNU/Linux.<br>
+<code>hdparm -c3 -d1 -u1 -k1 /dev/hda</code>
+</p>
+<ul>
+<li> <samp>`-c3'</samp> pone el disco duro en modo de entradas y salidas 
+síncronas de 32 bits. Esto no suele funcionar debido a un mal soporte del kernel
+para la mayoría de los controladores IDE. Si obtiene errores de tipo <em>lost interrupt</em> o 
+<em>SeekComplete</em>, pase inmediatamente a usar la opción <samp>`-c0'</samp> en lugar de 
+<samp>`-c3'</samp>.
+</li><li> <samp>`-d1'</samp> habilita DMA. Esto libera parcialmente la CPU durante las transferencias 
+de datos.
+</li><li> <samp>`-u1'</samp> permite gestionar múltiples interrupciones durante las transacciones 
+del disco duro. Esto libera aún tiempo de CPU. 
+</li><li> <samp>`-k1'</samp> evita que GNU/Linux sobreescriba sus ajustes en caso de problemas.
+</li></ul>
+
+<hr size="6">
+<a name="Deshabilitar-cron"></a>
+<a name="SEC287"></a>
+<h3 class="subsection"> 20.9.5 Deshabilitar cron </h3>
+
+<p>GNU/Linux realiza algunas tareas diarias como comprimir las páginas de los manuales
+(páginas <code>man</code>). Suelen ser tareas imperceptibles si corren en segundo plano, 
+mientras compilamos o escribimos documentos de texto, pero no cuando estamos reproduciendo
+o editando vídeo. Estas operaciones pueden deshabilitarse editando el fichero
+<tt>`/etc/rc.d/init.d/anacron'</tt>.
+</p>
+<p>Para ello, escriba el comando <code>exit</code> antes de la primera línea que no 
+empiece por <code>#</code>. En el fichero <tt>`/etc/rc.d/init.d/crond'</tt> ponga el 
+comando <code>exit</code> antes de la primera línea que no empiece por  <code>#</code>. A 
+continuación, reinicie su computador.
+</p>
+<p>Ya no se puede usar el comando <code>at</code>, suponiendo que quede alguien que 
+todavía lo use.
+</p>
+<hr size="6">
+<a name="Reducir-la-sensibilidad-del-rat_00f3n-USB"></a>
+<a name="SEC288"></a>
+<h3 class="subsection"> 20.9.6 Reducir la sensibilidad del ratón USB </h3>
+
+<p>A los jugadores les gustan los ratones de alta resolución, pero puede ser muy
+difícil posicionar un ratón de este tipo con exactitud en la línea de tiempos o 
+en una pantalla de vídeo. XFree86 permitía en su día reducir la sensibilidad del
+ratón PS/2 usando comandos como <code>xset m 1 1</code>, pero esto ya no ocurre con
+los ratones USB o los KVMs.
+</p>
+<p>Hay una forma de reducir la sensibilidad de un ratón USB, pero requiere editar el 
+código fuente del kernel. Aunque hay soporte para los ratones USB desde hace años,
+el código fuente del kernel para dichos ratones se reescribe constantemente. Las 
+instrucciones que siguen son válidas para la versión 2.6.12.3 del kernel. El 
+fichero que es necesario editar es <tt>`/usr/src/linux/drivers/input/mousedev.c'</tt>.
+</p>
+<p>Tras la línea que dice
+</p><pre class="verbatim">struct mousedev_hw_data {
+</pre><p>escriba
+</p><pre class="verbatim">#define DOWNSAMPLE_N 100
+#define DOWNSAMPLE_D 350
+int x_accum, y_accum;}
+</pre>
+<p>A continuación, la sección que dice algo como:
+</p><pre class="verbatim">switch (code) {
+    case REL_X:	mousedev-&gt;packet.dx += value; break;
+    case REL_Y:	mousedev-&gt;packet.dy -= value; break;
+    case REL_WHEEL:	mousedev-&gt;packet.dz -= value; break;
+}
+</pre><p>debe sustituirse por
+</p><pre class="verbatim">switch (code) {
+    case REL_X:
+    mousedev-&gt;packet.x_accum += value * DOWNSAMPLE_N;
+    mousedev-&gt;packet.dx += (int)mousedev-&gt;packet.x_accum
+    / (int)DOWNSAMPLE_D;
+    mousedev-&gt;packet.x_accum -=
+    ((int)mousedev-&gt;packet.x_accum / (int)DOWNSAMPLE_D)
+    * (int)DOWNSAMPLE_D;
+    break;
+    case REL_Y:
+    mousedev-&gt;packet.y_accum += value * DOWNSAMPLE_N;
+    mousedev-&gt;packet.dy -= (int)mousedev-&gt;packet.y_accum
+    / (int)DOWNSAMPLE_D;
+    mousedev-&gt;packet.y_accum -=
+    ((int)mousedev-&gt;packet.y_accum
+    / (int)DOWNSAMPLE_D) * (int)DOWNSAMPLE_D;
+    break;
+    case REL_WHEEL: mousedev-&gt;packet.dz -= value; break;
+}
+</pre>
+<p>Cambie el valor de <b>DOWNSAMPLE_N</b> para cambiar la sensibilidad del ratón.
+</p>
+<hr size="6">
+<a name="Ajustes-escogidos-al-servidor-X"></a>
+<a name="SEC289"></a>
+<h3 class="subsection"> 20.9.7 Ajustes escogidos al servidor X </h3>
+
+<p>Por defecto, XFree86 no puede mostrar muy rápido el avanzado renderizado de 
+<em>pixmaps</em> (mapas de píxeles) de Cinelerra. El servidor X se detiene al 
+intentar dibujar las listas de la interfaz. Si usted está usando XFree86
+(muchas distribuciones modernas no lo usan), puede solucionar esto añadiendo
+una línea a sus ficheros de configuración de XFree86.
+</p>
+<p>En la sección <b>Section &quot;Device&quot;</b>, añada una línea que diga:
+</p><pre class="verbatim">Option &quot;XaaNoOffscreenPixmaps&quot;
+</pre><p>y vuelva a arrancar el servidor X.
+Acelerar el sistema de ficheros
+Para evitar que el monitor se apage automáticamente escriba en el fichero
+<tt>`/etc/X11/xinit/xinitrc'</tt>:
+</p><pre class="verbatim">xset s off
+xset s noblank
+</pre><p>antes de la primera sentencia <code>if</code>.
+</p>
+<p>En cuanto a las teclas de <kbd>Windows</kbd> que no usa ninguna distribución de GNU/Linux,
+puede darles la misma funcionalidad que a las teclas <kbd>MAY</kbd> editando el fichero
+<tt>`/etc/X11/Xmodmap'</tt>.  Añádale lo siguiente:
+</p><pre class="verbatim">keycode 115 = Hyper_L
+keycode 116 = Hyper_R
+add mod4 = Hyper_L
+add mod5 = Hyper_R
+</pre>
+<p>Los cambios para que un gestor de ventanas reconozca las teclas <kbd>Windows</kbd>
+como teclas <kbd>MAY</kbd> son complejos. En <b>FVWM</b>, como mínimo, puede editar 
+el fichero <tt>`/etc/X11/fvwm/system.fvwm2rc'</tt> y poner:
+</p><pre class="verbatim">Mouse 0 T A move-and-raise-or-raiselower
+#Mouse 0 W M move
+Mouse 0 W 4 move
+Mouse 0 W 5 move
+Mouse 0 F A resize-or-raiselower
+Mouse 0 S A resize-or-raiselower
+</pre><p>en lugar de la sección por defecto para mover y redimensionar. El mejor rendimiento
+se consigue en FVWM. Otros gestores de ventanas parecen ralentizar el vídeo al
+acumular demasiados eventos y no son tan eficientes en el despliegue.
+</p>
+<hr size="6">
+<a name="Acelerar-el-sistema-de-ficheros"></a>
+<a name="SEC290"></a>
+<h3 class="subsection"> 20.9.8 Acelerar el sistema de ficheros </h3>
+
+<p>A menudo almacenará vídeo en un disco gigantesco y caro diferente de su disco
+de arranque. Por lo tanto necesitará instalar manualmente un sistema de ficheros
+EXT en este disco, usando el comando <code>mke2fs</code>. El sistema más rápido de 
+ficheros, de lejos, se consigue con<br>
+<a name="IDX155"></a>
+<a name="IDX156"></a>
+<code>mke2fs -i 65536 -b 4096 mi_dispositivo</code><br>
+<code>tune2fs -r0 -c10000 mi_dispositivo</code>
+Así configurado no tiene <em>journaling</em>, reserva tan pocos bloques como sea posible
+para los nombres de ficheros y accede a la mayor cantidad de datos por bloque como
+sea posible. Un sistema de ficheros ligeramente más lento, pero que es más fácil de 
+recuperar tras una caída de tensión, es<br>
+<code>mke2fs -j -i 65536 -b 4096 mi_dispositivo</code><br>
+<code>tune2fs -r0 -c10000 mi_dispositivo</code>
+Con esta configuración añade un <em>journal</em> que retrasa un poco la escritura pero
+acelera los chequeos del sistema de ficheros.
+</p>
+<hr size="6">
+<a name="Mejorar-el-v_00eddeo-Zoran"></a>
+<a name="SEC291"></a>
+<h3 class="subsection"> 20.9.9 Mejorar el vídeo Zoran </h3>
+
+<p>El vídeo grabado de entradas ZORAN normalmente está desalineado o no está completamente
+codificado a la derecha. Esto se puede compensar ligeramente ajustando parámetros 
+en el código fuente del driver. 
+</p>
+<p>En el fichero <tt>`/usr/src/linux/drivers/media/video/zr36067.c'</tt> las estructuras definidas
+cerca de la línea 623 afectan a la alineación. Al menos para NTSC, la versión 2.4.20 del
+driver se podía mejorar cambiando 
+</p><pre class="verbatim">    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 16 };
+</pre><p>por
+</p><pre class="verbatim">    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 17 };
+</pre>
+<p>En el fichero <tt>`/usr/src/linux/drivers/media/video/bt819.c'</tt> hay más estructuras
+cerca de la línea 76 que afectan el alineamiento y la codificación.<br>
+Para NTSC
+</p><pre class="verbatim">    {858 - 24, 2, 523, 1, 0x00f8, 0x0000}
+</pre><p>se podría cambiar a
+</p><pre class="verbatim">    {868 - 24, 2, 523, 1, 0x00f8, 0x0000},
+</pre><p>Ajustar estos parámetros puede servir o no para acercar más la imagen al centro. La
+mayoría de las veces provocaran que el driver se bloquee antes de capturar el 
+primer fotograma.
+</p>
+<p><b>Nuevo en 2.6.5:</b><br>
+En los kernels 2.6, el subsistema de vídeo se reescribió desde cero. Para ajustar
+los parámetros Zoran vaya a <tt>`drivers/media/video/zoran_card.c'</tt> y busque allí
+un grupo de líneas como
+</p><pre class="verbatim">    static struct tvnorm f50sqpixel = { 944, 768, 83, 880, 625, 576, 16 };
+    static struct tvnorm f60sqpixel = { 780, 640, 51, 716, 525, 480, 12 };
+    static struct tvnorm f50ccir601 = { 864, 720, 75, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 16 };
+
+    static struct tvnorm f50ccir601_lml33 = { 864, 720, 75+34, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601_lml33 = { 858, 720, 57+34, 788, 525, 480, 16 };
+
+    /* The DC10 (57/16/50) uses VActive as HSync, so HStart must be 0 */
+    static struct tvnorm f50sqpixel_dc10 = { 944, 768, 0, 880, 625, 576, 0 };
+    static struct tvnorm f60sqpixel_dc10 = { 780, 640, 0, 716, 525, 480, 12 };
+
+    /* FIXME: I cannot swap U and V in saa7114, so i do one
+     * pixel left shift in zoran (75 -&gt; 74)
+     * (Maxim Yevtyushkin &lt;max@linuxmedialabs.com&gt;) */
+    static struct tvnorm f50ccir601_lm33r10 = { 864, 720, 74+54, 804, 625, 576, 18 };
+    static struct tvnorm f60ccir601_lm33r10 = { 858, 720, 56+54, 788, 525, 480, 16 };
+</pre>
+<p>Éstas parecen ser las responsables de controlar la posición de la imagen. Al menos 
+para LML33 la siguiente definición para <b>f60ccir601_lml33</b> lo consigue:
+</p><pre class="verbatim">static struct tvnorm f60ccir601_lml33 = { 858, 720, 67+34, 788, 525, 480, 13 };
+</pre>
+<hr size="6">
+<a name="Traducir-Cinelerra"></a>
+<a name="SEC292"></a>
+<h2 class="section"> 20.10 Traducir Cinelerra </h2>
+
+
+<p>This information is needed if you wish to partipate in translating Cinelerra.
+See section <a href="cinelerra_cv_manual_es_3.html#SEC27">Variables de entorno</a>, for running Cinelerra in your own language.
+</p>
+<hr size="6">
+<a name="Localizaciones-disponibles"></a>
+<a name="SEC293"></a>
+<h3 class="subsection"> 20.10.1 Localizaciones disponibles </h3>
+
+<p>Algunas localizaciones ya existen (Cinelerra ya ha sido traducido a dichas lenguas):
+</p><ul>
+<li> <b>DE</b> - Alemán
+</li><li> <b>ES</b> - Español
+</li><li> <b>EU</b> - Euskara - vasco
+</li><li> <b>FR</b> - Francés
+</li><li> <b>IT</b> - Italiano
+</li><li> <b>PT_BR</b> - Portugués de Brasil
+</li><li> <b>SL</b> - Esloveno
+</li></ul>
+
+<hr size="6">
+<a name="Actualizar-una-traducci_00f3n-existente"></a>
+<a name="SEC294"></a>
+<h3 class="subsection"> 20.10.2 Actualizar una traducción existente </h3>
+
+<p>Para generar un <tt>`*.po'</tt> actualizado con las nuevas cadenas de texto
+de código fuente de Cinelerra que aún no existan en el fichero <tt>`*.po'</tt> actual,
+tras ejecutar <code>./configure</code> haga:<br>
+<code>cd po &amp;&amp; make</code>
+</p>
+<p>A continuación, edite el fichero <tt>`.po'</tt> que encontrará en el directorio
+<tt>`po/'</tt> de su lenguaje objetivo, y envíe los ficheros diff al equipo de 
+Cinelerra CV.
+</p>
+<hr size="6">
+<a name="Crear-una-traducci_00f3n-nueva"></a>
+<a name="SEC295"></a>
+<h3 class="subsection"> 20.10.3 Crear una traducción nueva </h3>
+
+<p>Para crear una nueva traducción, tras el comando <code>./configure</code>
+ejecute:<br>
+<code>cd po &amp;&amp; make</code>
+</p>
+<p>A continuación, edite el fichero <tt>`cinelerra.po'</tt> que hallará en 
+<tt>`po/'</tt> y añada las cadenas de texto convenientemente traducidas. 
+Cambie el nombre del fichero a <tt>`(prefijo_del_idioma).po'</tt> y añada
+el prefijo del lenguaje a <tt>`po/LINGUAS'</tt>. Finalmente, envíe el fichero
+diff al equipo de Cinelerra CV.
+</p>
+<hr size="6">
+<a name="Panor_00e1mica-y-zoom-de-im_00e1genes-fijas"></a>
+<a name="SEC296"></a>
+<h2 class="section"> 20.11 Panorámica y zoom de imágenes fijas </h2>
+
+<p>La potente funcionalidad de fotogramas clave de Cinelerra permiten
+crear panorámicas y efectos de zoom en imágenes fijas.
+</p><ol>
+<li> Cargue y cree un clip a partir de una imagen fija como se describió
+en el capítulo correspondiente. Haga este clip de 10 segundos de duración.
+</li><li> Active <b>Generación automática de fotogramas clave</b>.
+</li><li> Usando los <b>controles de navegación</b>, vaya al principio del clip.
+</li><li> Usando el control de <b>cámara</b>, ajuste la posición inicial del clip.
+</li><li> Usando los <b>controles de navegación</b>, avance un par de segundos sobre el clip.
+</li><li> Arrastrando la <b>cámara</b>, muévala a una nueva posición diferente de la anterior.
+</li><li> Ahora rebobine al principio del clip y  reprodúzcalo.
+</li></ol>
+<p>Podrá ver que la cámara fluye suavemente desde un fotograma clave hasta el 
+siguiente, al ajustar Cinelerra automáticamente el movimiento de la cámara
+según líneas rectas que unen un punto con el siguiente.
+</p>
+<hr size="6">
+<a name="Editar-HDV-1080i-usando-archivos-proxy"></a>
+<a name="SEC297"></a>
+<h2 class="section"> 20.12 Editar HDV 1080i usando archivos proxy </h2>
+
+<p>Al trabajar con vídeo de alta definición, como el que suele originarse en las
+cámaras digitales HDV, se necesita mucha más potencia de procesamiento. Incluso
+los sistemas que son capaces de reproducir una única pista a su verdadera 
+tasa de fotogramas suelen fallar al intentar reproducir varias simultáneamente.
+En consecuencia, incluso una transición tan sencilla como el fundido de dos
+secuencias se frena hasta un nivel inaceptable. Es más, HDV es un formato basado 
+en GOP, y algo tan sencillo como un corte requiere decodificar el GOP entero en 
+menos de 1/25 parte de segundo (unas 4 centésimas de segundo). Una posibilidad
+realizar todas las operaciones de edición sobre ficheros de baja resolución y
+usar el material HDV sólo para el renderizado final. La forma de trabajar que 
+se presenta a continuación fue propuesta por primera vez por Hermann
+<small>VOSSELER</small>.
+</p>
+
+<hr size="6">
+<a name="Presentaci_00f3n"></a>
+<a name="SEC298"></a>
+<h3 class="subsection"> 20.12.1 Presentación </h3>
+
+<ul>
+<li> Por cada fichero HDV se crea un proxy a escala 0.5.
+</li><li> Se crea el proyecto con resolución HDV, en general 1440x1080 y aspecto 16/9.
+</li><li> Los nuevos recursos se crean con ambos proxies, además de los ficheros HDV.
+</li><li> Cada pista de vídeo debe tener la Camera Automation a 2.0.
+</li><li> Se realiza la edición usando los ficheros proxy.
+</li><li> Para obtener HDV al renderizar, salga de Cinelerra y convierta el proyecto
+con proxychange.py y vuelva a abrir el proyecto.
+</li><li> Si tras renderizar se necesita hacer nuevas ediciones, se puede volver
+a transformar el fichero del proyecto en una versión proxy del mismo.
+</li></ul>
+
+<hr size="6">
+<a name="Extraer-HDV-de-la-c_00e1mara-digital"></a>
+<a name="SEC299"></a>
+<h3 class="subsection"> 20.12.2 Extraer HDV de la cámara digital </h3>
+
+<p>Hasta ahora no hay ninguna solución perfecta. Una posibilidad es ejecutar 
+el comando <code>test-mpeg2</code>, disponible con las fuentes de <b>libiec61883</b>.
+Use la sintaxis:<br>
+<code>test-mpeg2 &gt; hdv_tape.mpeg</code><br>
+y pulse <em>Play</em> (reproducir) en la cámara. No debe ejecutar ninguna tarea
+que consuma muchos recursos en su computadora mientras hace esto, pues la falta
+de mecanismos de caché en test-mpeg2 provoca la pérdida de algún fotograma.
+</p>
+<hr size="6">
+<a name="Usar-ficheros-TOC-y-WAV"></a>
+<a name="SEC300"></a>
+<h3 class="subsection"> 20.12.3 Usar ficheros TOC y WAV </h3>
+
+<p>Intente usar ficheros WAV para el sonido, y cargar los ficheros HDV MPEG-2 
+usando el toc (tabla de contenidos) generado. Para crear los ficheros toc
+puede usar el siguiente comando:<br>
+<code>for i in *.mpeg; do mpeg3toc $i `basename $i mpeg`toc; done</code>
+</p>
+<hr size="6">
+<a name="Generar-los-ficheros-proxy"></a>
+<a name="SEC301"></a>
+<h3 class="subsection"> 20.12.4 Generar los ficheros proxy </h3>
+
+<p>Los ficheros proxy se pueden convertir de muchas maneras y pueden usar 
+cualquier formato. Sin embargo, Cinelerra funciona mejor al editar formatos
+no basados en GOP. Para convertir sus ficheros HDV a ficheros basados en 
+mjpeg con un 50% de escalado, use el siguiente comando:<br>
+<code>for i in *.mpeg;do mencoder -mc 0 -noskip $i -ovc lavc -lavcopts
+vcodec=mjpeg -vf scale=720:540 -oac pcm -o `basename $i mpeg`avi; done</code>
+</p>
+<hr size="6">
+<a name="Convertir-HDV-y-ficheros-proxy"></a>
+<a name="SEC302"></a>
+<h3 class="subsection"> 20.12.5 Convertir HDV y ficheros proxy </h3>
+
+<p>Hay un script en Python, <b>proxychange.py</b>, que convierte los HDV a/desde
+los proxies. Puede descargar el script aquí:<br>
+<a href="http://cvs.cinelerra.org/docs/proxychange.py">http://cvs.cinelerra.org/docs/proxychange.py</a>
+</p>
+<p>Al ejecutar este script, sobreescribe los ficheros del proyecto que ya existen
+y crea una copia del original en <tt>`projectfile.xml.bak'</tt>.
+</p>
+<ul>
+<li> Proxy -&gt; HDV (para renderizar):<br>
+<code>./proxychange.py projectfile.xml -from `proxyfiles/(\w+)\.avi` -to
+`hdv/\1.toc` -scale 0.5</code>
+</li><li> HDV -&gt; Proxy (si quiere volver a editar tras haber renderizado):<br>
+<code>./proxychange.py projectfile.xml -from `hdv/(\w+)\.toc` -to
+`proxyfiles/\1.avi` -scale 2.0</code>
+</li></ul>
+
+<p>El fichero del proyecto, que se guarda en formato XML, no siempre es un fichero
+XML perfectamente formado. Por lo tanto, tras guardar con Cinelerra pueden ocurrir
+errores. A veces las etiquetas XML no están bien cerradas, de modo que tras una
+etiqueta &lt;Etiqueta&gt; no hay otra &lt;/Etiqueta&gt;. Este error hay que corregirlo a mano.
+</p>
+<p>ACODEC contiene algunos caracterres \001. Edite el fichero manualmente o use
+el siguiente comando:<br>
+<code>cat temp001.xml| tr -d `\001` &gt; /tmp/1 ; mv /tmp/1 temp001.xml</code>
+</p>
+<hr size="6">
+<a name="Renderizar-el-proyecto-HDV"></a>
+<a name="SEC303"></a>
+<h3 class="subsection"> 20.12.6 Renderizar el proyecto HDV </h3>
+
+<p>Los ficheros HDV se pueden renderizar a un flujo YUV4MPEG y a continuación 
+codificarse a MPEG2 usando un binario modificado de mjpegtools.
+<code>mpeg2enc -verbose 0 -aspect 3 -format 3 -frame-rate 3 -video-bitrate
+25000 -nonvideo-bitrate 384 -force-b-b-p -video-buffer 448 -video-norm n
+-keep-hf -no-constraints -sequence-header-every-gop -min-gop-size 6
+-max-gop-size 6 -o %</code>
+</p>
+<p>Renderice el sonido en un fichero AC3 y combine el vídeo con el audio usando mplex.
+</p>
+<hr size="6">
+<a name="Otras-cuestiones"></a>
+<a name="SEC304"></a>
+<h3 class="subsection"> 20.12.7 Otras cuestiones </h3>
+
+<p>Hay algunos problemas con la caché de GOP en Cinelerra 2.1 que no estaban en la 
+versión 2.0. Muchos ficheros MPEG2 o MPEG4 no se pueden reproducir adecuadamente.
+La reproducción de HDV MPEG-2 también se ve afectada. Aquí se presenta una solución
+rápida para deshabilitar la caché GOP.
+</p>
+<p>En el fichero <tt>`libmpeg3/video/seek.c'</tt>, línea #357, sustituya:
+</p>
+<pre class="verbatim">mpeg3video_drop_frames(video, frame_number - video-&gt;framenum, 1);
+</pre><p>por
+</p><pre class="verbatim">mpeg3video_drop_frames(video, frame_number - video-&gt;framenum, 0);
+</pre>
+<p>Al reproducir ficheros MJPEG, la transición de fundido no funciona correctamente
+en los modos RGBA o YUVA, pero sí lo hace en los modos RGB o YUV.
+</p>
+
+<hr size="6">
+<a name="A_00f1adir-subt_00edtulos"></a>
+<a name="SEC305"></a>
+<h2 class="section"> 20.13 Añadir subtítulos </h2>
+
+<p>Hay dos métodos posibles para incorporar subtítulos en un vídeo:
+</p><ul>
+<li> Usar el efecto de Títulos de Cinelerra. Hacerlo así es largo y fastidioso. 
+Es más, los subtítulos así generados van empotrados en la imagen, forman parte de ella.
+No es posible mostrar el vídeo sin los subtítulos, ni se puede cambiar el texto que 
+muestran. Si se desea que el vídeo esté disponible en varios idiomas, hay que renderizarlo
+varias veces. Puede obtener más información sobre los títulos en Cinelerra en See section <a href="cinelerra_cv_manual_es_13.html#SEC222">Título</a>.
+</li><li> Usar un editor de subtítulos para añadirlos tras renderizar el vídeo. 
+</li></ul>
+
+<p>El segundo método es el que se debe usar si se desea que el vídeo esté disponible
+con subtítulos en varios idiomas. Si se quiere producir un DVD este método es el único
+que es compatible con la funcionalidad de subtítulos de <em>dvdauthor</em>. Si se pretende 
+distribuir el vídeo en Internet, un archivo de vídeo y varios de subtítulos ocupan menos
+memoria que varios archivos de vídeo, uno por cada idioma.
+</p>
+<p>Los ficheros de texto que contienen los subtítulos se pueden reproducir con 
+cualquier de vídeo decente. Con <em>mplayer</em> se puede usar la siguiente sintaxis:<br>
+<code>mplayer -sub &lt;el_archivo_de_subtitulos&gt; &lt;el_archivo_de_video&gt;</code>
+</p>
+<p>Un archivo de subtítulos es un simple fichero de texto, que contiene el texto y
+el instante o número de fotograma en que se debe mostrar cada subtítulo en la pantalla.
+</p>
+<p>Hay muchos editores de subtítulos disponibles en GNU/Linux. Sin embargo la mayoría de 
+ellos son útiles para facilitar la <b>traducción</b> de subtítulos, pero no para 
+<b>añadir</b> y <b>sincronizar</b> subtítulos nuevos en un vídeo. Como usuarios de Cinelerra, la 
+creación de vídeo es el tema que más suele interesarnos. Para esta tarea nuestra 
+recomendación personal es <b>Subtitleeditor</b>, disponible aquí:<br>
+<a href="http://kitone.free.fr/subtitleeditor">http://kitone.free.fr/subtitleeditor</a>
+</p>
+<p align="center"> <img src=".././manual_images_en/subtitleeditor.png" alt="manual_images_en/subtitleeditor">
+</p><p align="center"> <b>Subtitleeditor</b>
+</p>
+<p>La gran ventaja de Subtitleeditor es qeue muestra la forma de onda del audio. 
+Esta funcionalidad es muy importante cuando se trata de sincronizar con precisión los 
+subtítulos y las conversaciones. Recuerde, no obstante, que dicha sincronización
+se perderá si edita el vídeo tras haber añadido los subtítulos. Añadir subtítulos es
+algo que sólo se debería hacer cuando la edición de vídeo está terminada.
+</p>
+<p>Una vez creado el fichero de texto con los subtítulos, se puede:
+</p><ul>
+<li> Distribuirlo con el vídeo. Los espectadores tendrán que cargar el fichero de
+subtítulos adecuado en su reproductor de vídeo para ver realmente los subtítulos. 
+</li><li> Usarlo con <em>dvdauthor</em>, para añadir los subtítulos a un DVD. Para más
+información sobre esta opción, consulte la documentación específica de <em>dvdauthor</em>.
+</li><li> Incrustar los subtítulos en el vídeo usando <em>mencoder</em>. Puede usar, por 
+ejemplo, el siguiente comando desde la consola, adaptando las opciones a sus necesidades:<br>
+<code>mencoder -sub &lt;el_fichero_de_subtitulos&gt; &lt;archivo_de_video_sin_subtitulos&gt; -ovc lavc
+-lavcopts vcodec=mpeg4:vhq:vbitrate=1000 -oac mp3lame -lameopts br=256:vol=1
+-ffourcc DIVX -o &lt;video_resultante.avi&gt;</code>
+</li></ul>
+
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC273" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_21.html#SEC306" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_es_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated by <em>Raffa</em> on <em>octubre, 8 2007</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

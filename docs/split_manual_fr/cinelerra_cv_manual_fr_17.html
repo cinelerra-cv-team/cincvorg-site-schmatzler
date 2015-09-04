@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 17. Les images-clés</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 17. Les images-clés">
+<meta name="keywords" content="Manuel de Cinelerra CV: 17. Les images-clés">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_16.html#SEC240" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_18.html#SEC250" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Les-images_002dcl_00e9s"></a>
+<a name="SEC243"></a>
+<h1 class="chapter"> 17. Les images-clés </h1>
+
+<p>Lorsque vous modifiez le réglage de volume, la caméra, le projecteur ou
+d'autres paramètres d'une piste, ils restent en général identiques pour toute
+la durée de la timeline.  Utiliser des paramètres statiques n'est parfois pas
+très utile.  Généralement, vous désirez modifier la positon de la caméra au
+cours du temps ou modifier les positions des masques.  Les masques doivent
+suivre les objets.  On crée donc des modifications dynamiques en définissant
+des images-clés.  Une image-clé est un certain instant où les paramètres
+changent pour une certaine opération.  Dans Cinelerra, il y a des images-clés
+pour presque chaque paramètre de composition et d'effet.
+</p>
+<a name="IDX123"></a>
+<a name="IDX124"></a>
+<p>Lorsque vous ajustez un paramètre quelconque, sa valeur est enregistrée dans
+une image-clé.  Si la valeur est enregistrée dans une image-clé, pourquoi ne
+change-t-elle pas en permanence ? L'image-clé dans laquelle elle est enregistré
+par défaut est appelé l'image-clé par défaut.  L'image-clé par défaut
+s'applique à toute la durée du projet s'il n'y a aucune autre image-clé.
+L'image-clé par défaut n'est jamais représentée car elle existe toujours.  La
+seule manière pour qu'une modification apparaisse au cours du temps est de
+créer d'autres images-clés que l'image-clé par défaut.
+</p>
+<p>On peut afficher les images-clés pour un paramètre donné en utilisant le menu
+<b>Afficher</b>.  Une méthode plus rapide pour activer ou désactiver plusieurs
+images-clés est d'utiliser le menu <b>Fenêtre-&gt;Overlays</b>.  Cette fenêtre permet
+d'activer et de désactiver tous les paramètres présents dans le menu Afficher.
+Lorsque des images-clés sont sélectionnées, elles sont dessinées sur la
+timeline sur les pistes auxquelles elles s'appliquent.
+</p>
+<p>Les images-clés existent sous différentes formes : courbes, commutateurs,
+modes et ainsi de suite.  La manière de gérer les différents types
+d'images-clés est décrite çi-dessous.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC244">17.1 Les images-clés de type courbe</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC246">17.2 Les images-clés de type commutateur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC247">17.3 Les images-clés automatiques</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC248">17.4 Les images-clés du compositeur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC249">17.5 Editer les images-clés</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Les-images_002dcl_00e9s-de-type-courbe"></a>
+<a name="SEC244"></a>
+<h2 class="section"> 17.1 Les images-clés de type courbe </h2>
+
+<p>De nombreux paramètres sont enregistrés dans des courbes de Bezier.  Allez à
+<b>Afficher-&gt;Fondu</b> ou <b>Afficher-&gt;Zoom</b> pour afficher sur la timeline les
+courbes correspondant à ces paramètres.  Dans les deux modes d'édition &quot;flèche&quot;
+ou &quot;i-beam&quot;, déplacez le curseur sur la courbe jusqu'à ce qu'il change de
+forme.  Vous pouvez ensuite créer une image-clé à cette position simplement par
+un cliquer-glisser sur la courbe.
+</p>
+<p>Une fois l'image-clé créée, un cliquer-glisser sur celle-ci permet de la
+repositionner.  Lorsque vous cliquez-glissez une seconde image-clé sur la
+courbe, cela crée une courbe en pente douce.  <b>Ctrl-glisser</b> sur une image-clé
+modifie la valeur soit du contrôle d'entrée, soit du contrôle de sortie.  Ceci
+permet de modifier la raideur de la pente de la courbe.  Bien que que le
+contrôle d'entrée et le contrôle de sortie puissent être déplacés aussi bien
+horizontalement que verticalement, le mouvement horizontal n'est là que pour
+des raisons de lisibilité et n'est pas utilisé dans la valeur de la courbe.
+</p>
+<p>Vous pouvez vous souvenir que Gimp et les masques de composition utilisent la
+touche <kbd>MAJ</kbd> pour sélectionner des points de contrôle, alors pourquoi
+est-ce que la timeline utilise <kbd>CTRL</kbd> ? Lorsque vous utilisez <b>MAJ-clic</b>
+sur une courbe de la timeline, l'image-clé se colle soit à l'image-clé qui la
+suit, soit à celle qui la précède en fonction de celle qui existe.  Ceci vous
+permet de mettre en place une courbe constante sans avoir à copier l'image-clé
+suivante ou précédente.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC245">17.1.1 Naviguer dans les courbes des images-clés</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Naviguer-dans-les-courbes-des-images_002dcl_00e9s"></a>
+<a name="SEC245"></a>
+<h3 class="subsection"> 17.1.1 Naviguer dans les courbes des images-clés </h3>
+
+<p>Il n'y a pas beaucoup de place sur la timeline pour une grande quantité de
+valeurs de courbes.  Il vous faut donc zoomer verticalement sur les courbes
+pour permettre leur modification.  Ceci peut être effectué à l'aide de deux
+outils : le bouton d'adaptation automatique et le menu de zoom automatique
+<img src=".././manual_images_intl/autozoom.png" alt="manual_images_intl/autozoom">.
+</p>
+<p>Le bouton d'adaptation automatique redimensionne et décale la plage verticale
+de façon à ce que la courbe choisie apparaisse sur la timeline.  Si une région
+de la timeline a été mise en surbrillance par le curseur, seule cette région
+est mise à l'échelle.  Les points d'entrée/sortie n'affectent pas la région
+zoomée.  <kbd>ALT-f</kbd> permet d'effectuer la mise à l'échelle automatique.
+</p>
+<p>L'entrée de menu zoom automatique modifie manuellement l'échelle verticale des
+courbes par multiples de 2.  Cliquez sur le bouton pour faire défiler les
+valeurs de zoom.  <kbd>ALT-haut</kbd> et <kbd>ALT-bas</kbd> permettent de modifier le zoom
+automatique à l'aide du clavier.
+</p>
+<hr size="6">
+<a name="Les-images_002dcl_00e9s-de-type-commutateur"></a>
+<a name="SEC246"></a>
+<h2 class="section"> 17.2 Les images-clés de type commutateur </h2>
+
+<p>La sourdine est la seule image-clé de type commutateur.  Les images-clés de
+sourdine déterminent où la piste est traitée mais non rendue dans la sortie.
+Un clic droit sur ces courbes permet de créer une image-clé.  A l'inverse des
+courbes, l'image-clé de type commutateur n'a que deux valeurs : active ou
+inactive.  <kbd>CTRL</kbd> et <kbd>MAJ</kbd> n'a aucun effet sur les images-clés de type
+commutateur.
+</p>
+<hr size="6">
+<a name="Les-images_002dcl_00e9s-automatiques"></a>
+<a name="SEC247"></a>
+<h2 class="section"> 17.3 Les images-clés automatiques </h2>
+
+<p>Vous avez peut-être remarqué que lorsque des courbes de réglage de niveau sont
+configurées, le déplacement du point d'insertion le long de ces courbes les
+fait bouger de façon à ce qu'ils indiquent la valeur qui se trouve sous le
+point d'insertion.  Ce n'est pas uniquement pour la beauté de la chose.  Les
+boutons de réglage de niveau peuvent eux-même créer des images-clés dans le
+mode-clés automatiques.  Le mode images-clés automatiques est en général plus
+utile que de glisser les courbes.
+</p>
+<p>Activez ce mode en activant le bouton des images-clés automatiques
+<img src=".././manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">.  Dans le mode des images-clés
+automatiques, chaque fois que vous ajustez un paramètre susceptible d'être mis
+sous forme d'image-clé, une image-clé est créée sur la timeline.  Comme les
+images-clés automatiques affectent de nombreux paramètres, il est préférable de
+les activer juste avant d'avoir besoin d'une image-clé et de les désactiver
+immédiatement après.
+</p>
+<p>Il est utile d'aller dans le menu <b>Afficher</b> et de rendre le paramètre en
+question visible avant d'effectuer une modification.  L'emplacement où une
+image-clé automatique est créée se trouve sous le point d'insertion.  Si la
+timeline est jouée alors qu'on ajuste le paramètre, plusieurs images-clés
+automatiques seront créées alors que vous modifiez ce paramètre.
+</p>
+<p>Lorsque le mode des images-clés automatiques est désactivé, une chose étrange
+du même genre se produit.  L'ajustement d'un paramètre ajuste l'image-clé qui
+précède immédiatement le point d'insertion.  S'il existe deux images-clés et
+que le point d'insertion se trouve entre les deux, une modification d'un
+réglage de niveau va modifier la première image-clé.
+</p>
+<p>Il y a de nombreux paramètres qui ne peuvent être mis sous forme d'images-clés
+que dans le mode des images-clés automatiques.  Ce sont les paramètres pour
+lesquels les courbes prendraient trop de place sur la piste ou qui ne peuvent
+pas être aisément représentés sous forme de courbe.
+</p>
+<p>Les effets ne peuvent pas être mis sous forme d'images-clés en raison du grand
+nombre de paramètres possibles pour chacun des effets.
+</p>
+<p>La translation de la caméra et du projecteur ne peut être mise sous forme
+d'images-clés que dans le mode des images-clés automatiques alors que le zoom
+de la caméra et du projecteur peuvent être mis sous forme d'images-clés à
+l'aide de courbes.  C'est ici que nous terminons la discussion concernant la
+composition, car celle-çi dépend grandement des possibilités de modifications
+au cours du temps.
+</p>
+<hr size="6">
+<a name="Les-images_002dcl_00e9s-du-compositeur"></a>
+<a name="SEC248"></a>
+<h2 class="section"> 17.4 Les images-clés du compositeur </h2>
+
+<p>La translation de la caméra et du projecteur est représentée par deux
+paramètres : les coordonnées x et y.  C'est donc fastidieux de les ajuster à
+l'aide des courbes.  Cinelerra permet de résoudre ce problème via les
+images-clés automatiques.  Avec une piste vidéo chargée, déplacez le point
+d'insertion au début de la piste et activez le mode des images-clés
+automatiques.
+</p>
+<p>Déplacez légèrement le projecteur dans la fenêtre de composition pour créer une
+image-clé.  Déplacez-vous alors vers l'avant de quelques secondes.  Déplacez le
+projecteur sur une assez longue distance pour créer une autre image-clé et
+amplifier le mouvement.  Ceci crée une seconde boîte de projecteur dans le
+compositeur avec une ligne joignant les deux boîtes.  Cette ligne est le chemin
+de déplacement.  Si vous créez d'autres images-clés, d'autres boîtes seront
+créées.  Une fois que toutes les images-clés voulues sont créées, désactivez le
+mode des images-clés automatiques.
+</p>
+<p>Maintenant, lorsque vous déplacez le curseur dans la fenêtre de composition, la
+projection vidéo se déplace au cours du temps.  A n'importe quel endroit entre
+deux images-clés, le chemin du déplacement est rouge pour tous les instants
+précédant le point d'insertion et vert pour tous les instants qui le suivent.
+On peut se demander si cette fonction est très utile mais elle vous permet de
+vous rendre compte qu'une image-clé va être affectée par les prochains réglages
+du projecteur.
+</p>
+<p>Un cliquer-glisser alors que les images-clés automatiques ne sont pas actives
+permet d'ajuster l'image-clé précédente.  Si vous vous trouvez à mi-chemin
+entre deux images-clés, la première boîte de projecteur est ajustée alors que
+la seconde n'est pas modifiée.  De plus, la vidéo ne semble pas se déplacer en
+phase avec la première image-clé.  Ceci est dû au fait qu'à mi-chemin entre deux
+images-clés, la translation du projecteur est interpolée.  Pour pouvoir définir
+la seconde image-clé, vous devrez vous déplacer après la seconde image-clé.
+</p>
+<p>Par défaut, le trajet de déplacement est une ligne droite, mais il peut être
+incurvé à l'aide de points de contrôle.  Un <b>CTRL-glisser</b> permet de placer
+le point de contrôle d'entrée ou de sortie de l'image-clé précédente.  Une fois
+encore, nous nous éloignons du comportement de Gimp car la touche <kbd>MAJ</kbd> est
+déjà utilisée pour le zoom.  Ensuite, les points d'entrée/sortie sont
+extrapolés à partir de l'image-clé, un <b>CTRL-glisser</b> n'importe où sur la vidéo
+permet d'ajuster le point de contrôle le plus proche.  Un point de contrôle
+peut être entièrement hors de vue tout en restant contrôlable.
+</p>
+<p>Lorsque vous éditez la translation de la caméra, le comportement des boîtes de
+caméra est légèrement différent.  La caméra est généralement utilisée pour
+effectuer des panoramiques sur des images fixes.  La boîte de caméra en cours
+ne se déplace pas durant un glisser, mais si plusieurs images-clés sont
+définies, chaque boîte de caméra, excepté l'image-clé en cours semblent se
+déplacer.  Ceci est dû au fait que l'affichage de la caméra affiche toutes les
+autres positions de caméras par rapport à celle en cours.
+</p>
+<p>La situation devient plus intuitive si vous courbez le chemin de déplacement
+entre deux images-clés et que vous vous déplacez entre ceux-ci.  La limite
+entre le rouge et le vert, qui est la position actuelle des images-clés, est
+toujours centrée alors que les boîtes de caméra se déplacent.
+</p>
+<hr size="6">
+<a name="Editer-les-images_002dcl_00e9s"></a>
+<a name="SEC249"></a>
+<h2 class="section"> 17.5 Editer les images-clés </h2>
+
+<p><b>IMPORTANT :</b> lorsque vous copiez et collez des images-clés, assurez-vous
+<b>qu'il n'y a pas de point d'ENTREE ou de point de SORTIE sur la timeline</b>.
+</p>
+<p>Les images-clés peuvent être déplacées le long de la timeline et déplacées
+entre pistes en utilisant des opérations de couper-coller semblables à celles
+utilisée pour le montage de média.  Cependant, seules les images-clés
+sélectionnées dans le menu <b>Afficher</b> seront affectées par les opérations
+d'édition.
+</p>
+<p>L'opération d'édition des images-clés la plus populaire est la réplication
+d'une courbe d'une piste à l'autre pour créer une paire stéréo.  La première
+étape est d'isoler le <img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> bouton
+d'enregistrement de la piste source à l'aide de <b>MAJ-clic</b>.  Ensuite, placez
+les points d'entrée/sortie ou mettez en surbrillance la zone des images-clés
+désirée.  Utilisez <b>Images-clés-&gt;Copier les Images-clés</b> pour copier les
+images-clés dans le presse-papiers.  Isolez le
+<img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> bouton d'enregistrement de la piste de
+destination par <b>MAJ-clic</b> et utilisez <b>Images-clés-&gt;Coller les
+images-clés</b> pour coller le contenu du presse-papiers.
+</p>
+<p>Les commandes d'édition de média sont liées aux commandes d'édition des
+images-clés en utilisant la touche <kbd>MAJ</kbd> à la place du raccourci clavier
+seul.
+</p>
+<p>Ceci introduit la partie la plus compliquée de l'édition des images-clés,
+l'images-clé par défaut.  Souvenez-vous que même si aucune image-clé n'a été
+définie, il y a quand même une image-clé par défaut qui contient un paramètre
+global pour toute la durée.  L'image-clé par défaut n'est pas dessinée car elle
+existe toujours.  Que se passe-t-il si l'image-clé par défaut contient une
+valeur intéressante que vous voulez transposer vers d'autres images-clés qui ne
+sont pas celles par défaut ? Les fonctions <b>Images-clés-&gt;Copier l'image-clé
+par défaut</b> et <b>Images-clés-&gt;Coller l'image-clé par défaut</b> permettent de
+convertir l'image-clé par défaut en une image-clé qui ne soit pas celle par
+défaut.
+</p>
+<p>Si vous avez copié une image-clé qui n'est pas celle par défaut, elle peut être
+enregistrée comme image-clé par défaut en utilisant <b>Images-clés-&gt;Coller
+l'image-clé par défaut</b>.  Après avoir utilisé cette fonction pour convertir une
+image-clé qui n'est pas celle par défaut en image-clé par défaut, vous ne
+verrez pas la valeur de l'image-clé par défaut avant que toutes les images-clés
+autres que celles par défaut aient été supprimées.
+</p>
+<p>Il y a enfin une manière pratique d'effacer les images-clés en sélectionnant
+une zone et en utilisant <b>Images-clés-&gt;Effacer les images-clés</b>.  Faites
+simplement un cliquer-glisser d'une image-clé avant l'image-clé qui la précède
+ou après l'image-clé qui la suit sur la piste.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC243" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_18.html#SEC250" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,1298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 22. Création de greffons</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 22. Création de greffons">
+<meta name="keywords" content="Manuel de Cinelerra CV: 22. Création de greffons">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_21.html#SEC306" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_23.html#SEC337" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Cr_00e9ation-de-greffons"></a>
+<a name="SEC317"></a>
+<h1 class="chapter"> 22. Création de greffons </h1>
+
+<p>L'API de création des greffons de Cinelerra date de 1997, avant que LADSPA et
+avant que VST ne deviennent populaires.  Il est resté identique à ce qu'il
+était en 1997, avec des modifications mineures pour manipuler les images-clés
+et les informations reçues en retour de l'interface graphique.
+Malheureusement, l'interface graphique ne contient pas de niveau d'abstraction
+accessible au programmeur.  Ceci permet au programmeur d'utiliser la boîte à
+outils (&quot;toolkit&quot;) qu'il désire et permet davantage de flexibilité en
+apparence mais demande plus d'efforts.
+</p>
+<p>Il y a différents types de greffons, chacun comporte une procédure
+d'implémentation commune avec des modifications spécifiques à son type
+particulier.  La manière la plus simple pour implémenter un greffon est de
+prendre le plus simple de son groupe et d'en renommer les symboles.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC318">22.1 Introduction à la méthode PULL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> le paradigme actuel de l'écriture des greffons.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC319">22.2 Fonctions communes aux greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que tous les effets doivent faire.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC323">22.3 Greffons en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets en temps réel.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC324">22.4 Greffons qui ne sont pas en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets rendus.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC325">22.5 Greffons audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets audio.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC326">22.6 Greffons vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets vidéo.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC327">22.7 Greffons de transitions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que les transitions doivent faire.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC328">22.8 Greffons dont l'interfaces utilisateur se met à jour lors de la lecture</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser les données en
+  cours de lecture pour dessiner une interface graphique utilisateur.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC332">22.10 Utiliser OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser le matériel pour accélérer les opérations.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC329">22.9 Requêtes des greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment les greffons obtiennent des informations concernant les
+  informations devant être traitées.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Introduction-_00e0-la-m_00e9thode-PULL"></a>
+<a name="SEC318"></a>
+<h2 class="section"> 22.1 Introduction à la méthode PULL </h2>
+
+<p>La manière la plus simple de concevoir des greffons est la méthode &quot;pousser&quot;
+(&quot;push&quot;).  La méthode &quot;pousser&quot; est intuitive.  Une source pousse des données
+dans le greffon, le greffon effectue des opérations mathématiques sur ces
+données et le greffon les pousse vers leur destination.  Pendant 6 ans, ceci a
+été la manière dont les greffons étaient gérés de manière interne, mais cela ne
+permettait pas de réduire le débit des données en temps réel.  Bien que les
+greffons continuent à être écrits comme s'ils poussaient les données, ce n'est
+plus de cette manière que le traitement interne est fait dorénavant.
+</p>
+<p>La dernière évolution dans la conception des greffons de Cinelerra est la
+méthode &quot;tirer&quot; (&quot;pull&quot;).  Le pipeline de rendu commence par la fin, et les
+dernières étapes dans le pipeline de rendu demandent des informations aux
+étapes qui les précèdent.  Lorsque le pipeline demande ensuite des données à
+une chaîne de greffons, chaque greffon va demander des données au greffon qui
+le précède.
+</p>
+<p>C'est moins intuitif mais plus puissant que la méthode &quot;pousser&quot;.  Les greffons
+en temps réel écrits pour utiliser la méthode &quot;tirer&quot; peuvent non seulement
+modifier le débit auquel les données sont présentées à la visionneuse mais
+aussi le sens de la lecture.  La méthode &quot;tirer&quot; permet aux greffons de prendre
+les données à un débit supérieur à celui auquel ils les envoient.
+</p>
+<p>Pour tirer toute la puissance de l'indépendance du débit, il est nécessaire,
+dans la méthode &quot;tirer&quot;, que le greffon connaisse davantage de choses
+concernant les données que ce qui est nécessaire avec la méthode &quot;pousser&quot;.
+Les greffons doivent connaître le débit du projet et à quel débit se fait leur
+demande de sortie.  Ces deux débits de données doivent être interchangés pour
+permettre la configuration correcte d'un greffon.
+</p>
+<p>Les images-clés d'un greffon sont enregistrées relativement à la fréquence
+d'images du projet.  Les requêtes de position actuelle de la lecture sont
+relatives à la fréquence des images du projet.  Il est inutile que le greffon
+demande des données à deux fois la fréquence d'images du projet car les
+images-clés ne correspondront pas aux bonnes positions des données.  Deux
+classes de données ont été créées pour répondre à ce problème.
+</p>
+<p>Les conversions de débit sont faites en termes de <b>débit de projet</b> et de
+<b>débit demandé</b>.  Le débit du projet est identique pour tous les greffons.
+Il est déterminé dans la fenêtre <b>Configuration-&gt;Format...</b>.  Le débit
+demandé est déterminé par le greffon situé plus bas dans le flux qui demande
+des données au greffon en cours.  Il est arbitraire.  Vous trouverez plus loin
+une explication exacte sur la manière d'utiliser ces débits.
+</p>
+<hr size="6">
+<a name="Fonctions-communes-aux-greffons"></a>
+<a name="SEC319"></a>
+<h2 class="section"> 22.2 Fonctions communes aux greffons </h2>
+
+<p>Tous les greffons héritent d'un dérivé de PluginClient.  Ce dérivé de
+PluginClient implémente la plupart des méthodes requises dans PluginClient,
+mais les utilisateurs doivent quand même définir des méthodes pour
+PluginClient.  les méthodes les plus couramment utilisées sont prédéfinies sous
+forme de macros pour simplifier la saisie tout en conservant le maximum de
+flexibilité.
+</p>
+<p>Les fichiers qu'ils incluent dépendent du type de greffon.  Les greffons audio
+incluent <tt>`pluginaclient.h'</tt> et les greffons vidéo incluent
+<tt>`pluginvclient.h'</tt>.  Ils héritent respectivement de <b>PluginAClient</b> et de
+<b>PluginVClient</b>.
+</p>
+<p>Cinelerra crée au moins deux instances de tous les greffons lorsqu'ils sont
+utilisés dans un film.  Une instance est réservée à l'interface utilisateur
+graphique.  L'autre instance est réservée au traitement du signal.  L'entrée
+utilisateur, à travers une séquence compliquée, est propagée depuis l'instance
+de l'interface graphique à l'instance de traitement du signal.  Si le
+traitement du signal a besoin de modifier l'interface graphique, il propage les
+données en retour vers l'instance de l'interface.  Il y a des fonctions
+utilitaires pour effectuer tout ça.
+</p>
+<p>Les greffons définissent au moins trois objets :
+</p>
+<ul>
+<li> <b>Objet traitement</b><br>
+Il contient des pointeurs vers tous les autres objets et exécute le traitement
+du signal.  Cet objet comporte un certain nombre de requêtes pour s'identifier
+lui-même et c'est l'objet qu'il faut enregistrer pour enregistrer le greffon.
+</li><li> <b>Objet interface utilisateur</b><br>
+Il est défini selon ce que désire le programmeur.  Il peut soit utiliser la
+boîte à outils de Cinelerra, soit une autre boîte à outils (&quot;toolkit&quot;).  Il
+affiche les données sur l'écran et récupère les paramètres en provenance de
+l'utilisateur.<br>
+Lorsqu'il utilise la boîte à outils de Cinelerra, le seul objet de l'interface
+utilisateur dont le programmeur doit se soucier est la fenêtre.  La fenêtre
+comporte des pointeurs vers un certain nombre d'éléments graphiques
+(&quot;widgets&quot;), quelques méthodes d'initialisation et un pointeur arrière vers
+l'objet de traitement du greffon.  Cette documentation traite de l'utilisation
+de la boîte à outils de Cinelerra.<br>
+Selon la boîte à outils utilisée pour l'interface utilisateur, un processus
+(&quot;thread&quot;) peut être créé pour faire tourner l'interface utilisateur de manière
+complètement asynchrone.  La synchronisation de l'interface utilisateur avec
+les modifications de configuration du greffon est l'un des aspects les plus
+compliqués du greffon, le processus et l'objet de l'interface utilisateur sont
+largement gérés par des macros si vous utilisez la boîte à outils de Cinelerra.
+</li><li> <b>Objet de configuration</b><br>
+Il enregistre les paramètres de l'utilisateur et a toujours besoin de fonctions
+d'interpolation, de copie et de comparaison.  Les macros pour le greffon client
+appellent automatiquement des méthodes pour interpoler les images-clés.
+</li></ul>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC320">22.2.1 L'objet de traitement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC321">22.2.2 L'objet de configuration</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC322">22.2.3 L'objet d'interface utilisateur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="L_0027objet-de-traitement"></a>
+<a name="SEC320"></a>
+<h3 class="subsection"> 22.2.1 L'objet de traitement </h3>
+
+<p>Chargez un greffon simple tel que le gain pour voir à quoi ressemble cet objet.
+L'objet de traitement doit hériter du dérivé prévu de PluginClient.  Son
+constructeur doit avoir un paramètre PluginServer.
+</p><pre class="verbatim">MyPlugin(PluginServer *server);
+</pre>
+<p>Dans l'implémentation, le greffon doit comporter une ligne d'enregistrement
+avec le nom de l'objet traitement telle que
+</p><pre class="verbatim">REGISTER_PLUGIN(MyPlugin)
+</pre>
+<p>Le constructeur doit contenir
+</p><pre class="verbatim">PLUGIN_CONSTRUCTOR_MACRO
+</pre><p>pour initialiser les variables les plus courantes.
+</p>
+<p>L'objet traitement doit avoir un destructeur comportant
+</p><pre class="verbatim">PLUGIN_DESTRUCTOR_MACRO
+</pre><p>pour supprimer les variables les plus courantes.
+</p>
+<p>Une autre fonction utile mais non nécessaire est
+</p><pre class="verbatim">int is_multichannel();
+</pre><p>Elle doit retourner 1 si une instance du greffon gère simultanément plusieurs
+pistes et 0 si une instance du greffon ne gère qu'une piste.  Si cette valeur
+est omise, elle est de 0 par défaut.
+</p>
+<p>Les greffons multicanal doivent, dans leur fonction de traitement, se référer à
+une fonction appelée <b>PluginClient::get_total_buffers()#</b>pour déterminer le
+nombre de canaux.
+</p>
+<p>Pour simplifier l'implémentation des greffons en temps réel, une macro pour les
+membres habituellement utilisés a été créée pour les en-têtes de classes.  Elle
+prend comme paramètres l'objet de configuration et le processus objet de
+l'interface utilisateur.  Les définitions de macros s'adressent principalement
+aux greffons en temps réel et ne sont pas utiles pour les greffons qui ne sont
+pas en temps réel.  Heureusement, les greffons qui ne sont pas en temps réel
+sont plus simples.
+</p><pre class="verbatim">PLUGIN_CLASS_MEMBERS(config_name, thread_name)
+</pre>
+<p>Les membres de PLUGIN_CLASS_MEMBERS couramment utilisés sont décrits
+ci-dessous.
+</p>
+<p><b>int load_configuration();</b><br>
+Charge la configuration en se basant sur les images-clés qui se trouvent à
+proximité et sur la position actuelle.  La définition de classe pour
+load_configuration doit contenir
+</p><pre class="verbatim">LOAD_CONFIGURATION_MACRO(plugin_class, config_class)
+</pre>
+<p>pour implémenter le comportement par défaut de load_configuration.  Ceci
+enregistre dans l'objet de configuration du greffon ce qui se trouve dans la
+configuration actuelle, et retourne 1 si la nouvelle configuration est
+différente de la précédente.  La valeur de retour de load_configuration est
+utilisée par une autre fonction couramment utilisée, update_gui pour déterminer
+si l'interface graphique a vraiment besoin d'être mise à jour.<br>
+L'objet de configuration du greffon est toujours appelé <b>config</b> dans
+PLUGIN_CLASS_MEMBERS.
+</p>
+<p><b>VFrame* new_picon();</b><br>
+Crée une vignette à afficher dans la fenêtre des ressources.  Utilisez
+</p><pre class="verbatim">#include &quot;picon_png.h&quot;
+NEW_PICON_MACRO(plugin_class)
+</pre><p>pour implémenter une nouvelle vignette.  De plus, l'utilisateur doit créer le
+fichier d'en-tête <tt>`picon_png.h'</tt> à partir d'une image PNG en utilisant
+<code>pngtoh</code>.  <code>pngtoh</code> est construit dans le répertoire
+<tt>`guicast/ARCH'</tt>.<br>
+L'image PNG source doit s'appeler <tt>`picon.png'</tt> et peut être de n'importe
+quel format géré par PNG.
+</p>
+<p><b>char* plugin_title();</b><br>
+Retourne une chaîne de texte identifiant le greffon dans la fenêtre des
+ressources.  Cette chaîne doit être unique.
+</p>
+<p><b>void update_gui();</b><br>
+Doit d'abord charger la configuration, teste un code de retour égal à 1 et
+redessine ensuite l'interface graphique avec les nouveaux paramètres.  Tous les
+greffons qui utilisent GuiCast ont un format semblable à
+</p><pre class="verbatim">    void MyPlugin::update_gui()
+    {
+        if(thread)
+        {
+        if(load_configuration())
+        {
+            thread-&gt;window-&gt;lock_window();
+            // update widgets here
+            thread-&gt;window-&gt;unlock_window();
+        }
+        }
+    }
+</pre><p>pour gérer les accès concurrents et les conditions dans lesquelles il n'y a pas
+d'interface graphique.
+</p>
+<p><b>int show_gui();</b><br>
+Instancie l'interface graphique et bascule le greffon en mode interface
+graphique (&quot;GUI mode&quot;).  C'est implémenté par
+</p><pre class="verbatim">SHOW_GUI_MACRO(plugin_class, thread_class)
+</pre>
+<p><b>int set_string();</b><br>
+Change le titre de la fenêtre de l'interface graphique en utilisant une
+certaine chaîne de caractères.  C'est implémenté par
+</p><pre class="verbatim">SET_STRING_MACRO(plugin_class)
+</pre>
+<p><b>void raise_window();</b><br>
+Affiche la fenêtre de l'interface graphique sur le dessus de la pile.  C'est
+implémenté par
+</p><pre class="verbatim">RAISE_WINDOW_MACRO(plugin_class)
+</pre>
+<p>Des fonctions importantes que doit définir l'objet de traitement sont les
+fonctions qui chargent et enregistrent les données de configuration depuis les
+images-clés.  Ces fonctions sont appelées par les macros, et vous n'avez donc
+pas à vous préoccuper de l'accès aux données des images-clés.
+</p><pre class="verbatim">void save_data(KeyFrame *keyframe);
+void read_data(KeyFrame *keyframe);
+</pre>
+<p>Les fonctions read_data sont utilisées dans les greffons en temps réel.  Les
+fonctions data_functions convertissent la configuration du greffon depuis le
+paramètre KeyFrame vers l'objet de configuration du greffon.  Les images-clés
+sont enregistrées sur la timeline et peuvent changer pour chaque projet.
+</p>
+<p>Utilisez un objet appelé FileXML pour effectuer la translation et certaines
+commandes spécifiques pour obtenir les données à partir du paramètre KeyFrame.
+Vous trouverez des exemples d'utilisation de KeyFrame et de FileXML dans les
+greffons existants.
+</p><pre class="verbatim">int load_defaults();
+int save_defaults();
+</pre>
+<p>Les fonctions load_defaults sont utilisées dans les greffons en temps réel et
+les greffons qui ne sont pas en temps réel.  Les fonctions load_defaults
+convertissent la configuration du greffon entre un objet BC_Hash et la
+configuration du greffon.  L'objet BC_Hash enregistre les configurations dans
+des fichiers individuels sur disque pour chacun des greffons, mais il n'isole
+pas les configurations entre les différents projets.
+</p>
+<p>La fonction qui surcharge <b>load_defaults</b> doit aussi créer l'objet BC_Hash.
+Vous pouvez consulter un greffon existant pour des exemples d'utilisation de
+BC_Hash.
+</p>
+<p>D'autres objets standards peuvent être définis dans l'objet de traitement, ils
+dépendent du type de greffon.
+</p>
+<hr size="6">
+<a name="L_0027objet-de-configuration"></a>
+<a name="SEC321"></a>
+<h3 class="subsection"> 22.2.2 L'objet de configuration </h3>
+
+<p>L'objet de configuration est critique pour les mises à jour de l'interface
+graphique, le traitement du signal, et les paramètres par défaut dans les
+greffons en temps-réel.  Remarquez qu'il n'est pas utilisé dans les greffons
+qui ne sont pas temps réel.  L'objet de configuration n'hérite de rien et n'a
+pas de dépendances.  Il est constitué simplement d'une classe contenant trois
+fonctions et les variables spécifiques aux paramètres du greffon.
+</p>
+<p>Habituellement, l'objet de configuration commence par le nom du greffon suivi
+de Config.
+</p><pre class="verbatim">    class MyPluginConfig
+    {
+    public:
+        MyPluginConfig();
+</pre>
+<p>Après le nom de la classe de configuration, nous trouvons les trois fonctions
+requises et les variables de configuration.
+</p><pre class="verbatim">        int equivalent(MyPluginConfig &amp;that);
+        void copy_from(MyPluginConfig &amp;that);
+        void interpolate(MyPluginConfig &amp;prev,
+        MyPluginConfig &amp;next,
+        int64_t prev_position,
+        int64_t next_position,
+        int64_t current_position);
+        float parameter1;
+        float parameter2;
+        int parameter3;
+    };
+</pre>
+<p>Maintenant il faut définir les trois fonctions.  <b>Equivalent</b> est appelée par
+LOAD_CONFIGURATION_MACRO pour déterminer si les paramètres de la configuration
+locale sont identiques aux paramètres de la configuration de l'argument.  Si
+equivalent retourne 0, load_configuration permet de redessiner l'interface
+graphique.  Si equivalent retourne 1, l'interface graphique n'est pas
+redessinée.<br>
+Ensuite, il y a <b>copy_from</b> qui transfère les valeurs de configuration depuis
+le paramètre vers les variables locales.  C'est de nouveau utilisé dans
+LOAD_CONFIGURATION_MACRO pour enregistrer les configurations dans des espaces
+temporaires.  Une fois que LOAD_CONFIGURATION_MACRO a répliqué la
+configuration, elle charge une seconde configuration.  Elle interpole ensuite
+les deux configurations pour obtenir la configuration actuelle.  Les fonctions
+d'interpolation réalisent l'interpolation et enregistrent les résultats dans
+les variables locales.
+</p>
+<p>Normalement, la fonction d'interpolation calcule une fraction précédente et une
+fraction suivante en utilisant les paramètres.
+</p><pre class="verbatim">    void MyPluginConfig::interpolate(MyPluginConfig &amp;prev,
+        MyPluginConfig &amp;next,
+        int64_t prev_position,
+        int64_t next_position,
+        int64_t current_position
+    {
+        double next_scale =
+        (double)(current_position - prev_position)
+        / (next_position - prev_position);
+        double prev_scale =
+        (double)(next_position - current_position) /
+        (next_position - prev_position);
+</pre>
+<p>Ensuite, les fractions sont appliquées à l'objet de configuration précédent et
+suivant pour obtenir les valeurs actuelles.
+</p><pre class="verbatim">        this-&gt;parameter1 =
+        (float)(prev.parameter1 * prev_scale
+        + next.parameter1 * next_scale);
+        this-&gt;parameter2 =
+        (float)(prev.parameter2 * prev_scale
+        + next.parameter2 * next_scale);
+        this-&gt;parameter3 =
+        (int)(prev.parameter3 * prev_scale
+        + next.parameter3 * next_scale);
+    }
+</pre>
+<p>Vous pouvez aussi copier les valeurs depuis le paramètre de configuration
+précédent si vous ne souhaitez pas d'interpolation.
+</p>
+<p>Cette utilisation est identique pour les greffons audio ou vidéo.  Lors de la
+lecture vidéo, la fonction d'interpolation est appelée à chaque image, ce qui
+permet d'obtenir une interpolation lissée.  Lors de la lecture audio, la
+fonction d'interpolation est appelée pour chaque fragment de console et une
+fois chaque fois que le point d'insertion se déplace.  C'est suffisant pour
+effectuer la mise à jour de l'interface graphique lorsqu'on sélectionne des
+régions sur la timeline, mais ce n'est pas assez précis pour un rendu
+réellement fluide de l'effet.
+</p>
+<p>Pour des rendus réellement fluides de l'audio, vous pouvez continuer à utiliser
+load_configuration pour la mise à jour de l'interface graphique.  Cependant,
+pour le traitement en temps réel, oubliez load_configuration et écrivez votre
+propre routine d'interpolation qui chargera toutes les images-clés d'un
+fragment de console et interpolera chaque échantillon.  Ceci sera vraiment très
+lent et difficile à mettre au point, pouvant conduire à des améliorations qui
+ne seront même pas audibles.
+</p>
+<p>Une manière plus simple de rendre l'interpolation plus fine est de réduire la
+taille des fragments de console à 1 échantillon.  Ceci devra être rendu et
+reproduit avec un fragment de console qui soit de nouveau de l'ordre de 2048,
+bien entendu.  Le pilote audio de GNU/Linux ne sait pas lire des fragments de
+durée réduite à 1 échantillon.
+</p>
+<hr size="6">
+<a name="L_0027objet-d_0027interface-utilisateur"></a>
+<a name="SEC322"></a>
+<h3 class="subsection"> 22.2.3 L'objet d'interface utilisateur </h3>
+
+<p>L'objet d'interface utilisateur enfin, consiste en un pointeur vers une fenêtre
+et des pointeurs vers tous les éléments graphiques de la fenêtre.  En utilisant
+la boîte à outil de Cinelerra, il consiste en un dérivé de <b>BCWindow</b> et un
+dérivé de <b>Thread</b>.  Le dérivé de Thread est déclaré dans l'en-tête du
+greffon en utilisant
+</p><pre class="verbatim">PLUGIN_THREAD_HEADER(plugin_class, thread_class, window_class)
+</pre>
+<p>Il est ensuite défini par
+</p><pre class="verbatim">PLUGIN_THREAD_OBJECT(plugin_class, thread_class, window_class)
+</pre>
+<p>Ceci, en combinaison avec la macro SHOW_GUI, effectue tout le travail
+d'instanciation de la fenêtre.  Ce système de deux classes est utilisé dans les
+greffons en temps réel mais pas dans les greffons qui ne sont pas en temps
+réel.  Les greffons qui ne sont pas en temps réel créent et détruisent leur
+interface graphique dans leur fonction <b>get_parameters</b> et il n'y a pas
+besoin de Thread.
+</p>
+<p>Maintenant, la classe de la fenêtre doit être déclarée dans l'en-tête du
+greffon.  Le plus facile pour implémenter la fenêtre est de copier un greffon
+existant et d'en renommer les symboles.  Ce qui suit est un aperçu de ce qui se
+passe.  L'en-tête du greffon doit déclarer le constructeur de la fenêtre en
+utilisant les paramètres appropriés.
+</p><pre class="verbatim">    #include &quot;guicast.h&quot;
+    class MyPluginWindow : public BC_Window
+    {
+    public:
+        MyPluginWindow(MyPluginMain *plugin, int x, int y);
+</pre>
+<p>Ceci apparaît sous la forme d'une fenêtre sur l'écran placée en x et y.
+</p>
+<p>Il a besoin de deux méthodes
+</p><pre class="verbatim">int create_objects();
+int close_event();
+</pre><p>et un pointeur arrière vers le greffon
+</p><pre class="verbatim">MyPlugin *plugin;
+</pre>
+<p>La définition du constructeur doit comporter des extents et des flags pour que
+la fenêtre soit cachée lorsqu'elle vient d'être créée.  Le membre de l'objet
+créé place les objets graphiques dans la fenêtre selon la syntaxe de GuiCast.
+Un pointeur vers chaque élément graphique que vous désirez synchroniser à un
+paramètre de configuration est enregistré dans la classe de la fenêtre.  Ils
+sont mis à jour dans la fonction <b>update_gui</b> que vous avez précédemment
+défini dans le greffon.  Les éléments graphiques sont habituellement des
+dérivés d'un élément graphique GuiCast et ils surchargent des fonctions dans
+GuiCast afin de gérer des événements.  Enfin, créez les appels aux objets
+</p><pre class="verbatim">show_window();
+flush();
+</pre><p>afin que la fenêtre soit dessinée en une seule fois.
+</p>
+<p>Le membre close_event doit être implémenté en utilisant
+</p><pre class="verbatim">WINDOW_CLOSE_EVENT(window_class)
+</pre>
+<p>Chaque élément graphique de l'interface doit détecter quand sa valeur est
+modifiée.  Dans GuiCast, la méthode <b>handle_event</b> est appelée quand une
+valeur change.  Dans <b>handle_event</b>, l'élément graphique doit appeler
+<b>plugin-&gt;send_configure_change()</b> pour propager les changements à toutes les
+copies du greffon qui traitent des données.
+</p>
+<hr size="6">
+<a name="Greffons-en-temps-r_00e9el"></a>
+<a name="SEC323"></a>
+<h2 class="section"> 22.3 Greffons en temps réel </h2>
+
+<p>Les greffons en temps réel doivent utiliser la classe PLUGIN_CLASS_MEMBERS pour
+définir le jeu de base des membres dans leurs en-têtes.  Tous les greffons en
+temps réel doivent définir un membre
+</p><pre class="verbatim">int is_realtime()
+</pre>
+<p>qui retourne 1.  Ceci entraîne l'appel d'un certain nombre de méthodes lors de
+la lecture &quot;live&quot; et permet au greffon d'être utilisable sur la timeline.
+</p>
+<p>Les greffons en temps réel doivent surcharger un membre appelé <b>process_buffer</b>
+</p>
+<p>Cette fonction prend différents paramètres selon que le greffon gère de l'audio
+ou de la vidéo.  Le mieux est d'examiner comment est réalisé un greffon
+existant pour voir comment cela est appliqué.
+</p>
+<p>La fonctionnalité principale de la fonction process_buffer est de fournir un
+tampon où placer la sortie, de définir la position de départ pour la sortie et
+de définir le débit requis en sortie.  Pour de l'audio, il y a aussi un
+paramètre qui définit le nombre d'échantillons.
+</p>
+<p>La position de départ dans le tampon de sortie est l'échantillon de rang le
+moins élevé sur la timeline si la lecture a lieu vers l'avant et l'échantillon
+de rang le plus élevé si la lecture a lieu en arrière.  Le sens de la lecture
+est déterminé par une des requêtes du greffon, décrite ci-dessous.
+</p>
+<p>Les paramètres de dimensions et de position sont tous relatifs à la fréquence
+des images et au taux d'échantillonnage passés à process_buffer.  C'est le
+débit des données requis et il peut être différent du débit du projet.
+</p>
+<p>La fonction process_realtime doit commencer par l'appel de
+<b>load_configuration</b>.  LOAD_CONFIGURATION_MACRO retourne 1 si la
+configuration a été modifiée.
+</p>
+<p>Après avoir déterminé la configuration du greffon, le média d'entrée doit être
+chargé pour le traitement.  Appelez :
+</p><pre class="verbatim">    read_frame(VFrame *buffer,
+        int channel,
+        int64_t start_position,
+        double frame_rate)
+ou
+    read_samples(double *buffer,
+        int channel,
+        int sample_rate,
+        int64_t start_position,
+        int64_t len)
+</pre>
+<p>pour demander des données d'entrée à l'objet qui vient juste avant ce greffon.
+La fonction read a besoin d'un tampon pour y enregistrer les données d'entrée.
+Il peut être créé de manière temporaire dans le greffon, le tampon de sortie
+fourni à process_buffer peut aussi être utilisé si vous n'avez pas besoin de
+tampon temporaire.
+</p>
+<p>Il a aussi besoin d'un ensemble de paramètres de position pour déterminer quand
+vous désirez lire les données.  La position de départ, le débit et la longueur
+passés à une fonction read n'ont pas besoin d'être les mêmes que les valeurs
+reçues par la fonction process_buffer.  De cette manière, le greffon peut lire
+des données à un débit différent du débit auquel il envoie les données vers la
+sortie.
+</p>
+<p>Le paramètre channel n'a de signification que pour les greffons multicanaux.
+Ils leur faut lire les données pour chaque piste dans la valeur
+get_total_buffers() et traiter toutes les pistes.  Les greffons monocanal
+doivent passer la valeur 0 pour channel.
+</p>
+<p>Des membres supplémentaires sont implémentés pour maintenir la configuration
+des greffons en temps réel.  Certains d'entres-eux sont nécessaires aussi dans
+le cas des greffons qui ne sont pas en temps réel.
+</p>
+<ul>
+<li> <b>void read_data(KeyFrame *keyframe);</b><br>
+Charge dans la configuration du greffon, des données depuis une image-clé.  Il
+y a, dans la structure d'une image-clé, une chaîne XML.  Elle est analysée plus
+facilement en créant un objet de type <b>FileXML</b>.  Voir dans un greffon
+existant comment la fonction read_data est implémentée.<br>
+read_data charge les données depuis l'objet XML et range les valeurs dans
+l'objet de configuration du greffon.  Comme les objets de configuration varient
+d'un greffon à l'autre, ces fonctions ne peuvent pas être automatisées.
+
+</li><li> <b>void save_data(KeyFrame *keyframe);</b><br>
+Enregistre les données depuis la configuration du greffon dans une image-clé.  A
+l'intérieur de l'image-clé, vous mettrez une chaîne XML qui est normalement
+créée par un objet FileXM.  Voir dans un greffon existant comment la fonction
+save_data est implémentée.<br>
+save_data enregistre les données venant de l'objet de configuration du greffon
+dans l'objet XML.
+
+</li><li> <b>int load_defaults();</b><br>
+Un greffon peut aussi obtenir ses paramètres depuis un fichier de valeurs par
+défaut.  Les routines <b>load_defaults</b> et <b>save_defaults</b> utilisent un objet
+de valeurs par défaut pour analyser les fichiers des valeurs par défaut.
+L'objet des valeurs par défaut est créé dans <b>load_defaults</b> et détruit dans
+le destructeur du greffon.  Voir dans un greffon existant comment l'objet des
+valeurs par défaut est utilisé.
+
+</li><li> <b>int save_defaults();</b><br>
+Enregistre la configuration dans l'objet des valeurs par défaut.
+</li></ul>
+
+<hr size="6">
+<a name="Greffons-qui-ne-sont-pas-en-temps-r_00e9el"></a>
+<a name="SEC324"></a>
+<h2 class="section"> 22.4 Greffons qui ne sont pas en temps réel </h2>
+
+<p>Quelques exemples de greffons qui ne sont pas en temps réel sont <b>Normaliser</b>
+pour l'audio et <b>Reframe</b> pour la vidéo.
+</p>
+<p>Comme pour les greffons en temps réel, il faut implémenter <b>load_defaults</b> et
+<b>save_defaults</b>.  Pour les greffons qui ne sont pas en temps réel, elles sont
+utilisées non seulement pour les paramètres par défaut mais aussi pour
+transférer des valeurs depuis l'interface utilisateur vers le moteur de
+traitement du signal.  Elles n'ont pas besoin d'être une classe de
+configuration pour les greffons qui ne sont pas en temps réel.
+</p>
+<p>A l'inverse des greffons en temps réel, il ne faut pas utiliser
+LOAD_CONFIGURATION_MACRO dans l'en-tête du greffon.  Il faut, à la place,
+définir les méthodes suivantes.
+</p>
+<p>Le greffon qui n'est pas en temps réel doit contenir un pointeur vers l'objet
+par défaut.
+</p><pre class="verbatim">BC_Hash *defaults;
+</pre><p>Il doit aussi comporter un pointeur vers une barre d'avancement
+MainProgressBar.
+</p><pre class="verbatim">MainProgressBar *progress;
+</pre>
+<p>Le pointeur d'avancement permet aux greffons qui ne sont pas en temps réel
+d'afficher leur avancement dans la fenêtre principale de Cinelerra.
+</p>
+<p>Le constructeur pour les greffons qui ne sont pas en temps réel ne peut pas
+utiliser PLUGIN_CONSTRUCTOR_MACRO, mais doit appeler directement
+<b>load_defaults</b>.
+</p>
+<p>Le destructeur, de la même manière, doit appeler <b>save_defaults</b> et
+<b>delete_defaults</b> directement à la place de PLUGIN_DESTRUCTOR_MACRO#.
+</p>
+<ul>
+<li> <b>VFrame* new_picon();</b><br>
+<b>char* plugin_title();</b><br>
+Leur usage est le même que dans le cas des greffons en temps réel.
+
+</li><li> <b>int is_realtime();</b><br>
+Cette fonction doit toujours retourner 0 pour indiquer que le greffon n'est pas
+un greffon en temps réel.
+
+</li><li> <b>int get_parameters();</b><br>
+Ici, l'utilisateur doit créer une interface utilisateur graphique, attendre que
+l'utilisateur clique le bouton &quot;Accepter&quot; (OK) et enregistrer les paramètres
+dans les variables du greffon.  Cette routine doit retourner 0 en cas de succès
+et 1 en cas d'échec.  De cette manière, l'utilisateur peut arrêter l'effet
+depuis l'interface graphique. <br>
+A l'inverse des greffons en temps réel, cette interface graphique n'a pas
+besoin de tourner de manière asynchrone par rapport au greffon.  Elle doit
+bloquer la fonction get_parameters jusqu'à ce que l'utilisateur clique sur
+&quot;Accepter&quot; ou &quot;Abandonner&quot;.
+
+</li><li> <b>int load_defaults();</b><br>
+Ceci doit créer un objet de valeurs par défaut et charger les paramètres depuis
+cet objet vers les variables du greffon.
+
+</li><li> <b>int save_defaults();</b><br>
+Ceci permet de sauvegarder les variables du greffon dans l'objet des valeurs
+par défaut.
+
+</li><li> <b>int start_loop();</b><br>
+Si <b>get_parameters</b> a retourné 0 en raison du succès, celle-ci est appelée
+une fois pour permettre au greffon de démarrer le traitement.  Le greffon doit
+instancier l'objet d'avancement avec une ligne telle que :<br>
+<code>progress = start_progress(&quot;MyPlugin progress...&quot;,</code><br>
+<code>PluginClien ::get_total_len());</code><br>
+L'utilisation de <b>start_progress</b> varie selon que le greffon est multicanal
+ou monocanal.  S'il est multicanal, il faudra toujours appeler
+<b>start_progress</b>.  S'il est monocanal, il vous faudra d'abord savoir si la
+barre d'avancement a déjà été lancée par une autre instance du greffon.<br>
+Si la valeur de <b>PluginClient::interactive</b> est de 1, il vous faut démarrer
+la barre d'avancement.  Si elle est de 0, la barre d'avancement a déjà été
+lancée.<br>
+PluginClient définit <b>get_total_len()</b> et <b>get_source_start()</b> pour décrire
+la plage de la timeline a traiter.  Les unités sont soit les échantillons, soit
+les images dans le débit du projet.
+
+</li><li> <b>int process_loop</b><br>
+Ceci est appelé de manière répétitive jusqu'à ce que la plage de la timeline
+soit traitée.  Elle comporte un tampon soit d'images, soit d'échantillons pour
+la sortie et une référence vers write_length pour enregistrer le nombre
+d'échantillons traités.  Si c'est un greffon audio, l'utilisateur doit appeler
+<b>get_buffer_size()</b> pour savoir combien le tampon de sortie peut contenir
+d'échantillons.<br>
+Ces greffons doivent utiliser <b>read_samples</b> ou <b>read_frame</b> pour lire
+l'entrée.  Ces fonctions sont un peu différentes selon que le greffon est de
+type temps réel ou non.<br>
+Elle prennent un tampon et une position relative par rapport au début de la
+timeline, dans le débit de la timeline.  Vous devez alors le traiter et mettre
+la sortie dans le paramètre de tampon de process_loop.  write_length doit
+contenir le nombre d'échantillons créés dans le cas de l'audio.<br>
+Enfin, process_loop doit tester <b>PluginClient::interactive</b> et mettre à jour
+la barre d'avancement si elle est à 1.<br>
+<code>progress-&gt;update(total_written);</code><br>
+retourne 1 ou 0 si la barre d'avancement a été abandonnée.  Si elle est égale à
+1, process_loop doit retourner 1 pour indiquer l'abandon.  En plus de l'abandon
+de la barre d'avancement <b>process_loop</b> retourne 1 lorsque toute la plage de
+la timeline a été traitée.
+
+</li><li> <b>int stop_loop();</b><br>
+Ceci est appelé après que process_loop ait traité son dernier tampon.<br>
+Si PluginClient::is_interactive est à 1, ceci va appeler <b>stop_progress</b> dans
+le pointeur de la barre d'avancement et supprimer le pointeur.  Ensuite, elle
+doit supprimer tous les objets qu'elle a créée pour le traitement dans
+<b>start_loop</b>.
+</li></ul>
+
+<hr size="6">
+<a name="Greffons-audio"></a>
+<a name="SEC325"></a>
+<h2 class="section"> 22.5 Greffons audio </h2>
+
+<p>Le plus simple des greffons audio est le Gain.  L'objet de traitement doit
+inclure <tt>`pluginaclient.h'</tt> et hériter de <b>PluginAClient</b>.  Les greffons
+audio en temps réel doivent définir
+</p><pre class="verbatim">    int process_buffer(int64_t size,
+        double **buffer,
+        int64_t start_position,
+        int sample_rate);
+s'ils sont multicanal ou
+    int process_buffer(int64_t size,
+        double *buffer,
+        int64_t start_position,
+        int sample_rate);
+</pre><p>en simple canal.  Ils doivent toujours retourner 0 en cas de succès et 1 en cas
+d'échec.  Dans le futur, la valeur de retour pourra provoquer un abandon du
+rendu par échec.
+</p>
+<p>Les fonctions de traitement doivent demander des échantillons d'entrée avec
+</p><pre class="verbatim">    int read_samples(double *buffer,
+        int channel,
+        int sample_rate,
+        int64_t start_position,
+        int64_t len);
+</pre><p>Elles retournent toujours 0.  L'utilisateur peut indiquer un taux
+d'échantillonnage et une positon de départ quelconque.
+</p>
+<p>Les greffons audio qui ne sont pas en temps réel doivent définir
+</p><pre class="verbatim">{int process_loop(double *buffer, int64_t &amp;write_length);}
+</pre><p>pour un seul canal ou
+</p><pre class="verbatim">{int process_loop(double **buffers, int64_t &amp;write_length);}
+</pre><p>en multicanal.  Les greffons qui ne sont pas en temps réel utilisent un jeu
+différent de fonctions read_samples pour demander des données d'entrée.  Elles
+sont fixées au taux d'échantillonnage du projet.
+</p>
+<hr size="6">
+<a name="Greffons-vid_00e9o"></a>
+<a name="SEC326"></a>
+<h2 class="section"> 22.6 Greffons vidéo </h2>
+
+<p>Le plus simple des greffons vidéo est l'effet &quot;Retourner&quot;.  L'objet de
+traitement doit inclure <tt>`pluginvclient.h'</tt> et hérite de <b>PluginVClient</b>.
+Les greffons en temps réel doivent définir
+</p><pre class="verbatim">    int process_buffer(VFrame **frame,
+        int64_t start_position,
+        double frame_rate);
+</pre><p>s'ils sont multicanaux, ou
+</p><pre class="verbatim">    int process_buffer(VFrame *frame,
+        int64_t start_position,
+        double frame_rate);
+</pre><p>si c'est pour un seul canal.
+</p>
+<p>Les greffons vidéo qui ne sont pas en temps réel doivent définir
+</p><pre class="verbatim">{int process_loop(VFrame *buffer);}
+pour un seul canal, ou
+{int process_loop(VFrame **buffers);}
+</pre><p>en multicanal.  Le nombre d'images créées dans une seule boucle de traitement
+est toujours supposé être de 1 en raison de l'absence d'un paramètre
+write_length.  Un code retour de 0 permet au rendu de se poursuivre.  Un code
+retour de 1 arrête le rendu.
+</p>
+<p>Il existe un jeu de fonctions read_frame pour demander des images d'entrée dans
+les greffons vidéo qui ne sont pas en temps réel.  Ils sont fixés à la
+fréquence d'images du projet.
+</p>
+<hr size="6">
+<a name="Greffons-de-transitions"></a>
+<a name="SEC327"></a>
+<h2 class="section"> 22.7 Greffons de transitions </h2>
+
+<p>La plus simple des transitions vidéo est le <b>volet</b> et la plus simple des
+transitions audio est le <b>fondu enchaîné</b>.  Elles utilisent un sous-ensemble
+des membres de la classe par défaut des greffons en temps réel, mais ce n'est
+cependant pas analogue à ce qui a été effectué par PLUGIN_CLASS_MEMBERS pour
+les transitions.
+</p>
+<p>L'objet de traitement pour les transitions audio hérite toujours de
+PluginAClient et il hérite toujours de PluginVClient pour les transitions
+vidéo.
+</p>
+<p>Les transitions peuvent ou non avoir une interface graphique.  Si elles en ont
+une, elles doivent aussi gérer un processus (&quot;thread&quot;) comme les greffons temps
+réel.  Ceci est effectué avec les mêmes macros PLUGIN_THREAD_OBJECT et
+PLUGIN_THREAD_HEADER que pour les greffons en temps réel.  Comme il n'y a
+qu'une seule image-clé par transition, vous n'avez pas à vous préoccuper de la
+mise à jour de l'interface utilisateur à partir de l'objet de traitement comme
+vous deviez le faire pour les greffons en temps réel.
+</p>
+<p>Si la transition possède une interface utilisateur graphique, vous pouvez
+utiliser les macros PLUGIN_CONSTRUCTOR_MACRO et PLUGIN_DESTRUCTOR_MACRO pour
+initialiser l'objet de traitement.  Vous aurez également besoin pour ces macros
+d'un objet BC_Hash et d'un objet thread.
+</p>
+<p>Comme l'interface graphique utilisateur est optionnelle, surchargez la fonction
+appelée <b>uses_gui()</b> pour indiquer si la transition possède ou non une
+interface graphique.  Elle doit retourner 1 si elle est présente et 0 dans le
+cas contraire.
+</p>
+<p>Les transitions ont besoin des fonctions <b>load_defaults</b> et <b>save_defaults</b>
+de façon à avoir une configuration utilisable la première fois qu'elles seront
+déposées sur la timeline.
+</p>
+<p>Les fonctions <b>read_data</b> et <b>save_data</b> leur succèdent après l'insertion
+pour accéder aux données qui sont spécifiques à chaque instance de la
+transition.
+</p>
+<p>La différence la plus importante entre les transitions et les effets en temps
+réel est l'ajout d'une méthode <b>is_transition</b> à l'objet de traitement.
+<b>is_transition</b> retourne 1 pour indiquer que le greffon est une transition.
+</p>
+<p>Les transitions traitent les données dans une fonction <b>process_realtime
+function</b>.
+</p><pre class="verbatim">    int process_realtime(VFrame *input,
+        VFrame *output);
+    int process_realtime(int64_t size,
+        double *input_ptr,
+        double *output_ptr);
+</pre><p>Les données pour le plan suivant sont utilisées comme paramètre d'entrée de
+process_realtime.  Le paramètre de sortie de process_realtime est constitué des
+données du plan précédent.
+</p>
+<p>Il existe des routines pour déterminer si l'on se trouve placé relativement au
+début ou à la fin de la transition.
+</p>
+<ul>
+<li>
+<b>PluginClient::get_source_position()</b> - retourne la position actuelle depuis
+le début de la transition de l'échantillon de rang le plus bas se trouvant dans
+les tampons.
+
+</li><li>
+<b>PluginClient::get_total_len()</b> - retourne la durée entière de la transition.
+Les unités sont soit les échantillons, soit les images, dans le débit demandé
+par le premier greffon.
+</li></ul>
+
+<p>Les utilisateurs doivent diviser la position source par la durée totale pour
+obtenir la fraction de la transition à laquelle se trouve la fonction
+<b>process_realtime</b>.
+</p>
+<p>Les transitions tournent dans le débit de données requis par le premier greffon
+qui se trouve sur la piste.  Il peut être différent du débit de données du
+projet.  Comme les processus en temps réels n'ont pas de paramètre de débit, il
+faut utiliser <b>get_framerate()</b> ou <b>get_samplerate</b> pour obtenir le débit
+demandé.
+</p>
+<hr size="6">
+<a name="Greffons-dont-l_0027interfaces-utilisateur-se-met-_00e0-jour-lors-de-la-lecture"></a>
+<a name="SEC328"></a>
+<h2 class="section"> 22.8 Greffons dont l'interfaces utilisateur se met à jour lors de la lecture </h2>
+
+<p>Des effets comme l'<b>Histogramme</b> ou le <b>Vidéoscope</b> ont besoin de mettre à
+jour l'interface utilisateur pour afficher des informations concernant le
+signal.  Ceci est obtenu avec les méthodes <b>send_render_gui</b> et <b>render_gui
+methods</b>.  Normalement, dans process_buffer, lorsque l'objet de traitement veut
+mettre à jour l'interface graphique, il devrait appeler <b>send_render_gui</b>.
+Il ne devrait être appelé que dans process_buffer.  send_render_gui commence une
+recherche et appelle ensuite <b>render_gui</b> dans l'instance de l'interface
+graphique du greffon.
+</p>
+<p>render_gui devrait comporter une séquence telle que
+</p><pre class="verbatim">    void MyPlugin::render_gui(void *data)
+    {
+        if(thread)
+        {
+        thread-&gt;window-&gt;lock_window();
+    // update GUI here
+        thread-&gt;window-&gt;unlock_window();
+        }
+    }
+</pre>
+<p>send_render_gui et render_gui utilisent un paramètre, un pointeur de type void
+pour transférer les informations depuis l'objet de traitement vers l'interface
+graphique.  L'utilisateur devra transtyper le pointeur en quelque chose
+d'utile.
+</p>
+<hr size="6">
+<a name="Requ_00eates-des-greffons"></a>
+<a name="SEC329"></a>
+<h2 class="section"> 22.9 Requêtes des greffons </h2>
+
+<p>Il existe un certain nombre de requêtes utiles auxquelles on peut accéder dans
+PluginClient pour le traitement d'objets.  Certaines ont une signification
+différente selon qu'on se trouve dans le mode temps-réel ou non.  Elles donnent
+toutes des informations concernant le système d'exploitation ou le projet, qui
+peuvent être utilisées pour améliorer la qualité du traitement.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC330">22.9.1 Requêtes système</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> utilitaires permettant déterminer les ressources du système.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC331">22.9.2 Requêtes de temps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> utilitaires permettant effectuer des traitements qui dépendent du temps.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Requ_00eates-syst_00e8me"></a>
+<a name="SEC330"></a>
+<h3 class="subsection"> 22.9.1 Requêtes système </h3>
+
+<ul>
+<li> <b>get_interpolation_type()</b><br>
+Retourne le type d'interpolation voulue par l'utilisateur pour toutes les
+opérations de mise à l'échelle.  C'est une macro d'overlayframe.inc.  Elle peut
+être appliquée à un quelconque appel à l'objet <b>OverlayFrame</b>.
+
+</li><li> <b>get_project_smp()</b><br>
+Donne le nombre de processeurs sur le système moins 1.  Sur un système
+uniprocesseur, il est de 0.  Sur un biprocesseur, il est de 1.  Ce nombre peut
+être utilisé pour gérer le parallélisme.
+
+</li><li> <b>get_total_buffers()</b><br>
+Donne le nombre de pistes qu'un greffon multicanal doit traiter.
+</li></ul>
+
+<hr size="6">
+<a name="Requ_00eates-de-temps"></a>
+<a name="SEC331"></a>
+<h3 class="subsection"> 22.9.2 Requêtes de temps </h3>
+
+<p>Un greffon en temps réel doit prendre en compte deux débits : le débit du
+projet et le débit demandé.  Il existe des fonctions pour obtenir les débits du
+projet et ceux demandés.  De plus, la réalisation d'effets dépendant du temps
+demande l'utilisation de certaines fonctions qui vous permettent de savoir où
+l'on se trouve dans l'exécution de l'effet.
+</p>
+<ul>
+<li> <b>get_project_framerate()</b><br>
+Donne le nombre d'images par seconde de la vidéo tel que défini par les
+paramètres du projet.
+
+</li><li> <b>get_project_samplerate()</b><br>
+Donne le nombre d'échantillons par seconde de l'audio tel que défini par les
+paramètres du projet.
+
+</li><li> <b>get_framerate()</b><br>
+Donne le nombre d'images par seconde que demande le greffon qui s'exécutera
+après celui-ci.  C'est le débit d'images demandé et il est identique au
+paramètre frame_rate de la fonction process_buffer.
+
+</li><li> <b>get_samplerate()</b><br>
+Donne le nombre d'échantillons par seconde demandé par le greffon qui suit
+celui-ci, il est identique au paramètre sample_rate pour process_buffer.
+
+</li><li> <b>get_total_len()</b><br>
+Donne le nombre d'échantillons ou d'images dans la page couverte par l'effet,
+relativement au débit demandé.
+
+</li><li> <b>get_source_start()</b><br>
+Pour les greffons en temps réel, elle donne l'échantillon ou l'image de rang le
+moins élevé dans la plage de l'effet, dans le débit de données demandé.  Pour
+les effets qui ne sont pas temps réel, c'est le début de la partie de la
+timeline à traiter.
+
+</li><li> <b>get_source_position()</b><br>
+Pour les greffons en temps réel, c'est l'échantillon de rang le moins élevé de
+la région demandée, à traiter si la lecture est en sens normal et l'échantillon
+de rang le plus élevé si la lecture a lieu en arrière.  Pour la vidéo, c'est le
+début de l'image si l'on effectue une lecture avant et la fin de l'image si
+l'on effectue une lecture arrière.  La position est relative au début de l'EDL
+et dans le débit de données demandé.<br>
+Pour les transitions, c'est toujours l'échantillon de rang le moins élevé de la
+région à traiter par rapport au début de la transition.
+
+</li><li> <b>get_direction()</b><br>
+Donne le sens de l'opération de lecture en cours.  C'est une macro définie dans
+transportque.inc.  C'est utile pour appeler les fonctions de lecture car ces
+fonctions se placent d'elles-mêmes au début ou à la fin de la région à lire en
+fonction de l'opération de lecture.
+
+</li><li> <b>local_to_edl()</b><br>
+<b>edl_to_local()</b><br>
+Celles-ci effectuent la conversion entre le débit demandé et le débit du
+projet.  Elles sont utilisées pour convertir la position des images-clés sous
+forme de nombres qui puissent être interpolés dans le débit demandé.  La
+conversion est automatiquement basée sur la fréquence des images ou sur le taux
+d'échantillonnage selon le type de greffon.
+
+</li><li> <b>get_prev_keyframe(int64_t position, int is_local)</b><br>
+<b>get_next_keyframe(int64_t position, int is_local)</b><br>
+Celles-ci donnent l'image-clé la plus proche située avant ou après la position
+indiquée.  La version de load_configuration définie par macro retrouve
+automatiquement les images-clés appropriées, mais vous pouvez aussi le faire
+vous-même.<br>
+Le paramètre de position peut être soit dans le débit du projet, soit dans le
+débit demandé.  Utilisez la valeur 1 pour set_local si c'est le débit demandé
+et 0 si c'est le débit du projet.<br>
+Pour chacune des images-clés, une autre valeur de la position indique que la
+position de l'image-clé est relative au début de la timeline et possède le
+débit du projet.<br>
+La seule manière d'obtenir une interpolation douce entre les images-clés est de
+convertir les objets se trouvant aux positions des images-clés vers le débit
+demandé.
+</li></ul>
+
+<hr size="6">
+<a name="Utiliser-OpenGL"></a>
+<a name="SEC332"></a>
+<h2 class="section"> 22.10 Utiliser OpenGL </h2>
+
+<p>Les greffons vidéo en temps réel gèrent l'utilisation d'OpenGL.  L'utilisation
+d'OpenGL pour réaliser les greffons peut accélérer de manière importante la
+lecture car la majeure partie du travail est effectuée par le matériel.
+Malheureusement, chaque routine OpenGL a besoin d'une contrepartie logicielle
+pour effectuer le rendu, ce qui double le volume de logiciel à maintenir.
+Heureusement, l'existence d'une routine OpenGL signifie que la version
+logicielle n'aura pas besoin d'être aussi optimisée qu'elle l'était lorsque le
+logiciel était le seul moyen utilisable.
+</p>
+<p>Comme toujours, la meilleure manière de concevoir son premier greffon OpenGL
+est de copier un greffon existant et de le modifier.  Le greffon de
+<b>Luminosité</b> est un greffon OpenGL simple à copier.  Il y a 3 points
+principaux pour le rendu OpenGL et un point pour optimiser le rendu OpenGL.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC333">22.10.1 Obtenir les données OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> obtenir les données vidéo sous une forme utilisable par OpenGL
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC334">22.10.2 Dessiner en utilisant OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> la méthode pour dessiner de la vidéo avec OpenGL
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC335">22.10.3 Utiliser les shaders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> routines pour simplifier l'utilisation des shader
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC336">22.10.4 Agrégation de greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> 	combiner des routines OpenGL de différents greffons en une seule.
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Obtenir-les-donn_00e9es-OpenGL"></a>
+<a name="SEC333"></a>
+<h3 class="subsection"> 22.10.1 Obtenir les données OpenGL </h3>
+
+<p>Le premier problème est de faire en sorte que des greffons utilisables avec
+OpenGL puissent interagir avec des greffons entièrement logiciels.  Pour
+résoudre cela, toutes les informations requises pour la lecture OpenGL se
+trouvent enregistrées dans l'objet VFrame qui est passé à <b>process_buffer</b>.
+Pour gérer la 3D, le VFrame comporte, en plus des lignes d'origine du VFrame,
+un PBuffer et une texture.
+</p>
+<p>En mode OpenGL, le VFrame possède 3 états qui correspondent à l'emplacement de
+ses données vidéo.  L'état opengl est récupéré en appelant
+<b>get_opengl_state</b>, il est défini en appelant <b>set_opengl_state</b>.  Les
+états sont :
+</p>
+<ul>
+<li> <b>VFrame::RAM</b><br>
+Ceci signifie que les données vidéo sont enregistrées dans les pointeurs de
+lignes habituels.  Elles doivent être chargées dans une texture avant d'être
+dessinées en utilisant les routines OpenGL.
+
+</li><li> <b>VFram ::TEXTURE</b><br>
+Les données vidéo sont enregistrées dans la mémoire de texture.  Elles sont
+prêtes à être dessinées en utilisant les routines OpenGL.
+
+</li><li> <b>VFram ::SCREEN</b><br>
+Les données vidéo sont enregistrées dans un tampon vidéo de la carte graphique.
+Pour les greffons, le tampon vidéo est toujours un PBuffer.  L'image sur le
+tampon vidéo ne peut pas être à nouveau répliquée à moins qu'elle ne soit relue
+dans la texture et que l'état opengl ne soit réinitialisé à TEXTURE.  Le tampon
+vidéo est limité à une profondeur de 8 bits par canal.  Si un effet OpenGL est
+utilisé dans un projet en virgule flottante, il ne conservera que 8 bits.
+</li></ul>
+
+<p>Dans la routine <b>process_buffer</b> du greffon, il y a normalement un appel à
+<b>read_frame</b> pour obtenir des données depuis le greffon précédent dans la
+chaîne.  <b>read_frame</b> prend un nouveau paramètre appelé <b>use_opengl</b>.
+</p>
+<p>Le greffon passe la valeur 1 à <b>use_opengl</b> s'il a l'intention de gérer les
+données en utilisant OpenGL.  Il passe la valeur 0 à <b>use_opengl</b> s'il ne
+gère les données que par logiciel.  La valeur de <b>use_opengl</b> est passée à la
+chaîne afin de s'assurer qu'un greffon qui n'utilise que le logiciel n'obtienne
+les données que dans les pointeurs de lignes.  Si <b>use_opengl</b> est à 0,
+l'état opengl dans VFrame est RAM.
+</p>
+<p>Le greffon ne doit pas seulement savoir s'il est uniquement logiciel, mais
+aussi si sa sortie ne doit être que logicielle.  Appelez <b>get_use_opengl</b>
+pour déterminer si la sortie peut être gérée par OpenGL.  Si <b>get_use_opengl</b>
+retourne 0, le greffon doit passer 0 pour <b>use_opengl</b> dans <b>read_frame</b> et
+effectuer son traitement par logiciel.  Si <b>get_use_opengl</b> est à 1, le
+greffon doit décider, en fonction de son implémentation, s'il doit utiliser
+OpenGL.
+</p>
+<p>Le principal problème avec OpenGL est que tous les appels gl... doivent être
+lancés depuis le même processus (&quot;thread&quot;).  Afin de s'y adapter, l'interface
+possède les routines nécessaires pour faire tourner OpenGL dans un processus
+commun.
+</p>
+<p><b>run_opengl</b> passe le contrôle au processus commun d'OpenGL.  Ceci est
+normalement appelé par le greffon dans <b>process_buffer</b> après qu'il ait
+appelé <b>read_frame</b> et seulement si <b>get_use_opengl</b> est à 1.
+</p>
+<p>Par une série d'indirections, <b>run_opengl</b> transfère le contrôle à une
+fonction virtuelle appelée <b>handle_opengl</b>.  <b>handle_opengl</b> doit être
+surchargée par une fonction qui exécute toute les routines OpenGL.  Le contenu
+de <b>handle_opengl</b> soit être compris dans <b>#ifdef HAVE_GL</b> ... <b>#endif</b>
+afin de lui permettre d'être compilé sur des systèmes n'ayant pas de support
+graphique, comme des noeuds de rendu.  La valeur de retour de <b>handle_opengl</b>
+est passée en retour depuis <b>run_opengl</b>.
+</p>
+<p><b>read_frame</b> ne peut pas être appelé depuis <b>handle_opengl</b>.  Ceci créerait
+un verrouillage récursif parce qu'il entraînerait l'appel de <b>run_opengl</b> par
+d'autres objets.
+</p>
+<p>Une fois dans <b>handle_opengl</b>, le greffon a le plein usage de toutes les
+fonctionnalités d'OpenGL.  VFrame fournit certaines fonctions pour automatiser
+les séquences communes d'OpenGL.
+</p>
+<p>Le paramètre de VFrame à <b>process_buffer</b> est toujours disponible au travers
+de la fonction <b>get_output(int layer)</b>.  Si le greffon est multicanal, le
+paramètre de calque récupère un calque spécifique des tampons de sortie.  Le
+PBuffer du tampon de sortie est l'endroit où doit aller la sortie OpenGL si un
+traitement quelconque est effectué.
+</p>
+<hr size="6">
+<a name="Dessiner-en-utilisant-OpenGL"></a>
+<a name="SEC334"></a>
+<h3 class="subsection"> 22.10.2 Dessiner en utilisant OpenGL </h3>
+
+<p>La séquence de commandes pour dessiner sur le PBuffer de sortie commence par
+mettre la vidéo dans une zone mémoire qui peut être rappelée pour dessiner
+:
+</p><pre class="verbatim">get_output()-&gt;to_texture();
+get_output()-&gt;enable_opengl();
+</pre>
+<ul>
+<li> <b>to_texture</b> transfère les données OpenGL depuis l'endroit où elles se
+trouvent vers la mémoire de la texture de sortie et configure l'état de la
+sortie à TEXTURE.
+</li><li> <b>enable_opengl</b> rend le contexte OpenGL relatif au PBuffer de sortie.
+</li></ul>
+
+<p>L'étape suivante est de dessiner la texture avec certains traitement sur le
+PBuffer.  La séquence de commandes normale pour dessiner une texture est :
+</p><pre class="verbatim">get_output()-&gt;init_screen();
+get_output()-&gt;bind_texture(0);
+get_output()-&gt;draw_texture();
+</pre>
+<ul>
+<li> <b>VFrame::init_screen</b> définit des valeurs connues pour le &quot;frustrum&quot; et
+les paramètres d'OpenGL.
+</li><li> <b>VFrame::bind_texture(int texture_unit)</b> lie la texture à l'unité de
+texture indiquée et l'active.
+</li><li> <b>VFrame::draw_texture()</b> appelle les fonctions de vertex pour dessiner
+la texture normalisée à la taille du PBuffer.  Faites-en une copie si vous
+désirez des vertex (vertices) personnalisés.
+</li></ul>
+
+<p>La dernière étape de la routine handle_opengl, après que les textures aient été
+dessinées sur le PBuffer, est de positionner l'état de la sortie d'opengl à
+SCREEN par un appel à <b>VFrame::set_opengl_state</b>.  Le greffon ne doit pas
+faire de relecture du tampon vidéo vers une texture ou des pointeurs de ligne
+s'il ne fait pas de traitement supplémentaire.  Les greffons ne doivent laisser
+que la sortie dans la texture ou la mémoire si son emplacement résulte d'un
+traitement normal.  Il doivent positionner l'état d'opengl à RAM ou TEXTURE
+s'ils le font.
+</p>
+<p><b>Les modèles colorimétriques en OpenGL :</b><br>
+Le modèle colorimétrique présenté aux routines OpenGL est toujours en virgule
+flottante car c'est ce qu'utilise OpenGL, mais ce peut être YUV ou RVB selon
+les paramètres du projet.  Si c'est YUV, il est décalé d'exactement 0,5 comme
+avec les traitements logiciels.  Passer des modèles colorimétrique YUV aux
+greffons a été rendu nécessaire pour des raisons de vitesse.  L'autre
+possibilité était de convertir YUV en RVB lors de la première étape nécessaire
+à OpenGL.  Chaque effet et étape de rendu aurait alors eu besoin d'une routine
+de conversion YUV vers RVB.  Avec le choix d'YUV, seule l'étape de composition
+finale doit comporter une routine de conversion YUV vers RGB.
+</p>
+<hr size="6">
+<a name="Utiliser-les-shaders"></a>
+<a name="SEC335"></a>
+<h3 class="subsection"> 22.10.3 Utiliser les shaders </h3>
+
+<p>Il n'y a que très peu d'effets qui puisse faire quelque chose d'utile en
+dessinant directement des textures dans le PBuffer.  Normalement, ils
+définissent un <b>shader</b>.  Le shader est un programme C qui tourne sur la
+carte graphique.  Comme la carte graphique est optimisée pour les graphiques,
+cela lui permet d'être beaucoup plus rapide que s'il tournait sur le
+processeur.
+</p>
+<p>Les shaders sont écrits dans le langage de Shading OpenGL.  Le code source du
+shader est contenu dans une chaîne.  La séquence normale pour utiliser un
+shader se trouve après un appel à <b>enable_opengl</b>.
+</p>
+<pre class="verbatim">char *shader_source = &quot;...&quot;;
+unsigned char shader_id = VFrame::make_shader(0, shader_source, 0);
+glUseProgram(shader_id);
+// Set uniform variables using glUniform commands
+</pre>
+<p>Les étapes de compilation et d'édition de liens pour les shaders sont
+encapsulées dans la commande VFrame::make_shader.  Elle retourne un identifiant
+de shader_id qui peut être passé aux fonctions OpenGL.  Le premier et le
+dernier paramètre doivent toujours être 0.  Un nombre arbitraire de chaînes
+sources peut être placé entre les 0.  Les chaînes sources sont concaténées par
+<b>make_shader</b> en un gros source de shader.  S'il y a plusieurs fonctions
+<b>main</b>, les fonctions main sont renommées et exécutées dans l'ordre.
+</p>
+<p>Il existe de nombreuses macros utiles pour les shaders dans
+<tt>`playback3d.h'</tt>.  Jusqu'à présent, tous les shaders ont été des &quot;fragment
+shaders&quot;.  Après que le shader ait été initialisé, il dessine la texture en
+partant de <b>init_screen</b>.  Le programme shader doit être désactivé par un
+autre appel à <b>glUseProgram(0)</b> avec 0 comme paramètre.
+</p>
+<p>L'identifiant du shader et le code source sont maintenus en mémoire tant que
+Cinelerra tourne.  Les appels ultérieurs à <b>make_shader</b> avec le même code
+source s'exécuteront beaucoup plus vite.
+</p>
+<hr size="6">
+<a name="Agr_00e9gation-de-greffons"></a>
+<a name="SEC336"></a>
+<h3 class="subsection"> 22.10.4 Agrégation de greffons </h3>
+
+<p>On peut obtenir d'autres améliorations de la vitesse en combinant les routines
+OpenGL de deux greffons en une seule fonction handle_opengl.  Ceci est réalisé
+lorsque <b>Images vers champs</b> et <b>RVB vers 601</b> sont attachés dans cet
+ordre.  Les agrégations de plus de deux greffons sont possibles mais très
+difficiles à faire fonctionner.  L'agrégation est utile avec OpenGL parce que
+chaque greffon doit copier la vidéo depuis une texture vers un PBuffer.  Il n'y
+a pas d'opération de copie par logiciel.
+</p>
+<p>Dans l'agrégation, un greffon traite tour depuis l'autre greffon et l'autre
+greffon &quot;fall through&quot;.  Les greffons fall through doivent copier leurs
+paramètres vers le tampon de sortie de manière à pouvoir être détectés par le
+greffon qui effectue le traitement.
+</p>
+<p>Le VFrame utilisé comme tampon de sortie comporte une table de paramètres
+permettant de passer les paramètres entre les greffons et il est accédé par
+<b>get_output()-&gt;get_params()</b>.  Les paramètres sont définis et récupérés dans
+la table par des appels à <b>update</b> et <b>get</b> exactement comme pour les
+valeurs par défaut.
+</p>
+<p>Le greffon fall through doit déterminer si le greffon de traitement est attaché
+par des appels à <b>next_effect_is</b> et <b>prev_effect_is</b>.  Ils prennent le nom
+du greffon de traitement comme paramètre de chaîne de caractères et retournent
+1 si le greffon suivant ou précédent est le greffon de traitement.  Si l'un
+d'entre-eux retourne 1, le greffon fall through doit quand même appeler
+<b>read_frame</b> pour propager les données mais rend la main ensuite.
+</p>
+<p>Le greffon de traitement doit appeler <b>next_effect_is</b> et <b>prev_effect_is</b>
+pour déterminer s'il est agrégé à un greffon fall through.  Si c'est le cas, il
+doit effectuer les opérations du greffon fall through dans sa routine OpenGL.
+Les paramètres pour le greffon fall through devraient être disponibles par
+<b>get_output()-&gt;get_params()</b> si le greffon fall through les a positionnés.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC317" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_23.html#SEC337" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Manuel de Cinelerra CV: 4. Attributs du projet</title>
+
+<meta name="description" content="Manuel de Cinelerra CV: 4. Attributs du projet">
+<meta name="keywords" content="Manuel de Cinelerra CV: 4. Attributs du projet">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="fr" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_3.html#SEC26" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_5.html#SEC63" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Attributs-du-projet"></a>
+<a name="SEC58"></a>
+<h1 class="chapter"> 4. Attributs du projet </h1>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#SEC59">4.1 Fenêtre de définition du format</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC60">4.2 Présélections</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC61">4.3 Attributs audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC62">4.4 Attributs vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+</td></tr>
+</table>
+
+<hr size="6">
+<a name="Fen_00eatre-de-d_00e9finition-du-format"></a>
+<a name="SEC59"></a>
+<h2 class="section"> 4.1 Fenêtre de définition du format </h2>
+
+<p>Lorsque vous lisez des fichiers de média dans Cinelerra, ceux-ci comportent un
+certain nombre de pistes, une certaine taille d'image, un certain taux
+d'échantillonnage, et ainsi de suite.  Indépendamment des propriétés du fichier
+de média, il est toujours joué en prenant en compte les attributs du projet.
+Ainsi, si un fichier audio possède un taux d'échantillonnage différent que
+celui des attributs du projet, il sera rééchantillonné.  De façon similaire, si
+la taille de l'image d'un fichier vidéo est différente de celle des attributs
+du projet, elle sera composée sur un fond noir, soit recadrée, soit entourée de
+noir.
+</p>
+<p>Les attributs du projet sont définis dans <b>Configuration-&gt;Format...</b> et, dans
+une moindre mesure, dans <b>Fichier-&gt;Nouveau projet</b>.  Lorsque vous définissez
+les attributs du projet dans <b>Fichier-&gt;Nouveau projet</b>, une nouvelle timeline
+vide est créée.  Chaque timeline créée à partir de ce moment utilisera des
+paramètres identiques.  Lorsque vous définissez les paramètres dans
+<b>Configuration-&gt;Format...</b>, les médias sur la timeline sont inchangés.
+Chaque timeline créée à partir de ce moment le sera en utilisant les mêmes
+paramètres.
+</p>
+<p align="center"> <img src=".././manual_images_intl/format.png" alt="manual_images_intl/format">
+</p><p align="center"> <b>Fenêtre de définition du format</b>
+</p>
+<p>En plus des paramètres traditionnels tels que le taux d'échantillonnage, la
+fréquence des images, la taille des images, Cinelerra utilise des paramètres
+inhabituels tels que <b>position des canaux, modèle colorimétrique et rapport
+d'aspect.</b>
+</p>
+<hr size="6">
+<a name="Pr_00e9s_00e9lections"></a>
+<a name="SEC60"></a>
+<h2 class="section"> 4.2 Présélections </h2>
+
+<p>Choisissez une option depuis ce menu pour que tous les paramètres du projet
+soient positionnés selon l'une des normes connues.
+</p>
+<hr size="6">
+<a name="Attributs-audio"></a>
+<a name="SEC61"></a>
+<h2 class="section"> 4.3 Attributs audio </h2>
+
+<ul>
+<li> <b>Pistes</b><br>
+Permet de définir le nombre de pistes audio que doit avoir le nouveau projet.
+Des pistes peuvent être ajoutées ou supprimées par la suite, mais cette option
+est présente ici par commodité.
+
+</li><li> <b>Canaux</b><br>
+Définit le nombre de canaux que devra avoir le nouveau projet.  Le nombre de
+canaux audio n'est pas forcément le même que le nombre de pistes.
+
+</li><li> <b>Taux d'échantillonnage</b><br>
+Définit le taux d'échantillonnage de l'audio.  Le taux d'échantillonnage du
+projet n'est pas forcément le même que celui du média que vous chargez.  Le
+média est rééchantillonné afin que son taux d'échantillonnage corresponde à
+celui du projet.
+
+</li><li> <b>Position des canaux</b><br>
+Les canaux audio actuellement actifs et leurs positions dans les boîtes de
+l'interface utilisateur son affichés à l'aide de l'élément graphique de
+position.
+
+<p align="center"> <img src=".././manual_images_intl/channelpositions.png" alt="manual_images_intl/channelpositions">
+</p>
+<p>Les canaux sont numérotés.  Lorsque le rendu est effectué, la sortie du canal 1
+est rendue vers la première piste audio du fichier ou vers le premier canal de
+la carte son.  Les canaux suivants sont rendus vers leurs pistes de sortie
+numérotées consécutivement.
+</p>
+<p>Les positions des canaux audio correspondent à l'emplacement où est situé
+l'élément graphique de chaque sortie audio.  Plus la position de réglage est
+proche de l'une des sorties audio, plus l'intensité sonore dans les
+haut-parleurs est élevée.  Cliquez sur l'icône du haut-parleur et glissez-la
+pour modifier l'emplacement du canal audio.
+</p>
+<p>Les hauts-parleurs peuvent avoir une orientation quelconque.  Une disposition
+différente des hauts-parleurs est enregistrée pour chaque nombre de canaux car
+on n'utilise en général pas la même disposition des hauts-parleurs quelque soit
+le nombre des canaux.
+</p>
+<p>La position des canaux est le seul paramètre qui n'affecte pas nécessairement
+la sortie.  Cliquez sur l'icône du haut-parleur et glissez-la afin de modifier
+la position d'un des canaux.  C'est une simple commodité, afin que lorsque plus
+de deux canaux sont utilisés, la commande de panoramique sur la timeline puisse
+les distinguer l'un de l'autre.  Cela n'a rien à voir avec la disposition
+réelle des canaux.
+</p>
+<p>Différents canaux peuvent être disposés très proche l'un de l'autre de façon à
+ce qu'ils aient la même sortie.
+</p></li></ul>
+
+<hr size="6">
+<a name="Attributs-vid_00e9o"></a>
+<a name="SEC62"></a>
+<h2 class="section"> 4.4 Attributs vidéo </h2>
+
+<ul>
+<li> <b>Pistes</b><br>
+Définit le nombre de pistes vidéo que le nouveau projet se voit affecter.  Des
+pistes peuvent être ajoutées ou supprimées par la suite, mais ces options sont
+fournies ici par commodité.
+
+</li><li> <b>Fréquence des images</b><br>
+Définit la fréquence des images de la vidéo.  La fréquence des images du projet
+n'a pas besoin d'être identique à celle du média que vous chargez.  La
+fréquence des images du média sera modifiée pour s'adapter à la fréquence des
+images du projet.
+
+</li><li> <b>Taille de l'aire de travail</b><br>
+Définit la taille de la sortie vidéo.  De plus, chaque piste a aussi sa propre
+taille d'image.  Initialement, le dialogue <b>Nouveau projet</b> crée des pistes
+vidéo dont les dimensions correspondent à celles de la sortie vidéo.  Les
+dimensions des pistes vidéo pourront être modifiées ultérieurement sans
+modifier la sortie vidéo.
+
+</li><li> <b>Rapport d'aspect</b><br>
+Définit le rapport d'aspect.  Le rapport d'aspect est appliqué à la sortie
+vidéo.  Le rapport d'aspect peut être différent du rapport résultat de la
+formule suivante : h / v (nombre de pixels horizontaux divisé par le nombre de
+pixels verticaux).  Si le rapport d'aspect diffère de la formule indiquée
+ci-dessus, la sortie s'effectuera avec des pixels non carrés.
+
+</li><li> <b>Rapport d'aspect automatique</b><br>
+Si cette case est cochée, le dialogue <b>Nouveau projet</b> recalculera toujours
+le <b>Rapport d'aspect</b> en fonction de la taille de l'<b>aire de travail</b>.
+Ceci permet de s'assurer que les pixels sont toujours carrés.
+
+</li><li> <b>Modèle colorimétrique</b><br>
+Le projet sera enregistré dans le modèle colorimétrique intermédiaire choisi
+parmi la liste déroulante.<br>
+Le modèle colorimétrique est très important pour la lecture vidéo car la vidéo
+a le désavantage d'être très lente.  Bien que ce ne soit pas perceptible,
+l'audio intermédiaire comporte beaucoup plus d'informations que l'audio sur le
+disque et que l'audio lorsqu'elle est lue.  L'audio, parce qu'elle est rapide,
+utilise toujours la bande passante intermédiaire la plus élevée.<br>
+La vidéo intermédiaire doit utiliser le moins de données possible pour la
+qualité requise parce qu'elle est lente, mais la vidéo intermédiaire utilise
+quand même un modèle colorimétrique de plus grande bande passante que la vidéo
+enregistrée et que celle qui est reproduite.  Ceci permet d'effectuer davantage
+de traitement avec moins de destruction des données d'origine.<br>
+La vidéo est enregistrée sur le disque dans un modèle colorimétrique,
+généralement un dérivé de YUV.  Lors de la lecutre , Cinelerra la décompresse
+depuis son format de fichier directement dans le format du périphérique de
+sortie.  Si des effets doivent être traités, Cinelerra décompresse d'abord la
+vidéo dans un modèle colorimétrique intermédiaire puis converti ensuite le
+résultat vers le format du périphérique de sortie.  Le choix du modèle
+colorimétrique intermédiaire détermine la rapidité et la précision des effets.
+<br>
+Les modèles colorimétriques de Cinelerra sont décrits en utilisant un certain
+ordre d'encapsulage (&quot;packing&quot;) des composantes et un certain nombre de
+bits pour chacune des composantes.  L'ordre d'encapsulage est affiché à gauche
+et le nombre de bits alloués est affiché à droite.
+<a name="IDX69"></a>
+<ul>
+<li> <b>RVB-888</b><br>
+Ce format alloue 8 bits pour le rouge, le vert et le bleu, sans canal alpha.
+Il est normalement utilisé pour des médias non compressés et de faible plage
+dynamique.
+<a name="IDX70"></a>
+</li><li> <b>RVBA-8888</b><br>
+Ce format ajoute un canal alpha au modèle colorimétrique 8 bit RVB.  Il est
+utilisé pour superposer plusieurs pistes.
+<a name="IDX71"></a>
+</li><li> <b>YUV-888</b><br>
+Ce format alloue 8 bits pour Y, U, et V.  Il est utilisé pour les opérations à
+faible dynamique dans lesquelles le média est compressé dans l'espace de
+couleurs YUV.  La plupart des médias compressés sont en YUV ce qui leur permet
+d'être traité rapidement avec le moins de dégradation des couleurs possible.
+<a name="IDX72"></a>
+</li><li> <b>YUVA-8888</b><br>
+Ce format ajoute au modèle colorimétrique 8 bit YUV un canal alpha pour la
+transparence.
+<a name="IDX73"></a>
+</li><li> <b>RVB-Flottant</b><br>
+Ce format alloue 32 bits en virgule flottante pour les canaux R, V, et B, sans
+canal alpha.  Il est utilisé pour des traitements avec une dynamique élevée
+sans transparence.
+<a name="IDX74"></a>
+</li><li> <b>RGBA-Flottant</b><br>
+Ce format ajoute un canal alpha sur 32 bits en virgule flottante au modèle
+RVB-Flottant.  Il est utilisé pour du traitement avec une dynamique élevée et
+de la transparence.
+</li></ul>
+<p><b>De manière à utiliser des effets qui nécessitent un canal alpha, un modèle
+colorimétrique avec canal alpha doit être sélectionné</b>.  Ce sont RVBA8888,
+YUVA8888, et RVBA Flottant.  Les modèles colorimétriques à 4 canaux sont
+plus lents que les modèles à 3 canaux, le plus lent étant RVBA
+Flottant.  Certains effets tels que le fondu savent se passer d'un canal alpha
+alors que d'autres comme la clé chromatique (chromakey), ont besoin d'un canal
+alpha dans tous les cas.  C'est donc une bonne idée que d'essayer l'effet sans
+canal alpha afin de voir s'il fonctionne avant de choisir un canal alpha et de
+ralentir tout le processus.<br>
+Lors de l'utilisation de métrage compressé, les modèles YUV sont généralement
+plus rapides que les modèles RVB.  Il détruisent moins de couleurs que les
+modèles colorimétriques RVB.  Si un métrage enregistré en JPEG ou MPEG est
+traité de nombreuses fois en RVB, les couleurs vont se ternir alors que ce ne
+sera pas les cas s'il est traité en YUV.<br>
+Des années de travail avec du métrage en haute dynamique ont montrées que le
+modèle RVB flottant était le meilleur format pour la dynamique élevée.  Les
+formats entiers sur 16 bit étaient utilisés dans le passé et engendraient trop
+de perte de qualité tout en étant trop lents au regard du niveau
+d'amélioration.<br>
+Le RVB flottant ne détruit pas d'informations lorsqu'il est utilisé avec un
+métrage source YUV et permet aussi une luminosité supérieure à 100%.  Soyez
+conscient que certains effets, tels que l'histogramme, tronquent encore les
+valeurs supérieures à 100% en virgule flottante.
+</p></li></ul>
+
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC58" title="D&eacute;but de ce chapitre ou chapitre pr&eacute;c&eacute;dent"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_5.html#SEC63" title="Chapitre suivant"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr.html#SEC_Top" title="Couverture (top) du document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_toc.html#SEC_Contents" title="Table des mati&egrave;res">Table des mati&egrave;res</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_fr_abt.html#SEC_About" title="&agrave; propos (page d'aide)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

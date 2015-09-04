@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Build from checkout 2nd of June, 2003</title>
+</head>
+
+<body>
+<h1>Build from CVS 02/06, 2003</h1>
+
+<h2>Building...</h2>
+
+<p>
+ Build system: Laptop with 500MHz AMD K6-2 CPU and 128MB RAM.<br>
+
+ No mmx or 3DNOW support enabled (default)<br>
+
+ Default <code>./configure</code>; no custom options.<br>
+
+ Build time: 47 minutes.
+<p>
+
+<h2>Running...</h2>
+
+<p>
+ Switching video driver to and from ieee1394 does not
+crash it anymore.  But exporting DV to a camcorder from
+the timeline is glitchy, to put it mildly:
+</p>
+
+<p>Playback to ieee1394 has occational dropouts and jitter,
+and the picture and sound disappears periodically.</p>
+
+<p>Starting playback with ieee1394 as video device
+ without the video1394 driver loaded crashes Cinelerra.
+</p>
+
+<p>Sustained DV playback framerate (X11-XV) is in the
+5-7 fps range.  Sound is approx. 1/4 sec ahead of video.</p>
+
+
+<hr>
+<address>Herman Robak, herman at skolelinux.no</address>
+<!-- hhmts start --> Last modified: Wed Jun 25 00:12:50 CEST 2003 <!-- hhmts end -->
+</body> </html>
