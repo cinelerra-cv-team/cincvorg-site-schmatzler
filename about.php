@@ -29,6 +29,7 @@ include "newsidemenu.php";
 <h2>About Cinelerra-CV</h2>
 
 <p><b>CV</b> stands for <b>C</b>ommunity <b>V</b>ersion. This website was originally meant to be a community for Cinelerra-HV, where users could come together to get help or work on improving the original software.</p>
+<p>We applied bug fixes, compiler compliance fixes, and enhancements for the HV code to our <a href="http://git.cinelerra-cv.org/gitweb">git repository</a>.
 <p>As time passed by, we've implemented features on our own that are not yet present in the original version.</p>
 <p>Cinelerra-CV primarily focusses on stability of the software. Rather than implementing the latest cutting-edge technology, new features of the software are tested for a while.</p>
 <p>Patches from the community have to be a approved by a core developer.</p>
