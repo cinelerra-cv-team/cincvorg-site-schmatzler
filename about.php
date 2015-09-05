@@ -23,7 +23,7 @@ include "newsidemenu.php";
 <p>Cinelerra was originally developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php">Heroine Virtual Ltd.</a> This is what the HV stands for.</p>
 <p>Unlike most of the free Open Source projects, the development of Cinelerra-HV wasn't open to distributed collaboration and there was no support for the software.</p>
 <p>Every few months a release was made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a> and occasionally, Adam Williams stopped by at our mailing list.</p>
-<p>This slightly changed around March 2014 when we overlooked the renewal of <a href="cinelerra.org">cinelerra.org</a>. The domain was then taken over by Michael Collins, who started working on his own version of Cinelerra. Unlike us, cinelerra.org is following commercial interests. Little to no effort has been made to contact our community in a friendly way.</p>
+<p>This slightly changed around March 2014 when we overlooked the renewal of <a href="http.//cinelerra.org">cinelerra.org</a>. The domain was then taken over by Michael Collins, who started working on his own version of Cinelerra. Unlike us, cinelerra.org is following commercial interests. Little to no effort has been made to contact our community in a friendly way.</p>
 <br />
 
 <h2>About Cinelerra-CV</h2>
