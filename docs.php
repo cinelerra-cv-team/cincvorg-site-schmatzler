@@ -82,23 +82,23 @@ Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">ass
   </li>
   <li><a href="http://www.calcmaster.net/cinelerra/forgotten-guide/">Cinelerra - The forgotten guide </a>, a tutorial for both CV and HV versions by Joseph Miller
   </li>
-     <li><a href="http://kutxa.homeunix.org/cinelerra">Edición de video bajo GNU/Linux (Cinelerra)</a>, in Spanish, by Gustavo Iñiguez Goya
+     <li><a href="https://web.archive.org/web/20141103065933/http://kutxa.homeunix.org/cinelerra/">Edición de video bajo GNU/Linux (Cinelerra)</a>, in Spanish, by Gustavo Iñiguez Goya
   </li>
   <li><a href="http://www.funix.org/fr/linux/cinelerra.htm">Guide d'utilisation
 de Cinelerra</a>, in French, by funix.org.
   </li> 
-  <li><a href="http://laurent.bellegarde.free.fr/lprod/tutoriels/tutoriel_cinelerra_niv1_debutant.pdf">Faire un montage video</a>, French tutorial for beginners on Cinelerra HV,
+  <li><a href="http://download.tuxfamily.org/lprod/tutoriels/tutoriel_cinelerra_niv1_debutant.pdf">Faire un montage video</a>, French tutorial for beginners on Cinelerra HV,
 by Laurent Bellegarde.
   </li>
   <li><a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">Capturando e editando video usando Software Livre</a>, in Portuguese, by Rafael Diniz
   </li>
-  <li><a href="http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">Tutorial Cinelerra</a>, in Portuguese, by Leo Germani
+  <li><a href="http://web.archive.org/web/20140303080600/http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">Tutorial Cinelerra</a>, in Portuguese, by Leo Germani
   </li> 
   <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/basics.html">Cinelerra in 30 minutes and 10 steps</a> - in English and Italian - Cinelerra basics, for Grandma, by Raffaella Traniello. 
   </li>
-  <li><a href="http://www.tuttoainternet.it/Cinelerra">Cinelerra is very easy</a> - in English - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
+  <li><a href="http://web.archive.org/web/20130928035600/http://www.tuttoainternet.it/Cinelerra">Cinelerra is very easy</a> - in English - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
-  <li><a href="http://www.tuttoainternet.it/itCinelerra">Cinelerra è semplicissimo</a> - in Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
+  <li><a href="http://fhl.noblogs.org/2009/03/14/cinelerra-semplicissimo-1-3/">Cinelerra è semplicissimo</a> - in Italian - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
 <li><a href="http://www.stefanodroghetti.co.nr/">Produzione video in Ubuntu</a> - in Italian - from DV files to DVD through Cinelerra, by Stefano "Senbee" Droghetti. 
   </li>
@@ -108,7 +108,7 @@ by Laurent Bellegarde.
 Some HOWTOs for specific needs are available on the internet:
 
 <ul>
-  <li><a href="http://www.udosworld.de/">Installation von Cinelerra unter Debian</a> (in the LINUX section of the site) - in German - by Udo Bender </li>
+  <li><a href="http://www.udosworld.de/23-08-05-cinelerra-installation.php?id=linux">Installation von Cinelerra unter Debian Lenny</a> - in German - by Udo Bender </li>
   <li><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">How to compile CinelerraCV on Ubuntu</a> - In English and Italian - by Raffaella Traniello</li>
  <li><a href="http://crazedmuleproductions.blogspot.com/2010/02/fedora-12-x86-64-cinelerra-install.html">How to compile CinelerraCV on Fedora 12</a>, by Scott Frase </li>
 </ul>
@@ -122,26 +122,21 @@ Some HOWTOs for specific needs are available on the internet:
   </li>
 <li><a href="http://jakedth.tumblr.com/post/85794790/cinelerra-cv-motion-tracking-tutorial">CinelerraCV Motion Tracking tutorial</a>, by Jacob Lludkrab</li>
 <li><a href="http://www.calcmaster.net/cinelerra/forgotten-guide/08-advanced-ve-01-motion-tracking.php">Motion tracking in Cinelerra</a>, by calcmaster.NET </li>
-  <li><a href="http://www.freenet.org.nz/misc/cintitles/">HOWTO make professional looking Scrolled Credits in Cinelerra</a>, by David McNab
+  <li><a href="http://web.archive.org/web/20111223045514/http://www.freenet.org.nz/misc/cintitles/">HOWTO make professional looking Scrolled Credits in Cinelerra</a>, by David McNab
   </li>
   <li><a href="http://makefx.wordpress.com/2008/10/13/how-to-pan-in-an-image-ken-burns-effect/">How to pan in an image (Ken Burns effect)</a>, by Roland C.</li>
   <li><a href="http://makefx.wordpress.com/2008/10/07/how-to-load-images-to-make-a-simple-presentation-slideshow/">How to load images to make a simple presentation (slideshow)</a>, by Roland C.</li>
 <li> <a href="http://michalfapso.blogspot.com/2010/12/how-to-create-photo-slideshow.html">How to create a photo slideshow synchronized with music</a>, by Michal Fapso </li>
-  <li><a href="http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra/#more-246">Crear títulos diferentes con Cinelerra</a>, in Spanish, by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample
+  <li><a href="http://web.archive.org/web/20140822083830/http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra#more-246">Crear títulos diferentes con Cinelerra</a>, in Spanish, by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample
 projects.
   </li>
-  <li><a href="http://akiradproject.net/your_own_transition"> HOWTO make your
-own video transition with Cinelerra and Inkscape</a> in English and Italian, by
-Paolo Rampino
+  <li><a href="http://web.archive.org/web/20130712093729/http://www.tuttoainternet.it/Your_own_transition"> HOWTO make your own video transition with Cinelerra and Inkscape</a> in English and Italian, by Paolo Rampino
   </li>
-  <li><a href="http://www.raiden.net/articles/tutorial_using_cinelerra_to_create_pip_videos/">Using Cinelerra to create PiP videos</a> - How to create a picture in picture effect, by Doug Bonnell
+  <li><a href="http://web.archive.org/web/20100410235848/http://www.raiden.net/articles/tutorial_using_cinelerra_to_create_pip_videos/">Using Cinelerra to create PiP videos</a> - How to create a picture in picture effect, by Doug Bonnell
   </li> 
 <li><a href="http://www.g-raffa.eu/SimAV/">SimAV HOWTOs</a> - How to create a picture in picture effect, How to create overlays, How to change theme, by Simeon Volkel
   </li> 
-  <li><a
-href="http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder">Tips
-for Transcoding Cinelerra Compatible Video with FFmpeg, MEncoder</a>, by by
-Alexander Grundner
+  <li><a href="http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder">Tips for Transcoding Cinelerra Compatible Video with FFmpeg, MEncoder</a>, by Alexander Grundner
   </li> 
   <li><a href="http://ffmpeg.mplayerhq.hu/compat.html">FFMPEG Compatibility</a> - HOWTO produce videos that can be played in common proprietary multimedia players
   </li>
@@ -192,7 +187,7 @@ manual. It has been translated to Slovenian, Spanish, Italian (partially), Frenc
  </div>
 
 <address>
-  Last modified on Aug 29, 2011
+  Last modified on Sep 6, 2015
 </address>
 
 <?php include "footer.php"; ?>

@@ -49,7 +49,7 @@ include "newsidemenu.php";
 
 </div>
 
-<address>Last modified on Sep 5, 2015</address>
+<address>Last modified on Sep 6, 2015</address>
 <?php include "footer.php"; ?>
 </body>
 </html>
