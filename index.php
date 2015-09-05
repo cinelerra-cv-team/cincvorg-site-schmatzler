@@ -23,10 +23,15 @@ Volunteers, please contact the <a href="https://init.linpro.no/mailman/skolelinu
 <h2><a name="news">News</a></h2>
 
 <p>
-<strong>August, 2015</strong><br>
+<strong>September 5, 2015</strong><br>
+* We've switched over to a new machine to host our repositories and the website. As a result, our <a href="http://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="http://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
+</p>
+
+<p>
+<strong>August 10, 2015</strong><br>
 * Cinelerra-CV 2.3 has been released!
 Changes in version 2.3:
-<ul><li>Full UTF-⁠8 support</li>
+<ul><li>Full UTF-8 support</li>
 <li>Complete new overlay engine and resampler</li>
 <li>New graphics: About panel, some icons</li>
 <li>New plugins: GreyCStoration, C41, Bluebanana, color3way, findobject, lens</li>
@@ -35,7 +40,7 @@ Changes in version 2.3:
 <li>Changes in build system:</li>
 <li>Automated creation of header files for png in plugins.</li>
 <li>Updated debian build files</li>
-<li>Renamed project to Cinelerra-⁠cv</li></ul>
+<li>Renamed project to Cinelerra-cv</li></ul>
 Full changelog can be browsed through <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
 </p>
 
