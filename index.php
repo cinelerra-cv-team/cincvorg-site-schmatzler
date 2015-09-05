@@ -31,9 +31,12 @@ Changes in version 2.3:
 <li>Some translations have been updated (German, Italian, French, Norwegian, Portugese)</li>
 <li>Lots of small bugfixes</li>
 <li>Changes in build system:</li>
-<li>Automated creation of header files for png in plugins.</li>
-<li>Updated debian build files</li>
-<li>Renamed project to Cinelerra-cv</li></ul>
+  <ul>
+    <li>Automated creation of header files for png in plugins.</li>
+    <li>Updated debian build files</li>
+    <li>Renamed project to Cinelerra-cv</li>
+  </ul>
+</ul>
 Full changelog can be browsed through <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
 </p>
 
