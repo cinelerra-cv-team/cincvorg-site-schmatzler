@@ -21,14 +21,14 @@ include "newsidemenu.php";
 You just need to download the .iso file, burn it on a DVD, insert it in the drive and restart your machine.</p> 
  
 <ul> 
-<li><a href='http://www.dynebolic.org'>dyne:bolic</a> - For multimedia production, uses Window Maker window manager</li> 
-<li><a href='http://www.bandshed.net/AVLinux.html'>AVLinux</a> - A content-creation focused OS</li> 
-<li><a href='http://www.elivecd.org/'>Elive</a> - Debian-based live CD using Enlightenment window manager</li> 
-<li><a href='https://musixdistro.wordpress.com'>Musix</a> - For audio production, graphic design and video editing</li> 
-<li><a href='http://openartisthq.org/'>openArtist</a> - Ubuntu-based, for artists</li> 
-<li><a href='https://juntadados.org/'>junta Dados</a> - Debian-based Brazilian multimedia distribution</li> 
-<li><a href='http://www.apodio.org/'>Apodio</a> - A GNU/Linux multimedia distribution</li> 
-<li><a href='http://www.celeum.com/about-dreamstudio/'>Dream Studio</a> - A full-featured Multimedia creation project</li> 
+<li><a href="https://www.dyne.org/software/dynebolic/">dyne:bolic</a> - For multimedia production, uses Window Maker window manager</li> 
+<li><a href="http://www.bandshed.net/AVLinux.html">AVLinux</a> - A content-creation focused OS</li> 
+<li><a href="http://www.elivecd.org/">Elive</a> - Debian-based live CD using Enlightenment window manager</li> 
+<li><a href="https://musixdistro.wordpress.com">Musix</a> - For audio production, graphic design and video editing</li> 
+<li><a href="http://openartisthq.org/">openArtist</a> - Ubuntu-based, for artists</li> 
+<li><a href="https://juntadados.org/">junta Dados</a> - Debian-based Brazilian multimedia distribution</li> 
+<li><a href="http://www.apodio.org/">Apodio</a> - A GNU/Linux multimedia distribution</li> 
+<li><a href="http://www.celeum.com/dreamstudio/">Dream Studio</a> - A full-featured Multimedia creation project</li> 
 </ul> 
 
 <h2><a name="packages">Packages</a></h2>
@@ -39,15 +39,11 @@ You just need to download the .iso file, burn it on a DVD, insert it in the driv
 <a href="#apt">Debian</a> |
 <a href="#fedora">Fedora</a> |
 <a href="#gentoo">Gentoo</a> |
-<a href="#mandriva">Mandriva</a> |
+<a href="#mandriva">OpenMandriva</a> |
 <a href="#slack">Slackware</a> |
 <a href="#suse">Suse</a> |
 <a href="#ubuntu">Ubuntu</a> 
 </h3>
-
-<p>More detailed instructions for every distrubution can be found in the <a href="http://cv.cinelerra-cv.org/docs/wiki/doku.php?id=english_manual:cinelerra_cv_en_2">Manual</a>.
-<br>
-</p>
 
 <h3><a name="arch">Arch Linux</a></h3>
 
@@ -65,7 +61,7 @@ Guidelines</a> for more info), then run the following command from the command l
 
 <blockquote>
 <p> 
-Cinelerra CV is included in the Ark Linux package repository. Install 
+CinelerraCV is included in the Ark Linux package repository. Install 
 the "cinelerra" package using the "Install Software" tool in Mission Control, 
 or run the following commands from a command line: <BR>
 <code>apt-get update <BR>
@@ -76,8 +72,7 @@ apt-get install cinelerra</code> .
   <h3><a name="apt">Debian</a></h3>
 
 <blockquote>
-<p>Both CinelerraCV 2.1.0 and CinelerraHV 4.2 packages are available from <a href="http://deb-multimedia.org/">Deb-multimedia</a>.<br />
-Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
+<p>For Debian Stable (Jessie) both CinelerraCV 2.2 and CinelerraHV 4.5 packages are available from <a href="http://deb-multimedia.org/">Deb-multimedia</a>.
 </blockquote>
 
 <h3><a name="gentoo">Gentoo</a></h3>
@@ -91,8 +86,7 @@ file in order to unmask it:<BR>
 <code>echo "media-video/cinelerra ~x86" >> /etc/portage/package.keywords </code><BR>
 See the <a href='http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'>Handbook</a> 
 for details. <BR>
-More informations can be found in the <a
-href='http://cvs.cinelerra-cv.org/docs/split_manual_en/cinelerra_cv_manual_en_2.html#SEC25'>Manual</a>.</p>
+More informations can be found in the <a href="cinelerra-cv.org/docs/cinelerra_cv_manual_en_2.html">Manual</a>.</p>
 </blockquote>
 
 <h3><a name="fedora">Fedora</a></h3>
@@ -106,20 +100,19 @@ If you want to compile CinelerraCV from source you can find detailed instruction
 <li><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">for Fedora 15, x86-64</a></li>
 <li><a href="http://crazedmuleproductions.blogspot.com/2010/02/fedora-12-x86-64-cinelerra-install.html">for Fedora 12, x86-64</a></li>
 </ul>
-<p>Older packages are available. See the <a href="old-distro.php">old packages</a> page.</p>
 </blockquote>
 
-<h3><a name="mandriva">Mandriva</a></h3>
+<h3><a name="mandriva">OpenMandriva</a></h3>
 <p>
 <blockquote>
-Cinelerra packages for Mandriva made by PLF are ready to install. See the <a
-href='http://plf.zarb.org/packages.php'>PLF</a> site for more information.
+CinelerraCV 2.2 is officially available in OpenMandriva 2014.1.
 </blockquote>
 </p>
 
 <h3><a name="slack">Slackware</a></h3>
 <blockquote>
-You can find Cinelerra packages in the <em>multimedia</em> section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.
+You can find prebuilt CinelerraCV packages in the <em>multimedia</em> section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.<br>
+If you want to build CinelerraCV from scratch, SlackBuilds are available <a href="http://slackbuilds.org/repository/14.1/multimedia/cinelerra/">at the usual location</a>.
 </blockquote>
 
 <h3><a name="suse">Suse</a></h3>
@@ -132,7 +125,7 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 <h3><a name="ubuntu">Ubuntu</a></h3>
 
 <blockquote>
-<p>Latest Cinelerra CV 2.2 for Ubuntu (from 8.04 Hardy Heron to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis</p>
+<p>Latest CinelerraCV 2.3 for Ubuntu (from 12.04 Precise Pangolin to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis:</p>
 <blockquote>
 <code>https://launchpad.net/~cinelerra-ppa</code>
 </blockquote>
@@ -142,13 +135,12 @@ You can install directly with Yast if you have Packman configured as a Yast inst
 <code>sudo apt-get install cinelerra-cv</code>
 </blockquote>
 
-<p>Older packages are available too. See the <a href="old-distro.php">old packages</a> page.</p>
 <p> If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
 </blockquote>
 
  </div>
  
-<address> Last modified on Nov 10, 2012 </address>
+<address> Last modified on Sep 5, 2015 </address>
 
 <?php include "footer.php"; ?>
  </body>
