@@ -12,6 +12,17 @@
      <li class="item"><a href="/productions.php">Users' Productions</a></li>
      </ul>
   </li>
+<li class="sub">
+ <div class="title">Download</div>
+ </li>
+ <li>
+  <ul class="sub">
+   <li class="item"><a href="/getting_cinelerra.php">Get Cinelerra</a></li>
+   <li class="item"><a href="/user-tips.php">Patches & Tools</a></li>
+   <li class="item"><a href="/transitions.php">Transitions & Themes</a></li>
+   <li class="item"><a href="/footage.php">Test clips</a></li>   
+  </ul>
+</li>
   <li class="sub">
  <div class="title">Development</div>
  </li> 
@@ -23,16 +34,5 @@
      <li class="item"><a href="/soc.php">Google SOC</a></li>
    </ul>
   </li>
- <li class="sub">
- <div class="title">Download</div>
- </li>
- <li>
-  <ul class="sub">
-   <li class="item"><a href="/getting_cinelerra.php">Get Cinelerra</a></li>
-   <li class="item"><a href="/user-tips.php">Patches & Tools</a></li>
-   <li class="item"><a href="/transitions.php">Transitions & Themes</a></li>
-   <li class="item"><a href="/footage.php">Test clips</a></li>   
-  </ul>
-</li>
 </ul>
 </div>
