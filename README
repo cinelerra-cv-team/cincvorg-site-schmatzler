@@ -1,7 +1,7 @@
 To use the git repo for working on this site:
 
 1) install git on your computer (on a debian based system `apt-get install git-core`)
-2) add a new user to gitosis, by adding their public ssh key to the keydir and their name to the repo in gitosis.conf.
+2) add a new user to gitolite, by adding their public ssh key to the keydir and their name to the repo in gitolite.conf.
 3) git clone git@git.cinelerra-cv.org:www/cinelerra-site.git your-cin-site-copy
 
 Make some changes, then 
