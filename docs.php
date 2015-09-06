@@ -47,12 +47,6 @@ página por capítulo) |
 <a href="docs/cinelerra_cv_manual_eu.txt">TXT</a> (500 Kb) </li>
  </ul>
 
-Wiki is offline, no one cares.
-<!--
-Improve the Cinelerra CV manual by editing its pages in the <a
-href="docs/wiki/doku.php">Cinelerra CV Wiki</a> 
--->
-
   <h2><a name="video-tutorials">Cinelerra video tutorials</a></h2>
 Some video tutorials (talk and screencast) are available on the internet:
  <ul>
@@ -172,17 +166,11 @@ Source video editing, especially for Cinelerra HV (among them an Ubuntu package)
 <li><a href="http://www.cinelerra.es">Cinelerra.ES</a>, website dedicated to video editing in GNU/Linux (in Spanish).</li>
 </ul>
 <h2>Cinelerra CV Wiki</h2>
-<p>  <B>DokuWiki</B><BR>
-A copy of the Cinelerra CV manual was available on a wiki.
-Due to too much spam on the Wiki it has been de-linked.
-If you like to help with maintaining the Wiki then please email tv-lists at gmail.com.
- Cinelerra CV Wiki <BR>  </p>
-<p>  <B>TWiki</B><BR>
-The first Cinelerra CV wiki was set up by Alex Ferrer. At present is available
-only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet
-Archive</a>. It contains Cinelerra documentation, users' tips and other useful
-resources for your project. Most of its content is now in the Cinelerra CV
-manual. It has been translated to Slovenian, Spanish, Italian (partially), French.
+<p>A few years ago we had a wiki here. Due to too much spam and a missing maintainer we had to shut it down</p>
+<p>If you'd like to help with maintaining a new wiki, please send a message to our mailing list.</p>
+<br/>
+<p><b>TWiki</b><br />
+The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
  </div>
 
