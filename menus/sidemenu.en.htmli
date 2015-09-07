@@ -5,11 +5,11 @@
   </li>
   <li>
     <ul class="sub">
-      <li class="item"><a href="/index.php"><img src="/images/website/newspaper.png" />News...</a></li>
-      <li class="item"><a href="/about.php"><img src="/images/website/info-button.png" />About</a></li>
-      <li class="item"><a href="/contact.php"><img src="/images/website/x-office-address-book.png" />Contact us</a></li>
-      <li class="item"><a href="/docs.php"><img src="/images/website/format-justify-left.png" />Documentation</a></li>
-      <li class="item"><a href="/productions.php"><img src="/images/website/system-users.png" />Users' Productions</a></li>
+      <li class="item"><a href="/index.php"><img src="/images/website/menu/newspaper.png" />News...</a></li>
+      <li class="item"><a href="/about.php"><img src="/images/website/menu/info-button.png" />About</a></li>
+      <li class="item"><a href="/contact.php"><img src="/images/website/menu/x-office-address-book.png" />Contact us</a></li>
+      <li class="item"><a href="/docs.php"><img src="/images/website/menu/format-justify-left.png" />Documentation</a></li>
+      <li class="item"><a href="/productions.php"><img src="/images/website/menu/system-users.png" />Users' Productions</a></li>
     </ul>
   </li>
   <li class="menu">
@@ -17,10 +17,10 @@
   </li>
   <li>
     <ul class="sub">
-      <li class="item"><a href="/getting_cinelerra.php"><img src="/images/website/emblem-downloads.png" />Get Cinelerra</a></li>
-      <li class="item"><a href="/user-tips.php"><img src="/images/website/tools.png" />Patches & Tools</a></li>
-      <li class="item"><a href="/transitions.php"><img src="/images/website/transitions.png" />Transitions & Themes</a></li>
-      <li class="item"><a href="/footage.php"><img src="/images/website/applications-multimedia.png" />Test clips</a></li>   
+      <li class="item"><a href="/getting_cinelerra.php"><img src="/images/website/menu/emblem-downloads.png" />Get Cinelerra</a></li>
+      <li class="item"><a href="/user-tips.php"><img src="/images/website/menu/tools.png" />Patches & Tools</a></li>
+      <li class="item"><a href="/transitions.php"><img src="/images/website/menu/transitions.png" />Transitions & Themes</a></li>
+      <li class="item"><a href="/footage.php"><img src="/images/website/menu/applications-multimedia.png" />Test clips</a></li>   
     </ul>
   </li>
   <li class="menu">
@@ -28,9 +28,9 @@
   </li> 
   <li>
     <ul class="sub">
-      <li class="item"><a href="/devcorner.php"><img src="/images/website/utilities-terminal.png" />Developer's corner</a></li>
-      <li class="item"><a href="/main_repo.php"><img src="/images/website/drive-harddisk.png" />Repository</a></li>
-      <li class="item"><a href="/bounty.php"><img src="/images/website/star.png" />Bounty</a></li>
+      <li class="item"><a href="/devcorner.php"><img src="/images/website/menu/utilities-terminal.png" />Developer's corner</a></li>
+      <li class="item"><a href="/main_repo.php"><img src="/images/website/menu/drive-harddisk.png" />Repository</a></li>
+      <li class="item"><a href="/bounty.php"><img src="/images/website/menu/star.png" />Bounty</a></li>
     </ul>
   </li>
   <li class="menu">
@@ -38,8 +38,8 @@
   </li> 
   <li>
     <ul class="sub">
-      <li class="item"><a href="https://www.facebook.com/cinelerracv" target="_blank"><img src="/images/website/FB-f-Logo__blue_20.png" />Follow us</a></li>
-      <li class="item"><a href="/archive.php"><img src="/images/website/archive.png" />Archive</a></li>
+      <li class="item"><a href="https://www.facebook.com/cinelerracv" target="_blank"><img src="/images/website/menu/FB-f-Logo__blue_20.png" />Follow us</a></li>
+      <li class="item"><a href="/archive.php"><img src="/images/website/menu/archive.png" />Archive</a></li>
     </ul>
   </li>
 </ul>
