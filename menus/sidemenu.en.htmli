@@ -28,7 +28,7 @@
   </li> 
   <li>
     <ul class="sub">
-      <li class="item"><a href="/devcorner.php">Developer's corner</a></li>
+      <li class="item"><a href="/devcorner.php"><img src="/images/website/utilities-terminal.png" />Developer's corner</a></li>
       <li class="item"><a href="/main_repo.php">CinelerraCV repository</a></li>
       <li class="item"><a href="/bounty.php">Bounty</a></li>
       <li class="item"><a href="/soc.php">Google SOC</a></li>
