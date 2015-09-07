@@ -5,7 +5,7 @@
   </li>
   <li>
     <ul class="sub">
-      <li class="item"><a href="/index.php">News...</a></li>
+      <li class="item"><a href="/index.php"><img src="/images/website/newspaper.png" />News...</a></li>
       <li class="item"><a href="/about.php">About</a></li>
       <li class="item"><a href="/contact.php"><img src="/images/website/x-office-address-book.png" />Contact us</a></li>
       <li class="item"><a href="/docs.php">Documentation</a></li>
