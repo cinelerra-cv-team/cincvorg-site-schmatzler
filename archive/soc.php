@@ -1,15 +1,15 @@
 <?php
-include "header.php";
+include "../header.php";
 
-include "sidemenu.php"; 
+include "../sidemenu.php"; 
 ?>
 
 
 <div class="content">
 <h2>Google Summer of Code</h2>
-
-<p>With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/">Google Summer of Code</a>. <br>
-Here is the work planned:</p>
+<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p> 
+<p>With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/">Google Summer of Code</a> 2007. <br>
+Here is the work we planned:</p>
 
 <table class="bounty">
     <tr>
@@ -97,6 +97,6 @@ http://www.pipapo.org/pipawiki/Cinelerra/Developers/ct/MediaManager</a>
 
 <address> Last modified on Sept 19 2011 </address>
 
-<?php include "footer.php"; ?>
+<?php include "../footer.php"; ?>
 </body>
 </html>
