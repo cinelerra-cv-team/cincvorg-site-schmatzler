@@ -1,4 +1,5 @@
-<?php 
+<?php
+$title="Contact us";
 include "header.php";
 
 include "sidemenu.php"; 

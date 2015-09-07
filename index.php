@@ -1,6 +1,6 @@
 <?php
+$title="News";
 include "header.php";
-
 include "sidemenu.php"; 
 ?>
 

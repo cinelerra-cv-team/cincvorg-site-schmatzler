@@ -1,5 +1,5 @@
 <?php
-
+$title="About Cinelerra";
 include "header.php";
 
 include "sidemenu.php"; 

@@ -1,5 +1,5 @@
 <?php 
-
+$title="Test Clips";
 include "header.php";
 
 include "sidemenu.php"; 

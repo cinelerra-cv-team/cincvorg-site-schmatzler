@@ -1,4 +1,5 @@
 <?php
+$title="Archive";
 include "header.php";
 
 include "sidemenu.php"; 

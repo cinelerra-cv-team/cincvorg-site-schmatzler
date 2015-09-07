@@ -1,4 +1,5 @@
-<?php 
+<?php
+$title="Get Cinelerra";
 include "header.php";
 
 include "sidemenu.php"; 

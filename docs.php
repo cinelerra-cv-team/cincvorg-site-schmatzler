@@ -1,5 +1,5 @@
 <?php 
-
+$title="Documentation";
 include "header.php";
 
 include "sidemenu.php"; 

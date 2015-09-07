@@ -1,4 +1,5 @@
 <?php
+$title="GSoC 2007";
 include "../header.php";
 
 include "../sidemenu.php"; 

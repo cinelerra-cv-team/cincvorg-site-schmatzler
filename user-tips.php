@@ -1,6 +1,6 @@
-<?php 
+<?php
+$title="Tools";
 include "header.php";
-
 include "sidemenu.php"; 
 ?>
 

@@ -1,5 +1,5 @@
 <?php 
-
+$title="DevCorner";
 include "header.php";
 
 include "sidemenu.php"; 

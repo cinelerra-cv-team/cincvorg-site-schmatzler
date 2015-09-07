@@ -1,4 +1,5 @@
 <?php 
+$title="Bounty";
 include "header.php";
 
 include "sidemenu.php"; 

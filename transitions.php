@@ -1,5 +1,5 @@
 <?php 
-
+$title="Transitions";
 include "header.php";
 include "sidemenu.php"; 
 ?>
