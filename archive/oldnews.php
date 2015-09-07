@@ -1,12 +1,13 @@
 <?php
 $title="Old News";
-include "header.php";
+include "../header.php";
 
-include "sidemenu.php"; 
+include "../sidemenu.php"; 
 ?>
 
 
 <div class="content">
+<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
 <p>
 <blockquote>
 The front page only contains the latest news items.
@@ -476,7 +477,7 @@ Imported the code tree from Sylvain Joyeux into the CVS </p>
 <hr>
 <address>Last modified on 29 July 2008</address>
 
-<?php include "footer.php"; ?>
+<?php include "../footer.php"; ?>
 </body>
 </html>
 

@@ -1,13 +1,14 @@
 <?php
 $title="Migration";
 
-include "header.php";
+include "../header.php";
 
-include "sidemenu.php"; 
+include "../sidemenu.php"; 
 ?>
 
 
 <div class='content'>
+<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
 <h2><a name="Migration">Migration Status</a></h2>
 
 <p>
@@ -36,7 +37,7 @@ The <i>git repository</i> in 12 hour sync with the cinelerra svn, maintained at 
 <address>Last modified on 12 August 2008</address>
 
 <!-- End body. -->
-<?php include "footer.php"; ?>
+<?php include "../footer.php"; ?>
 </body>
 </html>
 

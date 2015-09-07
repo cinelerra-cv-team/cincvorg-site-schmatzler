@@ -85,7 +85,7 @@ Then there's the fact that all assets are opened in subprocesses so they don't b
 
 <hr>
 
-<p><a href="oldnews.php">Older news...</a></p>
+<p><a href="archive/oldnews.php">Older news...</a></p>
 </div>
 
 <address>Last modified on Sep 5, 2015</address>

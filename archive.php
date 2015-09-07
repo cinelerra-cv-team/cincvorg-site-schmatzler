@@ -17,6 +17,7 @@ include "sidemenu.php";
 <p>We have the following pages archived here at the moment:</p>
 <ul>
 <li><a href="archive/soc.php">Google Summer of Code 2007 plans</a></li>
+<li><a href="archive/oldnews.php">Old news from the frontpage</a></li>
 </ul>
 </div>
 
