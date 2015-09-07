@@ -30,7 +30,7 @@
     <ul class="sub">
       <li class="item"><a href="/devcorner.php"><img src="/images/website/utilities-terminal.png" />Developer's corner</a></li>
       <li class="item"><a href="/main_repo.php"><img src="/images/website/drive-harddisk.png" />Repository</a></li>
-      <li class="item"><a href="/bounty.php">Bounty</a></li>
+      <li class="item"><a href="/bounty.php"><img src="/images/website/star.png" />Bounty</a></li>
       <li class="item"><a href="/soc.php">Google SOC</a></li>
     </ul>
   </li>
