@@ -19,7 +19,7 @@
     <ul class="sub">
       <li class="item"><a href="/getting_cinelerra.php"><img src="/images/website/emblem-downloads.png" />Get Cinelerra</a></li>
       <li class="item"><a href="/user-tips.php"><img src="/images/website/tools.png" />Patches & Tools</a></li>
-      <li class="item"><a href="/transitions.php">Transitions & Themes</a></li>
+      <li class="item"><a href="/transitions.php"><img src="/images/website/transitions.png" />Transitions & Themes</a></li>
       <li class="item"><a href="/footage.php"><img src="/images/website/applications-multimedia.png" />Test clips</a></li>   
     </ul>
   </li>
