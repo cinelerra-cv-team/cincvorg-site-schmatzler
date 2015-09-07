@@ -7,7 +7,7 @@ include "sidemenu.php";
 
 <div class='content'>
 
-<h2><a name="news">News</a></h2>
+<h2><a>News</a></h2>
 
 <p>
 <strong>September 5, 2015</strong><br>
@@ -79,7 +79,7 @@ This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=C
 <strong>Oct 15, 2010</strong><br>
 * While we are working on CinelerraCV 2.1.5, <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.2</a>. Of main interest might be the "Edit->Align edits" feature, which aligns all the audio edits with the video.
 Then there's the keyframe spanning feature, where highlighting a region with keyframe generation on causes effect tweeks to span all the keyframes.
-Then there's the fact that all assets are opened in subprocesses so they don't bring down the entire program when they crash. featuring nested sequences. Only the source code is available, no packages.</a>
+Then there's the fact that all assets are opened in subprocesses so they don't bring down the entire program when they crash. featuring nested sequences. Only the source code is available, no packages.
 </p>
 
 <hr>
