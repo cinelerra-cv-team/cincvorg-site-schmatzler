@@ -17,7 +17,7 @@
   </li>
   <li>
     <ul class="sub">
-      <li class="item"><a href="/getting_cinelerra.php">Get Cinelerra</a></li>
+      <li class="item"><a href="/getting_cinelerra.php"><img src="/images/website/emblem-downloads.png" />Get Cinelerra</a></li>
       <li class="item"><a href="/user-tips.php">Patches & Tools</a></li>
       <li class="item"><a href="/transitions.php">Transitions & Themes</a></li>
       <li class="item"><a href="/footage.php">Test clips</a></li>   
