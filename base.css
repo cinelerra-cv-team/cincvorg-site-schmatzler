@@ -92,7 +92,7 @@ img.logo {
 }
 
 /* Side menu title black bars */
-#menu li.sub { 
+#menu li.menu { 
     padding: 0px;
     background: black url(square-orng-sm.png) no-repeat scroll 10px 50%;
     color: rgb(0, 0, 0);
@@ -125,9 +125,16 @@ img.logo {
     background: rgb(235, 235, 235) none repeat scroll 0% 50%;
     display: block;
     width: 100%;
+    height:20px;
     color: rgb(10, 83, 116);
 }
 
+/* Crude hack to align text centered next to image
+ * Positioning inside a list isn't easy */
+#menu li a img {
+    vertical-align:-25%;
+    margin-right:3px;
+}
 
 #menu li a:visited {
     color: rgb(10, 83, 116);
