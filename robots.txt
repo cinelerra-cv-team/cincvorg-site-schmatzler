@@ -1,3 +1,6 @@
 User-agent: *
 Disallow: /gitweb
 
+User-Agent: AhrefsBot
+Crawl-Delay: 35
+
