@@ -2,7 +2,7 @@
 body { 
     margin: 0px;
     margin: 0px;
-    background: white;
+    background: #fff;
     color:  black;
     font-family: arial,Helvetica,'Bitstream Vera Sans','Luxi Sans',Verdana,Sans-Serif;
     font-size: 90%;
@@ -153,9 +153,14 @@ html > body #menu li a {
 }
 
 div.content { 
-    padding-left: 16em;
-    padding-bottom: 20px;
-    margin-right: 1em;
+    margin-left: 220px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    padding-right: 10px;
+    margin-top:15px;
+    box-shadow: 1px 6px 26px -6px rgba(0,0,0,0.45);
 }
 
 #skipnav { display: none;

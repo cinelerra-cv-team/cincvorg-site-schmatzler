@@ -6,7 +6,6 @@ include "sidemenu.php";
 
 
 <div class='content'>
-<br>
 
 <h2><a name="news">News</a></h2>
 
