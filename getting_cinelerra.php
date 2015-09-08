@@ -10,24 +10,59 @@ include "sidemenu.php";
 <h3>
 <a href="#livecd">Live Media</a> |
 <a href="#packages">Packages</a> |
-<a href="source_code.php">Source code</a>
+<a href="#source">Source code</a>
 </h3>
 
 <h2><a name="livecd">Live Media</a></h2>
 
-<p>You can try Cinelerra out without modifying your computer, thanks to Live DVDs that contain Cinelerra. <br />
-You just need to download the .iso file, burn it on a DVD, insert it in the drive and restart your machine.</p> 
- 
-<ul> 
-<li><a href="https://www.dyne.org/software/dynebolic/">dyne:bolic</a> - For multimedia production, uses Window Maker window manager</li> 
-<li><a href="http://www.bandshed.net/AVLinux.html">AVLinux</a> - A content-creation focused OS</li> 
-<li><a href="http://www.elivecd.org/">Elive</a> - Debian-based live CD using Enlightenment window manager</li> 
-<li><a href="https://musixdistro.wordpress.com">Musix</a> - For audio production, graphic design and video editing</li> 
-<li><a href="http://openartisthq.org/">openArtist</a> - Ubuntu-based, for artists</li> 
-<li><a href="https://juntadados.org/">junta Dados</a> - Debian-based Brazilian multimedia distribution</li> 
-<li><a href="http://www.apodio.org/">Apodio</a> - A GNU/Linux multimedia distribution</li> 
-<li><a href="http://www.celeum.com/dreamstudio/">Dream Studio</a> - A full-featured Multimedia creation project</li> 
-</ul> 
+<p>You can try out Cinelerra-CV without modifying your computer, thanks to Live DVDs that contain it.<br/>
+Just download the .iso file, burn it on a DVD, insert it in the drive and restart your machine.</br>
+Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">Rufus</a> or <a href="https://unetbootin.github.io/" target="_blank">UNetbootin</a>.</p>
+
+<script type='text/javascript'>
+function init() {
+	new Effect.Tooltip('distro-apodio', 'A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
+	new Effect.Tooltip('distro-avlinux', '32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
+	new Effect.Tooltip('distro-dreamstudio', 'Creative Suite aiming at professionals, multiplatform', {className: 'tip'});
+	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
+	new Effect.Tooltip('distro-elive', 'Debian-based live CD using Enlightenment window manager', {className: 'tip'});
+	new Effect.Tooltip('distro-musix', 'Debian-based, argentinian distro for audio production, graphic design and video editing', {className: 'tip'});
+	new Effect.Tooltip('distro-openartist', 'Ubuntu 12.04 based distribution for multimedia use', {className: 'tip'});
+	h.init();
+}
+Event.observe(window, 'load', init, false);
+</script>
+
+<div style="width:100%;height:100px;">
+  <div id="distro-apodio" class="livecd">
+    <a href="http://www.apodio.org/" target="_blank" ><img src="/images/website/livecd-logos/apodio.png" alt="Apodio Logo" /></a>
+      <h4>Apodio</h4>
+  </div>
+  <div id="distro-avlinux" class="livecd">
+    <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
+      <h4>AVLinux</h4>
+  </div>
+  <div id="distro-dreamstudio" class="livecd">
+    <a href="http://www.celeum.com/dreamstudio/" target="_blank" ><img src="/images/website/livecd-logos/dreamstudio.png" alt="Dream Studio Logo" /></a>
+      <h4>Dream Studio</h4>
+  </div>
+  <div id="distro-dyne" class="livecd">
+    <a href="https://www.dyne.org/software/dynebolic/" target="_blank" ><img src="/images/website/livecd-logos/dyne.png" alt="dyne:bolic Logo" /></a>
+      <h4>dyne:bolic</h4>
+  </div>
+  <div id="distro-elive" class="livecd">
+    <a href="http://www.elivecd.org/" target="_blank" ><img src="/images/website/livecd-logos/elive.png" alt="Elive Logo" /></a>
+      <h4>Elive</h4>
+  </div>
+  <div id="distro-musix" class="livecd">
+    <a href="https://musixdistro.wordpress.com" target="_blank" ><img src="/images/website/livecd-logos/musix.png" alt="Musix Logo" /></a>
+      <h4>Musix</h4>
+  </div>
+  <div id="distro-openartist" class="livecd">
+    <a href="http://openartisthq.org/" target="_blank" ><img src="/images/website/livecd-logos/openartist.png" alt="openArtist Logo" /></a>
+      <h4>openArtist</h4>
+  </div>
+</div>
 
 <h2><a name="packages">Packages</a></h2>
 
@@ -145,6 +180,12 @@ If you want to build CinelerraCV from scratch, SlackBuilds are available <a href
 
 <div id="distro-details">
 </div>
+
+<h2><a name="source">Source Code</a></h2>
+
+<p>The sources of Cinelerra-CV are available as .tar.xz snapshots here:</p>
+<p><a href="http://www.cinelerra-cv.org/releases/">Browse releases</a></p>
+<p>You can also <a href="/source_code.php">check out the code</a> we're currently working on.</p>
 
 <!-- async js -->
 <script type="text/javascript">

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/base.css" type="text/css">
   <script type="text/javascript" src="/scripts//js/prototype.js"></script>
   <script type="text/javascript" src="/scripts/js/scriptaculous.js"></script>
+  <script type="text/javascript" src="/scripts/js/tooltip.js"></script>
   <meta property="og:title" content="Cinelerra :: <?php if ($title != NULL) { echo $title; } else { $title=0; echo "a video editor and compositor for Linux"; } ?>" />
   <title>Cinelerra :: <?php if ($title != NULL) { echo $title; } else { echo "a video editor and compositor for Linux"; } ?></title>
 </head>
