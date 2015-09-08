@@ -62,12 +62,12 @@ For Debian Stable (Jessie) both CinelerraCV 2.2 and CinelerraHV 4.5 packages are
     <h4>Fedora</h4>
     <div class="details">
       <p> 
-<p>Cinelerra is not available in the default Fedora repositories, nor in the RPM Fusion and Livna repositories.</p>
-The <a href="http://packages.atrpms.net/name/cinelerra/">ATrpms repository</a> offers Cinelerra packages.
-<p>If you want to compile CinelerraCV from source you can find detailed instructions on Crazed Mule's blog:</p>
+<p>Cinelerra-CV is <u>not</u> available in Fedora by default. It's also <u>not</u> in the RPM Fusion repository.</p>
+<p>The <a href="http://packages.atrpms.net/name/cinelerra/">ATrpms repository</a> offers the old version 2.1 for Fedora 20.
+<p>If you want to compile CinelerraCV from source you can find detailed instructions here:</p>
 <ul>
-<li><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">for Fedora 15, x86-64</a></li>
-<li><a href="http://crazedmuleproductions.blogspot.com/2010/02/fedora-12-x86-64-cinelerra-install.html">for Fedora 12, x86-64</a></li>
+<li><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a></li>
+<li><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">Build Cinelerra-CV for Fedora 15, x86-64</a></li>
 </ul>
       </p>
     </div>
