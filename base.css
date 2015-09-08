@@ -87,7 +87,7 @@ img.logo {
 #menu { 
     border: 1px solid rgb(0,0,0);
     float: left;
-    width: 13em;
+    width: 13.5em;
     margin: 1em;
 }
 
@@ -161,7 +161,7 @@ html > body #menu li a {
 }
 
 div.content { 
-    margin-left: 220px;
+    margin-left: 226px;
     padding-left: 10px;
     padding-bottom: 5px;
     margin-bottom: 50px;
