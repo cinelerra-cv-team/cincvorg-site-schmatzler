@@ -96,7 +96,9 @@ for details.</p>
     <h4>Mandriva</h4>
     <div class="details">
       <p> 
-CinelerraCV 2.2 is officially available in OpenMandriva 2014.1.
+<p>CinelerraCV 2.2 is officially available in OpenMandriva 2014.2.</p>
+<p>Make sure restricted packages are activated in the control center.</p>
+<p><b>Note:</b> cinelerra doesn't show up in the "programs with GUI" list. You have to show the complete list to install it.</p>
       </p>
     </div>
   </div>
