@@ -142,7 +142,7 @@ for details.</p>
     <img src="/images/website/distro-logos/opensuse.png" alt="OpenSUSE Logo" title="Download Cinelerra-CV for OpenSUSE" />
     <h4>openSUSE</h4>
     <div class="details"> 
-<p>RPMs for openSUSE are in the <a href="http://packman.links2linux.org/package/cinelerra">Packman</a> repositories.</p>
+<p>RPMs for openSUSE are in the <a href="http://packman.links2linux.org/package/cinelerra-cv">Packman</a> repositories.</p>
 <p>You can install directly with Yast if you have Packman configured as a Yast install source.</p>
     </div>
   </div>
