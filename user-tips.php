@@ -9,33 +9,27 @@ include "sidemenu.php";
 <h3>Cinelerra Bezier Patch</h3>
 <blockquote>
 <p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. It is a developement/beta version. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
+<p><b>Note: This has since been included in CinelerraCV</b></p>
 </p>
 </blockquote>
 <h2>Tools</h2>
-<h3>Cinelerra theme helper</h3>
-<blockquote>
-<p><strong>Paolo Rampino</strong> created a tool to ease the creation of new themes for Cinelerra. It includes the theme from Cinecutie. It depends on Inkscape. <br>
-<a href="http://www.tuttoainternet.it/kit/cinelerra-theme-helper.tar.gz">Download Cinelerra theme helper</a><br>
-<a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-July/018047.html">Get instructions</a>.
-</p>
-</blockquote>
 
 <h3>IMG2LIST - Cinelerra List Generator</h3>
 <blockquote>
 <p><strong>Claudio "Malefico" Andaur</strong> wrote a little application called <a
-href="http://www.malefico3d.org/blog-en/?page_id=224">IMG2LIST
+href="http://web.archive.org/web/20100612161802/http://www.malefico3d.org/blog-en/?page_id=224">IMG2LIST
 0.1.5</a>, that is a Cinelerra List Generator for converting an image sequence to a single list file. This script generates a list 
 out a frame of an images sequence and autodetects all related parameters with it, including number of frames, file format and image 
 resolution. TIFF and PNG are now supported. Download it <a
-href="http://www.malefico3d.org/download/img2list-0.1.5.tar.gz" > here</a>. <br> 
-(<a href="http://www.malefico3d.org/blog/?page_id=333">Spanish version</a>)<br>
+href="http://web.archive.org/web/20100612161802/http://www.malefico3d.org/download/img2list-0.1.5.tar.gz" > here</a>. <br> 
+(<a href="http://web.archive.org/web/20100419014438/http://www.malefico3d.org/blog/?page_id=333">Spanish version</a>)<br>
 </p>
 </blockquote>
 
 <h3>Seven Gnomes</h3>
 <blockquote>
 <p><strong>Peter Semiletov</strong> wrote a program called 
-<a href="http://www.roxton.kiev.ua/sevengnomes.html ">Seven Gnomes</a>.
+<a href="http://semiletov.org/sevengnomes.html">Seven Gnomes</a>.
 It is a simple GTK2-based utility
 designed to simplify some tasks those useful when people work with
 Cinelerra. Seven Gnomes UI is based on drag-and-drop, so to handle
@@ -63,10 +57,11 @@ href="http://www.assistcg.com/index.php/component/content/article/62.html">exr2t
 
 <h3>cinelerra-slideshow</h3>
 <blockquote>
-<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <a
-href="https://svn.bourget.cc/svn/wackystuff/programs/cinelerra-slideshow/">cinelerra-slideshow</a>, a script that creates a cinelerra .xml file with some already pre-built slideshow tracks. (a bit old)
+<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <strike><a
+href="https://svn.bourget.cc/svn/wackystuff/programs/cinelerra-slideshow/">cinelerra-slideshow</a></strike>, a script that creates a cinelerra .xml file with some already pre-built slideshow tracks. (a bit old)
 <br>
 </p>
+<p><b>Note:</b> Link is dead. Author contacted.</p>
 </blockquote>
 
 <h3>bin2cinelerra_header</h3>
@@ -96,7 +91,7 @@ frames by interpolating the motion between frames, using an MPEG-style motion co
 
 <h3>framerate</h3>
 <blockquote>
-<p><strong>David McNab</strong> wrote a little utility called <a href="http://www.freenet.org.nz/misc/framerate.py">framerate</a> to convert a video to same or different format with different framerate, with motion interpolation, using the yuvmotionfps and ffmpeg utilities. <em>framerate</em> is pretty simple. It eliminates the need for typing manual commands and creating huge yuv files on your disk. Its input and/or output can be piped. 
+<p><strong>David McNab</strong> wrote a little utility called <a href="http://web.archive.org/web/20080101000000*/http://freenet.org.nz/misc/framerate.py">framerate</a> to convert a video to same or different format with different framerate, with motion interpolation, using the yuvmotionfps and ffmpeg utilities. <em>framerate</em> is pretty simple. It eliminates the need for typing manual commands and creating huge yuv files on your disk. Its input and/or output can be piped. 
 </p>
 </blockquote>
 
@@ -108,15 +103,15 @@ frames by interpolating the motion between frames, using an MPEG-style motion co
 
 <h3>CreateCueSheet</h3>
 <blockquote>
-<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <a
-href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueSheet</a>, a script that creates a PDF Cue-Sheet, based on LABELS in a Cinelerra .xml file. Creates a kind of storyboard, with labels frames marked. Uses LaTeX.
-<br>
-</p>
+<p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <strike><a
+href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueSheet</a></strike>, a script that creates a PDF Cue-Sheet, based on LABELS in a Cinelerra .xml file. Creates a kind of storyboard, with labels frames marked. Uses LaTeX.
+<br></p>
+<p><b>Note:</b> Link is dead. Author contacted.</p>
 </blockquote>
 
 </div>
 
-<address>Last modified on Jul 26 2011</address>
+<address>Last modified on Sep 8 2015</address>
 <?php include "footer.php"; ?>
 
 </body>

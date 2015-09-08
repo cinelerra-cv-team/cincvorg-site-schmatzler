@@ -18,10 +18,11 @@ include "sidemenu.php";
 <ul>
 <li><a href="archive/soc.php">Google Summer of Code 2007 plans</a></li>
 <li><a href="archive/oldnews.php">Old news from the frontpage</a></li>
+<li><a href="archive/patches_tools.php">Content archived from the "Patches & Tools" section</a></li>
 </ul>
 </div>
 
-<address>Last modified on Sep 7, 2015</address>
+<address>Last modified on Sep 8, 2015</address>
 
 <?php include "footer.php"; ?>
 </body>
