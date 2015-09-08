@@ -16,5 +16,8 @@
 # Wiki
 /docs/wiki
 
+# Tarballs
+/releases
+
 # All other
 *~
