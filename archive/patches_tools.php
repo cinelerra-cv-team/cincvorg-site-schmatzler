@@ -14,12 +14,12 @@ include "../sidemenu.php";
 <h3>Cinelerra theme helper</h3>
 <blockquote>
 <p><strong>Paolo Rampino</strong> created a tool to ease the creation of new themes for Cinelerra. It includes the theme from Cinecutie. It depends on Inkscape. <br>
-<a href="http://www.tuttoainternet.it/kit/cinelerra-theme-helper.tar.gz">Download Cinelerra theme helper</a><br>
-<a href="https://init.linpro.no/pipermail/skolelinux.no/cinelerra/2011-July/018047.html">Get instructions</a>.
+<a href="cinelerra-theme-helper.tar.gz">Download Cinelerra theme helper</a><br>
+<a href="https://lists.skolelinux.org/pipermail/cinelerra/2011-July/018047.html">Get instructions</a>.
 </p>
 </blockquote>
 
-<address>Last modified on Sep 8, 2015</address>
+<address>Last modified on Sep 9, 2015</address>
 
 <!-- End body. -->
 <?php include "../footer.php"; ?>
