@@ -12,6 +12,14 @@ include "sidemenu.php";
 <p><b>Note: This has since been included in CinelerraCV</b></p>
 </p>
 </blockquote>
+
+<h3>ffmpeg-2.x patches</h3>
+<blockquote>
+<p><strong>Sérgio Basto</strong> has created two patches for recent ffmpeg versions (using the --external-ffmpeg flag).</p>
+<p>You can find the patches <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg_api2.2.patch">here</a> and <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg2.0.patch">here</a>.</p>
+<p><b>Note:</b> These patches may be unstable. Use them at your own risk.</p>
+</p>
+</blockquote>
 <h2>Tools</h2>
 
 <h3>IMG2LIST - Cinelerra List Generator</h3>
