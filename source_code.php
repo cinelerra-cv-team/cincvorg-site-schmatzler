@@ -6,19 +6,18 @@ include "sidemenu.php";
 ?>
 
 <div class="content">
- <h1>Get CinelerraCV source code</h1>
+ <h1>Get Cinelerra-CV source code</h1>
 
-<p>
-    The source code of Cinelerra-CV is available from a git repository. To get it you need to have git-core installed.
-  <p>
+<p>Release tarballs are available on our <a href=/releases/>releases page</a>.</p>
+<p>The source code of Cinelerra-CV is available from a git repository. To get it you need to have git-core installed.<p>
 
 <h2>Stable code</h2>
 
 <p>If you want to compile CinelerraCV for normal use we recommend you get the stable code. </p>
 
 <p> To get a copy for compilation use the following command:</p>
- <blockquote>
-<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
+  <blockquote>
+    <code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
 
 <p>The stable repo is maintained by a small group of core developers. You can browse the <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
@@ -32,6 +31,18 @@ include "sidemenu.php";
 <p>
 Einar Rünkaru is working with the long-term goal of improving the core fixing bugs and design flaws to get a stronger code, better designed to fit a community development. It's a quite invasive work, that needs a lot of debugging.</p>
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
+</blockquote>
+
+<h3>j6t - </h3>
+<blockquote>
+<p>Johannes Sixt. TODO</p>
+<p><a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
+</blockquote>
+
+<h3>akirad - </h3>
+<blockquote>
+<p>Paolo Rampino. TODO</p>
+<p><a href="http://git.cinelerra-cv.org/gitweb?p=akirad/cinelerra.git;a=summary">akirad&#039;s repo</a></p>
 </blockquote>
 
 <h3>monty - FFMPEG-based loader</h3>
@@ -63,7 +74,7 @@ files with partially incomplete initial open GOPs</li>
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=c4/cinelerra.git;a=summary">SimAV's repo</a></p>
  </div>
  
-<address> Last modified on Sep 19, 2011 </address>
+<address> Last modified on Sep 9, 2015 </address>
 
 <?php include "footer.php"; ?>
  </body>
