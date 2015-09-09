@@ -23,7 +23,6 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 function init() {
 	new Effect.Tooltip('distro-apodio', 'A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
 	new Effect.Tooltip('distro-avlinux', '32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
-	new Effect.Tooltip('distro-dreamstudio', 'Creative Suite aiming at professionals, multiplatform', {className: 'tip'});
 	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
 	new Effect.Tooltip('distro-elive', 'Debian-based live CD using Enlightenment window manager', {className: 'tip'});
 	new Effect.Tooltip('distro-musix', 'Debian-based, argentinian distro for audio production, graphic design and video editing', {className: 'tip'});
@@ -41,10 +40,6 @@ Event.observe(window, 'load', init, false);
   <div id="distro-avlinux" class="livecd">
     <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
-  </div>
-  <div id="distro-dreamstudio" class="livecd">
-    <a href="http://www.celeum.com/dreamstudio/" target="_blank" ><img src="/images/website/livecd-logos/dreamstudio.png" alt="Dream Studio Logo" /></a>
-      <h4>Dream Studio</h4>
   </div>
   <div id="distro-dyne" class="livecd">
     <a href="https://www.dyne.org/software/dynebolic/" target="_blank" ><img src="/images/website/livecd-logos/dyne.png" alt="dyne:bolic Logo" /></a>
