@@ -1,12 +1,12 @@
 <?php
-$title="Get Cinelerra";
+$title="Get Cinelerra-CV";
 include "header.php";
 
 include "sidemenu.php"; 
 ?>
 
 <div class="content">
- <h1>Get Cinelerra</h1>
+ <h1>Get Cinelerra-CV</h1>
 <h3>
 <a href="#livecd">Live Media</a> |
 <a href="#packages">Packages</a> |
