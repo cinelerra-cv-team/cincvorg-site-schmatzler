@@ -131,10 +131,13 @@ for details.</p>
     <img src="/images/website/distro-logos/slackware.png" alt="Slackware Logo" title="Download Cinelerra-CV for Slackware" />
     <h4>Slackware</h4>
     <div class="details">
-      <p> 
-You can find prebuilt CinelerraCV packages in the <em>multimedia</em> section of the <a href="http://repository.slacky.eu/">Slacky.eu</a> repository.<br>
-If you want to build CinelerraCV from scratch, SlackBuilds are available <a href="http://slackbuilds.org/repository/14.1/multimedia/cinelerra/">at the usual location</a>.
-      </p>
+      <p>You can find prebuilt Cinelerra-CV packages at the following locations:</p>
+      <ul>
+      <li><a href="http://repository.slacky.eu/">Slacky.eu repository</a></li>
+      <li><a href="http://ponce.cc/slackware/sources/repo/">Ponce's repository</a></li>
+      <li><a href="http://studioware.org/packages">Studioware packages</a></li>
+      </ul>
+      <p>If you want to build CinelerraCV from scratch, SlackBuilds are available <a href="http://slackbuilds.org/repository/14.1/multimedia/cinelerra/">at the usual place</a>.</p>
     </div>
   </div>
 
