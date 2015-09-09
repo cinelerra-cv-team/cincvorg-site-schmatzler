@@ -23,6 +23,7 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 function init() {
 	new Effect.Tooltip('distro-apodio', 'A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
 	new Effect.Tooltip('distro-avlinux', '32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
+	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
 	new Effect.Tooltip('distro-openartist', 'Ubuntu 12.04 based distribution for multimedia use', {className: 'tip'});
 	h.init();
 }
@@ -37,6 +38,10 @@ Event.observe(window, 'load', init, false);
   <div id="distro-avlinux" class="livecd">
     <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
+  </div>
+  <div id="distro-dyne" class="livecd">
+    <a href="https://www.dyne.org/software/dynebolic/" target="_blank" ><img src="/images/website/livecd-logos/dyne.png" alt="dyne:bolic Logo" /></a>
+      <h4>dyne:bolic</h4>
   </div>
   <div id="distro-openartist" class="livecd">
     <a href="http://openartisthq.org/" target="_blank" ><img src="/images/website/livecd-logos/openartist.png" alt="openArtist Logo" /></a>
