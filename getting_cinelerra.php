@@ -21,10 +21,9 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 
 <script type='text/javascript'>
 function init() {
-	new Effect.Tooltip('distro-apodio', 'A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
-	new Effect.Tooltip('distro-avlinux', '32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
-	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
-	new Effect.Tooltip('distro-openartist', 'Ubuntu 12.04 based distribution for multimedia use', {className: 'tip'});
+	new Effect.Tooltip('distro-apodio', '<b>Cinelerra-CV 2.2</b> | Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools.', {className: 'tip'});
+	new Effect.Tooltip('distro-avlinux', '<b>Cinelerra-CV 2.2</b> | 32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
+	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> | 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
 	h.init();
 }
 Event.observe(window, 'load', init, false);
@@ -42,10 +41,6 @@ Event.observe(window, 'load', init, false);
   <div id="distro-dyne" class="livecd">
     <a href="https://www.dyne.org/software/dynebolic/" target="_blank" ><img src="/images/website/livecd-logos/dyne.png" alt="dyne:bolic Logo" /></a>
       <h4>dyne:bolic</h4>
-  </div>
-  <div id="distro-openartist" class="livecd">
-    <a href="http://openartisthq.org/" target="_blank" ><img src="/images/website/livecd-logos/openartist.png" alt="openArtist Logo" /></a>
-      <h4>openArtist</h4>
   </div>
 </div>
 
