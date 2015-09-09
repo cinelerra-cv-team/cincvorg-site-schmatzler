@@ -74,7 +74,7 @@ bin2cinelerra_header you can simply create your .png images and then convert
 them.<br>
 <strong>Franco Iacomella</strong> updated and improved bin2cinelerra_header,
 releasing <a
-href="http://francoiacomella.org/proyectos/tangolerra/lib/exe/fetch.php?id=start&cache=cache&media=bin2cinelerra_header-1.2.tar.gz"
+href="http://web.archive.org/web/20111014054652/http://francoiacomella.org/proyectos/tangolerra/lib/exe/fetch.php?id=start&cache=cache&media=bin2cinelerra_header-1.2.tar.gz"
 >bin2cinelerra_header version 1.2</a>.
 </p>
 </blockquote>
