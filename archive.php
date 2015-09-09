@@ -19,6 +19,7 @@ include "sidemenu.php";
 <li><a href="archive/soc.php">Google Summer of Code 2007 plans</a></li>
 <li><a href="archive/oldnews.php">Old news from the frontpage</a></li>
 <li><a href="archive/tools_themes.php">Content archived from the "tools" and "themes" sections</a></li>
+<li><a href="archive/old_bounties.php">Old bounty offers</a></li>
 </ul>
 </div>
 
