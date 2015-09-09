@@ -68,10 +68,6 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<h3>SimAV - merges from HV</h3>
-<blockquote>
-<p>Simeon Voelkel is working on merging the code from Cinelerra 4 (HV)</p>
-<p><a href="http://git.cinelerra-cv.org/gitweb?p=c4/cinelerra.git;a=summary">SimAV's repo</a></p>
  </div>
  
 <address> Last modified on Sep 9, 2015 </address>
