@@ -21,7 +21,8 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 
 <script type='text/javascript'>
 function init() {
-	new Effect.Tooltip('distro-apodio', '<b>Cinelerra-CV 2.2</b> | Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools.', {className: 'tip'});
+	new Effect.Tooltip('distro-apodio', '<b>Cinelerra-CV 2.2</b> | Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
+	new Effect.Tooltip('distro-artistx', '<b>Cinelerra-CV 2.2</b> | ArtistX is a free DVD which turns a computer into a full multimedia production studio', {className: 'tip'});
 	new Effect.Tooltip('distro-avlinux', '<b>Cinelerra-CV 2.2</b> | 32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
 	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> | 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
 	h.init();
@@ -33,6 +34,10 @@ Event.observe(window, 'load', init, false);
   <div id="distro-apodio" class="livecd">
     <a href="http://www.apodio.org/" target="_blank" ><img src="/images/website/livecd-logos/apodio.png" alt="Apodio Logo" /></a>
       <h4>Apodio</h4>
+  </div>
+  <div id="distro-artistx" class="livecd">
+    <a href="http://artistx.org/blog/" target="_blank" ><img src="/images/website/livecd-logos/artistx.png" alt="ArtistX Logo" /></a>
+      <h4>ArtistX</h4>
   </div>
   <div id="distro-avlinux" class="livecd">
     <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
