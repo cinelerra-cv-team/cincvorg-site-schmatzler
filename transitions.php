@@ -75,22 +75,12 @@ New images can be placed in any location. Use the <em>Browse</em> button to brow
 </p>
 <h2>New themes</h2>
 
-Here you can find extra themes for Cinelerra interface.<br>
-<ul>
-<li><a href="http://blenderartists.org/forum/showthread.php?t=37452">Monkey</a> - an elegant dark grey theme, by <b>Fweeb</b></li>
-<li><a href="http://fr.lprod.org/wiki/doku.php?id=video:cinelerra:pluginlprod" >
-lprod</a> - a light colour theme. </li>
-<li><a href="http://placide.home.sapo.pt/cinelerra01.html"> Greenelerra</a> - a
-dark green theme, with light green and red used for emphasis, by
-<b>Placido Andre Sousa</b>. (work in progress)</li>
-<li><a href="http://francoiacomella.org/proyectos/tangolerra/doku.php?id=start"
->Tangolerra</a> - a light colour theme, with
-<a href="http://tango.freedesktop.org/Tango_Desktop_Project" > Tango</a> artwork, by <b>Franco Iacomella</b>. (work in progress)</li>
-</ul>
+<p>We don't have any themes here at the moment</p>
+<p>If you're working on something for Cinelerra, please <a href="/contact.php">send us a message!</a></p>
 </div>
 
 
-<address>Last modified on Nov 20 2011</address>
+<address>Last modified on Sep 9, 2015</address>
 
 <?php include "footer.php"; ?>
 </body> </html>
