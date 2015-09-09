@@ -23,7 +23,6 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 function init() {
 	new Effect.Tooltip('distro-apodio', 'A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
 	new Effect.Tooltip('distro-avlinux', '32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
-	new Effect.Tooltip('distro-elive', 'Debian-based live CD using Enlightenment window manager', {className: 'tip'});
 	new Effect.Tooltip('distro-musix', 'Debian-based, argentinian distro for audio production, graphic design and video editing', {className: 'tip'});
 	new Effect.Tooltip('distro-openartist', 'Ubuntu 12.04 based distribution for multimedia use', {className: 'tip'});
 	h.init();
@@ -39,10 +38,6 @@ Event.observe(window, 'load', init, false);
   <div id="distro-avlinux" class="livecd">
     <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
-  </div>
-  <div id="distro-elive" class="livecd">
-    <a href="http://www.elivecd.org/" target="_blank" ><img src="/images/website/livecd-logos/elive.png" alt="Elive Logo" /></a>
-      <h4>Elive</h4>
   </div>
   <div id="distro-musix" class="livecd">
     <a href="https://musixdistro.wordpress.com" target="_blank" ><img src="/images/website/livecd-logos/musix.png" alt="Musix Logo" /></a>
