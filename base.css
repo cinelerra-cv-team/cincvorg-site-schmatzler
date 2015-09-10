@@ -1,4 +1,4 @@
-/* body */
+/* Body */
 body { 
     margin: 0px;
     margin: 0px;
@@ -18,6 +18,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bb0e5', endColorstr='#ccdae8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+/* Links */
 a:link  { 
     font-weight: bold;
     text-decoration: none;
@@ -35,14 +36,14 @@ a:visited {
     color: rgb(66, 180, 245); /*#4cbeff */
 }
 
-/* Top bar: gray bar */
+/* Top bar: black bar */
 div.top { 
     background-color: black;  
     width: 100%;
     height: 148px;
-
 }
 
+/* Top bar: Cinelerra-CV logo */
 div#logo { 
     background: black url("cinelerra-orng.png") no-repeat center;  
     position: absolute;
@@ -51,7 +52,7 @@ div#logo {
     right: 36px;
 }
 
-
+/* Remove styles from clickable link */
 div.top a.logo, div.top a.logo:link, div.top a.logo:hover, div.top a.logo:visited { 
     border: medium none;
     background: transparent;
@@ -59,7 +60,7 @@ div.top a.logo, div.top a.logo:link, div.top a.logo:hover, div.top a.logo:visite
     text-decoration: none;
 }
 
-/* Top bar: Cinelerra CV*/ 
+/* Top bar: Cinelerra CV text*/ 
 div.top span#banner { 
     margin: 26px 0px 0px 15px;
     line-height: 122px;
@@ -160,6 +161,7 @@ html > body #menu li a {
     text-decoration: none;
 }
 
+/* content - style like paper */
 div.content { 
     margin-left: 226px;
     padding-left: 10px;
@@ -172,37 +174,7 @@ div.content {
     background-color: #fff;
 }
 
-#skipnav { display: none;
-}
-
-#togglecss { 
-    position: absolute;
-    top: 110px;
-    right: 10px;
-}
-
-img.left { 
-    float: left;
-    border: 1px solid rgb(0,0,0);
-}
-
-img.thumb { border: 1px solid rgb(153, 153, 153);
-}
-
-div.news div.item h3 { 
-    border-left: 10px solid rgb(153, 153, 153);
-    font-weight: bold;
-    padding-left: 4px;
-    margin-bottom: 4px;
-    clear: right;
-}
-
-div.news div.item p { 
-    margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
+/* paragraphs */
 p { text-align: justify;
 }
 
@@ -211,12 +183,14 @@ h2 {
     clear: right;
 }
 
+/* code - TODO 2015 */
 pre { 
     border: 2px solid rgb(74, 152, 190);
     padding:20px;
     background: rgb(235, 235, 235) none repeat scroll 0% 50%;
 }
 
+/* Footer */
 #footer { 
     border-top: 1px solid rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
@@ -237,6 +211,7 @@ border: medium none ;
 color: orange;
 }
 
+/* Used for indentation */
 address { 
     bottom:40px;
     color:black;
@@ -244,6 +219,7 @@ address {
     right:10px;
 }
 
+/* General table styles */
 table { 
     background: transparent none repeat scroll 0% 50%;
     margin-left: auto;
@@ -254,124 +230,15 @@ table {
     font-size: 90%;
 }
 
-td { 
-    padding: 8px;
-    vertical-align: top;
-}
-
-table.roadmap { background: rgb(238, 238, 238) none repeat scroll 0% 50%;
-}
-
-table.roadmap td { border: 1px solid rgb(153, 153, 153);
-}
-
-
-
-Tr.header { 
-    background: rgb(221, 221, 221) none repeat scroll 0% 50%;
-    font-weight: bold;
-       }
-
-td.title {
-    background: rgb(221, 221, 221) none repeat scroll 0% 50%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(156, 66, 112);
-}
-
-img.float { 
-    float: right;
-    border: 1px solid rgb(0,0,0);
-}
-
-select, option, textarea, input {
-    border: 1px solid rgb(102, 102, 102);
-    margin: 2px 0px 2px 0pt;
-    padding: 2px;
-    background: white none repeat scroll 0% 50%;
-    color: rgb(0, 0, 0);
-    font-size: 10px;
-    text-decoration: none;
-}
-
-select:hover, option:hover, textarea:hover, input:hover { 
-    background: rgb(221, 221, 221) none repeat scroll 0% 50%;
-       }
-
-form.search { 
-    border-top: 1px solid rgb(214, 214, 214);
-    border-bottom: 1px solid rgb(214, 214, 214);
-    margin: 0px;
-    padding: 4px 4px 4px 10px;
-    background: rgb(240, 240, 240) none repeat scroll 0% 50%;
-    text-align: center;
-    display: block;
-    color: rgb(0, 129, 172);
-}
-
-form.search:hover { background: rgb(172, 108, 157) none repeat scroll 0% 50%;
-}
-
-#post_news input { 
-    width: 35%;
-}
-
-#post_news textarea { 
-    width: 100%;
-    height: 150px;
-}
-
-input#login, #post_news input#preview, #post_news input#save, #post_news input#reset { 
-    width: 100px;
-}
-
-#post_news table { 
-    padding: 0pt;
-}
-
-#post_news td { 
-    padding-left: 0pt;
-}
-
-#post_news table tr td.header { 
-    width: 10%;
-    font-weight: bold;
-}
-
-.alert { 
-    color: orange;
-}
-
-div.alert { 
-    border: 1px solid orange;
-    padding: 8px;
-}
-
-.preview, .message { 
-    border: 1px solid rgb(204, 204, 204);
-    padding: 8px;
-}
-
-#navbar { 
-    padding: 8px;
-    background: rgb(204, 204, 204) none repeat scroll 0% 50%;
-}
-
-#navbar a { 
-    padding-right: 6em;
-}
-
-
-
-/*for specific pages*/
+/* Used in transitions.php */
 #shapewipes img {
     width: 100px;
     height: 100px;
 }
 
-/* Distro Button */
-
+/* Downloads
+ * 
+ * Distribution buttons */
 div#distros div.button {
     display: block;
     float: left;
@@ -399,7 +266,6 @@ div#distros div.button div.details {
 }
 
 /* Details Box */
-
 #distro-details {
     margin: 0 2.5em 3em 2.5em;
     display: none;

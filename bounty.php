@@ -48,6 +48,24 @@ table.bounty td.bounty {
     table.bounty tr { background: rgb(208,208,255); }
     table.bounty tr.odd { background: rgb(240,240,255); }
     table.bounty tr.completed { background: rgb(220,250,220); }
+
+td { 
+    padding: 8px;
+    vertical-align: top;
+}
+
+Tr.header { 
+    background: rgb(221, 221, 221) none repeat scroll 0% 50%;
+    font-weight: bold;
+       }
+
+td.title {
+    background: rgb(221, 221, 221) none repeat scroll 0% 50%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(156, 66, 112);
+}
 </style>
 
 
