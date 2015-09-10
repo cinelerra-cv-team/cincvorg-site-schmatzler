@@ -6,6 +6,50 @@ include "../header.php";
 include "../sidemenu.php"; 
 ?>
 
+<style type="text/css">
+table.bounty {
+    width: 99%;
+    border: 0.2em solid black;
+    margin-bottom: 1em;
+}
+
+/*Table title line*/
+table.bounty th { 
+    padding: 1ex; 
+    background: rgb(54, 54, 54)/*(200, 150, 180)*/;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+}
+
+table.bounty td { margin: 1ex; }
+
+table.bounty td.category { 
+    border-right: 0.1em solid; 
+    width: 15%;}
+
+table.bounty td.taskname { 
+    border-right: 0.1em solid; 
+    width: 25%;}
+
+table.bounty td.req { 
+    border-right: 0.1em solid; 
+    width: 40%;}
+
+table.bounty td.bounty {
+    border-right: 0.1em solid; 
+    width: 8%;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;}
+    table.bounty td.status { 
+    width: 12%;
+    text-align: left;}
+
+    table.bounty tr { background: rgb(208,208,255); }
+    table.bounty tr.odd { background: rgb(240,240,255); }
+    table.bounty tr.completed { background: rgb(220,250,220); }
+</style>
 
 <div class='content'>
 <p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
