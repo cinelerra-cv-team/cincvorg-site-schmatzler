@@ -19,7 +19,6 @@ Italian television.</li>
   <li><a href="footage/toy_plane_liftoff.avi">toy_plane_liftoff.avi</a>(2.3 MB MJPEG) 4 seconds of MJPEG rendered by Blender.</li>
   <li><a href="footage/coals.mov">coals.mov</a> (16 MB, DV Quicktime) 5 seconds showing a burning barbeque, with heavy chroma artifacts caused by the camera.</li>
   <li><a href="footage/grill-mjpeg.mov">grill-mjpeg.mov</a>(35 MB, MJPEG), same as coals.mov, encoded in MJPEG.</li>
-  <li><a href="footage/guywmic_ntsc.mov">guywmic_ntsc.mov</a>(15 MB, unknown)</li>
   <li><a href="footage/MVI_3572.AVI">MVI_3572.AVI</a>(888 KB, MJPEG) 2 seconds half-resolution,
   taken with a digital still camera.</li>
 </ul>
@@ -71,7 +70,6 @@ Italian television.</li>
 
  <ul>
    <li><a href="footage/surfing-PP1-on-then-off.m2t">surfing-PP1-on-then-off.m2t</a>, wave surfers.</li>
-   <li><a href="footage/griffon-dropout.m2t">griffon-dropout.m2t</a>, playing dog.  3 secs, with one bad dropout.</li>
  </ul>
  
 <hr>
@@ -81,7 +79,7 @@ These clips where placed in the parent dir. at one stage:
 </div>
 
 <address>
-  Last modified on Dec 7 2010
+  Last modified on Sep 11, 2015
 </address>
 <?php include "footer.php"; ?>
 </body>
