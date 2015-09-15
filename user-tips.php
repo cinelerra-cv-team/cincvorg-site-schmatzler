@@ -8,7 +8,7 @@ include "sidemenu.php";
 <h2>Patches</h2>
 <h3>Cinelerra Bezier Patch</h3>
 <blockquote>
-<p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. It is a developement/beta version. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
+<p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
 <p><b>Note: This has since been included in CinelerraCV</b></p>
 </p>
 </blockquote>
@@ -48,6 +48,17 @@ index/toc-files from the sequence of images. No open/save dialogs,
 just "drag-and-drop" and few text entries with options. Any ideas
 about improvements are welcome! 
 </p>
+</blockquote>
+
+<h3>pngtoc.py</h3>
+<blockquote>
+<p><b>Доброслав Дичев</b> has created a workaround for <i>Seven Gnomes</i>:<br/>
+"I used Seven Gnomes but it won't run when the name of the folder contains cyrillic characters.<br/>
+That's why I made a little script which indexes a series of png files and creates a toc file.<br/>
+Just copy it in the folder where the png series of files are and run it.<br/>
+The script will ask you to give a name for the toc file, height and width of png images in pixels and fps (frames per second) and then creates the toc file."
+</p>
+<p><a href="/scripts/pngtoc.py">Download the script</a></p>
 </blockquote>
 
 <h3>mkframelist</h3>
