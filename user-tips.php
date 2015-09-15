@@ -130,7 +130,7 @@ href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueS
 
 </div>
 
-<address>Last modified on Sep 8 2015</address>
+<address>Last modified on Sep 15, 2015</address>
 <?php include "footer.php"; ?>
 
 </body>
