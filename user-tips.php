@@ -52,10 +52,8 @@ about improvements are welcome!
 
 <h3>pngtoc.py</h3>
 <blockquote>
-<p><b>Доброслав Дичев</b> has created a workaround for <i>Seven Gnomes</i>:<br/>
-"I used Seven Gnomes but it won't run when the name of the folder contains cyrillic characters.<br/>
-That's why I made a little script which indexes a series of png files and creates a toc file.<br/>
-Just copy it in the folder where the png series of files are and run it.<br/>
+<p><b>Доброслав Дичев</b> has created a a little script which indexes a series of png files and creates a toc file.<br/>
+Usage: Copy it in the folder where the png series of files are and run it.<br/>
 The script will ask you to give a name for the toc file, height and width of png images in pixels and fps (frames per second) and then creates the toc file."
 </p>
 <p><a href="/scripts/pngtoc.py">Download the script</a></p>
@@ -130,7 +128,7 @@ href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueS
 
 </div>
 
-<address>Last modified on Sep 15, 2015</address>
+<address>Last modified on Sep 16, 2015</address>
 <?php include "footer.php"; ?>
 
 </body>
