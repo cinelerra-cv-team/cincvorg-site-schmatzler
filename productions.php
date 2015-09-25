@@ -30,14 +30,12 @@ href="http://theora.org/">OGG Theora/Vorbis</a>.
 Other productions can be found just by entering 'Cinelerra' in the Search field of many hosting sites like:<br>
 <ul>
    <li><a href="http://www.archive.org/search.php?query=cinelerra">Internet Archive</a></li>
-   <li><a href="http://blip.tv/search?q=cinelerra&x=0&y=0">blip.tv</a></li>
    <li><a href="http://www.ourmedia.org/">Ourmedia</a></li>
-  <li><a href="http://video.google.com/videosearch?q=cinelerra&sitesearch=video.google.com#">Google Video</a></li>
-  <li><a href="http://www.youtube.com/results?search_query=cinelerra&search_type=&aq=f">YouTube</a></li> 
+   <li><a href="http://www.youtube.com/results?search_query=cinelerra&search_type=&aq=f">YouTube</a></li> 
  </ul>  
  </div> 
 
-<address> Last modified on 19 July 2008 </address>
+<address> Last modified on September 26, 2015 </address>
 
 <?php include "footer.php"; ?>
 
