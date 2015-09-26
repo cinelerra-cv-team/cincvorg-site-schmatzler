@@ -32,9 +32,8 @@ dark green theme, with light green and red used for emphasis, by
 <a href="http://tango.freedesktop.org/Tango_Desktop_Project" > Tango</a> artwork, by <b>Franco Iacomella</b>. (work in progress)</li>
 </ul>
 
+<div class="lastmodified">Last modified on Sep 9, 2015</div>
 </div>
-
-<address>Last modified on Sep 9, 2015</address>
 
 <!-- End body. -->
 <?php include "../footer.php"; ?>

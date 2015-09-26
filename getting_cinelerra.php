@@ -205,10 +205,8 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
 </div>
- 
-<address> Last modified on Sep 26, 2015 </address>
 
 <?php include "footer.php"; ?>
  </body>

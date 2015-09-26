@@ -103,9 +103,8 @@ Apple(tm)'s 2vuy uncompressed 8bit 4:2:2 video</td>
 
 <p><h3>Oops! :-( There are no bounties available at the moment. If you want to spend some bucks to get a feature working, please send a message to the mailing list.</h3></p>
 <strong> For more information contact the <a href="http://cinelerra-cv.org/contact.php">Cinelerra Community</a>.</strong>
+<div class="lastmodified">Last modified on Sep 9, 2015</div>
 </div>
-
-<address>Last modified on Sep 9, 2015 </address>
 
 <?php include "footer.php"; ?>
 </body>

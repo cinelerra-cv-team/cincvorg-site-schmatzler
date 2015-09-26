@@ -134,11 +134,9 @@ Some HOWTOs for specific needs are available on the internet:
 <p><b>TWiki</b><br />
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
- </div>
 
-<address>
-  Last modified on Sep 26, 2015
-</address>
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
+ </div>
 
 <?php include "footer.php"; ?>
  </body>

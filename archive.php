@@ -21,9 +21,8 @@ include "header.php";
 <li><a href="archive/old_bounties.php">Old bounty offers</a></li>
 </ul>
 <br />
+<div class="lastmodified">Last modified on Sep 6, 2015</div>
 </div>
-
-<address>Last modified on Sep 9, 2015</address>
 
 <?php include "footer.php"; ?>
 </body>

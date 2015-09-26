@@ -29,9 +29,9 @@ The <i>git repository</i> in 12 hour sync with the cinelerra svn, maintained at 
 </p>
 <p>
 <i>Bugzilla</i> (bugs.cinelerra-cv.org) will be moved later.
-<p> 
+<p>
+<div class="lastmodified">Last modified on Aug 12, 2008</div>
 </div>
-<address>Last modified on 12 August 2008</address>
 
 <!-- End body. -->
 <?php include "../footer.php"; ?>

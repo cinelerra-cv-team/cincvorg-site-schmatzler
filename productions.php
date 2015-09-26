@@ -34,10 +34,9 @@ Other productions can be found just by entering 'Cinelerra' in the Search field 
    <li><a href="http://www.archive.org/search.php?query=cinelerra">Internet Archive</a></li>
    <li><a href="http://www.ourmedia.org/">Ourmedia</a></li>
    <li><a href="http://www.youtube.com/results?search_query=cinelerra&search_type=&aq=f">YouTube</a></li> 
- </ul>  
- </div> 
-
-<address> Last modified on September 26, 2015 </address>
+ </ul>
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
+</div> 
 
 <?php include "footer.php"; ?>
 

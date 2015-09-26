@@ -1,3 +1,4 @@
-<div id="footer">This is a branched version of Cinelerra. We are <b>not</b> cinelerra.org. Please visit the <a href="/about.php">about</a> section for more information regarding this duality.</div>
+</div>
+<div class="footer">We are <b>not</b> cinelerra.org. <a href="/about.php">Why?</a></div>
 <!--Close main+layout div-->
-</div></div>
+</div>

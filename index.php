@@ -103,9 +103,8 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
 </div>
-
-<address>Last modified on Sep 5, 2015</address>
 
 <?php include "footer.php"; ?>
 </body>

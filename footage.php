@@ -76,11 +76,9 @@ Italian television.</li>
 <h3>Other</h3>
 These clips where placed in the parent dir. at one stage:
  <a href='footage/videos/nina-mp4-mp3_m-5s.mov'>#1</a> (278k, herman)  <a href='footage/videos/shrunk.mov'>#2</a> (2.2M herman)  <a href='footage/videos/vid1.avi'>#3</a> (23M, taraba)
+<div class="lastmodified">Last modified on Sep 11, 2015</div>
 </div>
 
-<address>
-  Last modified on Sep 11, 2015
-</address>
 <?php include "footer.php"; ?>
 </body>
 </html>

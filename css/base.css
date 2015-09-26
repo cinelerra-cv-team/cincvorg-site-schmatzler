@@ -61,25 +61,13 @@ pre {
     background: rgb(235, 235, 235) none repeat scroll 0% 50%;
 }
 
-/* Footer */
-#footer { 
-    border-top: 1px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
-    text-align: center;
-    color: white;
-    background-color: black;
-    width: 100%;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    clear: both;
-}
-
-#footer img { 
-border: medium none ;
-}
-
-#footer a { 
-color: orange;
+div.footer {
+    font-size: 87.5%;
+    border-top: 1px solid #eee;
+    padding: 0.2em;
+    background: rgb(250, 250, 250);
+    text-align:center;
+    margin-top:50px;
 }
 
 /* Used for indentation */
@@ -194,4 +182,8 @@ div.livecd h4 {
 #menu li a img {
     vertical-align:-25%;
     margin-right:3px;
+}
+
+.lastmodified {
+  text-align:right;margin-right:-20px;font-size:small;
 }

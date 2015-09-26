@@ -80,10 +80,8 @@ New images can be placed in any location. Use the <em>Browse</em> button to brow
 
 <p>We don't have any themes here at the moment</p>
 <p>If you're working on something for Cinelerra, please <a href="/contact.php">send us a message!</a></p>
+<div class="lastmodified">Last modified on Sep 9, 2015</div>
 </div>
-
-
-<address>Last modified on Sep 9, 2015</address>
 
 <?php include "footer.php"; ?>
 </body> </html>

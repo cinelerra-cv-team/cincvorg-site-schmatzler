@@ -149,9 +149,8 @@ with that.
   </tbody>
 </table>
 
+<div class="lastmodified">Last modified on Sep 9, 2015</div>
 </div>
-
-<address>Last modified on Sep 9, 2015</address>
 
 <!-- End body. -->
 <?php include "../footer.php"; ?>

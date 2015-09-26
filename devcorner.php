@@ -248,9 +248,8 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
         the detailed description.
 </blockquote>
 
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
 </div> 
-
-<address>Last modified on Sep 26, 2015</address>
 
 <?php include "footer.php"; ?>
 </body> </html>

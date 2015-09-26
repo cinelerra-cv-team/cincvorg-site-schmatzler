@@ -28,9 +28,8 @@ include "header.php";
   <p>You've found a bug on the website or you have a suggestion for it? Please <a href="mailto:danny@schmarsel.de">send me a message!</a></p>
   <p><b>Note:</b> If you'd like to make non-trivial changes or change extensive stuff, please contact the mailing list first for approval.</p>
 
+<div class="lastmodified">Last modified on Sep 5, 2015</div>
 </div>
-
-<address> Last modified on Sep 5, 2015 </address>
  
 <?php include "footer.php"; ?>
  </body>

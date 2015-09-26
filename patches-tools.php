@@ -129,9 +129,9 @@ href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueS
 <p><b>Note:</b> Link is dead. Author contacted.</p>
 </blockquote>
 
+<div class="lastmodified">Last modified on Sep 16, 2015</div>
 </div>
 
-<address>Last modified on Sep 16, 2015</address>
 <?php include "footer.php"; ?>
 
 </body>

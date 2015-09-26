@@ -495,8 +495,8 @@ Sylvain is applying patches from Andraz on the CVS </p>
 <p><strong>April 29, 2003</strong> <br>
 Imported the code tree from Sylvain Joyeux into the CVS </p>
 </div>
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
 </div>
-<address>Last modified on Sep 26, 2015</address>
 
 <?php include "../footer.php"; ?>
 </body>

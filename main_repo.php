@@ -72,9 +72,8 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
+<div class="lastmodified">Last modified on Sep 26, 2015</div>
 </div> 
-
-<address> Last modified on Sep 26, 2015 </address>
 
 <?php include "footer.php"; ?>
 </body> </html>

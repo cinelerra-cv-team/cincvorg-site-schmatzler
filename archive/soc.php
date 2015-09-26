@@ -154,9 +154,8 @@ http://www.pipapo.org/pipawiki/Cinelerra/Developers/ct/MediaManager</a>
 	</tr>
 
 </table>
+<div class="lastmodified">Last modified on Sep 19, 2011</div>
 </div>
-
-<address> Last modified on Sept 19 2011 </address>
 
 <?php include "../footer.php"; ?>
 </body>
