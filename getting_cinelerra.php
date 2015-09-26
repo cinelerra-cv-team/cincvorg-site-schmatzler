@@ -169,7 +169,7 @@ for details.</p>
 
 <p>The sources of Cinelerra-CV are available as .tar.xz snapshots here:</p>
 <p><a href="http://www.cinelerra-cv.org/releases/">Browse releases</a></p>
-<p>You can also <a href="/source_code.php">check out the code</a> we're currently working on.</p>
+<p>You can also <a href="/main_repo.php">check out the code</a> we're currently working on.</p>
 
 <!-- async js -->
 <script type="text/javascript">
@@ -208,7 +208,7 @@ Event.observe (window, 'load', install_distro_button_actions);
 
 </div>
  
-<address> Last modified on Sep 8, 2015 </address>
+<address> Last modified on Sep 26, 2015 </address>
 
 <?php include "footer.php"; ?>
  </body>
