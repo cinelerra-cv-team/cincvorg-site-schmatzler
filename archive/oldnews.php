@@ -1,8 +1,6 @@
 <?php
 $title="Old News";
 include "../header.php";
-
-include "../sidemenu.php"; 
 ?>
 
 

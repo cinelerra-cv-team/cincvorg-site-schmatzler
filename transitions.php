@@ -1,11 +1,14 @@
 <?php 
 $title="Transitions";
 include "header.php";
-include "sidemenu.php"; 
 ?>
 
 
 <div class='content'>
+<div class="header">
+    <h1>Transitions & Themes</h1>
+    <h2>More eye-candy for your projects</h2> 
+</div>
 <h2>Shape Wipe transition</h2>
 
 The <em>Shape Wipe</em> transition is based on gray-scale PNG images. Only 5 images are included by default in Cinelerra. <br>

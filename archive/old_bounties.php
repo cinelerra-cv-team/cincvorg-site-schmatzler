@@ -1,9 +1,6 @@
 <?php
 $title="Archived Bounties";
-
 include "../header.php";
-
-include "../sidemenu.php"; 
 ?>
 
 <style type="text/css">

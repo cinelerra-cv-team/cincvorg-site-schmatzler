@@ -1,13 +1,15 @@
 <?php
 $title="User's Productions";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 
 <div class="content">
- <h1>Cinelerra Productions</h1>
+<div class="header">
+    <h1>Cinelerra Productions</h1>
+    <h2>An overview of hosting sites</h2> 
+</div>
+ <h1></h1>
 
 To watch productions made with Cinelerra you can visit many hosting sites.
 

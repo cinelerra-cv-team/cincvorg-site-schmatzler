@@ -1,12 +1,13 @@
 <?php
 $title="Contact us";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <div class="content">
-<h1 id="page-heading">How to get in touch with us</h1>
+<div class="header">
+    <h1>Contact us</h1>
+    <h2>How to get in touch with us</h2> 
+</div>
 
 <h2>E-Mail</h2>
   <p>E-Mail is our main medium of communication.<p>

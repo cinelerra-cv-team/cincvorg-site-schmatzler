@@ -1,8 +1,6 @@
 <?php 
 $title="Bounty";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <style type="text/css">
@@ -70,7 +68,10 @@ td.title {
 
 
 <div class="content">
-<h1>Bounty!</h1>
+<div class="header">
+    <h1>Bounty!</h1>
+    <h2>Invest some cash to get new features</h2> 
+</div>
 <p>
 
 <table class="bounty">

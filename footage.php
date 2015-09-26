@@ -1,15 +1,15 @@
 <?php 
 $title="Test Clips";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 
 <div class='content'>
+<div class="header">
+    <h1>Test Clips</h1>
+    <h2>Video files in various formats</h2> 
+</div>
 
-<h1>Test clips</h1>
- 
 <ul>
   <li><a href="footage/bars_100.avi">bars_100.avi</a> (15MB, DV) Colour bars, 4 seconds</li>
   <li><a href="footage/prpol-rerender2.avi">prpol-rerender2.avi</a> (7.5 MB DV), ~2 seconds DV rerendered by Cinelerra</li>

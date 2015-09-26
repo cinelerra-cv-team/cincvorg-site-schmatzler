@@ -1,12 +1,13 @@
 <?php 
 $title="DevCorner";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <div class='content'>
-<h1>Developer's corner</h1>
+<div class="header">
+    <h1>Developer's corner</h1>
+    <h2>A quick introduction for developers</h2> 
+</div>
 
 <h2>Cinelerra CV repo</h2>
 

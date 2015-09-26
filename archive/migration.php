@@ -1,9 +1,6 @@
 <?php
 $title="Migration";
-
 include "../header.php";
-
-include "../sidemenu.php"; 
 ?>
 
 

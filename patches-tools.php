@@ -1,10 +1,13 @@
 <?php
 $title="Tools";
 include "header.php";
-include "sidemenu.php"; 
 ?>
 
 <div class="content">
+<div class="header">
+    <h1>Patches & Tools</h1>
+    <h2>Useful extensions for Cinelerra-CV</h2> 
+</div>
 <h2>Patches</h2>
 <h3>Cinelerra Bezier Patch</h3>
 <blockquote>

@@ -1,8 +1,6 @@
 <?php
 $title="Get involved";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 

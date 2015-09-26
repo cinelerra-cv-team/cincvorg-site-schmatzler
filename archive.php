@@ -1,15 +1,14 @@
 <?php
 $title="Archive";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 
 <div class='content'>
-<br>
-
-<h2><a name="news">Archive</a></h2>
+<div class="header">
+    <h1>Archive!</h1>
+    <h2>Obsolete content that may still be useful</h2> 
+</div>
 
 <p>This section is devoted to old content from our website we don't want to lose.</p>
 <p>We also plan to archive various websites in the future (which are only available through archive.org).</p>
@@ -21,6 +20,7 @@ include "sidemenu.php";
 <li><a href="archive/tools_themes.php">Content archived from the "tools" and "themes" sections</a></li>
 <li><a href="archive/old_bounties.php">Old bounty offers</a></li>
 </ul>
+<br />
 </div>
 
 <address>Last modified on Sep 9, 2015</address>

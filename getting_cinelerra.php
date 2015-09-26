@@ -1,17 +1,13 @@
 <?php
 $title="Get Cinelerra-CV";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <div class="content">
- <h1>Get Cinelerra-CV</h1>
-<h3>
-<a href="#livecd">Live Media</a> |
-<a href="#packages">Packages</a> |
-<a href="#source">Source code</a>
-</h3>
+<div class="header">
+    <h1>Get Cinelerra-CV</h1>
+    <h2>Download <a href="#livecd">Live Media</a> | <a href="#packages">Packages</a> | <a href="#source">Source code</a></h2> 
+</div>
 
 <h2><a name="livecd">Live Media</a></h2>
 

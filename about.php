@@ -1,13 +1,14 @@
 <?php
 $title="About Cinelerra";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <div class="content">
 
-<h1>Why two versions of Cinelerra?</h1>
+<div class="header">
+    <h1>About Cinelerra</h1>
+    <h2>Why two versions of Cinelerra?</h2> 
+</div>
 
 <p>Cinelerra is one of the most advanced, open-source non-linear video editors and compositors for Linux.</p>
 <p>Users are frequently confused about the fact that two separately maintained versions of this software exist.</p>

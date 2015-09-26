@@ -1,9 +1,6 @@
 <?php
 $title="Archived Tools";
-
 include "../header.php";
-
-include "../sidemenu.php"; 
 ?>
 
 

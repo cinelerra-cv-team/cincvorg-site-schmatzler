@@ -1,13 +1,51 @@
 <?php
 $title="News";
 include "header.php";
-include "sidemenu.php"; 
 ?>
+
+<style type="text/css">
+    .hero-titles {
+        font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 0 1em;
+        margin: 2em auto;
+        max-width: 768px;
+        font-size: 150%;
+        line-height: 1.5;
+        font-weight: 200;
+        margin: 0 0 1em;
+        color: #666;
+    }
+    a.button-cta {
+        background: #1f8dd6;
+        color: #fff;
+        border: 1px solid #1f8dd6;
+    }
+    a.button-cta, a.button-secondary {
+        margin: 0.25em;
+    }
+    a.button-secondary {
+       background: #fff;
+       color: #666;
+       border: 1px solid #ddd;
+    }
+    a.button-cta, a.button-secondary {
+       margin: 0.25em;
+    }
+</style>
 
 
 <div class='content'>
 
-<h2><a>News</a></h2>
+        <div style="text-align:center;margin-top:15px;padding-top:30px;"><img src="/cinelerra-orng.png" alt="Cinelerra-CV">
+        <div class="hero-titles">Professional video editing and compositing environment for Linux.</div>
+        
+        <div>
+            <a class="button-cta pure-button" href="/getting_cinelerra.php">Get Started</a>
+            <a class="button-secondary pure-button" href="http://git.cinelerra-cv.org/gitweb">Browse code</a>
+        </div>
+        </div>
+
+<h1>News</h2>
 
 <p>
 <strong>September 5, 2015</strong><br>

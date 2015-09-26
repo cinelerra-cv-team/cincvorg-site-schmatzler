@@ -1,13 +1,13 @@
 <?php 
 $title="Documentation";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
-
 <div class="content">
- <h1>The features, the manual, the tutorials</h1>
+<div class="header">
+    <h1>Documentation</h1>
+    <h2>The features, the manual, the tutorials</h2> 
+</div>
  <p><b>Note:</b> Entries that are marked with <img src="/images/website/archive.png" /> are hosted on archive.org and may be outdated.</p>
  <h2>Cinelerra's features</h2>
  Linux Media Arts has an <a href="http://heroinewarrior.com/cinelerra.php">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,

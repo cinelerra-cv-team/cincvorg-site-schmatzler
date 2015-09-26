@@ -1,12 +1,13 @@
 <?php 
 $title="Repository";
 include "header.php";
-
-include "sidemenu.php"; 
 ?>
 
 <div class='content'>
-<h1>The official unofficial Cinelerra repository</h1>
+<div class="header">
+    <h1>Repository</h1>
+    <h2>Who works on what? Where?</h2> 
+</div>
 
 <p>
 The source code of the community Version of Cinelerra is available from a git repository. To get it you need to have git-core installed.
