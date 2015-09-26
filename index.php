@@ -48,6 +48,11 @@ include "header.php";
 <h1>News</h2>
 
 <p>
+<strong>September 26, 2015</strong><br>
+* Our new website has launched. It can now be browsed with tablets and smartphones. We also added language icons to our <a href="/docs.php">documentation section</a>, making it easier to find useful content in your native tongue.
+</p>
+
+<p>
 <strong>September 5, 2015</strong><br>
 * We've switched over to a new machine to host our repositories and the website. As a result, our <a href="http://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="http://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
 </p>
@@ -93,36 +98,10 @@ For verifying future news statements, please refer to our mailing list <a href="
 * Cinelerra-CV has moved to <a href="http://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
 </p>
 
-<p>
-<strong>Jul 9, 2012</strong><br>
-* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.4</a>. Faster startup and responsiveness. Audio oscilloscope. Histogram updates. Audio gap removal. Better recording from webcams. Better live audio processing. Introducing the Bright theme for outdoor use.
-</p>
-
-<p>
-<strong>Nov 13, 2011</strong><br>
-* <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://lists.skolelinux.org/pipermail/cinelerra/2011-November/018309.html">release announcement</a>.<br>
-This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
-</p>
-<p>
-<strong>Aug 5, 2011</strong><br>
-* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.3</a>. Most notable feature is text to movie synthesis.
-</p>
-
-<p>
-<strong>Nov 21, 2010</strong><br>
-* <em>CinelerraCV 2.1.5</em> is out, with SOWT audio support, other improvements and bug fixes. For more details see the <a href="http://e.kevb.net/lurker/message/20101121.202538.c50bfa27.en.html">release announcement</a>.
-</p>
-
-<p>
-<strong>Oct 15, 2010</strong><br>
-* While we are working on CinelerraCV 2.1.5, <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.2</a>. Of main interest might be the "Edit->Align edits" feature, which aligns all the audio edits with the video.
-Then there's the keyframe spanning feature, where highlighting a region with keyframe generation on causes effect tweeks to span all the keyframes.
-Then there's the fact that all assets are opened in subprocesses so they don't bring down the entire program when they crash. featuring nested sequences. Only the source code is available, no packages.
-</p>
-
 <hr>
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
+<br />
 </div>
 
 <address>Last modified on Sep 5, 2015</address>

@@ -11,11 +11,35 @@ include "../header.php";
 The front page only contains the latest news items.
 These are the older ones, back to the beginning in April 2003.
 </blockquote>
-</p>
-</div>
-<div class"body">
-<div class="content">
 <hr>
+</p>
+
+<p>
+<strong>Jul 9, 2012</strong><br>
+* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.4</a>. Faster startup and responsiveness. Audio oscilloscope. Histogram updates. Audio gap removal. Better recording from webcams. Better live audio processing. Introducing the Bright theme for outdoor use.
+</p>
+
+<p>
+<strong>Nov 13, 2011</strong><br>
+* <em>CinelerraCV 2.2</em> is released. It includes Hermann Vosseler's Bezier Patch (bezier automation for Cinelerra-CV fades, camera and projector), improved default settings, extended audio range, support for multiline label and clips comments, autodetection of OpenGL in configure, detection of v4l2. For more details see the <a href="https://lists.skolelinux.org/pipermail/cinelerra/2011-November/018309.html">release announcement</a>.<br>
+This release inaugurates the new <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">community GIT repo</a> for Cinelerra. 
+</p>
+<p>
+<strong>Aug 5, 2011</strong><br>
+* <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.3</a>. Most notable feature is text to movie synthesis.
+</p>
+
+<p>
+<strong>Nov 21, 2010</strong><br>
+* <em>CinelerraCV 2.1.5</em> is out, with SOWT audio support, other improvements and bug fixes. For more details see the <a href="http://e.kevb.net/lurker/message/20101121.202538.c50bfa27.en.html">release announcement</a>.
+</p>
+
+<p>
+<strong>Oct 15, 2010</strong><br>
+* While we are working on CinelerraCV 2.1.5, <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.2</a>. Of main interest might be the "Edit->Align edits" feature, which aligns all the audio edits with the video.
+Then there's the keyframe spanning feature, where highlighting a region with keyframe generation on causes effect tweeks to span all the keyframes.
+Then there's the fact that all assets are opened in subprocesses so they don't bring down the entire program when they crash. featuring nested sequences. Only the source code is available, no packages.
+</p>
 
 <p>
 <strong>Oct 25, 2010</strong><br>
@@ -472,8 +496,7 @@ Sylvain is applying patches from Andraz on the CVS </p>
 Imported the code tree from Sylvain Joyeux into the CVS </p>
 </div>
 </div>
-<hr>
-<address>Last modified on 29 July 2008</address>
+<address>Last modified on Sep 26, 2015</address>
 
 <?php include "../footer.php"; ?>
 </body>
