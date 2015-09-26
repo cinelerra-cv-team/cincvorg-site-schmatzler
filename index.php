@@ -3,7 +3,7 @@ $title="News";
 include "header.php";
 ?>
 
-<style type="text/css">
+<style type="text/css" scoped>
     .hero-titles {
         font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 1em;
@@ -45,7 +45,7 @@ include "header.php";
         </div>
         </div>
 
-<h1>News</h2>
+<h2>News</h2>
 
 <p>
 <strong>September 26, 2015</strong><br>
@@ -67,12 +67,13 @@ Changes in version 2.3:
 <li>New plugins: GreyCStoration, C41, Bluebanana, color3way, findobject, lens</li>
 <li>Some translations have been updated (German, Italian, French, Norwegian, Portugese)</li>
 <li>Lots of small bugfixes</li>
-<li>Changes in build system:</li>
+<li>Changes in build system:
   <ul>
     <li>Automated creation of header files for png in plugins.</li>
     <li>Updated debian build files</li>
     <li>Renamed project to Cinelerra-cv</li>
   </ul>
+</li>
 </ul>
 Full changelog can be browsed through <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
 </p>

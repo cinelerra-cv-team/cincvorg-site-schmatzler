@@ -57,8 +57,8 @@
             <a class="pure-menu-heading" href="#">Other</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="https://www.facebook.com/cinelerracv" target="_blank" class="pure-menu-link"><img src="/images/website/menu/FB-f-Logo__blue_20.png" />Follow us</a></li>
-                <li class="pure-menu-item"><a href="/archive.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" />Archive</a></li>
+                <li class="pure-menu-item"><a href="https://www.facebook.com/cinelerracv" target="_blank" class="pure-menu-link"><img src="/images/website/menu/FB-f-Logo__blue_20.png" alt="facebook" />Follow us</a></li>
+                <li class="pure-menu-item"><a href="/archive.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
             </ul>
         </div>
     </div>
