@@ -6,7 +6,7 @@ include "header.php";
 
 <div class='content'>
 <div class="header">
-    <h1>Archive!</h1>
+    <h1>Archive</h1>
     <h2>Obsolete content that may still be useful</h2> 
 </div>
 
