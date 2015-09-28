@@ -107,6 +107,22 @@ for details.</p>
     </div>
   </div>
 
+  <div id="distro-manjaro" class="button">
+    <img src="/images/website/distro-logos/manjaro.png" alt="Manjaro Logo" title="Download Cinelerra-CV for Manjaro" />
+    <h4>Manjaro</h4>
+    <div class="details">
+      <p> 
+<p>Cinelerra-CV can be installed through the <i>Octopi</i> package manager.</p>
+<p>Search for the following packages and install them:
+<ul>
+<li>libquicktime</li>
+<li>mjpegtools</li>
+<li>cinelerra-cv</li>
+</ul></p>
+      </p>
+    </div>
+  </div>
+
   <div id="distro-openmandriva" class="button">
     <img src="/images/website/distro-logos/openmandriva.png" alt="OpenMandriva Logo" title="Download Cinelerra-CV for OpenMandriva" />
     <h4>Mandriva</h4>
