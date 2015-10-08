@@ -6,8 +6,10 @@ include "header.php";
 <div class='content'>
 <div class="header">
     <h1>Developer's corner</h1>
-    <h2>A quick introduction for developers</h2> 
+    <h2>Detailed instructions for coders</h2> 
 </div>
+
+<h1>Quick overview</h1>
 
 <h2>Cinelerra-CV repositories</h2>
 
@@ -63,7 +65,7 @@ cinelerra subdirectory</a>.</li>
 
 </blockquote>
 
-<p>  Thanks to Jens Seidel for suggesting doxygen, and providing a template configuration file.</p>
+<p>Thanks to Jens Seidel for suggesting doxygen, and providing a template configuration file.</p>
 
 <h1>Guidelines</h1>
 
@@ -72,7 +74,7 @@ cinelerra subdirectory</a>.</li>
 <p>The official CinelerraCV git repository is managed by core developers.</p>
 <p>The master branch stores the live development. <br>
 Every official release freezes the development into a dedicated branch.</p>
-<p>Changes must be approved by 2 core developers.</p>
+<p>Changes must be approved by a core developer.</p>
 
 <h2>Core developers</h2>
 
@@ -91,7 +93,7 @@ Community before disappearing.</p>
 <p>There are some minimum requirements for new developers:</p>
 <p>Anyone who wants to become core developer of Cinelerra must have had at least
 two accepted commits to the official Cinelerra master branch.<br>
-Then he/she can send letter of application to mailing list describing
+Then he/she can send a letter of application to the mailing list describing
 what he/she wants to do as a core developer.<br>
 Commit access will be discussed and decided by the core developers.</p>
 
@@ -99,18 +101,18 @@ Commit access will be discussed and decided by the core developers.</p>
 
 <p>Occasional code contribution is very welcome.</p>
 
-<h3>Patch storage</h3>
+<h2>Patch storage</h2>
 
-<p>We want the contributed code stored in a stable place, with easy access to be sure that we have a copy of 
-the original patch forever. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra-cv.org, bugs.cinelerra-cv.org.).<br>
+<p>We want the contributed code stored in a stable place, with easy access to be sure that we'll forever have a copy of 
+the original patch. That's why we ask contributors to upload the patch on the Cinelerra server (git.cinelerra-cv.org, bugs.cinelerra-cv.org.).<br>
 Small patches (max 60KB) can be sent to the mailing list as an e-mail attachment. <br>
-The Trac powered bug tracker is set to accept attachements as big as 256KB.<br>
+The Trac powered bug tracker is set to accept attachments as big as 256KB.<br>
 Bigger patches can be committed to the "mob" GIT repository.<br>
 Frequent contributors can ask for a personal git repository.</p>
 
 <p>Any patch not immediately available or loaded onto a site that needs some quirk for downloading (registration, waiting times, fees...) will be rejected automatically.</p>
 
-<h3>Mail notification</h3>
+<h2>Mail notification</h2>
 
 <p>Contributions must be notified to the <a href="contact.php">mailing list</a>.<br>
 Patches must start a new thread whith subject </p>
@@ -121,7 +123,7 @@ Patches must start a new thread whith subject </p>
 
 <p>The body of the message must contain the description of the patch and must include the reference (link) to the patch.</p>
 
-<h3>Interaction with the community</h3>
+<h2>Interaction with the community</h2>
 
 <p>Contributors are asked to collaborate for the integration.<br>
 Contributors must accept that their contribution will be reviewed by 
@@ -136,12 +138,51 @@ collaborative work.</p>
 
 <h2>Proposed changes (patches or git commits)</h2>
 
-<p>Every change must be approved by at least 2 core developers 
+<p>Every change must be approved by at least one core developer 
 before being integrated into the official repository.<br>
-Exceptions that can be commited by one developer are obvious bugfixes or 
+Exceptions that can be commited directly are obvious bugfixes or 
 fixes to recent commits.</p>
 
-<p>Every change must:</p>
+<p>The preferable way to prepare patches is <code>git format-patch</code>, but we
+accept patches in all formats that we can understand. We hope that this
+makes things simpler for new contributors.</p>
+
+<p>Every patch sent must have a name in the subject of the mail (the
+subject must start with [PATCH]) and have a description about what/why/how the
+patch does improve Cinelerra-CV.
+
+<h3>How to work with git format-patch</h3>
+
+<p>To create patches with <a href="http://git-scm.com/docs/git-format-patch" target="_blank">git-format-patch</a> and send them with <a href="http://git-scm.com/docs/git-send-email" target="_blank">git-send-email</a> you may have to add a configuration like this to <i>~/.gitconfig</i>:</p>
+
+<pre>
+[format]
+    suffix = .patch
+    numbered = auto
+    signOff = true
+    coverletter = auto
+[sendemail]
+    suppresscc=self
+    smtpEncryption = ssl
+    smtpServer = server.com
+    smtpUser = username
+    smtpServerPort = 465
+</pre>
+
+<p>Afterwards, you can create and send patches like this:</p>
+
+<pre>
+    cd cinelerra-cv-2.3.git
+    mkdir outgoing
+    git format-patch -2 -o outgoing/
+    git send-email outgoing/
+</pre>
+
+<p>SignOff is not currently required.<br />
+<b>Note:</b> The smtp setup above is just a basic example.<br />
+Please consult your internet or hosting provider for more information about smtp settings.</p>
+
+<h3>Every change must:</h3>
 
 <blockquote>
 <h3>1. address a single feature</h3>
@@ -174,7 +215,7 @@ milestone.
 
 <h3>4. try hard to be compatible</h3>
 
-<p>Ideally the new version of CinCV should e able to import a project created in a 
+<p>Ideally the new version of CinCV should be able to import a project created in a 
 former version of CinCV. Yet, when important innovations requires it, compatibility can 
 be broken: projects saved from a newer version may not load to previous version. <br>
 In such cases, the change will be clearly marked with a tag. The ability
