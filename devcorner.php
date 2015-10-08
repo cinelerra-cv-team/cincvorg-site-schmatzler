@@ -238,28 +238,28 @@ Different parts of Cinelerra have different coding styles.
 The most common is:</p>
 
 <pre>
-int main()<br>
-{<br>
-        int i;<br>
-<br>
-        if(i == 1)<br>
-        {<br>
-                i = 2;<br>
-        }<br>
+int main()
+{
+        int i;
+
+        if(i == 1)
+        {
+                i = 2;
+        }
 }
 </pre>
 
 In this example white spaces are made using tabs as follows:
 
 <pre>
-int main()<br>
-{<br>
-&lt;tab&gt;int i;<br>
-<br>
-&lt;tab&gt;if(i == 1)<br>
-&lt;tab&gt;{<br>
-&lt;tab&gt;&lt;tab&gt;i = 2;<br>
-&lt;tab&gt;}<br>
+int main()
+{
+&lt;tab&gt;int i;
+
+&lt;tab&gt;if(i == 1)
+&lt;tab&gt;{
+&lt;tab&gt;&lt;tab&gt;i = 2;
+&lt;tab&gt;}
 }
 </pre>
 
