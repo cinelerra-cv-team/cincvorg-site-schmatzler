@@ -30,35 +30,35 @@
             <a class="pure-menu-heading" href="#">Cinelerra-CV</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/index.php" class="pure-menu-link"><img src="/images/website/menu/newspaper.png" alt="news" />Home</a></li>
-                <li class="pure-menu-item"><a href="/about.php" class="pure-menu-link"><img src="/images/website/menu/info-button.png" alt="about" />About</a></li>
-                <li class="pure-menu-item"><a href="/contact.php" class="pure-menu-link"><img src="/images/website/menu/contact.png" alt="contact" />Contact us</a></li>
-                <li class="pure-menu-item"><a href="/docs.php" class="pure-menu-link"><img src="/images/website/menu/docs.png" alt="docs" />Documentation</a></li>
-                <li class="pure-menu-item"><a href="/productions.php" class="pure-menu-link"><img src="/images/website/menu/users.png" alt="users" />Users' Productions</a></li>
+                <li class="<?php if ($title=="News") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/index.php" class="pure-menu-link"><img src="/images/website/menu/newspaper.png" alt="news" />Home</a></li>
+                <li class="<?php if ($title=="About Cinelerra") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/about.php" class="pure-menu-link"><img src="/images/website/menu/info-button.png" alt="about" />About</a></li>
+                <li class="<?php if ($title=="Contact us") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/contact.php" class="pure-menu-link"><img src="/images/website/menu/contact.png" alt="contact" />Contact us</a></li>
+                <li class="<?php if ($title=="Documentation") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/docs.php" class="pure-menu-link"><img src="/images/website/menu/docs.png" alt="docs" />Documentation</a></li>
+                <li class="<?php if ($title=="User's Productions") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/productions.php" class="pure-menu-link"><img src="/images/website/menu/users.png" alt="users" />Users' Productions</a></li>
             </ul>
             
             <a class="pure-menu-heading" href="#">Download</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/getting_cinelerra.php" class="pure-menu-link"><img src="/images/website/menu/downloads.png" alt="downloads" />Get Cinelerra-CV</a></li>
-                <li class="pure-menu-item"><a href="/patches-tools.php" class="pure-menu-link"><img src="/images/website/menu/tools.png" alt="tools" />Patches & Tools</a></li>
-                <li class="pure-menu-item"><a href="/transitions.php" class="pure-menu-link"><img src="/images/website/menu/transitions.png" alt="transitions" />Transitions & Themes</a></li>
-                <li class="pure-menu-item"><a href="/footage.php" class="pure-menu-link"><img src="/images/website/menu/footage.png" alt="footage" />Test clips</a></li>
+                <li class="<?php if ($title=="Get Cinelerra-CV") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/getting_cinelerra.php" class="pure-menu-link"><img src="/images/website/menu/downloads.png" alt="downloads" />Get Cinelerra-CV</a></li>
+                <li class="<?php if ($title=="Tools") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/patches-tools.php" class="pure-menu-link"><img src="/images/website/menu/tools.png" alt="tools" />Patches & Tools</a></li>
+                <li class="<?php if ($title=="Transitions") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/transitions.php" class="pure-menu-link"><img src="/images/website/menu/transitions.png" alt="transitions" />Transitions & Themes</a></li>
+                <li class="<?php if ($title=="Test Clips") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/footage.php" class="pure-menu-link"><img src="/images/website/menu/footage.png" alt="footage" />Test Clips</a></li>
             </ul>
             
             <a class="pure-menu-heading" href="#">Development</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="/devcorner.php" class="pure-menu-link"><img src="/images/website/menu/devcorner.png" alt="devcorner" />Developer's corner</a></li>
-                <li class="pure-menu-item"><a href="/main_repo.php" class="pure-menu-link"><img src="/images/website/menu/main_repo.png" alt="main_repo" />Repository</a></li>
-                <li class="pure-menu-item"><a href="/bounty.php" class="pure-menu-link"><img src="/images/website/menu/star.png" alt="bounty" />Bounty</a></li>
+                <li class="<?php if ($title=="DevCorner") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/devcorner.php" class="pure-menu-link"><img src="/images/website/menu/devcorner.png" alt="devcorner" />Developer's corner</a></li>
+                <li class="<?php if ($title=="Repository") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/main_repo.php" class="pure-menu-link"><img src="/images/website/menu/main_repo.png" alt="main_repo" />Repository</a></li>
+                <li class="<?php if ($title=="Bounty") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/bounty.php" class="pure-menu-link"><img src="/images/website/menu/star.png" alt="bounty" />Bounty</a></li>
             </ul>
             
             <a class="pure-menu-heading" href="#">Other</a>
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="https://www.facebook.com/cinelerracv" target="_blank" class="pure-menu-link"><img src="/images/website/menu/FB-f-Logo__blue_20.png" alt="facebook" />Follow us</a></li>
-                <li class="pure-menu-item"><a href="/archive.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
+                <li class="<?php if ($title=="Archive") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/archive.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
             </ul>
         </div>
     </div>
