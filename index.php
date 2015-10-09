@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>October 9, 2015</strong><br>
+* We have documented our latest codebase with<a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
+</p>
+
+<p>
 <strong>September 26, 2015</strong><br>
 * Our new website has launched. It can now be browsed with tablets and smartphones. We also added language icons to our <a href="/docs.php">documentation section</a>, making it easier to find useful content in your native tongue.
 </p>
@@ -103,7 +108,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Sep 26, 2015</div>
+<div class="lastmodified">Last modified on Oct 9, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>

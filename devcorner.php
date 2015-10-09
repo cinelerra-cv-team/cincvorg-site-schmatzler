@@ -50,22 +50,11 @@ include "header.php";
 
 <blockquote>
 
- <ul> <li>Cinelerra 2.1 svn repository:<br>
-<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.1_r1056/html/index.html">
-revision 1056</a></li>
-</ul>
-
-<ul>
-  <li>Cinelerra 2.0 svn repository:<br>
-<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.0-r707/guicast/html/">
-guicast subdirectory</a> <br>
-<a href="http://cinelerra-cv.org/devcorner/doxy/svn_2.0-r707/cinelerra/html/">
-cinelerra subdirectory</a>.</li>
-</ul>
+<li><a href="doxygen/2.3_d189a04">Doxygen for 2.3</a> (commit <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=commit;h=d189a0400ba9088e2da2b09cbae5eb7d96125894">d189a04</a>)</li>
 
 </blockquote>
 
-<p>Thanks to Jens Seidel for suggesting doxygen, and providing a template configuration file.</p>
+<p>Thanks to Jens Seidel for suggesting doxygen and Johannes Sixt for providing a template configuration file.</p>
 
 <h1>Guidelines</h1>
 
@@ -289,7 +278,7 @@ It must be proved that the artwork is permitted to be used in Cinelerra.</p>
         the detailed description.
 </blockquote>
 
-<div class="lastmodified">Last modified on Oct 8, 2015</div>
+<div class="lastmodified">Last modified on Oct 9, 2015</div>
 </div> 
 
 <?php include "footer.php"; ?>

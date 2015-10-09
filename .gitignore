@@ -11,7 +11,7 @@
 *.mp4
 
 # The way-too-big doxygen
-/devcorner/doxy/ 
+/doxygen/2.3_d189a04/ 
 
 # Wiki
 /docs/wiki
