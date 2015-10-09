@@ -1,2 +1,0 @@
-<j6t> herman: for the records, the command to revert a patch is (e.g.) cvs admin -o1.3: file.cpp
-<j6t> this deletes all revisions past 1.3 (1.3 remains). This works only as long as no other commits were done after 1.4, of course.
