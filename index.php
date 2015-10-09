@@ -49,7 +49,7 @@ include "header.php";
 
 <p>
 <strong>October 9, 2015</strong><br>
-* We have documented our latest codebase with<a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
+* We have documented our latest codebase with <a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
 </p>
 
 <p>
