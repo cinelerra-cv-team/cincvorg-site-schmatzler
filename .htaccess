@@ -1,0 +1,6 @@
+RedirectMatch 301 /devcorner/doxy/(.*) /doxygen/
+RedirectMatch 301 /oldnews.php /archive/oldnews.php
+RedirectMatch 301 /user-tips.php /patches-tools.php
+RedirectMatch 301 /source_code.php /main_repo.php
+RedirectMatch 301 /soc.php /archive/soc.php
+RedirectMatch 301 /mailinglists.php /contact.php
