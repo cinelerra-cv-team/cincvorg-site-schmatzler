@@ -68,7 +68,8 @@ Guidelines</a> for more info), then run the following command from the command l
     <h4>Debian</h4>
     <div class="details">
       <p> 
-For Debian Stable (Jessie) both CinelerraCV 2.2 and CinelerraHV 4.5 packages are available from <a href="http://deb-multimedia.org/">Deb-multimedia</a>.
+<p>For Debian, packages are available through <a href="http://deb-multimedia.org/">Deb Multimedia</a>.</p>
+<p>Stable (Jessie) comes with Cinelerra-CV 2.2, Testing (Stretch) and Unstable (Sid) already have the latest version 2.3.</p>
       </p>
     </div>
   </div>
@@ -150,7 +151,6 @@ for details.</p>
     <div class="details">
       <p>You can find prebuilt Cinelerra-CV packages at the following locations:</p>
       <ul>
-      <li><a href="http://repository.slacky.eu/">Slacky.eu repository</a></li>
       <li><a href="http://ponce.cc/slackware/sources/repo/">Ponce's repository</a></li>
       <li><a href="http://studioware.org/packages">Studioware packages</a></li>
       </ul>
