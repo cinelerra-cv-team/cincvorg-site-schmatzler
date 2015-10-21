@@ -94,6 +94,8 @@ de Cinelerra</a> - by funix.org.
 Some HOWTOs for specific needs are available on the internet:
 
 <ul style="list-style-type:none;">
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="/render-h264.php">How to render H.264 with YUV4MPEG</a>
+  </li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">How to build Cinelerra-CV for Fedora 15, x86-64</a> - by Scott Frase</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a> - by rabin</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2007/06/beginners-guide-to-exporting-video-from.html">Beginner's Guide to Exporting Video from Cinelerra</a> - by Scott Frase  </li>
@@ -137,7 +139,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on Oct 25, 2015</div>
+<div class="lastmodified">Last modified on Oct 21, 2015</div>
  </div>
 
 <?php include "footer.php"; ?>
