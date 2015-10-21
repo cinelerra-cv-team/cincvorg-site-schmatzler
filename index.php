@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>October 21, 2015</strong><br>
+* Rendering H.264 directly is broken with a recent version of libx264. We are aware of that - but fear not! <a href="/render-h264.php">Follow these instructions</a> and you can render H.264 with the YUV4MPEG pipe.
+</p>
+
+<p>
 <strong>October 9, 2015</strong><br>
 * We have documented our latest codebase with <a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
 </p>
@@ -108,7 +113,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Oct 9, 2015</div>
+<div class="lastmodified">Last modified on Oct 21, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>
