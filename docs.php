@@ -59,6 +59,8 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><a href="http://www.facilware.com/series?serie=cinelerra">Video manuales de Cinelerra</a> - by FacilWare.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLESfiH5NUWTTUJIi8qkAv8LgEKBRVOwEo">Cinelerra tutorials</a> - an ongoing series by schmatzler.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLxMC0gN6SN_3a4SNpzYYxgUb93mVk9QcP">Cinelerra-Anleitungen</a> - by MICE Tutorials.</li>
+<li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/watch?v=H2aTi-VcpkM">Отслеживание и стабилизация движения в Cinelerra-CV (Motion Tracking)</a> - by <i>Linux - это просто!</i></li>
+<li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PL22E4D21BF236B8CF">Обзор и уроки по Cinelerra-CV (Overview and tutorials)</a> - by Alexey Korelsky (aka <i>GreenZmeyk</i>)</li>
 </ul>
  <h2><a name="tutorials">Cinelerra tutorials</a></h2>
  <ul style="list-style-type:none;">
@@ -88,6 +90,10 @@ de Cinelerra</a> - by funix.org.
   <li><img src="/images/website/locale/pt.png" style="margin-right:4px;" /><a href="https://docs.indymedia.org/view/Sysadmin/Cinelerra">Capturando e editando video usando Software Livre</a> - by Rafael Diniz.
   </li>
   <li><img src="/images/website/locale/pt.png" style="margin-right:4px;" /><img src="/images/website/archive.png" style="margin-right:4px;" /><a href="http://web.archive.org/web/20140303080600/http://www.estudiolivre.org/tiki-index.php?page=Cinelerra">Tutorial Cinelerra</a> - by Leo Germani.
+  </li>
+  <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="http://wiki.linuxformat.ru/wiki/LXF85:Cinelerra">Введение в интерфейс (Introduction to the Interface)</a> - by Peter Semiletov
+  </li>
+  <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="http://wiki.linuxformat.ru/wiki/LXF92:Cinelerra">Базовые приёмы работы с программой (Basic tutorials)</a> - by Peter Semiletov
   </li>
 </ul>
 <h2><a name="links">HOWTOs</a></h2>
@@ -139,7 +145,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on Oct 21, 2015</div>
+<div class="lastmodified">Last modified on Oct 23, 2015</div>
  </div>
 
 <?php include "footer.php"; ?>
