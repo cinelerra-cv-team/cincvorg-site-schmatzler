@@ -1,5 +1,6 @@
 RedirectMatch 301 /devcorner/doxy/(.*) /doxygen/
 Redirect 301 /oldnews.php http://cinelerra-cv.org/archive/oldnews.php
+Redirect 301 /archive.php http://cinelerra-cv.org/archive/index.php
 RedirectMatch 301 /user-tips.php /patches-tools.php
 RedirectMatch 301 /source_code.php /main_repo.php
 Redirect 301 /soc.php http://cinelerra-cv.org/archive/soc.php

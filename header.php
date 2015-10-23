@@ -60,7 +60,7 @@
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="https://www.facebook.com/cinelerracv" target="_blank" class="pure-menu-link"><img src="/images/website/menu/FB-f-Logo__blue_20.png" alt="facebook" />Follow us</a></li>
-                <li class="<?php if ($title=="Archive") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/archive.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
+                <li class="<?php if ($title=="Archive") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/archive/index.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
             </ul>
         </div>
     </div>
