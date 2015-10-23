@@ -11,7 +11,7 @@ include "header.php";
 
 <h2>Why?</h2>
   <p>If you cannot render videos in the H.264 format, you've stumbled over a major bug.</p>
-  <p>As it turns out, recent version of libx264 are incompatible with libquicktime - the library Cinelerra-CV uses to render its videos.</p>
+  <p>As it turns out, recent versions of libx264 are incompatible with libquicktime - the library Cinelerra-CV uses to render its videos.</p>
   <p>There is no fix for this yet - but rendering H.264 <b><u>isn't</u></b> completely broken. Please see the instructions below.</p>
   
 <h2>How?</h2>
@@ -33,7 +33,7 @@ include "header.php";
   <p>To render audio, choose the following settings:</p>
   <p><img src=/images/website/tutorial/render-audio.png alt="render-audio" /></p>
   <br/>
-  <p>Now two files have been created - <b>myvideo.m2v</b> (video) and <b>myvideo.wav</b> (audio)</p>
+  <p>Now two files have been created - <b>myvideo.m2v</b> (video) and <b>myvideo.wav</b> (audio).</p>
   <p>You can combine these into your final video file with a program like <a href="http://mein-neues-blog.de/tragtor-gui-for-ffmpeg/" target="_blank">Tragtor</a> or via commandline:</p>
   <pre>ffmpeg -i myvideo.m2v -i myvideo.wav -acodec libmp3lame -ab 192k -ar 48000 -vcodec copy finalvideo.avi</pre>
   
@@ -42,7 +42,7 @@ include "header.php";
   <p>Yes. The <i>YUV4MPEG</i> pipe even allows you to do multi-pass rendering, which is not available through Cinelerra-CV itself.</p>
   <p>Please <a href="https://n1njahacks.wordpress.com/2013/03/11/exporting-h-264-from-cinelerra/" target="_blank">see here</a> for a detailed tutorial by n1njahacks.</p>
 
-<div class="lastmodified">Last modified on Oct 21, 2015</div>
+<div class="lastmodified">Last modified on Oct 23, 2015</div>
 </div>
  
 <?php include "footer.php"; ?>
