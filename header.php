@@ -51,7 +51,7 @@
             <a class="pure-menu-heading" href="#">Development</a>
 
             <ul class="pure-menu-list">
-                <li class="<?php if ($title=="DevCorner") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/devcorner.php" class="pure-menu-link"><img src="/images/website/menu/devcorner.png" alt="devcorner" />Developer's corner</a></li>
+                <li class="<?php if ($title=="DevCorner") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/devcorner.php" class="pure-menu-link"><img src="/images/website/menu/devcorner.png" alt="devcorner" />Developers' corner</a></li>
                 <li class="<?php if ($title=="Repository") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/main_repo.php" class="pure-menu-link"><img src="/images/website/menu/main_repo.png" alt="main_repo" />Repository</a></li>
                 <li class="<?php if ($title=="Bounty") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/bounty.php" class="pure-menu-link"><img src="/images/website/menu/star.png" alt="bounty" />Bounty</a></li>
             </ul>
