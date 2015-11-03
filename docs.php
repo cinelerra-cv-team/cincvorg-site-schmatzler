@@ -77,6 +77,10 @@ Some video tutorials (talk and screencast) are available on the internet:
   </li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/basics.html">Cinelerra in 30 minutes and 10 steps</a> - Cinelerra basics, for Grandma, by Raffaella Traniello. 
   </li>
+  <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="http://www.pc-magazin.de/ratgeber/linux-videoschnitt-mit-cinelerra-127940.html">Linux-Videoschnitt mit Cinelerra</a> - by Christian Grugel, PC Magazin 1/2008
+  </li>
+  <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="http://www.linux-community.de/Internal/Artikel/Print-Artikel/LinuxUser/2006/04/Videoschnitt-mit-Cinelerra/%28language%29/ger-DE">Videoschnitt mit Cinelerra</a> - by Peter Kreussel, LinuxUser 4/2006 
+  </li>
   <li><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://fhl.noblogs.org/2009/03/14/cinelerra-semplicissimo-1-3/">Cinelerra è semplicissimo</a> - Introduction to Cinelerra, for beginners, by Paolo Rampino. 
   </li>
   <li><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://www.stefanodroghetti.co.nr/">Produzione video in Ubuntu</a> - from DV files to DVD through Cinelerra, by Stefano "Senbee" Droghetti. 
