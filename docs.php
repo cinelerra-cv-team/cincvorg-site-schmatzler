@@ -59,6 +59,7 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><a href="http://www.facilware.com/series?serie=cinelerra">Video manuales de Cinelerra</a> - by FacilWare.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLESfiH5NUWTTUJIi8qkAv8LgEKBRVOwEo">Cinelerra tutorials</a> - an ongoing series by schmatzler.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLxMC0gN6SN_3a4SNpzYYxgUb93mVk9QcP">Cinelerra-Anleitungen</a> - by MICE Tutorials.</li>
+<li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLB72ED01700810796">Cinelerra Basics</a> - by video4tux.</li>
 <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/watch?v=H2aTi-VcpkM">Отслеживание и стабилизация движения в Cinelerra-CV (Motion Tracking)</a> - by <i>Linux - это просто!</i></li>
 <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PL22E4D21BF236B8CF">Обзор и уроки по Cinelerra-CV (Overview and tutorials)</a> - by Alexey Korelsky (aka <i>GreenZmeyk</i>)</li>
 </ul>
