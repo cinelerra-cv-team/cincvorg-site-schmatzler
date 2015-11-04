@@ -151,6 +151,7 @@ for details.</p>
     <div class="details">
       <p>You can find prebuilt Cinelerra-CV packages at the following locations:</p>
       <ul>
+      <li><a href="http://packages.slackonly.com/pub/packages/">Slackonly packages</a> (preferred, because it uses <a href="http://slackbuilds.org/">SBo SlackBuilds</a>)</li>
       <li><a href="http://ponce.cc/slackware/sources/repo/">Ponce's repository</a></li>
       <li><a href="http://studioware.org/packages">Studioware packages</a></li>
       </ul>
