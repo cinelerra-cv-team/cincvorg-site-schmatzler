@@ -14,3 +14,4 @@ User-agent: Yahoo-Blogs
 User-agent: Yahoo-MMCrawler
 # Directories
 Disallow: /gitweb/
+Crawl-delay: 600
