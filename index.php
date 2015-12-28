@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>December 28, 2015</strong><br>
+* Heroine Virtual has released Cinelerra-HV 4.6.1 in November - now, three different versions of Cinelerra are existing. <a href="/about.php">We've cleared up some of the confusion here.</a>
+</p>
+
+<p>
 <strong>October 21, 2015</strong><br>
 * Rendering H.264 directly is broken with a recent version of libx264. We are aware of that - but fear not! <a href="/render-h264.php">Follow these instructions</a> and you can render H.264 with the YUV4MPEG pipe.
 </p>
@@ -113,7 +118,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Oct 21, 2015</div>
+<div class="lastmodified">Last modified on Dec 28, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>

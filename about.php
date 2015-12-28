@@ -7,21 +7,25 @@ include "header.php";
 
 <div class="header">
     <h1>About Cinelerra</h1>
-    <h2>Why two versions of Cinelerra?</h2> 
+    <h2>Why three versions of Cinelerra?</h2> 
 </div>
 
 <p>Cinelerra is one of the most advanced, open-source non-linear video editors and compositors for Linux.</p>
-<p>Users are frequently confused about the fact that two separately maintained versions of this software exist.</p>
-<p><b>We are not affiliated with cinelerra.org.</b> If you're interested - here's why:</p>
+<p>Users are frequently confused about the fact that three separately maintained versions of this software exist.</p>
+<p><b>We are not affiliated with cinelerra.org or Cinelerra-HV.</b> If you're interested - here's why:</p>
 <br />
 
-<h2>About Cinelerra-HV and cinelerra.org</h2>
+<h2>About Cinelerra-HV</h2>
 
 <p>Cinelerra was originally developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php">Heroine Virtual Ltd.</a> This is what the HV stands for.</p>
-<p>Unlike most of the free Open Source projects, the development of Cinelerra-HV wasn't open to distributed collaboration and there was no support for the software.</p>
-<p>Every few months a release was made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a> and occasionally, Adam Williams stopped by at our mailing list.</p>
-<p>This slightly changed around March 2014 when we overlooked the renewal of <a href="http://cinelerra.org">cinelerra.org</a>. The domain was then taken over by a different project, which is following commercial interests.</p>
+<p>Unlike most of the free Open Source projects, the development of Cinelerra-HV isn't open to distributed collaboration and there is no support for the software.</p>
+<p>Cinelerra-HV exists even today. Every few months a release is made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a> and occasionally, Adam Williams stopped by at our mailing list.</p>
 <br />
+
+<h2>About cinelerra.org</h2>
+<p>Around March 2014 we overlooked the renewal of <a href="http://cinelerra.org">cinelerra.org</a>. The domain was then taken over by a different project, which is following commercial interests.</p>
+<p>They are releasing their own version ("5.0") and make their own adjustments to the software.</p>
+<br/>
 
 <h2>About Cinelerra-CV</h2>
 
@@ -47,7 +51,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on Sep 6, 2015</div>
+<div class="lastmodified">Last modified on Dec 28, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>
