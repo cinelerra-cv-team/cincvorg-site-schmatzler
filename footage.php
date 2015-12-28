@@ -72,11 +72,17 @@ Italian television.</li>
    <li><a href="footage/surfing-PP1-on-then-off.m2t">surfing-PP1-on-then-off.m2t</a>, wave surfers.</li>
  </ul>
  
+  <h3>DNxHD 1920x1080</h3>
+
+ <ul>
+   <li><a href="http://schmatzler.de/dnxhd/Trees%20flirring%20in%20heat_dnxhd_noaudio.mov">Trees flirring in heat_dnxhd_noaudio.mov</a>, 4,7GB</li>
+ </ul>
+ 
 <hr>
 <h3>Other</h3>
 These clips where placed in the parent dir. at one stage:
  <a href='footage/videos/nina-mp4-mp3_m-5s.mov'>#1</a> (278k, herman)  <a href='footage/videos/shrunk.mov'>#2</a> (2.2M herman)  <a href='footage/videos/vid1.avi'>#3</a> (23M, taraba)
-<div class="lastmodified">Last modified on Sep 11, 2015</div>
+<div class="lastmodified">Last modified on Dec 28, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>
