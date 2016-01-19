@@ -18,8 +18,8 @@ include "header.php";
 <h2>About Cinelerra-HV</h2>
 
 <p>Cinelerra was originally developed by Adam Williams (formerly known as Jack Crossfire) at <a href="http://www.heroinewarrior.com/index.php">Heroine Virtual Ltd.</a> This is what the HV stands for.</p>
-<p>Unlike most of the free Open Source projects, the development of Cinelerra-HV isn't open to distributed collaboration and there is no support for the software.</p>
-<p>Cinelerra-HV exists even today. Every few months a release is made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a> and occasionally, Adam Williams stopped by at our mailing list.</p>
+<p>Unlike most of the free Open Source projects, the development of Cinelerra-HV isn't open to distributed collaboration and there is no support for the software. Though in the past, Adam Williams stopped by at our mailing list occasionally.</p>
+<p>Cinelerra-HV exists even today. Every few months a release is made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a>.</p>
 <br />
 
 <h2>About cinelerra.org</h2>
@@ -51,7 +51,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on Dec 28, 2015</div>
+<div class="lastmodified">Last modified on Jan 19, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
