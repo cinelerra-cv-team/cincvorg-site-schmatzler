@@ -123,7 +123,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Dec 28, 2015</div>
+<div class="lastmodified">Last modified on Jan 19, 2015</div>
 </div>
 
 <?php include "footer.php"; ?>
