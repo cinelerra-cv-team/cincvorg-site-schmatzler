@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>January 19, 2016</strong><br>
+* Happy New Year! Johannes Sixt has <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/003761.html">merged Cinelerra-HV 4.1 into the CV codebase</a>. This is still experimental - please test the code and report bugs. <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Packages for Ubuntu are here</a>, thanks to Nicola Ferralis. </a>
+</p>
+
+<p>
 <strong>December 28, 2015</strong><br>
 * Heroine Virtual has released Cinelerra-HV 4.6.1 in November - now, three different versions of Cinelerra are existing. <a href="/about.php">We've cleared up some of the confusion here.</a>
 </p>
