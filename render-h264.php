@@ -17,9 +17,9 @@ include "header.php";
 <h2>How?</h2>
   <p>Video and audio have to be rendered separately and -later on- combined into your final video.</p>
   <p>To render the video portion of your project, we will use the <i>YUV4MPEG</i> pipe. Your render options have to look like this:</p>
-  <p><img src=/images/website/tutorial/render-yuv4mpeg.png alt="render-yuv4mpeg" /></p>
+  <p><img style="width:80%;max-width:410px;" src=/images/website/tutorial/render-yuv4mpeg.png alt="render-yuv4mpeg" /></p>
   <p>Now open up the additional render options and make sure it's set up like this:</p>
-  <p><img src=/images/website/tutorial/render-yuv4mpeg-additional.png alt="render-yuv4mpeg additional" /></p>
+  <p><img style="width:80%;max-width:500px;" src=/images/website/tutorial/render-yuv4mpeg-additional.png alt="render-yuv4mpeg additional" /></p>
   <p>This is the command for easy copy-pasting:</p>
   <pre>ffmpeg -f yuv4mpegpipe -i - -y -threads 0 -vcodec libx264 -crf 21 -preset medium %</pre>
   <p>The various switches explained in detail:
@@ -29,10 +29,8 @@ include "header.php";
   <li><b>-preset medium</b> - use this option to control speed&lt;-&gt;filesize, also <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#crf" target="_blank">explained here</a></li>
   </ul>
   <p>You can now render your video.</p>
-  <br />
   <p>To render audio, choose the following settings:</p>
-  <p><img src=/images/website/tutorial/render-audio.png alt="render-audio" /></p>
-  <br/>
+  <p><img style="width:80%;max-width:410px;" src=/images/website/tutorial/render-audio.png alt="render-audio" /></p>
   <p>Now two files have been created - <b>myvideo.m2v</b> (video) and <b>myvideo.wav</b> (audio).</p>
   <p>You can combine these into your final video file with a program like <a href="http://mein-neues-blog.de/tragtor-gui-for-ffmpeg/" target="_blank">Tragtor</a> or via commandline:</p>
   <pre>ffmpeg -i myvideo.m2v -i myvideo.wav -acodec libmp3lame -ab 192k -ar 48000 -vcodec copy finalvideo.avi</pre>
