@@ -12,6 +12,7 @@ include "header.php";
 
 <p>Cinelerra is one of the most advanced, open-source non-linear video editors and compositors for Linux.</p>
 <p>Users are frequently confused about the fact that three separately maintained versions of this software exist.</p>
+<p><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160117/fdbb1173/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and cinelerra.org has been posted on our mailing list in January 2016.</p>
 <p><b>We are not affiliated with cinelerra.org or Cinelerra-HV.</b> If you're interested - here's why:</p>
 <br />
 

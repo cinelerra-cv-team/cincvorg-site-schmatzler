@@ -10,8 +10,9 @@ include "header.php";
 </div>
  <p><b>Note:</b> Entries that are marked with <img src="/images/website/archive.png" /> are hosted on archive.org and may be outdated.</p>
  <h2>Cinelerra's features</h2>
- Linux Media Arts has an <a href="http://heroinewarrior.com/cinelerra.php">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,
-  multiple effects, built-in videoscope and more.  With screenshots.
+ <ul><li>Linux Media Arts has an <a href="http://heroinewarrior.com/cinelerra.php">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,
+  multiple effects, built-in videoscope and more.  With screenshots.</li>
+ <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160117/fdbb1173/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and cinelerra.org has been posted on our mailing list in January 2016.</li></ul>
 <h2>Cinelerra CV manual</h2>
   <ul style="list-style-type:none;">
 <li>
@@ -150,7 +151,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on Oct 23, 2015</div>
+<div class="lastmodified">Last modified on Jan 19, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>
