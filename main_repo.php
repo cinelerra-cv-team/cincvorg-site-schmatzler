@@ -43,6 +43,13 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
 </blockquote>
 
+<h3>goodguy - Cinelerra 5.x</h3>
+<blockquote>
+<p>This is essentially the codebase that was started on cinelerra.org a while back.</p>
+<p>It is planned to merge this code with the j6t repository in the future.</p>
+<p><a href="http://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a></p>
+</blockquote>
+
 <h3>akirad - useful merges from all branches</h3>
 <blockquote>
 <p>This repository by Paolo Rampino has a blend of the HV-like extended ffmpeg decoding, many of the fixes found in CinCV 2.3 and much improved UI theming from the former Cinecutie project.</p>
