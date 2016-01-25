@@ -32,7 +32,7 @@ Event.observe(window, 'load', init, false);
       <h4>Apodio</h4>
   </div>
   <div id="distro-artistx" class="livecd">
-    <a href="http://artistx.org/blog/" target="_blank" ><img src="/images/website/livecd-logos/artistx.png" alt="ArtistX Logo" /></a>
+    <a href="http://sourceforge.net/projects/archiveos/files/artistx/" target="_blank" ><img src="/images/website/livecd-logos/artistx.png" alt="ArtistX Logo" /></a>
       <h4>ArtistX</h4>
   </div>
   <div id="distro-avlinux" class="livecd">
