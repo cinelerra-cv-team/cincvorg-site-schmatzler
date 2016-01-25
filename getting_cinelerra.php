@@ -36,7 +36,7 @@ Event.observe(window, 'load', init, false);
       <h4>ArtistX</h4>
   </div>
   <div id="distro-avlinux" class="livecd">
-    <a href="http://www.bandshed.net/AVLinux.html" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
+    <a href="http://iso.linuxquestions.org/av-linux/av-linux-6.0.4/" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
   </div>
   <div id="distro-dyne" class="livecd">
