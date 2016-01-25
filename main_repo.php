@@ -37,7 +37,7 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
 </blockquote>
 
-<h3>j6t - merging</h3>
+<h3>j6t - merging Cinelerra-HV 4.x</h3>
 <blockquote>
 <p>Johannes Sixt' goal is to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
