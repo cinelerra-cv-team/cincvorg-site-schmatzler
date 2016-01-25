@@ -43,9 +43,10 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
 </blockquote>
 
-<h3>akirad - </h3>
+<h3>akirad - useful merges from all branches</h3>
 <blockquote>
-<p>Paolo Rampino. TODO</p>
+<p>This repository by Paolo Rampino has a blend of the HV-like extended ffmpeg decoding, many of the fixes found in CinCV 2.3 and much improved UI theming from the former Cinecutie project.</p>
+<p>Unfortunately, this hasn't been updated in a while and may not compile with recent gcc versions.</p>
 <p><a href="http://git.cinelerra-cv.org/gitweb?p=akirad/cinelerra.git;a=summary">akirad&#039;s repo</a></p>
 </blockquote>
 
@@ -72,7 +73,7 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<div class="lastmodified">Last modified on Jan 19, 2016</div>
+<div class="lastmodified">Last modified on Jan 25, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
