@@ -145,6 +145,21 @@ for details.</p>
     </div>
   </div>
 
+  <div id="distro-rosalinux" class="button">
+    <img src="/images/website/distro-logos/rosalinux.png" alt="ROSA Logo" title="Download Cinelerra-CV for ROSA" />
+    <h4>ROSA</h4>
+    <div class="details"> 
+<p>Packages for Cinelerra-CV are available in the <i>Restricted Updates Repository</i>, for <a href="http://mirror.rosalab.ru/rosa/red/repository/i586/restricted/updates/">i586</a> and <a href="http://mirror.rosalab.ru/rosa/red/repository/x86_64/restricted/updates/">x86_64</a>.</p>
+<p><b>Install Howto</b></p>
+<ul>
+    <li>Enable ROSA Restricted Updates repository on <i>Install and Remove Software</i></li>
+    <li>Update packages list:<br/>
+    <code>urpmi.update -a</code></li>
+    <li>Install cinelerra-cv rpm package:<br/>
+    <code>urpmi cinelerra-cv</code></li>
+    </div>
+  </div>
+
   <div id="distro-slackware" class="button">
     <img src="/images/website/distro-logos/slackware.png" alt="Slackware Logo" title="Download Cinelerra-CV for Slackware" />
     <h4>Slackware</h4>
@@ -222,7 +237,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Sep 26, 2015</div>
+<div class="lastmodified">Last modified on Jan 25, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
