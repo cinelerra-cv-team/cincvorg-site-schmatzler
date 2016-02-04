@@ -18,7 +18,7 @@ include "header.php";
 <li>
 <B><img src="/images/website/locale/us.png" style="margin-right:4px;" />English:</B> 
 <a href="docs/cinelerra_cv_manual_en.html">HTML</a> (A large page) |  
-<a href="docs/cinelerra_cv_manual_en_toc.html">HTML</a> (One page per chapter)  |  
+<a href="docs/split_manual_en/cinelerra_cv_manual_en.html">HTML</a> (One page per chapter)  |  
 <a href="docs/cinelerra_cv_manual_en.pdf">PDF</a> (6 Mb)  |  
 <a href="docs/cinelerra_cv_manual_en.txt">TXT</a> (500 Kb) </li>
 <li>
@@ -151,7 +151,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on Jan 19, 2016</div>
+<div class="lastmodified">Last modified on Feb 4, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>

@@ -204,48 +204,49 @@ Cinelerra CV Manual
     14.4.28 Interpolate pixels
     14.4.29 Inverse telecine
     14.4.30 Invert video
-    14.4.31 Linear blur
-    14.4.32 Live video
-    14.4.33 Loop video
-    14.4.34 Motion
-      14.4.34.1 Secrets of motion tracking
-      14.4.34.2 2 pass motion tracking
-      14.4.34.3 Using blur to improve motion tracking
-      14.4.34.4 Using histogram to improve motion tracking
-      14.4.34.5 Motion tracking in action
-      14.4.34.6 Tracking stabilization in action
-    14.4.35 Motion blur
-    14.4.36 Oil painting
-    14.4.37 Overlay video
-    14.4.38 Perspective
-    14.4.39 Polar
-    14.4.40 RGB-601
-    14.4.41 Radial blur
-    14.4.42 ReframeRT
-    14.4.43 Reroute
-    14.4.44 Reverse video
-    14.4.45 Rotate
-    14.4.46 SVG via Inkscape
-    14.4.47 Scale
-    14.4.48 Selective temporal averaging
-    14.4.49 Sharpen
-    14.4.50 ShiftInterlace
-    14.4.51 Swap channels
-    14.4.52 Threshold
-    14.4.53 Time average
-    14.4.54 TimeFront
-    14.4.55 Title
-      14.4.55.1 Adding fonts to the titler
-      14.4.55.2 The title-safe region
-    14.4.56 Translate
-    14.4.57 Unsharp
-    14.4.58 Videoscope
-      14.4.58.1 The waveform scope
-      14.4.58.2 The vectorscope
-    14.4.59 Wave
-    14.4.60 Whirl
-    14.4.61 YUV
-    14.4.62 Zoom blur
+    14.4.31 Lens
+    14.4.32 Linear blur
+    14.4.33 Live video
+    14.4.34 Loop video
+    14.4.35 Motion
+      14.4.35.1 Secrets of motion tracking
+      14.4.35.2 2 pass motion tracking
+      14.4.35.3 Using blur to improve motion tracking
+      14.4.35.4 Using histogram to improve motion tracking
+      14.4.35.5 Motion tracking in action
+      14.4.35.6 Tracking stabilization in action
+    14.4.36 Motion blur
+    14.4.37 Oil painting
+    14.4.38 Overlay video
+    14.4.39 Perspective
+    14.4.40 Polar
+    14.4.41 RGB-601
+    14.4.42 Radial blur
+    14.4.43 ReframeRT
+    14.4.44 Reroute
+    14.4.45 Reverse video
+    14.4.46 Rotate
+    14.4.47 SVG via Inkscape
+    14.4.48 Scale
+    14.4.49 Selective temporal averaging
+    14.4.50 Sharpen
+    14.4.51 ShiftInterlace
+    14.4.52 Swap channels
+    14.4.53 Threshold
+    14.4.54 Time average
+    14.4.55 TimeFront
+    14.4.56 Title
+      14.4.56.1 Adding fonts to the titler
+      14.4.56.2 The title-safe region
+    14.4.57 Translate
+    14.4.58 Unsharp
+    14.4.59 Videoscope
+      14.4.59.1 The waveform scope
+      14.4.59.2 The vectorscope
+    14.4.60 Wave
+    14.4.61 Whirl
+    14.4.62 YUV
+    14.4.63 Zoom blur
 15 Rendered effects
   15.1 Rendered audio effects
     15.1.1 Resample
@@ -459,7 +460,7 @@ creating well-formed bug reports.  You may join our mailing list at
 1.3 About this manual
 =====================
 
-This manual edition is 1.59.EN, for Cinelerra CV version 2.2.  You may
+This manual edition is 1.60.EN, for Cinelerra CV version 2.3.  You may
 redistribute it and/or modify it under the terms of the GNU General
 Public License, as published by the Free Software Foundation; either
 version 2 of the License, or (at your option) any later version.
@@ -5688,7 +5689,53 @@ video track.
 
    The three parameters refer to channels (Red, Blue, Green, Alpha)
 
-14.4.31 Linear blur
+14.4.31 Lens
+------------
+
+The lens affect stretches or shrinks to convert lens distorted images
+to rectilinear images.  The most common use is converting fish eye
+lenses to rectilinear lenses. It is also useful for star tracking.
+
+   R, G, B, A Field of view: These determine how much the image is
+stretched in each channel.
+
+   Lock: This causes changes to 1 channel to affect all the channels.
+This is normally the desired behavior.
+
+   Aspect Ratio: This changes the amount of stretching done in the X
+axis vs the Y axis. To crop less data from stretched images, this
+allows more stretching to be done on 1 axis without creating black
+borders in the other axis.
+
+   Radius: This determines the size of the stretched region. While
+adjusting the field of view, black borders may appear. Adjust the
+radius to shrink or expand the output so black borders are out of frame.
+
+   Center X, Y: The center of the stretched region. This is only useful
+if the image was previously translated by the software so the center of
+the lens is now off center.
+
+   Draw center: This is a visual aid when adjusting the Center X, Y but
+doesn't affect the results.
+
+   Mode: The type of stretching algorithm.
+
+   Parameters refer to:
+   * Sphere shrink
+     This is for making an image look like it's mapped to a sphere.
+
+   * Sphere expand
+     This is for unmapping an image mapped to a sphere and flattening
+     it.
+
+   * Rectilinear stretch
+     This is for flattening a fish eye lens.
+
+   * Rectilinear shrink
+     This is for making something flat look like it was taken by a fish
+     eye lens.
+
+14.4.32 Linear blur
 -------------------
 
  Blur has three styles: Linear, Radial, and Zoom
@@ -5706,7 +5753,7 @@ video track.
    * Channels
      Which channel(s) to blur.
 
-14.4.32 Live video
+14.4.33 Live video
 ------------------
 
  This effect reads video directly from the capture card input.  It
@@ -5746,7 +5793,7 @@ Settings->Preferences->Playback->Video Out to enable the OpenGL driver.
    Only one Live Video effect can exist at any time on the timeline.
 It can not be shared by more than one track.
 
-14.4.33 Loop video
+14.4.34 Loop video
 ------------------
 
  Sections of video can be looped by dropping a loop effect on them.
@@ -5766,7 +5813,7 @@ causes the region after the keyframe to be looped throughout the
 effect, no matter where the keyframe is.  The end of an effect can be
 looped from the beginning by setting the keyframe near the end.
 
-14.4.34 Motion
+14.4.35 Motion
 --------------
 
  The motion tracker is almost a complete application in itself.  The
@@ -5931,7 +5978,7 @@ enough to sweeten some camcorder footage.
      object in the frame.  The motion operations can be accurate to
      single pixels or subpixels by changing the action setting.
 
-14.4.34.1 Secrets of motion tracking
+14.4.35.1 Secrets of motion tracking
 ....................................
 
 Since it is a very slow effect, there is a method to applying the motion
@@ -5971,7 +6018,7 @@ filesystems.  The fact that render nodes only visualize a portion of
 the timeline also prevents previous frame from working since it depends
 on calculating an absolute motion vector starting on frame 0.
 
-14.4.34.2 2 pass motion tracking
+14.4.35.2 2 pass motion tracking
 ................................
 
 The method described above is 2 pass motion tracking.  One pass is used
@@ -5995,7 +6042,7 @@ calculation track and another track as the target track for motion
 vector actions.  This is useful for long sequences where some error is
 acceptable.
 
-14.4.34.3 Using blur to improve motion tracking
+14.4.35.3 Using blur to improve motion tracking
 ...............................................
 
 With extremely noisy or interlaced footage, applying a blur effect
@@ -6003,7 +6050,7 @@ before the motion tracking can improve accuracy.  Either save the
 motion vectors in a tracking pass and disable the blur for the action
 pass or apply the blur just to the master layer.
 
-14.4.34.4 Using histogram to improve motion tracking
+14.4.35.4 Using histogram to improve motion tracking
 ....................................................
 
 A histogram is almost always applied before motion tracking to clamp
@@ -6011,7 +6058,7 @@ out noise in the darker pixels.  Either save the motion vectors in a
 tracking pass and disable the histogram for the action pass or apply
 the histogram just to the master layer.
 
-14.4.34.5 Motion tracking in action
+14.4.35.5 Motion tracking in action
 ...................................
 
 First, add a motion effect to the track.  Drag it from the resource
@@ -6118,7 +6165,7 @@ video clip.
           (absolute or relative) to/from files.  Each frame gets an
           separate file in /tmp directory which contains its vector.
 
-14.4.34.6 Tracking stabilization in action
+14.4.35.6 Tracking stabilization in action
 ..........................................
 
 In this section, we will explain how to stabilize a video.  Such a need
@@ -6155,7 +6202,7 @@ to remove those black borders.  The more your footage is jerky, the
 more you have to zoom in to discard the black borders.  That is why the
 result is better with HDV footage than with DV footage.
 
-14.4.35 Motion blur
+14.4.36 Motion blur
 -------------------
 
 This real-time effect takes  the X/Y camera automation vectors as input
@@ -6178,14 +6225,14 @@ is required.
 
 
 
-14.4.36 Oil painting
+14.4.37 Oil painting
 --------------------
 
  This effect makes video tracks appears as a painting.  It can be
 controlled by Radius slider.  Intensity of colors can be chosen as
 option.
 
-14.4.37 Overlay video
+14.4.38 Overlay video
 ---------------------
 
  This effect can combine several tracks by using the so called
@@ -6221,21 +6268,21 @@ which of the tracks to overlay the combined output. (Hint: in most
 cases, you will want to mute the other track and only retain this
 combined output).
 
-14.4.38 Perspective
+14.4.39 Perspective
 -------------------
 
  The perspective effect allows you to change the perspective of an
 object, and is perfect for making objects appear as if they are fading
 into the distance.
 
-14.4.39 Polar
+14.4.40 Polar
 -------------
 
  The Polar effect bends and warps your video in weird ways.
 Mathematically, it converts your video from either polar coordinates to
 rectangular coordinates, or the reverse.
 
-14.4.40 RGB-601
+14.4.41 RGB-601
 ---------------
 
  For analog video or MPEG (including DVD) output, the maximum range for
@@ -6256,13 +6303,13 @@ noticeable contrast increase.)
    Although RGB-601 will reduce contrast in your video tracks, the
 contrast will be restored during MPEG playback.
 
-14.4.41 Radial blur
+14.4.42 Radial blur
 -------------------
 
  It creates a whirlpool blur that simulates a swirling camera.  You can
 vary the location, type, and quality of the blur.
 
-14.4.42 ReframeRT
+14.4.43 ReframeRT
 -----------------
 
  ReframeRT changes number of frames in a sequence of video directly
@@ -6325,7 +6372,7 @@ the input frame number will by doubled.  This will not normally do
 anything but some input effects may behave differently at the higher
 frame rate.
 
-14.4.43 Reroute
+14.4.44 Reroute
 ---------------
 
 FIXME
@@ -6337,7 +6384,7 @@ plugin. The typical usage scenario is to build up a possibly animated
 Mask in one track and then to transfer the Alpha channel to another
 content track.
 
-14.4.44 Reverse video
+14.4.45 Reverse video
 ---------------------
 
  Media can be reversed on the timeline in realtime.  This is not to be
@@ -6356,23 +6403,23 @@ keyframes in succession yield several regions reversed independent of
 each other.  An enabled keyframe followed by a disabled keyframe yields
 one reversed region followed by a forward region.
 
-14.4.45 Rotate
+14.4.46 Rotate
 --------------
 
  The Rotate filter can rotate the video in 90 degree increments,
 reverse and flip the video.
 
-14.4.46 SVG via Inkscape
+14.4.47 SVG via Inkscape
 ------------------------
 
  FIXME
 
-14.4.47 Scale
+14.4.48 Scale
 -------------
 
  FIXME
 
-14.4.48 Selective temporal averaging
+14.4.49 Selective temporal averaging
 ------------------------------------
 
  This plugin is designed to smooth out non-moving areas of a video
@@ -6421,22 +6468,22 @@ beginning or ending frames respectively.
 
   7. Repeat this for all channels
 
-14.4.49 Sharpen
+14.4.50 Sharpen
 ---------------
 
  FIXME
 
-14.4.50 ShiftInterlace
+14.4.51 ShiftInterlace
 ----------------------
 
  FIXME
 
-14.4.51 Swap channels
+14.4.52 Swap channels
 ---------------------
 
  FIXME
 
-14.4.52 Threshold
+14.4.53 Threshold
 -----------------
 
  Threshold converts the image to pure luminance, and replaces pixels
@@ -6456,7 +6503,7 @@ above the track with the threshold effect can be multiplied, resulting
 in only the parts of the second track within the threshold being
 displayed.
 
-14.4.53 Time average
+14.4.54 Time average
 --------------------
 
  Time average is one effect which has many uses besides creating nifty
@@ -6508,13 +6555,13 @@ frames, and re-enabling playback for the track.
      disabling subtraction the previous frames are not stored in memory
      and only the average function is affected by the frame count.
 
-14.4.54 TimeFront
+14.4.55 TimeFront
 -----------------
 
  This is a warping framework plugin based on this article:
 `http://www.vision.huji.ac.il/videowarping/HUJI-CSE-LTR-2005-10_etf-tr.pdf'
 
-14.4.55 Title
+14.4.56 Title
 -------------
 
  While it is possible to add text to movies by importing still images
@@ -6582,7 +6629,7 @@ move it with camera and projector or add effects.
 cause lock-ups. See `http://bugs.cinelerra.org/show_bug.cgi?id=155|bug
 155' to know more.
 
-14.4.55.1 Adding fonts to the titler
+14.4.56.1 Adding fonts to the titler
 ....................................
 
 The X Window system originally did not have a suitable font renderer
@@ -6599,7 +6646,7 @@ run `ttmkfdir && mv fonts.scale fonts.dir' and restart Cinelerra.  The
 new fonts should appear.  The usage of ttmkfdir changes frequently so
 this technique might not work.
 
-14.4.55.2 The title-safe region
+14.4.56.2 The title-safe region
 ...............................
 
 If the video is displayed on a consumer TV, the outer border is going
@@ -6608,7 +6655,7 @@ the edge looks sloppy.  Make sure when adding titles to have the
 title-safe  tool active in the compositor window.  The text should not
 cross the inner rectangle.
 
-14.4.56 Translate
+14.4.57 Translate
 -----------------
 
  This effect allows displacing, cropping, and/or scaling the source
@@ -6636,7 +6683,7 @@ while doing so.  Be forewarned though, that for interlaced footage
 horizontal displacements are likely to destroy the field order,
 resulting in all sort of flickering and jumping movements.
 
-14.4.57 Unsharp
+14.4.58 Unsharp
 ---------------
 
  This effect applies a traditional darkroom technique, the so called
@@ -6656,7 +6703,7 @@ this can be used to soften or to sharpen the image. Its parameters are:
      pixel in the blurred copy and the original copy is needed before
      any darkening or lightening will be applied.
 
-14.4.58 Videoscope
+14.4.59 Videoscope
 ------------------
 
  The Videoscope summarizes intensity and color on a calibrated display.
@@ -6674,7 +6721,7 @@ scope for all the different video drivers.
    The Videoscope contains two displays: the waveform scope and the
 vectorscope
 
-14.4.58.1 The waveform scope
+14.4.59.1 The waveform scope
 ............................
 
 The Waveform Scope displays image intensity (luminance) versus image X
@@ -6738,7 +6785,7 @@ controls:
      values below this level are no darker.
 
 
-14.4.58.2 The vectorscope
+14.4.59.2 The vectorscope
 .........................
 
 The Vectorscope displays color and color saturation. Each pixel in the
@@ -6766,7 +6813,7 @@ display properly on various monitors.  Any points along the inner
 radius will be displayed as pure white and any points above the 100%
 radius, will probably not be correctly displayed on the screen.
 
-14.4.59 Wave
+14.4.60 Wave
 ------------
 
  The wave effect adds waves on the image.
@@ -6777,17 +6824,17 @@ You can adjust the following parameters:
 
 
 
-14.4.60 Whirl
+14.4.61 Whirl
 -------------
 
  FIXME
 
-14.4.61 YUV
+14.4.62 YUV
 -----------
 
  FIXME
 
-14.4.62 Zoom blur
+14.4.63 Zoom blur
 -----------------
 
  FIXME

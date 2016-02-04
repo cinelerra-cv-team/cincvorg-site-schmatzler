@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on February, 4 2016 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV Manual: 12. Transport controls</title>
+
+<meta name="description" content="Cinelerra CV Manual: 12. Transport controls">
+<meta name="keywords" content="Cinelerra CV Manual: 12. Transport controls">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_11.html#SEC145" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_13.html#SEC147" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Transport-controls"></a>
+<a name="SEC146"></a>
+<h1 class="chapter"> 12. Transport controls </h1>
+
+<p>Transport controls are just as useful in navigation as they are in playing back
+footage, hence they are described here in the navigation section.  Each of the
+Viewer, Compositor, and Program windows has a transport panel.
+</p>
+<p align="center"> <img src=".././manual_images_en/transport_panel.png" alt="manual_images_en/transport_panel">
+</p><p align="center"> <b>The transport panel</b>.
+</p>
+<p>The transport panel is controlled by the keyboard as well as the graphical
+interface.  For each of the operations it performs, the starting position is
+the position of the insertion point in the Program window and the slider in the
+Compositor window.  The ending position is either the end or start of the
+timeline or the end or start of the selected region if there is one.
+</p>
+<p>The orientation of the end or start depends on the direction of playback.  If
+it is forward the end position is the end of the selected region.  If it is
+backward the end position is the start of the selected region.
+</p>
+<p>The insertion point moves to track playback.  When playback stops, the
+insertion point stays where playback stopped.  Thus, by playing back you change
+the position of the insertion point.
+</p>
+<p>The keyboard interface is usually the fastest and has more speeds.  The
+transport keys are arranged in a sideways <b>T</b> on the number pad.
+</p>
+<table>
+<tr><td><p> <kbd>4</kbd>
+</p></td><td><p> Frame back
+</p></td><td><p> <kbd>5</kbd>
+</p></td><td><p> Reverse Slow
+</p></td><td><p> <kbd>6</kbd>
+</p></td><td><p> Reverse
+</p></td><td><p> <kbd>+</kbd>
+</p></td><td><p> Reverse Fast
+</p></td></tr>
+<tr><td><p> <kbd>1</kbd>
+</p></td><td><p> Frame Forward
+</p></td><td><p> <kbd>2</kbd>
+</p></td><td><p> Forward Slow
+</p></td><td><p> <kbd>3</kbd>
+</p></td><td><p> Play
+</p></td><td><p> <kbd>Enter</kbd>
+</p></td><td><p> Fast Forward
+</p></td></tr>
+<tr><td><p> <kbd>0</kbd>
+</p></td><td><p> Stop
+</p></td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</table>
+
+<p>Hitting any key on the keyboard twice pauses it.
+</p>
+<p>When using frame advance functions the behavior may seem odd.  If you frame
+advance forward and then frame advance backward, the displayed frame does not
+change.  This is because the playback position is not the frame but the time
+between two frames.  The rendered frame is the area that the playback position
+crosses.  When you increment the time between two frames by one and decrement
+it by one, you cross the same frame both times and so the same frame is
+displayed.
+</p>
+<p>The transport behavior changes if you hold down <kbd>CTRL</kbd> when issuing any of
+the transport commands.  This causes the starting point to be the in point if
+playing forward and the out point if playing backward.  If playing forward, the
+out point becomes the ending point and if playing backward, the in point
+becomes the ending point.  If no in/out points are specified, the behavior
+falls back to using the insertion point and track boundaries as the starting
+and ending points.
+</p>
+<p>It is possible to use a hardware JogShuttle<a name="DOCF1" href="cinelerra_cv_manual_en_fot.html#FOOT1">(1)</a>
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_11.html#SEC145" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_13.html#SEC147" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>February, 4 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>

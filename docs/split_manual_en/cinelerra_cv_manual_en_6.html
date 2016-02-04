@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
+<html>
+<!-- Created on February, 4 2016 by texi2html 1.76 -->
+<!--
+Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people <dev@texi2html.cvshome.org>
+Send bugs and suggestions to <users@texi2html.cvshome.org>
+
+-->
+<head>
+<title>Cinelerra CV Manual: 6. Program window</title>
+
+<meta name="description" content="Cinelerra CV Manual: 6. Program window">
+<meta name="keywords" content="Cinelerra CV Manual: 6. Program window">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 1.76">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.sansserif {font-family:sans-serif; font-weight:normal;}
+ul.toc {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_5.html#SEC67" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_7.html#SEC106" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+
+<hr size="2">
+<a name="Program-window"></a>
+<a name="SEC96"></a>
+<h1 class="chapter"> 6. Program window </h1>
+
+
+<p>This window contains the timeline and the entry point for all menu driven operations.
+The timeline consists of a vertical stack of tracks with a horizontal
+representation of time.  This defines the output of rendering operations and
+what is saved when you save files.  To the left of the timeline is the patchbay which
+contains options affecting each track.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>The timeline</b>
+</p>
+<p>Under the <b>Window</b> menu, you will find options that affect the main windows.
+<b>Default positions</b> repositions all the windows to a 4 screen editing
+configuration.  On dual headed displays, the <b>Default positions</b> operation
+fills only one monitor with windows.
+</p>
+<hr size="6">
+<a name="Navigating-the-program-window"></a>
+<a name="SEC97"></a>
+<h2 class="section"> 6.1 Navigating the program window </h2>
+
+<p>The program window contains many features for navigation and displays the
+timeline as it is structured in memory: tracks stacked vertically and extending
+across time horizontally.  The horizontal scroll bar allows you to scan across
+time.  The vertical scroll bar allows you to scan across tracks.
+</p>
+
+<hr size="6">
+<a name="Video-and-audio-tracks"></a>
+<a name="SEC98"></a>
+<h3 class="subsection"> 6.1.1 Video and audio tracks </h3>
+
+<p align="center"> <img src=".././manual_images_intl/track_video.png" alt="manual_images_intl/track_video">
+</p><p align="center"> <b>A video track</b>
+</p>
+<p>Video tracks represent the duration of your videos and clips, just as if you placed real
+photographic film stock end-to-end on a table.  The individual images you see on the
+track are samples of what is located at that particular instant on the timeline.
+</p>
+<p align="center"> <img src=".././manual_images_intl/track_audio.png" alt="manual_images_intl/track_audio">
+</p><p align="center"> <b>An audio track</b>
+</p>
+<p>Audio tracks represent your sound media as an audio waveform.  Following the film
+analogy, it would be as if you &quot;viewed&quot; magnetic tape horizontally on your
+table.
+</p>
+<p>You can adjust the horizontal and vertical magnification of the tracks and the
+magnification of the audio &quot;waveform&quot; display using the <b>zoom panel bar</b> controls.<br>
+Every track on the timeline has a set of attributes on the left, called the
+<b>patch bay</b>.  It is used to control the behavior of the tracks.
+The most important attribute is <b>arm track</b>. 
+</p>
+<hr size="6">
+<a name="Track-navigation"></a>
+<a name="SEC99"></a>
+<h3 class="subsection"> 6.1.2 Track navigation </h3>
+
+<p>Track Navigation involves both selecting a specific audio or video track and
+moving to a certain time in the track.  The program window contains many
+features for navigation and displays the timeline as it is structured in
+memory.
+</p>
+<p>The vertical scroll bar allows you to scan across tracks. For vertical scrolling
+you can use also the mouse wheel.
+</p>
+<p>The horizontal scroll bar allows you to scan across time. For horizontal scrolling
+you can use also the mouse wheel with the <kbd>CTRL</kbd> key.
+</p>
+<p>In addition to the graphical tools, you may also use the keyboard
+to navigate.  As a general rule, keyboard navigation is faster than navigation
+with a mouse.
+Use <kbd>PAGE UP</kbd> and <kbd>PAGE DOWN</kbd> to scroll up and down the
+tracks.
+</p>
+<p>You will often need to scroll beyond the end of the timeline, but the scrollbars
+will not let you do it.  Instead, use the RIGHT arrow to scroll past the end of
+timeline.
+</p>
+<p>Use the <kbd>HOME</kbd> and <kbd>END</kbd> keys to instantly go to the beginning or end
+of the timeline.  In <b>I-beam</b> mode, hold down <kbd>SHIFT</kbd> while pressing
+<kbd>HOME</kbd> or <kbd>END</kbd> in order to select the region of the timeline between the
+insertion point and the key pressed.
+</p>
+<hr size="6">
+<a name="The-zoom-panel"></a>
+<a name="SEC100"></a>
+<h3 class="subsection"> 6.1.3 The zoom panel </h3>
+
+<p>Below the timeline, you will find the zoom panel.  The zoom panel contains values
+for <b>sample zoom</b> (duration visible on the timeline), <b>amplitude</b> (audio waveform scale), <b>track zoom</b> (height of tracks in the timeline), and <b>curve zoom</b>(automation range).  In addition
+to the scrollbars, these zooms are the main tools for positioning the
+timeline.
+</p>
+<p align="center"> <img src=".././manual_images_en/zoompanel.png" alt="manual_images_en/zoompanel">
+</p>
+<a name="IDX95"></a>
+<p>Changing the <b>sample zoom</b> causes the unit of time displayed in the timeline to change size.  It
+allows you to view your media all the way from individual frames to the
+entire length of your project.  The higher the setting, the more frames you can see per
+screen. The sample zoom value is not an absolute reference for the unit of time since 
+it refers to the duration visible on the timeline and thus changes also as you modify 
+the length of the program window horizontally.<br>
+Use the <kbd>UP</kbd> and <kbd>DOWN</kbd> arrows to change the sample zoom by a power of two.<br>
+If your mouse has a wheel and it works in X11, mouse over the tumblers and use the 
+wheel to zoom in and out.
+</p>
+<a name="IDX96"></a>
+<p>The <b>amplitude</b> only affects audio.  It determines how large the waveform appears.<br>
+<kbd>CTRL-UP</kbd> and <kbd>CTRL-DOWN</kbd> cause the amplitude zoom to change.
+</p>
+<a name="IDX97"></a>
+<p>The <b>track zoom</b> affects all tracks.  It determines the height of each track.
+If you change the track zoom, the amplitude zoom compensates so that the audio waveforms
+look proportional.<br>
+<kbd>CTRL-PGUP</kbd> and <kbd>CTRL-PGDOWN</kbd> cause the track zoom to change.
+</p>
+<a name="IDX98"></a>
+<p>The <b>curve zoom</b> affects the curves in all the tracks of the same type. It
+determines the value range for curves. First select the automation type (audio 
+fade, video fade, zoom, X,Y) then use the left tumblers for the minimum value and 
+the right tumblers for the maximum value or manually enter the values in the
+text box. Normally you will use -40.0 to 6.0 for audio fade and 0.0 to 100.0 for
+video fade. See section <a href="cinelerra_cv_manual_en_7.html#SEC107">The patchbay</a>.<br>
+The tumblers changes curve amplitude, but the only way to curve offset 
+is to use the <b>fit curves</b> button
+<img src=".././manual_images_intl/fit_curves.png" alt="manual_images_intl/fit_curves">.<br>
+<kbd>ALT-UP</kbd> and <kbd>ALT-DOWN</kbd> cause the curve amplitude to change.
+</p>
+<hr size="6">
+<a name="The-track-popup-menu"></a>
+<a name="SEC101"></a>
+<h3 class="subsection"> 6.1.4 The track popup menu </h3>
+
+<p>Each Track has a popup menu.  To activate the <b>track popup menu</b>, RIGHT-click
+on the track.  The popup menu affects the track whether the track is armed on the
+<b>patch bay</b> or not.  The Track Menu contains a number of options:
+</p><ul>
+<li> Attach Effect - opens a dialog box of effects applicable to the type of track (audio/video)
+</li><li> Move up - moves the selected track one step up in the stack.
+</li><li> Move down - moves the selected track one step down in the stack.
+</li><li> Delete track - removes the track from the timeline
+</li><li> Add Track - adds a track of the same media type (audio/video) as the one
+selected.
+</li><li> Resize Track - resizes the track
+</li><li> Match Output Size - resizes the track to match the current output size
+</li></ul>
+
+<hr size="6">
+<a name="The-insertion-point"></a>
+<a name="SEC102"></a>
+<h3 class="subsection"> 6.1.5 The insertion point </h3>
+
+<p>The insertion point is the flashing hairline mark that vertically spans the timeline in the program window.
+Analogous to the cursor on your word processor, the
+insertion point marks the place on the timeline where the next activity will begin.  It's the point where a paste operation takes place. 
+When rendering, it defines the beginning of the region of the timeline to be rendered.
+It is also the starting point of all playback operations.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_insertion_point.png" alt="manual_images_intl/program_insertion_point">
+</p><p align="center"> <b>The insertion point on the main window,</b>
+</p><p align="center"> <b>represented as a vertical hair-line at the 00:00.500 point</b>
+</p>
+<p>Normally, the insertion point is moved by clicking inside the main timebar.  Any 
+region of the timebar not obscured by labels and in or out points is a hotspot 
+for repositioning the insertion point.
+In cut and paste editing mode only, the insertion point can be moved also by 
+clicking in the timeline itself.
+</p>
+<p align="center"> <img src=".././manual_images_intl/main_timebar.png" alt="manual_images_intl/main_timebar">
+</p><p align="center"> <b>The main timebar</b>
+</p>
+<p>When moving the insertion point the position is either aligned to frames or aligned to samples.  When editing
+video, you will want to align to frames.  When editing audio you will want to align to samples.  Select your preference by using <b>Settings-&gt;Align cursor on frames</b>.
+</p>
+<hr size="6">
+<a name="Editing-modes"></a>
+<a name="SEC103"></a>
+<h3 class="subsection"> 6.1.6 Editing modes </h3>
+
+<p>Editing modes are two different methods of operation that affect the insertion point and the editing on the timeline.<br>
+They are:<br>
+</p><ul>
+<li> drag and drop mode
+</li><li> cut and paste mode
+</li></ul>
+
+<p>The editing mode is determined by selecting the arrow or the i-beam in the 
+buttonbar. Alternatively you can use <kbd>e</kbd> as a keyboard shortcut to toggle 
+between modes.
+</p>
+<p align="center"> <img src=".././manual_images_intl/editing_mode.png" alt="manual_images_intl/editing_mode">
+</p><p align="center"> <b>The editing mode buttons</b>
+</p>
+<a name="IDX99"></a>
+<a name="IDX100"></a>
+<p>If the arrow is highlighted, it enables <b>drag and drop mode</b>.<br>
+In drag and drop mode, clicking in the timeline does not reposition the insertion point.<br>
+Double-clicking in the timeline selects the entire edit the mouse pointer is over. <br> 
+Dragging in the timeline repositions the edit the mouse pointer is over.  This is useful for reordering audio playlists, sorting movie scenes, moving effects around.<br>
+To cut and paste in drag and drop mode you need to set
+<b>in/out points</b> to define an affected region. See section <a href="#SEC104">The in/out points</a>. <br>
+See section <a href="cinelerra_cv_manual_en_7.html#SEC114">Drag and drop editing</a>. 
+</p>
+<a name="IDX101"></a>
+<a name="IDX102"></a>
+
+<p>If the i-beam is highlighted it enables <b>cut and paste mode</b>.<br>  
+In cut and paste mode, clicking in the timeline repositions the insertion point. <br> 
+Double-clicking in the timeline selects the entire edit the cursor is over.<br>
+Dragging in the timeline highlights a region.  The highlighted region becomes 
+the region affected by cut and paste operations and the playback range during 
+the next playback operation.
+<kbd>SHIFT</kbd>-clicking in the timeline extends the highlighted region.
+</p>
+<p align="center"> <img src=".././manual_images_intl/program_highlight.png" alt="manual_images_intl/program_highlight">
+</p><p align="center"> <b>Tracks with highlighted area, shown inside the green outline</b>
+</p>
+<p>When highlighting a region, the start and end points are either aligned to 
+frames or aligned to samples.  When editing video, you will want to align to 
+frames.  When editing audio you will want to align to samples.  Select your 
+preference by using <b>settings-&gt;align cursor on frames</b>.<br>
+See section <a href="cinelerra_cv_manual_en_7.html#SEC115">Cut and paste editing</a>.
+</p>
+<p><a name="r943_005fr944_005fediting_005fmodes"></a><b>Note:</b> Cinelerra CV revisions 943 and 944 
+(SVN checkouts from 19 to 21 October 2006) had no editing modes buttons. 
+&quot;Copy and paste&quot; and &quot;Drag and drop&quot; editing modes were merged into one, 
+shift key being differentiation between them.  This is the case of the Gentoo ebuild
+media-video/cinelerra-cvs-20061020.
+</p>
+<hr size="6">
+<a name="The-in_002fout-points"></a>
+<a name="SEC104"></a>
+<h3 class="subsection"> 6.1.7 The in/out points </h3>
+
+<p>In both editing modes, you can set one in point and one out point. 
+The in/out points define the affected region.  In drag and drop mode, they are the 
+only way to define an affected region.  In both cut and paste mode and drag and 
+drop mode, the highlighted area overrides the in/out points.  If a highlighted 
+area and in/out points are set, the highlighted area is affected by editing 
+operations and the in/out points are ignored.  If no region is highlighted, 
+the in/out points are used.
+To avoid confusion, it is better to use either highlighting or in/out points but 
+not both simultaneously.
+</p>
+<p>Normally, in/out points do not affect the playback region.  The in/out points
+determine the playback region only if you hold down <kbd>CTRL</kbd> while issuing a
+playback command.
+</p>
+<p>To set in/out points, go to the timebar and position the insertion point
+somewhere.  Select the <img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>in point button</b>.
+Move the insertion point to a position after the in point and click the
+<img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>out point button</b>.
+Instead of using the button bar, you can use the <kbd>[</kbd> and <kbd>]</kbd> keys to
+toggle in/out points.
+</p>
+<p align="center"> <img src=".././manual_images_intl/inout_points.png" alt="manual_images_intl/inout_points">
+</p><p align="center"> <b>Timebar with in/out points set</b>.
+</p>
+<p>If you set the insertion point somewhere else while in/out points already exist, when 
+you click the in/out buttons the existing points will be repositioned.
+</p>
+<p>If you click on in/out points while a region is highlighted, the insertion point
+will be ignored and in/out points will be set at the beginning and at
+the end of the highlighted area.
+</p>
+<p>If you select either the in point or the out point, the insertion point will jump to
+that location.  After selecting an in point, if you click the <b>in point button</b>
+the in point will be deleted.  After selecting an out point, if you click the
+<b>out point button</b> the out point will be deleted.
+</p>
+<p><b>Tip:</b> To quickly get rid of in/out points, without caring about where they
+are or if they are set or not, just double click on [ and ] buttons.  The first
+click will set a new point or reposition an old one at the insertion point; the
+second click will delete it.  Obviously this trick does not work if the in point 
+or the out point is already set at insertion point.
+</p>
+<p><kbd>SHIFT</kbd>-clicking on an in/out point highlights the region between the
+insertion point and that in/out point.  If a region is already highlighted, it
+extends the highlighted region up to that in/out point.
+</p>
+<p>The insertion point and the in/out points allow you to define an affected
+region, but they do not let you jump to exact points on the timeline very easily.
+For this purpose there are labels.
+</p>
+<hr size="6">
+<a name="Using-labels-in-the-program-window"></a>
+<a name="SEC105"></a>
+<h3 class="subsection"> 6.1.8 Using labels in the program window </h3>
+
+<p>Labels are an easy way to set exact locations on the timeline that you want to jump
+to.  When you position the insertion point somewhere and click the
+<img src=".././manual_images_intl/label_button.png" alt="manual_images_intl/label_button"> <b>label button</b>, a new label appears on the
+timeline.
+</p>
+<p align="center"> <img src=".././manual_images_intl/timebar_label.png" alt="manual_images_intl/timebar_label">
+</p><p align="center"> <b>Timebar with a label on it</b>
+</p>
+<p>No matter what the zoom settings are, clicking on the label highlights it and 
+positions the insertion point exactly where you set the label. Hitting the <kbd>l</kbd> key 
+has the same effect as the label button.
+</p>
+<p>Labels can reposition the insertion point when they are selected but they can
+also be traversed with the <img src=".././manual_images_intl/label_traversal.png" alt="manual_images_intl/label_traversal"> <b>label
+traversal</b> buttons.  When a label is out of view, the label traversal buttons
+reposition the timeline so the label is visible.  There are keyboard shortcuts
+for label traversal, too. 
+</p>
+<p><b>CTRL-LEFT</b> repositions the insertion point on the previous label.
+</p>
+<p><b>CTRL-RIGHT</b> repositions the insertion point on the next label.
+</p>
+<p>With label traversal you can quickly seek back and forth on the timeline.
+</p>
+<p>The <b>Label</b> tab of the resources window lists the timestamp of every label.
+You can edit the label list and add a title for every item using the popup menu.
+To open the <b>Label info</b> dialog right click on the label icon in the Resources 
+window or directly on the label symbol on the timebar.
+</p>
+<p>With labels you can also select regions.
+</p>
+<p><b>SHIFT-CTRL-LEFT</b> highlights the region between the insertion point and the
+previous label.
+</p>
+<p><b>SHIFT-CTRL-RIGHT</b> highlights the region between the insertion point and
+the next label.
+</p>
+<p><b>Double-clicking</b> on the timebar between two labels highlights the region between 
+the labels.
+</p>
+<p><b>SHIFT-clicking</b> on a label highlights the region between that label and the
+insertion point.  If a region is already highlighted, it extends the
+highlighted region up to that label.
+</p>
+<p>If you hit the label button when a region is highlighted, labels are
+created at each end of the highlighted region.  However, if one end already has a 
+label, then the existing label is deleted.
+</p>
+<p>Hitting the label button again when a label is selected deletes it.
+Manually hitting the label button or <kbd>l</kbd> key over and over again to delete
+a series of labels can get tedious.  To delete a set of labels, first
+highlight a region.  Second, use the <b>Edit-&gt;Clear labels</b> function.  If
+in/out points exist, the labels between the in/out points are cleared and the
+highlighted region is ignored.
+</p>
+<p>In Cut and Paste editing mode only, by enabling <b>Edit labels</b> in the
+settings menu, or by disabling the <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked">
+<b>Lock labels from moving</b> button on the program toolbar labels will be cut,
+copied or pasted along with the selected region of the first armed track.<br>
+Similarly, if a selected area of a resource is spliced from the viewer to the
+timeline in a position before labels, these labels will be pushed to the right
+on the timebar for the length of the selected area.<br>
+To prevent labels from moving on the timebar, just disable the
+<b>Edit labels</b> option or enable the <img src=".././manual_images_intl/locklabels_unlocked.png" alt="manual_images_intl/locklabels_unlocked">
+<b>Lock labels from moving</b> button.<br>
+In Drag and Drop editing mode labels will be always locked to the timebar,
+even with the <b>Edit labels</b> option enabled.
+</p>
+<hr size="6">
+<table cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#SEC96" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_7.html#SEC106" title="Next chapter"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en.html#SEC_Top" title="Cover (top) of document">Top</a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_toc.html#SEC_Contents" title="Table of contents">Contents</a>]</td>
+<td valign="middle" align="left">[Index]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_en_abt.html#SEC_About" title="About (help)"> ? </a>]</td>
+</tr></table>
+<p>
+ <font size="-1">
+  This document was generated on <i>February, 4 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+ </font>
+ <br>
+
+</p>
+</body>
+</html>
