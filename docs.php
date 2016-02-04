@@ -43,7 +43,7 @@ página por capítulo) |
 <li>
 <B><img src="/images/website/locale/basque.png" style="margin-right:4px;" />Basque:</B> 
 <a href="docs/cinelerra_cv_manual_eu.html">HTML</a> (A large page) |  
-<a href="docs/split_manual_en/cinelerra_cv_manual_eu.html">HTML</a> (One page per chapter)  |  
+<a href="docs/split_manual_eu/cinelerra_cv_manual_eu.html">HTML</a> (One page per chapter)  |  
 <a href="docs/cinelerra_cv_manual_eu.txt">TXT</a> (500 Kb) </li>
  </ul>
 
