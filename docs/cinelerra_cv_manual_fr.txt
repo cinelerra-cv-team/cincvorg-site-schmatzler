@@ -388,9 +388,8 @@ MainActor, Kino ou Moxy.
 ==================================
 
 Il y a deux branches de Cinelerra.  L'une d'elle se trouve à
-`http://www.heroinewarrior.com' et l'autre à
-`http://cvs.cinelerra.org'.  Cette documentation concerne Cinelerra-CV
-(Community Version).
+`http://www.heroinewarrior.com' et l'autre à `http://cinelerra-cv.org'.
+Cette documentation concerne Cinelerra-CV (Community Version).
 
    Les sources de la version officielle de Cinelerra sont développées
 "en amont" Par Heroine Virtual, Ltd (HV) HV partage son code source
@@ -406,7 +405,7 @@ code source d'HV.  Ils ont décidé qu'il serait bien d'effectuer le
 développement de manière communautaire, sans pour autant effectuer un
 "fork".  De ce fait, le code source de Cinelerra CV est très proche de
 celui de la version officielle.  Les développeurs de la version CV
-appliquent des résolutions de bugs (`http://bugs.cinelerra.org'),
+appliquent des résolutions de bugs (`http://bugs.cinelerra-cv.org'),
 effectuent des correctifs de bogues et des correctifs de compatibilité.
 Les programmeurs envoyent occasionnellement des correctifs en amont à
 HV.  De ce fait, Cinelerra CV comporte certaines fonctionnalités qu'on
@@ -446,15 +445,15 @@ Cependant, décrire clairement et concisément ces bugs à la communauté
 qui les corrige est une tâche que l'on est à même d'espérer de la part
 de tous les utilisateurs.  La communauté est très réactive.  Aidez-la
 en créant des rapports de bugs bien réalisés.  Vous pouvez rejoindre
-notre mailing-liste à `http://cvs.cinelerra.org'.
+notre mailing-liste à `http://cinelerra-cv.org'.
 
 1.3 A propos de ce manuel
 =========================
 
-L'édition de ce manuel est 1.24.FR, et il s'applique à Cinelerra CV
-version 2.1.  Vous pouvez le redistribueer et/ou le modifier selon les
+L'édition de ce manuel est 1.25.FR, et il s'applique à Cinelerra CV
+version 2.3.  Vous pouvez le redistribueer et/ou le modifier selon les
 termes de la Licence Publique Générale GNU (GPL), telle que publiée par
-la Free Software Foundation ; soit à la version 2 de la licence ou (à
+la Free Software Foundation ; soit à la version 2 de la licence ou (à
 votre choix), toute autre version ultérieure.
 
    Ce manuel est issu des "Secrets de Cinelerra", un excellent manuel
@@ -491,7 +490,7 @@ nous a apporté durant l'élaboration de ce manuel.
 
    * Vous pouvez participer à l'édition de ce manuel en effectuant vos
      modifications dans le wiki de Cinelerra-CV :
-     `http://cvs.cinelerra.org/docs/wiki/doku.php'
+     `http://cinelerra-cv.org/docs/wiki/doku.php'
 
 1.4 Obtenir de l'aide
 =====================
@@ -502,7 +501,7 @@ On peut trouver de l'aide sur :
    * La liste de diffusion :
      `https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra'
 
-   * Le site Web de Cinelerra CV : `http://cvs.cinelerra.org'
+   * Le site Web de Cinelerra-CV : `http://cinelerra-cv.org'
 
 1.5 Tutoriels
 =============
@@ -823,7 +822,6 @@ rendu de fichiers::.
 
    Si l'erreur suivante s'affiche lorsque vous lancez Cinelerra pour la
 première fois :
-
 WARNING:/proc/sys/kernel/shmmax is 0x2000000, which is too low}
  *Note Libérer davantage de mémoire partagée::, pour plus d'information.
 
@@ -885,18 +883,18 @@ allez dans Configuration -> Dépôts.  Dans la fenêtre de gestion des
 paquets, cliquez sur le bouton Ajouter et renseignez les dépôts
 suivants :
 
-
-deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
+ppa:cinelerra-ppa/ppa
 
    En cliquant sur Ajouter le dépôt vous verrez le nouveau dépôt activé
 dans la fenêtre de gestion des paquets.  Vous pouvez aussi ajouter
 directement les lignes suivantes dans le fichier
 `/etc/apt/sources.list' :
 
+deb http://ppa.launchpad.net/cinelerra-ppa/ppa/ubuntu <RELEASE> main
 
-deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
-
-   Vous verrez alors apparaître Cinelerra dans Synaptic.
+   where <RELEASE> is your installed version of Ubuntu (precise,
+trusty, etc).
+Vous verrez alors apparaître Cinelerra dans Synaptic.
 
    Pour installer Cinelerra avec GDebi, consultez cette page :
 `http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/'.
@@ -910,12 +908,10 @@ la même page internet.
    Valentina MESSERI a aussi construit des paquets pour Ubuntu Edgy :
 
    Pour Ubuntu Edgy:
-
 deb http://giss.tv/~vale/ubuntu32 ./
 deb-src http://giss.tv/~vale/ubuntu32 ./
 
    Pour Ubuntu Edgy AMD64:
-
 deb http://giss.tv/~vale/ubuntu64 ./
 deb-src http://giss.tv/~vale/ubuntu64 ./
 
@@ -929,12 +925,10 @@ cet endroit :
 
 L'installation sur Gentoo GNU/Linux est assez simple.  Lancez
 simplement :
-
 emerge cinelerra-cvs
  avec le compte root et l'installation devrait s'effectuer sans
 problème.  Notez que vous pouvez avoir besoin de placer Cinelerra dans
 le fichier `/etc/portage/package.keywords' afin de pouvoir l'utiliser :
-
 echo "=media-video/cinelerra-cvs-20061020" >> /etc/portage/package.keywords
 
    Voyez
@@ -1005,17 +999,14 @@ le cas par défaut pour Fedora 5 et 6, et les dépôts Core et Extras ne
 font plus qu'un pour Fedora 7.
 
    Sous Fedora 6, tapez depuis le compte root :
-
 rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/6/\
 freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
 
    Sous Fedora 5, tapez :
-
 rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/5/\
 freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
 
    Ensuite, tapez :
-
 yum -y install cinelerra
  afin de récupérer et installer Cinelerra et ses dépendances, y compris
 ffmpeg et mjpegtools.  Si cela ne fonctionne pas, examinez le fichier
@@ -1074,7 +1065,6 @@ Ils sont disponibles à
 
    Les packages RPM peuvent être installés avec le compte root dans une
 console en utilisant cette commande :
-
 rpm -Uvh package_name.rpm
 
    L'exemple qui suit montre quatre copies d'écrans d'installation
@@ -1230,7 +1220,7 @@ x86_64.
 ----------------
 
 La version commerciale d'OSS comportait une variante pour les cartes
-son 24 bit 96 kHz.  Cette variante avait besoin de modifications
+son 24 bit 96 kHz.  Cette variante avait besoin de modifications
 significatives dans la manière d'utiliser les pilotes audio, d'où le
 besoin d'un nouveau pilote.
 
@@ -2377,7 +2367,6 @@ Voici un petit script de l'interpréteur de commandes qui, lorsqu'il est
 lancé depuis un répertoire contenant des images au format jpg,
 redimensionne ces images et met les nouvelles images dans le dossier
 `resized' :
-
 #/bin/sh
 mkdir resized
 for element in `ls . | grep jpg`;
@@ -2477,8 +2466,8 @@ vidéo DV perd trop en qualité lors de la conversion vers YUV 4:2:0.
 Cette vidéo DV doit être convertie en YUV 4:2:2.
 Lors de l'encodage YUV 4:2:0, le paramètre de débit binaire change de
 signification selon que le débit binaire ou la quantification est fixe.
-Si le débit binaire est fixe, c'est le débit binaire à atteindre.  Si
-la quantification est fixe, c'est le débit binaire maximum autorisé.
+Si le débit binaire est fixe, c'est le débit binaire à atteindre.  Si la
+quantification est fixe, c'est le débit binaire maximum autorisé.
 C'est une astuce de la version de mpeg2enc.
 
 5.1.7 Films sur DVD
@@ -2624,9 +2613,9 @@ en chargeant tous les fichiers passés en paramètres.
 
 S'il y a trop de fichiers dans votre répertoire de médias, il peut être
 difficile de trouver le fichier que vous désirez parmi tous les autres.
-Afin de résoudre cette difficulté, la fenêtre de chargement vous
-permet de filtrer les fichiers à afficher dans la liste en fonction de
-leur extension.
+Afin de résoudre cette difficulté, la fenêtre de chargement vous permet
+de filtrer les fichiers à afficher dans la liste en fonction de leur
+extension.
 Cliquez sur la liste déroulante (juste en-dessous de la zone d'entrée
 du nom de fichier) et sélectionnez l'extension de votre média (par
 exemple : mpg, mov, mp3, avi, etc).  La liste des fichiers ne comporte
@@ -3651,8 +3640,8 @@ depuis cet endroit.
 
    Chargez un certain nombre de fichiers sur la timeline.  Pour
 effectuer un montage par couper-coller, sélectionnez le  bouton i-beam.
-Sélectionnez une région de la timeline au moyen d'un cliquer-glisser
-et utilisez le  bouton couper pour la couper.  Déplacez le point
+Sélectionnez une région de la timeline au moyen d'un cliquer-glisser et
+utilisez le  bouton couper pour la couper.  Déplacez le point
 d'insertion à un autre endroit de la timeline et sélectionnez le
 bouton coller.  En supposant que les points d'entrée/sortie sont
 définis sur la timeline, ceci réalise une opération de couper-coller.
@@ -4892,7 +4881,7 @@ d'entrée/sortie, les effets vont voir leur durée varier.  Ce
 comportement peut être désactivé en choisissant configuration-> Editer
 les effets dans la fenêtre du projet.  Ceci découple les effets des
 opérations de montage, mais comment faire pour ne modifier que les
-effets ?
+effets ?
 
    Déplacez le curseur de la timeline sur les bords d'un effet jusqu'à
 ce qu'il change de forme pour s'afficher sous la forme d'une icône de
@@ -4918,7 +4907,7 @@ est aligné avec des effets se trouvant sur d'autres pistes, les effets
 des autres pistes seront modifiés bien que le média reste le même.
 
    Que se passe-t-il si vous ajustez la fin d'un effet en laissant
-beaucoup de temps non affecté vers la fin de l'effet ? Lorsque vous
+beaucoup de temps non affecté vers la fin de l'effet ? Lorsque vous
 glissez un effet depuis la fenêtre des ressources, vous pouvez insérer
 l'effet dans la portion de la ligne non occupée par l'opération
 d'ajustement.  Les effets en temps réel sont organisés en lignes sous
@@ -6331,7 +6320,7 @@ termine à 39.765.  Le clip dure 5.973 secondes.  Vous désirez le
 reproduire à 4/10ème de sa vitesse normale.  Vous divisez la durée du
 clip par la vitesse de lecture (5.973/.4) pour obtenir une durée finale
 de clip de 14.9325 secondes.  Vous créez un point d'entrée au début de
-votre clip : 33.792 secondes.  Vous placez un point de sortie 14.9325
+votre clip : 33.792 secondes.  Vous placez un point de sortie 14.9325
 secondes plus tard, à 48.7245 secondes (33.792 + 14.9325).  Attachez un
 effet ReframeRT, configurez-le à .4 en mode Etirer.  Modifiez le point
 de sortie à 48.7245 en point d'entrée.  Vous débuterez votre clip
@@ -6919,7 +6908,6 @@ sous GNU/Linux.
    Les effets LADSPA sont simplement activés en définissant la variable
 d'environnement `LADSPA_PATH' à la valeur de l'emplacement de vos
 greffons LADSPA :
-
 export LADSPA_PATH=/usr/lib/ladspa
  ou bien en les mettant dans le répertoire `/usr/lib/cinelerra'.
 Si vous utilisez Debian, vous pouvez obtenir un grand nombre de
@@ -7060,8 +7048,8 @@ de la caméra au cours du temps ou modifier les positions des masques.
 Les masques doivent suivre les objets.  On crée donc des modifications
 dynamiques en définissant des images-clés.  Une image-clé est un
 certain instant où les paramètres changent pour une certaine opération.
-Dans Cinelerra, il y a des images-clés pour presque chaque paramètre
-de composition et d'effet.
+Dans Cinelerra, il y a des images-clés pour presque chaque paramètre de
+composition et d'effet.
 
    Lorsque vous ajustez un paramètre quelconque, sa valeur est
 enregistrée dans une image-clé.  Si la valeur est enregistrée dans une
@@ -7158,8 +7146,8 @@ images-clés automatiques est en général plus utile que de glisser les
 courbes.
 
    Activez ce mode en activant le bouton des images-clés automatiques .
-Dans le mode des images-clés automatiques, chaque fois que vous
-ajustez un paramètre susceptible d'être mis sous forme d'image-clé, une
+Dans le mode des images-clés automatiques, chaque fois que vous ajustez
+un paramètre susceptible d'être mis sous forme d'image-clé, une
 image-clé est créée sur la timeline.  Comme les images-clés
 automatiques affectent de nombreux paramètres, il est préférable de les
 activer juste avant d'avoir besoin d'une image-clé et de les désactiver
@@ -7466,8 +7454,8 @@ s'appliquent certains paramètres et certaines méthodes d'ajustement.
    La fenêtre d'enregistrement comporte la notion de lot en cours.  Le
 lot en cours n'est pas le même que le lot en surbrillance dans la liste
 des lots.  Le lot en cours est de couleur rouge dans la liste des lots.
-Le lot en surbrillance est simplement affiché dans la section
-d'édition du lot pour pouvoir être édité.
+Le lot en surbrillance est simplement affiché dans la section d'édition
+du lot pour pouvoir être édité.
 
    En mettant en rouge le lot en cours, chaque lot peut être édité en
 le mettant en surbrillance, sans pour autant modifier le lot qui doit
@@ -7890,11 +7878,9 @@ Pour obtenir la meilleure qualité possible, vous devez encoder votre
 fichier Quicktime4linux en deux passes.
 
    Première passe :
-
 mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=1 \
 -vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
  Seconde passe :
-
 mencoder input.mov -ovc xvid -xvidencopts bitrate=600:pass=2 \
 -vf scale=320:240 -oac mp3lame -lameopts abr:br=64 -o output.avi
  N'oubliez pas de changer la dimension de la vidéo encodées, en
@@ -7902,7 +7888,6 @@ utilisant l'option `-vf scale='.
 Voici d'autres lignes de commandes.  Elles procurent des fichiers
 vidéos dont le poids est d'environ 13 Mb pour 3 minutes.
 Première passe :
-
 mencoder -oac pcm -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 \
 -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:\
 vcelim=7:lumi_mask=0.05:dark_mask=0.01:scplx_mask=0.3:naq:v4mv:mbd=2:\
@@ -7911,7 +7896,6 @@ vmax_b_frames=2:vb_strategy=1:dia=3:predia=3:cbp:mv0:preme=2:\
 last_pred=3:vpass=1:cgop -ofps 25 -of avi movie.mov -o /dev/null\
 -ffourcc DIVX
  Seconde pass :
-
 mencoder -srate 32000 -oac mp3lame -lameopts cbr:br=${audio_bitrate}:\
 aq=0 -sws 2 -vf scale=${width}:${height},hqdn3d=2:1:2 -ovc lavc\
 -lavcopts vcodec=mpeg4:vbitrate=${video_bitrate}:vlelim=-4:vcelim=7:\
@@ -7950,10 +7934,8 @@ format est vraiment utile pour les personnes qui désirent partager leur
 vidéo avec une large audience sur internet.
 
    Première passe :
-
 ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 1 -ar 22050 movie.flv
  Seconde passe :
-
 ffmpeg -i movie.mov -b 430 -s 320x240 -aspect 4:3 -pass 2 -ar 22050 movie.flv
 
    Faites attention à l'extension du nom de fichier de sortie.  Ffmpeg
@@ -7965,7 +7947,6 @@ durée doit être écrite dans ces meta-données afin que certains
 visualisateur flash puissent afficher une barre de progression de la
 lecture.  FLVTool2 (`http://www.inlet-media.de/flvtool2') peut être
 utilisé afin d'insérer cette information :
-
 cat fichier_entree.flv | flvtool2 -U stdin fichier_sortie.flv
 
 19.8 Charte de compatibilité de Quicktime pour GNU/Linux
@@ -8169,7 +8150,6 @@ paramètres :
      pour le menu)
 
    Voici un exemple de fichier XML spumux :
-
 <subpictures>
  <stream>
   <spu start="00:00:00.0" image="buttons_normal.png" highlight=
@@ -8213,7 +8193,6 @@ du bouton, chaque bouton ayant une forme rectangulaire :
 des boutons haut, bas, gauche et droite de la télécommande du lecteur
 de DVD.  Voici un exemple :
 
-
 <button name="3" ...coordinates... up="1" down="5" left="2" right="4" />
 
    Lorsque le bouton 3 est sélectionné, si la touche "haut" est pressée
@@ -8241,7 +8220,6 @@ DVD soit lisible sur certains lecteurs de salon, mais pas sur tous.
 
    Pour vous aider dans l'utilisation de dvdauthor, voyons quelques
 exemples de fichiers XML.
-
 
 <dvdauthor dest="/chemin/vers/le/dossier/qui/contient/le/dvd">
     <vmgm />
@@ -8272,7 +8250,6 @@ se repositionne au premier chapitre de la vidéo (que dvdauthor assume
    Maintenant, voyons un exemple plus complexe.  Lorsque le DVD est
 inséré, un menu est affiché et vous avez le choix de la lecture entre 4
 vidéos.
-
 
 <dvdauthor dest="/chemin/vers/le/dossier/qui/contient/le/dvd" jumppad="yes" >
 <vmgm>
@@ -8462,7 +8439,6 @@ en JPEG.  RVB en dernier ressort.
    Maintenant sur la timeline, utilisez Configuration->Format pour
 définir un modèle colorimétrique YUV.  Glissez un effet de
 sous-échantillonage sur le plan, avec les options suivantes :
-
 Horizontal:        2
 Horizontal offset: 0
 Vertical:          2
@@ -8764,13 +8740,11 @@ car de très nombreux fichiers vont y être créés.
 exécutez les commandes suivantes :
 
    Première passe :
-
 mencoder "mf://*.jpg" -mf fps=25 -oac pcm -sws 2 -vf scale=\
 1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts vcodec=mpeg4:\
 vbitrate=800:aspect=4/3:vpass=1 -ofps 10 -of avi -o /dev/null \
 -ffourcc DIVX
  Seconde passe :
-
 mencoder "mf://*.jpg" -mf fps=25 -oac pcm -sws 2 -vf \
 scale=1280:1024,hqdn3d=2:1:2 -ovc lavc -lavcopts \
 vcodec=mpeg4:vbitrate=800:aspect=4/3:vpass=2 -ofps 10 -of avi \
@@ -8815,7 +8789,6 @@ suffire
    Malheureusement, sans espace d'échange, la tâche kswapd tourne en
 boucle à 100%.  Pour éliminer ce problème, éditez `linux/mm/vmscan.c'.
 Dans ce fichier, mettez une ligne avec `return 0;' juste avant :
-
 	/*
      	 * Kswapd main loop.
      	 */
@@ -8848,34 +8821,26 @@ implémentation différente, il vous faudra faire quelques recherches
 pour d'autres cartes son.  Editez `linux/drivers/sound/emu10k1/audio.c'
 
    Où vous trouvez
-
 if (bufsize >= 0x10000)
  modifiez cette ligne de façon à avoir :
-
 if (bufsize > 0x40000)
 
    Où vous trouvez :
-
     for (i = 0; i < 8; i++)
         for (j = 0; j < 4; j++)
 
    modifiez cette ligne pour avoir :
-
     for (i = 0; i < 16; i++)
         for (j = 0; j < 4; j++)
 
    Dans `linux/drivers/sound/emu10k1/hwaccess.h', modifiez
-
 #define MAXBUFSIZE 65536
  en
-
 #define MAXBUFSIZE 262144
 
    Enfin, dans `linux/drivers/sound/emu10k1/cardwi.h', modifiez
-
 #define WAVEIN_MAXBUFSIZE         65536
  en
-
 #define WAVEIN_MAXBUFSIZE         262144
 
    Recompilez ensuite les modules du noyau.
@@ -8887,7 +8852,6 @@ Par défaut, le noyau de GNU/Linux n'alloue que 32 Mo de mémoire
 partagée.  Il faut augmenter cette valeur pour pouvoir faire quelques
 chose d'utile.  Lors du lancement de Cinelerra, il est possible que le
 message d'erreur suivant apparaisse :
-
 The following errors occurred:
 void MWindow::init_shm0: WARNING:/proc/sys/kernel/shmmax is 0x2000000, which is too low.
 Before running Cinelerra do the following as root:
@@ -8896,12 +8860,10 @@ echo "0x7ffffff">/proc/sys/kernel/shmmax
    Pour un changement permanent, ajoutez au fichier `/etc/sysctl.conf'
 la ligne suivante :
 
-
 kernel/shmmax=0x7fffffff
 
    La première fois, pour éviter d'avoir à redémarrer votre ordinateur,
 lancez la commande suivante depuis le compte root :
-
 sysctl -p
 
 20.9.4 Accélérer le disque dur
@@ -8962,16 +8924,13 @@ s'appliquent pour la version 2.6.12.3.  Editez
 `/usr/src/linux/drivers/input/mousedev.c'.
 
    Après la ligne suivante
-
 struct mousedev_hw_data {
  mettez
-
 #define DOWNSAMPLE_N 100
 #define DOWNSAMPLE_D 350
 int x_accum, y_accum;
 
    Ensuite, la section qui ressemble à ceci :
-
 switch (code) {
     case REL_X:	mousedev->packet.dx += value; break;
     case REL_Y:	mousedev->packet.dy -= value; break;
@@ -8979,7 +8938,6 @@ switch (code) {
 }
 
    doit être remplacée par :
-
 switch (code) {
     case REL_X:
     mousedev->packet.x_accum += value * DOWNSAMPLE_N;
@@ -9012,7 +8970,6 @@ boîte de liste.  Vous pouvez corriger ceci en ajoutant une ligne à vos
 fichiers de configuration XF86Config*.
 
    Dans la zone de la Section Device, ajoutez la ligne :
-
 Option "XaaNoOffscreenPixmaps"
  et redémarrez le serveur X.
 
@@ -9020,7 +8977,6 @@ Option "XaaNoOffscreenPixmaps"
 moins que vous ne soyez fabuleusement riche et que vous puissiez vous
 permettre de laisser votre écran en marche 24 heures par jour sans mode
 d'économie d'énergie.  Dans le fichier `/etc/X11/xinit/xinitrc', mettez
-
 xset s off
 xset s noblank
  avant la première instruction `if'.
@@ -9028,7 +8984,6 @@ xset s noblank
    Et ces touches "windows" dont aucune distribution de GNU/Linux ne
 veut entendre parler.  Vous pouvez les utiliser pour fournir la
 fonction Alt en éditant `/etc/X11/Xmodmap'.  Ajoutez-y ce qui suit :
-
 keycode 115 = Hyper_L
 keycode 116 = Hyper_R
 add mod4 = Hyper_L
@@ -9038,7 +8993,6 @@ add mod5 = Hyper_R
 reconnaisse les touches "windows" comme une touche <ALT> sont
 complexes.  Dans FVWM au moins, vous pouvez éditer le fichier
 `/etc/X11/fvwm/system.fvwm2rc' et y mettre :
-
 Mouse 0 T A move-and-raise-or-raiselower
 #Mouse 0 W M move
 Mouse 0 W 4 move
@@ -9086,7 +9040,6 @@ pilote.
    Dans `/usr/src/linux/drivers/media/video/zr36067.c', la structure
 définie près de la ligne 623 affecte l'alignement.  Au moins en NTSC,
 la version 2.4.20 du pilote peut être améliorée en modifiant
-
     static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 16 };
 en
     static struct tvnorm f60ccir601 = { 858, 720, 57, 788, 525, 480, 17 };
@@ -9094,7 +9047,6 @@ en
    Dans `/usr/src/linux/drivers/media/video/bt819.c' d'autres
 structures près de la ligne 76 affectent l'alignement et l'encodage.
 En NTSC
-
     {858 - 24, 2, 523, 1, 0x00f8, 0x0000},
 pourrait être changé en
     {868 - 24, 2, 523, 1, 0x00f8, 0x0000},
@@ -9108,7 +9060,6 @@ Avec les noyaux 2.6, le sous-système vidéo a été de nouveau réécrit
 complètement	.  Pour ajuster les paramètres Zoran, allez dans le
 fichier `drivers/media/video/zoran_card.c' et recherchez un groupe de
 lignes ressemblant à
-
     static struct tvnorm f50sqpixel = { 944, 768, 83, 880, 625, 576, 16 };
     static struct tvnorm f60sqpixel = { 780, 640, 51, 716, 525, 480, 12 };
     static struct tvnorm f50ccir601 = { 864, 720, 75, 804, 625, 576, 18 };
@@ -9129,7 +9080,6 @@ lignes ressemblant à
 
    Elles semblent contrôler la position de l'image.  Au moins pour le
 LML33, la définition suivante pour f60ccir601_lml33 le fait.
-
 static struct tvnorm f60ccir601_lml33 = { 858, 720, 67+34, 788, 525, 480, 13 };
 
 20.10 Traduire Cinelerra
@@ -9287,7 +9237,7 @@ vcodec=mjpeg -vf scale=720:540 -oac pcm -o `basename $i mpeg`avi; done'
 
 Le script python proxychange.py réalise la conversion entre les projets
 HDV et proxy.  Vous pouvez télécharger ce script ici :
-`http://cvs.cinelerra.org/docs/proxychange.py'
+`http://cinelerra-cv.org/docs/proxychange.py'
 
    Ce script écrase les projets existants, et copie le fichier original
 dans `projectfile.xml.bak'.
@@ -9327,22 +9277,8 @@ avec mplex.
 20.12.7 Autres problèmes
 ------------------------
 
-Il y a quelques problèmes de cache de GOP avec Cinelerra 2.1, qui
-n'étaient pas là dans la version 2.0.  Certains fichiers MPEG2 ou MPEG4
-ne peuvent pas être joués correctement.  La lecture HDV peut aussi s'en
-trouver affectée.  Voici une solution rapide pour désactiver le cache
-du GOP.
-
-   Dans `libmpeg3/video/seek.c', à la ligne 357, remplacez :
-
-
-mpeg3video_drop_frames(video, frame_number - video->framenum, 1);
- par
-
-mpeg3video_drop_frames(video, frame_number - video->framenum, 0);
-
-   Lors de la lecture de fichiers MJPEG, l'effet de fondu enchaîné peut
-ne pas fonctionner correctement dans les modes RGBA ou YUVA, mais
+Lors de la lecture de fichiers MJPEG, l'effet de fondu enchaîné peut ne
+pas fonctionner correctement dans les modes RGBA ou YUVA, mais
 fonctionne bien dans les modes RGB ou YUV.
 
 20.13 Ajouter des sous-titres
@@ -9700,26 +9636,21 @@ utilitaires pour effectuer tout ça.
 Chargez un greffon simple tel que le gain pour voir à quoi ressemble
 cet objet.  L'objet de traitement doit hériter du dérivé prévu de
 PluginClient.  Son constructeur doit avoir un paramètre PluginServer.
-
 MyPlugin(PluginServer *server);
 
    Dans l'implémentation, le greffon doit comporter une ligne
 d'enregistrement avec le nom de l'objet traitement telle que
-
 REGISTER_PLUGIN(MyPlugin)
 
    Le constructeur doit contenir
-
 PLUGIN_CONSTRUCTOR_MACRO
  pour initialiser les variables les plus courantes.
 
    L'objet traitement doit avoir un destructeur comportant
-
 PLUGIN_DESTRUCTOR_MACRO
  pour supprimer les variables les plus courantes.
 
    Une autre fonction utile mais non nécessaire est
-
 int is_multichannel();
  Elle doit retourner 1 si une instance du greffon gère simultanément
 plusieurs pistes et 0 si une instance du greffon ne gère qu'une piste.
@@ -9737,7 +9668,6 @@ définitions de macros s'adressent principalement aux greffons en temps
 réel et ne sont pas utiles pour les greffons qui ne sont pas en temps
 réel.  Heureusement, les greffons qui ne sont pas en temps réel sont
 plus simples.
-
 PLUGIN_CLASS_MEMBERS(config_name, thread_name)
 
    Les membres de PLUGIN_CLASS_MEMBERS couramment utilisés sont décrits
@@ -9747,7 +9677,6 @@ ci-dessous.
 Charge la configuration en se basant sur les images-clés qui se
 trouvent à proximité et sur la position actuelle.  La définition de
 classe pour load_configuration doit contenir
-
 LOAD_CONFIGURATION_MACRO(plugin_class, config_class)
 
    pour implémenter le comportement par défaut de load_configuration.
@@ -9762,7 +9691,6 @@ PLUGIN_CLASS_MEMBERS.
 
    VFrame* new_picon();
 Crée une vignette à afficher dans la fenêtre des ressources.  Utilisez
-
 #include "picon_png.h"
 NEW_PICON_MACRO(plugin_class)
  pour implémenter une nouvelle vignette.  De plus, l'utilisateur doit
@@ -9781,7 +9709,6 @@ Doit d'abord charger la configuration, teste un code de retour égal à 1
 et redessine ensuite l'interface graphique avec les nouveaux
 paramètres.  Tous les greffons qui utilisent GuiCast ont un format
 semblable à
-
     void MyPlugin::update_gui()
     {
         if(thread)
@@ -9800,19 +9727,16 @@ n'y a pas d'interface graphique.
    int show_gui();
 Instancie l'interface graphique et bascule le greffon en mode interface
 graphique ("GUI mode").  C'est implémenté par
-
 SHOW_GUI_MACRO(plugin_class, thread_class)
 
    int set_string();
 Change le titre de la fenêtre de l'interface graphique en utilisant une
 certaine chaîne de caractères.  C'est implémenté par
-
 SET_STRING_MACRO(plugin_class)
 
    void raise_window();
 Affiche la fenêtre de l'interface graphique sur le dessus de la pile.
 C'est implémenté par
-
 RAISE_WINDOW_MACRO(plugin_class)
 
    Des fonctions importantes que doit définir l'objet de traitement
@@ -9820,7 +9744,6 @@ sont les fonctions qui chargent et enregistrent les données de
 configuration depuis les images-clés.  Ces fonctions sont appelées par
 les macros, et vous n'avez donc pas à vous préoccuper de l'accès aux
 données des images-clés.
-
 void save_data(KeyFrame *keyframe);
 void read_data(KeyFrame *keyframe);
 
@@ -9834,7 +9757,6 @@ changer pour chaque projet.
 certaines commandes spécifiques pour obtenir les données à partir du
 paramètre KeyFrame.  Vous trouverez des exemples d'utilisation de
 KeyFrame et de FileXML dans les greffons existants.
-
 int load_defaults();
 int save_defaults();
 
@@ -9866,7 +9788,6 @@ variables spécifiques aux paramètres du greffon.
 
    Habituellement, l'objet de configuration commence par le nom du
 greffon suivi de Config.
-
     class MyPluginConfig
     {
     public:
@@ -9874,7 +9795,6 @@ greffon suivi de Config.
 
    Après le nom de la classe de configuration, nous trouvons les trois
 fonctions requises et les variables de configuration.
-
         int equivalent(MyPluginConfig &that);
         void copy_from(MyPluginConfig &that);
         void interpolate(MyPluginConfig &prev,
@@ -9905,7 +9825,6 @@ variables locales.
 
    Normalement, la fonction d'interpolation calcule une fraction
 précédente et une fraction suivante en utilisant les paramètres.
-
     void MyPluginConfig::interpolate(MyPluginConfig &prev,
         MyPluginConfig &next,
         int64_t prev_position,
@@ -9921,7 +9840,6 @@ précédente et une fraction suivante en utilisant les paramètres.
 
    Ensuite, les fractions sont appliquées à l'objet de configuration
 précédent et suivant pour obtenir les valeurs actuelles.
-
         this->parameter1 =
         (float)(prev.parameter1 * prev_scale
         + next.parameter1 * next_scale);
@@ -9969,11 +9887,9 @@ fenêtre et des pointeurs vers tous les éléments graphiques de la
 fenêtre.  En utilisant la boîte à outil de Cinelerra, il consiste en un
 dérivé de BCWindow et un dérivé de Thread.  Le dérivé de Thread est
 déclaré dans l'en-tête du greffon en utilisant
-
 PLUGIN_THREAD_HEADER(plugin_class, thread_class, window_class)
 
    Il est ensuite défini par
-
 PLUGIN_THREAD_OBJECT(plugin_class, thread_class, window_class)
 
    Ceci, en combinaison avec la macro SHOW_GUI, effectue tout le travail
@@ -9989,7 +9905,6 @@ de copier un greffon existant et d'en renommer les symboles.  Ce qui
 suit est un aperçu de ce qui se passe.  L'en-tête du greffon doit
 déclarer le constructeur de la fenêtre en utilisant les paramètres
 appropriés.
-
     #include "guicast.h"
     class MyPluginWindow : public BC_Window
     {
@@ -10000,11 +9915,9 @@ appropriés.
 y.
 
    Il a besoin de deux méthodes
-
 int create_objects();
 int close_event();
  et un pointeur arrière vers le greffon
-
 MyPlugin *plugin;
 
    La définition du constructeur doit comporter des extents et des
@@ -10017,13 +9930,11 @@ fonction update_gui que vous avez précédemment défini dans le greffon.
 Les éléments graphiques sont habituellement des dérivés d'un élément
 graphique GuiCast et ils surchargent des fonctions dans GuiCast afin de
 gérer des événements.  Enfin, créez les appels aux objets
-
 show_window();
 flush();
  afin que la fenêtre soit dessinée en une seule fois.
 
    Le membre close_event doit être implémenté en utilisant
-
 WINDOW_CLOSE_EVENT(window_class)
 
    Chaque élément graphique de l'interface doit détecter quand sa
@@ -10038,7 +9949,6 @@ toutes les copies du greffon qui traitent des données.
 Les greffons en temps réel doivent utiliser la classe
 PLUGIN_CLASS_MEMBERS pour définir le jeu de base des membres dans leurs
 en-têtes.  Tous les greffons en temps réel doivent définir un membre
-
 int is_realtime()
 
    qui retourne 1.  Ceci entraîne l'appel d'un certain nombre de
@@ -10074,7 +9984,6 @@ configuration a été modifiée.
 
    Après avoir déterminé la configuration du greffon, le média d'entrée
 doit être chargé pour le traitement.  Appelez :
-
     read_frame(VFrame *buffer,
         int channel,
         int64_t start_position,
@@ -10096,8 +10005,8 @@ utilisé si vous n'avez pas besoin de tampon temporaire.
 déterminer quand vous désirez lire les données.  La position de départ,
 le débit et la longueur passés à une fonction read n'ont pas besoin
 d'être les mêmes que les valeurs reçues par la fonction process_buffer.
-De cette manière, le greffon peut lire des données à un débit
-différent du débit auquel il envoie les données vers la sortie.
+De cette manière, le greffon peut lire des données à un débit différent
+du débit auquel il envoie les données vers la sortie.
 
    Le paramètre channel n'a de signification que pour les greffons
 multicanaux.  Ils leur faut lire les données pour chaque piste dans la
@@ -10160,11 +10069,9 @@ place, définir les méthodes suivantes.
 
    Le greffon qui n'est pas en temps réel doit contenir un pointeur
 vers l'objet par défaut.
-
 BC_Hash *defaults;
  Il doit aussi comporter un pointeur vers une barre d'avancement
 MainProgressBar.
-
 MainProgressBar *progress;
 
    Le pointeur d'avancement permet aux greffons qui ne sont pas en
@@ -10264,7 +10171,6 @@ delete_defaults directement à la place de PLUGIN_DESTRUCTOR_MACRO#.
 Le plus simple des greffons audio est le Gain.  L'objet de traitement
 doit inclure `pluginaclient.h' et hériter de PluginAClient.  Les
 greffons audio en temps réel doivent définir
-
     int process_buffer(int64_t size,
         double **buffer,
         int64_t start_position,
@@ -10280,7 +10186,6 @@ un abandon du rendu par échec.
 
    Les fonctions de traitement doivent demander des échantillons
 d'entrée avec
-
     int read_samples(double *buffer,
         int channel,
         int sample_rate,
@@ -10290,10 +10195,8 @@ d'entrée avec
 d'échantillonnage et une positon de départ quelconque.
 
    Les greffons audio qui ne sont pas en temps réel doivent définir
-
 {int process_loop(double *buffer, int64_t &write_length);}
  pour un seul canal ou
-
 {int process_loop(double **buffers, int64_t &write_length);}
  en multicanal.  Les greffons qui ne sont pas en temps réel utilisent
 un jeu différent de fonctions read_samples pour demander des données
@@ -10305,19 +10208,16 @@ d'entrée.  Elles sont fixées au taux d'échantillonnage du projet.
 Le plus simple des greffons vidéo est l'effet "Retourner".  L'objet de
 traitement doit inclure `pluginvclient.h' et hérite de PluginVClient.
 Les greffons en temps réel doivent définir
-
     int process_buffer(VFrame **frame,
         int64_t start_position,
         double frame_rate);
  s'ils sont multicanaux, ou
-
     int process_buffer(VFrame *frame,
         int64_t start_position,
         double frame_rate);
  si c'est pour un seul canal.
 
    Les greffons vidéo qui ne sont pas en temps réel doivent définir
-
 {int process_loop(VFrame *buffer);}
 pour un seul canal, ou
 {int process_loop(VFrame **buffers);}
@@ -10378,7 +10278,6 @@ une transition.
 
    Les transitions traitent les données dans une fonction
 process_realtime function.
-
     int process_realtime(VFrame *input,
         VFrame *output);
     int process_realtime(int64_t size,
@@ -10422,7 +10321,6 @@ process_buffer.  send_render_gui commence une recherche et appelle
 ensuite render_gui dans l'instance de l'interface graphique du greffon.
 
    render_gui devrait comporter une séquence telle que
-
     void MyPlugin::render_gui(void *data)
     {
         if(thread)
@@ -10660,7 +10558,6 @@ doit aller la sortie OpenGL si un traitement quelconque est effectué.
 La séquence de commandes pour dessiner sur le PBuffer de sortie
 commence par mettre la vidéo dans une zone mémoire qui peut être
 rappelée pour dessiner :
-
 get_output()->to_texture();
 get_output()->enable_opengl();
 
@@ -10673,7 +10570,6 @@ get_output()->enable_opengl();
    L'étape suivante est de dessiner la texture avec certains traitement
 sur le PBuffer.  La séquence de commandes normale pour dessiner une
 texture est :
-
 get_output()->init_screen();
 get_output()->bind_texture(0);
 get_output()->draw_texture();
@@ -10723,7 +10619,6 @@ tournait sur le processeur.
    Les shaders sont écrits dans le langage de Shading OpenGL.  Le code
 source du shader est contenu dans une chaîne.  La séquence normale pour
 utiliser un shader se trouve après un appel à enable_opengl.
-
 
 char *shader_source = "...";
 unsigned char shader_id = VFrame::make_shader(0, shader_source, 0);
@@ -11337,8 +11232,8 @@ le plus efficacement possible l'absence de toute garantie ; chaque
 fichier devrait aussi contenir au moins la ligne "copyright" et une
 indication de l'endroit où se trouve l'avis complet.
 
-     UNE LIGNE DONNANT LE NOM DU PROGRAMME ET UNE COURTE IDÉE DE CE QU'IL FAIT.
-     Copyright (C) ANNÉE  NOM DE L'AUTEUR
+     UNE LIGNE DONNANT LE NOM DU PROGRAMME ET UNE COURTE IDéE DE CE QU'IL FAIT.
+     Copyright (C) ANNéE  NOM DE L'AUTEUR
 
      Ce programme est un logiciel libre ; vous pouvez le redistribuer et/ou le
      modifier au titre des clauses de la Licence Publique Générale GNU, telle que
@@ -11360,7 +11255,7 @@ courrier électronique et courrier postal.
    Si le programme est interactif, faites en sorte qu'il affiche un
 court avis tel que celui-ci lorsqu'il démarre en mode interactif :
 
-     Gnomovision version 69, Copyright (C) ANNÉE NOM DE L'AUTEUR
+     Gnomovision version 69, Copyright (C) ANNéE NOM DE L'AUTEUR
      Gnomovision n'est accompagné d'ABSOLUMENT AUCUNE GARANTIE ; pour plus de
      détails tapez "show w".  Ceci est un logiciel libre et vous êtes invité à le
      redistribuer en respectant certaines obligations ; pour plus de détails tapez
@@ -11393,3 +11288,8 @@ propriétaires avec la bibliothèque.  Si c'est ce que vous voulez faire,
 utilisez la GNU Lesser General Public License au lieu de la présente
 Licence.
 
+
+
+Local Variables:
+coding: iso-8859-15
+End:

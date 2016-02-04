@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!-- Created on le 4 F&eacute;vrier 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -88,34 +88,6 @@ fichiers MPEG
 image dans un flux MPEG.
 </li></ul>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC9">2.1 Prérequis matériels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC10">2.2 Prérequis logiciels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC11">2.3 Compiler Cinelerra CV</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC14">2.4 Lancer Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC15">2.5 Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC18">2.6 Ubuntu</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC19">2.7 Gentoo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC20">2.8 Live CD</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC21">2.9 Fedora</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC22">2.10 Mandriva</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC23">2.11 Slackware</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC24">2.12 Suse</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC25">2.13 MacOSX</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Pr_00e9requis-mat_00e9riels"></a>
@@ -220,12 +192,6 @@ Les bibliothèques suivantes devraient aussi être installées sur votre système
 <a name="SEC11"></a>
 <h2 class="section"> 2.3 Compiler Cinelerra CV </h2>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC12">2.3.1 Processus de compilation habituel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC13">2.3.2 Compiler avec les symboles de débogage</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Processus-de-compilation-habituel"></a>
@@ -356,12 +322,6 @@ fois :
 <a name="SEC15"></a>
 <h2 class="section"> 2.5 Debian </h2>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC16">2.5.1 Binaires Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC17">2.5.2 Prérequis pour Debian</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Binaires-Debian"></a>
@@ -421,15 +381,16 @@ réaliser l'installation au moyen du <b>gestionnaire de paquets Synaptic</b>, all
 dans <b>Configuration -&gt; Dépôts</b>.  Dans la fenêtre de gestion des paquets,
 cliquez sur le bouton <b>Ajouter</b> et renseignez les dépôts suivants :
 </p>
-<pre class="verbatim">deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
+<pre class="verbatim">ppa:cinelerra-ppa/ppa
 </pre>
 <p>En cliquant sur <b>Ajouter le dépôt</b> vous verrez le nouveau dépôt activé dans
 la fenêtre de gestion des paquets.  Vous pouvez aussi ajouter directement les
 lignes suivantes dans le fichier <tt>`/etc/apt/sources.list'</tt> :
 </p>
-<pre class="verbatim">deb http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/ ./
+<pre class="verbatim">deb http://ppa.launchpad.net/cinelerra-ppa/ppa/ubuntu &lt;RELEASE&gt; main
 </pre>
-<p>Vous verrez alors apparaître Cinelerra dans Synaptic.
+<p>where &lt;RELEASE&gt; is your installed version of Ubuntu (precise, trusty, etc). <br>
+Vous verrez alors apparaître Cinelerra dans Synaptic.
 </p>
 <p>Pour installer Cinelerra avec <b>GDebi</b>, consultez cette page :<br>
 <a href="http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/">http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/</a>.<br>
@@ -659,7 +620,7 @@ Suivant pour terminer l'installation.
 </tr></table>
 <p>
  <font size="-1">
-  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>le 4 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

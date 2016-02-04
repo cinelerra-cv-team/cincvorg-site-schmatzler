@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!-- Created on le 4 F&eacute;vrier 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -73,30 +73,6 @@ d'implémentation commune avec des modifications spécifiques à son type
 particulier.  La manière la plus simple pour implémenter un greffon est de
 prendre le plus simple de son groupe et d'en renommer les symboles.
 </p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC318">22.1 Introduction à la méthode PULL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> le paradigme actuel de l'écriture des greffons.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC319">22.2 Fonctions communes aux greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que tous les effets doivent faire.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC323">22.3 Greffons en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets en temps réel.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC324">22.4 Greffons qui ne sont pas en temps réel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets rendus.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC325">22.5 Greffons audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets audio.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC326">22.6 Greffons vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que doivent faire les effets vidéo.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC327">22.7 Greffons de transitions</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> ce que les transitions doivent faire.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC328">22.8 Greffons dont l'interfaces utilisateur se met à jour lors de la lecture</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser les données en
-  cours de lecture pour dessiner une interface graphique utilisateur.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC332">22.10 Utiliser OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser le matériel pour accélérer les opérations.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC329">22.9 Requêtes des greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment les greffons obtiennent des informations concernant les
-  informations devant être traitées.
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Introduction-_00e0-la-m_00e9thode-PULL"></a>
@@ -202,14 +178,6 @@ d'interpolation, de copie et de comparaison.  Les macros pour le greffon client
 appellent automatiquement des méthodes pour interpoler les images-clés.
 </li></ul>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC320">22.2.1 L'objet de traitement</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC321">22.2.2 L'objet de configuration</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC322">22.2.3 L'objet d'interface utilisateur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="L_0027objet-de-traitement"></a>
@@ -920,12 +888,6 @@ différente selon qu'on se trouve dans le mode temps-réel ou non.  Elles donnent
 toutes des informations concernant le système d'exploitation ou le projet, qui
 peuvent être utilisées pour améliorer la qualité du traitement.
 </p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC330">22.9.1 Requêtes système</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> utilitaires permettant déterminer les ressources du système.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC331">22.9.2 Requêtes de temps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> utilitaires permettant effectuer des traitements qui dépendent du temps.
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Requ_00eates-syst_00e8me"></a>
@@ -1046,16 +1008,6 @@ est de copier un greffon existant et de le modifier.  Le greffon de
 <b>Luminosité</b> est un greffon OpenGL simple à copier.  Il y a 3 points
 principaux pour le rendu OpenGL et un point pour optimiser le rendu OpenGL.
 </p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC333">22.10.1 Obtenir les données OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> obtenir les données vidéo sous une forme utilisable par OpenGL
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC334">22.10.2 Dessiner en utilisant OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> la méthode pour dessiner de la vidéo avec OpenGL
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC335">22.10.3 Utiliser les shaders</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> routines pour simplifier l'utilisation des shader
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC336">22.10.4 Agrégation de greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> 	combiner des routines OpenGL de différents greffons en une seule.
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="Obtenir-les-donn_00e9es-OpenGL"></a>
@@ -1289,7 +1241,7 @@ Les paramètres pour le greffon fall through devraient être disponibles par
 </tr></table>
 <p>
  <font size="-1">
-  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>le 4 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

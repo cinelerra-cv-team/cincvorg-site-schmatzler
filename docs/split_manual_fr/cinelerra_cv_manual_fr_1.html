@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on le 13 Mars 2007 by texi2html 1.76 -->
+<!-- Created on le 4 F&eacute;vrier 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -59,20 +59,6 @@ ul.toc {list-style: none}
 <a name="SEC1"></a>
 <h1 class="chapter"> 1. Introduction </h1>
 
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC2">1.1 A propos Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC3">1.2 Les deux versions de Cinelerra</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC4">1.3 A propos de ce manuel</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC5">1.4 Obtenir de l'aide</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC6">1.5 Tutoriels</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC7">1.6 Liens divers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-</table>
 
 <hr size="6">
 <a name="A-propos-de-Cinelerra"></a>
@@ -106,7 +92,7 @@ l'utilisation d'autres outils, tels que MainActor, Kino ou Moxy.
 
 <p>Il y a deux branches de Cinelerra.  L'une d'elle se trouve à
 <a href="http://www.heroinewarrior.com">http://www.heroinewarrior.com</a> et l'autre à
-<a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>.  Cette documentation concerne <b>Cinelerra-CV
+<a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>.  Cette documentation concerne <b>Cinelerra-CV
 (Community Version)</b>.
 </p>
 <p>Les sources de la version officielle de Cinelerra sont développées &quot;en amont&quot; Par Heroine Virtual, Ltd (HV)
@@ -120,7 +106,7 @@ Ils ont décidé qu'il serait bien d'effectuer le développement de manière
 communautaire, sans pour autant effectuer un &quot;fork&quot;.  De ce fait, le code
 source de Cinelerra CV est très proche de celui de la version officielle.  Les
 développeurs de la version CV appliquent des résolutions de bugs
-(<a href="http://bugs.cinelerra.org">http://bugs.cinelerra.org</a>), effectuent des correctifs de bogues et des
+(<a href="http://bugs.cinelerra-cv.org">http://bugs.cinelerra-cv.org</a>), effectuent des correctifs de bogues et des
 correctifs de compatibilité.  Les programmeurs envoyent occasionnellement des
 correctifs en amont à HV.  De ce fait, Cinelerra CV comporte certaines
 fonctionnalités qu'on ne trouve pas dans la version officielle.
@@ -155,15 +141,15 @@ bugs est relativement aisé.  Cependant, décrire clairement et concisément ces
 bugs à la communauté qui les corrige est une tâche que l'on est à même
 d'espérer de la part de tous les utilisateurs.  La communauté est très
 réactive.  Aidez-la en créant des rapports de bugs bien réalisés.  Vous pouvez
-rejoindre notre mailing-liste à <a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>.
+rejoindre notre mailing-liste à <a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>.
 </p>
 <hr size="6">
 <a name="A-propos-de-ce-manuel"></a>
 <a name="SEC4"></a>
 <h2 class="section"> 1.3 A propos de ce manuel </h2>
 
-<p>L'édition de ce manuel est 1.24.FR, et il s'applique à Cinelerra CV
-version 2.1.  Vous pouvez le redistribueer et/ou le modifier selon
+<p>L'édition de ce manuel est 1.25.FR, et il s'applique à Cinelerra CV
+version 2.3.  Vous pouvez le redistribueer et/ou le modifier selon
 les termes de la Licence Publique Générale GNU (GPL), telle que publiée par la
 Free Software Foundation ; soit à la version 2 de la licence ou (à votre
 choix), toute autre version ultérieure.
@@ -203,7 +189,7 @@ votre ordinateur et lancez :<br>
 <code>cg-clone git://scm.pipapo.org/cinelerra/nicolasm</code>
 </li><li> Vous pouvez participer à l'édition de ce manuel en effectuant vos
 modifications dans le wiki de Cinelerra-CV :<br>
-<a href="http://cvs.cinelerra.org/docs/wiki/doku.php">http://cvs.cinelerra.org/docs/wiki/doku.php</a>
+<a href="http://cinelerra-cv.org/docs/wiki/doku.php">http://cinelerra-cv.org/docs/wiki/doku.php</a>
 </li></ul>
 
 
@@ -217,7 +203,7 @@ modifications dans le wiki de Cinelerra-CV :<br>
 <li> <b>Le canal IRC :</b> #cinelerra sur Freenode
 </li><li> <b>La liste de diffusion :</b>
 <a href="https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra">https://init.linpro.no/mailman/skolelinux.no/listinfo/cinelerra</a>
-</li><li> <b>Le site Web de Cinelerra CV :</b> <a href="http://cvs.cinelerra.org">http://cvs.cinelerra.org</a>
+</li><li> <b>Le site Web de Cinelerra-CV :</b> <a href="http://cinelerra-cv.org">http://cinelerra-cv.org</a>
 </li></ul>
 
 <hr size="6">
@@ -278,7 +264,7 @@ Une page intéressante au sujet du désentrelacement (en anglais)<br>
 </tr></table>
 <p>
  <font size="-1">
-  Ce document a &eacute;t&eacute; g&eacute;n&eacute;r&eacute; par <em>Nicolas Maufrais</em> <em>le 13 Mars 2007</em> en utilisant <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>le 4 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 
