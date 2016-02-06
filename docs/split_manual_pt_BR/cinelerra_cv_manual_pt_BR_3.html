@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual do Cinelerra CV: 3. Configura√ß√£o</title>
+<title>Manual do Cinelerra CV: 3. ConfiguraÁ„o</title>
 
-<meta name="description" content="Manual do Cinelerra CV: 3. Configura√ß√£o">
-<meta name="keywords" content="Manual do Cinelerra CV: 3. Configura√ß√£o">
+<meta name="description" content="Manual do Cinelerra CV: 3. ConfiguraÁ„o">
+<meta name="keywords" content="Manual do Cinelerra CV: 3. ConfiguraÁ„o">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_2.html#SEC9" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC63" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_2.html#SEC8" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC62" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,54 +56,43 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Configura_00e7_00e3o"></a>
-<a name="SEC31"></a>
-<h1 class="chapter"> 3. Configura√ß√£o </h1>
+<a name="SEC30"></a>
+<h1 class="chapter"> 3. ConfiguraÁ„o </h1>
 
-<p>Devido √† sua variedade de usos, o Cinelerra n√£o pode ser usado de uma forma √≥tima sem que haja uma configura√ß√£o precisa, voltada para suas necessidades espec√≠ficas. Muito poucos par√¢metros s√£o ajust√°veis √† hora da compila√ß√£o. A configura√ß√£o na hora de rodar o programa (&quot;runtime&quot;) √© a √∫nica op√ß√£o para a maioria das configura√ß√µes, devido √† multitude de par√¢metros. <br>
-Aqui n√≥s discutimos n√£o apenas as op√ß√µes de configura√ß√£o, mas quais das diferentes APIs s√£o suportadas em GNU/Linux. <br>
-V√° para <b>configura√ß√µes-&gt;prefer√™ncias</b> para ver mais op√ß√µes.
+<p>Devido ‡ sua variedade de usos, o Cinelerra n„o pode ser usado de uma forma Ûtima sem que haja uma configuraÁ„o precisa, voltada para suas necessidades especÌficas. Muito poucos par‚metros s„o ajust·veis ‡ hora da compilaÁ„o. A configuraÁ„o na hora de rodar o programa (&quot;runtime&quot;) È a ˙nica opÁ„o para a maioria das configuraÁıes, devido ‡ multitude de par‚metros. <br>
+Aqui nÛs discutimos n„o apenas as opÁıes de configuraÁ„o, mas quais das diferentes APIs s„o suportadas em GNU/Linux. <br>
+V· para <b>configuraÁıes-&gt;preferÍncias</b> para ver mais opÁıes.
 </p>
 
 <hr size="6">
 <a name="Vari_00e1veis-de-ambiente"></a>
-<a name="SEC32"></a>
-<h2 class="section"> 3.1 Vari√°veis de ambiente </h2>
+<a name="SEC31"></a>
+<h2 class="section"> 3.1 Vari·veis de ambiente </h2>
 
-<p>Nos derivativos de UNIX, vari√°veis de ambiente s√£o vari√°veis globais no terminal (&quot;shell&quot;) que todas as aplica√ß√µes s√£o capazes de ler. Elas s√£o configuradas com um comando como <code>set VARIABLE=value</code>. Todas as vari√°veis de ambiente podem ser vistas com um comando tipo <code>env</code>. O Cinelerra reconhece as seguintes vari√°veis de ambiente:
+<p>Nos derivativos de UNIX, vari·veis de ambiente s„o vari·veis globais no terminal (&quot;shell&quot;) que todas as aplicaÁıes s„o capazes de ler. Elas s„o configuradas com um comando como <code>set VARIABLE=value</code>. Todas as vari·veis de ambiente podem ser vistas com um comando tipo <code>env</code>. O Cinelerra reconhece as seguintes vari·veis de ambiente:
 </p>
 <ul>
 <li> <b>LADSPA_PATH</b> <br>
-Se voc√™ quer usar plugins LADSPA, isto deve ser definido: uma lista separada por v√≠rgula de diret√≥rios onde ser√£o buscados os plugins LADSPA. Estes n√£o s√£o plugins nativos do Cinelerra.  See section <a href="cinelerra_cv_manual_pt_BR_16.html#SEC250">Efeitos ladspa</a>.
+Se vocÍ quer usar plugins LADSPA, isto deve ser definido: uma lista separada por vÌrgula de diretÛrios onde ser„o buscados os plugins LADSPA. Estes n„o s„o plugins nativos do Cinelerra.  See section <a href="cinelerra_cv_manual_pt_BR_16.html#SEC245">Efeitos ladspa</a>.
 
 </li><li> <b>GLOBAL_PLUGIN_DIR</b> <br>
-O diret√≥rio onde o Cinelerra deve procurar por plugins nativos. O padr√£o √© <tt>`/usr/lib/cinelerra'</tt>, mas voc√™ pode precisar de um diret√≥rio alternativo se voc√™ compartilha o mesmo diret√≥rio execut√°vel entre v√°rias m√°quinas via NFS. Plugins de diferentes formatos bin√°rios precisam estar em diret√≥rios diferentes.
+O diretÛrio onde o Cinelerra deve procurar por plugins nativos. O padr„o È <tt>`/usr/lib/cinelerra'</tt>, mas vocÍ pode precisar de um diretÛrio alternativo se vocÍ compartilha o mesmo diretÛrio execut·vel entre v·rias m·quinas via NFS. Plugins de diferentes formatos bin·rios precisam estar em diretÛrios diferentes.
 
 </li><li> <b>LANG e LANGUAGE</b> <br>
-O Cinelerra est√° traduzido em v√°rias l√≠nguas. As configura√ß√µes de l√≠ngua do Cinelerra normalmente s√£o lidas a partir de suas configura√ß√µes de l√≠ngua no Linux. Para rodar o Cinelerra em uma l√≠ngua diferente da selecionada em seu sistema, mude as vari√°veis de ambiente LANG e LANGUAGE. <br>
-Por exemplo, abra um terminal e digite: <code>export LANG=es_ES LANGUAGE=es_ES</code>, e depois rode o Cinelerra a partir do mesmo terminal. Ele abrir√° com os textos dispostos em espanhol. <br>
-L√≠nguas dispon√≠veis s√£o:
+O Cinelerra est· traduzido em v·rias lÌnguas. As configuraÁıes de lÌngua do Cinelerra normalmente s„o lidas a partir de suas configuraÁıes de lÌngua no Linux. Para rodar o Cinelerra em uma lÌngua diferente da selecionada em seu sistema, mude as vari·veis de ambiente LANG e LANGUAGE. <br>
+Por exemplo, abra um terminal e digite: <code>export LANG=es_ES LANGUAGE=es_ES</code>, e depois rode o Cinelerra a partir do mesmo terminal. Ele abrir· com os textos dispostos em espanhol. <br>
+LÌnguas disponÌveis s„o:
 <ul>
 <li> en_EN - English
 </li><li> es_ES - Espanhol
 </li><li> sl_SI - Esloveno
-</li><li> fr_FR - Franc√™s
+</li><li> fr_FR - FrancÍs
 </li><li> eu_ES - Euskera (Basco)
-</li><li> de_DE - Alem√£o
-</li><li> pt_BR - Portugu√™s do Brazil
+</li><li> de_DE - Alem„o
+</li><li> pt_BR - PortuguÍs do Brazil
 </li><li> it_IT - Italiano
 </li></ul>
-
-<p>Se sua distribui√ß√£o possui apenas suporte a UTF-8 (como o Ubuntu), primeiro voc√™ deve criar os dispositivos de linguagem com este comando:<br>
-<code>localedef -c -i (language_prefix) -f (your ISO-8859 variant) (language_prefix).(your ISO-8859 variant)</code><br>
-Este √© um exemplo para o italiano:<br>
-<code>localedef -c -i it_IT -f ISO-8859-15 it_IT.ISO-8859-15</code>
-</p>
-<p>Ent√£o, voc√™ pode rodar o cinelerra com este comando:<br>
-<code>env LANG=$(echo $LANG | sed -e s/UTF-8/(your ISO-8859 variant)/g) cinelerra</code><br>
-Este √© um exemplo para o italiano:<br>
-<code>env LANG=$(echo $LANG | sed -e s/UTF-8/ISO-8859-15/g) cinelerra</code>
-</p>
-<p>Em alguns casos (por exemplo, se voc√™ compilou o Cinelerra especificando uma op√ß√£o <samp>`--prefix='</samp> diferente do arquivo <tt>`/usr/local'</tt>), os arquivos .po traduzidos n√£o s√£o instalados. Se voc√™ n√£o consegue rodar o Cinelerra em sua l√≠ngua escolhida, tente rodar os seguintes comandos antes de mudar as vari√°veis de ambiente LANG e LANGUAGE:<br>
+<p>Em alguns casos (por exemplo, se vocÍ compilou o Cinelerra especificando uma opÁ„o <samp>`--prefix='</samp> diferente do arquivo <tt>`/usr/local'</tt>), os arquivos .po traduzidos n„o s„o instalados. Se vocÍ n„o consegue rodar o Cinelerra em sua lÌngua escolhida, tente rodar os seguintes comandos antes de mudar as vari·veis de ambiente LANG e LANGUAGE:<br>
 <code>cd hvirtual</code><br>
 <code>./configure prefix=/usr</code><br>
 <code>cd po</code><br>
@@ -112,549 +101,550 @@ Este √© um exemplo para o italiano:<br>
 
 <hr size="6">
 <a name="Drivers-de-_00c1udio"></a>
-<a name="SEC33"></a>
-<h2 class="section"> 3.2 Drivers de √Åudio </h2>
+<a name="SEC32"></a>
+<h2 class="section"> 3.2 Drivers de ¡udio </h2>
 
-<p>Os drivers de √°udio s√£o usados tanto para grava√ß√£o quanto para reprodu√ß√£o para gerar dados para o e a partir do hardware. Uma vez que os mesmos drivers s√£o usados tanto para grava√ß√£o quanto para reprodu√ß√£o, sua funcionalidade est√° descrita aqui em uma se√ß√£o separada.
+<p>Os drivers de ·udio s„o usados tanto para gravaÁ„o quanto para reproduÁ„o para gerar dados para o e a partir do hardware. Uma vez que os mesmos drivers s„o usados tanto para gravaÁ„o quanto para reproduÁ„o, sua funcionalidade est· descrita aqui em uma seÁ„o separada.
 </p>
 
 <hr size="6">
 <a name="Atributos-do-Driver-de-Som"></a>
-<a name="SEC34"></a>
+<a name="SEC33"></a>
 <h3 class="subsection"> 3.2.1 Atributos do Driver de Som </h3>
 
 <ul>
 <li> <b>Caminho do dispositivo</b>  <br>
-Normalmente um arquivo no diret√≥rio <tt>`/dev/'</tt> que controla o dispositivo.
+Normalmente um arquivo no diretÛrio <tt>`/dev/'</tt> que controla o dispositivo.
 
 </li><li> <b>Bits</b> <br>
-O n√∫mero de precis√£o de bits que o Cinelerra deve configurar o dispositivo para usar. Isso √†s vezes possui um significado figurativo. Alguns drivers de com precisam ser configurados para 32
-bits para performar uma reprodu√ß√£o de 24 bits e n√£o tocar√£o nada quando configurados para 24 bits.
+O n˙mero de precis„o de bits que o Cinelerra deve configurar o dispositivo para usar. Isso ‡s vezes possui um significado figurativo. Alguns drivers de com precisam ser configurados para 32
+bits para performar uma reproduÁ„o de 24 bits e n„o tocar„o nada quando configurados para 24 bits.
 Alguns drivers de som precisam ser configurados para 24 bits para reproduzirem em 24 bits.
 
 </li><li> <b>Porta</b><br>
-O padr√£o IEEE1394 especifica algo conhecido como <b>porta</b>. Isso provavelmente ser√° o n√∫mero de sua placa firewire.
+O padr„o IEEE1394 especifica algo conhecido como <b>porta</b>. Isso provavelmente ser· o n˙mero de sua placa firewire.
 
 </li><li> <b>Canal</b><br>
-O padr√£o IEEE1394 especifica algo conhecido como canal. Para c√¢meras DV ele sempre ser√° 63. 
+O padr„o IEEE1394 especifica algo conhecido como canal. Para c‚meras DV ele sempre ser· 63. 
 
 </li><li> <b>Dispositivo</b><br>
 O dispositivo escolhido.
 
-</li><li> <b>Parar exibi√ß√£o trava</b><br>
-Esta caixa de habilita√ß√£o esclusiva para ALSA √© requerida se, ao se parar a reprodu√ß√£o, o software trava.
+</li><li> <b>Parar exibiÁ„o trava</b><br>
+Esta caixa de habilitaÁ„o esclusiva para ALSA È requerida se, ao se parar a reproduÁ„o, o software trava.
 </li></ul>
 
 <hr size="6">
 <a name="OSS"></a>
-<a name="SEC35"></a>
+<a name="SEC34"></a>
 <h3 class="subsection"> 3.2.2 OSS </h3>
 
-<p>Este foi o primeiro driver de som GNU/Linux. Ele possu√≠a uma implementa√ß√£o open source e uma implementa√ß√£o comercial com mais cart√µes de √°udio suportados. Era o driver padr√£o de som at√© o GNU/Linux 2.4. Ainda √© o √∫nico driver de som que um bin√°rio i386 pode usar quando rodando em um sistema x86_64.
+<p>Este foi o primeiro driver de som GNU/Linux. Ele possuÌa uma implementaÁ„o open source e uma implementaÁ„o comercial com mais cartıes de ·udio suportados. Era o driver padr„o de som atÈ o GNU/Linux 2.4. Ainda È o ˙nico driver de som que um bin·rio i386 pode usar quando rodando em um sistema x86_64.
 </p>
 <hr size="6">
 <a name="OSS-Envy24"></a>
-<a name="SEC36"></a>
+<a name="SEC35"></a>
 <h3 class="subsection"> 3.2.3 OSS Envy24 </h3>
 
-<p>A vers√£o comercial do OSS possu√≠a uma variante para cart√µes 24 bits / 96 KHz. Esta variante requeria mudan√ßas significativas no modo como os drivers de som eram usados, sendo para isto que o OSS Envy24 foi criado.
+<p>A vers„o comercial do OSS possuÌa uma variante para cartıes 24 bits / 96 KHz. Esta variante requeria mudanÁas significativas no modo como os drivers de som eram usados, sendo para isto que o OSS Envy24 foi criado.
 </p>
 <hr size="6">
 <a name="Alsa"></a>
-<a name="SEC37"></a>
+<a name="SEC36"></a>
 <h3 class="subsection"> 3.2.4 Alsa </h3>
 
-<p>ALSA √© o driver de som mais comum no GNU/Linux 2.6. Ele suporta a maioria das placas de som agora. Ele usa as vantagens das caracter√≠sticas de lat√™ncia baixa do GNU/Linux 2.6 para obter uma performance melhor do que o OSS possu√≠a no 2.4, mas marginalmente a mesma performance que o OSS tinha no 2.0. Infelizmente, o ALSA est√° constantemente mudando. Um programa que funcione com ele um dia pode n√£o funcionar no dia seguinte. Novos &quot;wrappers&quot; est√£o sendo desenvolvidos pelo ALSA no presente momento; planejamos suport√°-los em intervalos regulares, n√£o a cada novo lan√ßamento de um novo &quot;wrapper&quot;. <br>
-O ALSA n√£o √© mais port√°vel entre i386 e x86_64. Se um bin√°rio i386 tenta fazer uma reprodu√ß√£o num kernel x86_64, ele n√£o funciona. Para este cen√°rio, use o OSS.
+<p>ALSA È o driver de som mais comum no GNU/Linux 2.6. Ele suporta a maioria das placas de som agora. Ele usa as vantagens das caracterÌsticas de latÍncia baixa do GNU/Linux 2.6 para obter uma performance melhor do que o OSS possuÌa no 2.4, mas marginalmente a mesma performance que o OSS tinha no 2.0. Infelizmente, o ALSA est· constantemente mudando. Um programa que funcione com ele um dia pode n„o funcionar no dia seguinte. Novos &quot;wrappers&quot; est„o sendo desenvolvidos pelo ALSA no presente momento; planejamos suport·-los em intervalos regulares, n„o a cada novo lanÁamento de um novo &quot;wrapper&quot;. <br>
+O ALSA n„o È mais port·vel entre i386 e x86_64. Se um bin·rio i386 tenta fazer uma reproduÁ„o num kernel x86_64, ele n„o funciona. Para este cen·rio, use o OSS.
 </p>
 <hr size="6">
 <a name="Esound"></a>
-<a name="SEC38"></a>
+<a name="SEC37"></a>
 <h3 class="subsection"> 3.2.5 Esound </h3>
 
-<p>ESOUND era um servidor de som que estava acima do OSS. Ele era escrito para um gerenciador de janelas chamado Enlightenment, suportando um n√∫mero limitado de bits e possu√≠a lat√™ncia alta se comparado aos tempos modernos, mas multiplexava fontes de √°udio m√∫ltiplas. √â desconhecido se este driver ainda funciona.
+<p>ESOUND era um servidor de som que estava acima do OSS. Ele era escrito para um gerenciador de janelas chamado Enlightenment, suportando um n˙mero limitado de bits e possuÌa latÍncia alta se comparado aos tempos modernos, mas multiplexava fontes de ·udio m˙ltiplas. … desconhecido se este driver ainda funciona.
 </p>
 <hr size="6">
 <a name="Raw-1394"></a>
-<a name="SEC39"></a>
+<a name="SEC38"></a>
 <h3 class="subsection"> 3.2.6 Raw 1394 </h3>
 
-<p>Esta era a primeira interface entre softwares GNU/Linux e as c√¢meras firewire. Era o modo menos confi√°vel de tocar √°udio para uma c√¢mera. Consistia numa biblioteca acima dos comandos de kernel.
+<p>Esta era a primeira interface entre softwares GNU/Linux e as c‚meras firewire. Era o modo menos confi·vel de tocar ·udio para uma c‚mera. Consistia numa biblioteca acima dos comandos de kernel.
 </p>
 <hr size="6">
 <a name="DV-1394"></a>
-<a name="SEC40"></a>
+<a name="SEC39"></a>
 <h3 class="subsection"> 3.2.7 DV 1394 </h3>
 
-<p>A segunda re-escritura do suporte a c√¢meras DV no GNU/Linux. Este era o modo mais confi√°vel de se tocar √°udio para uma c√¢mera, pois consistia em comandos diretos do kernel.
+<p>A segunda re-escritura do suporte a c‚meras DV no GNU/Linux. Este era o modo mais confi·vel de se tocar ·udio para uma c‚mera, pois consistia em comandos diretos do kernel.
 </p>
 <hr size="6">
 <a name="IEC-61883"></a>
-<a name="SEC41"></a>
+<a name="SEC40"></a>
 <h3 class="subsection"> 3.2.8 IEC 61883 </h3>
 
-<p>A terceira re-escritura do suporta a c√¢meras DV no GNU/Linux. Esta √© uma biblioteca acima da RAW 1394, que √© uma biblioteca acima dos comandos de kernel. √â menos confi√°vel que a DV 1394, mas mais confi√°vel que a RAW 1394. A pr√≥xima re-escritura deve corrigir isso.
+<p>A terceira re-escritura do suporta a c‚meras DV no GNU/Linux. Esta È uma biblioteca acima da RAW 1394, que È uma biblioteca acima dos comandos de kernel. … menos confi·vel que a DV 1394, mas mais confi·vel que a RAW 1394. A prÛxima re-escritura deve corrigir isso.
 </p>
 <hr size="6">
 <a name="Drivers-de-V_00eddeo"></a>
-<a name="SEC42"></a>
-<h2 class="section"> 3.3 Drivers de V√≠deo </h2>
+<a name="SEC41"></a>
+<h2 class="section"> 3.3 Drivers de VÌdeo </h2>
 
-<p>Os drivers de v√≠deo s√£o usados para reprodu√ß√£o (&quot;playback&quot;) de v√≠deo nas janelas de composi√ß√£o e visualiza√ß√£o.
+<p>Os drivers de vÌdeo s„o usados para reproduÁ„o (&quot;playback&quot;) de vÌdeo nas janelas de composiÁ„o e visualizaÁ„o.
 </p>
 
 <hr size="6">
 <a name="Atributos-do-Driver-de-V_00eddeo"></a>
-<a name="SEC43"></a>
-<h3 class="subsection"> 3.3.1 Atributos do Driver de V√≠deo </h3>
+<a name="SEC42"></a>
+<h3 class="subsection"> 3.3.1 Atributos do Driver de VÌdeo </h3>
 
 <ul>
-<li> <b>Exibi√ß√£o</b> <br>
+<li> <b>ExibiÁ„o</b> <br>
 <a name="IDX8"></a>
-A interface √© voltada para sistemas com dois monitores. Dependendo do valor para &quot;Display&quot;, a Janela de Composi√ß√£o aparecer√° em um monitor diferente do resto das janelas.
+A interface È voltada para sistemas com dois monitores. Dependendo do valor para &quot;Display&quot;, a Janela de ComposiÁ„o aparecer· em um monitor diferente do resto das janelas.
 
 </li><li> <b>Caminho do dispositivo</b> <br>
-Normalmente um arquivo no diret√≥rio <tt>`/dev/'</tt>, que controla o dispositivo.
+Normalmente um arquivo no diretÛrio <tt>`/dev/'</tt>, que controla o dispositivo.
 
 </li><li> <b>Trocar campos</b> <br>
-Faz das linhas pares √≠mpares e das linhas √≠mpares pares mesmo quando enviando ao dispositivo. Em um monitor NTSC ou 1080i, os campos podem precisar ser trocados para que n√£o haja tremor nos movimentos.
+Faz das linhas pares Ìmpares e das linhas Ìmpares pares mesmo quando enviando ao dispositivo. Em um monitor NTSC ou 1080i, os campos podem precisar ser trocados para que n„o haja tremor nos movimentos.
 
-</li><li> <b>Canal de sa√≠da</b> <br>
-Dispositivos com m√∫ltiplas sa√≠das podem precisar de um conector espec√≠fico para enviar o v√≠deo.
+</li><li> <b>Canal de saÌda</b> <br>
+Dispositivos com m˙ltiplas saÌdas podem precisar de um conector especÌfico para enviar o vÌdeo.
 
 </li><li> <b>Porta</b> <br>
-O padr√£o IEEE1394 especifica algo conhecido como a <b>porta</b>. Este √© provavelmente o n√∫mero da placa firewire do sistema.
+O padr„o IEEE1394 especifica algo conhecido como a <b>porta</b>. Este È provavelmente o n˙mero da placa firewire do sistema.
 
 </li><li> <b>Canal</b> <br>
-O padr√£o IEEE1394 especifica algo conhecido como <b>canal</b>. Para c√¢meras DV, este valor √© sempre <b>63</b>.
+O padr„o IEEE1394 especifica algo conhecido como <b>canal</b>. Para c‚meras DV, este valor È sempre <b>63</b>.
 </li></ul>
 
 <hr size="6">
 <a name="X11"></a>
-<a name="SEC44"></a>
+<a name="SEC43"></a>
 <h3 class="subsection"> 3.3.2 X11 </h3>
 
-<p>Este era o primeiro m√©todo de reprodu√ß√£o de v√≠deo em qualquer sistema UNIX, v√°lido at√© 1999. Ele simplesmente escreve a tr√≠ade RGB para cada pixel diretamente na janela. √â o m√©todo mais lento de reprodu√ß√£o. Ainda √© √∫til como recurso caso o hardware de gr√°fico n√£o consegue lidar com quadros (&quot;frames&quot;) muito largos.
+<p>Este era o primeiro mÈtodo de reproduÁ„o de vÌdeo em qualquer sistema UNIX, v·lido atÈ 1999. Ele simplesmente escreve a trÌade RGB para cada pixel diretamente na janela. … o mÈtodo mais lento de reproduÁ„o. Ainda È ˙til como recurso caso o hardware de gr·fico n„o consegue lidar com quadros (&quot;frames&quot;) muito largos.
 </p>
 <hr size="6">
 <a name="X11_002dXV"></a>
-<a name="SEC45"></a>
+<a name="SEC44"></a>
 <h3 class="subsection"> 3.3.3 X11-XV </h3>
 
-<p>Este era o segundo grande m√©todo de reprodu√ß√£o de v√≠deo do UNIX, come√ßando em 1999. Ele converte YUV para RGB no hardware por escala (&quot;scaling&quot;). √â o m√©todo prefer√≠vel de reprodu√ß√£o, mas n√£o consegue lidar com tamanhos de quadro grandes. O tamanho m√°ximo de v√≠deo para o XV √© normalmente 1920x1080.
+<p>Este era o segundo grande mÈtodo de reproduÁ„o de vÌdeo do UNIX, comeÁando em 1999. Ele converte YUV para RGB no hardware por escala (&quot;scaling&quot;). … o mÈtodo preferÌvel de reproduÁ„o, mas n„o consegue lidar com tamanhos de quadro grandes. O tamanho m·ximo de vÌdeo para o XV È normalmente 1920x1080.
 </p>
 <hr size="6">
 <a name="X11_002dOpenGL"></a>
-<a name="SEC46"></a>
+<a name="SEC45"></a>
 <h3 class="subsection"> 3.3.4 X11-OpenGL </h3>
 
-<p>O m√©todo mais poderoso de reprodu√ß√£o de v√≠deo √© o OpenGL. Com este driver, a maioria dos efeitos √© feita no hardware. O OpenGL permite tamanhos de v√≠deo at√© o m√°ximo do tamanho de textura, que √© normalmente mais largo do que o XV suporta, dependendo do driver de gr√°fico. Para habilit√°-lo, voc√™ precisa de um bin√°rio constru√≠do com suporte a OpenGL. A op√ß√£o <code>configure</code> (de configura√ß√£o) para habilitar o OpenGL √© <samp>`--enable-opengl'</samp>. Voc√™ precisa de uma placa que suporte OpenGL 2.0. Placas de v√≠deo nVidia recentes devem funcionar. Voc√™ tamb√©m precisa de um driver de v√≠deo que suporte OpenGL 2.0, como o driver bin√°rio da Nvidia. Para saber se seu driver de v√≠deo suporta OpenGL 2.0, digite o seguinte comando: <code>glxinfo | grep &quot;OpenGL version&quot;</code>.
+<p>O mÈtodo mais poderoso de reproduÁ„o de vÌdeo È o OpenGL. Com este driver, a maioria dos efeitos È feita no hardware. O OpenGL permite tamanhos de vÌdeo atÈ o m·ximo do tamanho de textura, que È normalmente mais largo do que o XV suporta, dependendo do driver de gr·fico. Para habilit·-lo, vocÍ precisa de um bin·rio construÌdo com suporte a OpenGL. A opÁ„o <code>configure</code> (de configuraÁ„o) para habilitar o OpenGL È <samp>`--enable-opengl'</samp>. VocÍ precisa de uma placa que suporte OpenGL 2.0. Placas de vÌdeo nVidia recentes devem funcionar. VocÍ tambÈm precisa de um driver de vÌdeo que suporte OpenGL 2.0, como o driver bin·rio da Nvidia. Para saber se seu driver de vÌdeo suporta OpenGL 2.0, digite o seguinte comando: <code>glxinfo | grep &quot;OpenGL version&quot;</code>.
 </p>
 <ul>
-<li> Driver de v√≠deo que suporta renderiza√ß√£o de hardware OpenGL 2.0: <br>
+<li> Driver de vÌdeo que suporta renderizaÁ„o de hardware OpenGL 2.0: <br>
 <code>OpenGL version string: 2.0.2 NVIDIA 87.74</code>
-</li><li> Driver de v√≠deo que n√£o suporta renderiza√ß√£o de hardware OpenGL 2.0: <br>
+</li><li> Driver de vÌdeo que n„o suporta renderizaÁ„o de hardware OpenGL 2.0: <br>
 <code>OpenGL version string: <b>1.4</b> (2.0.2 NVIDIA 87.74)</code>
 </li></ul>
 
-<p>O OpenGL utiliza PBuffers e shaders para fazer a renderiza√ß√£o de v√≠deo. A placa de gr√°fico deve suportar OpenGL 2 e o Cinelerra deve ser necessariamente compilado com suporte a OpenGL 2. Isso requere uma compila√ß√£o em um sistema com os headers (&quot;cabe√ßalhos&quot;) do OpenGL 2. PBuffers s√£o conhecidos por serem vol√∫veis. Se a placa de gr√°fico n√£o possui mem√≥ria suficiente ou n√£o tem os visuais corretos, os PBuffers n√£o funcionar√£o. Tente buscar v√°rios quadros (&quot;frames&quot;) ou reiniciar o Cinelerra se o OpenGL n√£o funcionar.
+<p>O OpenGL utiliza PBuffers e shaders para fazer a renderizaÁ„o de vÌdeo. A placa de gr·fico deve suportar OpenGL 2 e o Cinelerra deve ser necessariamente compilado com suporte a OpenGL 2. Isso requere uma compilaÁ„o em um sistema com os headers (&quot;cabeÁalhos&quot;) do OpenGL 2. PBuffers s„o conhecidos por serem vol˙veis. Se a placa de gr·fico n„o possui memÛria suficiente ou n„o tem os visuais corretos, os PBuffers n„o funcionar„o. Tente buscar v·rios quadros (&quot;frames&quot;) ou reiniciar o Cinelerra se o OpenGL n„o funcionar.
 </p>
-<p><b>Limita√ß√µes:</b>
+<p><b>LimitaÁıes:</b>
 </p><ul>
-<li> OpenGL n√£o afeta a renderiza√ß√£o. Ele apenas acelera a reprodu√ß√£o (&quot;playback&quot;) do v√≠deo.
-</li><li> X11-OpenGL processa tudo em modelos de cor 8 bits, embora a diferen√ßa entre YUV e RGB seja mantida.
-</li><li> OpenGL n√£o trabalha com quadros de tamanho maior que 4096x4096. <br>
-Aqui est√° o que aparece escrito no console quando ele trabalha com quadros largos: <br>
+<li> OpenGL n„o afeta a renderizaÁ„o. Ele apenas acelera a reproduÁ„o (&quot;playback&quot;) do vÌdeo.
+</li><li> X11-OpenGL processa tudo em modelos de cor 8 bits, embora a diferenÁa entre YUV e RGB seja mantida.
+</li><li> OpenGL n„o trabalha com quadros de tamanho maior que 4096x4096. <br>
+Aqui est· o que aparece escrito no console quando ele trabalha com quadros largos: <br>
 <code>BC_Texture::create_texture frame size &lt;frame_width&gt;x&lt;frame_height&gt; bigger
 than maximum texture 4096x4096.</code>
-</li><li> A equa√ß√£o de escala configurada na janela de prefer√™ncias √© ignorada pelo OpenGL.
+</li><li> A equaÁ„o de escala configurada na janela de preferÍncias È ignorada pelo OpenGL.
 OpenGL sempre utiliza escalamento linear.
-</li><li> Tamanhos de project e trilha devem ser m√∫ltiplos de 4 para que o OpenGL funcione.
-</li><li> Para obter a acelera√ß√£o m√°xima, efeitos de OpenGL-habilitado devem ser colocados ap√≥s os efeitos que usam somente o software. Toda a renderiza√ß√£o feita antes do √∫ltimo efeito apenas-software √© feita em software. As opera√ß√µes de n√∫cleo do Cinelerra, como c√¢mera e projetor s√£o obviamente OpenGL.
-</li><li> Nem todos os efeitos suportam acelera√ß√£o OpenGL. Os seguintes efeitos suportam OpenGL: Brilho (&quot;Brightness&quot;), Chromakey, Chromakeyhsv, Balanceamento de Cor (&quot;Color balance&quot;), Desentrela√ßamento (&quot;Deinterlace&quot;), Diffkey, Dissolu√ß√£o (&quot;Dissolve&quot;), Invers√£o (&quot;Flip&quot;), Quadros para Campos (&quot;Frames to fields&quot;), Congelar quadro (&quot;Freeze frame&quot;), Gama (&quot;Gamma&quot;),
-Gradiente (&quot;Gradient&quot;), Histograma (&quot;Histogram&quot;), Hue saturation, Interpolar Pixels (&quot;Interpolate Pixels&quot;), Inverter V√≠deo (&quot;Invert video&quot;), Linear blur, Overlay, Perspectiva (&quot;Perspective&quot;), Radial blur, RGB601, Rotacionar (&quot;Rotate&quot;), Scale, Threshold, Zoomblur.
+</li><li> Tamanhos de project e trilha devem ser m˙ltiplos de 4 para que o OpenGL funcione.
+</li><li> Para obter a aceleraÁ„o m·xima, efeitos de OpenGL-habilitado devem ser colocados apÛs os efeitos que usam somente o software. Toda a renderizaÁ„o feita antes do ˙ltimo efeito apenas-software È feita em software. As operaÁıes de n˙cleo do Cinelerra, como c‚mera e projetor s„o obviamente OpenGL.
+</li><li> Nem todos os efeitos suportam aceleraÁ„o OpenGL. Os seguintes efeitos suportam OpenGL: Brilho (&quot;Brightness&quot;), Chromakey, Chromakeyhsv, Balanceamento de Cor (&quot;Color balance&quot;), DesentrelaÁamento (&quot;Deinterlace&quot;), Diffkey, DissoluÁ„o (&quot;Dissolve&quot;), Invers„o (&quot;Flip&quot;), Quadros para Campos (&quot;Frames to fields&quot;), Congelar quadro (&quot;Freeze frame&quot;), Gama (&quot;Gamma&quot;),
+Gradiente (&quot;Gradient&quot;), Histograma (&quot;Histogram&quot;), Hue saturation, Interpolar Pixels (&quot;Interpolate Pixels&quot;), Inverter VÌdeo (&quot;Invert video&quot;), Linear blur, Overlay, Perspectiva (&quot;Perspective&quot;), Radial blur, RGB601, Rotacionar (&quot;Rotate&quot;), Scale, Threshold, Zoomblur.
 </li></ul>
 
 <hr size="6">
 <a name="Buz"></a>
-<a name="SEC47"></a>
+<a name="SEC46"></a>
 <h3 class="subsection"> 3.3.5 Buz </h3>
 
-<p>Este √© um m√©todo para reproduzir arquivos &quot;motion JPEG-A&quot; diretamente para um sinal anal√≥gico composite. Ele utiliza um hack popular do driver Video4Linux 1 de 2000 para descomprimir o JPEG em hardware. Infelizmente, ainda que sa√≠da anal√≥gica seja obsoleta, novos drivers substitu√≠ram o BUZ.
+<p>Este È um mÈtodo para reproduzir arquivos &quot;motion JPEG-A&quot; diretamente para um sinal analÛgico composite. Ele utiliza um hack popular do driver Video4Linux 1 de 2000 para descomprimir o JPEG em hardware. Infelizmente, ainda que saÌda analÛgica seja obsoleta, novos drivers substituÌram o BUZ.
 </p>
 <hr size="6">
 <a name="Reprodu_00e7_00e3o-do-v_00eddeo-por-Raw-1394"></a>
-<a name="SEC48"></a>
-<h3 class="subsection"> 3.3.6 Reprodu√ß√£o do v√≠deo por Raw 1394 </h3>
+<a name="SEC47"></a>
+<h3 class="subsection"> 3.3.6 ReproduÁ„o do vÌdeo por Raw 1394 </h3>
 
-<p>Esta era a primeira interface entre softwares GNU/Linux e c√¢meras firewire. Era a forma menos confi√°vel de enviar v√≠deo para uma c√¢mera. Consistia em uma biblioteca acima dos comandos de kernel.
+<p>Esta era a primeira interface entre softwares GNU/Linux e c‚meras firewire. Era a forma menos confi·vel de enviar vÌdeo para uma c‚mera. Consistia em uma biblioteca acima dos comandos de kernel.
 </p>
 <hr size="6">
 <a name="Reprodu_00e7_00e3o-do-v_00eddeo-por-DV-1394"></a>
-<a name="SEC49"></a>
-<h3 class="subsection"> 3.3.7 Reprodu√ß√£o do v√≠deo por DV 1394 </h3>
+<a name="SEC48"></a>
+<h3 class="subsection"> 3.3.7 ReproduÁ„o do vÌdeo por DV 1394 </h3>
 
-<p>A segunda re-escritura do suporte a c√¢meras DV no GNU/Linux. Era a forma mais confi√°vel de reproduzir v√≠deo em uma c√¢mera. Consistia em comandos diretos do kernel.
+<p>A segunda re-escritura do suporte a c‚meras DV no GNU/Linux. Era a forma mais confi·vel de reproduzir vÌdeo em uma c‚mera. Consistia em comandos diretos do kernel.
 </p>
 <hr size="6">
 <a name="Reprodu_00e7_00e3o-do-v_00eddeo-por-IEC-61883"></a>
-<a name="SEC50"></a>
-<h3 class="subsection"> 3.3.8 Reprodu√ß√£o do v√≠deo por IEC 61883 </h3>
+<a name="SEC49"></a>
+<h3 class="subsection"> 3.3.8 ReproduÁ„o do vÌdeo por IEC 61883 </h3>
 
-<p>A terceira re-escritura do suporte a c√¢meras DV no GNU/Linux. Esta √© uma biblioteca acima do RAW 1394, que √© uma biblioteca acima dos comandos de kernel. √â menos confi√°vel que o DV 1394, mas mais confi√°vel que o RAW 1394. A pr√≥xima re-escritura deve consertar isso.
+<p>A terceira re-escritura do suporte a c‚meras DV no GNU/Linux. Esta È uma biblioteca acima do RAW 1394, que È uma biblioteca acima dos comandos de kernel. … menos confi·vel que o DV 1394, mas mais confi·vel que o RAW 1394. A prÛxima re-escritura deve consertar isso.
 </p>
 <hr size="6">
 <a name="Reprodu_00e7_00e3o"></a>
-<a name="SEC51"></a>
-<h2 class="section"> 3.4 Reprodu√ß√£o </h2>
+<a name="SEC50"></a>
+<h2 class="section"> 3.4 ReproduÁ„o </h2>
 
 
 <hr size="6">
 <a name="Sa_00edda-de-_00c1udio"></a>
-<a name="SEC52"></a>
-<h3 class="subsection"> 3.4.1 Sa√≠da de √Åudio </h3>
+<a name="SEC51"></a>
+<h3 class="subsection"> 3.4.1 SaÌda de ¡udio </h3>
 
-<p>Determinam o que acontece quando voc√™ reproduz som a partir da Linha do Tempo.
+<p>Determinam o que acontece quando vocÍ reproduz som a partir da Linha do Tempo.
 </p>
 <a name="IDX9"></a>
 <a name="IDX10"></a>
 <ul>
-<li> <b>Tamanho do buffer de reprodu√ß√£o</b> <br>
-Para reproduzir √°udio, pequenos fragmentos de som s√£o lidos no disco e processados em um console virtual seq√ºencialmente. Um valor mais alto aqui causa uma lat√™ncia maior quando voc√™ muda os par√¢metros de mixagem, mas resulta em uma reprodu√ß√£o mais confi√°vel. <br>
-Algumas placas de √°udio n√£o permitem modificar a mudan√ßa do fragmento de console. Assim, a lat√™ncia permanece sem modifica√ß√µes, n√£o importa qual seja este valor. <br>
-Anteriormente, uma boa forma de assegurar uma reprodu√ß√£o de alta qualidade era ler fragmentos maiores a partir do disco e quebr√°-los em fragmentos menores para a placa de som. Isso mudou quando o console virtual mudou do modelo de empurrar (&quot;push model&quot;) para o modelo de puxar (&quot;pull model&quot;). Uma vez que diferentes est√°gios do pipeline de renderiza√ß√£o podem mudar a taxa da informa√ß√£o que chega, seria agora muito dif√≠cil desconectar peda√ßos dos fragmentos do console dos peda√ßos dos fragmentos lidos do disco.
+<li> <b>Tamanho do buffer de reproduÁ„o</b> <br>
+Para reproduzir ·udio, pequenos fragmentos de som s„o lidos no disco e processados em um console virtual seq¸encialmente. Um valor mais alto aqui causa uma latÍncia maior quando vocÍ muda os par‚metros de mixagem, mas resulta em uma reproduÁ„o mais confi·vel. <br>
+Algumas placas de ·udio n„o permitem modificar a mudanÁa do fragmento de console. Assim, a latÍncia permanece sem modificaÁıes, n„o importa qual seja este valor. <br>
+Anteriormente, uma boa forma de assegurar uma reproduÁ„o de alta qualidade era ler fragmentos maiores a partir do disco e quebr·-los em fragmentos menores para a placa de som. Isso mudou quando o console virtual mudou do modelo de empurrar (&quot;push model&quot;) para o modelo de puxar (&quot;pull model&quot;). Uma vez que diferentes est·gios do pipeline de renderizaÁ„o podem mudar a taxa da informaÁ„o que chega, seria agora muito difÌcil desconectar pedaÁos dos fragmentos do console dos pedaÁos dos fragmentos lidos do disco.
 
 <a name="IDX11"></a>
-</li><li> <b>Deslocamento de √°udio</b> <br>
-A habilidade de informar a posi√ß√£o exata de reprodu√ß√£o nos drivers de √°udio GNU/Linux √© bastante ruim, se √© que √© dispon√≠vel. Uma vez que esta informa√ß√£o √© requerida para uma sincronia decente de v√≠deo, ela precisa ser acurada. O par√¢metro <b>Deslocamento de √°udio</b> permite aos usu√°rios ajustar a posi√ß√£o que retorna do driver de √°udio para refletir a realidade. O deslocamento de √°udio (&quot;audio offset&quot;) n√£o afeta a reprodu√ß√£o de √°udio ou a renderiza√ß√£o. Ele simplesmente muda a sincronia da reprodu√ß√£o de v√≠deo. <br>
-O jeito mais f√°cil de configurar o deslocamento de √°udio √© criar uma Linha do Tempo com 1 trilha de v√≠deo e 1 trilha de √°udio. Expanda a tilha de √°udio e centre o pan de √°udio. A taxa de quadros (&quot;frame rate&quot;) deve ser algo acima de 24 fps e a taxa de amostragem deve ser acima de 32000. O tamanho do quadro deve ser pequeno o suficiente para que seu computador o renderize √† taxa de quadros inteira. Selecione uma regi√£o da Linha do Tempo come√ßando aos 10 segundos e terminando aos 20 segundos. Coloque um efeito de <b>gradiente</b> na trilha de v√≠deo e configure-o para estar claramente vis√≠vel. Coloque um efeito de <b>sintetizador</b> no √°udio e configure-o para estar claramente aud√≠vel. <br>
-Toque a Linha do Tempo a partir do 0 e observe para ver se o efeito de gradiente come√ßa exatamente quando o √°udio come√ßa. Se n√£o, expanda a trilha de √°udio e ajuste o deslocamento (&quot;nudge&quot;). Se o √°udio come√ßar antes do v√≠deo, diminua o valor do deslocamento. Se o √°udio come√ßar ap√≥s o v√≠deo, aumente o valor do deslocamento. Uma vez que a reprodu√ß√£o das trilhas toque sincronizada, copie o valor do deslocamento (&quot;nudge&quot;) para o valor de <b>Deslocamento de √°udio</b> nas prefer√™ncias. <br>
-<b>Observa√ß√£o:</b> se voc√™ mudar os drivers de √°udio ou se voc√™ mudar o valor de <b>Usar software para posicionar informa√ß√£o</b>, voc√™ dever√° mudar o deslocamento de √°udio porque os drivers de √°udio s√£o inequalmente inacurados.
+</li><li> <b>Deslocamento de ·udio</b> <br>
+A habilidade de informar a posiÁ„o exata de reproduÁ„o nos drivers de ·udio GNU/Linux È bastante ruim, se È que È disponÌvel. Uma vez que esta informaÁ„o È requerida para uma sincronia decente de vÌdeo, ela precisa ser acurada. O par‚metro <b>Deslocamento de ·udio</b> permite aos usu·rios ajustar a posiÁ„o que retorna do driver de ·udio para refletir a realidade. O deslocamento de ·udio (&quot;audio offset&quot;) n„o afeta a reproduÁ„o de ·udio ou a renderizaÁ„o. Ele simplesmente muda a sincronia da reproduÁ„o de vÌdeo. <br>
+O jeito mais f·cil de configurar o deslocamento de ·udio È criar uma Linha do Tempo com 1 trilha de vÌdeo e 1 trilha de ·udio. Expanda a tilha de ·udio e centre o pan de ·udio. A taxa de quadros (&quot;frame rate&quot;) deve ser algo acima de 24 fps e a taxa de amostragem deve ser acima de 32000. O tamanho do quadro deve ser pequeno o suficiente para que seu computador o renderize ‡ taxa de quadros inteira. Selecione uma regi„o da Linha do Tempo comeÁando aos 10 segundos e terminando aos 20 segundos. Coloque um efeito de <b>gradiente</b> na trilha de vÌdeo e configure-o para estar claramente visÌvel. Coloque um efeito de <b>sintetizador</b> no ·udio e configure-o para estar claramente audÌvel. <br>
+Toque a Linha do Tempo a partir do 0 e observe para ver se o efeito de gradiente comeÁa exatamente quando o ·udio comeÁa. Se n„o, expanda a trilha de ·udio e ajuste o deslocamento (&quot;nudge&quot;). Se o ·udio comeÁar antes do vÌdeo, diminua o valor do deslocamento. Se o ·udio comeÁar apÛs o vÌdeo, aumente o valor do deslocamento. Uma vez que a reproduÁ„o das trilhas toque sincronizada, copie o valor do deslocamento (&quot;nudge&quot;) para o valor de <b>Deslocamento de ·udio</b> nas preferÍncias. <br>
+<b>ObservaÁ„o:</b> se vocÍ mudar os drivers de ·udio ou se vocÍ mudar o valor de <b>Usar software para posicionar informaÁ„o</b>, vocÍ dever· mudar o deslocamento de ·udio porque os drivers de ·udio s„o inequalmente inacurados.
 
 <a name="IDX12"></a>
-</li><li> <b>Vis√£o segue a reprodu√ß√£o</b> <br>
-Isso faz com que a janela da Linha do Tempo ande quando o cursor de reprodu√ß√£o se movimenta. Isso pode travar o servidor X ou fazer a janela da Linha do Tempo ficar presa por longos per√≠odos de tempo conforme se desenham os blocos de v√≠deo(&quot;assets&quot;).
+</li><li> <b>Vis„o segue a reproduÁ„o</b> <br>
+Isso faz com que a janela da Linha do Tempo ande quando o cursor de reproduÁ„o se movimenta. Isso pode travar o servidor X ou fazer a janela da Linha do Tempo ficar presa por longos perÌodos de tempo conforme se desenham os blocos de vÌdeo(&quot;assets&quot;).
 
 <a name="IDX13"></a>
-</li><li> <b>Usar software para posicionar informa√ß√£o</b> <br>
-A maioria das placas de som e drivers de som n√£o d√£o uma informa√ß√£o confi√°vel sobre o n√∫mero de amostras que a placa acabou de reproduzir. Quando se est√° reproduzindo v√≠deo, voc√™ precisa desta informa√ß√£o para a sincroniza√ß√£o. Esta op√ß√£o faz com que o driver de som seja ignorado e um software marcador de tempo seja usado para a sincroniza√ß√£o.
+</li><li> <b>Usar software para posicionar informaÁ„o</b> <br>
+A maioria das placas de som e drivers de som n„o d„o uma informaÁ„o confi·vel sobre o n˙mero de amostras que a placa acabou de reproduzir. Quando se est· reproduzindo vÌdeo, vocÍ precisa desta informaÁ„o para a sincronizaÁ„o. Esta opÁ„o faz com que o driver de som seja ignorado e um software marcador de tempo seja usado para a sincronizaÁ„o.
 
 <a name="IDX14"></a>
-</li><li> <b>Reprodu√ß√£o de √°udio em tempo real</b> <br>
-De volta aos tempos em que 150 MHz era o m√°ximo, isso permitia reprodu√ß√£o ininterrupta de cargas pesadas. Esta op√ß√£o for√ßa a reprodu√ß√£o de √°udio para a prioridade m√°xima do kernel. Hoje, isso √© mais √∫til para atingir lat√™ncias muito baixas entre as movimenta√ß√µes no console e a sa√≠da da placa de √°udio. Voc√™ dever ser super-usu√°rio (&quot;root&quot;) para obter prioridade de tempo real.
+</li><li> <b>ReproduÁ„o de ·udio em tempo real</b> <br>
+De volta aos tempos em que 150 MHz era o m·ximo, isso permitia reproduÁ„o ininterrupta de cargas pesadas. Esta opÁ„o forÁa a reproduÁ„o de ·udio para a prioridade m·xima do kernel. Hoje, isso È mais ˙til para atingir latÍncias muito baixas entre as movimentaÁıes no console e a saÌda da placa de ·udio. VocÍ dever ser super-usu·rio (&quot;root&quot;) para obter prioridade de tempo real.
 
 <a name="IDX15"></a>
-</li><li> <b>Driver de √°udio</b> <br>
-Existem v√°rios drivers de √°udio para GNU/Linux. Esta op√ß√£o permite selecionar um driver de √°udio e configurar par√¢metros espec√≠ficos para ela. Os drivers de som e seus par√¢metros est√£o descritos na se√ß√£o de drivers de som. See section <a href="#SEC33">Drivers de √Åudio</a>.
+</li><li> <b>Driver de ·udio</b> <br>
+Existem v·rios drivers de ·udio para GNU/Linux. Esta opÁ„o permite selecionar um driver de ·udio e configurar par‚metros especÌficos para ela. Os drivers de som e seus par‚metros est„o descritos na seÁ„o de drivers de som. See section <a href="#SEC32">Drivers de ¡udio</a>.
 </li></ul>
 
 <hr size="6">
 <a name="Sa_00edda-de-V_00eddeo"></a>
-<a name="SEC53"></a>
-<h3 class="subsection"> 3.4.2 Sa√≠da de V√≠deo </h3>
+<a name="SEC52"></a>
+<h3 class="subsection"> 3.4.2 SaÌda de VÌdeo </h3>
 
-<p>Determina como o v√≠deo sai da Linha do Tempo e chega a seus olhos.
+<p>Determina como o vÌdeo sai da Linha do Tempo e chega a seus olhos.
 </p>
 <a name="IDX16"></a>
 <a name="IDX17"></a>
 <ul>
 <li> <b>Reproduzir todos os quadros</b> <br>
-Faz com que todos os quadros do v√≠deo sejam reproduzidos, mesmo que isso signifique que eles fiquem para tr√°s da reprodu√ß√£o do √°udio. Esta op√ß√£o deve estar sempre habilitada, a n√£o ser que voc√™ use codecs sem compress√£o em sua maioria. A maioria dos codecs comprimidos n√£o suportam mais que quadros sejam pulados (&quot;frame dropping&quot;).
+Faz com que todos os quadros do vÌdeo sejam reproduzidos, mesmo que isso signifique que eles fiquem para tr·s da reproduÁ„o do ·udio. Esta opÁ„o deve estar sempre habilitada, a n„o ser que vocÍ use codecs sem compress„o em sua maioria. A maioria dos codecs comprimidos n„o suportam mais que quadros sejam pulados (&quot;frame dropping&quot;).
 
 <a name="IDX18"></a>
-</li><li> <b>Taxa de quadros alcan√ßada</b> <br>
-O n√∫mero de quadros por segundo sendo exibidos durante a reprodu√ß√£o. Este n√∫mero s√≥ √© atualizado durante a exibi√ß√£o.
+</li><li> <b>Taxa de quadros alcanÁada</b> <br>
+O n˙mero de quadros por segundo sendo exibidos durante a reproduÁ„o. Este n˙mero sÛ È atualizado durante a exibiÁ„o.
 
 <a name="IDX19"></a>
-</li><li> <b>Decodificar quadros de forma ass√≠ncrona</b> <br>
-Se voc√™ possui bastante mem√≥ria e mais de uma CPU, esta op√ß√£o pode melhorar a performance de reprodu√ß√£o decodificando o v√≠deo em uma CPU o mais r√°pido poss√≠vel enquanto dedica a outra CPU apenas para reproduzir v√≠deo. Ela assume que todas as opera√ß√µes de reprodu√ß√£o estejam √† frente (&quot;forward&quot;) e que nenhum quadro seja saltado (&quot;dropped&quot;). Opera√ß√µes envolvendo reprodu√ß√£o reversa (&quot;reverse playback&quot;) ou salto de quadros s√£o impactadas negativamente. <br>
-Uma vez que esta op√ß√£o requere enormes quantidades de mem√≥ria, ela pode dar pau caso os quadros de entrada sejam muito grandes.
+</li><li> <b>Decodificar quadros de forma assÌncrona</b> <br>
+Se vocÍ possui bastante memÛria e mais de uma CPU, esta opÁ„o pode melhorar a performance de reproduÁ„o decodificando o vÌdeo em uma CPU o mais r·pido possÌvel enquanto dedica a outra CPU apenas para reproduzir vÌdeo. Ela assume que todas as operaÁıes de reproduÁ„o estejam ‡ frente (&quot;forward&quot;) e que nenhum quadro seja saltado (&quot;dropped&quot;). OperaÁıes envolvendo reproduÁ„o reversa (&quot;reverse playback&quot;) ou salto de quadros s„o impactadas negativamente. <br>
+Uma vez que esta opÁ„o requere enormes quantidades de memÛria, ela pode dar pau caso os quadros de entrada sejam muito grandes.
 
 <a name="IDX20"></a>
-</li><li> <b>Equa√ß√£o de escala</b> <br>
-Quando a reprodu√ß√£o do v√≠deo envolve qualquer tipo de escalamento ou transla√ß√£o, este algoritmo √© utilizado. Ele n√£o afeta reprodu√ß√£o 1:1.
+</li><li> <b>EquaÁ„o de escala</b> <br>
+Quando a reproduÁ„o do vÌdeo envolve qualquer tipo de escalamento ou translaÁ„o, este algoritmo È utilizado. Ele n„o afeta reproduÁ„o 1:1.
 <ul>
-<li> <b>Vizinho mais pr√≥ximo aumento e redu√ß√£o</b> <br>
-qualidade pior, mas mais r√°pido. Produz bordas desiguais e movimenta√ß√£o desigual.
-</li><li> <b>Aumento bic√∫bico e redu√ß√£o bilinear</b> <br>
-qualidade mais alta, mas mais lento. Para aumento, interpola√ß√£o bic√∫bica √© utilizada, o que desfoca um pouco mas n√£o revela passos de escada. Para redu√ß√£o, uma interpola√ß√£o bilinear √© usada, o que produz imagens bastante acuradas e reduz o ru√≠do. As imagens bilineares reduzidas podem ser agu√ßadas (&quot;sharpened&quot;) com um efeito de agu√ßar (&quot;sharpen&quot;) com menos ru√≠do do que uma imagem em tamanho normal.
-</li><li> <b>Aumento bilinear e redu√ß√£o bilinear</b> <br>
-Quando se precisa fazer um aumento leve, um aumento bilinear fica melhor do que um aumento bic√∫bico.
+<li> <b>Vizinho mais prÛximo aumento e reduÁ„o</b> <br>
+qualidade pior, mas mais r·pido. Produz bordas desiguais e movimentaÁ„o desigual.
+</li><li> <b>Aumento bic˙bico e reduÁ„o bilinear</b> <br>
+qualidade mais alta, mas mais lento. Para aumento, interpolaÁ„o bic˙bica È utilizada, o que desfoca um pouco mas n„o revela passos de escada. Para reduÁ„o, uma interpolaÁ„o bilinear È usada, o que produz imagens bastante acuradas e reduz o ruÌdo. As imagens bilineares reduzidas podem ser aguÁadas (&quot;sharpened&quot;) com um efeito de aguÁar (&quot;sharpen&quot;) com menos ruÌdo do que uma imagem em tamanho normal.
+</li><li> <b>Aumento bilinear e reduÁ„o bilinear</b> <br>
+Quando se precisa fazer um aumento leve, um aumento bilinear fica melhor do que um aumento bic˙bico.
 </li></ul>
 
 <a name="IDX21"></a>
 <a name="IDX22"></a>
-</li><li> <b>Pr√©-carregar buffer para Quicktime</b> <br>
-O decodificador Quicktime/AVI consegue lidar com fontes DVD melhor quando est√° por volta de 10000000. Isso reduz a quantidade de busca (&quot;seeking&quot;) requerida. Infelizmente, quando se l√™ fontes com taxas de bits altas a partir de um disco r√≠gido, esta op√ß√£o tende a deixar o processo mais lento. Para uso normal, ela deve estar em 0.
+</li><li> <b>PrÈ-carregar buffer para Quicktime</b> <br>
+O decodificador Quicktime/AVI consegue lidar com fontes DVD melhor quando est· por volta de 10000000. Isso reduz a quantidade de busca (&quot;seeking&quot;) requerida. Infelizmente, quando se lÍ fontes com taxas de bits altas a partir de um disco rÌgido, esta opÁ„o tende a deixar o processo mais lento. Para uso normal, ela deve estar em 0.
 
 <a name="IDX23"></a>
 </li><li> <b>Legenda do DVD a ser exibida</b> <br>
-Arquivos DVD IFO normalmente cont√©m trilhas de legendas. Estas devem ser decodificadas pelo decodificador MPEG. Selecione <b>Habilitar legendas</b> para habilitar a decodifica√ß√£o de legendas. Normalmente, h√° v√°rias trilhas de legendas, come√ßando do 0. A trilha de legenda a ser decodificada para todas as faixas de MPEG vai na legenda do DVD para reproduzir uma caixa de texto. V√° para o bloco de v√≠deo (&quot;asset&quot;) correspondente ao arquivo MPEG na Janela de Recursos e clique nele com o bot√£o direito do mouse. Escolha &quot;Info&quot;. O n√∫mero de trilhas de legendas aparece na parte de baixo.
+Arquivos DVD IFO normalmente contÈm trilhas de legendas. Estas devem ser decodificadas pelo decodificador MPEG. Selecione <b>Habilitar legendas</b> para habilitar a decodificaÁ„o de legendas. Normalmente, h· v·rias trilhas de legendas, comeÁando do 0. A trilha de legenda a ser decodificada para todas as faixas de MPEG vai na legenda do DVD para reproduzir uma caixa de texto. V· para o bloco de vÌdeo (&quot;asset&quot;) correspondente ao arquivo MPEG na Janela de Recursos e clique nele com o bot„o direito do mouse. Escolha &quot;Info&quot;. O n˙mero de trilhas de legendas aparece na parte de baixo.
 
 <a name="IDX24"></a>
 </li><li> <b>Interpolar imagens CR2</b> <br>
-Habilita a interpola√ß√£o de imagens CR2. Esta op√ß√£o √© requerida, uma vez que imagens brutas em arquivos CR2 est√£o em um padr√£o Bayer. A interpola√ß√£o usa a interpola√ß√£o interna (&quot;built-in&quot;) do dcraw e √© muito lenta. Esta opera√ß√£o pode ser desabilitada e o efeito <b>Interpolar Pixels</b> usado ao inv√©s dela para pr√©-visualiza√ß√£o r√°pida.
+Habilita a interpolaÁ„o de imagens CR2. Esta opÁ„o È requerida, uma vez que imagens brutas em arquivos CR2 est„o em um padr„o Bayer. A interpolaÁ„o usa a interpolaÁ„o interna (&quot;built-in&quot;) do dcraw e È muito lenta. Esta operaÁ„o pode ser desabilitada e o efeito <b>Interpolar Pixels</b> usado ao invÈs dela para prÈ-visualizaÁ„o r·pida.
 
 <a name="IDX25"></a>
 </li><li> <b>Balancear Branco Imagens CR2</b> <br>
-Habilita o balanceamento de branco para imagens CR2 se a interpola√ß√£o tamb√©m estiver habilitada. Ela usa a matriz de c√¢mera que est√° contida no arquivo CR2. O balanceamento de branco n√£o √© feito se a interpola√ß√£o n√£o for feita, j√° que o balanceamento de branco requere uma mescla (&quot;blending&quot;) de todas as tr√™s cores prim√°rias. <br>
-Desabilitar o balanceamento de branco √© √∫til para opera√ß√µes envolvendo subtra√ß√£o de quadros escuros. O quadro escuro e a longa exposi√ß√£o precisam ter a mesma matriz de cor. <br>
-Se voc√™ desabilitar o <b>Interpolar imagens CR2</b> e usar o efeito <b>Interpolar Pixels</b>, saiba que o efeito <b>Interpolar Pixels</b> sempre faz tanto a interpola√ß√£o quanto o balanceamento de branco usando a matriz de c√¢mera, independentemente das configura√ß√µes nas Prefer√™ncias. A subtra√ß√£o de quadros escuros precisa ser realizada antes do <b>Interpolar Pixels</b>.
+Habilita o balanceamento de branco para imagens CR2 se a interpolaÁ„o tambÈm estiver habilitada. Ela usa a matriz de c‚mera que est· contida no arquivo CR2. O balanceamento de branco n„o È feito se a interpolaÁ„o n„o for feita, j· que o balanceamento de branco requere uma mescla (&quot;blending&quot;) de todas as trÍs cores prim·rias. <br>
+Desabilitar o balanceamento de branco È ˙til para operaÁıes envolvendo subtraÁ„o de quadros escuros. O quadro escuro e a longa exposiÁ„o precisam ter a mesma matriz de cor. <br>
+Se vocÍ desabilitar o <b>Interpolar imagens CR2</b> e usar o efeito <b>Interpolar Pixels</b>, saiba que o efeito <b>Interpolar Pixels</b> sempre faz tanto a interpolaÁ„o quanto o balanceamento de branco usando a matriz de c‚mera, independentemente das configuraÁıes nas PreferÍncias. A subtraÁ„o de quadros escuros precisa ser realizada antes do <b>Interpolar Pixels</b>.
 
 <a name="IDX26"></a>
-</li><li> <b>Driver de V√≠deo</b> <br>
-Normalmente, o v√≠deo na Linha do Tempo vai para a Janela de Composi√ß√£o durante a reprodu√ß√£o cont√≠nua e quando o ponto de inser√ß√£o √© reposicionado. Ao inv√©s de enviar o v√≠deo para a Janela de Composi√ß√£o, o driver pode ser configurado para enviar o v√≠deo para outro dispositivo de sa√≠da durante a reprodu√ß√£o cont√≠nua. Entretanto, isso n√£o afeta onde o v√≠deo vai quando o ponto de inser√ß√£o √© reposicionado. <br>
-Os drivers de v√≠deo e seus par√¢metros est√£o descritos na se√ß√£o de drivers de v√≠deo.  See section <a href="#SEC42">Drivers de V√≠deo</a>.
+</li><li> <b>Driver de VÌdeo</b> <br>
+Normalmente, o vÌdeo na Linha do Tempo vai para a Janela de ComposiÁ„o durante a reproduÁ„o contÌnua e quando o ponto de inserÁ„o È reposicionado. Ao invÈs de enviar o vÌdeo para a Janela de ComposiÁ„o, o driver pode ser configurado para enviar o vÌdeo para outro dispositivo de saÌda durante a reproduÁ„o contÌnua. Entretanto, isso n„o afeta onde o vÌdeo vai quando o ponto de inserÁ„o È reposicionado. <br>
+Os drivers de vÌdeo e seus par‚metros est„o descritos na seÁ„o de drivers de vÌdeo.  See section <a href="#SEC41">Drivers de VÌdeo</a>.
 </li></ul>
 
 <hr size="6">
 <a name="Grava_00e7_00e3o"></a>
-<a name="SEC54"></a>
-<h2 class="section"> 3.5 Grava√ß√£o </h2>
+<a name="SEC53"></a>
+<h2 class="section"> 3.5 GravaÁ„o </h2>
 
-<p>Os par√¢metros aqui influenciam no que acontece quando voc√™ vai para <b>Arquivo-&gt;Gravar...</b>. A inten√ß√£o era fazer o <b>Arquivo-&gt;Gravar...</b> ir o mais r√°pido poss√≠vel para a Janela de Monitoramento de Grava√ß√£o, sem uma caixa de di√°logo extensa para configurar o formato de arquivo. Ao inv√©s disso, o formato de arquivo para grava√ß√£o √© configurado aqui e √© aplicado a todas as grava√ß√µes. Tamb√©m configurado aqui √© o hardware para grava√ß√£o, j√° que o hardware determina os formatos de arquivo suportados na maioria dos casos.
+<p>Os par‚metros aqui influenciam no que acontece quando vocÍ vai para <b>Arquivo-&gt;Gravar...</b>. A intenÁ„o era fazer o <b>Arquivo-&gt;Gravar...</b> ir o mais r·pido possÌvel para a Janela de Monitoramento de GravaÁ„o, sem uma caixa de di·logo extensa para configurar o formato de arquivo. Ao invÈs disso, o formato de arquivo para gravaÁ„o È configurado aqui e È aplicado a todas as gravaÁıes. TambÈm configurado aqui È o hardware para gravaÁ„o, j· que o hardware determina os formatos de arquivo suportados na maioria dos casos.
 </p>
 
 <hr size="6">
 <a name="Formato-de-arquivo"></a>
-<a name="SEC55"></a>
+<a name="SEC54"></a>
 <h3 class="subsection"> 3.5.1 Formato de arquivo </h3>
 
-<p>Determina o formato de arquivo de sa√≠da para grava√ß√µes. Depende muito do tipo de driver usado. A interface √© a mesma que a intercafe de renderiza√ß√£o. A op√ß√£o <b>Gravar trilhas de √°udio</b> deve estar habilitada para gravar √°udio. A op√ß√£o <b>Gravar trilhas de v√≠deo</b> deve estar habilitada para gravar v√≠deo. O bot√£o de ferramenta √† esquerda de cada op√ß√£o abre um di√°logo de configura√ß√£o para configurar o codec correspondente para √°udio de v√≠deo. O √°udio e o v√≠deo s√£o empacotados em um cont√¢iner definido pelo menu <b>Formato de arquivo</b>. Cont√¢iners diferentes podem gravar apenas √°udio, apenas v√≠deo ou ambos.
+<p>Determina o formato de arquivo de saÌda para gravaÁıes. Depende muito do tipo de driver usado. A interface È a mesma que a intercafe de renderizaÁ„o. A opÁ„o <b>Gravar trilhas de ·udio</b> deve estar habilitada para gravar ·udio. A opÁ„o <b>Gravar trilhas de vÌdeo</b> deve estar habilitada para gravar vÌdeo. O bot„o de ferramenta ‡ esquerda de cada opÁ„o abre um di·logo de configuraÁ„o para configurar o codec correspondente para ·udio de vÌdeo. O ·udio e o vÌdeo s„o empacotados em um cont‚iner definido pelo menu <b>Formato de arquivo</b>. Cont‚iners diferentes podem gravar apenas ·udio, apenas vÌdeo ou ambos.
 </p>
-<p>Alguns drivers de v√≠deo s√≥ conseguem gravar em determinados cont√¢iners. DV, por exemplo, consegue apenas gravar para Quicktime com DV como compress√£o de v√≠deo. Se o driver de v√≠deo √© modificado, o formato de arquivo pode ser atualizado para dar a sa√≠da suportada. Se voc√™ mudar o formato de arquivo para um formato n√£o suportado, ele pode n√£o funcionar com o driver de v√≠deo.
+<p>Alguns drivers de vÌdeo sÛ conseguem gravar em determinados cont‚iners. DV, por exemplo, consegue apenas gravar para Quicktime com DV como compress„o de vÌdeo. Se o driver de vÌdeo È modificado, o formato de arquivo pode ser atualizado para dar a saÌda suportada. Se vocÍ mudar o formato de arquivo para um formato n„o suportado, ele pode n„o funcionar com o driver de vÌdeo.
 </p>
 <hr size="6">
 <a name="Entrada-de-_00c1udio"></a>
-<a name="SEC56"></a>
-<h3 class="subsection"> 3.5.2 Entrada de √Åudio </h3>
+<a name="SEC55"></a>
+<h3 class="subsection"> 3.5.2 Entrada de ¡udio </h3>
 
-<p>Determina o que acontece quando voc√™ grava o √°udio.
+<p>Determina o que acontece quando vocÍ grava o ·udio.
 </p>
 <a name="IDX27"></a>
 <a name="IDX28"></a>
 <a name="IDX29"></a>
 <ul>
-<li> <b>Driver de Grava√ß√£o</b> <br>
-Usado para a grava√ß√£o de √°udio na Janela de Grava√ß√£o. Pode ser compartilhado com o driver de grava√ß√£o para v√≠deo se o √°udio e o v√≠deo estiverem empacotados na mesma faixa. Leva par√¢metros vari√°veis dependendo do driver. Note que os drivers s√£o os mesmos que os dispon√≠veis em Prefer√™ncias-&gt;Reprodu√ß√£o. See section <a href="#SEC33">Drivers de √Åudio</a>.
+<li> <b>Driver de GravaÁ„o</b> <br>
+Usado para a gravaÁ„o de ·udio na Janela de GravaÁ„o. Pode ser compartilhado com o driver de gravaÁ„o para vÌdeo se o ·udio e o vÌdeo estiverem empacotados na mesma faixa. Leva par‚metros vari·veis dependendo do driver. Note que os drivers s„o os mesmos que os disponÌveis em PreferÍncias-&gt;ReproduÁ„o. See section <a href="#SEC32">Drivers de ¡udio</a>.
 
 <a name="IDX30"></a>
 </li><li> <b>Amostras para gravar no disco por vez</b> <br>
-O √°udio √© primeiramente lido em pequenos fragmentos a partir do dispositivo. Muitos pequenos fragmentos s√£o combinados em um grande fragmento antes de ser escrito no disco. O processo de grava√ß√£o no disco √© feito em uma etapa diferente. O valor aqui determina qu√£o grande ser√° a combina√ß√£o de fragmentos para cada grava√ß√£o no disco.
+O ·udio È primeiramente lido em pequenos fragmentos a partir do dispositivo. Muitos pequenos fragmentos s„o combinados em um grande fragmento antes de ser escrito no disco. O processo de gravaÁ„o no disco È feito em uma etapa diferente. O valor aqui determina qu„o grande ser· a combinaÁ„o de fragmentos para cada gravaÁ„o no disco.
 
 <a name="IDX31"></a>
-</li><li> <b>Taxa de amostragem para grava√ß√£o</b> <br>
-Independentemente de quais sejam as configura√ß√µes do projeto, esta √© a taxa de amostragem usada para grava√ß√£o. Deve ser o mais alto que o dispositivo de √°udio suporta.
+</li><li> <b>Taxa de amostragem para gravaÁ„o</b> <br>
+Independentemente de quais sejam as configuraÁıes do projeto, esta È a taxa de amostragem usada para gravaÁ„o. Deve ser o mais alto que o dispositivo de ·udio suporta.
 </li></ul>
 
 <hr size="6">
 <a name="Entrada-de-V_00eddeo"></a>
-<a name="SEC57"></a>
-<h3 class="subsection"> 3.5.3 Entrada de V√≠deo </h3>
+<a name="SEC56"></a>
+<h3 class="subsection"> 3.5.3 Entrada de VÌdeo </h3>
 
-<p>Determina o que acontece quando voc√™ grava o v√≠deo.
+<p>Determina o que acontece quando vocÍ grava o vÌdeo.
 </p>
 <a name="IDX32"></a>
 <ul>
-<li> <b>Driver de Grava√ß√£o</b> <br>
-√â usado para a grava√ß√£o de v√≠deo na Janela de Grava√ß√£o. Pode ser compartilhada com o driver de grava√ß√£o de √°udio se o √°udio e o v√≠deo estiverem empacotados em uma mesma faixa. Leva par√¢metros vari√°veis dependendo do driver. Note que os drivers s√£o os mesmos que os dispon√≠veis em Prefer√™ncias-&gt;Reprodu√ß√£o. See section <a href="#SEC42">Drivers de V√≠deo</a>.
+<li> <b>Driver de GravaÁ„o</b> <br>
+… usado para a gravaÁ„o de vÌdeo na Janela de GravaÁ„o. Pode ser compartilhada com o driver de gravaÁ„o de ·udio se o ·udio e o vÌdeo estiverem empacotados em uma mesma faixa. Leva par‚metros vari·veis dependendo do driver. Note que os drivers s„o os mesmos que os disponÌveis em PreferÍncias-&gt;ReproduÁ„o. See section <a href="#SEC41">Drivers de VÌdeo</a>.
 
 <a name="IDX33"></a>
 </li><li> <b>Quadros a serem gravados no disco por vez</b> <br>
-Quadros s√£o gravados em um pipeline. Primeiro, os quadros s√£o bufferizados no dispositivo. Eles ent√£o s√£o lidos em um buffer mais largo para serem escritos no disco. A grava√ß√£o no disco √© feita em uma etapa diferente da leitura do dispositivo. Para certos codecs, a grava√ß√£o no disco usa m√∫ltiplos processadores. Este valor determina quantos quadros ser√£o gravados no disco por vez.
+Quadros s„o gravados em um pipeline. Primeiro, os quadros s„o bufferizados no dispositivo. Eles ent„o s„o lidos em um buffer mais largo para serem escritos no disco. A gravaÁ„o no disco È feita em uma etapa diferente da leitura do dispositivo. Para certos codecs, a gravaÁ„o no disco usa m˙ltiplos processadores. Este valor determina quantos quadros ser„o gravados no disco por vez.
 
 <a name="IDX34"></a>
 </li><li> <b>Quadros para bufferizar no dispositivo</b> <br>
-O n√∫mero de quadros a serem armazenados no dispositivo antes de serem lidos. Determina quanto de lat√™ncia pode existir em um sistema antes que se salte quadros (&quot;frames dropping&quot;).
+O n˙mero de quadros a serem armazenados no dispositivo antes de serem lidos. Determina quanto de latÍncia pode existir em um sistema antes que se salte quadros (&quot;frames dropping&quot;).
 
 <a name="IDX35"></a>
-</li><li> <b>Usar software para posicionar informa√ß√£o</b> <br>
-V√≠deo usa √°udio para a sincroniza√ß√£o, mas a maioria das placas de som n√£o d√£o informa√ß√µes acuradas de posi√ß√£o. Esta op√ß√£o calcula uma estimativa da posi√ß√£o de √°udio no software ao inv√©s do hardware para a sincroniza√ß√£o.
+</li><li> <b>Usar software para posicionar informaÁ„o</b> <br>
+VÌdeo usa ·udio para a sincronizaÁ„o, mas a maioria das placas de som n„o d„o informaÁıes acuradas de posiÁ„o. Esta opÁ„o calcula uma estimativa da posiÁ„o de ·udio no software ao invÈs do hardware para a sincronizaÁ„o.
 
 <a name="IDX36"></a>
 </li><li> <b>Sincronizar drives automaticamente</b> <br>
-Para grava√ß√£o de taxas de bits altas,os drives devem ser r√°pidos o suficiente para armazenar a informa√ß√£o, mas o GNU/Linux pode esperar v√°rios minutos e atrasar, conforme escreve v√°rios minutos de informa√ß√£o de uma vez. Esta op√ß√£o for√ßa o GNU/Linux a descarregar seus buffers a cada segundo ao inv√©s de a cada alguns minutos e produz um comportamento levemente mais tempo-real.
+Para gravaÁ„o de taxas de bits altas,os drives devem ser r·pidos o suficiente para armazenar a informaÁ„o, mas o GNU/Linux pode esperar v·rios minutos e atrasar, conforme escreve v·rios minutos de informaÁ„o de uma vez. Esta opÁ„o forÁa o GNU/Linux a descarregar seus buffers a cada segundo ao invÈs de a cada alguns minutos e produz um comportamento levemente mais tempo-real.
 
 <a name="IDX37"></a>
 </li><li> <b>Tamanho do quadro capturado</b> <br>
-Este √© o tamanho dos quadros gravados. √â independente do tamanho de quadro do projeto, j√° que a maioria dos dispositivos de v√≠deo gravam apenas um tamanho fixo de quadro. Se o tamanho de quadro informado aqui n√£o for suportado pelo dispositivo, o Cinelerra pode dar pau.
+Este È o tamanho dos quadros gravados. … independente do tamanho de quadro do projeto, j· que a maioria dos dispositivos de vÌdeo gravam apenas um tamanho fixo de quadro. Se o tamanho de quadro informado aqui n„o for suportado pelo dispositivo, o Cinelerra pode dar pau.
 
 <a name="IDX38"></a>
-</li><li> <b>Taxa de quadros para grava√ß√£o</b> <br>
-A taxa de quadros gravada √© diferente da configura√ß√£o do projeto. Esta op√ß√£o configura a taxa de quadros a ser gravada.
+</li><li> <b>Taxa de quadros para gravaÁ„o</b> <br>
+A taxa de quadros gravada È diferente da configuraÁ„o do projeto. Esta opÁ„o configura a taxa de quadros a ser gravada.
 </li></ul>
 
 <hr size="6">
 <a name="Performance"></a>
-<a name="SEC58"></a>
+<a name="SEC57"></a>
 <h2 class="section"> 3.6 Performance </h2>
 
-<p>Voc√™ passar√° amaior parte do tempo configurando esta se√ß√£o. O foco principal da performance s√£o os par√¢metros de renderiza√ß√£o que n√£o est√£o dispon√≠veis no di√°logo de renderiza√ß√£o.
+<p>VocÍ passar· amaior parte do tempo configurando esta seÁ„o. O foco principal da performance s„o os par‚metros de renderizaÁ„o que n„o est„o disponÌveis no di·logo de renderizaÁ„o.
 </p>
 <a name="IDX39"></a>
 <ul>
 <li> <b>Itens de cache</b> <br>
-Para aumentar a velocidade do render, v√°rios blocos de v√≠deo (&quot;assets&quot;) s√£o mantidos abertos simultaneamente. Este par√¢metro determina quantos s√£o mantidos abertos. Um n√∫mero muito alto pode exaurir sua mem√≥ria bem r√°pido e resultar no programa dando pau. Um n√∫mero muito baixo pode resultar em uma reprodu√ß√£o (&quot;playback&quot;) lenta uma vez que os blocos de v√≠deo (&quot;assets&quot;) precisam ser reabertos mais freq√ºentemente.
+Para aumentar a velocidade do render, v·rios blocos de vÌdeo (&quot;assets&quot;) s„o mantidos abertos simultaneamente. Este par‚metro determina quantos s„o mantidos abertos. Um n˙mero muito alto pode exaurir sua memÛria bem r·pido e resultar no programa dando pau. Um n˙mero muito baixo pode resultar em uma reproduÁ„o (&quot;playback&quot;) lenta uma vez que os blocos de vÌdeo (&quot;assets&quot;) precisam ser reabertos mais freq¸entemente.
 
 <a name="IDX40"></a>
 </li><li> <b>Segundos para renders preroll</b> <br>
-Alguns efeitos requerem um certo per√≠odo de tempo para se ajustarem. Este par√¢metro configura um n√∫mero de segundos a serem renderizados sem que sejam escritos no disco antes que a regi√£o selecionada seja renderizada. Quando usando a fazenda de renderiza√ß√£o (&quot;renderfarm&quot;), voc√™ precisar√° √†s vezes fazer um &quot;preroll&quot; para conseguir transi√ß√µes tranquilas entre os trabalhos. Cada trabalho em uma fazenda de renderiza√ß√£o faz um &quot;preroll&quot; levando este valor em considera√ß√£o. Ele n√£o afeta, entretanto, a renderiza√ß√£o de fundo (&quot;background rendering&quot;). Renderiza√ß√µes de fundo usam um valor diferente de &quot;preroll&quot;.
+Alguns efeitos requerem um certo perÌodo de tempo para se ajustarem. Este par‚metro configura um n˙mero de segundos a serem renderizados sem que sejam escritos no disco antes que a regi„o selecionada seja renderizada. Quando usando a fazenda de renderizaÁ„o (&quot;renderfarm&quot;), vocÍ precisar· ‡s vezes fazer um &quot;preroll&quot; para conseguir transiÁıes tranquilas entre os trabalhos. Cada trabalho em uma fazenda de renderizaÁ„o faz um &quot;preroll&quot; levando este valor em consideraÁ„o. Ele n„o afeta, entretanto, a renderizaÁ„o de fundo (&quot;background rendering&quot;). RenderizaÁıes de fundo usam um valor diferente de &quot;preroll&quot;.
 
 <a name="IDX41"></a>
 <a name="IDX42"></a>
-</li><li> <b>For√ßar uso de processador √∫nico</b> <br>
-O Cinelerra tenta usar todos os processadores do sistema por padr√£o, mas √†s vezes ele querer√° usar apenas um processador, como em um cliente de uma fazenda de renderiza√ß√£o (&quot;renderfarm&quot;). Este par√¢metro for√ßa o uso de apenas um processador. O sistema operacional, entretanto, normalmente usar√° o segundo processador de qualquer forma para acessar o disco r√≠gido, ent√£o esta op√ß√£o √© na verdade um modo de 1.25 processador.  O valor deste par√¢metro √© usado em clientes de fazendas de renderiza√ß√£o.
+</li><li> <b>ForÁar uso de processador ˙nico</b> <br>
+O Cinelerra tenta usar todos os processadores do sistema por padr„o, mas ‡s vezes ele querer· usar apenas um processador, como em um cliente de uma fazenda de renderizaÁ„o (&quot;renderfarm&quot;). Este par‚metro forÁa o uso de apenas um processador. O sistema operacional, entretanto, normalmente usar· o segundo processador de qualquer forma para acessar o disco rÌgido, ent„o esta opÁ„o È na verdade um modo de 1.25 processador.  O valor deste par‚metro È usado em clientes de fazendas de renderizaÁ„o.
 </li></ul>
 
 
 <hr size="6">
 <a name="Renderiza_00e7_00e3o-de-fundo"></a>
-<a name="SEC59"></a>
-<h3 class="subsection"> 3.6.1 Renderiza√ß√£o de fundo </h3>
+<a name="SEC58"></a>
+<h3 class="subsection"> 3.6.1 RenderizaÁ„o de fundo </h3>
 
-<p>A renderiza√ß√£o de fundo (&quot;background rendering&quot;) foi originalmente concebida para permitir que efeitos HDTV fossem exibidos em tempo-real. A renderiza√ß√£o de fundo faz com que a sa√≠da tempor√°ria seja constantemente renderizada enquanto a Linha do Tempo est√° sendo modificada. A sa√≠da tempor√°ria √© exibida durante a reprodu√ß√£o sempre que poss√≠vel. √â bastante √∫til para transi√ß√µes e previs√µes de efeitos que s√£o muito lentos para serem reproduzidos em uma quantia razo√°vel de tempo. Se a fazenda de renderiza√ß√£o (&quot;renderfarm&quot;) estiver habilitada, a fazenda √© usada para a renderiza√ß√£o de fundo, dando-lhe o potencial para efeitos em tempo-real caso haja banda ou n√≥dulos de CPU suficientes.
+<p>A renderizaÁ„o de fundo (&quot;background rendering&quot;) foi originalmente concebida para permitir que efeitos HDTV fossem exibidos em tempo-real. A renderizaÁ„o de fundo faz com que a saÌda tempor·ria seja constantemente renderizada enquanto a Linha do Tempo est· sendo modificada. A saÌda tempor·ria È exibida durante a reproduÁ„o sempre que possÌvel. … bastante ˙til para transiÁıes e previsıes de efeitos que s„o muito lentos para serem reproduzidos em uma quantia razo·vel de tempo. Se a fazenda de renderizaÁ„o (&quot;renderfarm&quot;) estiver habilitada, a fazenda È usada para a renderizaÁ„o de fundo, dando-lhe o potencial para efeitos em tempo-real caso haja banda ou nÛdulos de CPU suficientes.
 </p>
-<p>A renderiza√ß√£o de fundo √© habilitada na aba <b>Performance</b> da Janela de <b>Prefer√™ncias</b>. Ela possui uma fun√ß√£o interativa <b>Menu configura√ß√µes -&gt; Ajustar renderiza√ß√£o de fundo</b>. Isso marca onde a renderiza√ß√£o de fundo come√ßa para onde o ponto de entrada estiver. Se algum v√≠deo existe, uma barra vermelha aparece na barra de tempo, mostrando o que foi renderizado ao fundo.
+<p>A renderizaÁ„o de fundo È habilitada na aba <b>Performance</b> da Janela de <b>PreferÍncias</b>. Ela possui uma funÁ„o interativa <b>Menu configuraÁıes -&gt; Ajustar renderizaÁ„o de fundo</b>. Isso marca onde a renderizaÁ„o de fundo comeÁa para onde o ponto de entrada estiver. Se algum vÌdeo existe, uma barra vermelha aparece na barra de tempo, mostrando o que foi renderizado ao fundo.
 </p>
-<p>√â normalmente √∫til inserir um efeito ou uma transi√ß√£o e selecionar <b>Menu configura√ß√µes -&gt; Ajustar renderiza√ß√£o de fundo</b> logo antes do efeito para pr√©-visualiz√°-lo a taxas de quadros inteiras.
+<p>… normalmente ˙til inserir um efeito ou uma transiÁ„o e selecionar <b>Menu configuraÁıes -&gt; Ajustar renderizaÁ„o de fundo</b> logo antes do efeito para prÈ-visualiz·-lo a taxas de quadros inteiras.
 </p>
 <a name="IDX43"></a>
 <ul>
-<li> <b>Quadros por cada trabalho de renderiza√ß√£o ao fundo</b> <br>
-Este par√¢metro s√≥ funciona caso a fazenda de renderiza√ß√£o (&quot;renderfarm&quot;) estiver sendo usada.Do contr√°rio, a renderiza√ß√£o de fundo criar√° um trabalho √∫nico para toda a Linha do Tempo. O n√∫mero de quadros especificado aqui √© escalado para a valocidade relativa de CPU dos n√≥dulos de renderiza√ß√£o e usado em um √∫nico trabalho de fazenda de renderiza√ß√£o. O n√∫mero √≥timo est√° entre 10 - 30, j√° que a banda de rede √© usada para iniciar cadatrabalho.
+<li> <b>Quadros por cada trabalho de renderizaÁ„o ao fundo</b> <br>
+Este par‚metro sÛ funciona caso a fazenda de renderizaÁ„o (&quot;renderfarm&quot;) estiver sendo usada.Do contr·rio, a renderizaÁ„o de fundo criar· um trabalho ˙nico para toda a Linha do Tempo. O n˙mero de quadros especificado aqui È escalado para a valocidade relativa de CPU dos nÛdulos de renderizaÁ„o e usado em um ˙nico trabalho de fazenda de renderizaÁ„o. O n˙mero Ûtimo est· entre 10 - 30, j· que a banda de rede È usada para iniciar cadatrabalho.
 
 <a name="IDX44"></a>
 </li><li> <b>Quadros para preroll ao fundo</b> <br>
-Este √© o n√∫mero de quadros a serem renderizados √† frente de cada trabalho de renderiza√ß√£o de fundo. A renderiza√ß√£o de fundo √© degradada quando o &quot;preroll&quot; √© utilizado, j√° que os trabalhos s√£o pequenos. Quando estiver usando renderiza√ß√£o de fundo (&quot;background rendering&quot;), este n√∫mero √© idealmente 0. Alguns efeitos podem requerer 3 quadros de &quot;preroll&quot;.
+Este È o n˙mero de quadros a serem renderizados ‡ frente de cada trabalho de renderizaÁ„o de fundo. A renderizaÁ„o de fundo È degradada quando o &quot;preroll&quot; È utilizado, j· que os trabalhos s„o pequenos. Quando estiver usando renderizaÁ„o de fundo (&quot;background rendering&quot;), este n˙mero È idealmente 0. Alguns efeitos podem requerer 3 quadros de &quot;preroll&quot;.
 
 <a name="IDX45"></a>
-</li><li> <b>Sa√≠da para renderiza√ß√£o ao fundo</b> <br>
-A renderiza√ß√£o de fundo gera uma seq√º√™ncia de arquivos de imagem em um certo diret√≥rio. Este par√¢metro determina o prefixo do nome de arquivo dos arquivos de imagem. Deve ser configurado para um disco r√°pido, acess√≠vel a cada n√≥dulo da fazenda de renderiza√ß√£o (&quot;renderfarm&quot;) pelo mesmo caminho. Uma vez que centenas de milhares de arquivos de imagem ser√£o normalmente criados, comandos <code>ls</code> n√£o funcionar√£o no diret√≥rio de renderiza√ß√£o de fundo. O bot√£o <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> para esta op√ß√£o tamb√©m normalmente n√£o funcionar√°, mas o bot√£o de configura√ß√£o <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> para esta op√ß√£o funcionar√°.
+</li><li> <b>SaÌda para renderizaÁ„o ao fundo</b> <br>
+A renderizaÁ„o de fundo gera uma seq¸Íncia de arquivos de imagem em um certo diretÛrio. Este par‚metro determina o prefixo do nome de arquivo dos arquivos de imagem. Deve ser configurado para um disco r·pido, acessÌvel a cada nÛdulo da fazenda de renderizaÁ„o (&quot;renderfarm&quot;) pelo mesmo caminho. Uma vez que centenas de milhares de arquivos de imagem ser„o normalmente criados, comandos <code>ls</code> n„o funcionar„o no diretÛrio de renderizaÁ„o de fundo. O bot„o <img src=".././manual_images_intl/magnify.png" alt="manual_images_intl/magnify"> para esta opÁ„o tambÈm normalmente n„o funcionar·, mas o bot„o de configuraÁ„o <img src=".././manual_images_intl/wrench.png" alt="manual_images_intl/wrench"> para esta opÁ„o funcionar·.
 
 <a name="IDX46"></a>
 </li><li> <b>Formato de arquivo</b> <br>
-O formato de arquivo para a renderiza√ß√£o de fundo deve ser uma seq√º√™ncia de imagens. O formato da seq√º√™ncia imagens determina a qualidade e a velocidade da reprodu√ß√£o. JPEG costuma ser uma boa op√ß√£o na maioria das vezes.
+O formato de arquivo para a renderizaÁ„o de fundo deve ser uma seq¸Íncia de imagens. O formato da seq¸Íncia imagens determina a qualidade e a velocidade da reproduÁ„o. JPEG costuma ser uma boa opÁ„o na maioria das vezes.
 </li></ul>
 
 <hr size="6">
 <a name="Fazenda-de-renderiza_00e7_00e3o"></a>
-<a name="SEC60"></a>
-<h3 class="subsection"> 3.6.2 Fazenda de renderiza√ß√£o </h3>
+<a name="SEC59"></a>
+<h3 class="subsection"> 3.6.2 Fazenda de renderizaÁ„o </h3>
 
-<p>Para usar a fazenda de renderiza√ß√£o, configure estas op√ß√µes. Ignore-as no caso de um sistema √∫nico.
+<p>Para usar a fazenda de renderizaÁ„o, configure estas opÁıes. Ignore-as no caso de um sistema ˙nico.
 </p>
 <a name="IDX47"></a>
 <ul>
-<li> <b>Usar a fazenda de renderiza√ß√£o para renderizar</b> <br>
-Quando selecionada, todas as opera√ß√µes de <b>arquivo-&gt;render</b> usar√£o a fazenda de renderiza√ß√£o.
+<li> <b>Usar a fazenda de renderizaÁ„o para renderizar</b> <br>
+Quando selecionada, todas as operaÁıes de <b>arquivo-&gt;render</b> usar„o a fazenda de renderizaÁ„o.
 
 <a name="IDX48"></a>
-</li><li> <b>N√≥dulos</b> <br>
-Exibe todos os n√≥dulos da fazenda de renderiza√ß√£o e quais est√£o ativos. N√≥dulos s√£o adicionados ao se informar o nome do hospedeiro (&quot;host name&quot;) do n√≥dulo, verificando o valor da <b>porta</b> e clicando em <b>adicionar n√≥dulo</b>. Nerds de computador ficar√£o mais contentes editando o arquivo <tt>`~/.bcast/.Cinelerra_rc'</tt> ao inv√©s deste caso tenham centenas de n√≥dulos. Lembre-se que o arquivo <tt>`.Cinelerra_rc'</tt> √© sobrescrito sempre que uma c√≥pia do Cinelerra sair do programa. <br>
-Selecione a coluna <b>Ligado</b> para ativar e desativar n√≥dulos uma vez que sejam criados. Os n√≥dulos podem ser editados selecionando uma fileira e clicando em <b>Aplicar Mudan√ßas</b>.
+</li><li> <b>NÛdulos</b> <br>
+Exibe todos os nÛdulos da fazenda de renderizaÁ„o e quais est„o ativos. NÛdulos s„o adicionados ao se informar o nome do hospedeiro (&quot;host name&quot;) do nÛdulo, verificando o valor da <b>porta</b> e clicando em <b>adicionar nÛdulo</b>. Nerds de computador ficar„o mais contentes editando o arquivo <tt>`~/.bcast/.Cinelerra_rc'</tt> ao invÈs deste caso tenham centenas de nÛdulos. Lembre-se que o arquivo <tt>`.Cinelerra_rc'</tt> È sobrescrito sempre que uma cÛpia do Cinelerra sair do programa. <br>
+Selecione a coluna <b>Ligado</b> para ativar e desativar nÛdulos uma vez que sejam criados. Os nÛdulos podem ser editados selecionando uma fileira e clicando em <b>Aplicar MudanÁas</b>.
 
 <a name="IDX49"></a>
 </li><li> <b>Hostname</b> <br>
-Edite o nome de hospedeiro (&quot;hostname&quot;) de um n√≥dulo existente ou informe o nome de hospedeiro de um novo n√≥dulo aqui.
+Edite o nome de hospedeiro (&quot;hostname&quot;) de um nÛdulo existente ou informe o nome de hospedeiro de um novo nÛdulo aqui.
 
 <a name="IDX50"></a>
 </li><li> <b>Porta</b> <br>
-Edite a porta (&quot;port&quot;) de um n√≥dulo existente ou informe a porta de um novo n√≥dulo aqui.
+Edite a porta (&quot;port&quot;) de um nÛdulo existente ou informe a porta de um novo nÛdulo aqui.
 
 <a name="IDX51"></a>
-</li><li> <b>Aplicar mudan√ßas</b> <br>
-Quando editando um n√≥dulo existente, clique aqui para enviar (&quot;commit&quot;) as mudan√ßas para o <b>hostname</b> e a <b>porta</b>. As mudan√ßas n√£o ser√£o enviadas (&quot;committed&quot;) se voc√™ n√£o apertar este bot√£o.
+</li><li> <b>Aplicar mudanÁas</b> <br>
+Quando editando um nÛdulo existente, clique aqui para enviar (&quot;commit&quot;) as mudanÁas para o <b>hostname</b> e a <b>porta</b>. As mudanÁas n„o ser„o enviadas (&quot;committed&quot;) se vocÍ n„o apertar este bot„o.
 
 <a name="IDX52"></a>
-</li><li> <b>Adicionar n√≥dulo</b> <br>
-Cria um novo n√≥dulo com as configuar√ß√µes de <b>hostname</b> e <b>porta</b>.
+</li><li> <b>Adicionar nÛdulo</b> <br>
+Cria um novo nÛdulo com as configuarÁıes de <b>hostname</b> e <b>porta</b>.
 
 <a name="IDX53"></a>
-</li><li> <b>Apagar n√≥dulo</b> <br>
-Apaga quaisquer n√≥dulos que estejam selecionados na lista de <b>n√≥dulos</b>.
+</li><li> <b>Apagar nÛdulo</b> <br>
+Apaga quaisquer nÛdulos que estejam selecionados na lista de <b>nÛdulos</b>.
 
 <a name="IDX54"></a>
 <a name="IDX55"></a>
-</li><li> <b>Ordenar n√≥dulos</b> <br>
-Ordena a lista de <b>n√≥dulos</b> baseado no nome de hospedeiro (&quot;hostname&quot;).
+</li><li> <b>Ordenar nÛdulos</b> <br>
+Ordena a lista de <b>nÛdulos</b> baseado no nome de hospedeiro (&quot;hostname&quot;).
 
 <a name="IDX56"></a>
 </li><li> <b>Zerar taxas</b> <br>
-Zera a taxa de quadros de todos os n√≥dulos. Taxas de quadros s√£o usadas para escalar os tamanhos de trabalhos baseados na velocidade de CPU do n√≥dulo. Taxas de quadros s√£o calculadas apenas quando a fazenda de renderiza√ß√£o (&quot;renderfarm&quot;) est√° habilitada.
+Zera a taxa de quadros de todos os nÛdulos. Taxas de quadros s„o usadas para escalar os tamanhos de trabalhos baseados na velocidade de CPU do nÛdulo. Taxas de quadros s„o calculadas apenas quando a fazenda de renderizaÁ„o (&quot;renderfarm&quot;) est· habilitada.
 
 <a name="IDX57"></a>
 <a name="IDX58"></a>
 </li><li> <b>Total de trabalhos a serem criados</b> <br>
-Determina o n√∫mero de trabalhos a serem despachados para a fazenda de renderiza√ß√£o (&quot;renderfarm&quot;). Quanto mais trabalhos voc√™ criar, melhor balanceada a fazenda de renderiza√ß√£o se tornar√°. <br>
-Voc√™ pode determinar o total de trabalhos a ser criado multiplicando o n√∫mero de n√≥dulos incluindo o n√≥dulo-mestre por algum n√∫mero. Multiplique-os por 1 para ter um trabalho despachado para cada n√≥dulo. Multiplique-os por 3 para ter tr√™s trabalhos despachados para cada n√≥dulo. Se voc√™ tem 10 n√≥dulos-escravos e um n√≥dulo-mestre, especifique 33 para ter uma fazenda de renderiza√ß√£o balanceada.
+Determina o n˙mero de trabalhos a serem despachados para a fazenda de renderizaÁ„o (&quot;renderfarm&quot;). Quanto mais trabalhos vocÍ criar, melhor balanceada a fazenda de renderizaÁ„o se tornar·. <br>
+VocÍ pode determinar o total de trabalhos a ser criado multiplicando o n˙mero de nÛdulos incluindo o nÛdulo-mestre por algum n˙mero. Multiplique-os por 1 para ter um trabalho despachado para cada nÛdulo. Multiplique-os por 3 para ter trÍs trabalhos despachados para cada nÛdulo. Se vocÍ tem 10 nÛdulos-escravos e um nÛdulo-mestre, especifique 33 para ter uma fazenda de renderizaÁ„o balanceada.
 </li></ul>
 
 <hr size="6">
 <a name="Interface"></a>
-<a name="SEC61"></a>
+<a name="SEC60"></a>
 <h2 class="section"> 3.7 Interface </h2>
 
-<p>Estes par√¢metros afetam unicamente como a interface do usu√°rio funcionar√°.
+<p>Estes par‚metros afetam unicamente como a interface do usu·rio funcionar·.
 </p>
 <a name="IDX59"></a>
 <ul>
 <li> <b>Formato de Tempo</b><br>
-V√°rias representa√ß√µes de tempo s√£o fornecidas. Selecione a mais conveniente. A representa√ß√£o de tempo tamb√©m pode ser mudada pela tecla <kbd>CTRL</kbd> clicando na barra de tempo.
+V·rias representaÁıes de tempo s„o fornecidas. Selecione a mais conveniente. A representaÁ„o de tempo tambÈm pode ser mudada pela tecla <kbd>CTRL</kbd> clicando na barra de tempo.
 
 <a name="IDX60"></a>
 <a name="IDX61"></a>
-</li><li> <b>Arquivos de √≠ndice v√£o aqui</b> <br>
-De volta aos tempos em que 4 MB/seg era uma velocidade extra-terrestre para um disco r√≠gido, arquivos de √≠ndice foram introduzidos para aumentar a velocidade do desenho das trilhas de √°udio. Esta op√ß√£o determina onde os arquivos de √≠ndice ser√£o criados no disco r√≠gido.
+
+</li><li> <b>Arquivos de Ìndice v„o aqui</b> <br>
+De volta aos tempos em que 4 MB/seg era uma velocidade extra-terrestre para um disco rÌgido, arquivos de Ìndice foram introduzidos para aumentar a velocidade do desenho das trilhas de ·udio. Esta opÁ„o determina onde os arquivos de Ìndice ser„o criados no disco rÌgido.
 
 <a name="IDX62"></a>
-</li><li> <b>Tamanho do arquivo de √≠ndice</b> <br>
-Determina o tamanho de um arquivo de √≠ndice. Tamanhos grandes de √≠ndice permitem que arquivos menores sejam desenhados mais repidamente, enquanto deixam mais lentos os desenhos para arquivos grandes. Tamanhos menores de √≠ndices permitem que arquivos grandes sejam desenhados mais r√°pidos enquanto diminuem a velocidade para arquivos pequenos.
+</li><li> <b>Tamanho do arquivo de Ìndice</b> <br>
+Determina o tamanho de um arquivo de Ìndice. Tamanhos grandes de Ìndice permitem que arquivos menores sejam desenhados mais repidamente, enquanto deixam mais lentos os desenhos para arquivos grandes. Tamanhos menores de Ìndices permitem que arquivos grandes sejam desenhados mais r·pidos enquanto diminuem a velocidade para arquivos pequenos.
 
 <a name="IDX63"></a>
-</li><li> <b>N√∫mero de arquivos de √≠ndice para manter</b> <br>
-Para evitar que o diret√≥rio dos arquivos de √≠ndice se torne sem regras, arquivos de √≠ndice antigos s√£o apagados. Este par√¢metro determina o n√∫mero m√°ximo de arquivos de √≠ndice a serem mantidos no diret√≥rio.
+</li><li> <b>N˙mero de arquivos de Ìndice para manter</b> <br>
+Para evitar que o diretÛrio dos arquivos de Ìndice se torne sem regras, arquivos de Ìndice antigos s„o apagados. Este par‚metro determina o n˙mero m·ximo de arquivos de Ìndice a serem mantidos no diretÛrio.
 
 <a name="IDX64"></a>
-</li><li> <b>Apagar √≠ndices existentes</b> <br>
-Quando voc√™ muda o tamanho de √≠ndice ou quando voc√™ quer limpar arquivos excessivos de √≠ndice, esta op√ß√£o apaga todos os arquivos de √≠ndice.
+</li><li> <b>Apagar Ìndices existentes</b> <br>
+Quando vocÍ muda o tamanho de Ìndice ou quando vocÍ quer limpar arquivos excessivos de Ìndice, esta opÁ„o apaga todos os arquivos de Ìndice.
 
 <a name="IDX65"></a>
 </li><li> <b>Usar miniaturas</b> <br>
-A Janela de Recursos exibe pr√©-visualiza√ß√µes em miniatura (&quot;thumbnails&quot;) dos blocos de v√≠deo (&quot;assets&quot;) por padr√£o. Isso pode levar bastante tempo para acontecer. Esta op√ß√£o desabilita as pr√©-visualiza√ß√µes.
+A Janela de Recursos exibe prÈ-visualizaÁıes em miniatura (&quot;thumbnails&quot;) dos blocos de vÌdeo (&quot;assets&quot;) por padr„o. Isso pode levar bastante tempo para acontecer. Esta opÁ„o desabilita as prÈ-visualizaÁıes.
 
 <a name="IDX66"></a>
-</li><li> <b>Arrastar as bordas de edi√ß√£o faz</b> <br>
-O Cinelerra n√£o permite apenas que voc√™ fa√ßa edi√ß√µes arrastando as bordas de
-edi√ß√£o, mas tamb√©m define tr√™s opera√ß√µes separadas que podem acontecer quando
-voc√™ arrasta uma borda de edi√ß√£o. Para cada bot√£o de mouse, voc√™ pode selecionar
-um comportamento nesta janela. O uso de cada modo de edi√ß√£o est√° descrito na
-se√ß√£o de edi√ß√£o. See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC117">Redimensionando (&quot;trimming&quot;)</a>.
+</li><li> <b>Arrastar as bordas de ediÁ„o faz</b> <br>
+O Cinelerra n„o permite apenas que vocÍ faÁa ediÁıes arrastando as bordas de
+ediÁ„o, mas tambÈm define trÍs operaÁıes separadas que podem acontecer quando
+vocÍ arrasta uma borda de ediÁ„o. Para cada bot„o de mouse, vocÍ pode selecionar
+um comportamento nesta janela. O uso de cada modo de ediÁ„o est· descrito na
+seÁ„o de ediÁ„o. See section <a href="cinelerra_cv_manual_pt_BR_7.html#SEC112">Redimensionando (&quot;trimming&quot;)</a>.
 
 
 <a name="IDX67"></a>
-</li><li> <b>DB M√≠n para medidor</b> <br>
-Algumas fontes de som possuem uma entrada de ru√≠do mais baixa do que outras. Tudo abaixo da entrada de ru√≠do √© n√£o-significativo. Esta op√ß√£o configura o medidor para fazer um recorte abaixo de um certo n√≠vel. Placas de som de n√≠vel consumidor normalmente chegam at√© -65. Placas de som profissionais chegam a -90.  See section <a href="cinelerra_cv_manual_pt_BR_11.html#SEC146">Janela de medidores de n√≠vel de som</a>.
+</li><li> <b>DB MÌn para medidor</b> <br>
+Algumas fontes de som possuem uma entrada de ruÌdo mais baixa do que outras. Tudo abaixo da entrada de ruÌdo È n„o-significativo. Esta opÁ„o configura o medidor para fazer um recorte abaixo de um certo nÌvel. Placas de som de nÌvel consumidor normalmente chegam atÈ -65. Placas de som profissionais chegam a -90.  See section <a href="cinelerra_cv_manual_pt_BR_11.html#SEC141">Janela de medidores de nÌvel de som</a>.
 
 <a name="IDX68"></a>
-</li><li> <b>DB M√°x para medidor</b> <br>
-Configura o n√≠vel m√°ximo de som representado pelos medidores de som. Independentemente de qual seja este valor, nenhuma placa de som consegue reproduzir som acima de 0 dB. Este valor √© apresentado meramente para mostrar qu√£o fora do limite uma onda sonora pode estar. See section <a href="cinelerra_cv_manual_pt_BR_11.html#SEC146">Janela de medidores de n√≠vel de som</a>.
+</li><li> <b>DB M·x para medidor</b> <br>
+Configura o nÌvel m·ximo de som representado pelos medidores de som. Independentemente de qual seja este valor, nenhuma placa de som consegue reproduzir som acima de 0 dB. Este valor È apresentado meramente para mostrar qu„o fora do limite uma onda sonora pode estar. See section <a href="cinelerra_cv_manual_pt_BR_11.html#SEC141">Janela de medidores de nÌvel de som</a>.
 
 <a name="IDX69"></a>
 </li><li> <b>Tema</b> <br>
-O Cinelerra suporta temas vari√°veis. Selecione um aqui e reinicie o Cinelerra para v√™-lo.
+O Cinelerra suporta temas vari·veis. Selecione um aqui e reinicie o Cinelerra para vÍ-lo.
 </li></ul>
 
 <hr size="6">
 <a name="Sobre"></a>
-<a name="SEC62"></a>
+<a name="SEC61"></a>
 <h2 class="section"> 3.8 Sobre, janela </h2>
 
-<p>Esta se√ß√£o te d√° informa√ß√µes sobre direitos autorais, quando o build presente foi criado, a falta de uma garantia e as vers√µes de algumas bibliotecas. Esteja certo de concordar com os termos de falta de garantia.
+<p>Esta seÁ„o te d· informaÁıes sobre direitos autorais, quando o build presente foi criado, a falta de uma garantia e as versıes de algumas bibliotecas. Esteja certo de concordar com os termos de falta de garantia.
 </p>
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC31" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC63" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC30" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC62" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -667,7 +657,7 @@ O Cinelerra suporta temas vari√°veis. Selecione um aqui e reinicie o Cinelerra p
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

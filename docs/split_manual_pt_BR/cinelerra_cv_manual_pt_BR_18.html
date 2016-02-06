@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_17.html#SEC251" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_19.html#SEC261" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_17.html#SEC246" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,128 +56,128 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Usando-quadros_002dchave"></a>
-<a name="SEC254"></a>
+<a name="SEC249"></a>
 <h1 class="chapter"> 18. Usando quadros-chave </h1>
 
-<p>O termo &quot;quadro-chave&quot; √© emprestado do mundo da anima√ß√£o, onde ele se refere a um desenho essencial (chave) em uma seq√º√™ncia. Tipicamente, isso seria o ponto de in√≠cio ou de final de uma transi√ß√£o suave em uma s√©rie de quadros. Os quadros-chave seriam desenhados por artistas mais velhos e seus assistentes desenhariam os &quot;entre-eles&quot;. O termo &quot;quadro-chave&quot; desde ent√£o vem sendo usado para sugerir conceitos similates em outras √°reas.<br>
+<p>O termo &quot;quadro-chave&quot; È emprestado do mundo da animaÁ„o, onde ele se refere a um desenho essencial (chave) em uma seq¸Íncia. Tipicamente, isso seria o ponto de inÌcio ou de final de uma transiÁ„o suave em uma sÈrie de quadros. Os quadros-chave seriam desenhados por artistas mais velhos e seus assistentes desenhariam os &quot;entre-eles&quot;. O termo &quot;quadro-chave&quot; desde ent„o vem sendo usado para sugerir conceitos similates em outras ·reas.<br>
 </p>
-<p>Na edi√ß√£o n√£o-linear de v√≠deo digital e software de composi√ß√£o de v√≠deo, um quadro-chave representa um certo valor marcado pelo usu√°rio a um certo ponto na linha do tempo. Por exemplo, voc√™ poderia usar quadros-chave para fazer um fade em um recorte marcando a transpar√™ncia para 100% no primeiro quadro-chave e adicionar outro quadro-chave 5 segundos depois na linha do tempo com um valor de transpar√™ncia de 0%. Um quadro-chave √© usado para manipular as mudan√ßas feitas no sinal conforme o tempo, essencialmente agindo como um ponto de controle para o usu√°rio para marcar par√¢metros, por exemplo de efeitos. O Cinelerra interpola os valores intermedi√°rios fazendo com que a mudan√ßa aconte√ßa suave e gradualmente conforme o tempo.<br>
+<p>Na ediÁ„o n„o-linear de vÌdeo digital e software de composiÁ„o de vÌdeo, um quadro-chave representa um certo valor marcado pelo usu·rio a um certo ponto na linha do tempo. Por exemplo, vocÍ poderia usar quadros-chave para fazer um fade em um recorte marcando a transparÍncia para 100% no primeiro quadro-chave e adicionar outro quadro-chave 5 segundos depois na linha do tempo com um valor de transparÍncia de 0%. Um quadro-chave È usado para manipular as mudanÁas feitas no sinal conforme o tempo, essencialmente agindo como um ponto de controle para o usu·rio para marcar par‚metros, por exemplo de efeitos. O Cinelerra interpola os valores intermedi·rios fazendo com que a mudanÁa aconteÁa suave e gradualmente conforme o tempo.<br>
 </p>
 <a name="IDX126"></a>
 <a name="IDX127"></a>
-<p>Quando voc√™ muda o fade, c√¢mera, projetor ou outros par√¢metros de uma trilha, eles ficam por padr√£o o mesmo por toda a dura√ß√£o do projeto. Seus valores s√£o armazenados em um quadro-chave. O quadro-chave onde ele √© armazenado por padr√£o √© conhecido como o <b>quadro-chave padr√£o</b>. O quadro-chave padr√£o se aplica √† dura√ß√£o inteira apenas caso n√£o haja outros quadros-chave presentes e caso n√£o seja desenhado na linha do tempo.
+<p>Quando vocÍ muda o fade, c‚mera, projetor ou outros par‚metros de uma trilha, eles ficam por padr„o o mesmo por toda a duraÁ„o do projeto. Seus valores s„o armazenados em um quadro-chave. O quadro-chave onde ele È armazenado por padr„o È conhecido como o <b>quadro-chave padr„o</b>. O quadro-chave padr„o se aplica ‡ duraÁ„o inteira apenas caso n„o haja outros quadros-chave presentes e caso n„o seja desenhado na linha do tempo.
 </p>
-<p>O √∫nico jeito em que ocorre a mudan√ßa conforme o tempo √© caso quadros-chave adicionais sejam criados.<br>
-Marcar par√¢metros est√°ticos com o quadro-chave padr√£o √© √∫til apenas caso voc√™ n√£o queira mudar nada conforme o tempo. Normalmente voc√™ precisar√° mover a c√¢mera ou mudar as posi√ß√µes de m√°scara, por exemplo caso uma m√°scara precise seguir um objeto. Definir quadros-chave adicionais ao padr√£o √© uma t√©cnica muito conveniente de criar mudan√ßas din√¢micas.
+<p>O ˙nico jeito em que ocorre a mudanÁa conforme o tempo È caso quadros-chave adicionais sejam criados.<br>
+Marcar par‚metros est·ticos com o quadro-chave padr„o È ˙til apenas caso vocÍ n„o queira mudar nada conforme o tempo. Normalmente vocÍ precisar· mover a c‚mera ou mudar as posiÁıes de m·scara, por exemplo caso uma m·scara precise seguir um objeto. Definir quadros-chave adicionais ao padr„o È uma tÈcnica muito conveniente de criar mudanÁas din‚micas.
 </p>
-<p>No Cinelerra, h√° quadros-chave para quase todos os par√¢metros de composi√ß√£o e de efeito.<br>
-Par√¢metros podem ser representados graficamente de v√°rias formas: curvas, bot√µes de habilita√ß√£o/desabilita√ß√£o, modos e assim por diante.<br>
-O quadro-chave relativo pode ser representado na linha do tempo como um pequeno quadrado em uma curva (ex. fade) ou um s√≠mbolo (ex. m√°scara).<br>
-No Cinelerra, o termo &quot;quadro-chave&quot; pode ser enganador: ele n√£o se refere a um quadro, mas a um ponto entre dois quadros.
+<p>No Cinelerra, h· quadros-chave para quase todos os par‚metros de composiÁ„o e de efeito.<br>
+Par‚metros podem ser representados graficamente de v·rias formas: curvas, botıes de habilitaÁ„o/desabilitaÁ„o, modos e assim por diante.<br>
+O quadro-chave relativo pode ser representado na linha do tempo como um pequeno quadrado em uma curva (ex. fade) ou um sÌmbolo (ex. m·scara).<br>
+No Cinelerra, o termo &quot;quadro-chave&quot; pode ser enganador: ele n„o se refere a um quadro, mas a um ponto entre dois quadros.
 </p>
-<p>Para exibir a representa√ß√£o gr√°fica dos par√¢metros e os quadros-chave relativos, use o menu de <b>Ver</b>.<br>
-Um jeito mais r√°pido de habilitar/desabilitar m√∫ltiplos tipos de par√¢metros √© trazer <b>Janela -&gt; Mostrar Sobreposi√ß√µes</b>. 
-Esta janela permite habilitar/desabilitar cada par√¢metro no menu de vis√£o. Quando os par√¢metros s√£o selecionados, eles s√£o desenhados na linha do tempo por sobre as trilhas aos quais eles se aplicam. 
+<p>Para exibir a representaÁ„o gr·fica dos par‚metros e os quadros-chave relativos, use o menu de <b>Ver</b>.<br>
+Um jeito mais r·pido de habilitar/desabilitar m˙ltiplos tipos de par‚metros È trazer <b>Janela -&gt; Mostrar SobreposiÁıes</b>. 
+Esta janela permite habilitar/desabilitar cada par‚metro no menu de vis„o. Quando os par‚metros s„o selecionados, eles s„o desenhados na linha do tempo por sobre as trilhas aos quais eles se aplicam. 
 </p>
-<p>Como usar os diferentes tipos de quadros-chave est√° descrito aqui.
+<p>Como usar os diferentes tipos de quadros-chave est· descrito aqui.
 </p>
 
 <hr size="6">
 <a name="Quadros_002dchave-de-curva"></a>
-<a name="SEC255"></a>
+<a name="SEC250"></a>
 <h2 class="section"> 18.1 Quadros-chave de curva </h2>
 
-<p>Muitos par√¢metros s√£o armazenados em curvas Bezier. V√° para <b>ver-&gt;fade</b> ou <b>ver-&gt;...aproxima√ß√£o</b> para exibir as curvas na linha do tempo para estes par√¢metros. Tanto no modo de edi√ß√£o de recortar e colar quanto no de arrastar e soltar, mova o cursor por sobre as curvas na linha do tempo at√© que ela tome forma. Ent√£o, simplesmente clicando ou arrastando na curva, voc√™ pode criar um quadro-chave na posi√ß√£o.
+<p>Muitos par‚metros s„o armazenados em curvas Bezier. V· para <b>ver-&gt;fade</b> ou <b>ver-&gt;...aproximaÁ„o</b> para exibir as curvas na linha do tempo para estes par‚metros. Tanto no modo de ediÁ„o de recortar e colar quanto no de arrastar e soltar, mova o cursor por sobre as curvas na linha do tempo atÈ que ela tome forma. Ent„o, simplesmente clicando ou arrastando na curva, vocÍ pode criar um quadro-chave na posiÁ„o.
 </p>
-<p>Ap√≥s o quadro-chave ser criado, clique nele e arraste-o para reposicion√°-lo. Quando voc√™ clica e arrasta um segundo quadro-chave na curva, ela cria uma rampa suave.
-<b>arrastar-com-o-CTRL</b> em um quadro-chave muda o valor ou do controle de entrada ou do controle de sa√≠da. Isso afetar√° a agudeza da curva. Enquanto o controle de entrada e o controle de sa√≠da podem ser movidos horizontalmente/verticalmente, o movimento horizontal √© puramente para legibilidade e n√£o √© usado no valor da curva.
+<p>ApÛs o quadro-chave ser criado, clique nele e arraste-o para reposicion·-lo. Quando vocÍ clica e arrasta um segundo quadro-chave na curva, ela cria uma rampa suave.
+<b>arrastar-com-o-CTRL</b> em um quadro-chave muda o valor ou do controle de entrada ou do controle de saÌda. Isso afetar· a agudeza da curva. Enquanto o controle de entrada e o controle de saÌda podem ser movidos horizontalmente/verticalmente, o movimento horizontal È puramente para legibilidade e n„o È usado no valor da curva.
 </p>
-<p>Voc√™ pode lembrar que o Gimp e as m√°scaras de Composi√ß√£o usam <kbd>SHIFT</kbd> para selecionar pontos de controle, ent√£o porque a linha do tempo usa a tecla <kbd>CTRL</kbd>? Quando voc√™ <b>arrastar-com-o-SHIFT</b> em uma curva da linha do tempo, o quadro-chave adere ao valor do quadro anterior ou posterior, dependendo de qual exista. Isso permite que marque um valor constante de curva sem ter que copiar o quadro-chave anterior ou posterior.
+<p>VocÍ pode lembrar que o Gimp e as m·scaras de ComposiÁ„o usam <kbd>SHIFT</kbd> para selecionar pontos de controle, ent„o porque a linha do tempo usa a tecla <kbd>CTRL</kbd>? Quando vocÍ <b>arrastar-com-o-SHIFT</b> em uma curva da linha do tempo, o quadro-chave adere ao valor do quadro anterior ou posterior, dependendo de qual exista. Isso permite que marque um valor constante de curva sem ter que copiar o quadro-chave anterior ou posterior.
 </p>
 
 <hr size="6">
 <a name="Navegando-pelos-quadros_002dchave-de-curva"></a>
-<a name="SEC256"></a>
+<a name="SEC251"></a>
 <h3 class="subsection"> 18.1.1 Navegando pelos quadros-chave de curva </h3>
 
-<p>N√£o h√° muito espa√ßo na linha do tempo para uma grande abrang√™ncia de valores de curvas. Voc√™ precisar√° aproximar ou desaproximar as curvas verticalmente para possuir alguma variabilidade. Isso √© feito por duas ferramentas: o bot√£o de adequa√ß√£o de automa√ß√£o e o menu de aproxima√ß√£o de automa√ß√£o <img src=".././manual_images_intl/autozoom.png" alt="manual_images_intl/autozoom">.
+<p>N„o h· muito espaÁo na linha do tempo para uma grande abrangÍncia de valores de curvas. VocÍ precisar· aproximar ou desaproximar as curvas verticalmente para possuir alguma variabilidade. Isso È feito por duas ferramentas: o bot„o de adequaÁ„o de automaÁ„o e o menu de aproximaÁ„o de automaÁ„o <img src=".././manual_images_intl/autozoom.png" alt="manual_images_intl/autozoom">.
 </p>
-<p>O bot√£o de adequa√ß√£o de automa√ß√£o escala e desloca a abrang√™ncia vertical de modo que a √°rea de curva selecionada apare√ßa na linha do tempo. Se uma regi√£o da linha do tempo estiver destacada pelo cursor, apenas aquela regi√£o √© escalada. Pontos de entrada/sa√≠da n√£o afetam a regi√£o a ser aproximada. <kbd>ALT-f</kbd> tamb√©m faz a adequa√ß√£o de automa√ß√£o.
+<p>O bot„o de adequaÁ„o de automaÁ„o escala e desloca a abrangÍncia vertical de modo que a ·rea de curva selecionada apareÁa na linha do tempo. Se uma regi„o da linha do tempo estiver destacada pelo cursor, apenas aquela regi„o È escalada. Pontos de entrada/saÌda n„o afetam a regi„o a ser aproximada. <kbd>ALT-f</kbd> tambÈm faz a adequaÁ„o de automaÁ„o.
 </p>
-<p>O menu de aproxima√ß√£o de automa√ß√£o muda manualmente a escala vertical das curvas em m√∫ltiplos de 2. Clique em sua seta para mudar a aproxima√ß√£o. <kbd>ALT-PARACIMA</kbd> e <kbd>ALT-PARABAIXO</kbd> mudam a aproxima√ß√£o de automa√ß√£o a partir do teclado.
+<p>O menu de aproximaÁ„o de automaÁ„o muda manualmente a escala vertical das curvas em m˙ltiplos de 2. Clique em sua seta para mudar a aproximaÁ„o. <kbd>ALT-PARACIMA</kbd> e <kbd>ALT-PARABAIXO</kbd> mudam a aproximaÁ„o de automaÁ„o a partir do teclado.
 </p>
 <hr size="6">
 <a name="Quadros_002dchave-de-ativa_00e7_00e3o_002fdesativa_00e7_00e3o"></a>
-<a name="SEC257"></a>
-<h2 class="section"> 18.2 Quadros-chave de ativa√ß√£o/desativa√ß√£o </h2>
+<a name="SEC252"></a>
+<h2 class="section"> 18.2 Quadros-chave de ativaÁ„o/desativaÁ„o </h2>
 
-<p>Mutar √© o √∫nico quadro-chave de ativa√ß√£o/desativa√ß√£o. Os quadros-chave de mutar determinam se a trilha √© processada mas n√£o renderizada para a sa√≠da. Clique e arraste nessas curvas para criar um quadro-chave. Diferentemente das curvas, o quadro-chave de ativa√ß√£o/desativa√ß√£o possui apenas dois valores: ligado ou desligado.
-<kbd>CTRL</kbd> e <kbd>SHIFT</kbd> n√£o fazem nada nos quadros-chave de ativa√ß√£o/desativa√ß√£o.
+<p>Mutar È o ˙nico quadro-chave de ativaÁ„o/desativaÁ„o. Os quadros-chave de mutar determinam se a trilha È processada mas n„o renderizada para a saÌda. Clique e arraste nessas curvas para criar um quadro-chave. Diferentemente das curvas, o quadro-chave de ativaÁ„o/desativaÁ„o possui apenas dois valores: ligado ou desligado.
+<kbd>CTRL</kbd> e <kbd>SHIFT</kbd> n„o fazem nada nos quadros-chave de ativaÁ„o/desativaÁ„o.
 </p>
 <hr size="6">
 <a name="Quadros_002dchave-autom_00e1ticos"></a>
-<a name="SEC258"></a>
-<h2 class="section"> 18.3 Quadros-chave autom√°ticos </h2>
+<a name="SEC253"></a>
+<h2 class="section"> 18.3 Quadros-chave autom·ticos </h2>
 
-<p>Voc√™ deve ter notado que quando algumas curvas de fade est√£o marcadas, mover o ponto de inser√ß√£o pelas curvas faz com que os faders reflitam o valor da curva abaixo do ponto de inser√ß√£o. Isso n√£o √© s√≥ para parecer legal. Os pr√≥prios faders podem marcar quadros-chave no modo de quadros-chave autom√°ticos. O modo de quadros-chave autom√°ticos √© normalmente mais √∫til do que arrastar curvas.
+<p>VocÍ deve ter notado que quando algumas curvas de fade est„o marcadas, mover o ponto de inserÁ„o pelas curvas faz com que os faders reflitam o valor da curva abaixo do ponto de inserÁ„o. Isso n„o È sÛ para parecer legal. Os prÛprios faders podem marcar quadros-chave no modo de quadros-chave autom·ticos. O modo de quadros-chave autom·ticos È normalmente mais ˙til do que arrastar curvas.
 </p>
-<p>Habilite o modo de quadros-chave autom√°ticos habilitando o bot√£o de quadros-chave autom√°ticos <img src=".././manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">.  No modo de quadros-chave , cada vez que voc√™ movimentar um par√¢metro pass√≠vel de possuir um quadro-chave, um quadro-chave ser√° criado na linha do tempo. Uma vez que quadros-chave autom√°ticos afetam muitos par√¢metros, √© melhor habilit√°-los s√≥ quando voc√™ precisa de um quadro-chave e desabilit√°-lo em seguida.
+<p>Habilite o modo de quadros-chave autom·ticos habilitando o bot„o de quadros-chave autom·ticos <img src=".././manual_images_intl/autokeyframe.png" alt="manual_images_intl/autokeyframe">.  No modo de quadros-chave , cada vez que vocÍ movimentar um par‚metro passÌvel de possuir um quadro-chave, um quadro-chave ser· criado na linha do tempo. Uma vez que quadros-chave autom·ticos afetam muitos par‚metros, È melhor habilit·-los sÛ quando vocÍ precisa de um quadro-chave e desabilit·-lo em seguida.
 </p>
-<p>√â √∫til ir no menu <b>Ver</b> e tornar o par√¢metro desejado vis√≠vel antes de fazer alguma mudan√ßa. O local onde o quadro-chave autom√°tico √© gerado est√° abaixo do ponto de inser√ß√£o. Se a linha do tempo estiver sendo reproduzida quando se fizer alguma altera√ß√£o, v√°rios quadros-chave autom√°ticos ser√£o gerados conforme voc√™ muda o par√¢metro.
+<p>… ˙til ir no menu <b>Ver</b> e tornar o par‚metro desejado visÌvel antes de fazer alguma mudanÁa. O local onde o quadro-chave autom·tico È gerado est· abaixo do ponto de inserÁ„o. Se a linha do tempo estiver sendo reproduzida quando se fizer alguma alteraÁ„o, v·rios quadros-chave autom·ticos ser„o gerados conforme vocÍ muda o par‚metro.
 </p>
-<p>Quando o modo de quadros-chave autom√°ticos est√° desabilitado, uma coisa tamb√©m estranha acontece. Ajustar um par√¢metro ajusta o quadro-chave que imediatamente precede o ponto de inser√ß√£o. Se dois quadros-chave de fade existirem e o ponto de inser√ß√£o estiver entre eles, mudar o fader muda o primeiro quadro-chave.
+<p>Quando o modo de quadros-chave autom·ticos est· desabilitado, uma coisa tambÈm estranha acontece. Ajustar um par‚metro ajusta o quadro-chave que imediatamente precede o ponto de inserÁ„o. Se dois quadros-chave de fade existirem e o ponto de inserÁ„o estiver entre eles, mudar o fader muda o primeiro quadro-chave.
 </p>
-<p>H√° v√°rios par√¢metros que podem receber quadros-chave apenas no modo de quadros-chave autom√°ticos. Estes s√£o par√¢metros para os quais as curvas levariam muito espa√ßo na trilha ou que n√£o podem ser facilmente representados por uma curva.
+<p>H· v·rios par‚metros que podem receber quadros-chave apenas no modo de quadros-chave autom·ticos. Estes s„o par‚metros para os quais as curvas levariam muito espaÁo na trilha ou que n„o podem ser facilmente representados por uma curva.
 </p>
-<p>Efeitos podem receber quadros-chave apenas no modo autom√°tico devido ao n√∫mero de par√¢metros em cada efeito individual.
+<p>Efeitos podem receber quadros-chave apenas no modo autom·tico devido ao n˙mero de par‚metros em cada efeito individual.
 </p>
-<p>Traslado de c√¢mera e projetor podem receber quadros-chave no modo de quadros-chave autom√°ticos enquanto a aproxima√ß√£o de c√¢mera e projetor podem receber quadros-chave com curvas. √â aqui que conclu√≠mos a discuss√£o da composi√ß√£o, uma vez que a composi√ß√£o √© altamente dependente na habilidade de ser mudada conforme o tempo.
+<p>Traslado de c‚mera e projetor podem receber quadros-chave no modo de quadros-chave autom·ticos enquanto a aproximaÁ„o de c‚mera e projetor podem receber quadros-chave com curvas. … aqui que concluÌmos a discuss„o da composiÁ„o, uma vez que a composiÁ„o È altamente dependente na habilidade de ser mudada conforme o tempo.
 </p>
 <hr size="6">
 <a name="Quadros_002dchave-do-Compositor"></a>
-<a name="SEC259"></a>
+<a name="SEC254"></a>
 <h2 class="section"> 18.4 Quadros-chave do Compositor </h2>
 
-<p>O traslado de c√¢mera e projetor s√£o representados por dois par√¢metros: x e y. Fica dif√≠cil ajust√°-los com as curvas. O Cinelerra recolve este problema confiando nos quadros-chave autom√°ticos. Com uma trilha de v√≠deo carregada, mova o ponto de inser√ß√£o para o in√≠cio da trilha e habilite o modo de quadros-chaves autom√°ticos.
+<p>O traslado de c‚mera e projetor s„o representados por dois par‚metros: x e y. Fica difÌcil ajust·-los com as curvas. O Cinelerra recolve este problema confiando nos quadros-chave autom·ticos. Com uma trilha de vÌdeo carregada, mova o ponto de inserÁ„o para o inÌcio da trilha e habilite o modo de quadros-chaves autom·ticos.
 </p>
-<p>Mova o projetor levemente na janela de composi√ß√£o para criar um quadro-chave. Ent√£o, avance alguns segundos no v√≠deo. Mova o projetor para uma grande dist√¢ncia para criar outro quadro-chave e enfatizar a movimenta√ß√£o. Isso criar√° uma segunda caixa de proje√ß√£o no compositor, com uma linha unindo as duas caixas. A linha que as une √© o caminho de locomo√ß√£o. Se voc√™ criar mais quadros-chave, mais caixas ser√£o criadas. Uma vez que todos os quadros-chave desejados sejam criados, desabilite o modo de quadros-chave autom√°ticos.
+<p>Mova o projetor levemente na janela de composiÁ„o para criar um quadro-chave. Ent„o, avance alguns segundos no vÌdeo. Mova o projetor para uma grande dist‚ncia para criar outro quadro-chave e enfatizar a movimentaÁ„o. Isso criar· uma segunda caixa de projeÁ„o no compositor, com uma linha unindo as duas caixas. A linha que as une È o caminho de locomoÁ„o. Se vocÍ criar mais quadros-chave, mais caixas ser„o criadas. Uma vez que todos os quadros-chave desejados sejam criados, desabilite o modo de quadros-chave autom·ticos.
 </p>
-<p>Agora, quando voc√™ mover o slider da janela de composi√ß√£o por a√≠, a proje√ß√£o do v√≠deo se move conforme o tempo. A qualquer ponto entre dois quadros-chave, o caminho de locomo√ß√£o √© vermelho para todo o tempo antes do ponto de inser√ß√£o e verde para todo o tempo ap√≥s o ponto de inser√ß√£o. √â debat√≠vel se esta √© uma fun√ß√£o √∫til, mas te far√° feliz saber qual quadro-chave ser√° afetado pela pr√≥xima movimenta√ß√£o do projetor.
+<p>Agora, quando vocÍ mover o slider da janela de composiÁ„o por aÌ, a projeÁ„o do vÌdeo se move conforme o tempo. A qualquer ponto entre dois quadros-chave, o caminho de locomoÁ„o È vermelho para todo o tempo antes do ponto de inserÁ„o e verde para todo o tempo apÛs o ponto de inserÁ„o. … debatÌvel se esta È uma funÁ„o ˙til, mas te far· feliz saber qual quadro-chave ser· afetado pela prÛxima movimentaÁ„o do projetor.
 </p>
-<p>Clicar-e-arrastar quando quadros-chave autom√°ticos estiverem desligados ajustar√° o quadro-chave anterior. Se voc√™ estiver no meio do caminho entre dois quadros-chave, a primeira caixa do projetor ser√° ajustada enquanto a segunda ficar√° na mesma posi√ß√£o. Mais do que isso, o v√≠deo n√£o parecer√° se mover em passo com o primeiro quadro-chave. Isso √© porque no meio do caminho entre dois quadros-chave, o traslado do projetor √© interpolado. Para marcar o segundo quadro-chave, voc√™ precisar√° fazer a mesma coisa s√≥ que ap√≥s o segundo quadro-chave.
+<p>Clicar-e-arrastar quando quadros-chave autom·ticos estiverem desligados ajustar· o quadro-chave anterior. Se vocÍ estiver no meio do caminho entre dois quadros-chave, a primeira caixa do projetor ser· ajustada enquanto a segunda ficar· na mesma posiÁ„o. Mais do que isso, o vÌdeo n„o parecer· se mover em passo com o primeiro quadro-chave. Isso È porque no meio do caminho entre dois quadros-chave, o traslado do projetor È interpolado. Para marcar o segundo quadro-chave, vocÍ precisar· fazer a mesma coisa sÛ que apÛs o segundo quadro-chave.
 </p>
-<p>Por padr√£o, o caminho de locomo√ß√£o √© uma linha reta, mas ela pode ser curvada com pontos de controle. <b>arraste-com-o-CTRL</b> para marcar tanto o ponto de controle de entrada ou sa√≠da do quadro-chave anterior. Mais uma vez, sa√≠mos do Gimp porque o <kbd>SHIFT</kbd> j√° est√° sendo usado para aproxima√ß√£o. Ap√≥s os pontos de controle de entrada/sa√≠da estarem extrapolados do quadro-chave, <b>arrastar-com-o-CTRL</b> em qualquer lugar do v√≠deo ajustar√° o ponto de controle mais pr√≥ximo. Um ponto de controle pode estar completamente fora da vis√£o e ainda assim ser control√°vel.
+<p>Por padr„o, o caminho de locomoÁ„o È uma linha reta, mas ela pode ser curvada com pontos de controle. <b>arraste-com-o-CTRL</b> para marcar tanto o ponto de controle de entrada ou saÌda do quadro-chave anterior. Mais uma vez, saÌmos do Gimp porque o <kbd>SHIFT</kbd> j· est· sendo usado para aproximaÁ„o. ApÛs os pontos de controle de entrada/saÌda estarem extrapolados do quadro-chave, <b>arrastar-com-o-CTRL</b> em qualquer lugar do vÌdeo ajustar· o ponto de controle mais prÛximo. Um ponto de controle pode estar completamente fora da vis„o e ainda assim ser control·vel.
 </p>
-<p>Quando editar o traslado da c√¢mera, o comportamento das caixas de c√¢mera ser√° levemente diferente. A automa√ß√£o de c√¢mera normalmente √© usada para faz panor√¢micas de fotografias est√°ticas. A caixa atual de c√¢mera n√£o se move durante um arraste, mas se v√°rios quadros-chave forem marcados, cada caixa de c√¢mera exceto o quadro-chave atual parecem se mover. Isso acontece porque a exibi√ß√£o da c√¢mera mostra cada outra posi√ß√£o de c√¢mera relativa √† atual.
+<p>Quando editar o traslado da c‚mera, o comportamento das caixas de c‚mera ser· levemente diferente. A automaÁ„o de c‚mera normalmente È usada para faz panor‚micas de fotografias est·ticas. A caixa atual de c‚mera n„o se move durante um arraste, mas se v·rios quadros-chave forem marcados, cada caixa de c‚mera exceto o quadro-chave atual parecem se mover. Isso acontece porque a exibiÁ„o da c‚mera mostra cada outra posiÁ„o de c‚mera relativa ‡ atual.
 </p>
-<p>A situa√ß√£o torna-se mais intuitiva se voc√™ curvar o caminho de locomo√ß√£o entre dois quadros-chave e ver entre os dois quadros-chave. A divis√£o entre vermelho e verde, a posi√ß√£o atual entre os quadros-chave, sempre estar√° centrada enquanto as caixas de c√¢mera se movimentam.
+<p>A situaÁ„o torna-se mais intuitiva se vocÍ curvar o caminho de locomoÁ„o entre dois quadros-chave e ver entre os dois quadros-chave. A divis„o entre vermelho e verde, a posiÁ„o atual entre os quadros-chave, sempre estar· centrada enquanto as caixas de c‚mera se movimentam.
 </p>
 <hr size="6">
 <a name="Editando-quadros_002dchave"></a>
-<a name="SEC260"></a>
+<a name="SEC255"></a>
 <h2 class="section"> 18.5 Editando quadros-chave </h2>
 
-<p><b>IMPORTANTE:</b> quando voc√™ copiar e colar quadros-chave, assegure-se que n√£o haja <b>pontos de ENTRADA ou SA√çDA definidos na linha do tempo</b>.
+<p><b>IMPORTANTE:</b> quando vocÍ copiar e colar quadros-chave, assegure-se que n„o haja <b>pontos de ENTRADA ou SAÕDA definidos na linha do tempo</b>.
 </p>
-<p>Quadros-chave podem ser mudados ou movidos entre trilhas da linha do tempo usando opera√ß√µes similares √†s de recorte e cola usadas para editar m√≠dia. Apenas os quadros-chave selecionados no menu <b>ver</b> s√£o afetados por opera√ß√µes de edi√ß√£o de quadros-chave, entretanto.
+<p>Quadros-chave podem ser mudados ou movidos entre trilhas da linha do tempo usando operaÁıes similares ‡s de recorte e cola usadas para editar mÌdia. Apenas os quadros-chave selecionados no menu <b>ver</b> s„o afetados por operaÁıes de ediÁ„o de quadros-chave, entretanto.
 </p>
-<p>A opera√ß√£o mais popular de edi√ß√£o de quadro-chave √© a r√©plica de alguma forma de curva de uma trilha a outra, para fazer um par est√©reo. O primeiro passo √© isolar a grava√ß√£o da trilha no patchbay <img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> dando um <b>clique-com-o-SHIFT</b> nele. Ent√£o, ou marque pontos de entrada/sa√≠da ou destaque a regi√£o desejada de quadros-chave. V√° para <b>quadros-chave-&gt;copiar quadros-chave</b> para copi√°-los para a √°rea de transfer√™ncia. Isole a grava√ß√£o da trilha de destino no patchbay <img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> dando um <b>clique-com-o-SHIFT</b> nela e v√° para <b>quadros-chave-&gt;colar quadros-chave</b> para colar a √°rea de transfer√™ncia.
+<p>A operaÁ„o mais popular de ediÁ„o de quadro-chave È a rÈplica de alguma forma de curva de uma trilha a outra, para fazer um par estÈreo. O primeiro passo È isolar a gravaÁ„o da trilha no patchbay <img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> dando um <b>clique-com-o-SHIFT</b> nele. Ent„o, ou marque pontos de entrada/saÌda ou destaque a regi„o desejada de quadros-chave. V· para <b>quadros-chave-&gt;copiar quadros-chave</b> para copi·-los para a ·rea de transferÍncia. Isole a gravaÁ„o da trilha de destino no patchbay <img src=".././manual_images_intl/recordpatch_up.png" alt="manual_images_intl/recordpatch_up"> dando um <b>clique-com-o-SHIFT</b> nela e v· para <b>quadros-chave-&gt;colar quadros-chave</b> para colar a ·rea de transferÍncia.
 </p>
-<p>Os comandos de edi√ß√£o de m√≠dia s√£o mapeados para os comandos de edi√ß√£o de quadro-chave usando a tecla <kbd>SHIFT</kbd> ao inv√©s de apenas o atalho do teclado.
+<p>Os comandos de ediÁ„o de mÌdia s„o mapeados para os comandos de ediÁ„o de quadro-chave usando a tecla <kbd>SHIFT</kbd> ao invÈs de apenas o atalho do teclado.
 </p>
-<p>Isso leva √† parte mais complicada na edi√ß√£o de quadros-chave, o quadro-chave padr√£o. Lembre-se que quando nenhum quadro-chave estiver marcado, ainda h√° um quadro-chave padr√£o que armazena todo o par√¢metro global para toda a dura√ß√£o. O quadro-chave padr√£o n√£o √© desenhado porque ele sempre existe. E se o valor do quadro-chave padr√£o for um bom valor, que voc√™ queira usar para outros quadros-chave n√£o-padr√£o? O <b>quadros-chave-&gt;copiar quadro-chave padr√£o</b> e <b>quadros-chave-&gt;colar quadro-chave padr√£o</b> permitem a convers√£o do quadro-chave padr√£o para um quadro-chave n√£o-padr√£o.
+<p>Isso leva ‡ parte mais complicada na ediÁ„o de quadros-chave, o quadro-chave padr„o. Lembre-se que quando nenhum quadro-chave estiver marcado, ainda h· um quadro-chave padr„o que armazena todo o par‚metro global para toda a duraÁ„o. O quadro-chave padr„o n„o È desenhado porque ele sempre existe. E se o valor do quadro-chave padr„o for um bom valor, que vocÍ queira usar para outros quadros-chave n„o-padr„o? O <b>quadros-chave-&gt;copiar quadro-chave padr„o</b> e <b>quadros-chave-&gt;colar quadro-chave padr„o</b> permitem a convers„o do quadro-chave padr„o para um quadro-chave n„o-padr„o.
 </p>
-<p><b>Quadros-chave-&gt;copiar quadro-chave padr√£o</b> copia o quadro-chave padr√£o para a √°rea de transfer√™ncia, n√£o importando qual regi√£o da linha do tempo estiver selecionada. A fun√ß√£o <b>quadros-chave-&gt;colar quadros-chave</b> pode ser ent√£o usada para colar a √°rea de trabalho como um quadro-chave n√£o-padr√£o.
+<p><b>Quadros-chave-&gt;copiar quadro-chave padr„o</b> copia o quadro-chave padr„o para a ·rea de transferÍncia, n„o importando qual regi„o da linha do tempo estiver selecionada. A funÁ„o <b>quadros-chave-&gt;colar quadros-chave</b> pode ser ent„o usada para colar a ·rea de trabalho como um quadro-chave n„o-padr„o.
 </p>
-<p>Se voc√™ copiou um quadro-chave n√£o-padr√£o, ele pode ser armazenado como o quadro-chave padr√£o chamando <b>quadros-chave-&gt;colar quadro-chave padr√£o</b>. Ap√≥s usar o colar quadro-chave padr√£o para converter um quadro-chave n√£o-padr√£o em um quadro-chave padr√£o, voc√™ n√£o ver√° o valor do quadro-chave padr√£o refletido at√© que todos os quadros-chave n√£o-padr√£o sejam removidos.
+<p>Se vocÍ copiou um quadro-chave n„o-padr„o, ele pode ser armazenado como o quadro-chave padr„o chamando <b>quadros-chave-&gt;colar quadro-chave padr„o</b>. ApÛs usar o colar quadro-chave padr„o para converter um quadro-chave n„o-padr„o em um quadro-chave padr„o, vocÍ n„o ver· o valor do quadro-chave padr„o refletido atÈ que todos os quadros-chave n„o-padr„o sejam removidos.
 </p>
-<p>Finalmente, h√° um jeito conveniente de apagar quadros-chave al√©m de selecionar uma regi√£o e chamar <b>quadros-chave-&gt;limpar quadros-chave</b>. Simplesmente clique-e-arraste um quadro-chave para antes de seu quadro-chave precedente ou para ap√≥s o quadro-chave seguinte na trilha. Esta √© a √∫nica forma pela qual se pode apagar quadros-chave simultaneamente em trilhas agrupadas.
+<p>Finalmente, h· um jeito conveniente de apagar quadros-chave alÈm de selecionar uma regi„o e chamar <b>quadros-chave-&gt;limpar quadros-chave</b>. Simplesmente clique-e-arraste um quadro-chave para antes de seu quadro-chave precedente ou para apÛs o quadro-chave seguinte na trilha. Esta È a ˙nica forma pela qual se pode apagar quadros-chave simultaneamente em trilhas agrupadas.
 </p>
 
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC254" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_19.html#SEC261" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_19.html#SEC256" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -190,7 +190,7 @@ Esta janela permite habilitar/desabilitar cada par√¢metro no menu de vis√£o. Qua
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

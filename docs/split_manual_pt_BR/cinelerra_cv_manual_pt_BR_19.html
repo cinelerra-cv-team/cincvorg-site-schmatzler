@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual do Cinelerra CV: 19. Capturando mÃ­dia</title>
+<title>Manual do Cinelerra CV: 19. Capturando mídia</title>
 
-<meta name="description" content="Manual do Cinelerra CV: 19. Capturando mÃ­dia">
-<meta name="keywords" content="Manual do Cinelerra CV: 19. Capturando mÃ­dia">
+<meta name="description" content="Manual do Cinelerra CV: 19. Capturando mídia">
+<meta name="keywords" content="Manual do Cinelerra CV: 19. Capturando mídia">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_18.html#SEC254" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_20.html#SEC267" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_18.html#SEC249" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_20.html#SEC262" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,136 +56,136 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Capturando-m_00eddia"></a>
-<a name="SEC261"></a>
-<h1 class="chapter"> 19. Capturando mÃ­dia </h1>
+<a name="SEC256"></a>
+<h1 class="chapter"> 19. Capturando mídia </h1>
 
 
 <hr size="6">
 <a name="Capturando-usando-Cinelerra"></a>
-<a name="SEC262"></a>
+<a name="SEC257"></a>
 <h2 class="section"> 19.1 Capturando usando Cinelerra </h2>
 
 
 <hr size="6">
 <a name="Fun_00e7_00f5es-de-grava_00e7_00e3o-do-Cinelerra"></a>
-<a name="SEC263"></a>
-<h3 class="subsection"> 19.1.1 FunÃ§Ãµes de gravaÃ§Ã£o do Cinelerra </h3>
+<a name="SEC258"></a>
+<h3 class="subsection"> 19.1.1 Funções de gravação do Cinelerra </h3>
 
-<p>Idealmente, toda mÃ­dia seria armazenada em discos rÃ­gidos, CD-ROM, flash ou DVD e carregÃ¡-la no Cinelerra seria uma questÃ£o de carregar um arquivo. Na realidade, muito poucas fontes de mÃ­dia podem ser acessadas como um sistema de arquivos mas, ao invÃ©s disso, dependem de mecanismos de transporte de fita e mecanismos de entrada/saÃ­da para transferir a informaÃ§Ã£o para o computador. Esses tipos de mÃ­dia sÃ£o importados para o Cinelerra atravÃ©s da caixa de diÃ¡logo de GravaÃ§Ã£o.
+<p>Idealmente, toda mídia seria armazenada em discos rígidos, CD-ROM, flash ou DVD e carregá-la no Cinelerra seria uma questão de carregar um arquivo. Na realidade, muito poucas fontes de mídia podem ser acessadas como um sistema de arquivos mas, ao invés disso, dependem de mecanismos de transporte de fita e mecanismos de entrada/saída para transferir a informação para o computador. Esses tipos de mídia são importados para o Cinelerra através da caixa de diálogo de Gravação.
 </p>
-<p>O primeiro passo em uma gravaÃ§Ã£o Ã© configurar o dispositivo de entrada. Em <b>ConfiguraÃ§Ãµes-&gt;preferÃªncias</b> hÃ¡ um nÃºmero de parÃ¢metros de gravaÃ§Ã£o descritos na configuraÃ§Ã£o de See section <a href="cinelerra_cv_manual_pt_BR_3.html#SEC54">GravaÃ§Ã£o</a>. Estes parÃ¢metros se aplicam Ã  gravaÃ§Ã£o nÃ£o importando quais sejam as configuraÃ§Ãµes do projeto, jÃ¡ que os parÃ¢metros de gravaÃ§Ã£o normalmente se relacionam Ã  capacidade mÃ¡xima do hardware de gravaÃ§Ã£o, enquanto as configuraÃ§Ãµes de projeto variam.
+<p>O primeiro passo em uma gravação é configurar o dispositivo de entrada. Em <b>Configurações-&gt;preferências</b> há um número de parâmetros de gravação descritos na configuração de See section <a href="cinelerra_cv_manual_pt_BR_3.html#SEC53">Gravação</a>. Estes parâmetros se aplicam à gravação não importando quais sejam as configurações do projeto, já que os parâmetros de gravação normalmente se relacionam à capacidade máxima do hardware de gravação, enquanto as configurações de projeto variam.
 </p>
-<p>VÃ¡ para <b>Arquivo-&gt;gravaÃ§Ã£o</b> para gravar a partir de uma fonte entrada/saÃ­da. Isso requerirÃ¡ um formato de saÃ­da muito parecido ao exigido pela funÃ§Ã£o de render. Uma vez que isso esteja feito, a janela de gravaÃ§Ã£o e o monitor de gravaÃ§Ã£o aparecerÃ£o.
+<p>Vá para <b>Arquivo-&gt;gravação</b> para gravar a partir de uma fonte entrada/saída. Isso requerirá um formato de saída muito parecido ao exigido pela função de render. Uma vez que isso esteja feito, a janela de gravação e o monitor de gravação aparecerão.
 </p>
-<p>A janela de gravaÃ§Ã£o possui diferentes seÃ§Ãµes. Enquanto vÃ¡rios parÃ¢metros mudam dependendo de se o arquivo possui Ã¡udio ou vÃ­deo, algumas seÃ§Ãµes serÃ£o sempre as mesmas.
+<p>A janela de gravação possui diferentes seções. Enquanto vários parâmetros mudam dependendo de se o arquivo possui áudio ou vídeo, algumas seções serão sempre as mesmas.
 </p>
 <ul>
-<li> A Ã¡rea de formato de saÃ­da descreve o formato do arquivo de saÃ­da e a posiÃ§Ã£o atual dentro dele.
-</li><li> A Ã¡rea de ediÃ§Ã£o de grupo permite que vocÃª mude os parÃ¢metros no grupo atual.
-</li><li> Os controles de transporte iniciam e pÃ¡ram a gravaÃ§Ã£o de modos diferentes.
+<li> A área de formato de saída descreve o formato do arquivo de saída e a posição atual dentro dele.
+</li><li> A área de edição de grupo permite que você mude os parâmetros no grupo atual.
+</li><li> Os controles de transporte iniciam e páram a gravação de modos diferentes.
 </li><li> A lista de grupo exibe todos os grupos definidos.
-</li><li> A Ã¡rea de confirmaÃ§Ã£o permite que vocÃª determine como os arquivos de saÃ­da sÃ£o importados para dentro da Linha do Tempo e sai.
+</li><li> A área de confirmação permite que você determine como os arquivos de saída são importados para dentro da Linha do Tempo e sai.
 </li></ul>
 
 <p align="center"> <img src=".././manual_images_en/recording.png" alt="manual_images_en/recording">
-</p><p align="center"> <b>Ãreas de janela de gravaÃ§Ã£o</b>
+</p><p align="center"> <b>Áreas de janela de gravação</b>
 </p>
-<p>A gravaÃ§Ã£o no Cinelerra Ã© organizada em torno de grupos. Um grupo essencialmente define um arquivo de saÃ­da distinto para a gravaÃ§Ã£o. Por agora, vocÃª pode ignorar completamente o conceito de grupo (&quot;batch&quot;) e gravar simplesmente apertando o botÃ£o de gravaÃ§Ã£o <img src=".././manual_images_intl/record.png" alt="manual_images_intl/record">.
+<p>A gravação no Cinelerra é organizada em torno de grupos. Um grupo essencialmente define um arquivo de saída distinto para a gravação. Por agora, você pode ignorar completamente o conceito de grupo (&quot;batch&quot;) e gravar simplesmente apertando o botão de gravação <img src=".././manual_images_intl/record.png" alt="manual_images_intl/record">.
 </p>
-<p>O botÃ£o de gravaÃ§Ã£o abre o arquivo atual de saÃ­da caso este nÃ£o esteja aberto e escreve a informaÃ§Ã£o capturada nele. Use o botÃ£o de parar (&quot;stop&quot;) para parar a gravaÃ§Ã£o. A gravaÃ§Ã£o pode ser continuada com o botÃ£o de gravaÃ§Ã£o sem apagar o arquivo neste ponto. No caso de um arquivo de vÃ­deo, existe um botÃ£o de gravaÃ§Ã£o de um quadro Ãºnico <img src=".././manual_images_intl/singleframe.png" alt="manual_images_intl/singleframe">, que captura apenas um quadro.
+<p>O botão de gravação abre o arquivo atual de saída caso este não esteja aberto e escreve a informação capturada nele. Use o botão de parar (&quot;stop&quot;) para parar a gravação. A gravação pode ser continuada com o botão de gravação sem apagar o arquivo neste ponto. No caso de um arquivo de vídeo, existe um botão de gravação de um quadro único <img src=".././manual_images_intl/singleframe.png" alt="manual_images_intl/singleframe">, que captura apenas um quadro.
 </p>
-<p>Quando mÃ­dia suficiente estiver gravada, escolha um mÃ©todo de inserÃ§Ã£o do menu <b>EstratÃ©gia de InserÃ§Ã£o</b> e aperte <b>fechar</b>.
+<p>Quando mídia suficiente estiver gravada, escolha um método de inserção do menu <b>Estratégia de Inserção</b> e aperte <b>fechar</b>.
 </p>
 <hr size="6">
 <a name="Grava_00e7_00e3o-em-grupo"></a>
-<a name="SEC264"></a>
-<h3 class="subsection"> 19.1.2 GravaÃ§Ã£o em grupo </h3>
+<a name="SEC259"></a>
+<h3 class="subsection"> 19.1.2 Gravação em grupo </h3>
 
-<p>Agora chegamos ao conceito de grupos (&quot;batches&quot;). Grupos tentam fazer o mecanismo entrada/saÃ­da parecer mais com um sistema de arquivos. Grupos sÃ£o tradicionalmente usados para dividir a fita em diferentes programas e salvar os diferentes programas como arquivos diferentes ao invÃ©s de gravar direto uma fita inteira. Devido ao alto custo de desenvolvimento de mecanismos de controle preciso de quadros, o Ãºnico uso dos grupos atualmente Ã© gravar diferente programas durante diferentes momentos do dia. Isso ainda Ã© Ãºtil para gravar programas de TV ou minutar perÃ­odos de vÃ­deos conforme qualquer um que nÃ£o pode bancar aplicaÃ§Ãµes apropriadas sabe.
+<p>Agora chegamos ao conceito de grupos (&quot;batches&quot;). Grupos tentam fazer o mecanismo entrada/saída parecer mais com um sistema de arquivos. Grupos são tradicionalmente usados para dividir a fita em diferentes programas e salvar os diferentes programas como arquivos diferentes ao invés de gravar direto uma fita inteira. Devido ao alto custo de desenvolvimento de mecanismos de controle preciso de quadros, o único uso dos grupos atualmente é gravar diferente programas durante diferentes momentos do dia. Isso ainda é útil para gravar programas de TV ou minutar períodos de vídeos conforme qualquer um que não pode bancar aplicações apropriadas sabe.
 </p>
-<p>A janela de gravaÃ§Ã£o suporta uma lista de grupos e dois modos de gravaÃ§Ã£o: gravaÃ§Ã£o interativa e em grupo. GravaÃ§Ã£o interativa acontece quando o botÃ£o de gravar Ã© pressionado. A gravaÃ§Ã£o interativa se inicia imediatamente e usa o grupo atual para determinar tudo, exceto o tempo de inÃ­cio. Por padrÃ£o, o grupo atual estÃ¡ configurado para se comportar como uma fita.
+<p>A janela de gravação suporta uma lista de grupos e dois modos de gravação: gravação interativa e em grupo. Gravação interativa acontece quando o botão de gravar é pressionado. A gravação interativa se inicia imediatamente e usa o grupo atual para determinar tudo, exceto o tempo de início. Por padrão, o grupo atual está configurado para se comportar como uma fita.
 </p>
-<p>A gravaÃ§Ã£o em grupo ocorre quando o botÃ£o <b>inÃ­cio</b> Ã© pressionado. Na gravaÃ§Ã£o em grupo, o <b>tempo de inÃ­cio</b> Ã© o tempo em que o grupo comeÃ§a a ser gravado.
+<p>A gravação em grupo ocorre quando o botão <b>início</b> é pressionado. Na gravação em grupo, o <b>tempo de início</b> é o tempo em que o grupo começa a ser gravado.
 </p>
-<p>Primeiro, vocÃª vai querer criar alguns grupos. Cada grupo possui certos parÃ¢metros e mÃ©todos de ajuste.
+<p>Primeiro, você vai querer criar alguns grupos. Cada grupo possui certos parâmetros e métodos de ajuste.
 </p>
 <ul>
 <li> <b>Ligado</b> <br>
-Determina se o grupo serÃ¡ incluÃ­do nas operaÃ§Ãµes de gravaÃ§Ã£o em grupo. Clique na fileira de lista abaixo de <b>On</b> para habilitar ou desabilitar grupos.
+Determina se o grupo será incluído nas operações de gravação em grupo. Clique na fileira de lista abaixo de <b>On</b> para habilitar ou desabilitar grupos.
 
 </li><li> <b>Caminho</b> <br>
-Ã‰ o arquivo onde o grupo serÃ¡ gravado. O nome do arquico especificado na caixa de diÃ¡logo de gravaÃ§Ã£o Ã© o nome do primeiro grupo, para simplificar a gravaÃ§Ã£o interativa, mas o nome de arquivo pode ser mudado na janela de gravaÃ§Ã£o para qualquer grupo na Ã¡rea <b>editar grupo</b>.
+É o arquivo onde o grupo será gravado. O nome do arquico especificado na caixa de diálogo de gravação é o nome do primeiro grupo, para simplificar a gravação interativa, mas o nome de arquivo pode ser mudado na janela de gravação para qualquer grupo na área <b>editar grupo</b>.
 
 </li><li> <b>Novidades</b> <br>
-Mostra se o arquivo existe ou nÃ£o. Este Ã© um atributo muito importante, jÃ¡ que nÃ£o hÃ¡ um diÃ¡logo confirmando se o arquivo existe. Na primeira vez que vocÃª pressionar 'gravar', o arquivo Ã© aberto. Se o arquivo existe, neste momento Ã© apagado. 'News' diz <b>Arquivo existe</b> caso o arquivo exista e <b>OK</b> caso nÃ£o exista. Cada vez que vocÃª continue a gravaÃ§Ã£o no mesmo grupo, o 'news' deve dizer <b>Abrir</b>, indicando que o arquivo jÃ¡ estÃ¡ aberto e nÃ£o serÃ¡ apagado da prÃ³xima vez que o botÃ£o de gravar for apertado. <br>
-Se vocÃª sair do grupo atual apÃ³s a gravaÃ§Ã£o, o arquivo Ã© fechado. Da prÃ³xima vez que vocÃª entrar neste grupo, o arquivo serÃ¡ apagado.
+Mostra se o arquivo existe ou não. Este é um atributo muito importante, já que não há um diálogo confirmando se o arquivo existe. Na primeira vez que você pressionar 'gravar', o arquivo é aberto. Se o arquivo existe, neste momento é apagado. 'News' diz <b>Arquivo existe</b> caso o arquivo exista e <b>OK</b> caso não exista. Cada vez que você continue a gravação no mesmo grupo, o 'news' deve dizer <b>Abrir</b>, indicando que o arquivo já está aberto e não será apagado da próxima vez que o botão de gravar for apertado. <br>
+Se você sair do grupo atual após a gravação, o arquivo é fechado. Da próxima vez que você entrar neste grupo, o arquivo será apagado.
 
-</li><li> <b>Tempo de inÃ­cio</b> <br>
-Ã‰ a marcaÃ§Ã£o de 24 horas do dia em que o grupo comeÃ§arÃ¡ a gravar caso esteja no modo de grupo. O tempo de inÃ­cio pode se tornar um tempo de fita e nÃºmero de carrete caso o controle de deck esteja implementado, mas por agora ele se refere ao tempo do dia.
+</li><li> <b>Tempo de início</b> <br>
+É a marcação de 24 horas do dia em que o grupo começará a gravar caso esteja no modo de grupo. O tempo de início pode se tornar um tempo de fita e número de carrete caso o controle de deck esteja implementado, mas por agora ele se refere ao tempo do dia.
 
-</li><li> <b>DuraÃ§Ã£o</b> <br>
-Esta Ã© a duraÃ§Ã£o do grupo. SÃ³ possui significado se o <b>Modo</b> do grupo Ã© <b>Com contador</b>. Uma vez que a duraÃ§Ã£o da gravaÃ§Ã£o alcance a <b>duraÃ§Ã£o</b>, a gravaÃ§Ã£o pÃ¡ra, seja no modo interativo, seja no modo de grupo.
+</li><li> <b>Duração</b> <br>
+Esta é a duração do grupo. Só possui significado se o <b>Modo</b> do grupo é <b>Com contador</b>. Uma vez que a duração da gravação alcance a <b>duração</b>, a gravação pára, seja no modo interativo, seja no modo de grupo.
 
 </li><li> <b>Fonte</b> <br>
-Possui significado apenas quando o hardware de captura possui mÃºltiplas fontes. Normalmente a fonte Ã© um canal 'tuner' ou entrada (&quot;input&quot;). Quando o grupo atual acaba e o prÃ³ximo grupo comeÃ§a a gravar, a fonte Ã© mudada para o que estiver marcado para o prÃ³ximo grupo. Desta forma, vÃ¡rias estaÃ§Ãµes de TV podem ser gravados em diferentes momentos.
+Possui significado apenas quando o hardware de captura possui múltiplas fontes. Normalmente a fonte é um canal 'tuner' ou entrada (&quot;input&quot;). Quando o grupo atual acaba e o próximo grupo começa a gravar, a fonte é mudada para o que estiver marcado para o próximo grupo. Desta forma, várias estações de TV podem ser gravados em diferentes momentos.
 </li></ul>
 
-<p>A janela de gravaÃ§Ã£o possui uma noÃ§Ã£o do <b>grupo atual</b>. O grupo atual nÃ£o Ã© o mesmo que o grupo que estiver em destaque na lista de grupos. O texto do grupo atual fica colorido em vermelho na lista de grupos. O grupo em destaque Ã© apenas exibido na seÃ§Ã£o de ediÃ§Ã£o de grupos para ediÃ§Ã£o.
+<p>A janela de gravação possui uma noção do <b>grupo atual</b>. O grupo atual não é o mesmo que o grupo que estiver em destaque na lista de grupos. O texto do grupo atual fica colorido em vermelho na lista de grupos. O grupo em destaque é apenas exibido na seção de edição de grupos para edição.
 </p>
-<p>Ao colorir o grupo atual de vermelho, qualquer grupo pode ser editado ao se deixÃ¡-lo em destaque, sem mudar o grupo a ser gravado.
+<p>Ao colorir o grupo atual de vermelho, qualquer grupo pode ser editado ao se deixá-lo em destaque, sem mudar o grupo a ser gravado.
 </p>
-<p>Todas as operaÃ§Ãµes de gravaÃ§Ã£o acontecem no grupo atual. Se hÃ¡ vÃ¡rios grupos, deixe em destaque o grupo desejado e aperte <b>ativar</b> para tornÃ¡-lo o grupo atual. Se o botÃ£o <b>inÃ­cio</b> for pressionado, o grupo atual pisca para indicar que estÃ¡ esperando pelo tempo de inÃ­cio no modo de grupo. Se o botÃ£o de <b>gravaÃ§Ã£o</b> for pressionado, o grupo atual Ã© gravado imediatamente no modo interativo.
+<p>Todas as operações de gravação acontecem no grupo atual. Se há vários grupos, deixe em destaque o grupo desejado e aperte <b>ativar</b> para torná-lo o grupo atual. Se o botão <b>início</b> for pressionado, o grupo atual pisca para indicar que está esperando pelo tempo de início no modo de grupo. Se o botão de <b>gravação</b> for pressionado, o grupo atual é gravado imediatamente no modo interativo.
 </p>
-<p>Nos modos de grupo e interativos, quando o grupo atual termina de gravar, o prÃ³ximo grupo Ã© ativado e performado. Todas as gravaÃ§Ãµes futuras serÃ£o feitas em modo de grupo. Quando o primeiro grupo termina, o prÃ³ximo pisca atÃ© que seu horÃ¡rio de inÃ­cio chegue.
+<p>Nos modos de grupo e interativos, quando o grupo atual termina de gravar, o próximo grupo é ativado e performado. Todas as gravações futuras serão feitas em modo de grupo. Quando o primeiro grupo termina, o próximo pisca até que seu horário de início chegue.
 </p>
-<p>Interrompa tanto o grupo quanto a operaÃ§Ã£o interativa apertando o botÃ£o de parar (&quot;stop&quot;).
+<p>Interrompa tanto o grupo quanto a operação interativa apertando o botão de parar (&quot;stop&quot;).
 </p>
-<p>Finalmente, hÃ¡ o botÃ£o <img src=".././manual_images_intl/rewind.png" alt="manual_images_intl/rewind"> rebobinar. Tanto para gravaÃ§Ãµes em grupo ou interativas, o botÃ£o de rebobinar faz o grupo atual fechar seu arquivo respectivo. A prÃ³xima operaÃ§Ã£o de gravaÃ§Ã£o no grupo atual apaga o arquivo.
+<p>Finalmente, há o botão <img src=".././manual_images_intl/rewind.png" alt="manual_images_intl/rewind"> rebobinar. Tanto para gravações em grupo ou interativas, o botão de rebobinar faz o grupo atual fechar seu arquivo respectivo. A próxima operação de gravação no grupo atual apaga o arquivo.
 </p>
 <hr size="6">
 <a name="Editando-informa_00e7_00e3o-de-tuner"></a>
-<a name="SEC265"></a>
-<h3 class="subsection"> 19.1.3 Editando informaÃ§Ã£o de tuner </h3>
+<a name="SEC260"></a>
+<h3 class="subsection"> 19.1.3 Editando informação de tuner </h3>
 
-<p>Ã€s vezes no processo de gravaÃ§Ã£o e no processo de configuraÃ§Ã£o, vocÃª precisarÃ¡ definir e selecionar os canais de tuner para tanto gravar quanto para reproduzir para algum lugar. No caso dos drivers de gravaÃ§Ã£o Video4Linux e Buz, canais de tuner definem a fonte. Quando o driver Buz tambÃ©m Ã© usado para reproduÃ§Ã£o, os canais de tuner definem o destino.
+<p>Às vezes no processo de gravação e no processo de configuração, você precisará definir e selecionar os canais de tuner para tanto gravar quanto para reproduzir para algum lugar. No caso dos drivers de gravação Video4Linux e Buz, canais de tuner definem a fonte. Quando o driver Buz também é usado para reprodução, os canais de tuner definem o destino.
 </p>
-<p>Para definir os canais de tuner, pressione o botÃ£o <img src=".././manual_images_intl/channel.png" alt="manual_images_intl/channel"> canal. Isso traz a janela de ediÃ§Ã£o de canais. Nesta janela, vocÃª pode adicionar, editar e escolher canais. Para alguns drivers de vÃ­deo, vocÃª tambÃ©m pode ajustar a qualidade da imagem.
+<p>Para definir os canais de tuner, pressione o botão <img src=".././manual_images_intl/channel.png" alt="manual_images_intl/channel"> canal. Isso traz a janela de edição de canais. Nesta janela, você pode adicionar, editar e escolher canais. Para alguns drivers de vídeo, você também pode ajustar a qualidade da imagem.
 </p>
-<p>A operaÃ§Ã£o <b>adicionar</b> traz uma caixa de ediÃ§Ã£o de canal. O tÃ­tulo do canal aparece na lista de canais. A fonte do canal Ã© a entrada na tabela de freqÃ¼Ãªncia fÃ­sica do tuner correspondente ao tÃ­tulo.
+<p>A operação <b>adicionar</b> traz uma caixa de edição de canal. O título do canal aparece na lista de canais. A fonte do canal é a entrada na tabela de freqüência física do tuner correspondente ao título.
 </p>
-<p>Um bom ajuste no diÃ¡logo de ediÃ§Ã£o de canal ajusta a freqÃ¼Ãªncia fÃ­sica levemente se o driver suporta este tipo de coisa. A tabela de normalizaÃ§Ã£o (&quot;norm&quot;) e freqÃ¼Ãªncia juntas definem qual tabela de freqÃ¼Ãªncia Ã© selecionada para definir as fontes. Se o dispositivo suporta mÃºltiplas entradas, o menu de entradas as seleciona.
+<p>Um bom ajuste no diálogo de edição de canal ajusta a freqüência física levemente se o driver suporta este tipo de coisa. A tabela de normalização (&quot;norm&quot;) e freqüência juntas definem qual tabela de freqüência é selecionada para definir as fontes. Se o dispositivo suporta múltiplas entradas, o menu de entradas as seleciona.
 </p>
-<p>Para escolher os canais, deixe em destaque o canal na lista e pressione <b>mover para cima</b> ou <b>mover para baixo</b> para movÃª-lo.
+<p>Para escolher os canais, deixe em destaque o canal na lista e pressione <b>mover para cima</b> ou <b>mover para baixo</b> para movê-lo.
 </p>
-<p>Uma vez que os canais sejam definidos, o item <b>fonte</b> na janela de gravaÃ§Ã£o pode ser usado para selecionar canais para gravaÃ§Ã£o. A mesma funÃ§Ã£o de seleÃ§Ã£o de canal tambÃ©m existe na janela de monitoramento de gravaÃ§Ã£o. Saiba que as seleÃ§Ãµes de canal na janela de monitoramento de gravaÃ§Ã£o e na janela de gravaÃ§Ã£o sÃ£o armazenados no grupo atual.
+<p>Uma vez que os canais sejam definidos, o item <b>fonte</b> na janela de gravação pode ser usado para selecionar canais para gravação. A mesma função de seleção de canal também existe na janela de monitoramento de gravação. Saiba que as seleções de canal na janela de monitoramento de gravação e na janela de gravação são armazenados no grupo atual.
 </p>
-<p>Para alguns drivers, uma opÃ§Ã£o para <b>Trocar campos</b> pode estar visÃ­vel. Estes drivers nÃ£o captam a ordem dos campos direito todas as vezes sem intervenÃ§Ã£o humana. Use este campo para fazer com que as linhas pares e Ã­mpares sejam gravadas na ordem correta.
+<p>Para alguns drivers, uma opção para <b>Trocar campos</b> pode estar visível. Estes drivers não captam a ordem dos campos direito todas as vezes sem intervenção humana. Use este campo para fazer com que as linhas pares e ímpares sejam gravadas na ordem correta.
 </p>
 <hr size="6">
 <a name="Capturando-usando-dvgrab"></a>
-<a name="SEC266"></a>
+<a name="SEC261"></a>
 <h2 class="section"> 19.2 Capturando usando dvgrab </h2>
 
-<p>dvgrab Ã© uma ferramenta de linha de comando Ã³tima e simples de usar para capturar vÃ­deos a partir de uma cÃ¢mera DV. Quando evocado, automaticamente colocarÃ¡ sua cÃ¢mera em modo de reproduÃ§Ã£o (&quot;play&quot;) e comeÃ§ar a armazenar os vÃ­deos em seu disco rÃ­gido. Os arquivos de vÃ­deo serÃ£o etiquetados sequencialmente, como <tt>`001.avi'</tt>, <tt>`002.avi'</tt> e assim por diante.
+<p>dvgrab é uma ferramenta de linha de comando ótima e simples de usar para capturar vídeos a partir de uma câmera DV. Quando evocado, automaticamente colocará sua câmera em modo de reprodução (&quot;play&quot;) e começar a armazenar os vídeos em seu disco rígido. Os arquivos de vídeo serão etiquetados sequencialmente, como <tt>`001.avi'</tt>, <tt>`002.avi'</tt> e assim por diante.
 </p>
-<p>Para instalar o dvgrab, use o mecanismo de instalaÃ§Ã£o de sua distribuiÃ§Ã£o preferida (apt, rpm, deb, etc) ou dÃª uma olhada na pÃ¡gina da internet do dvgrab.
+<p>Para instalar o dvgrab, use o mecanismo de instalação de sua distribuição preferida (apt, rpm, deb, etc) ou dê uma olhada na página da internet do dvgrab.
 </p>
-<p>Capturando vÃ­deo em quatro passos fÃ¡ceis:
+<p>Capturando vídeo em quatro passos fáceis:
 </p><ol>
-<li> Crie uma pasta onde vocÃª quer que seus vÃ­deos capturados sejam armazenados
+<li> Crie uma pasta onde você quer que seus vídeos capturados sejam armazenados
 </li><li> <code>cd</code> para esta pasta
 </li><li> Digite: <code>dvgrab --buffers 500</code> e <kbd>RETURN</kbd>
-</li><li> Pressione <kbd>CTRL-C</kbd> para parar de capturar o vÃ­deo
+</li><li> Pressione <kbd>CTRL-C</kbd> para parar de capturar o vídeo
 </li></ol>
 
-<p>A opÃ§Ã£o <samp>`--autosplit'</samp> Ã© bastante Ãºtil. Ela dividirÃ¡ as cenas de acordo com o cÃ³digo de tempo. Entretanto, isso sÃ³ funciona quando capturando a partir de uma cÃ¢mera DV. Ele nÃ£o funcionarÃ¡ quando estiver capturando a partir de um conversor analÃ³gico/digital como o Canopus ADVC110.
+<p>A opção <samp>`--autosplit'</samp> é bastante útil. Ela dividirá as cenas de acordo com o código de tempo. Entretanto, isso só funciona quando capturando a partir de uma câmera DV. Ele não funcionará quando estiver capturando a partir de um conversor analógico/digital como o Canopus ADVC110.
 </p>
-<p>Leia o manual do dvgrab para obter mais informaÃ§Ãµes sobre as caracterÃ­sticas do programa.
+<p>Leia o manual do dvgrab para obter mais informações sobre as características do programa.
 </p>
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC261" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_20.html#SEC267" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC256" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_20.html#SEC262" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -198,7 +198,7 @@ Possui significado apenas quando o hardware de captura possui mÃºltiplas fontes.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

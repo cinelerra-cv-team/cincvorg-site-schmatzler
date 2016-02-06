@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -11,10 +11,10 @@ Send bugs and suggestions to <users@texi2html.cvshome.org>
 
 -->
 <head>
-<title>Manual do Cinelerra CV: 23. AutoraÃ§Ã£o de plugin</title>
+<title>Manual do Cinelerra CV: 23. Autoração de plugin</title>
 
-<meta name="description" content="Manual do Cinelerra CV: 23. AutoraÃ§Ã£o de plugin">
-<meta name="keywords" content="Manual do Cinelerra CV: 23. AutoraÃ§Ã£o de plugin">
+<meta name="description" content="Manual do Cinelerra CV: 23. Autoração de plugin">
+<meta name="keywords" content="Manual do Cinelerra CV: 23. Autoração de plugin">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="texi2html 1.76">
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_22.html#SEC320" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_24.html#SEC351" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_22.html#SEC312" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_24.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,109 +56,109 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Autora_00e7_00e3o-de-plugin"></a>
-<a name="SEC331"></a>
-<h1 class="chapter"> 23. AutoraÃ§Ã£o de plugin </h1>
+<a name="SEC323"></a>
+<h1 class="chapter"> 23. Autoração de plugin </h1>
 
-<p>A API de plugin no Cinelerra data de 1997, antes de o LADSPA e antes de o VST se tornarem populares. Ela Ã© fundamentalmente a mesma que era em 1997, com modificaÃ§Ãµes menores para suportar quadros-chave e resposta de interface GUI. O GUI nÃ£o Ã© abstraÃ­do do programador. Isso permite ao programador usar a ferramenta que quiser e permite mais flexibilidade na aparÃªncia, mas o custo Ã© mais alto.
+<p>A API de plugin no Cinelerra data de 1997, antes de o LADSPA e antes de o VST se tornarem populares. Ela é fundamentalmente a mesma que era em 1997, com modificações menores para suportar quadros-chave e resposta de interface GUI. O GUI não é abstraído do programador. Isso permite ao programador usar a ferramenta que quiser e permite mais flexibilidade na aparência, mas o custo é mais alto.
 </p>
-<p>HÃ¡ vÃ¡rios tipos de plugins, cada um com um procedimento comum de implementaÃ§Ã£o e mudanÃ§as especÃ­ficas para aquele tipo particular. O jeito mais fÃ¡cil de implementar um plugin Ã© pegar o plugin mais simples existente no grupo e renomear os sÃ­mbolos.
+<p>Há vários tipos de plugins, cada um com um procedimento comum de implementação e mudanças específicas para aquele tipo particular. O jeito mais fácil de implementar um plugin é pegar o plugin mais simples existente no grupo e renomear os símbolos.
 </p>
 
 <hr size="6">
 <a name="Introduzindo-o-m_00e9todo-pull"></a>
-<a name="SEC332"></a>
-<h2 class="section"> 23.1 Introduzindo o mÃ©todo pull </h2>
+<a name="SEC324"></a>
+<h2 class="section"> 23.1 Introduzindo o método pull </h2>
 
-<p>Originalmente, os plugins eram desenhados com o mÃ©todo de empurrar (&quot;push&quot;). O mÃ©todo push Ã© intuitivo e simples. Uma fonte empurra (&quot;pushes&quot;) a informaÃ§Ã£o para um plugin, o plugin faz operaÃ§Ãµes matemÃ¡ticas nela e o plugin a empurra para um destino. Por 6 anos esta era a forma que todos os plugins de tempo-real eram desenhados internamente, mas ele nÃ£o te permitia reduzir a taxa de reproduÃ§Ã£o em tempo-real. Embora os plugins ainda possam ser desenhados como se estivessem empurrando a informaÃ§Ã£o, este nÃ£o Ã© mais o jeito que eles sÃ£o processados internamente.
+<p>Originalmente, os plugins eram desenhados com o método de empurrar (&quot;push&quot;). O método push é intuitivo e simples. Uma fonte empurra (&quot;pushes&quot;) a informação para um plugin, o plugin faz operações matemáticas nela e o plugin a empurra para um destino. Por 6 anos esta era a forma que todos os plugins de tempo-real eram desenhados internamente, mas ele não te permitia reduzir a taxa de reprodução em tempo-real. Embora os plugins ainda possam ser desenhados como se estivessem empurrando a informação, este não é mais o jeito que eles são processados internamente.
 </p>
-<p>A Ãºltima evoluÃ§Ã£o no desenho de plugins do Cinelerra Ã© o mÃ©todo de puxar (&quot;pull&quot;). A linha de renderizaÃ§Ã£o se inicia na saÃ­da final e os passos finais na linha de renderizaÃ§Ã£o sÃ£o os de ler a informaÃ§Ã£o do disco. Cada passo na cadeia de renderizaÃ§Ã£o envolve pedir informaÃ§Ãµes do passo anterior. Quando a cadeia de renderizaÃ§Ã£o eventualmente requere informaÃ§Ã£o de uma cadeia de plugins, cada plugin requere informaÃ§Ãµes do plugin que o antecede.
+<p>A última evolução no desenho de plugins do Cinelerra é o método de puxar (&quot;pull&quot;). A linha de renderização se inicia na saída final e os passos finais na linha de renderização são os de ler a informação do disco. Cada passo na cadeia de renderização envolve pedir informações do passo anterior. Quando a cadeia de renderização eventualmente requere informação de uma cadeia de plugins, cada plugin requere informações do plugin que o antecede.
 </p>
-<p>Isso Ã© menos intuitivo do que o mÃ©todo push, mas Ã© mais poderoso. Plugins tempo-real escritos usando o mÃ©todo pull podem mudar a razÃ£o na qual a informaÃ§Ã£o Ã© apresentada ao espectador e a direÃ§Ã£o da reproduÃ§Ã£o. O mÃ©todo pull permite que os plugins tragam informaÃ§Ãµes para eles a uma taxa mais alta do que eles a enviam para fora.
+<p>Isso é menos intuitivo do que o método push, mas é mais poderoso. Plugins tempo-real escritos usando o método pull podem mudar a razão na qual a informação é apresentada ao espectador e a direção da reprodução. O método pull permite que os plugins tragam informações para eles a uma taxa mais alta do que eles a enviam para fora.
 </p>
-<p>Para conseguir o poder de independÃªncia de taxa, o mÃ©todo pull requere que os plugins saibam mais sobre a informaÃ§Ã£o do que precisavam sob o mÃ©todo push. Plugins precisam saber a qual taxa o projeto estÃ¡, a qual taxa sua saÃ­da supostamente deve ser e a qual taxa sua entrada supostamente deve estar. Essas taxas diferentes de informaÃ§Ã£o precisam estar correlacionadas para que um plugin se configure devidamente.
+<p>Para conseguir o poder de independência de taxa, o método pull requere que os plugins saibam mais sobre a informação do que precisavam sob o método push. Plugins precisam saber a qual taxa o projeto está, a qual taxa sua saída supostamente deve ser e a qual taxa sua entrada supostamente deve estar. Essas taxas diferentes de informação precisam estar correlacionadas para que um plugin se configure devidamente.
 </p>
-<p>Quadros-chave para um plugin sÃ£o armazenados relativos Ã  taxa de quadros do projeto. Buscas de informaÃ§Ãµes de um plugin para a posiÃ§Ã£o de reproduÃ§Ã£o atual sÃ£o dadas relativas Ã  taxa de quadros do projeto. Se foi requerido ao plugin que sua saÃ­da esteja a duas vezes a taxa de quadros do projeto, as posiÃ§Ãµes precisam ser convertidas para a taxa do projeto para que os quadros-chave se adequem. Duas classes de taxas de informaÃ§Ã£o foram criadas para lidar com este problema.
+<p>Quadros-chave para um plugin são armazenados relativos à taxa de quadros do projeto. Buscas de informações de um plugin para a posição de reprodução atual são dadas relativas à taxa de quadros do projeto. Se foi requerido ao plugin que sua saída esteja a duas vezes a taxa de quadros do projeto, as posições precisam ser convertidas para a taxa do projeto para que os quadros-chave se adequem. Duas classes de taxas de informação foram criadas para lidar com este problema.
 </p>
-<p>ConversÃµes de taxas sÃ£o feitas em termos da <b>taxa do projeto</b> e da <b>taxa requisitada</b>. A taxa do projeto Ã© idÃªntica para todos os plugins. Ela Ã© determinada pela janela de <b>configuraÃ§Ãµes-&gt;formato</b>. A taxa requisitada Ã© determinada pelo plugin mais abaixo (&quot;downstream&quot;) requisitando informaÃ§Ãµes do plugin atual. A taxa requisitada Ã© arbitrÃ¡ria. Exatamente como usar essas taxas estÃ¡ descrito abaixo.
+<p>Conversões de taxas são feitas em termos da <b>taxa do projeto</b> e da <b>taxa requisitada</b>. A taxa do projeto é idêntica para todos os plugins. Ela é determinada pela janela de <b>configurações-&gt;formato</b>. A taxa requisitada é determinada pelo plugin mais abaixo (&quot;downstream&quot;) requisitando informações do plugin atual. A taxa requisitada é arbitrária. Exatamente como usar essas taxas está descrito abaixo.
 </p>
 <hr size="6">
 <a name="Fun_00e7_00f5es-comuns-de-plugin"></a>
-<a name="SEC333"></a>
-<h2 class="section"> 23.2 FunÃ§Ãµes comuns de plugin </h2>
+<a name="SEC325"></a>
+<h2 class="section"> 23.2 Funções comuns de plugin </h2>
 
-<p>Todos os plugins provÃªm de um derivativo do PluginClient. Estes derivatidos do PluginClient implementam a maioria dos mÃ©todos requeridos no PluginClient, mas usuÃ¡rios ainda definem mÃ©todos para o PluginClient. Os mÃ©todos mais comumente usados sÃ£o prÃ©-definidos em macros para reduzir a digitaÃ§Ã£o mas ainda assim permitir flexibilidade.
+<p>Todos os plugins provêm de um derivativo do PluginClient. Estes derivatidos do PluginClient implementam a maioria dos métodos requeridos no PluginClient, mas usuários ainda definem métodos para o PluginClient. Os métodos mais comumente usados são pré-definidos em macros para reduzir a digitação mas ainda assim permitir flexibilidade.
 </p>
-<p>Os arquivos que eles incluem dependem do tipo de plugin. Plugins de Ã¡udio incluem <tt>`pluginaclient.h'</tt> e plugins de vÃ­deo incluem <tt>`pluginvclient.h'</tt>. Eles sÃ£o herdeiros do <b>PluginAClient</b> e do <b>PluginVClient</b> respectivamente.
+<p>Os arquivos que eles incluem dependem do tipo de plugin. Plugins de áudio incluem <tt>`pluginaclient.h'</tt> e plugins de vídeo incluem <tt>`pluginvclient.h'</tt>. Eles são herdeiros do <b>PluginAClient</b> e do <b>PluginVClient</b> respectivamente.
 </p>
-<p>O Cinelerra faz todos os plugins passarem por pelo menos duas instÃ¢ncias quando eles sÃ£o usados em um vÃ­deo. Uma instÃ¢ncia Ã© o GUI. A outra Ã© o processador de sinal. A entrada do usuÃ¡rio, por meio de uma seqÃ¼Ãªncia complicada, Ã© propagada a partir da instÃ¢ncia GUI para a instÃ¢ncia do processador de sinal. Se o processador de sinal quiser alterar o GUI, ele propaga a informaÃ§Ã£o de volta ao GUI. HÃ¡ funÃ§Ãµes de ferramentas para se fazer isso.
+<p>O Cinelerra faz todos os plugins passarem por pelo menos duas instâncias quando eles são usados em um vídeo. Uma instância é o GUI. A outra é o processador de sinal. A entrada do usuário, por meio de uma seqüência complicada, é propagada a partir da instância GUI para a instância do processador de sinal. Se o processador de sinal quiser alterar o GUI, ele propaga a informação de volta ao GUI. Há funções de ferramentas para se fazer isso.
 </p>
-<p>Todos os plugins definem pelo menos trÃªs objetos:
+<p>Todos os plugins definem pelo menos três objetos:
 </p>
 <ul>
 <li> <b>Objeto de processamento</b> <br>
-ContÃ©m apontadores para todos os outros objetos e faz o processamento de sinal. Este objeto contÃ©m um nÃºmero de buscas de informaÃ§Ãµes para se identificar e Ã© o objeto que vocÃª registra para registrar o plugin.
-</li><li> <b>Objeto da interface de usuÃ¡rio</b> <br>
-Ã‰ definido de acordo com a discriÃ§Ã£o do programador. Ele pode ou usar uma ferramenta do Cinelerra ou outra. Ele mostra informaÃ§Ãµes na tela e coleta parÃ¢metros do usuÃ¡rio. <br>
-Usando as ferramentas do Cinelerra, o Ãºnico objeto de interface de usuÃ¡rio com que o desenvolvedor precisa se preocupar Ã© a Janela. A janela possui apontadores para um nÃºmero de widgets, alguns mÃ©todos de inicializaÃ§Ã£o e um apontador de volta ao objeto de processamento do plugin. Esta documentaÃ§Ã£o se refere ao uso das ferramentas do Cinelerra. <br>
-Dependendo das ferramentas de interface do usuÃ¡rio, um assunto de interface de usuÃ¡rio pode ser criado para rodar a interface de usuÃ¡rio de forma assÃ­ncrona de todo o resto. Sincronizar a interface de usuÃ¡rio a mudanÃ§as na configuraÃ§Ã£o do plugin Ã© o aspecto mais complicado do plugin, entÃ£o o assunto na interface de usuÃ¡rio e e o objeto serÃ£o pesadamente spuortados por macros se vocÃª usa as ferramentas do Cinelerra.
-</li><li> <b>Objeto de configuraÃ§Ã£o</b> <br>
-Armazena os parÃ¢metros de usuÃ¡rio e sempre requere interpolaÃ§Ã£o, cÃ³pia e funÃ§Ãµes de comparaÃ§Ã£o. Macros para o cliente de plugin automaticamente chamam mÃ©todos de configuraÃ§Ã£o para interpolar quadros-chave.
+Contém apontadores para todos os outros objetos e faz o processamento de sinal. Este objeto contém um número de buscas de informações para se identificar e é o objeto que você registra para registrar o plugin.
+</li><li> <b>Objeto da interface de usuário</b> <br>
+É definido de acordo com a discrição do programador. Ele pode ou usar uma ferramenta do Cinelerra ou outra. Ele mostra informações na tela e coleta parâmetros do usuário. <br>
+Usando as ferramentas do Cinelerra, o único objeto de interface de usuário com que o desenvolvedor precisa se preocupar é a Janela. A janela possui apontadores para um número de widgets, alguns métodos de inicialização e um apontador de volta ao objeto de processamento do plugin. Esta documentação se refere ao uso das ferramentas do Cinelerra. <br>
+Dependendo das ferramentas de interface do usuário, um assunto de interface de usuário pode ser criado para rodar a interface de usuário de forma assíncrona de todo o resto. Sincronizar a interface de usuário a mudanças na configuração do plugin é o aspecto mais complicado do plugin, então o assunto na interface de usuário e e o objeto serão pesadamente spuortados por macros se você usa as ferramentas do Cinelerra.
+</li><li> <b>Objeto de configuração</b> <br>
+Armazena os parâmetros de usuário e sempre requere interpolação, cópia e funções de comparação. Macros para o cliente de plugin automaticamente chamam métodos de configuração para interpolar quadros-chave.
 </li></ul>
 
 
 <hr size="6">
 <a name="O-objeto-de-processamento"></a>
-<a name="SEC334"></a>
+<a name="SEC326"></a>
 <h3 class="subsection"> 23.2.1 O objeto de processamento </h3>
 
 <p>Carregue um plugin simples como o Ganho para ver como esse objeto se parece. O objeto de processamento deve ser herdado do derivativo PluginClient desejado. Este construtor deve levar um argumento do PluginServer. <br>
 <code>MyPlugin(PluginServer *server);</code>
 </p>
-<p>Na implementaÃ§Ã£o, o plugin deve conter uma linha de registro com o nome do objeto de processamento, como <br>
+<p>Na implementação, o plugin deve conter uma linha de registro com o nome do objeto de processamento, como <br>
 <code>REGISTER_PLUGIN(MyPlugin)</code>
 </p>
 <p>O construtor deve conter <br>
 <code>PLUGIN_CONSTRUCTOR_MACRO</code> <br>
-para inicializar as variÃ¡veis mais comuns.
+para inicializar as variáveis mais comuns.
 </p>
 <p>O objeto de processamento deve ter um destrutor contendo <br>
 <code>PLUGIN_DESTRUCTOR_MACRO</code> <br>
-para apagar as variÃ¡veis mais comuns.
+para apagar as variáveis mais comuns.
 </p>
-<p>Outra funÃ§Ã£o que Ã© Ãºtil mas nÃ£o obrigatÃ³ria Ã© <br>
+<p>Outra função que é útil mas não obrigatória é <br>
 <code>int is_multichannel();</code> <br>
-Ela deve retornar 1 se uma instÃ¢ncia do plugin suporta mÃºltiplas trilhas simultaneamente ou 0 se uma instÃ¢ncia do plugin suporta apenas uma trilha. O padrÃ£o Ã© 0 se ela estiver omitida.
+Ela deve retornar 1 se uma instância do plugin suporta múltiplas trilhas simultaneamente ou 0 se uma instância do plugin suporta apenas uma trilha. O padrão é 0 se ela estiver omitida.
 </p>
-<p>Plugins multi-canais em sua funÃ§Ã£o de processamento devem se referir a uma funÃ§Ã£o chamada <b>PluginClient::get_total_buffers()</b> para determinar o nÃºmero de canais.
+<p>Plugins multi-canais em sua função de processamento devem se referir a uma função chamada <b>PluginClient::get_total_buffers()</b> para determinar o número de canais.
 </p>
-<p>Para simplificar a implementaÃ§Ã£o de plugins tempo-real, um macro para membros comumente usados foi criado para o cabeÃ§alho de classe (&quot;class header&quot;), levando o objeto de configuraÃ§Ã£o e o assunto (&quot;thread&quot;) do objeto da interface de usuÃ¡rio como argumentos. As definiÃ§Ãµes macro se aplicam principalmente a plugins tempo-real e nÃ£o sÃ£o Ãºteis em plugins nÃ£o-tempo-real. Felizmente, plugins nÃ£o-tempo-real sÃ£o mais simples.
+<p>Para simplificar a implementação de plugins tempo-real, um macro para membros comumente usados foi criado para o cabeçalho de classe (&quot;class header&quot;), levando o objeto de configuração e o assunto (&quot;thread&quot;) do objeto da interface de usuário como argumentos. As definições macro se aplicam principalmente a plugins tempo-real e não são úteis em plugins não-tempo-real. Felizmente, plugins não-tempo-real são mais simples.
 </p>
 <p><code>PLUGIN_CLASS_MEMBERS(config_name, thread_name)</code> <br>
 </p>
-<p>Os membros comumente usados em PLUGIN_CLASS_MEMBERS estÃ£o descritos abaixo.
+<p>Os membros comumente usados em PLUGIN_CLASS_MEMBERS estão descritos abaixo.
 </p>
 <ul>
 <li> <b>int load_configuration();</b> <br>
-Carrega a configuraÃ§Ã£o baseada nos quadros-chave Ã  volta e posiÃ§Ã£o atual. <br>
-A definiÃ§Ã£o de classe para load_configuration deve conter <br>
+Carrega a configuração baseada nos quadros-chave à volta e posição atual. <br>
+A definição de classe para load_configuration deve conter <br>
 <code>LOAD_CONFIGURATION_MACRO(plugin_class, config_class)</code>
 <br>
-para implementar o comportamento padrÃ£o para load_configuration. Isso armazena qualquer configuraÃ§Ã£o atual que esteja dentro do objeto de configuraÃ§Ã£o do plugin e retorna 1 se a nova configuraÃ§Ã£o diferir da configuraÃ§Ã£o prÃ©via. O valor de retorno do load_configuration Ã© usado por outra funÃ§Ã£o comumente usada, update_gui, para determinada se o GUI realmente precisa ser atualizado. <br>
-O objeto de configuraÃ§Ã£o do plugin Ã© sempre chamado <b>config</b> dentro de PLUGIN_CLASS_MEMBERS.
+para implementar o comportamento padrão para load_configuration. Isso armazena qualquer configuração atual que esteja dentro do objeto de configuração do plugin e retorna 1 se a nova configuração diferir da configuração prévia. O valor de retorno do load_configuration é usado por outra função comumente usada, update_gui, para determinada se o GUI realmente precisa ser atualizado. <br>
+O objeto de configuração do plugin é sempre chamado <b>config</b> dentro de PLUGIN_CLASS_MEMBERS.
 
 </li><li> <b>VFrame* new_picon();</b> <br>
-Cria um Ã­cone (&quot;picon&quot;) para ser exibido na janela de recursos. Use <br>
+Cria um ícone (&quot;picon&quot;) para ser exibido na janela de recursos. Use <br>
 <code>#include &quot;picon_png.h&quot;</code> <br>
 <code>NEW_PICON_MACRO(plugin_class)</code> <br>
-para implementar new_picon. AlÃ©m disso, o usuÃ¡rio deveria criar um arquivo de cabeÃ§alho <tt>`picon_png.h'</tt> de uma imagem PNG usando <code>pngtoh</code>.
-<code>pngtoh</code> estÃ¡ compilado na pasta <tt>`guicast/ARCH'</tt>. <br>
+para implementar new_picon. Além disso, o usuário deveria criar um arquivo de cabeçalho <tt>`picon_png.h'</tt> de uma imagem PNG usando <code>pngtoh</code>.
+<code>pngtoh</code> está compilado na pasta <tt>`guicast/ARCH'</tt>. <br>
 A imagem fonte PNG deve ser chamada <tt>`picon.png'</tt> e pode ser de qualquer formato suportado pelo PNG.
 
 </li><li> <b>char* plugin_title();</b> <br>
-Retorna uma cadeia de texto identificando o plugin na janela de recursos. A cadeia deve ser Ãºnica.
+Retorna uma cadeia de texto identificando o plugin na janela de recursos. A cadeia deve ser única.
 
 </li><li> <b>void update_gui();</b> <br>
-Deve primeiro carregar a configuraÃ§Ã£o, testar por um retorno de 1 e entÃ£o redesenhar o GUI com os novos parÃ¢metros. Todos os plugins usando GuiCast possuem um formato como
+Deve primeiro carregar a configuração, testar por um retorno de 1 e então redesenhar o GUI com os novos parâmetros. Todos os plugins usando GuiCast possuem um formato como
 <pre class="verbatim">    void MyPlugin::update_gui()
     {
         if(thread)
@@ -171,51 +171,51 @@ Deve primeiro carregar a configuraÃ§Ã£o, testar por um retorno de 1 e entÃ£o red
         }
         }
     }
-</pre><p>para suportarem concorrÃªncia e condiÃ§Ãµes sem GUI.
+</pre><p>para suportarem concorrência e condições sem GUI.
 </p>
 </li><li> <b>int show_gui();</b> <br>
-Cria uma instÃ¢ncia de GUI e muda o plugin para o modo GUI. Isso Ã© implementado com <br>
+Cria uma instância de GUI e muda o plugin para o modo GUI. Isso é implementado com <br>
 <code>SHOW_GUI_MACRO(plugin_class, thread_class)</code>
 
 </li><li> <b>int set_string();</b> <br>
-Muda o tÃ­tulo da janela GUI para uma certa cadeia de caracteres. Isso Ã© implementado com <br>
+Muda o título da janela GUI para uma certa cadeia de caracteres. Isso é implementado com <br>
 <code>SET_STRING_MACRO(plugin_class)</code>
 
 </li><li> <b>void raise_window();</b> <br>
-Eleva a janela GUI para o topo da pilha. Isso Ã© implementado com <br>
+Eleva a janela GUI para o topo da pilha. Isso é implementado com <br>
 <code>RAISE_WINDOW_MACRO(plugin_class)</code>
 </li></ul>
 
-<p>FunÃ§Ãµes importantes que o objeto de processamento deve definir sÃ£o as funÃ§Ãµes que carregam e salvam informaÃ§Ãµes de configuraÃ§Ã£o dos quadros-chave. Essas funÃ§Ãµes sÃ£o chamadas pelos macros entÃ£o tudo o que vocÃª precisa se preocupar Ã© em acessar a informaÃ§Ã£o do quadro-chave. <br>
+<p>Funções importantes que o objeto de processamento deve definir são as funções que carregam e salvam informações de configuração dos quadros-chave. Essas funções são chamadas pelos macros então tudo o que você precisa se preocupar é em acessar a informação do quadro-chave. <br>
 <code>void save_data(KeyFrame *keyframe);</code> <br>
 <code>void read_data(KeyFrame *keyframe);</code>
 </p>
-<p>As funÃ§Ãµes de leitura de informaÃ§Ã£o sÃ£o usadas apenas nos plugins tempo-real. As funÃ§Ãµes de leitura de informaÃ§Ãµes traduzem (&quot;translate&quot;) a configuraÃ§Ã£o do plugin entre o argumento do KeyFrame e o objeto de configuraÃ§Ã£o para o plugin. Os quadros-chave sÃ£o armazenados na linha do tempo e podem mudar para cada projeto.
+<p>As funções de leitura de informação são usadas apenas nos plugins tempo-real. As funções de leitura de informações traduzem (&quot;translate&quot;) a configuração do plugin entre o argumento do KeyFrame e o objeto de configuração para o plugin. Os quadros-chave são armazenados na linha do tempo e podem mudar para cada projeto.
 </p>
-<p>Use um objeto chamado <b>FileXML</b> para fazer toda a readuÃ§Ã£o (&quot;translation&quot;) e alguns comandos especÃ­ficos para obter as informaÃ§Ãµes do argumento do KeyFrame. Veja algum plugin existente para ver o uso de KeyFrame e FileXML. <br>
+<p>Use um objeto chamado <b>FileXML</b> para fazer toda a readução (&quot;translation&quot;) e alguns comandos específicos para obter as informações do argumento do KeyFrame. Veja algum plugin existente para ver o uso de KeyFrame e FileXML. <br>
 <code>int load_defaults();</code> <br>
 <code>int save_defaults();</code>
 </p>
-<p>As funÃ§Ãµes de carregar padrÃµes sÃ£o usadas em plugins tempo-real e plugins nÃ£o-tempo-real. As funÃ§Ãµes de carregar padrÃµes traduzem (&quot;translate&quot;) as configuraÃ§Ãµes de plugin entre um objeto BC_Hash e a configuraÃ§Ã£o do plugin. O objeto BC_Hash armazena configuraÃ§Ãµes em um arquivo discreto no disco para cada plugin, mas nÃ£o isola configuraÃ§Ãµes diferentes para projetos diferentes.
+<p>As funções de carregar padrões são usadas em plugins tempo-real e plugins não-tempo-real. As funções de carregar padrões traduzem (&quot;translate&quot;) as configurações de plugin entre um objeto BC_Hash e a configuração do plugin. O objeto BC_Hash armazena configurações em um arquivo discreto no disco para cada plugin, mas não isola configurações diferentes para projetos diferentes.
 </p>
-<p>A funÃ§Ã£o sobrescrevendo o <b>load_defaults</b> tambÃ©m necessita criar o objeto BC_Hash. Veja um plugin existente para ver o uso do BC_Hash.
+<p>A função sobrescrevendo o <b>load_defaults</b> também necessita criar o objeto BC_Hash. Veja um plugin existente para ver o uso do BC_Hash.
 </p>
-<p>Outros membros padrÃ£o podem ser definidos no objeto de processamento, dependendo do tipo de plugin.
+<p>Outros membros padrão podem ser definidos no objeto de processamento, dependendo do tipo de plugin.
 </p>
 <hr size="6">
 <a name="O-objeto-de-configura_00e7_00e3o"></a>
-<a name="SEC335"></a>
-<h3 class="subsection"> 23.2.2 O objeto de configuraÃ§Ã£o </h3>
+<a name="SEC327"></a>
+<h3 class="subsection"> 23.2.2 O objeto de configuração </h3>
 
-<p>O objeto de configuraÃ§Ã£o Ã© crÃ­tico para atualizaÃ§Ãµes de GUI, processamento de sinal e configuraÃ§Ãµes padrÃ£o em plugins tempo-real. Assegure-se que ele nÃ£o seja usado em plugins nÃ£o-tempo-real. O objeto de configuraÃ§Ã£o nÃ£o Ã© herdado de nada e nÃ£o possui dependÃªncias. Ele Ã© simplesmente uma classe (&quot;class&quot;) contendo trÃªs funÃ§Ãµes e variÃ¡veis especÃ­ficas aos parÃ¢metros dos plugins.
+<p>O objeto de configuração é crítico para atualizações de GUI, processamento de sinal e configurações padrão em plugins tempo-real. Assegure-se que ele não seja usado em plugins não-tempo-real. O objeto de configuração não é herdado de nada e não possui dependências. Ele é simplesmente uma classe (&quot;class&quot;) contendo três funções e variáveis específicas aos parâmetros dos plugins.
 </p>
-<p>Normalmente, o objeto de configuraÃ§Ã£o comeÃ§a com o nome do plugin seguido por Config.
+<p>Normalmente, o objeto de configuração começa com o nome do plugin seguido por Config.
 </p><pre class="verbatim">    class MyPluginConfig
     {
     public:
         MyPluginConfig();
 </pre>
-<p>Seguindo o nome da classe de configuraÃ§Ã£o, colocamos as trÃªs funÃ§Ãµes requeridas e as variÃ¡veis de configuraÃ§Ã£o.
+<p>Seguindo o nome da classe de configuração, colocamos as três funções requeridas e as variáveis de configuração.
 </p><pre class="verbatim">        int equivalent(MyPluginConfig &amp;that);
         void copy_from(MyPluginConfig &amp;that);
         void interpolate(MyPluginConfig &amp;prev,
@@ -228,11 +228,11 @@ Eleva a janela GUI para o topo da pilha. Isso Ã© implementado com <br>
         int parameter3;
     };
 </pre>
-<p>Agora vocÃª deve definir as trÃªs funÃ§Ãµes. <b>Equivalent</b> Ã© chamado pelo LOAD_CONFIGURATION_MACRO para determinar se os parÃ¢metros de configuraÃ§Ã£o local sÃ£o idÃªnticos aos parÃ¢metros de configuraÃ§Ã£o no argumento. Se o equivalent retornar 0, o LOAD_CONFIGURATION_MACRO faz com que o GUI seja redesenhado. Se o equivalent retornar 1, o LOAD_CONFIGURATION_MACRO nÃ£o redesenha o GUI.
+<p>Agora você deve definir as três funções. <b>Equivalent</b> é chamado pelo LOAD_CONFIGURATION_MACRO para determinar se os parâmetros de configuração local são idênticos aos parâmetros de configuração no argumento. Se o equivalent retornar 0, o LOAD_CONFIGURATION_MACRO faz com que o GUI seja redesenhado. Se o equivalent retornar 1, o LOAD_CONFIGURATION_MACRO não redesenha o GUI.
 </p>
-<p>EntÃ£o, hÃ¡ o <b>copy_from</b> que transfere os valores de configuraÃ§Ã£o do argumento para as variÃ¡veis locais. Isso Ã© novamente usado em LOAD_CONFIGURATION_MACRO para armazenar configuraÃ§Ãµes nos temporÃ¡rios. Uma vez que o LOAD_CONFIGURATION_MACRO tenha replicado a configuraÃ§Ã£o, ele carrega uma segunda configuraÃ§Ã£o. EntÃ£o, ele interpola as duas configuraÃ§Ãµes para obter a configuraÃ§Ã£o atual. A funÃ§Ã£o de interpolaÃ§Ã£o faz a interpolaÃ§Ã£o e armazena o resultado nas variÃ¡veis locais.
+<p>Então, há o <b>copy_from</b> que transfere os valores de configuração do argumento para as variáveis locais. Isso é novamente usado em LOAD_CONFIGURATION_MACRO para armazenar configurações nos temporários. Uma vez que o LOAD_CONFIGURATION_MACRO tenha replicado a configuração, ele carrega uma segunda configuração. Então, ele interpola as duas configurações para obter a configuração atual. A função de interpolação faz a interpolação e armazena o resultado nas variáveis locais.
 </p>
-<p>Normalmente, a funÃ§Ã£o de interpolaÃ§Ã£o calcula uma fraÃ§Ã£o prÃ©via e prÃ³xima, usando os argumentos.
+<p>Normalmente, a função de interpolação calcula uma fração prévia e próxima, usando os argumentos.
 </p><pre class="verbatim">    void MyPluginConfig::interpolate(MyPluginConfig &amp;prev,
         MyPluginConfig &amp;next,
         int64_t prev_position,
@@ -246,7 +246,7 @@ Eleva a janela GUI para o topo da pilha. Isso Ã© implementado com <br>
         (double)(next_position - current_position) /
         (next_position - prev_position);
 </pre>
-<p>EntÃ£o as fraÃ§Ãµes sÃ£o aplicadas Ã s variÃ¡veis de configuraÃ§Ã£o prÃ©vias e seguintes para chegar-se aos valores atuais.
+<p>Então as frações são aplicadas às variáveis de configuração prévias e seguintes para chegar-se aos valores atuais.
 </p><pre class="verbatim">        this-&gt;parameter1 =
         (float)(prev.parameter1 * prev_scale
         + next.parameter1 * next_scale);
@@ -258,28 +258,28 @@ Eleva a janela GUI para o topo da pilha. Isso Ã© implementado com <br>
         + next.parameter3 * next_scale);
     }
 </pre>
-<p>Alternativamente, vocÃª pode copiar os valores do argumento de configuraÃ§Ã£o prÃ©vio se nenhuma interpolaÃ§Ã£o for desejada.
+<p>Alternativamente, você pode copiar os valores do argumento de configuração prévio se nenhuma interpolação for desejada.
 </p>
-<p>Este uso do objeto de configuraÃ§Ã£o Ã© o mesmo em plugins de Ã¡udio e de vÃ­deo. Na reproduÃ§Ã£o do vÃ­deo, a funÃ§Ã£o de interpolaÃ§Ã£o Ã© chamada para cada quadro, resultando em uma interpolaÃ§Ã£o suave. Na reproduÃ§Ã£o de Ã¡udio, a funÃ§Ã£o de interpolaÃ§Ã£o Ã© chamada apenas uma vez para cada fragmento de console e uma vez a cada vez que o ponto de inserÃ§Ã£o se move. Isso Ã© bom o suficiente para atualizar o GUI enquanto se seleciona regiÃµes na linha do tempo, mas pode nÃ£o ser preciso o suficiente para uma renderizaÃ§Ã£o realmente suave do efeito.
+<p>Este uso do objeto de configuração é o mesmo em plugins de áudio e de vídeo. Na reprodução do vídeo, a função de interpolação é chamada para cada quadro, resultando em uma interpolação suave. Na reprodução de áudio, a função de interpolação é chamada apenas uma vez para cada fragmento de console e uma vez a cada vez que o ponto de inserção se move. Isso é bom o suficiente para atualizar o GUI enquanto se seleciona regiões na linha do tempo, mas pode não ser preciso o suficiente para uma renderização realmente suave do efeito.
 </p>
-<p>Para uma renderizaÃ§Ã£o realmente suave do Ã¡udio, vocÃª ainda pode usar load_configuration quando atualizando o GUI. Para process_buffer, entretanto, ignore o load_configuration e escreva sua prÃ³pria rotina de interpolaÃ§Ã£o que carrega todos os quadros-chave em um fragmento de console e interpola cada amostra. Isso seria muito lento e difÃ­cil de se fazer um debug, resultando em uma melhoria que pode nÃ£o ser audÃ­vel. PorÃ©m, claro, cada paÃ­s tem seus prÃ³prios malucos.
+<p>Para uma renderização realmente suave do áudio, você ainda pode usar load_configuration quando atualizando o GUI. Para process_buffer, entretanto, ignore o load_configuration e escreva sua própria rotina de interpolação que carrega todos os quadros-chave em um fragmento de console e interpola cada amostra. Isso seria muito lento e difícil de se fazer um debug, resultando em uma melhoria que pode não ser audível. Porém, claro, cada país tem seus próprios malucos.
 </p>
-<p>Um modo mais fÃ¡cil de se conseguir uma interpolaÃ§Ã£o mais suave Ã© reduzir o fragmento de console para 1 sample. Isso teria que ser renderizado e reproduzido com o fragmento de console novamente acima de 2048, claro. Os drivers de Ã¡udio GNU/Linux nÃ£o conseguem reproduzir fragmentos de 1 sample.
+<p>Um modo mais fácil de se conseguir uma interpolação mais suave é reduzir o fragmento de console para 1 sample. Isso teria que ser renderizado e reproduzido com o fragmento de console novamente acima de 2048, claro. Os drivers de áudio GNU/Linux não conseguem reproduzir fragmentos de 1 sample.
 </p>
 <hr size="6">
 <a name="O-objeto-da-interface-de-usu_00e1rio"></a>
-<a name="SEC336"></a>
-<h3 class="subsection"> 23.2.3 O objeto da interface de usuÃ¡rio </h3>
+<a name="SEC328"></a>
+<h3 class="subsection"> 23.2.3 O objeto da interface de usuário </h3>
 
-<p>O objeto da interface de usuÃ¡rio em seu mÃ­nimo consiste em um apontador para uma janela e apontadores para todos as funÃ§Ãµes (&quot;widgets&quot;) na janela. Usando as ferramentas do Cinelerra, ele consiste em um derivativo da <b>BCWindow</b> e um derivativo de <b>Thread</b>. O derivativo de Thread Ã© declarado no cabeÃ§alho do plugin usando <br>
+<p>O objeto da interface de usuário em seu mínimo consiste em um apontador para uma janela e apontadores para todos as funções (&quot;widgets&quot;) na janela. Usando as ferramentas do Cinelerra, ele consiste em um derivativo da <b>BCWindow</b> e um derivativo de <b>Thread</b>. O derivativo de Thread é declarado no cabeçalho do plugin usando <br>
 <code>PLUGIN_THREAD_HEADER(plugin_class, thread_class, window_class)</code>
 </p>
-<p>EntÃ£o ele Ã© definido usando <br>
+<p>Então ele é definido usando <br>
 <code>PLUGIN_THREAD_OBJECT(plugin_class, thread_class, window_class)</code>
 </p>
-<p>Isso, em combinaÃ§Ã£o com o macro SHOW_GUI faz todo o trabalho de instanciamento da Janela. Esse sistema de duas classes Ã© usado em plugins tempo-real mas nÃ£o em plugins nÃ£o-tempo-real. Plugins nÃ£o-tempo-real criam e destrÃ³em seu GUI em sua funÃ§Ã£o <b>get_parameters</b> e nÃ£o hÃ¡ necessidade de uma Thread.
+<p>Isso, em combinação com o macro SHOW_GUI faz todo o trabalho de instanciamento da Janela. Esse sistema de duas classes é usado em plugins tempo-real mas não em plugins não-tempo-real. Plugins não-tempo-real criam e destróem seu GUI em sua função <b>get_parameters</b> e não há necessidade de uma Thread.
 </p>
-<p>Agora a classe de janela deve ser declarada no cabeÃ§alho do plugin. Ã‰ mais fÃ¡cil implementar a janela copiando um plugin existente e renomeando os sÃ­mbolos. O seguinte Ã© um esboÃ§o do que acontece. O cabeÃ§alho do plugin deve declarar o construtor de janela usando os argumentos apropriados.
+<p>Agora a classe de janela deve ser declarada no cabeçalho do plugin. É mais fácil implementar a janela copiando um plugin existente e renomeando os símbolos. O seguinte é um esboço do que acontece. O cabeçalho do plugin deve declarar o construtor de janela usando os argumentos apropriados.
 </p><pre class="verbatim">    #include &quot;guicast.h&quot;
     class MyPluginWindow : public BC_Window
     {
@@ -288,13 +288,13 @@ Eleva a janela GUI para o topo da pilha. Isso Ã© implementado com <br>
 </pre>
 <p>Isso se torna uma janela na tela, posicionada em x e y.
 </p>
-<p>Ela precisa de dois mÃ©todos <br>
+<p>Ela precisa de dois métodos <br>
 <code>int create_objects();</code> <br>
 <code>int close_event();</code> <br>
 e um apontador de volta para o plugin <br>
 <code>MyPlugin *plugin;</code>
 </p>
-<p>A definiÃ§Ã£o do construtor deve conter extenÃ§Ãµes (&quot;extents&quot;) e bandeiramentos (&quot;flags&quot;) fazendo com que a janela seja escondida quando criada pela primeira vez. O membro create_objects pÃµe funÃ§Ãµes (&quot;widgets&quot;) na janela de acordo com a sintaxe do GuiCast. Um apontador para cada funÃ§Ã£o que vocÃª quer sincronizar para um parÃ¢metro de configuraÃ§Ã£o Ã© armazenado na classe de janela. Esses sÃ£o atualizados na funÃ§Ã£o <b>update_gui</b> que vocÃª definiu mais cedo para o plugin. As funÃ§Ãµes sÃ£o normalmente derivativos de uma funÃ§Ã£o do GuiCast e sobrescrevem funÃ§Ãµes no GuiCast para suportar eventos. Finalmente, o create_objects chama <br>
+<p>A definição do construtor deve conter extenções (&quot;extents&quot;) e bandeiramentos (&quot;flags&quot;) fazendo com que a janela seja escondida quando criada pela primeira vez. O membro create_objects põe funções (&quot;widgets&quot;) na janela de acordo com a sintaxe do GuiCast. Um apontador para cada função que você quer sincronizar para um parâmetro de configuração é armazenado na classe de janela. Esses são atualizados na função <b>update_gui</b> que você definiu mais cedo para o plugin. As funções são normalmente derivativos de uma função do GuiCast e sobrescrevem funções no GuiCast para suportar eventos. Finalmente, o create_objects chama <br>
 <code>show_window();</code> <br>
 <code>flush();</code> <br>
 para fazer a janela aparecer toda de uma vez.
@@ -302,32 +302,32 @@ para fazer a janela aparecer toda de uma vez.
 <p>O membro close_event deve ser implementado usando <br>
 <code>WINDOW_CLOSE_EVENT(window_class)</code>
 </p>
-<p>Cada funÃ§Ã£o no GUI precisa detectar quando seu valor muda. No GuiCast, o mÃ©todo <b>handle_event</b> Ã© chamado sempre que o valor mudar. No <b>handle_event</b>, a funÃ§Ã£o entÃ£o precisa chamar <b>plugin-&gt;send_configure_change()</b> para propagar a mudanÃ§a para quaisquer cÃ³pias do plugin que estiverem processando informaÃ§Ã£o.
+<p>Cada função no GUI precisa detectar quando seu valor muda. No GuiCast, o método <b>handle_event</b> é chamado sempre que o valor mudar. No <b>handle_event</b>, a função então precisa chamar <b>plugin-&gt;send_configure_change()</b> para propagar a mudança para quaisquer cópias do plugin que estiverem processando informação.
 </p>
 <hr size="6">
 <a name="Plugins-tempo_002dreal"></a>
-<a name="SEC337"></a>
+<a name="SEC329"></a>
 <h2 class="section"> 23.3 Plugins tempo-real </h2>
 
-<p>Plugins tempo-real devem usar PLUGIN_CLASS_MEMBERS para definir o conjunto bÃ¡sico de membros em seus cabeÃ§alhos. Todos os plugins tempo-real devem definir um <br>
+<p>Plugins tempo-real devem usar PLUGIN_CLASS_MEMBERS para definir o conjunto básico de membros em seus cabeçalhos. Todos os plugins tempo-real devem definir um <br>
 <code>int is_realtime()</code>
 </p>
-<p>membro retornando 1. Isso faz co mque um nÃºmero de mÃ©todos seja chamado durante a reproduÃ§Ã£o ao vivo e para que o plugin possa ser usÃ¡vel na linha do tempo.
+<p>membro retornando 1. Isso faz co mque um número de métodos seja chamado durante a reprodução ao vivo e para que o plugin possa ser usável na linha do tempo.
 </p>
 <p>Plugins tempo-real devem sobrescrever um membro chamado <br>
 <code>process_buffer</code>
 </p>
-<p>Esta funÃ§Ã£o leva argumentos diferentes dependendo se o plugin suporta vÃ­deo e Ã¡udio. Veja um plugin existente para descobrir quais usos se aplicam.
+<p>Esta função leva argumentos diferentes dependendo se o plugin suporta vídeo e áudio. Veja um plugin existente para descobrir quais usos se aplicam.
 </p>
-<p>As principais caracterÃ­sticas da funÃ§Ã£o process_buffer sÃ£o um buffer para armazenar a saÃ­da, a posiÃ§Ã£o de inÃ­cio da saÃ­da e a taxa requerida de saÃ­da. Para Ã¡udio, tambÃ©m hÃ¡ um argumento de tamanho para o nÃºmero de amostras.
+<p>As principais características da função process_buffer são um buffer para armazenar a saída, a posição de início da saída e a taxa requerida de saída. Para áudio, também há um argumento de tamanho para o número de amostras.
 </p>
-<p>A posiÃ§Ã£o de inÃ­cio do buffer de saÃ­da Ã© a amostra de menor nÃºmero na linha do tempo se a reproduÃ§Ã£o for para frente e a amostra de maior nÃºmero na linha do tempo se a reproduÃ§Ã£o for ao reverso. A direÃ§Ã£o a reproduÃ§Ã£o Ã© determinada por uma das buscas de informaÃ§Ã£o descritas abaixo.
+<p>A posição de início do buffer de saída é a amostra de menor número na linha do tempo se a reprodução for para frente e a amostra de maior número na linha do tempo se a reprodução for ao reverso. A direção a reprodução é determinada por uma das buscas de informação descritas abaixo.
 </p>
-<p>Os argumentos de posiÃ§Ã£o e tamanho sÃ£o todos relativos Ã  taxa de quadros e taxa de amostragem passados ao process_buffer. Este serÃ¡ a taxa de informaÃ§Ã£o requerida e nÃ£o pode ser o mesmo que a taxa de informaÃ§Ã£o do projeto.
+<p>Os argumentos de posição e tamanho são todos relativos à taxa de quadros e taxa de amostragem passados ao process_buffer. Este será a taxa de informação requerida e não pode ser o mesmo que a taxa de informação do projeto.
 </p>
-<p>A funÃ§Ã£o process_realtime deve ser inciada chamando o <b>load_configuration</b>. O LOAD_CONFIGURATION_MACRO retorna 1 se a configuraÃ§Ã£o houver mudado.
+<p>A função process_realtime deve ser inciada chamando o <b>load_configuration</b>. O LOAD_CONFIGURATION_MACRO retorna 1 se a configuração houver mudado.
 </p>
-<p>ApÃ³s determinar a configuraÃ§Ã£o do plugin, uma mÃ­dia de entrada tem que ser carregada para processamento. Chame:
+<p>Após determinar a configuração do plugin, uma mídia de entrada tem que ser carregada para processamento. Chame:
 </p><pre class="verbatim">    read_frame(VFrame *buffer,
         int channel,
         int64_t start_position,
@@ -339,98 +339,98 @@ ou
         int64_t start_position,
         int64_t len)
 </pre>
-<p>para requisitar informaÃ§Ã£o de entrada do objeto que vem antes deste plugin. A funÃ§Ã£o de leitura precisa de um buffer para armazenar a informaÃ§Ã£o de entrada. Isso pode ser ou um temporÃ¡rio que vocÃª crie no plugin ou o buffer de saÃ­da fornecido ao process_buffer se vocÃª nÃ£o precisa de um temporÃ¡rio.
+<p>para requisitar informação de entrada do objeto que vem antes deste plugin. A função de leitura precisa de um buffer para armazenar a informação de entrada. Isso pode ser ou um temporário que você crie no plugin ou o buffer de saída fornecido ao process_buffer se você não precisa de um temporário.
 </p>
-<p>Ele tambÃ©m precisa de um conjunto de argumentos de posiÃ§Ã£o para determinar quando vocÃª quer ler a informaÃ§Ã£o de onde. A posiÃ§Ã£o de inÃ­cio, taxa e len passados para uma funÃ§Ã£o de leitura nÃ£o precisam ser os mesmos que os valores recebidos pela funÃ§Ã£o process_buffer. Desta forma, os plugins podem ler informaÃ§Ã£o a uma taxa diferente do que a informaÃ§Ã£o de saÃ­da.
+<p>Ele também precisa de um conjunto de argumentos de posição para determinar quando você quer ler a informação de onde. A posição de início, taxa e len passados para uma função de leitura não precisam ser os mesmos que os valores recebidos pela função process_buffer. Desta forma, os plugins podem ler informação a uma taxa diferente do que a informação de saída.
 </p>
-<p>O argumento de canal Ã© apenas significante se este for um plugin multi-canal. Eles precisam ler a informaÃ§Ã£o para cada trilha no valor de get_total_buffers() e processar todas as trilhas. Plugins de canais Ãºnicos devem passar 0 para channel.
+<p>O argumento de canal é apenas significante se este for um plugin multi-canal. Eles precisam ler a informação para cada trilha no valor de get_total_buffers() e processar todas as trilhas. Plugins de canais únicos devem passar 0 para channel.
 </p>
-<p>Membros adicionais sÃ£o implementados para manter a configuraÃ§Ã£o em plugins tempo-real. Algum deles tambÃ©m sÃ£o requeridos em plugins nÃ£o-tempo-real.
+<p>Membros adicionais são implementados para manter a configuração em plugins tempo-real. Algum deles também são requeridos em plugins não-tempo-real.
 </p>
 <ul>
 <li> <b>void read_data(KeyFrame *keyframe);</b> <br>
-Carrega a informaÃ§Ã£o de um quadro-chave na configuraÃ§Ã£o do plugin. Dentro do quadro-chave estÃ¡ uma cadeia XML. Ela Ã© mais facilmente dividida (&quot;parsed&quot;) criando-se um objeto <b>FileXML</b>. Veja um plugin existente para ver como a funÃ§Ã£o read_data Ã© implementada. <br>
-Read data carrega informaÃ§Ã£o vinda do objeto XML e armazena valores no objeto de configuraÃ§Ã£o do plugin. Uma vez que objetos de configuraÃ§Ã£o variam de plugin para plugin, essas funÃ§Ãµes nÃ£o podem ser automatizadas.
+Carrega a informação de um quadro-chave na configuração do plugin. Dentro do quadro-chave está uma cadeia XML. Ela é mais facilmente dividida (&quot;parsed&quot;) criando-se um objeto <b>FileXML</b>. Veja um plugin existente para ver como a função read_data é implementada. <br>
+Read data carrega informação vinda do objeto XML e armazena valores no objeto de configuração do plugin. Uma vez que objetos de configuração variam de plugin para plugin, essas funções não podem ser automatizadas.
 
 </li><li> <b>void save_data(KeyFrame *keyframe);</b> <br>
-Salva informaÃ§Ã£o da configuraÃ§Ã£o do plugin para um quadro-chave. Dentro do quadro-chave vocÃª colocarÃ¡ uma cadeia XML que Ã© normalmente criada por um objeto FileXML. Veja um plugin existente para ver como a funÃ§Ã£o save_data estÃ¡ implementada. <br>
-Save data salva informaÃ§Ã£o de um objeto de configuraÃ§Ã£o do plugin no objeto XML.
+Salva informação da configuração do plugin para um quadro-chave. Dentro do quadro-chave você colocará uma cadeia XML que é normalmente criada por um objeto FileXML. Veja um plugin existente para ver como a função save_data está implementada. <br>
+Save data salva informação de um objeto de configuração do plugin no objeto XML.
 
 </li><li> <b>int load_defaults();</b> <br>
-Outra forma de o plugin obter parÃ¢metros Ã© a partir de um arquivo de padrÃµes. As rotinas dos padrÃµes de carregar e salvar usam um objeto BC_Hash para dividir (&quot;parse&quot;) o arquivo de padrÃµes. O objeto defaults Ã© criado em <b>load_defaults</b> e destruÃ­do no destrutor de plugins. Veja um plugin existente para ver como o objeto BC_Hash Ã© usado.
+Outra forma de o plugin obter parâmetros é a partir de um arquivo de padrões. As rotinas dos padrões de carregar e salvar usam um objeto BC_Hash para dividir (&quot;parse&quot;) o arquivo de padrões. O objeto defaults é criado em <b>load_defaults</b> e destruído no destrutor de plugins. Veja um plugin existente para ver como o objeto BC_Hash é usado.
 
 </li><li> <b>int save_defaults();</b> <br>
-Salva a configuraÃ§Ã£o no objeto de padrÃµes.
+Salva a configuração no objeto de padrões.
 </li></ul>
 
 <hr size="6">
 <a name="Plugins-n_00e3o_002dtempo_002dreal"></a>
-<a name="SEC338"></a>
-<h2 class="section"> 23.4 Plugins nÃ£o-tempo-real </h2>
+<a name="SEC330"></a>
+<h2 class="section"> 23.4 Plugins não-tempo-real </h2>
 
-<p>Algumas referÃªncias para plugins nÃ£o-tempo-real sÃ£o <b>Normalizar</b> para Ã¡udio e <b>Mudar taxa de quadros</b> para vÃ­deo.
+<p>Algumas referências para plugins não-tempo-real são <b>Normalizar</b> para áudio e <b>Mudar taxa de quadros</b> para vídeo.
 </p>
-<p>Como os plugins tempo-real, <b>load_defaults</b> e <b>save_defaults</b> devem ser implementados. Nos plugins nÃ£o-tempo-real, eles nÃ£o sÃ£o usados apenas para parÃ¢metros padrÃ£o, mas para transferir valores da interface de usuÃ¡rio para o processador de sinal. NÃ£o Ã© preciso que haja uma classe de configuraÃ§Ã£o nos plugins nÃ£o-tempo-real.
+<p>Como os plugins tempo-real, <b>load_defaults</b> e <b>save_defaults</b> devem ser implementados. Nos plugins não-tempo-real, eles não são usados apenas para parâmetros padrão, mas para transferir valores da interface de usuário para o processador de sinal. Não é preciso que haja uma classe de configuração nos plugins não-tempo-real.
 </p>
-<p>ContrÃ¡rio aos plugins tempo-real, o LOAD_CONFIGURATION_MACRO nÃ£o pode ser usado no cabeÃ§alho do plugin. Ao invÃ©s disso, os seguintes mÃ©todos devem ser definidos.
+<p>Contrário aos plugins tempo-real, o LOAD_CONFIGURATION_MACRO não pode ser usado no cabeçalho do plugin. Ao invés disso, os seguintes métodos devem ser definidos.
 </p>
-<p>O plugin nÃ£o-tempo-real deve conter um apontador para um objeto de defaults. <br>
+<p>O plugin não-tempo-real deve conter um apontador para um objeto de defaults. <br>
 <code>BC_Hash *defaults;</code> <br>
-Ele tambÃ©m deve ter um apontador para uma MainProgressBar. <br>
+Ele também deve ter um apontador para uma MainProgressBar. <br>
 <code>MainProgressBar *progress;</code>
 </p>
-<p>O apontador de progresso permite que plugins nÃ£o-tempo-real exibam seus progressos na janela principal do Cinelerra.
+<p>O apontador de progresso permite que plugins não-tempo-real exibam seus progressos na janela principal do Cinelerra.
 </p>
-<p>O construtor para um plugin nÃ£o-tempo-real nÃ£o pode usar o PLUGIN_CONSTRUCTOR_MACRO mas deve chamar o <b>load_defaults</b> diretamente.
+<p>O construtor para um plugin não-tempo-real não pode usar o PLUGIN_CONSTRUCTOR_MACRO mas deve chamar o <b>load_defaults</b> diretamente.
 </p>
-<p>O destrutor, de forma semelhante, deve chamar o <b>save_defaults</b> e o <b>delete defaults</b> diretamente ao invÃ©s do PLUGIN_DESTRUCTOR_MACRO.
+<p>O destrutor, de forma semelhante, deve chamar o <b>save_defaults</b> e o <b>delete defaults</b> diretamente ao invés do PLUGIN_DESTRUCTOR_MACRO.
 </p>
 <ul>
 <li> <b>VFrame* new_picon();</b> <br>
 <b>char* plugin_title();</b> <br>
-O uso destes Ã© o mesmo que para plugins tempo-real.
+O uso destes é o mesmo que para plugins tempo-real.
 
 </li><li> <b>int is_realtime();</b> <br>
-Esta funÃ§Ã£o deve retornar 0 para indicar um plugin nÃ£o-tempo-real.
+Esta função deve retornar 0 para indicar um plugin não-tempo-real.
 
 </li><li> <b>int get_parameters();</b> <br>
-Aqui, o usuÃ¡rio deve criar um GUI, esperar pelo usuÃ¡rio apertar um botÃ£o de OK ou um botÃ£o de Cancelar e armazenar os parÃ¢metros nas variÃ¡veis de plugin. Esta rotina deve retornar 0 para sucesso e 1 para falha. Desta forma, o usuÃ¡rio pode cancelar o efeito pelo GUI. <br>
-Ao contrÃ¡rio do plugin tempo-real, este GUI nÃ£o precisa rodar de forma assÃ­ncrona ao plugin. Ele deve bloquear a funÃ§Ã£o get_parameters atÃ© que o usuÃ¡rio selecione OK ou Cancel.
+Aqui, o usuário deve criar um GUI, esperar pelo usuário apertar um botão de OK ou um botão de Cancelar e armazenar os parâmetros nas variáveis de plugin. Esta rotina deve retornar 0 para sucesso e 1 para falha. Desta forma, o usuário pode cancelar o efeito pelo GUI. <br>
+Ao contrário do plugin tempo-real, este GUI não precisa rodar de forma assíncrona ao plugin. Ele deve bloquear a função get_parameters até que o usuário selecione OK ou Cancel.
 
 </li><li> <b>int load_defaults();</b> <br>
-Isso deve criar um objeto de defaults e carregar parÃ¢metros do objeto de defaults em variÃ¡veis de plugin.
+Isso deve criar um objeto de defaults e carregar parâmetros do objeto de defaults em variáveis de plugin.
 
 </li><li> <b>int save_defaults();</b> <br>
-Isso deve salvar as variÃ¡veis de plugin no objeto de defaults.
+Isso deve salvar as variáveis de plugin no objeto de defaults.
 
 </li><li> <b>int start_loop();</b> <br>
-Se o <b>get_parameters</b> retornou 0 para sucesso, este Ã© chamado uma vez para dar ao plugin uma chance para iniciar o processamento. O plugin deve instanciar o objeto de progresso com uma linha como <br>
+Se o <b>get_parameters</b> retornou 0 para sucesso, este é chamado uma vez para dar ao plugin uma chance para iniciar o processamento. O plugin deve instanciar o objeto de progresso com uma linha como <br>
 <code>progress = start_progress(&quot;MyPlugin progress...&quot;,</code> <br>
 <code>PluginClient::get_total_len());</code>
 <br>
-O uso de <b>start_progress</b> depende de se o plugin for multi-canal ou de canal Ãºnico. Se for multi-canal, vocÃª sempre poderÃ¡ chamar start_progress. Se for de canal Ãºnico, vocÃª primeiro precisa saber se a barra de progresso hÃ¡ foi iniciada em outra instÃ¢ncia do plugin. <br>
-Se o <b>PluginClient::interactive</b> for 1, vocÃª precisa iniciar a barra de progresso. Se for 0, a barra de progresso jÃ¡ foi iniciada. <br>
-O PluginClient define o <b>get_total_len()</b> e <b>get_source_start()</b> para descrever a abrangÃªncia da linha do tempo a ser processada. As unidades sÃ£o ou amostras ou quadros e Ã  taxa do projeto.
+O uso de <b>start_progress</b> depende de se o plugin for multi-canal ou de canal único. Se for multi-canal, você sempre poderá chamar start_progress. Se for de canal único, você primeiro precisa saber se a barra de progresso há foi iniciada em outra instância do plugin. <br>
+Se o <b>PluginClient::interactive</b> for 1, você precisa iniciar a barra de progresso. Se for 0, a barra de progresso já foi iniciada. <br>
+O PluginClient define o <b>get_total_len()</b> e <b>get_source_start()</b> para descrever a abrangência da linha do tempo a ser processada. As unidades são ou amostras ou quadros e à taxa do projeto.
 
 </li><li> <b>int process_loop</b> <br>
-Este Ã© chamado repetidamente atÃ© que a abrangÃªncia da linha do tempo seja processada. Possui ou um buffer de amostras ou de quadros para saÃ­da e uma referÃªncia ao write_length para armazenar o nÃºmero de amostras processado. Se este for um plugin de Ã¡udio, o usuÃ¡rio precisa chamar o <b>get_buffer_size()</b> para saber quantas amostras o buffer de saÃ­da pode aguentar. <br>
-O plugin deve usar <b>read_samples</b> ou <b>read_frame</b> para ler a entrada. Essas funÃ§Ãµes sÃ£o um pouco diferentes para um plugin nÃ£o-tempo-real do que sÃ£o para um plugin tempo-real. <br>
-Elas pegam uma posiÃ§Ã£o relativa ao inÃ­cio da linha do tempo, Ã  taxa da linha do tempo. EntÃ£o, vocÃª deve processÃ¡-lo e colocar a saÃ­da no argumento do buffer para process_loop. O write_length deve conter o nÃºmero de amostras geradas se ele for Ã¡udio. <br>
+Este é chamado repetidamente até que a abrangência da linha do tempo seja processada. Possui ou um buffer de amostras ou de quadros para saída e uma referência ao write_length para armazenar o número de amostras processado. Se este for um plugin de áudio, o usuário precisa chamar o <b>get_buffer_size()</b> para saber quantas amostras o buffer de saída pode aguentar. <br>
+O plugin deve usar <b>read_samples</b> ou <b>read_frame</b> para ler a entrada. Essas funções são um pouco diferentes para um plugin não-tempo-real do que são para um plugin tempo-real. <br>
+Elas pegam uma posição relativa ao início da linha do tempo, à taxa da linha do tempo. Então, você deve processá-lo e colocar a saída no argumento do buffer para process_loop. O write_length deve conter o número de amostras geradas se ele for áudio. <br>
 Finalmente, o process_loop deve testar o <b>PluginClient::interactive</b> e atualizar a barra de progresso se aquele for 1. <br>
 <code>progress-&gt;update(total_written);</code> <br>
-retorna 1 ou 0 se a barra de progresso foi cancelada. Se for 1, o process_loop deve retornar 1 para indicar um cancelamento. AlÃ©m do cancelamento da barra de progresso, o <b>process_loop</b> deve retornar 1 quando toda a abrangÃªncia da linha do tempo for processada.
+retorna 1 ou 0 se a barra de progresso foi cancelada. Se for 1, o process_loop deve retornar 1 para indicar um cancelamento. Além do cancelamento da barra de progresso, o <b>process_loop</b> deve retornar 1 quando toda a abrangência da linha do tempo for processada.
 
 </li><li> <b>int stop_loop();</b> <br>
-Este Ã© chamado apÃ³s que o process_loop processa seu Ãºltimo buffer. <br>
-Se o PluginClient::is_interactive for 1, este deve chamar o <b>stop_progress</b> no apontador da barra de progresso e apagar o apontador. EntÃ£o, ele deve apagar quaisquer objetos que criou para processar em <b>start_loop</b>.
+Este é chamado após que o process_loop processa seu último buffer. <br>
+Se o PluginClient::is_interactive for 1, este deve chamar o <b>stop_progress</b> no apontador da barra de progresso e apagar o apontador. Então, ele deve apagar quaisquer objetos que criou para processar em <b>start_loop</b>.
 </li></ul>
 
 <hr size="6">
 <a name="Plugins-de-_00e1udio"></a>
-<a name="SEC339"></a>
-<h2 class="section"> 23.5 Plugins de Ã¡udio </h2>
+<a name="SEC331"></a>
+<h2 class="section"> 23.5 Plugins de áudio </h2>
 
-<p>O plugin mais simples de Ã¡udio Ã© o Ganho. O objeto de processamento deve incluir o <tt>`pluginaclient.h'</tt> e ser herdado do <b>PluginAClient</b>. Plugins tempo-real de Ã¡udio devem definir 
+<p>O plugin mais simples de áudio é o Ganho. O objeto de processamento deve incluir o <tt>`pluginaclient.h'</tt> e ser herdado do <b>PluginAClient</b>. Plugins tempo-real de áudio devem definir 
 </p><pre class="verbatim">    int process_buffer(int64_t size,
         double **buffer,
         int64_t start_position,
@@ -440,28 +440,28 @@ caso sejam multi-canais ou
         double *buffer,
         int64_t start_position,
         int sample_rate);
-</pre><p>caso sejam de um Ãºnico canal. Estes devem retornar 0 ao sucesso ou 1 Ã  falha. No futuro, o valor de retorno pode abortar uma renderizaÃ§Ã£o falha.
+</pre><p>caso sejam de um único canal. Estes devem retornar 0 ao sucesso ou 1 à falha. No futuro, o valor de retorno pode abortar uma renderização falha.
 </p>
-<p>A funÃ§Ã£o de processamento precisa requerir amostras de entrada com
+<p>A função de processamento precisa requerir amostras de entrada com
 </p><pre class="verbatim">    int read_samples(double *buffer,
         int channel,
         int sample_rate,
         int64_t start_position,
         int64_t len);
-</pre><p>Isto sempre retorna um 0. O usuÃ¡rio pode especificar qualquer taxa de amostragem desejada e posiÃ§Ã£o de inÃ­cio.
+</pre><p>Isto sempre retorna um 0. O usuário pode especificar qualquer taxa de amostragem desejada e posição de início.
 </p>
-<p>Plugins de Ã¡udio nÃ£o-tempo-real precisam definir
+<p>Plugins de áudio não-tempo-real precisam definir
 </p><pre class="verbatim">int process_loop(double *buffer, int64_t &amp;write_length);
-para cana Ãºnico ou 
+para cana único ou 
 int process_loop(double **buffers, int64_t &amp;write_length);
-</pre><p>para multi-canal. Plugins nÃ£o-tempo-real usam um conjunto diferente de funÃ§Ãµes read_samples para requerer a informaÃ§Ã£o de entrada. Estas sÃ£o fixadas Ã  taxa de amostragem do projeto.
+</pre><p>para multi-canal. Plugins não-tempo-real usam um conjunto diferente de funções read_samples para requerer a informação de entrada. Estas são fixadas à taxa de amostragem do projeto.
 </p>
 <hr size="6">
 <a name="Plugins-de-v_00eddeo"></a>
-<a name="SEC340"></a>
-<h2 class="section"> 23.6 Plugins de vÃ­deo </h2>
+<a name="SEC332"></a>
+<h2 class="section"> 23.6 Plugins de vídeo </h2>
 
-<p>O plugin mais simples de vÃ­deo Ã© o Inverter. O objeto de processamento deve incluir o <tt>`pluginvclient.h'</tt> e ser herdado do <b>PluginVClient</b>. Plugins de vÃ­deo tempo-real precisam definir
+<p>O plugin mais simples de vídeo é o Inverter. O objeto de processamento deve incluir o <tt>`pluginvclient.h'</tt> e ser herdado do <b>PluginVClient</b>. Plugins de vídeo tempo-real precisam definir
 </p><pre class="verbatim">    int process_buffer(VFrame **frame,
         int64_t start_position,
         double frame_rate);
@@ -469,68 +469,68 @@ caso sejam multi-canais ou
     int process_buffer(VFrame *frame,
         int64_t start_position,
         double frame_rate);
-</pre><p>caso sejam de canal Ãºnico.
+</pre><p>caso sejam de canal único.
 </p>
-<p>Plugins de vÃ­deo nÃ£o-tempo-real precisam definir
+<p>Plugins de vídeo não-tempo-real precisam definir
 </p><pre class="verbatim">int process_loop(VFrame *buffer);
-para canal Ãºnico ou
+para canal único ou
 int process_loop(VFrame **buffers);
 </pre>
-<p>para multi-canal. A quantidade de quadros gerada em um process_loop Ãºnico Ã© sempre assumida para ser 1, portanto a falta de um argumento write_length. Um retorno de 0 faz com que a renderizaÃ§Ã£o continue. Um retorno de 1 faz com que a renderizaÃ§Ã£o seja abortada.
+<p>para multi-canal. A quantidade de quadros gerada em um process_loop único é sempre assumida para ser 1, portanto a falta de um argumento write_length. Um retorno de 0 faz com que a renderização continue. Um retorno de 1 faz com que a renderização seja abortada.
 </p>
-<p>Um conjunto de funÃ§Ãµes read_frame existem para requerer os quadros de entrada em plugins de vÃ­deo nÃ£o-tempo-real. Estes sÃ£o fixados Ã  taxa de quadros do projeto.
+<p>Um conjunto de funções read_frame existem para requerer os quadros de entrada em plugins de vídeo não-tempo-real. Estes são fixados à taxa de quadros do projeto.
 </p>
 <hr size="6">
 <a name="Plugins-de-transi_00e7_00e3o"></a>
-<a name="SEC341"></a>
-<h2 class="section"> 23.7 Plugins de transiÃ§Ã£o </h2>
+<a name="SEC333"></a>
+<h2 class="section"> 23.7 Plugins de transição </h2>
 
-<p>A transiÃ§Ã£o mais simples de vÃ­deo Ã© a <b>Varredura</b> e a transiÃ§Ã£o de Ã¡udio mais simples Ã© o <b>Fade cruzado</b>. Estes usam um subconjunto dos membros de classe padrÃ£o de plugins tempo-real, mas atÃ© agora nenhum anÃ¡logo a PLUGIN_CLASS_MEMBERS foi feito para transiÃ§Ãµes.
+<p>A transição mais simples de vídeo é a <b>Varredura</b> e a transição de áudio mais simples é o <b>Fade cruzado</b>. Estes usam um subconjunto dos membros de classe padrão de plugins tempo-real, mas até agora nenhum análogo a PLUGIN_CLASS_MEMBERS foi feito para transições.
 </p>
-<p>O objeto de processamento para transiÃ§Ãµes de Ã¡udio ainda deve ser herdado do PluginAClient e para transiÃ§Ãµes de vÃ­deo ainda deve ser herdado do PluginVClient.
+<p>O objeto de processamento para transições de áudio ainda deve ser herdado do PluginAClient e para transições de vídeo ainda deve ser herdado do PluginVClient.
 </p>
-<p>TransiÃ§Ãµes podem ou nÃ£o ter um GUI. Caso elas tenham um GUI, devem tambÃ©m gerenciar um assunto (&quot;thread&quot;) como plugins tempo-real. FaÃ§a isso com os mesmos macros PLUGIN_THREAD_OBJECT e PLUGIN_THREAD_HEADER como plugins tempo-real. Uma vez que hÃ¡ apenas um quadro-chave em uma transiÃ§Ã£o, vocÃª nÃ£o precisa se preocupar em atualizar o GUI do objeto de processamento como vocÃª faz com um plugin tempo-real.
+<p>Transições podem ou não ter um GUI. Caso elas tenham um GUI, devem também gerenciar um assunto (&quot;thread&quot;) como plugins tempo-real. Faça isso com os mesmos macros PLUGIN_THREAD_OBJECT e PLUGIN_THREAD_HEADER como plugins tempo-real. Uma vez que há apenas um quadro-chave em uma transição, você não precisa se preocupar em atualizar o GUI do objeto de processamento como você faz com um plugin tempo-real.
 </p>
-<p>Se a transiÃ§Ã£o tiver um GUI, vocÃª pode usar o PLUGIN_CONSTRUCTOR_MACRO e o PLUGIN_DESTRUCTOR_MACRO para inicializar o objeto de processamento. VocÃª tambÃ©m vai precisar de um objeto BC_Hash e um objeto Thread para estes macros.
+<p>Se a transição tiver um GUI, você pode usar o PLUGIN_CONSTRUCTOR_MACRO e o PLUGIN_DESTRUCTOR_MACRO para inicializar o objeto de processamento. Você também vai precisar de um objeto BC_Hash e um objeto Thread para estes macros.
 </p>
-<p>Uma vez que o GUI Ã© opcional, sobrescreva uma funÃ§Ã£o chamada <b>uses_gui()</b> para significar se a transiÃ§Ã£o terÃ¡ ou nÃ£o um GUI. Retorno de 1 caso tenha e 0 caso nÃ£o tenha.
+<p>Uma vez que o GUI é opcional, sobrescreva uma função chamada <b>uses_gui()</b> para significar se a transição terá ou não um GUI. Retorno de 1 caso tenha e 0 caso não tenha.
 </p>
-<p>TransiÃ§Ãµes precisam de funÃ§Ãµes <b>load_defaults</b> e <b>save_defaults</b> de forma que a primeira vez que forem jogadas Ã  linha do tempo elas tenham configuraÃ§Ãµes Ãºteis.
+<p>Transições precisam de funções <b>load_defaults</b> e <b>save_defaults</b> de forma que a primeira vez que forem jogadas à linha do tempo elas tenham configurações úteis.
 </p>
-<p>Uma funÃ§Ã£o <b>read_data</b> e <b>save_data</b> toma o comando apÃ³s a inserÃ§Ã£o para acessar informaÃ§Ã£o especÃ­fica a cada instÃ¢ncia da transiÃ§Ã£o.
+<p>Uma função <b>read_data</b> e <b>save_data</b> toma o comando após a inserção para acessar informação específica a cada instância da transição.
 </p>
-<p>A diferenÃ§a mais importante entre as transiÃ§Ãµes e os plugins tempo-real Ã© a adiÃ§Ã£o de um mÃ©todo <b>is_transition</b> no objeto de processamento. <b>is_transition</b> deve retornar 1 para significar que o plugin Ã© uma transiÃ§Ã£o.
+<p>A diferença mais importante entre as transições e os plugins tempo-real é a adição de um método <b>is_transition</b> no objeto de processamento. <b>is_transition</b> deve retornar 1 para significar que o plugin é uma transição.
 </p>
-<p>As transiÃ§Ãµes processam informaÃ§Ã£o em uma funÃ§Ã£o <b>process_realtime</b>.
+<p>As transições processam informação em uma função <b>process_realtime</b>.
 </p><pre class="verbatim">    int process_realtime(VFrame *input,
         VFrame *output);
     int process_realtime(int64_t size,
         double *input_ptr,
         double *output_ptr);
-</pre><p>O argumento de entrada para o process_realtime Ã© a informaÃ§Ã£o para a prÃ³xima ediÃ§Ã£o. O argumento de saÃ­da para o process_realtime Ã© a informaÃ§Ã£o da ediÃ§Ã£o anterior.
+</pre><p>O argumento de entrada para o process_realtime é a informação para a próxima edição. O argumento de saída para o process_realtime é a informação da edição anterior.
 </p>
-<p>Rotinas existem para determinar se vocÃª estÃ¡ relacionado ao inÃ­cio e final da transiÃ§Ã£o.
+<p>Rotinas existem para determinar se você está relacionado ao início e final da transição.
 </p>
 <ul>
 <li>
-<b>PluginClient::get_source_position()</b> - retorna Ã  posiÃ§Ã£o atual atÃ© o inÃ­cio da transiÃ§Ã£o da menor amostragem nos buffers.
+<b>PluginClient::get_source_position()</b> - retorna à posição atual até o início da transição da menor amostragem nos buffers.
 
 </li><li>
-<b>PluginClient::get_total_len()</b> - returna Ã  abrangÃªncia do integrador (&quot;integer&quot;) da transiÃ§Ã£o. As unidades sÃ£o ou amostras ou quadros, Ã  taxa de informaÃ§Ã£o requerida pelo primeiro plugin.
+<b>PluginClient::get_total_len()</b> - returna à abrangência do integrador (&quot;integer&quot;) da transição. As unidades são ou amostras ou quadros, à taxa de informação requerida pelo primeiro plugin.
 </li></ul>
 
-<p>UsuÃ¡rios devem dividir a posiÃ§Ã£o fonte pela abrangÃªncia total para obter a fraÃ§Ã£o da transiÃ§Ã£o onde a funÃ§Ã£o <b>process_realtime</b> estÃ¡.
+<p>Usuários devem dividir a posição fonte pela abrangência total para obter a fração da transição onde a função <b>process_realtime</b> está.
 </p>
-<p>As transiÃ§Ãµes rodam a taxa de informaÃ§Ã£o requerida pelo primeiro plugin da trilha. Isso pode ser diferente da taxa de informaÃ§Ãµes do projeto. Uma vez que o process_realtime nÃ£o possui um argumento de taxa, use <b>get_framerate()</b> ou <b>get_samplerate</b> para obter a taxa requerida.
+<p>As transições rodam a taxa de informação requerida pelo primeiro plugin da trilha. Isso pode ser diferente da taxa de informações do projeto. Uma vez que o process_realtime não possui um argumento de taxa, use <b>get_framerate()</b> ou <b>get_samplerate</b> para obter a taxa requerida.
 </p>
 <hr size="6">
 <a name="GUI-de-plugins-que-se-atualizam-durante-a-reprodu_00e7_00e3o"></a>
-<a name="SEC342"></a>
-<h2 class="section"> 23.8 GUI de plugins que se atualizam durante a reproduÃ§Ã£o </h2>
+<a name="SEC334"></a>
+<h2 class="section"> 23.8 GUI de plugins que se atualizam durante a reprodução </h2>
 
-<p>Efeitos como <b>Histograma</b> e <b>Escopo de vÃ­deo</b> precisam atualizar o GUI durante a reproduÃ§Ã£o para exibir a informaÃ§Ã£o sobre o sinal. Isso Ã© alcanÃ§ado com os mÃ©todos <b>send_render_gui</b> e <b>render_gui</b>. Normalmente em process_buffer, quando o objeto de processamento quer atualizar o GUI, ele deve chamar <b>send_render_gui</b>. Isso deveria ser chamado apenas no process_buffer. O send_render_gui faz uma busca e eventualmente chama o <b>render_gui</b> na instÃ¢ncia do GUI do plugin.
+<p>Efeitos como <b>Histograma</b> e <b>Escopo de vídeo</b> precisam atualizar o GUI durante a reprodução para exibir a informação sobre o sinal. Isso é alcançado com os métodos <b>send_render_gui</b> e <b>render_gui</b>. Normalmente em process_buffer, quando o objeto de processamento quer atualizar o GUI, ele deve chamar <b>send_render_gui</b>. Isso deveria ser chamado apenas no process_buffer. O send_render_gui faz uma busca e eventualmente chama o <b>render_gui</b> na instância do GUI do plugin.
 </p>
-<p>O render_gui deve ter uma seqÃ¼Ãªncia como
+<p>O render_gui deve ter uma seqüência como
 </p><pre class="verbatim">    void MyPlugin::render_gui(void *data)
     {
         if(thread)
@@ -541,193 +541,193 @@ int process_loop(VFrame **buffers);
         }
     }
 </pre>
-<p>Send_render_gui e render_gui usam um argumento, um apontador void para transferir informaÃ§Ã£o do objeto de processamento para o GUI. O usuÃ¡rio deve fazer uma digitaÃ§Ã£o (&quot;typecast&quot;) para este apontador para transformÃ¡-lo em algo Ãºtil.
+<p>Send_render_gui e render_gui usam um argumento, um apontador void para transferir informação do objeto de processamento para o GUI. O usuário deve fazer uma digitação (&quot;typecast&quot;) para este apontador para transformá-lo em algo útil.
 </p>
 <hr size="6">
 <a name="Busca-de-informa_00e7_00f5es-dos-plugins"></a>
-<a name="SEC343"></a>
-<h2 class="section"> 23.9 Busca de informaÃ§Ãµes dos plugins </h2>
+<a name="SEC335"></a>
+<h2 class="section"> 23.9 Busca de informações dos plugins </h2>
 
-<p>HÃ¡ vÃ¡rias buscas de informaÃ§Ãµes (&quot;queries&quot;) Ãºteis no PluginClient que podem ser acessadas a partir do objeto de processamento. Algumas delas possuem diferentes significados nos modos tempo-real e nÃ£o-tempo-real. Elas todas dÃ£o informaÃ§Ãµes sobre o sistema operacional ou o porjeto que podem ser usadas para melhorar a qualidade do processamento.
+<p>Há várias buscas de informações (&quot;queries&quot;) úteis no PluginClient que podem ser acessadas a partir do objeto de processamento. Algumas delas possuem diferentes significados nos modos tempo-real e não-tempo-real. Elas todas dão informações sobre o sistema operacional ou o porjeto que podem ser usadas para melhorar a qualidade do processamento.
 </p>
 
 <hr size="6">
 <a name="Busca-de-informa_00e7_00f5es-de-sistema"></a>
-<a name="SEC344"></a>
-<h3 class="subsection"> 23.9.1 Busca de informaÃ§Ãµes de sistema </h3>
+<a name="SEC336"></a>
+<h3 class="subsection"> 23.9.1 Busca de informações de sistema </h3>
 
 <ul>
 <li> <b>get_interpolation_type()</b> <br>
-Retorna o tipo de interpolaÃ§Ã£o que o usuÃ¡rio quer para todas as operaÃ§Ãµes de escala. Este Ã© um macro da overlayframe.inc. Ele pode ser aplicado a qualquer chamada ao objeto <b>OverlayFrame</b>.
+Retorna o tipo de interpolação que o usuário quer para todas as operações de escala. Este é um macro da overlayframe.inc. Ele pode ser aplicado a qualquer chamada ao objeto <b>OverlayFrame</b>.
 
 </li><li> <b>get_project_smp()</b> <br>
-DÃ¡ o nÃºmero de CPUs no sistema menos 1. Caso seja um processador Ãºnico, serÃ¡ 0. Caso seja um processador dual, serÃ¡ 1. Este nÃºmero deve ser usado para ganhar paralelismo.
+Dá o número de CPUs no sistema menos 1. Caso seja um processador único, será 0. Caso seja um processador dual, será 1. Este número deve ser usado para ganhar paralelismo.
 
 </li><li> <b>get_total_buffers()</b> <br>
-DÃ¡ o nÃºmero de trilhas que um plugin multi-canal precisa para processar.
+Dá o número de trilhas que um plugin multi-canal precisa para processar.
 </li></ul>
 
 <hr size="6">
 <a name="Busca-de-informa_00e7_00f5es-de-tempo"></a>
-<a name="SEC345"></a>
-<h3 class="subsection"> 23.9.2 Busca de informaÃ§Ãµes de tempo </h3>
+<a name="SEC337"></a>
+<h3 class="subsection"> 23.9.2 Busca de informações de tempo </h3>
 
-<p>HÃ¡ duas taxas para mÃ­dia que um plugin tempo-real deve saber: a taxa do projeto e a taxa requerida. FunÃ§Ãµes sÃ£o providenciadas para se obter as taxas do projeto e requerida. AlÃ©m disso, fazer efeitos dependentes de tempo requere usar vÃ¡rias funÃ§Ãµes que dizem onde vocÃª estÃ¡ no efeito.
+<p>Há duas taxas para mídia que um plugin tempo-real deve saber: a taxa do projeto e a taxa requerida. Funções são providenciadas para se obter as taxas do projeto e requerida. Além disso, fazer efeitos dependentes de tempo requere usar várias funções que dizem onde você está no efeito.
 </p>
 <ul>
 <li> <b>get_project_framerate()</b> <br>
-DÃ¡ os quadros por segundo do vÃ­deo conforme definido nas configuraÃ§Ãµes do projeto.
+Dá os quadros por segundo do vídeo conforme definido nas configurações do projeto.
 
 </li><li> <b>get_project_samplerate()</b> <br>
-DÃ¡ a amostragem por segundo do Ã¡udio conforme definida nas configuraÃ§Ãµes do projeto.
+Dá a amostragem por segundo do áudio conforme definida nas configurações do projeto.
 
 </li><li> <b>get_framerate()</b> <br>
-DÃ¡ os quadros por segundo requeridos pelo plugin apÃ³s este. Esta Ã© a taxa de quadros requerida e Ã© a mesma que no argumento frame_rate para o process_buffer.
+Dá os quadros por segundo requeridos pelo plugin após este. Esta é a taxa de quadros requerida e é a mesma que no argumento frame_rate para o process_buffer.
 
 </li><li> <b>get_samplerate()</b> <br>
-DÃ¡ a taxa de mostragem por segundo requerida pelo plugin apÃ³s este. Esta Ã© a taxa de amostragem requerida e Ã© a mesma que o argumento sample_rate para o process_buffer.
+Dá a taxa de mostragem por segundo requerida pelo plugin após este. Esta é a taxa de amostragem requerida e é a mesma que o argumento sample_rate para o process_buffer.
 
 </li><li> <b>get_total_len()</b> <br>
-DÃ¡ o nÃºmero de amostras ou quadros na abrangÃªncia cobrida pelo efeito, relativo Ã  taxa de informaÃ§Ã£o requerida.
+Dá o número de amostras ou quadros na abrangência cobrida pelo efeito, relativo à taxa de informação requerida.
 
 </li><li> <b>get_source_start()</b> <br>
-Para plugins tempo-real, dÃ¡ a amostragem ou quadro mais baixos na abrangÃªncia do efeito Ã  taxa de informaÃ§Ã£o requerida. Para plugins nÃ£o-tempo-real, Ã© o inÃ­cio da abrangÃªncia da linha do tempo a ser processado.
+Para plugins tempo-real, dá a amostragem ou quadro mais baixos na abrangência do efeito à taxa de informação requerida. Para plugins não-tempo-real, é o início da abrangência da linha do tempo a ser processado.
 
 </li><li> <b>get_source_position()</b> <br>
-Para plugins tempo-real, Ã© a amostra com o nÃºmero mais baixo na regiÃ£o requerida a ser processada caso se esteja fazendo uma reproduÃ§Ã£o para frente ou a amostra com o nÃºmero mais alto na regiÃ£o caso a reproduÃ§Ã£o esteja sendo feita ao reverso. Para vÃ­deo, Ã© o inÃ­cio do quadro caso a reproduÃ§Ã£o esteja sendo feita para frente e o quadro final caso a reproduÃ§Ã£o esteja sendo feita ao reverso. A posiÃ§Ã£o Ã© relativa ao inÃ­cio da EDL e Ã© a taxa de informaÃ§Ã£o requerida. <br>
-Para transiÃ§Ãµes, este sempre serÃ¡ a amostra com o nÃºmero mais baixo da regiÃ£o a ser processada relativa ao inÃ­cio da transiÃ§Ã£o.
+Para plugins tempo-real, é a amostra com o número mais baixo na região requerida a ser processada caso se esteja fazendo uma reprodução para frente ou a amostra com o número mais alto na região caso a reprodução esteja sendo feita ao reverso. Para vídeo, é o início do quadro caso a reprodução esteja sendo feita para frente e o quadro final caso a reprodução esteja sendo feita ao reverso. A posição é relativa ao início da EDL e é a taxa de informação requerida. <br>
+Para transições, este sempre será a amostra com o número mais baixo da região a ser processada relativa ao início da transição.
 
 </li><li> <b>get_direction()</b> <br>
-DÃ¡ a direÃ§Ã£o da operaÃ§Ã£o atual de reproduÃ§Ã£o. Isto Ã© um macro definido em transportque.inc. Ã‰ Ãºtil para chamar funÃ§Ãµes de leitura uma vez lÃªem a posiÃ§Ã£o das prÃ³prias funÃ§Ãµes de leitura ao inÃ­cio ou final de uma regiÃ£o a ser lida, dependendo da operaÃ§Ã£o de reproduÃ§Ã£o.
+Dá a direção da operação atual de reprodução. Isto é um macro definido em transportque.inc. É útil para chamar funções de leitura uma vez lêem a posição das próprias funções de leitura ao início ou final de uma região a ser lida, dependendo da operação de reprodução.
 
 </li><li> <b>local_to_edl()</b> <br>
 <b>edl_to_local()</b> <br>
-Fazem a conversÃ£o entre a taxa de informaÃ§Ã£o requerida e a taxa de informaÃ§Ã£o do projeto. SÃ£o usados para converter posiÃ§Ãµes de quadros-chave em nÃºmeros que podem ser interpolados Ã  taxa de informaÃ§Ã£o requerida. A conversÃ£o Ã© automaticamente baseada na taxa de quadros ou de amostragem dependendo do tipo do plugin.
+Fazem a conversão entre a taxa de informação requerida e a taxa de informação do projeto. São usados para converter posições de quadros-chave em números que podem ser interpolados à taxa de informação requerida. A conversão é automaticamente baseada na taxa de quadros ou de amostragem dependendo do tipo do plugin.
 
 </li><li> <b>get_prev_keyframe(int64_t position, int is_local)</b> <br>
 <b>get_next_keyframe(int64_t position, int is_local)</b> <br>
-Estes informam o quadro-chave mais prÃ³ximo antes ou depois de dada posiÃ§Ã£o. A versÃ£o da definiÃ§Ã£o do macro de load_configuration automaticamente obtÃ©m os quadros-chave certos, mas vocÃª pode querer fazer isso por vocÃª mesma/o. <br>
-O arumento de posiÃ§Ã£o pode ser ou a taxa do projeto ou a taxa requerida. Marque o is_local para 1 se estiver Ã  taxa requerida e para 0 se estiver Ã  taxa do projeto. <br>
-Em cada quadro-chave, outro valor de posiÃ§Ã£o diz a posiÃ§Ã£o do quadro-chave relativa ao inÃ­cio da linha do tempo e Ã  taxa do projeto. <br>
-O Ãºnico jeito de conseguir uma interpolaÃ§Ã£o suave entre quadros-chave Ã© converter as posiÃ§Ãµes nos objetos de quadros-chave Ã  taxa requerida. FaÃ§a isso usando edl_to_local nas posiÃ§Ãµes de quadro-chave.
+Estes informam o quadro-chave mais próximo antes ou depois de dada posição. A versão da definição do macro de load_configuration automaticamente obtém os quadros-chave certos, mas você pode querer fazer isso por você mesma/o. <br>
+O arumento de posição pode ser ou a taxa do projeto ou a taxa requerida. Marque o is_local para 1 se estiver à taxa requerida e para 0 se estiver à taxa do projeto. <br>
+Em cada quadro-chave, outro valor de posição diz a posição do quadro-chave relativa ao início da linha do tempo e à taxa do projeto. <br>
+O único jeito de conseguir uma interpolação suave entre quadros-chave é converter as posições nos objetos de quadros-chave à taxa requerida. Faça isso usando edl_to_local nas posições de quadro-chave.
 </li></ul>
 
 <hr size="6">
 <a name="Usando-OpenGL"></a>
-<a name="SEC346"></a>
+<a name="SEC338"></a>
 <h2 class="section"> 23.10 Usando OpenGL </h2>
 
-<p>Plugins tempo-real de vÃ­deo suportam OpenGL. Usar o OpenGL para rotinas de plugins pode acelerar bastante a reproduÃ§Ã£o jÃ¡ que o trabalho Ã© feito principalmente no hardware. Infelizmente, cada rotina de OpenGL precisa de uma contrapartida de software para renderizaÃ§Ã£o, dobrando a quantidade de software a ser mantida. Felizmente, ter uma rotina OpenGL significa que a versÃ£o do software nÃ£o precisa ser otimizada como precisava quando software era a Ãºnica forma de se fazer as coisas.
+<p>Plugins tempo-real de vídeo suportam OpenGL. Usar o OpenGL para rotinas de plugins pode acelerar bastante a reprodução já que o trabalho é feito principalmente no hardware. Infelizmente, cada rotina de OpenGL precisa de uma contrapartida de software para renderização, dobrando a quantidade de software a ser mantida. Felizmente, ter uma rotina OpenGL significa que a versão do software não precisa ser otimizada como precisava quando software era a única forma de se fazer as coisas.
 </p>
-<p>Como sempre, a melhor forma de desenhar um primeiro plugin OpenGL Ã© copiar um existente e alterÃ¡-lo. O plugin <b>Brilho</b> Ã© um plugin OpenGL simples para ser copiado. HÃ¡ 3 pontos principais na renderizaÃ§Ã£o OpenGL e um ponto para otimizar a renderizaÃ§Ã£o OpenGL.
+<p>Como sempre, a melhor forma de desenhar um primeiro plugin OpenGL é copiar um existente e alterá-lo. O plugin <b>Brilho</b> é um plugin OpenGL simples para ser copiado. Há 3 pontos principais na renderização OpenGL e um ponto para otimizar a renderização OpenGL.
 </p>
 
 <hr size="6">
 <a name="Obtendo-informa_00e7_00e3o-OpenGL"></a>
-<a name="SEC347"></a>
-<h3 class="subsection"> 23.10.1 Obtendo informaÃ§Ã£o OpenGL </h3>
+<a name="SEC339"></a>
+<h3 class="subsection"> 23.10.1 Obtendo informação OpenGL </h3>
 
-<p>O primeiro problema Ã© fazer os plugins com OpenGL-habilitado interagirem com os plugins apenas-software. Para resolver isso, toda a informaÃ§Ã£o requerida para fazer a reproduÃ§Ã£o OpenGL Ã© armazenada no objeto VFrame que Ã© passado para o <b>process_buffer</b>. Para suportar 3D, o VFrame contÃ©m um PBuffer e uma textura, alÃ©m das fileiras originais do VFrame.
+<p>O primeiro problema é fazer os plugins com OpenGL-habilitado interagirem com os plugins apenas-software. Para resolver isso, toda a informação requerida para fazer a reprodução OpenGL é armazenada no objeto VFrame que é passado para o <b>process_buffer</b>. Para suportar 3D, o VFrame contém um PBuffer e uma textura, além das fileiras originais do VFrame.
 </p>
-<p>No modo OpenGL, o VFrame tem 3 estados correspondendo Ã  localizaÃ§Ã£o de sua informaÃ§Ã£o de vÃ­deo. O estado opengl Ã© recuperado chamando-se o <b>get_opengl_state</b> e Ã© configurado chamando-se o <b>set_opengl_state</b>. Os estados sÃ£o:
+<p>No modo OpenGL, o VFrame tem 3 estados correspondendo à localização de sua informação de vídeo. O estado opengl é recuperado chamando-se o <b>get_opengl_state</b> e é configurado chamando-se o <b>set_opengl_state</b>. Os estados são:
 </p>
 <ul>
 <li> <b>VFrame::RAM</b> <br>
-Isso significa que a informaÃ§Ã£o de vÃ­deo Ã© armazenada nos apontadores tradicionais de fileiras (&quot;row&quot;). Deve ser carregado em uma textura antes de ser desenhado usando as rotinas OpenGL.
+Isso significa que a informação de vídeo é armazenada nos apontadores tradicionais de fileiras (&quot;row&quot;). Deve ser carregado em uma textura antes de ser desenhado usando as rotinas OpenGL.
 
 </li><li> <b>VFrame::TEXTURE</b> <br>
-A informaÃ§Ã£o de vÃ­deo Ã© armazenada na memÃ³ria de textura. Ela estÃ¡ pronta para ser desenhada usando as rotinas OpenGL.
+A informação de vídeo é armazenada na memória de textura. Ela está pronta para ser desenhada usando as rotinas OpenGL.
 
 </li><li> <b>VFrame::SCREEN</b> <br>
-A informaÃ§Ã£o de vÃ­deo Ã© armazenada em um buffer de quadro na placa de vÃ­deo. Para plugins, o buffer de quadro serÃ¡ sempre um PBuffer. A imagem no buffer de quadro nÃ£o pode ser replicada de novo a menos que ela seja lida de volta na textura e o estado opengl seja remarcado para TEXTURE. O buffer de quadro Ã© limitado a 8 bits por canal. Se um efeito OpenGL for usado em um projeto de ponto flutuante (&quot;floating point&quot;), ele retÃ©m apenas 8 bits.
+A informação de vídeo é armazenada em um buffer de quadro na placa de vídeo. Para plugins, o buffer de quadro será sempre um PBuffer. A imagem no buffer de quadro não pode ser replicada de novo a menos que ela seja lida de volta na textura e o estado opengl seja remarcado para TEXTURE. O buffer de quadro é limitado a 8 bits por canal. Se um efeito OpenGL for usado em um projeto de ponto flutuante (&quot;floating point&quot;), ele retém apenas 8 bits.
 </li></ul>
 
-<p>Na rotina do <b>process_buffer</b> do plugin, hÃ¡ normalmente uma chamada para o <b>read_frame</b> para obter informaÃ§Ã£o do plugin anterior da cadeia. O <b>read_frame</b> leva um novo parÃ¢metro chamado <b>use_opengl</b>.
+<p>Na rotina do <b>process_buffer</b> do plugin, há normalmente uma chamada para o <b>read_frame</b> para obter informação do plugin anterior da cadeia. O <b>read_frame</b> leva um novo parâmetro chamado <b>use_opengl</b>.
 </p>
-<p>O plugin passa 1 para o <b>use_opengl</b> caso deseje suportar a informaÃ§Ã£o usando OpenGL. Ele passa 0 para o <b>use_opengl</b> caso possa suportar a informaÃ§Ã£o somente usando software. O valor de <b>use_opengl</b> Ã© passado para cima na cadeia para assegurar que um plugin que apenas use software receba informaÃ§Ã£o apenas em seus apontadores de fileiras (&quot;row pointers&quot;). Se o <b>use_opengl</b> for 0, o estado opengl no VFrame Ã© RAM.
+<p>O plugin passa 1 para o <b>use_opengl</b> caso deseje suportar a informação usando OpenGL. Ele passa 0 para o <b>use_opengl</b> caso possa suportar a informação somente usando software. O valor de <b>use_opengl</b> é passado para cima na cadeia para assegurar que um plugin que apenas use software receba informação apenas em seus apontadores de fileiras (&quot;row pointers&quot;). Se o <b>use_opengl</b> for 0, o estado opengl no VFrame é RAM.
 </p>
-<p>O plugin nÃ£o deve apenas saber se ele Ã© software-apenas, mas se sua saÃ­da deve ser software-apenas. Chame <b>get_use_opengl</b> para determinar se a saÃ­da pode ser suportada pelo OpenGL. Caso o <b>get_use_opengl</b> reture 0, o plugin deve passar 0 para o <b>use_opengl</b> em <b>read_frame</b> e fazer seu processamento no software. Caso o <b>get_use_opengl</b> seja 1, o plugin pode decidir baseado em sua implementaÃ§Ã£o se usarÃ¡ OpenGL.
+<p>O plugin não deve apenas saber se ele é software-apenas, mas se sua saída deve ser software-apenas. Chame <b>get_use_opengl</b> para determinar se a saída pode ser suportada pelo OpenGL. Caso o <b>get_use_opengl</b> reture 0, o plugin deve passar 0 para o <b>use_opengl</b> em <b>read_frame</b> e fazer seu processamento no software. Caso o <b>get_use_opengl</b> seja 1, o plugin pode decidir baseado em sua implementação se usará OpenGL.
 </p>
-<p>O maior problema com o OpenGL Ã© que todas as chamadas do gl... precisam ser rodadas a partir do mesmo assunto (&quot;thread&quot;). Para contornar isso, a interface do plugin possui rotinas para rodar o OpenGL em um assunto comum.
+<p>O maior problema com o OpenGL é que todas as chamadas do gl... precisam ser rodadas a partir do mesmo assunto (&quot;thread&quot;). Para contornar isso, a interface do plugin possui rotinas para rodar o OpenGL em um assunto comum.
 </p>
-<p>O <b>run_opengl</b> transfere o controle para o assunto comum OpenGL. Isso Ã© normalmente chamado pelo plugin em <b>process_buffer</b> apÃ³s ele haver chamado o <b>read_frame</b> e apenas se o <b>get_use_opengl</b> for 1.
+<p>O <b>run_opengl</b> transfere o controle para o assunto comum OpenGL. Isso é normalmente chamado pelo plugin em <b>process_buffer</b> após ele haver chamado o <b>read_frame</b> e apenas se o <b>get_use_opengl</b> for 1.
 </p>
-<p>Por uma sÃ©rie de indireÃ§Ãµes, o <b>run_opengl</b> eventualmente transfere o controle para uma funÃ§Ã£o virtual chamada <b>handle_opengl</b>. O <b>handle_opengl</b> deve ser sobrescrito com uma funÃ§Ã£o para rodar todas as rotinas OpenGL. Os conteÃºdos do <b>handle_opengl</b> devem ser fechados em <b>#ifdef HAVE_GL</b> ... <b>#endif</b> para permitir que eles sejam compiladom em sistemas que nÃ£o possuam suporte a grÃ¡ficos, como nÃ³dulos de renderizaÃ§Ã£o. O valor de retorno do <b>handle_opengl</b> Ã© passado de volta do <b>run_opengl</b>.
+<p>Por uma série de indireções, o <b>run_opengl</b> eventualmente transfere o controle para uma função virtual chamada <b>handle_opengl</b>. O <b>handle_opengl</b> deve ser sobrescrito com uma função para rodar todas as rotinas OpenGL. Os conteúdos do <b>handle_opengl</b> devem ser fechados em <b>#ifdef HAVE_GL</b> ... <b>#endif</b> para permitir que eles sejam compiladom em sistemas que não possuam suporte a gráficos, como nódulos de renderização. O valor de retorno do <b>handle_opengl</b> é passado de volta do <b>run_opengl</b>.
 </p>
-<p>O <b>read_frame</b> nÃ£o pode ser chamado de dentro do <b>handle_opengl</b>. Isso criaria uma trava recursiva porque faria outros objetos chamarem o <b>run_opengl</b>.
+<p>O <b>read_frame</b> não pode ser chamado de dentro do <b>handle_opengl</b>. Isso criaria uma trava recursiva porque faria outros objetos chamarem o <b>run_opengl</b>.
 </p>
-<p>Uma vez dentro do <b>handle_opengl</b>, o plugin possui o uso completo de todas as funÃ§Ãµes OpenGL. O VFrame oferece algumas funÃ§Ãµes para automatizar seqÃ¼Ãªncias comuns de OpenGL.
+<p>Uma vez dentro do <b>handle_opengl</b>, o plugin possui o uso completo de todas as funções OpenGL. O VFrame oferece algumas funções para automatizar seqüências comuns de OpenGL.
 </p>
-<p>O argumento do VFrame para o <b>process_buffer</b> Ã© sempre disponÃ­vel via a funÃ§Ã£o <b>get_output(int layer)</b>. Caso o plugin seja multi-canal, o argumento de camada (&quot;layer&quot;) obtÃ©m uma camada especÃ­fica dos buffers de saÃ­da. O PBuffer do buffer de saÃ­da Ã© onde a saÃ­da do OpenGL deve ir caso qualquer processamento seja feito.
+<p>O argumento do VFrame para o <b>process_buffer</b> é sempre disponível via a função <b>get_output(int layer)</b>. Caso o plugin seja multi-canal, o argumento de camada (&quot;layer&quot;) obtém uma camada específica dos buffers de saída. O PBuffer do buffer de saída é onde a saída do OpenGL deve ir caso qualquer processamento seja feito.
 </p>
 <hr size="6">
 <a name="Desenhando-usando-OpenGL"></a>
-<a name="SEC348"></a>
+<a name="SEC340"></a>
 <h3 class="subsection"> 23.10.2 Desenhando usando OpenGL </h3>
 
-<p>A seqÃ¼Ãªncia de comandos para desenhar na saÃ­da do PBuffer comeÃ§a com fazer o vÃ­deo em uma Ã¡rea de memÃ³ria onde ele possa ser re-chamado para desenho: <br>
+<p>A seqüência de comandos para desenhar na saída do PBuffer começa com fazer o vídeo em uma área de memória onde ele possa ser re-chamado para desenho: <br>
 <code>get_output()-&gt;to_texture();</code> <br>
 <code>get_output()-&gt;enable_opengl();</code> <br>
 </p><ul>
-<li> <b>to_texture</b> transfere a informaÃ§Ã£o OpenGL de onde ela estiver para a memÃ³ria de textura de saÃ­da e marca o estado de saÃ­da para TEXTURE.
-</li><li> <b>enable_opengl</b> faz o contexto OpenGL relativo Ã  saÃ­da do PBuffer.
+<li> <b>to_texture</b> transfere a informação OpenGL de onde ela estiver para a memória de textura de saída e marca o estado de saída para TEXTURE.
+</li><li> <b>enable_opengl</b> faz o contexto OpenGL relativo à saída do PBuffer.
 </li></ul>
 
-<p>O prÃ³ximo passo Ã© desenhar a textura com algum processamento no PBuffer. A seqÃ¼Ãªncia normal de comandos para desenhar uma textura Ã©: <br>
+<p>O próximo passo é desenhar a textura com algum processamento no PBuffer. A seqüência normal de comandos para desenhar uma textura é: <br>
 <code>get_output()-&gt;init_screen();</code> <br>
 <code>get_output()-&gt;bind_texture(0);</code> <br>
 <code>get_output()-&gt;draw_texture();</code>
 </p>
 <ul>
-<li> <b>VFrame::init_screen</b> marca o frustum do OpenGL e os parÃ¢metros para valores conhecidos.
-</li><li> <b>VFrame::bind_texture(int texture_unit)</b> amarra a textura Ã  unidade dada de textura e a habilita.
-</li><li> <b>VFrame::draw_texture()</b> chama as funÃ§Ãµes de vertex para desenhar a textura normalizada ao tamanho do PBuffer. Copie isso se vocÃª quer vÃ©rtices padrÃ£o (&quot;custom&quot;).
+<li> <b>VFrame::init_screen</b> marca o frustum do OpenGL e os parâmetros para valores conhecidos.
+</li><li> <b>VFrame::bind_texture(int texture_unit)</b> amarra a textura à unidade dada de textura e a habilita.
+</li><li> <b>VFrame::draw_texture()</b> chama as funções de vertex para desenhar a textura normalizada ao tamanho do PBuffer. Copie isso se você quer vértices padrão (&quot;custom&quot;).
 </li></ul>
 
-<p>O Ãºltimo passo na rotina do handle_opengl, apÃ³s a textura ser desenhada no PBuffer, Ã© marcar a saÃ­da do estado opengl para SCREEN com uma chamada para <b>VFrame::set_opengl_state</b>. O plugin nÃ£o deve ler de volta o buffer de quadro em uma textura ou apontadores de fileira caso nÃ£o haja mais processamento. Os plugins devem apenas deixar a saÃ­da na textura ou RAM caso sua localizaÃ§Ã£o resulte de um processamento normal. Eles devem marcar o estado opengl para RAM ou TEXTURE caso o faÃ§am.
+<p>O último passo na rotina do handle_opengl, após a textura ser desenhada no PBuffer, é marcar a saída do estado opengl para SCREEN com uma chamada para <b>VFrame::set_opengl_state</b>. O plugin não deve ler de volta o buffer de quadro em uma textura ou apontadores de fileira caso não haja mais processamento. Os plugins devem apenas deixar a saída na textura ou RAM caso sua localização resulte de um processamento normal. Eles devem marcar o estado opengl para RAM ou TEXTURE caso o façam.
 </p>
 <p><b>Modelos de cor em OpenGL:</b> <br>
-O modelo de cor exposto a rotinas OpenGL serÃ¡ sempre de ponto flutuante uma vez que Ã© isso que o OpenGL usa, mas ele pode ser YUV ou RGB dependendo das configuraÃ§Ãµes do projeto. Caso seja YUV, ele Ã© deslocado por 0.5 como em software. Passar modelos de cor YUV a plugins era necessÃ¡rio pela velocidade. A outra opÃ§Ã£o era converter YUV para RGB no primeiro passo que requeria OpenGL. Cada efeito e passo de renderizaÃ§Ã£o teria necessitado de uma rotina YUV para RGB. Com o YUV retido, apenas o passo de composiÃ§Ã£o final  precisa de uma rotina YUV para RGB.
+O modelo de cor exposto a rotinas OpenGL será sempre de ponto flutuante uma vez que é isso que o OpenGL usa, mas ele pode ser YUV ou RGB dependendo das configurações do projeto. Caso seja YUV, ele é deslocado por 0.5 como em software. Passar modelos de cor YUV a plugins era necessário pela velocidade. A outra opção era converter YUV para RGB no primeiro passo que requeria OpenGL. Cada efeito e passo de renderização teria necessitado de uma rotina YUV para RGB. Com o YUV retido, apenas o passo de composição final  precisa de uma rotina YUV para RGB.
 </p>
 <hr size="6">
 <a name="Usando-os-sombreadores-_0028_0022shaders_0022_0029"></a>
-<a name="SEC349"></a>
+<a name="SEC341"></a>
 <h3 class="subsection"> 23.10.3 Usando os sombreadores (&quot;shaders&quot;) </h3>
 
-<p>Muito poucos efeitos conseguem fazer alguma coisa Ãºtil com apenas um desenho direto na textura do PBuffer. Eles normalmente precisam definir um sombreamento (&quot;shader&quot;). O sombreador Ã© um programa em C que roda na placa de grÃ¡fico. Uma vez que a placa de grÃ¡ficos esteja otimizada para grÃ¡ficos, ela pode ser muito mais rÃ¡pida do que rodÃ¡-lo na CPU.
+<p>Muito poucos efeitos conseguem fazer alguma coisa útil com apenas um desenho direto na textura do PBuffer. Eles normalmente precisam definir um sombreamento (&quot;shader&quot;). O sombreador é um programa em C que roda na placa de gráfico. Uma vez que a placa de gráficos esteja otimizada para gráficos, ela pode ser muito mais rápida do que rodá-lo na CPU.
 </p>
-<p>Sombreadores sÃ£o escritos na linguagem OpenGL Shading Language. O cÃ³digo-fonte do sombreador Ã© contido em uma cadeia. A seqÃ¼Ãªncia normal para se usar um sombreador vem apÃ³s uma chamada para o <b>enable_opengl</b>.
+<p>Sombreadores são escritos na linguagem OpenGL Shading Language. O código-fonte do sombreador é contido em uma cadeia. A seqüência normal para se usar um sombreador vem após uma chamada para o <b>enable_opengl</b>.
 </p>
 <p><code>char *shader_source = &quot;...&quot;;</code> <br>
 <code>unsigned char shader_id = VFrame::make_shader(0, shader_source, 0);</code> <br>
 <code>glUseProgram(shader_id);</code> <br>
 <code>// Set uniform variables using glUniform commands</code>
 </p>
-<p>A compilaÃ§Ã£o e o passo de se fazer liks para os sombreadores Ã© encapsulado pelo comando VFrame::make_shader. Ele retorna um shader_id que pode ser passado para as funÃ§Ãµes OpenGL. O primeiro e Ãºltimo argumentos devem ser sempre 0. Um nÃºmero arbitrÃ¡rio de cadeias de fonte pode ser colocado entre os 0s. As cadeias de fonte sÃ£o concatenadas pelo make_shader em um fonte de sombreador gigante. Caso mÃºltiplas funÃ§Ãµes principais estejam nos fontes, as funÃ§Ãµes principais sÃ£o renomeadas e rodadas em ordem.
+<p>A compilação e o passo de se fazer liks para os sombreadores é encapsulado pelo comando VFrame::make_shader. Ele retorna um shader_id que pode ser passado para as funções OpenGL. O primeiro e último argumentos devem ser sempre 0. Um número arbitrário de cadeias de fonte pode ser colocado entre os 0s. As cadeias de fonte são concatenadas pelo make_shader em um fonte de sombreador gigante. Caso múltiplas funções principais estejam nos fontes, as funções principais são renomeadas e rodadas em ordem.
 </p>
-<p>HÃ¡ um nÃºmero de macros Ãºteis para sombreadores no <tt>`playback3d.h'</tt>. Todos os sombreadores atÃ© agora tem sido sombreadores de fragmento. ApÃ³s o sombreador ser inicializado, desenhe a textura iniciando pelo <b>init_screen</b>. O programa sombreador deve ser desabilitado com outra chamada para <b>glUseProgram(0)</b> e 0 como argumento.
+<p>Há um número de macros úteis para sombreadores no <tt>`playback3d.h'</tt>. Todos os sombreadores até agora tem sido sombreadores de fragmento. Após o sombreador ser inicializado, desenhe a textura iniciando pelo <b>init_screen</b>. O programa sombreador deve ser desabilitado com outra chamada para <b>glUseProgram(0)</b> e 0 como argumento.
 </p>
-<p>O shader_id e cÃ³digo fonte sÃ£o armazenados na memÃ³ria enquanto o Cinelerra estiver rodando. Chamadas futuras para o make_shader com o mesmo cÃ³digo fonte rodarÃ£o muito mais rÃ¡pido.
+<p>O shader_id e código fonte são armazenados na memória enquanto o Cinelerra estiver rodando. Chamadas futuras para o make_shader com o mesmo código fonte rodarão muito mais rápido.
 </p>
 <hr size="6">
 <a name="Agregando-plugins"></a>
-<a name="SEC350"></a>
+<a name="SEC342"></a>
 <h3 class="subsection"> 23.10.4 Agregando plugins </h3>
 
-<p>Melhorias futuras de velocidade podem ser obtidas combinando rotinas OpenGL de dois plugins em uma funÃ§Ã£o Ãºnica handle_opengl. Isso Ã© feito quando <b>Quadros para campos</b> e <b>RGB para 601</b> sÃ£o unidos (&quot;attached&quot;) em ordem. AgregaÃ§Ãµes de mais de dois plugins sÃ£o possÃ­veis mas muito difÃ­ceis de se fazer funcionar. A agregaÃ§Ã£o Ã© Ãºtil para o OpenGL porque cada plugin deve copiar o vÃ­deo de uma textura para um PBuffer. Em software nÃ£o hÃ¡ operaÃ§Ã£o de cÃ³pia.
+<p>Melhorias futuras de velocidade podem ser obtidas combinando rotinas OpenGL de dois plugins em uma função única handle_opengl. Isso é feito quando <b>Quadros para campos</b> e <b>RGB para 601</b> são unidos (&quot;attached&quot;) em ordem. Agregações de mais de dois plugins são possíveis mas muito difíceis de se fazer funcionar. A agregação é útil para o OpenGL porque cada plugin deve copiar o vídeo de uma textura para um PBuffer. Em software não há operação de cópia.
 </p>
-<p>Na agregaÃ§Ã£o, um plugin processa tudo dos outros plugins e os outros plugins &quot;fall through&quot;. Os plugins &quot;fall through&quot; devem copiar seus parÃ¢metros para o buffer de saÃ­da de forma que possam ser detectados pelo plugin de processamento.
+<p>Na agregação, um plugin processa tudo dos outros plugins e os outros plugins &quot;fall through&quot;. Os plugins &quot;fall through&quot; devem copiar seus parâmetros para o buffer de saída de forma que possam ser detectados pelo plugin de processamento.
 </p>
-<p>O VFrame usado como o buffer de saÃ­da contÃ©m uma tabela de parÃ¢metro para a passagem de parÃ¢metro entre plugins e Ã© acessado com <b>get_output()-&gt;get_params()</b>. ParÃ¢metros sÃ£o marcados e obtidos na tabela que chama uma atualizaÃ§Ã£o (&quot;<b>update</b>&quot;) e obtenÃ§Ã£o (&quot;<b>get</b>&quot;) como os padrÃµes (&quot;defaults&quot;).
+<p>O VFrame usado como o buffer de saída contém uma tabela de parâmetro para a passagem de parâmetro entre plugins e é acessado com <b>get_output()-&gt;get_params()</b>. Parâmetros são marcados e obtidos na tabela que chama uma atualização (&quot;<b>update</b>&quot;) e obtenção (&quot;<b>get</b>&quot;) como os padrões (&quot;defaults&quot;).
 </p>
-<p>Os plugins &quot;fall through&quot; devem determinar se o plugin de processamento estÃ¡ junto com chamados para <b>next_effect_is</b> e <b>prev_effect_is</b>. Estes pegam o nome do plugin processador como um argumento de cadeia e retornam 1 caso o plugin anterior ou subseqÃ¼ente Ã© o plugin processador. Caso nenhum deles retorne 1, o plugin &quot;fall through&quot; ainda deve chamar o <b>read_frame</b> para propagar a informaÃ§Ã£o mas fazer um retorno apÃ³s isso.
+<p>Os plugins &quot;fall through&quot; devem determinar se o plugin de processamento está junto com chamados para <b>next_effect_is</b> e <b>prev_effect_is</b>. Estes pegam o nome do plugin processador como um argumento de cadeia e retornam 1 caso o plugin anterior ou subseqüente é o plugin processador. Caso nenhum deles retorne 1, o plugin &quot;fall through&quot; ainda deve chamar o <b>read_frame</b> para propagar a informação mas fazer um retorno após isso.
 </p>
-<p>O plugin processador deve chamar o <b>next_effect_is</b> e <b>prev_effect_is</b> para determinar se ele estÃ¡ agregado com um plugin &quot;fall through&quot;. Caso esteja, deve realizar as operaÃ§Ãµes do plugin &quot;fall through&quot; em sua rotina OpenGL. Os parÃ¢metros para o plugin &quot;fall through&quot; devem estar disponÃ­veis pelo <b>get_output()-&gt;get_params()</b> caso o plugin &quot;fall through&quot; os tenha configurado.
+<p>O plugin processador deve chamar o <b>next_effect_is</b> e <b>prev_effect_is</b> para determinar se ele está agregado com um plugin &quot;fall through&quot;. Caso esteja, deve realizar as operações do plugin &quot;fall through&quot; em sua rotina OpenGL. Os parâmetros para o plugin &quot;fall through&quot; devem estar disponíveis pelo <b>get_output()-&gt;get_params()</b> caso o plugin &quot;fall through&quot; os tenha configurado.
 </p>
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC331" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_24.html#SEC351" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC323" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_24.html#SEC343" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -740,7 +740,7 @@ O modelo de cor exposto a rotinas OpenGL serÃ¡ sempre de ponto flutuante uma vez
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

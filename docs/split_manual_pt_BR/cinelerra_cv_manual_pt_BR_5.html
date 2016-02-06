@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC63" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC97" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_4.html#SEC62" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC92" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,86 +56,86 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Carregando-e-salvando-arquivos"></a>
-<a name="SEC68"></a>
+<a name="SEC67"></a>
 <h1 class="chapter"> 5. Carregando e salvando arquivos </h1>
 
 
 <hr size="6">
 <a name="Formatos-de-arquivo-suportados"></a>
-<a name="SEC69"></a>
+<a name="SEC68"></a>
 <h2 class="section"> 5.1 Formatos de arquivo suportados </h2>
 
-<p>Aqui est√° a maioria dos formatos de arquivo suportados que podem ser carregados e para os quais se pode renderizar, com notas sobre sua compress√£o. Voc√™ pode ser capaz de conseguir carregar outros formatos n√£o descritos aqui. <br>
-O formato do arquivo afeta o que o Cinelerra faz com ele. Editar as Listas de Decis√£o de Edi√ß√£o (EDL) substitui as configura√ß√µes do projeto. Formatos que cont√™m m√≠dia mas n√£o edi√ß√µes de decis√µes apenas adicionam informa√ß√µes √†s trilhas. Se a taxa de amostragem de seu projeto √© 48 kHz e voc√™ carregar um arquivo de √°udio a 96khz, voc√™ ainda o estar√° reproduzindo a 48 kHz. Se voc√™ carregar um arquivo EDL a 96khz e a taxa de amostragem do projeto atual for de 48 kHz, voc√™ o mudar√° para 96 kHz. <br>
-Alguns formatos de arquivo s√£o exibidos muito lentamente na Linha do Tempo. Normalmente, eles possuem v√≠deos que est√£o altamente comprimidos. Desenhar nos v√≠deos altamente comprimidos pode ser muito lento - desabilite o desenho (&quot;picon drawing&quot;) para estes arquivos com a op√ß√£o <b>Desenhar m√≠dia</b> para aumentar a velocidade das opera√ß√µes.
+<p>Aqui est· a maioria dos formatos de arquivo suportados e notas sobre sua compress„o. VocÍ pode ser capaz de conseguir carregar outros formatos n„o descritos aqui. <br>
+O formato do arquivo afeta o que o Cinelerra faz com ele. Editar as Listas de Decis„o de EdiÁ„o (EDL) substitui as configuraÁıes do projeto. Formatos que contÍm mÌdia mas n„o ediÁıes de decisıes apenas adicionam informaÁıes ‡s trilhas. Se a taxa de amostragem de seu projeto È 48 kHz e vocÍ carregar um arquivo de ·udio a 96khz, vocÍ ainda o estar· reproduzindo a 48 kHz. Se vocÍ carregar um arquivo EDL a 96khz e a taxa de amostragem do projeto atual for de 48 kHz, vocÍ o mudar· para 96 kHz. <br>
+Alguns formatos de arquivo s„o exibidos muito lentamente na Linha do Tempo. Normalmente, eles possuem vÌdeos que est„o altamente comprimidos. Desenhar nos vÌdeos altamente comprimidos pode ser muito lento - desabilite o desenho (&quot;picon drawing&quot;) para estes arquivos com a opÁ„o <b>Desenhar mÌdia</b> para aumentar a velocidade das operaÁıes.
 </p>
 <p align="center"> <img src=".././manual_images_en/track_attributes.png" alt="manual_images_en/track_attributes">
 </p><p align="center"> <b>Atributos de trilha</b>
 </p>
-<p>Atualmente, s√£o suportados os seguintes formatos de importa√ß√£o e exporta√ß√£o:
-</p>
+<p>Atualmente, s„o suportados os seguintes formatos:
+</p><ul>
+<li> WAV
+</li><li> PCM
+</li><li> AIFF
+</li><li> ·udio AC3
+</li></ul>
+
 
 <hr size="6">
 <a name="Quicktime"></a>
-<a name="SEC70"></a>
+<a name="SEC69"></a>
 <h3 class="subsection"> 5.1.1 Quicktime </h3>
 
-<p>Quicktime n√£o √© o padr√£o para UNIX, mas n√≥s o usamos porque ele √© bem documentado. Todos os v√≠deos Quicktime na internet s√£o comprimidos. O Cinelerra n√£o suporta a maioria dos v√≠deos Quicktime comprimidos, mas suporta alguns. Se o programa der pau quando tentar carregar um v√≠deo Quicktime, isso significa que o formato provavelmente n√£o era suportado. <br>
-O Quicktime √© um cont√¢iner para 2 codecs, um codec de v√≠deo e um codec de √°udio. Os codecs de v√≠deo e √°udio s√£o pegos separadamente. A codifica√ß√£o prefer√≠vel de sa√≠da para Quicktime √© v√≠deo em MPEG-4 e √°udio em MPEG-4. Este formato toca nos reprodutores comerciais do Windows e possui uma boa qualidade de compress√£o. Para uma melhor compress√£o, use v√≠deo em H-264. Infelizmente, a decodifica√ß√£o do H-264 √© t√£o lenta que ele n√£o consegue reproduzir tamanhos de quadros muito grandes. <br>
-O Cinelerra suporta 2 codecs n√£o-padr√£o: v√≠deo em Dual MPEG-4 e v√≠deo em Dual H.264. Eles n√£o tocar√£o em nada al√©m do Cinelerra e do XMovie. Eles s√£o desenhados para v√≠deos nos quais os quadros foram divididos em 2 campos (&quot;fields&quot;), cada campo sendo exibido sequencialmente. Os codecs Dual sobrep√µem (&quot;interleave&quot;) as duas faixas de v√≠deo para melhorar a efici√™ncia sem requerer mudan√ßas maiores no reprodutor (&quot;player&quot;).
+<p>Quicktime n„o È o padr„o para UNIX, mas nÛs o usamos porque ele È bem documentado. Todos os vÌdeos Quicktime na internet s„o comprimidos. O Cinelerra n„o suporta a maioria dos vÌdeos Quicktime comprimidos, mas suporta alguns. Se o programa der pau quando tentar carregar um vÌdeo Quicktime, isso significa que o formato provavelmente n„o era suportado. <br>
+O Quicktime È um cont‚iner para 2 codecs, um codec de vÌdeo e um codec de ·udio. Os codecs de vÌdeo e ·udio s„o pegos separadamente. A codificaÁ„o preferÌvel de saÌda para Quicktime È vÌdeo em MPEG-4 e ·udio em MPEG-4. Este formato toca nos reprodutores comerciais do Windows e possui uma boa qualidade de compress„o. Para uma melhor compress„o, use vÌdeo em H-264. Infelizmente, a decodificaÁ„o do H-264 È t„o lenta que ele n„o consegue reproduzir tamanhos de quadros muito grandes. <br>
+O Cinelerra suporta 2 codecs n„o-padr„o: vÌdeo em Dual MPEG-4 e vÌdeo em Dual H.264. Eles n„o tocar„o em nada alÈm do Cinelerra e do XMovie. Eles s„o desenhados para vÌdeos nos quais os quadros foram divididos em 2 campos (&quot;fields&quot;), cada campo sendo exibido sequencialmente. Os codecs Dual sobrepıem (&quot;interleave&quot;) as duas faixas de vÌdeo para melhorar a eficiÍncia sem requerer mudanÁas maiores no reprodutor (&quot;player&quot;).
 </p>
 <hr size="6">
 <a name="g_t_00c1udio-MPEG_002d4"></a>
-<a name="SEC71"></a>
-<h3 class="subsection"> 5.1.2 √Åudio MPEG-4 </h3>
+<a name="SEC70"></a>
+<h3 class="subsection"> 5.1.2 ¡udio MPEG-4 </h3>
 
-<p>√â o mesmo que o Quicktime com MPEG-4 como codec de √°udio.
+<p>… o mesmo que o Quicktime com MPEG-4 como codec de ·udio.
+</p>
+<hr size="6">
+<a name="Seq_00fc_00eancia-de-imagens"></a>
+<a name="SEC71"></a>
+<h3 class="subsection"> 5.1.3 Seq¸Íncia de imagens </h3>
+
+<p>Renderizar uma seq¸Íncia de imagens n„o È o mesmo que renderizar uma ˙nica imagem. Quando se renderiza uma seq¸Íncia de imagens, o Cinelerra gera um arquivo de tabela de conte˙dos (&quot;TOC&quot;) para a seq¸Íncia de imagens e faz uma imagem diferente para cada posiÁ„o da Linha do Tempo. A tabela de conte˙dos pode ser carregada ao invÈs das imagens individuais para obter uma performance melhor. Para aprender mais sobre os diferentes formatos de imagens suportados em uma seq¸Íncia de imagens, leia sobre imagens est·ticas (a seguir).
+</p>
+<p>Para evitar importar no Cinelerra uma seq¸Íncia de imagens como uma sÈrie de quadros ˙nicos e para configurar manualmente sua duraÁ„o na linha do tempo, (o que seria muito lento e consumiria muitos recursos do sistema), vocÍ pode usar um &quot;arquivo de lista&quot;. Um &quot;arquivo de lista&quot; È um arquivo de texto com um formato especÌfico contendo caminhos absolutos para todos os quadros da seq¸Íncia mais informaÁıes adicionais como resoluÁ„o da imagem, formato de arquivo e taxa de quadros da seq¸Íncia. Esta lista pode ser escrita manualmente (n„o muito agrad·vel, especialmente quando se lida com longos caminhos de arquivo e muitos quadros) ou com a ajuda do IMG2LIST 0.1.5., um pequeno aplicativo escrito por Claudio &quot;malefico&quot; <small>ANDAUR</small>. Este script gera uma lista a partir de um quadro de uma seq¸Íncia de imagens e auto-detecta todos os par‚metros dela, incluindo o n˙mero de quadros, formato de arquivo e resoluÁ„o de imagem. Para saber mais sobre este Gerador de Listas do Cinelerra e para baix·-lo, veja <a href="http://argoslabs.com/~malefico/software/img2list.html">http://argoslabs.com/~malefico/software/img2list.html</a>.
 </p>
 <hr size="6">
 <a name="Imagens-est_00e1ticas"></a>
 <a name="SEC72"></a>
-<h3 class="subsection"> 5.1.3 Imagens est√°ticas </h3>
+<h3 class="subsection"> 5.1.4 Imagens est·ticas </h3>
 
 
 <hr size="6">
 <a name="Carregando-imagens-est_00e1ticas"></a>
 <a name="SEC73"></a>
-<h4 class="subsubsection"> 5.1.3.1 Carregando imagens est√°ticas </h4>
+<h4 class="subsubsection"> 5.1.4.1 Carregando imagens est·ticas </h4>
 
-<p>Voc√™ pode carregar imagens est√°ticas em trilhas de v√≠deo do mesmo modo como faria com qualquer outro arquivo de v√≠deo.<br>
-Formatos suportados s√£o principalmente: PNG, TIF, TGA ou JPG, EXR, imagens RAW de c√¢meras digitais. 
-</p>
-<p>Quando carregados na linha do tempo, por padr√£o as imagens ocupam um quadro de dura√ß√£o. Para v√™-la, aproxime a linha do tempo (<kbd>seta para baixo</kbd>) de modo que voc√™ consiga ver o quadro √∫nico. <br>
-Para extender a dura√ß√£o da imagem, arraste seus limites do mesmo modo como faria com uma m√≠dia de v√≠deo normal. <br> 
-Voc√™ pode arrastar as bordas de uma imagem est√°tica tanto quanto quiser. Imagens no Cinelerra possuem dura√ß√£o infinita. <br>
-O Cinelerra permite que voc√™ defina a dura√ß√£o inicial dos recortes carregados. O par√¢metro para isto est√° na se√ß√£o <b>Imagens</b> da janela <b>Configura√ß√µes-&gt;Prefer√™ncias-&gt;Janela de grava√ß√£o</b>. <br>
-</p>
-<p>A menos que seu material original venha de uma fonte digital (como uma c√¢mera de fotografia digital), a primeira coisa que voc√™ deve fazer antes de us√°-la √© de alguma forma capturar os blocos (&quot;assets&quot;) em um meio digital utiliz√°vel. <br>
-Para fotos antigas, mapas em papel, desenhos ou diagramas, voc√™ pode querer usar um scanner para l√™-los e transform√°-los em arquivos PNG, TIF, TGA ou JPG. Voc√™ pode querer usar o programa Gimp para p√≥s-processar as imagens, limpar √°reas danificadas ou corrigir sua colora√ß√£o. <br>
-Se suas imagens v√™m de uma fonte digital como uma c√¢mera digital ou uma captura de tela, assegure-se de capturar o material usando a melhor resolu√ß√£o poss√≠vel. Isso te ajudar√° quando estiver trabalhando com o material dentro do Cinelerra.
-</p>
-<p>Renderizar um v√≠deo para uma imagem √∫nica faz com que o arquivo de imagem final seja sobrescrito para cada posi√ß√£o na linha do tempo. O arquivo renderizado √© uma imagem est√°tica do √∫ltimo quadro do v√≠deo. Nenhuma tabela de conte√∫do √© criada. See section <a href="#SEC77">Seq√º√™ncia de imagens</a>.
+<p>Renderizar uma ˙nica imagem faz com que o arquivo de imagem seja sobrescrito para cada posiÁ„o da Linha do Tempo. Nenhuma tabela de conte˙dos È criada. Quando carregada na linha do tempo, a imagem ocupa a duraÁ„o de um quadro (&quot;frame&quot;). Aproxime a Linha do Tempo para vÍ-la. Para extender sua duraÁ„o, arraste suas bordas como vocÍ faria com recortes de vÌdeo. VocÍ pode arrastar as bordas de uma imagem est·tica tanto quanto quiser. Imagens no Cinelerra possuem duraÁ„o infinita. <br>
+O Cinelerra permite que vocÍ defina a duraÁ„o inicial dos recortes carregados. O par‚metro para isto est· na seÁ„o <b>Imagens</b> da janela <b>ConfiguraÁıes-&gt;PreferÍncias-&gt;Janela de gravaÁ„o</b>. <br>
+A menos que seu material original venha de uma fonte digital (como uma c‚mera de fotografia digital), a primeira coisa que vocÍ deve fazer antes de us·-la È de alguma forma capturar os blocos (&quot;assets&quot;) em um meio digital utiliz·vel. <br>
+Para fotos antigas, mapas em papel, desenhos ou diagramas, vocÍ pode querer usar um scanner para lÍ-los e transform·-los em arquivos PNG, TIF, TGA ou JPG. VocÍ pode querer usar o programa Gimp para pÛs-processar as imagens, limpar ·reas danificadas ou corrigir sua coloraÁ„o. <br>
+Se suas imagens vÍm de uma fonte digital como uma c‚mera digital ou uma captura de tela, assegure-se de capturar o material usando a melhor resoluÁ„o possÌvel. Isso te ajudar· quando estiver trabalhando com o material dentro do Cinelerra.
 </p>
 <hr size="6">
 <a name="Tamanho-de-imagens-est_00e1ticas"></a>
 <a name="SEC74"></a>
-<h4 class="subsubsection"> 5.1.3.2 Tamanho de imagens est√°ticas </h4>
+<h4 class="subsubsection"> 5.1.4.2 Tamanho de imagens est·ticas </h4>
 
-<p>Imagens importadas sempre ficam em seu tamanho original. Assim, voc√™ pode ter de re-escalar suas imagens antes de import√°-las no Cinelerra.<br> 
-Para re-escalar sua imagem de modo que ela se adeque ao tamanho do projeto, voc√™ pode usar o Imagemagick (<a href="http://www.imagemagick.org/script/index.php">http://www.imagemagick.org/script/index.php</a>)<br>   
-Exemplo:<br> 
-<code>convert inputfile.jpg -resize 720x576 outputfile.jpg</code><br>
-</p>
-<p>Voc√™ deve levar em considera√ß√£o a raz√£o de aspecto do seu v√≠deo. 
-Por exemplo, a raz√£o de aspecto de imagens PAL √© 4:3, mas 720x576 √© 5/4. Para que suas imagens importadas sejam exibidas corretamente, voc√™ precisa redimensionar o tamanho horizontal:
+<p><b>Importante:</b> Imagens importadas sempre ficam em seu tamanho original. Assim, vocÍ deve levar em consideraÁ„o a raz„o de aspecto de seu vÌdeo no Cinelerra e eventualmente redimensionar suas imagens antes de import·-las no Cinelerra. <br> Por exemplo, a raz„o de aspecto de imagens PAL È 4:3, mas 720x576 È 5/4. Para que suas imagens importadas sejam exibidas corretamente, vocÍ precisa redimensionar o tamanho horizontal:
 <br>
 Novo tamanho horizontal=<em>(5 / 4) / (4 / 3)</em> x Tamanho horizontal original <br>
-Para v√≠deos PAL, voc√™ tem que multiplicar o tamanho horizontal das imagens que voc√™ quer importar por um fator de 0.9375. <br>
-Aqui est√° um pequeno script shell que, quando rodado a partir de uma pasta contendo imagens jpg, redimensiona essas imagens e as coloca em uma nova pasta chamada <tt>`redimensionadas'</tt>:<br>
-Nota: Assegure-se de ter o Imagemagick instalado, que prov√™ as fun√ß√µes 'identify' e 'convert' usadas no script.
+Para vÌdeos PAL, vocÍ tem que multiplicar o tamanho horizontal das imagens que vocÍ quer importar por um fator de 0.9375. <br>
+Aqui est· um pequeno script shell que, quando rodado a partir de uma pasta contendo imagens jpg, redimensiona essas imagens e as coloca em uma nova pasta chamada <tt>`redimensionadas'</tt>:
 </p><pre class="verbatim">#/bin/sh
 mkdir redimensionadas
-for element in `ls . | grep -i '\.jpe*g$\'`;
+for element in `ls . | grep jpg`;
 do
     size=`identify ${element}`
     width=`echo ${tamanho} | sed '+s+.*JPEG ++' | sed '+s+x.*++'`
@@ -144,287 +144,225 @@ do
     convert -resize &quot;${nova_largura}x${altura}!&quot; -quality 100 ${element} resized/${element}
 done
 </pre>
-<p>Quando o tamanho de sua imagem for diferente do tamanho de seu projeto, mas a propor√ß√£o for a mesma, voc√™ pode querer a imagem em seu tamanho original, para carreg√°-la em uma trilha espec√≠fica e ajustar sua exibi√ß√£o com a aproxima√ß√£o de c√¢mera. See section <a href="cinelerra_cv_manual_pt_BR_8.html#SEC130">A c√¢mera e o projetor</a>.
-</p>
 <hr size="6">
 <a name="Abrindo-imagens-EXR"></a>
 <a name="SEC75"></a>
-<h4 class="subsubsection"> 5.1.3.3 Abrindo imagens EXR </h4>
+<h4 class="subsubsection"> 5.1.4.3 Abrindo imagens EXR </h4>
 
-<p>Voc√™ pode n√£o conhecer o Open EXR. Este formato armazena imagens de pontos flutuantes RGB (&quot;floating point RGB images&quot;). Ele tamb√©m suporta um pequeno grau de compress√£o. 
-</p>
-<p>Projetos que renderizam para EXR devem estar em um modelo de cor de ponto flutuante para obter as vantagens do EXR See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC63">Atributos do projeto</a>. <br>
-</p>
-<p>V√°rias op√ß√µes de compress√£o est√£o dispon√≠veis para EXR. <br>
+<p>VocÍ pode n„o conhecer o Open EXR. Este formato armazena imagens de pontos flutuantes RGB (&quot;floating point RGB images&quot;). Ele tambÈm suporta um pequeno grau de compress„o. Projetos que renderizam para EXR devem estar em um modelo de cor de ponto flutuante para obter vantagem dele See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC62">Atributos do projeto</a>. V·rias opÁıes de compress„o est„o disponÌveis para EXR.
 </p>
 <a name="IDX76"></a>
 <a name="IDX77"></a>
 <ul>
-<li> <b>PIZ:</b> Compress√£o &quot;lossless wavelet&quot;. Esta √© a melhor compress√£o.
+<li> <b>PIZ:</b> Compress„o &quot;lossless wavelet&quot;. Esta È a melhor compress„o.
 <a name="IDX78"></a>
 </li><li> <b>ZIP:</b> Algoritmo gzip &quot;lossless&quot;.
 <a name="IDX79"></a>
-</li><li> <b>RLE:</b> Codifica√ß√£o &quot;lossless run length&quot;. Esta √© a compress√£o mais r√°pida e pior.
+</li><li> <b>RLE:</b> CodificaÁ„o &quot;lossless run length&quot;. Esta È a compress„o mais r·pida e pior.
 <a name="IDX80"></a>
-</li><li> <b>PXR24:</b> Compress√£o &quot;lossy&quot;, na qual os n√∫meros de pontos flutuantes s√£o convertidos para 24 bits e comprimidos com gzip.
+</li><li> <b>PXR24:</b> Compress„o &quot;lossy&quot;, na qual os n˙meros de pontos flutuantes s„o convertidos para 24 bits e comprimidos com gzip.
 </li></ul>
 
-<p>Selecione <b>Usar alfa</b> se o modelo de cor do projeto possui um canal alfa e voc√™ quer mant√™-lo no arquivo. De outro modo, as cores prim√°rias ser√£o multiplicadas pelo canal alfa.
+<p>Selecione <b>Usar alfa</b> se o modelo de cor do projeto possui um canal alfa e vocÍ quer mantÍ-lo no arquivo. De outro modo, as cores prim·rias ser„o multiplicadas pelo canal alfa.
 </p>
 <hr size="6">
 <a name="Imagens-brutas-de-c_00e2meras-digitais"></a>
 <a name="SEC76"></a>
-<h4 class="subsubsection"> 5.1.3.4 Imagens brutas de c√¢meras digitais </h4>
+<h4 class="subsubsection"> 5.1.4.4 Imagens brutas de c‚meras digitais </h4>
 
-<p>Imagens brutas (&quot;RAW&quot;) de c√¢meras digitais s√£o um tipo especial de arquivo de imagem que o Cinelerra apenas importa.<br>
-Elas devem ser processadas em um espa√ßo de cor de ponto flutuante uma vez que estejam na Linha do Tempo. Imagens brutas de c√¢meras Canon s√£o as √∫nicas que foram testadas. Elas precisam que lhes seja aplicado o efeito <b>Gama</b> para corrigir o gama. Uma vez que imagens brutas levam um bom tempo para interpolar, elas normalmente s√£o vistas primeiro em um arquivo proxy e depois tocadas.
+<p>Imagens brutas (&quot;RAW&quot;) de c‚meras digitais s„o um tipo especial de arquivo de imagem que o Cinelerra apenas importa. Elas devem ser processadas em um espaÁo de cor de ponto flutuante uma vez que estejam na Linha do Tempo. Imagens brutas de c‚meras Canon s„o as ˙nicas que foram testadas. Elas precisam que lhes seja aplicado o efeito <b>Gama</b> para corrigir o gama. Uma vez que imagens brutas levam um bom tempo para interpolar, elas normalmente s„o vistas primeiro em um arquivo proxy e depois tocadas.
 </p>
-<p>Primeiro aplique o efeito Gama em uma trilha de imagens brutas e configure-o para <b>Autom√°tico</b> com gama em <b>0.6</b>. Depois, renderize a Linha do Tempo para um arquivo Quicktime JPEG. Apenda (&quot;Append&quot;) o arquivo Quicktime JPEG em uma nova trilha e desabilite a reprodu√ß√£o (&quot;playback&quot;) da trilha antiga. Agora, a c√≥pia de cada imagem bruta com o gama corrigido pode ser pr√©-visualizada relativamente r√°pido na mesma posi√ß√£o da Linha do Tempo da imagem original.
-</p>
-<hr size="6">
-<a name="Seq_00fc_00eancia-de-imagens"></a>
-<a name="SEC77"></a>
-<h3 class="subsection"> 5.1.4 Seq√º√™ncia de imagens </h3>
-
-<p>Uma seq√º√™ncia de imagens √© uma s√©rie ordenada de imagens est√°ticas (ex. os quadros de uma cena animada). Eles podem ser carregados como v√°rios arquivos.
-</p>
-<p>Uma seq√º√™ncia de imagens tamb√©m pode ser representada no Cinelerra por um arquivo de listagem de imagens, tamb√©m chamado de arquivo de Tabela de Conte√∫dos (&quot;Table Of Contents&quot;, TOC). Uma TOC √© um arquivo de texto com um formato espec√≠fico conteno caminhos absolutos para cada quadro na seq√º√™ncia, al√©m de informa√ß√µes adicionais como resolu√ß√£o, formato de arquivo e taxa de quadros da seq√º√™ncia. Para obter uma melhor performance, a tabela de conte√∫dos pode ser carregada como um bloco √∫nico ao inv√©s de imagens individuais. Uma TOC n√£o √© um arquivo de m√≠dia, mas se comporta como um recorte de v√≠deo.
-</p>
-<p>O Cinelerra cria arquivos TOC ao se renderizar como &quot;Seq√º√™ncia de imagens&quot;.<br>
-Quando se renderiza um v√≠deo para uma seq√º√™ncia de imagens, o Cinelerra cria um arquivo de imagem diferente para cada posi√ß√£o na linha do tempo e gera uma TOC para esta seq√º√™ncia de imagens. Isso √© √∫til para dividir o v√≠deo em quadros como est√°ticos √∫nicos.<br>
-Quando se renderiza uma s√©rie de quadros para uma seq√º√™ncia de imagens, o Cinelerra gera uma TOC para a seq√º√™ncia de imagens, mas tamb√©m cria um arquivo de imagem diferente para cada quadro est√°tico. Os arquivos de origem s√£o copiados e renomeados. O arquivo TOC cont√©m os caminhos para os novos arquivos. Isso √© √∫til apenas quando voc√™ quer criar uma lista e mudar o formato de seus arquivos de origem. <br>
-Para criar um arquivo TOC sem criar novos arquivos de imagem, voc√™ pode usar geradores de listas externos, como o IMG2LIST 0.1.5. (de Claudio &quot;mal√©fico&quot; <small>ANDAUR</small>) ou Seven Gnomes (de Peter <small>SEMILETOV</small>). Veja <a href="http://cvs.cinelerra.org/user-tips.php">http://cvs.cinelerra.org/user-tips.php</a>.
-</p>
-<p>O Cinelerra pode criar TOCs para os seguintes formatos: JPEG, PNG, EXR, TIFF, TGA. <br>
-Listas de imagens podem ser editadas manualmente.
+<p>Primeiro aplique o efeito Gama em uma trilha de imagens brutas e configure-o para <b>Autom·tico</b> com gama em <b>0.6</b>. Depois, renderize a Linha do Tempo para um arquivo Quicktime JPEG. Apenda (&quot;Append&quot;) o arquivo Quicktime JPEG em uma nova trilha e desabilite a reproduÁ„o (&quot;playback&quot;) da trilha antiga. Agora, a cÛpia de cada imagem bruta com o gama corrigido pode ser prÈ-visualizada relativamente r·pido na mesma posiÁ„o da Linha do Tempo da imagem original.
 </p>
 <hr size="6">
 <a name="AVI"></a>
-<a name="SEC78"></a>
+<a name="SEC77"></a>
 <h3 class="subsection"> 5.1.5 AVI </h3>
 
-<p>AVI com codecs de √°udio e v√≠deo variados. Uma vez que o AVI √© t√£o fragmentado, sua sorte vai variar.
+<p>AVI com codecs de ·udio e vÌdeo variados. Uma vez que o AVI È t„o fragmentado, sua sorte vai variar.
 </p>
 <hr size="6">
 <a name="Arquivos-MPEG-contendo-v_00eddeo"></a>
-<a name="SEC79"></a>
-<h3 class="subsection"> 5.1.6 Arquivos MPEG contendo v√≠deo </h3>
+<a name="SEC78"></a>
+<h3 class="subsection"> 5.1.6 Arquivos MPEG contendo vÌdeo </h3>
 
-<p>Arquivos MPEG contendo v√≠deo podem ser carregados diretamente no Cinelerra. Se o arquivo for suportado, uma tabela de conte√∫dos (TOC) ser√° constru√≠da. Se o arquivo n√£o for suportado, o programa normalmente d√° pau ou mostra trilhas muito pequenas. Infelizmente, este m√©todo de carregar arquivos MPEG n√£o √© bom o suficiente se voc√™ pretende usar uma fazenda de renderiza√ß√£o (&quot;renderfarm&quot;). <br>
-Para usar arquivos MPEG em uma fazenda de renderiza√ß√£o, voc√™ precisa rodar o mpeg3toc para gerar uma tabela de conte√∫dos (TOC) para o arquivo e ent√£o carregar a tabela de conte√∫dos. O mpeg3toc requere o caminho completo do arquivo MPEG. Se voc√™ n√£o usar o caminho completo, ele assume que o arquivo MPEG est√° no mesmo diret√≥rio de onde o Cinelerra est√° sendo rodado. <br>
-Faixas de MPEG s√£o estruturadas em v√°rias trilhas. Cada trilha pode ser v√≠deo ou √°udio. Cada trilha de √°udio pode ter de 1-6 canais. O Cinelerra converte cada canal de √°udio em uma trilha.
+<p>Arquivos MPEG contendo vÌdeo podem ser carregados diretamente no Cinelerra. Se o arquivo for suportado, uma tabela de conte˙dos (TOC) ser· construÌda. Se o arquivo n„o for suportado, o programa normalmente d· pau ou mostra trilhas muito pequenas. Infelizmente, este mÈtodo de carregar arquivos MPEG n„o È bom o suficiente se vocÍ pretende usar uma fazenda de renderizaÁ„o (&quot;renderfarm&quot;). <br>
+Para usar arquivos MPEG em uma fazenda de renderizaÁ„o, vocÍ precisa rodar o mpeg3toc para gerar uma tabela de conte˙dos (TOC) para o arquivo e ent„o carregar a tabela de conte˙dos. O mpeg3toc requere o caminho completo do arquivo MPEG. Se vocÍ n„o usar o caminho completo, ele assume que o arquivo MPEG est· no mesmo diretÛrio de onde o Cinelerra est· sendo rodado. <br>
+Faixas de MPEG s„o estruturadas em v·rias trilhas. Cada trilha pode ser vÌdeo ou ·udio. Cada trilha de ·udio pode ter de 1-6 canais. O Cinelerra converte cada canal de ·udio em uma trilha.
 </p>
 <a name="IDX81"></a>
-<p><b>Notas sobre codifica√ß√£o de v√≠deo em mpeg:</b> <br>
-A codifica√ß√£o de v√≠deo MPEG √© feita separadamente da codifica√ß√£o de √°udio MPEG. Em v√≠deos MPEG, h√° 2 modelos de cor. O modelo YUV 4:2:0 √© codificado por uma vers√£o altamente otimizada do mpeg2enc com pr√©-configura√ß√µes para eletr√¥nicos padr√£o de cosumidores. No processo de otimizar o mpeg2enc, eles se livraram da codifica√ß√£o YUV 4:2:2. O modelo de cor YUV 4:2:2 √© codificado por uma vers√£o menos otimizada do mpeg2enc. <br>
-A codifica√ß√£o YUV 4:2:2 foi mantida porque a vers√£o NTSC do v√≠deo DV perde muita qualidade quando transferida para YUV 4:2:0. Este v√≠deo DV deve ser transferido para YUV 4:2:2. <br>
-Quando codificando para YUV 4:2:0, o par√¢metro de taxa de bits possui um significado diferente dependendo de se a taxa de bits ou a quantiza√ß√£o √© mantida fixa. Se a taxa de bits for mantida fixa, significa a taxa de bits-alvo. Se a quantiza√ß√£o e mantida fixa, significa o m√°ximo permitido como taxa de bits. Esta √© uma coisa estranha da vers√£o do mpeg2enc.
+<p><b>Notas sobre codificaÁ„o de vÌdeo em mpeg:</b> <br>
+A codificaÁ„o de vÌdeo MPEG È feita separadamente da codificaÁ„o de ·udio MPEG. Em vÌdeos MPEG, h· 2 modelos de cor. O modelo YUV 4:2:0 È codificado por uma vers„o altamente otimizada do mpeg2enc com prÈ-configuraÁıes para eletrÙnicos padr„o de cosumidores. No processo de otimizar o mpeg2enc, eles se livraram da codificaÁ„o YUV 4:2:2. O modelo de cor YUV 4:2:2 È codificado por uma vers„o menos otimizada do mpeg2enc. <br>
+A codificaÁ„o YUV 4:2:2 foi mantida porque a vers„o NTSC do vÌdeo DV perde muita qualidade quando transferida para YUV 4:2:0. Este vÌdeo DV deve ser transferido para YUV 4:2:2. <br>
+Quando codificando para YUV 4:2:0, o par‚metro de taxa de bits possui um significado diferente dependendo de se a taxa de bits ou a quantizaÁ„o È mantida fixa. Se a taxa de bits for mantida fixa, significa a taxa de bits-alvo. Se a quantizaÁ„o e mantida fixa, significa o m·ximo permitido como taxa de bits. Esta È uma coisa estranha da vers„o do mpeg2enc.
 </p>
 <hr size="6">
 <a name="V_00eddeos-de-DVD"></a>
-<a name="SEC80"></a>
-<h3 class="subsection"> 5.1.7 V√≠deos de DVD </h3>
+<a name="SEC79"></a>
+<h3 class="subsection"> 5.1.7 VÌdeos de DVD </h3>
 
-<p>O DVD √© dividido em um n√∫mero de programas, cada um identificado por um arquivo <tt>`IFO'</tt> singular. Se voc√™ quiser carregar um DVD, ache o arquivo <tt>`IFO'</tt> correspondente para o programa de interesse. Carregue o arquivo IFO diretamente e uma tabela de conte√∫dos (TOC) ser√° constru√≠da. Alternativamente, para o uso de fazenda de renderiza√ß√£o (&quot;renderfarm&quot;), a tabela de conte√∫dos pode ser criada separadamente. <br>
+<p>O DVD È dividido em um n˙mero de programas, cada um identificado por um arquivo <tt>`IFO'</tt> singular. Se vocÍ quiser carregar um DVD, ache o arquivo <tt>`IFO'</tt> correspondente para o programa de interesse. Carregue o arquivo IFO diretamente e uma tabela de conte˙dos (TOC) ser· construÌda. Alternativamente, para o uso de fazenda de renderizaÁ„o (&quot;renderfarm&quot;), a tabela de conte˙dos pode ser criada separadamente. <br>
 <a name="IDX82"></a>
 Rode: <code>mpeg3toc -v /cdrom/video_ts/vts_01_0.ifo dvd.toc</code> <br>
-ou algo similar. Ent√£o carregue o <tt>`dvd.toc'</tt>.
+ou algo similar. Ent„o carregue o <tt>`dvd.toc'</tt>.
 </p>
 <hr size="6">
 <a name="g_t_00c1udio-MPEG-1"></a>
-<a name="SEC81"></a>
-<h3 class="subsection"> 5.1.8 √Åudio MPEG 1 </h3>
+<a name="SEC80"></a>
+<h3 class="subsection"> 5.1.8 ¡udio MPEG 1 </h3>
 
-<p>Arquivos de √°udio MPEG 1 t√™m extens√£o .mp2 e .mp3. Se os arquivos forem codificados usando uma taxa de bits fixa, eles podem ser carregados diretamente no Cinelerra. De outro modo, uma tabela de conte√∫dos (TOC) precisa ser criada e carregada no lugar do arquivo de √°udio. Se voc√™ sabe que sua faixa de √°udio possui uma taxa vari√°vel de bits ou se voc√™ reparar que o Cinelerra n√£o consegue buscar entre a faixa ou reproduzi-la corretamente, voc deve criar a TOC usando o mpeg3toc.<br> 
-Aqui est√° um exemplo de comando:<br>
-<code>mpeg3toc -v /caminho/para/meuarquivo.mp3 meuarquivo.toc</code> <br>
-<tt>`meuarquivo.toc'</tt> √© a Tabela de Conte√∫dos (&quot;Table of Contents&quot;) que pode ser carregada como recurso.<br> 
-O caminho deve se absoluto, a n√£o ser que voc√™ planeje sempre manter seus .xml no mesmo diret√≥rio que o arquivo. Para fazendas de renderiza√ß√£o, o prefixo do sistema de arquivos deve ser / e o diret√≥rio do v√≠deo montado sob o mesmo diret√≥rio em cada n√≥dulo.
-</p> 
+<p>Estes s„o arquivos .mp2 e .mp3. Se possuÌrem taxa de bits fixa, eles podem ser carregados diretamente sem nenhuma tabela de conte˙dos (TOC). Faixas com taxas de bits vari·veis precisam ter uma tabela de conte˙dos criada com o mpeg3toc.
+</p>
 <hr size="6">
 <a name="Ogg-Theora_002fVorbis"></a>
-<a name="SEC82"></a>
+<a name="SEC81"></a>
 <h3 class="subsection"> 5.1.9 Ogg Theora/Vorbis </h3>
 
-<p>O formato OGG √© uma forma antiquada mas supostamente n√£o patenteada de comprimir √°udio e v√≠deo. A qualidade n√£o √© t√£o boa quanto o H.264 ou o √°udio MPEG-4. Na realidade, qualquer pessoa com dinheiro e desejo suficiente pode achar uma viola√ß√£o de patente, ent√£o a justificativa para o OGG √© question√°vel.
+<p>O formato OGG È uma forma antiquada mas supostamente n„o patenteada de comprimir ·udio e vÌdeo. A qualidade n„o È t„o boa quanto o H.264 ou o ·udio MPEG-4. Na realidade, qualquer pessoa com dinheiro e desejo suficiente pode achar uma violaÁ„o de patente, ent„o a justificativa para o OGG È question·vel.
 </p>
 <hr size="6">
 <a name="Listas-de-decis_00f5es-de-edi_00e7_00e3o"></a>
-<a name="SEC83"></a>
-<h3 class="subsection"> 5.1.10 Listas de decis√µes de edi√ß√£o </h3>
+<a name="SEC82"></a>
+<h3 class="subsection"> 5.1.10 Listas de decisıes de ediÁ„o </h3>
 
-<p>Listas de decis√µes de edi√ß√£o s√£o geradas pelo Cinelerra para armazenar projetos. Elas possuem como extens√£o o .xml. Elas mudam os atributos do projeto quando carregadas. Uma vez que listas de decis√µes de edi√ß√£o consistem em um texto, elas podem ser editadas por um editor de texto.
-</p>
-<hr size="6">
-<a name="WAV"></a>
-<a name="SEC84"></a>
-<h3 class="subsection"> 5.1.11 WAV </h3>
-
-<p>CONSERTE-ME
-</p>
-<hr size="6">
-<a name="PCM"></a>
-<a name="SEC85"></a>
-<h3 class="subsection"> 5.1.12 PCM </h3>
-
-<p>CONSERTE-ME
-</p>
-<hr size="6">
-<a name="AIFF"></a>
-<a name="SEC86"></a>
-<h3 class="subsection"> 5.1.13 AIFF </h3>
-
-<p>CONSERTE-ME
-</p>
-<hr size="6">
-<a name="g_t_00c1udio-AC3"></a>
-<a name="SEC87"></a>
-<h3 class="subsection"> 5.1.14 √Åudio AC3 </h3>
-
-<p>CONSERTE-ME
+<p>Listas de decisıes de ediÁ„o s„o geradas pelo Cinelerra para armazenar projetos. Elas possuem como extens„o o .xml. Elas mudam os atributos do projeto quando carregadas. Uma vez que listas de decisıes de ediÁ„o consistem em um texto, elas podem ser editadas por um editor de texto.
 </p>
 <hr size="6">
 <a name="Carregando-arquivos"></a>
-<a name="SEC88"></a>
+<a name="SEC83"></a>
 <h2 class="section"> 5.2 Carregando arquivos </h2>
 
-<p>Toda informa√ß√£o que voc√™ trabalhar com o Cinelerra √© adquirida tanto por <b>gravar de um dispositivo</b> ou por <b>carregar a partir do disco</b>. Esta se√ß√£o descreve a op√ß√£o de carregar arquivos a partir do disco. <br>
-O carregamento e a reprodu√ß√£o dos arquivos √© justo como voc√™ poderia esperar. Apenas v√° para <b>arquivo-&gt;Carregar</b>, selecione um arquivo para carregar e pressione <b>ok</b>. Dependendo da configura√ß√£o da lista da Estrat√©gia de Inser√ß√£o, seu arquivo ou ser√° carregado na janela de Recursos de m√≠dia ou diretamente na janela de Programa. Neste √∫ltimo caso, clique no bot√£o de reprodu√ß√£o e ele deve come√ßar a ser reproduzido, independentemente de se uma barra de progresso apareceu ou n√£o.
+<p>Toda informaÁ„o que vocÍ trabalhar com o Cinelerra È adquirida tanto por <b>gravar de um dispositivo</b> ou por <b>carregar a partir do disco</b>. Esta seÁ„o descreve a opÁ„o de carregar arquivos a partir do disco. <br>
+O carregamento e a reproduÁ„o dos arquivos È justo como vocÍ poderia esperar. Apenas v· para <b>arquivo-&gt;Carregar</b>, selecione um arquivo para carregar e pressione <b>ok</b>. Dependendo da configuraÁ„o da lista da EstratÈgia de InserÁ„o, seu arquivo ou ser· carregado na janela de Recursos de mÌdia ou diretamente na janela de Programa. Neste ˙ltimo caso, clique no bot„o de reproduÁ„o e ele deve comeÁar a ser reproduzido, independentemente de se uma barra de progresso apareceu ou n„o.
 </p>
 <p align="center"> <img src=".././manual_images_intl/load.png" alt="manual_images_intl/load">
 </p><p align="center"> <b>A janela de carregar arquivos</b>
 </p>
-<p>Se o arquivo √© uma imagem est√°tica, os atributos do projeto n√£o ser√£o modificados e o primeiro quadro de cada trilha se torna a imagem. Se o arquivo possui √°udio, o Cinelerra pode construir um arquivo de √≠ndice para ele para aumentar a velocidade de desenho. Voc√™ pode editar e reproduzir o arquivo enquanto o arquivo de √≠ndice vai sendo criado.
+<p>Se o arquivo È uma imagem est·tica, os atributos do projeto n„o ser„o modificados e o primeiro quadro de cada trilha se torna a imagem. Se o arquivo possui ·udio, o Cinelerra pode construir um arquivo de Ìndice para ele para aumentar a velocidade de desenho. VocÍ pode editar e reproduzir o arquivo enquanto o arquivo de Ìndice vai sendo criado.
 </p>
 
 <hr size="6">
 <a name="Estrat_00e9gia-de-inser_00e7_00e3o"></a>
-<a name="SEC89"></a>
-<h3 class="subsection"> 5.2.1 Estrat√©gia de inser√ß√£o </h3>
+<a name="SEC84"></a>
+<h3 class="subsection"> 5.2.1 EstratÈgia de inserÁ„o </h3>
 
-<p>Normalmente tr√™s coisas acontecem quando voc√™ carrega um arquivo. 
+<p>Normalmente trÍs coisas acontecem quando vocÍ carrega um arquivo. 
 </p><ol>
-<li> o projeto existente √© limpado da tela
-</li><li> depois, os atributos do projeto s√£o modificados para se ajustarem aos do arquivo
-</li><li> as novas trilhas dos arquivos s√£o criadas na Linha do Tempo
+<li> o projeto existente È limpado da tela
+</li><li> depois, os atributos do projeto s„o modificados para se ajustarem aos do arquivo
+</li><li> as novas trilhas dos arquivos s„o criadas na Linha do Tempo
 </li></ol>
-<p>Mas o Cinelerra permite que voc√™ mude o que acontece quando voc√™ carrega um arquivo. <br>
-Na janela de di√°logo <b>Carregar</b>, v√° para a caixa <b>Estrat√©gia de inser√ß√£o</b> e selecione uma das op√ß√µes do menu. Cada uma das op√ß√µes carrega o arquivo de uma forma diferente.
+<p>Mas o Cinelerra permite que vocÍ mude o que acontece quando vocÍ carrega um arquivo. <br>
+Na janela de di·logo <b>Carregar</b>, v· para a caixa <b>EstratÈgia de inserÁ„o</b> e selecione uma das opÁıes do menu. Cada uma das opÁıes carrega o arquivo de uma forma diferente.
 </p>
 <ul>
 <li> <b>Substituir projeto atual</b> <br>
-Todas as trilhas do projeto atual s√£o apagadas e um conjunto de novas trilhas s√£o criadas para se ajustarem √† fonte. Os atributos do projeto s√≥ s√£o mudados se um arquivo XML for carregado. Se m√∫ltiplos arquivos forem selecionados para serem carregados, um conjunto de novas trilhas s√£o adicionadas para cada arquivo. Novos recursos s√£o criados na Janela de Recursos, substituindo os atuais.
+Todas as trilhas do projeto atual s„o apagadas e um conjunto de novas trilhas s„o criadas para se ajustarem ‡ fonte. Os atributos do projeto sÛ s„o mudados se um arquivo XML for carregado. Se m˙ltiplos arquivos forem selecionados para serem carregados, um conjunto de novas trilhas s„o adicionadas para cada arquivo. Novos recursos s„o criados na Janela de Recursos, substituindo os atuais.
 
 </li><li> <b>Substituir projeto atual e concatenar trilhas</b> <br>
-O mesmo que &quot;substituir projeto atual&quot;, exceto que, se m√∫ltiplos arquivos forem selecionados, as trilhas de cada arquivo ser√£o concatenadas ap√≥s a primeira, inserindo diferentes arquivos de fonte no mesmo conjunto de trilhas, um ap√≥s o outro, em ordem alfanum√©rica, iniciando do 0. Novos recursos s√£o criados na Janela de Recursos, substituindo os atuais.
+O mesmo que &quot;substituir projeto atual&quot;, exceto que, se m˙ltiplos arquivos forem selecionados, as trilhas de cada arquivo ser„o concatenadas apÛs a primeira, inserindo diferentes arquivos de fonte no mesmo conjunto de trilhas, um apÛs o outro, em ordem alfanumÈrica, iniciando do 0. Novos recursos s„o criados na Janela de Recursos, substituindo os atuais.
 
 </li><li> <b>Adicionar em trilhas novas</b> <br>
-O projeto atual n√£o √© apagado e novas trilhas s√£o criadas para a fonte, um conjunto de trilhas para cada arquivo. Novos recursos s√£o criados na Janela de Recursos.
+O projeto atual n„o È apagado e novas trilhas s„o criadas para a fonte, um conjunto de trilhas para cada arquivo. Novos recursos s„o criados na Janela de Recursos.
 
-</li><li> <b>Concatenar √†s trilhas existentes</b> <br>
-O projeto atual n√£o √© apagado e novos arquivos s√£o concatenados nas trilhas armadas existentes, inseridos no mesmo conjunto de trilhas do projeto atual, um ap√≥s o outro, em ordem alfanum√©rica, iniciando ao final das trilhas. Se o projeto atual possui mais trilhas do que a fonte, o arquivo de fonte ser√° inserido no primeiro conjunto de trilhas armadas. Caso n√£o haja trilhas armadas, nenhum arquivo ser√° inserido. Novos recursos s√£o criados na Janela de Recursos.
+</li><li> <b>Concatenar ‡s trilhas existentes</b> <br>
+O projeto atual n„o È apagado e novos arquivos s„o concatenados nas trilhas armadas existentes, inseridos no mesmo conjunto de trilhas do projeto atual, um apÛs o outro, em ordem alfanumÈrica, iniciando ao final das trilhas. Se o projeto atual possui mais trilhas do que a fonte, o arquivo de fonte ser· inserido no primeiro conjunto de trilhas armadas. Caso n„o haja trilhas armadas, nenhum arquivo ser· inserido. Novos recursos s„o criados na Janela de Recursos.
 
-</li><li> <b>Colar no ponto de inser√ß√£o</b> <br>
-O arquivo √© inserido na linha do tempo, no ponto de inser√ß√£o, no primeiro conjunto de trilhas armadas. Caso m√∫ltiplos arquivos sejam selecionados para serem carregados, eles ser√£o inseridos no mesmo conjunto de trilhas, um ap√≥s o outro. Novos recursos s√£o criados na Janela de Recursos.
+</li><li> <b>Colar no ponto de inserÁ„o</b> <br>
+O arquivo È inserido na linha do tempo, no ponto de inserÁ„o, no primeiro conjunto de trilhas armadas. Caso m˙ltiplos arquivos sejam selecionados para serem carregados, eles ser„o inseridos no mesmo conjunto de trilhas, um apÛs o outro. Novos recursos s„o criados na Janela de Recursos.
 
 </li><li> <b>Somente criar novos recursos</b> <br>
-A Linha do Tempo n√£o √© modificada e novos recursos s√£o criados apenas na Janela de Recursos.
+A Linha do Tempo n„o È modificada e novos recursos s„o criados apenas na Janela de Recursos.
 </li></ul>
 
-<p>Ao usar essas op√ß√µes, voc√™ consegue fazer praticamente toda a edi√ß√£o carregando os arquivos.<br>
-A estrat√©gia de inser√ß√£o √© uma op√ß√£o recorrente em v√°rias fun√ß√µes do Cinelerra. Em cada fun√ß√£o, as op√ß√µes fazem as mesmas coisas. <br>
-Se voc√™ carregar os arquivos passando argumentos de linha de comando ao Cinelerra, os arquivos s√£o carregados com as regras de <b>Substituir projeto atual</b>.
+<p>Ao usar essas opÁıes, vocÍ consegue fazer praticamente toda a ediÁ„o carregando os arquivos.<br>
+A estratÈgia de inserÁ„o È uma opÁ„o recorrente em v·rias funÁıes do Cinelerra. Em cada funÁ„o, as opÁıes fazem as mesmas coisas. <br>
+Se vocÍ carregar os arquivos passando argumentos de linha de comando ao Cinelerra, os arquivos s„o carregados com as regras de <b>Substituir projeto atual</b>.
 </p>
 <hr size="6">
 <a name="Carregando-m_00faltiplos-arquivos"></a>
-<a name="SEC90"></a>
-<h3 class="subsection"> 5.2.2 Carregando m√∫ltiplos arquivos </h3>
+<a name="SEC85"></a>
+<h3 class="subsection"> 5.2.2 Carregando m˙ltiplos arquivos </h3>
 
-<p>Na caixa de sele√ß√£o de arquivos, v√° para a lista de arquivos. Selecione um arquivo. V√° para outro arquivo e selecione-o enquanto deixa pressionada a tecla <kbd>CTRL</kbd>. Isso faz com que o arquivo adicional seja selecionado. V√° para outro arquivo e selecione-o enquanto mant√©m a tecla <kbd>SHIFT</kbd> pressionada. Isso selecionar√° todos os arquivos que estiverem entre os dois. Este comportamento tamb√©m funciona na maioria das caixas de listas. <br>
-Use este m√©todo e a estrat√©gia de inser√ß√£o <b>Concatenar √†s trilhas existentes</b> para criar um slideshow de imagens ou uma lista de reprodu√ß√£o de m√∫sicas.
+<p>Na caixa de seleÁ„o de arquivos, v· para a lista de arquivos. Selecione um arquivo. V· para outro arquivo e selecione-o enquanto deixa pressionada a tecla <kbd>CTRL</kbd>. Isso faz com que o arquivo adicional seja selecionado. V· para outro arquivo e selecione-o enquanto mantÈm a tecla <kbd>SHIFT</kbd> pressionada. Isso selecionar· todos os arquivos que estiverem entre os dois. Este comportamento tambÈm funciona na maioria das caixas de listas. <br>
+Use este mÈtodo e a estratÈgia de inserÁ„o <b>Concatenar ‡s trilhas existentes</b> para criar um slideshow de imagens ou uma lista de reproduÁ„o de m˙sicas.
 </p>
 <hr size="6">
 <a name="Carregando-arquivos-a-partir-de-um-terminal"></a>
-<a name="SEC91"></a>
+<a name="SEC86"></a>
 <h3 class="subsection"> 5.2.3 Carregando arquivos a partir de um terminal </h3>
 
-<p>Outro meio de carregar arquivos √© informar os nomes de arquivos como argumentos por linha de comando. <br>
+<p>Outro meio de carregar arquivos È informar os nomes de arquivos como argumentos por linha de comando. <br>
 <code>cinelerra meuvideo.mov videodaminhamae.mov</code> <br>
 Isso cria novas trilhas para cada arquivo e inicia o programa com todos os argumentos carregados.
 </p>
 <hr size="6">
 <a name="Filtrando-arquivos-por-extens_00e3o"></a>
-<a name="SEC92"></a>
-<h3 class="subsection"> 5.2.4 Filtrando arquivos por extens√£o </h3>
+<a name="SEC87"></a>
+<h3 class="subsection"> 5.2.4 Filtrando arquivos por extens„o </h3>
 
-<p>Caso existam muitos arquivos em sua pasta de m√≠dia, pode ser dif√≠cil achar o arquivo que voc√™ quer no meio dos outros. Para isso, a <b>janela de carregar arquivos</b> permite que voc√™ filtre quais arquivos s√£o exibidos na lista de acordo com sua extens√£o. <br>
-Clique na seta-para-baixo do campo seletor de extens√µes de arquivos (logo abaixo da caixa de nomes de arquivos) e selecione a extens√£o do arquivo de sua m√≠dia (por exemplo, mpg, mov, mp3, avi, etc). A lista de arquivos agora mostra apenas arquivos que possuem a extens√£o selecionada.
+<p>Caso existam muitos arquivos em sua pasta de mÌdia, pode ser difÌcil achar o arquivo que vocÍ quer no meio dos outros. Para isso, a <b>janela de carregar arquivos</b> permite que vocÍ filtre quais arquivos s„o exibidos na lista de acordo com sua extens„o. <br>
+Clique na seta-para-baixo do campo seletor de extensıes de arquivos (logo abaixo da caixa de nomes de arquivos) e selecione a extens„o do arquivo de sua mÌdia (por exemplo, mpg, mov, mp3, avi, etc). A lista de arquivos agora mostra apenas arquivos que possuem a extens„o selecionada.
 </p>
 <hr size="6">
 <a name="Carregando-outros-formatos"></a>
-<a name="SEC93"></a>
+<a name="SEC88"></a>
 <h3 class="subsection"> 5.2.5 Carregando outros formatos </h3>
 
-<p>Se voc√™ n√£o consegue carregar um tipo particular de v√≠deo e n√£o possui seu arquivo fonte original, voc√™ ter√° de convert√™-lo para um formato suportado pelo Cinelerra. Converter seu arquivo para mpeg2 √© uma boa solu√ß√£o, j√° que o Cinelerra carrega este tipo de arquivo sem nenhum problema. Neste caso, voc√™ deve usar o ffmpeg para fazer a convers√£o. Entretanto, os formatos mpeg2 requerem que o v√≠deo possua tamanhos de imagem e taxas de quadros espec√≠ficos:
+<p>Se vocÍ n„o consegue carregar um tipo particular de vÌdeo e n„o possui seu arquivo fonte original, vocÍ ter· de convertÍ-lo para um formato suportado pelo Cinelerra. Converter seu arquivo para mpeg2 È uma boa soluÁ„o, j· que o Cinelerra carrega este tipo de arquivo sem nenhum problema. Neste caso, vocÍ deve usar o ffmpeg para fazer a convers„o. Entretanto, os formatos mpeg2 requerem que o vÌdeo possua tamanhos de imagem e taxas de quadros especÌficos:
 </p><ul>
-<li> <b>PAL</b> √© 720x576 a 25 fps
-</li><li> <b>NTSC</b> √© 720x480 a 29.97 (=30000/1001) fps
+<li> <b>PAL</b> È 720x576 a 25 fps
+</li><li> <b>NTSC</b> È 720x480 a 29.97 (=30000/1001) fps
 </li></ul>
-<p>Para arquivos de entrada que n√£o possuam essas propriedades, voc√™ deve usar o mencoder para convert√™-los para MPEG4. Voc√™ pode identificar os codecs e o container de qualquer v√≠deo usando o comando:<br>
-<code>mplayer -identify &lt;seu_arquivo_de_v√≠deo.xyz&gt;</code>
+<p>Para arquivos de entrada que n„o possuam essas propriedades, vocÍ deve usar o mencoder para convertÍ-los para MPEG4. VocÍ pode identificar os codecs e o container de qualquer vÌdeo usando o comando:<br>
+<code>mplayer -identify &lt;seu_arquivo_de_vÌdeo.xyz&gt;</code>
 </p>
 <ul>
 <li> <b>Convertendo com o ffmpeg:</b><br>
-<code>ffmpeg -sameq -i v√≠deo_original.xyz v√≠deo_convertido.mpeg</code><br>
-A op√ß√£o <samp>`-sameq'</samp> mant√©m a qualidade original.
+<code>ffmpeg -sameq -i vÌdeo_original.xyz vÌdeo_convertido.mpeg</code><br>
+A opÁ„o <samp>`-sameq'</samp> mantÈm a qualidade original.
 
 </li><li> <b>Convertendo com o mencoder:</b><br>
-<code>mencoder v√≠deo_original.xyz -ovc lavc -lavcopts vcodec=mpeg4:\</code><br>
+<code>mencoder vÌdeo_original.xyz -ovc lavc -lavcopts vcodec=mpeg4:\</code><br>
 <code>vhq:vbitrate=6000 -oac mp3lame -lameopts br=256:vol=1 \</code><br>
-<code>-ffourcc DIVX -o v√≠deo_convertido.avi</code>
+<code>-ffourcc DIVX -o vÌdeo_convertido.avi</code>
 </li></ul>
 
 <hr size="6">
 <a name="Carregando-o-backup"></a>
-<a name="SEC94"></a>
+<a name="SEC89"></a>
 <h2 class="section"> 5.3 Carregando o backup </h2>
 
-<p>Existe um arquivo XML especial no disco r√≠gido a todo momento. Ap√≥s cada opera√ß√£o de edi√ß√£o, o Cinelerra salva o projeto atual para um arquivo de backup em <tt>`$HOME/.bcast/backup.xml'</tt>. Caso o programa d√™ algum pau, v√° para <b>arquivo-&gt;carregar backup</b> para carregar o backup.<br>
-√â importante ap√≥s um pau (o programa fechar) reiniciar o Cinelerra sem fazer nenhuma outra opera√ß√£o de edi√ß√£o. Carregar o backup deve ser a primeira opera√ß√£o, ou voc√™ sobrescrever√° o arquivo.<br>
-Note que o arquivo backup.xml sempre √© um arquivo √∫nico, mesmo quando voc√™ estiver trabalhando com dois Cinelerras abertos ao mesmo tempo. Neste caso, a √∫ltima opera√ß√£o feita e qualquer dos Cinelerras sobrescrever√° o backup.
+<p>Existe um arquivo XML especial no disco rÌgido a todo momento. ApÛs cada operaÁ„o de ediÁ„o, o Cinelerra salva o projeto atual para um arquivo de backup em <tt>`$HOME/.bcast/backup.xml'</tt>. Caso o programa dÍ algum pau, v· para <b>arquivo-&gt;carregar backup</b> para carregar o backup. … importante apÛs um pau (o programa fechar) reiniciar o Cinelerra sem fazer nenhuma outra operaÁ„o de ediÁ„o. Carregar o backup deve ser a primeira operaÁ„o, ou vocÍ sobrescrever· o arquivo.
 </p>
 <hr size="6">
 <a name="Salvando-arquivos-de-projeto"></a>
-<a name="SEC95"></a>
+<a name="SEC90"></a>
 <h2 class="section"> 5.4 Salvando arquivos de projeto </h2>
 
-<p>O Cinelerra salva projetos como arquivos XML. V√° para <b>Arquivo-&gt;salvar como...</b>. Selecione um arquivo para ser sobrescrito ou informe um novo nome de arquivo. O Cinelerra automaticamente concatenar√° o <samp>`.xml'</samp> ao nome de arquivo caso uma extens√£o <samp>`.xml'</samp> n√£o seja dada.
+<p>O Cinelerra salva projetos como arquivos XML. V· para <b>Arquivo-&gt;salvar como...</b>. Selecione um arquivo para ser sobrescrito ou informe um novo nome de arquivo. O Cinelerra automaticamente concatenar· o <samp>`.xml'</samp> ao nome de arquivo caso uma extens„o <samp>`.xml'</samp> n„o seja dada.
 </p>
-<p>Quando o Cinelerra salva um arquivo, ele salva uma lista de decis√µes de edi√ß√£o (EDL) do projeto atual, mas n√£o salva nenhuma m√≠dia. O arquivo consiste em um texto. Ele cont√©m todas as configura√ß√µes do projeto e localiza√ß√µes de cada recorte, mas ao inv√©s de m√≠dia, ele cont√©m apontadores para os arquivos originais de m√≠dia no disco r√≠gido.
+<p>Quando o Cinelerra salva um arquivo, ele salva uma lista de decisıes de ediÁ„o (EDL) do projeto atual, mas n„o salva nenhuma mÌdia. O arquivo consiste em um texto. Ele contÈm todas as configuraÁıes do projeto e localizaÁıes de cada recorte, mas ao invÈs de mÌdia, ele contÈm apontadores para os arquivos originais de mÌdia no disco rÌgido.
 </p>
-<p>Para cada arquivo de m√≠dia, o arquivo XML grava ou um caminho completo ou apenas um caminho relativo a ele. Se a m√≠dia estiver no mesmo diret√≥rio do arquivo XML, um caminho relativo ser√° salvo. Se ela estiver em uma pasta diferente, um caminho completo ser√° salvo.
+<p>Para cada arquivo de mÌdia, o arquivo XML grava ou um caminho completo ou apenas um caminho relativo a ele. Se a mÌdia estiver no mesmo diretÛrio do arquivo XML, um caminho relativo ser· salvo. Se ela estiver em uma pasta diferente, um caminho completo ser· salvo.
 </p>
-<p>Voc√™ deve ter cuidado quando movimentar seus arquivos por a√≠: voc√™ est√° se arriscando a quebrar as liga√ß√µes de m√≠dia.<br>
-Voc√™ pode manter as m√≠dias e o arquivo XML na mesma pasta para sempre e mover livremente toda a pasta, uma vez que os caminhos relativos ser√£o salvos. De um modo alternativo, voc√™ pode salvar o arquivo XML em uma pasta diferente das de m√≠dia, mas n√£o poder√° mover as m√≠dias nunca mais. Neste caso, voc√™ poder√° mover seu arquivo XML por a√≠ livremente, j√° que os caminhos absolutos est√£o salvos.<br>
-Se voc√™ salvou o seu arquivo XML na mesma pasta que suas m√≠dias mas gostaria de mov√™-lo para outro lugar, voc√™ pode modificar os caminhos de relativos para absolutos indo em <b>Arquivo-&gt;Salvar como...</b> e informar a nova localiza√ß√£o.<br>
-De modo similar, se voc√™ salvou seu projeto fora de seu diret√≥rio de m√≠dias, mas gostaria de mover sua m√≠dia para outro local, voc√™ pode mudar os caminhos de absolutos para relativos indo em <b>Arquivo-&gt;Salvar como...</b> e salvando seu arquivo XML no mesmo diret√≥rio das m√≠dias.<br>
+<p>VocÍ deve ter cuidado quando movimentar seus arquivos por aÌ: vocÍ est· se arriscando a quebrar as ligaÁıes de mÌdia. VocÍ pode manter as mÌdias e o arquivo XML na mesma pasta para sempre e mover livremente toda a pasta, uma vez que os caminhos relativos ser„o salvos. De um modo alternativo, vocÍ pode salvar o arquivo XML em uma pasta diferente das de mÌdia, mas n„o poder· mover as mÌdias nunca mais. Neste caso, vocÍ poder· mover seu arquivo XML por aÌ livremente, j· que os caminhos absolutos est„o salvos. Se vocÍ salvou o seu projeto XML na mesma pasta que suas mÌdias mas gostaria de movÍ-lo para outro lugar, vocÍ pode modificar os caminhos de relativos para absolutos indo em <b>Arquivo-&gt;Salvar como...</b> e informar a nova localizaÁ„o.
 </p>
-<p>Se voc√™ quiser criar uma lista de reprodu√ß√£o de √°udio e queim√°-la em um CD-ROM, salve o arquivo XML na mesma pasta dos arquivos de √°udio e queime todo o diret√≥rio. Isso manter√° os caminhos de m√≠dia relativos.
+<p>Se vocÍ quiser criar uma lista de reproduÁ„o de ·udio e queim·-la em um CD-ROM, salve o arquivo XML na mesma pasta dos arquivos de ·udio e queime todo o diretÛrio. Isso manter· os caminhos de mÌdia relativos.
 </p>
-<p>Deve ser dito que, sendo o arquivo XML um arquivo de texto, voc√™ sempre poder√° reparar as liga√ß√µes quebradas de m√≠dia editando o arquivo XML em um editor de texto. Para cada m√≠dia que voc√™ moveu, busque o caminho antigo e substitua-o pelo atual. N√£o esque√ßa de fazer uma c√≥pia de backup de seu arquivo XML antes de fazer qualquer edi√ß√£o!<br>
-Voc√™ pode substituir o caminho de cada bloco de edi√ß√£o cujo arquivo de origem voc√™ moveu ainda dentro do programa, informando uma nova localiza√ß√£o na <b>caixa de di√°logo de informa√ß√£o do recurso</b>. Para abrir este recurso, clique com o bot√£o direito do mouse na janela de Recursos e escolha <b>Info...</b> no menu que aparecer√°. Digite o caminho diretamente no primeiro campo do di√°logo ou clique no amplificador √† direita para navegar pelos arquivos. Fazer isso pela interface gr√°fica s√≥ √© conveniente quando um pequeno n√∫mero de mudan√ßas for necess√°rio.
+<p>Deve ser dito que, sendo o arquivo XML um arquivo de texto, vocÍ sempre poder· reparar as ligaÁıes quebradas de mÌdia editando o arquivo XML em um editor de texto. Para cada mÌdia que vocÍ moveu, busque o caminho antigo e substitua-o pelo atual. N„o esqueÁa de fazer uma cÛpia de backup de seu arquivo XML antes de fazer qualquer ediÁ„o!
 </p>
-<p>Arquivos XML s√£o √∫teis para salvar o estado atual do Cinelerra antes de sair de uma sess√£o de edi√ß√£o.<br>
-Os arquivos XML s√£o espec√≠ficos do Cinelerra. Voc√™ n√£o conseguir√° 'tocar' arquivos XML em um reprodutor de v√≠deos. <br> 
-Efeitos tempo-real em um arquivo XML devem ser re-sintetizados a cada vez que voc√™ os reproduzir.<br>
-O arquivo XML tamb√©m requere que voc√™ mantenha c√≥pias de todas as suas fontes no disco r√≠gido, o que pode ocupar espa√ßo e custar bastante eletricidade para rodar. Para um armazenamento mais persistente da sa√≠da, existe o render.
+<p>Os arquivos XML s„o ˙teis para salvar o estado atual do Cinelerra antes de sair de uma sess„o de ediÁ„o.<br>
+Os arquivos XML s„o especÌficos do Cinelerra. VocÍ n„o conseguir· 'tocar' arquivos XML em um reprodutor de vÌdeos. <br> 
+Efeitos tempo-real em um arquivo XML devem ser re-sintetizados a cada vez que vocÍ os reproduzir.<br>
+O arquivo XML tambÈm requere que vocÍ mantenha cÛpias de todas as suas fontes no disco rÌgido, o que pode ocupar espaÁo e custar bastante eletricidade para rodar. Para um armazenamento mais persistente da saÌda, existe o render.
 </p>
 <hr size="6">
 <a name="Fundindo-projetos"></a>
-<a name="SEC96"></a>
+<a name="SEC91"></a>
 <h2 class="section"> 5.5 Fundindo projetos </h2>
 
-<p>Para fundir v√°rios projetos separados em um grande projeto:
+<p>Para fundir v·rios projetos separados em um grande projeto:
 </p><ol>
 <li> Abra o Cinelerra
 </li><li> Carregue o projeto A
@@ -435,8 +373,8 @@ O arquivo XML tamb√©m requere que voc√™ mantenha c√≥pias de todas as suas fontes
 
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC68" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC97" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC67" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC92" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -449,7 +387,7 @@ O arquivo XML tamb√©m requere que voc√™ mantenha c√≥pias de todas as suas fontes
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

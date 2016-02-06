@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on Maio, 30 2008 by texi2html 1.76 -->
+<!-- Created on Fevereiro, 6 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -41,8 +41,8 @@ ul.toc {list-style: none}
 <body lang="pt" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC97" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_8.html#SEC118" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_6.html#SEC92" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_8.html#SEC113" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -56,262 +56,257 @@ ul.toc {list-style: none}
 
 <hr size="2">
 <a name="Editando"></a>
-<a name="SEC107"></a>
+<a name="SEC102"></a>
 <h1 class="chapter"> 7. Editando </h1>
 
-<p>Editar envolve tanto o domÃ­nio das trilhas quanto do tempo. Uma vez que a linha do tempo consiste em um conjunto de trilhas, vocÃª precisa se preocupar em como criar e ordenar trilhas alÃ©m de quando certas mÃ­dias aparecem em uma trilha.
+<p>Editar envolve tanto o domínio das trilhas quanto do tempo. Uma vez que a linha do tempo consiste em um conjunto de trilhas, você precisa se preocupar em como criar e ordenar trilhas além de quando certas mídias aparecem em uma trilha.
 </p>
-<p>No domÃ­nio de tempo, o Cinelerra oferece muitas abordagens para o processo de ediÃ§Ã£o. Os trÃªs mÃ©todos principais sÃ£o ediÃ§Ã£o com dois monitores, ediÃ§Ã£o de arrastar e soltar e ediÃ§Ã£o de recortar e colar.
+<p>No domínio de tempo, o Cinelerra oferece muitas abordagens para o processo de edição. Os três métodos principais são edição com dois monitores, edição de arrastar e soltar e edição de recortar e colar.
 </p>
-<p>HÃ¡ vÃ¡rios conceitos que o Cinelerra usa quando edita que se aplicam a todos os mÃ©todos. 
+<p>Há vários conceitos que o Cinelerra usa quando edita que se aplicam a todos os métodos. 
 </p>
-<p>A <b>linha do tempo</b> Ã© onde todas as decisÃµes de ediÃ§Ã£o sÃ£o representadas. Ela Ã© um conjunto de trilhas no meio da janela principal. Ela pode ser rolada para cima e para baixo, esquerda e direita com as barras de rolagem Ã  direita e abaixo dela. Ela tambÃ©m pode ser rolada para cima e para baixo com a rodinha do mouse, ou para a esquerda e direita, com a rodinha do mouse e a tecla <kbd>CTRL</kbd>.
+<p>A <b>linha do tempo</b> é onde todas as decisões de edição são representadas. Ela é um conjunto de trilhas no meio da janela principal. Ela pode ser rolada para cima e para baixo, esquerda e direita com as barras de rolagem à direita e abaixo dela. Ela também pode ser rolada para cima e para baixo com a rodinha do mouse, ou para a esquerda e direita, com a rodinha do mouse e a tecla <kbd>CTRL</kbd>.
 </p>
-<p>A <b>regiÃ£o ativa</b> Ã© a abrangÃªncia de tempo que serÃ¡ afetada pelos comandos de ediÃ§Ã£o na linha do tempo. A regiÃ£o ativa Ã© determinada primeiro pela presenÃ§a de pontos de entrada/saÃ­da na linha do tempo. Caso eles nÃ£o existam, a Ã¡rea em destaque serÃ¡ usada. Caso nÃ£o exista uma Ã¡rea destacada, o ponto de inserÃ§Ã£o serÃ¡ usado como o inÃ­cio da regiÃ£o ativa. Alguns comandos tratam todo o espaÃ§o Ã  direita do ponto de inserÃ§Ã£o como ativo enquanto outros tratam a abrangÃªncia ativa como 0 se nenhum ponto de tÃ©rmino para a regiÃ£o ativa for definido.
+<p>A <b>região ativa</b> é a abrangência de tempo que será afetada pelos comandos de edição na linha do tempo. A região ativa é determinada primeiro pela presença de pontos de entrada/saída na linha do tempo. Caso eles não existam, a área em destaque será usada. Caso não exista uma área destacada, o ponto de inserção será usado como o início da região ativa. Alguns comandos tratam todo o espaço à direita do ponto de inserção como ativo enquanto outros tratam a abrangência ativa como 0 se nenhum ponto de término para a região ativa for definido.
 </p>
-<p>Finalmente, decisÃµes de ediÃ§Ã£o nunca afetam o material fonte. Isso chama-se <b>ediÃ§Ã£o nÃ£o-destrutiva</b> e tornou-se popular com o Ã¡udio porque era muito mais rÃ¡pida do que se vocÃª tivesse que copiar toda a mÃ­dia afetada por uma ediÃ§Ã£o. Editar afeta apenas apontadores para o material fonte, entÃ£o se vocÃª quiser ter um arquivo de mÃ­dia ao final de sua sessÃ£o de ediÃ§Ã£o que represente suas decisÃµes de ediÃ§Ã£o, vocÃª precisa fazer um <b>render</b>.  See section <a href="cinelerra_cv_manual_pt_BR_20.html#SEC267">Renderizando arquivos</a>. See section <a href="cinelerra_cv_manual_pt_BR_5.html#SEC95">Salvando arquivos de projeto</a>.
+<p>Finalmente, decisões de edição nunca afetam o material fonte. Isso chama-se <b>edição não-destrutiva</b> e tornou-se popular com o áudio porque era muito mais rápida do que se você tivesse que copiar toda a mídia afetada por uma edição. Editar afeta apenas apontadores para o material fonte, então se você quiser ter um arquivo de mídia ao final de sua sessão de edição que represente suas decisões de edição, você precisa fazer um <b>render</b>.  See section <a href="cinelerra_cv_manual_pt_BR_20.html#SEC262">Renderizando arquivos</a>. See section <a href="cinelerra_cv_manual_pt_BR_5.html#SEC90">Salvando arquivos de projeto</a>.
 </p>
 
 <hr size="6">
 <a name="O-patchbay"></a>
-<a name="SEC108"></a>
+<a name="SEC103"></a>
 <h2 class="section"> 7.1 O patchbay </h2>
 
-<p>Ã€ esquerda de linha do tempo estÃ¡ uma regiÃ£o afetuosamente conhecida como o patchbay. O patchbay habilita funÃ§Ãµes especÃ­ficas para cada trilha. 
+<p>À esquerda de linha do tempo está uma região afetuosamente conhecida como o patchbay. O patchbay habilita funções específicas para cada trilha. 
 </p>
-<p>Todas as trilhas tÃªm uma <b>Ã¡rea de texto</b> para nomear a trilha.
+<p>Todas as trilhas têm uma <b>área de texto</b> para nomear a trilha.
 </p>
-<p>Todas as trilhas possuem um <b>expandidor</b> <img src=".././manual_images_intl/expandpatch_checked.png" alt="manual_images_intl/expandpatch_checked"> para ver mais opÃ§Ãµes no patchbay e para ver os efeitos representados na trilha. Clique na seta para expandir ou encolher o patchbay e a trilha. Caso esteja apontando para o lado, a trilha estÃ¡ encolhida. Caso esteja apontando para baixo, a trilha estÃ¡ expandida. Efeitos existentes aparecem abaixo da mÃ­dia daquela trilha, caso existam.
+<p>Todas as trilhas possuem um <b>expandidor</b> <img src=".././manual_images_intl/expandpatch_checked.png" alt="manual_images_intl/expandpatch_checked"> para ver mais opções no patchbay e para ver os efeitos representados na trilha. Clique na seta para expandir ou encolher o patchbay e a trilha. Caso esteja apontando para o lado, a trilha está encolhida. Caso esteja apontando para baixo, a trilha está expandida. Efeitos existentes aparecem abaixo da mídia daquela trilha, caso existam.
 </p>
-<p>Todas as trilhas possuem a seguinte lista de habilitaÃ§Ãµes para vÃ¡rias funÃ§Ãµes.
+<p>Todas as trilhas possuem a seguinte lista de habilitações para várias funções.
 </p>
 <p align="center"> <img src=".././manual_images_en/track_attributes.png" alt="manual_images_en/track_attributes">
 </p><p align="center"> <b>Atributos de trilha</b>
 </p>
-<p>Se o botÃ£o que habilita a funÃ§Ã£o estiver colorido, a funÃ§Ã£o estarÃ¡ habilitada. Se ele estiver com a mesma cor do fundo da maioria das janelas, ele estÃ¡ desabilitado. Clique no botÃ£o para habilitar ou desabilitar a funÃ§Ã£o. VÃ¡rias operaÃ§Ãµes de mouse aceleram a configuraÃ§Ã£o de vÃ¡rias trilhas ao mesmo tempo.
+<p>Se o botão que habilita a função estiver colorido, a função estará habilitada. Se ele estiver com a mesma cor do fundo da maioria das janelas, ele está desabilitado. Clique no botão para habilitar ou desabilitar a função. Várias operações de mouse aceleram a configuração de várias trilhas ao mesmo tempo.
 </p>
 <p>Clique em um atributo e arraste o cursor por trilhas adjacentes para copiar o mesmo atributo para essas trilhas.
 </p>
-<p>Mantenha o <kbd>SHIFT</kbd> pressionado enquanto clica em um atributo de uma trilha para habilitÃ¡-lo na trilha atual e desabilitÃ¡-lo em todas as outras trilhas.
+<p>Mantenha o <kbd>SHIFT</kbd> pressionado enquanto clica em um atributo de uma trilha para habilitá-lo na trilha atual e desabilitá-lo em todas as outras trilhas.
 </p>
-<p>Mantenha o <kbd>SHIFT</kbd> pressionado enquanto clica em um atributo. Clique atÃ© que todas as outras trilhas que nÃ£o a selecionada estejam desabilitadas. Arraste entÃ£o o cursor por sobre a trilha adjacente para habilitar o atributo na trilha adjacente.
+<p>Mantenha o <kbd>SHIFT</kbd> pressionado enquanto clica em um atributo. Clique até que todas as outras trilhas que não a selecionada estejam desabilitadas. Arraste então o cursor por sobre a trilha adjacente para habilitar o atributo na trilha adjacente.
 </p>
-<p>Atributos que afetam a saÃ­da da trilha:
+<p>Atributos que afetam a saída da trilha:
 <a name="IDX89"></a>
 </p><ul>
 <li> <b>Reproduzir trilha</b> <br>
-Determina se a trilha serÃ¡ renderizada ou nÃ£o. Se estiver desligado, a trilha nÃ£o serÃ¡ renderizada. Por exemplo, se vocÃª desligÃ¡-lo em todas as trilhas de vÃ­deo, a mÃ­dia renderizada terÃ¡ apenas trilhas de Ã¡udio. Entretanto, se a trilha estiver amarrada (&quot;chained&quot;) a outras trilhas por meio de um efeito compartilhado, as outras trilhas executarÃ£o todos os efeitos nesta trilha amarrada, independentemente do status de reproduÃ§Ã£o da trilha amarrada, que neste caso em particular afeta a saÃ­da de mÃ­dia mas nÃ£o os fades ou efeitos. See section <a href="cinelerra_cv_manual_pt_BR_14.html#SEC150">Tipos de efeitos tempo-real</a>.
+Determina se a trilha será renderizada ou não. Se estiver desligado, a trilha não será renderizada. Por exemplo, se você desligá-lo em todas as trilhas de vídeo, a mídia renderizada terá apenas trilhas de áudio. Entretanto, se a trilha estiver amarrada (&quot;chained&quot;) a outras trilhas por meio de um efeito compartilhado, as outras trilhas executarão todos os efeitos nesta trilha amarrada, independentemente do status de reprodução da trilha amarrada, que neste caso em particular afeta a saída de mídia mas não os fades ou efeitos. See section <a href="cinelerra_cv_manual_pt_BR_14.html#SEC145">Tipos de efeitos tempo-real</a>.
 
 <a name="IDX90"></a>
 </li><li> <b>Armar trilha</b> <br>
-Determina se a trilha estÃ¡ armada ou nÃ£o. Apenas as trilhas armadas sÃ£o afetadas por operaÃ§Ãµes de ediÃ§Ã£o. Assegure-se de ter trilhas de destino armadas o suficiente quando for colar ou dividir material ou algumas trilhas do projeto ficarÃ£o de fora. <br>
-AlÃ©m de restringir operaÃ§Ãµes de ediÃ§Ã£o, as trilhas armadas em combinaÃ§Ã£o com a regiÃ£o ativa determinam onde o material serÃ¡ inserido quando arquivos forem carregados. Se os arquivos forem carregados com uma das estratÃ©gias de inserÃ§Ã£o que nÃ£o apagam o projeto atual, as trilhas armadas serÃ£o usadas como destino. <br>
+Determina se a trilha está armada ou não. Apenas as trilhas armadas são afetadas por operações de edição. Assegure-se de ter trilhas de destino armadas o suficiente quando for colar ou dividir material ou algumas trilhas do projeto ficarão de fora. <br>
+Além de restringir operações de edição, as trilhas armadas em combinação com a região ativa determinam onde o material será inserido quando arquivos forem carregados. Se os arquivos forem carregados com uma das estratégias de inserção que não apagam o projeto atual, as trilhas armadas serão usadas como destino. <br>
 Pressione <kbd>TAB</kbd> enquanto o cursor estiver em qualquer lugar por sobre uma trilha para armar ou desarmar aquela trilha. <br>
-Pressione <kbd>SHIFT-TAB</kbd> enquanto o cursor estiver por sobre uma trilha para mudar o status de armaÃ§Ã£o de todas as outras trilhas.
+Pressione <kbd>SHIFT-TAB</kbd> enquanto o cursor estiver por sobre uma trilha para mudar o status de armação de todas as outras trilhas.
 
 <a name="IDX91"></a>
 </li><li> <b>Fader grupal</b> <br>
-Faz o fader rastrear o movimento de quaisquer outros faders que vocÃª estiver ajustando arrastando ou o fader ou a curva na trilha. Isso nÃ£o afeta a ediÃ§Ã£o feita com controles de menu. Um fader sÃ³ serÃ¡ agrupado - estar relacionado a outros faders - se a funÃ§Ã£o <b>armar trilha</b> tambÃ©m estiver ligada. Isso normalmente Ã© usado para ajustar os nÃ­veis de Ã¡udio de todas as trilhas simultaneamente. Agrupar tambÃ©m faz com que os parÃ¢metros de <b>Deslocar</b> sejam sincronizados por todas as trilhas agrupadas.
+Faz o fader rastrear o movimento de quaisquer outros faders que você estiver ajustando arrastando ou o fader ou a curva na trilha. Isso não afeta a edição feita com controles de menu. Um fader só será agrupado - estar relacionado a outros faders - se a função <b>armar trilha</b> também estiver ligada. Isso normalmente é usado para ajustar os níveis de áudio de todas as trilhas simultaneamente. Agrupar também faz com que os parâmetros de <b>Deslocar</b> sejam sincronizados por todas as trilhas agrupadas.
 
 <a name="IDX92"></a>
-</li><li> <b>Desenhar mÃ­dia</b> <br>
-Determina se haverÃ¡ prÃ©-visualizaÃ§Ã£o de Ã­cones e ondas sonoras na trilha. Por padrÃ£o, alguns formatos de arquivos sÃ£o carregados com esta funÃ§Ã£o desligada enquanto outros formatos carregam com ela habilitada. Isso dependerÃ¡ de se o formato de arquivo leva muito tempo para ser desenhado na linha do tempo. Apenas ajuste-o para 'habilitado' se vocÃª quer ver a prÃ©-visualizaÃ§Ã£o para qualquer tipo de formato.
+</li><li> <b>Desenhar mídia</b> <br>
+Determina se haverá pré-visualização de ícones e ondas sonoras na trilha. Por padrão, alguns formatos de arquivos são carregados com esta função desligada enquanto outros formatos carregam com ela habilitada. Isso dependerá de se o formato de arquivo leva muito tempo para ser desenhado na linha do tempo. Apenas ajuste-o para 'habilitado' se você quer ver a pré-visualização para qualquer tipo de formato.
 
 <a name="IDX93"></a>
 </li><li> <b>Mutar trilha</b> <br>
-Faz com que a saÃ­da seja descartada quando a trilha estiver completamente renderizada. Isso acontece independentemente de se a funÃ§Ã£o <b>reproduzir trilha</b> estiver ou nÃ£o ligada. Por exemplo, se vocÃª mutar todas as trilhas de vÃ­deo, a mÃ­dia renderizada possuirÃ¡ uma trilha de vÃ­deo em branco.<br>
-Mutar trilha estÃ¡ representado na linha do tempo com uma linha azul. VÃ¡ para <b>Ver -&gt; Mutar</b> para fazÃ¢-lo aparecer. Ã‰ um atributo que pode levar quadros-chave, mas usar quadros-chave aqui Ã© uma funÃ§Ã£o apenas habilitar/desabilitar e possui, ao contrÃ¡rio das curvas, apenas dois valores: ligado ou desligado.<br>
-Se uma trilha for parte de uma trilha com efeito compartilhado, a saÃ­da da trilha com o efeito compartilhado de trilha serÃ¡ sobreposta na saÃ­da final, mesmo sendo roteada de volta para outra trilha (a trilha compartilhada). 
-Mutar trilha Ã© usado para evitar que a trilha com o efeito compartilhado de trilha se sobreponha Ã  saÃ­da da trilha de origem (a trilha compartilhada), onde o efeito de compartilhamento de trilha nÃ£o estÃ¡ presente. See section <a href="cinelerra_cv_manual_pt_BR_14.html#SEC150">Tipos de efeitos tempo-real</a>.
+Faz com que a saída seja descartada quando a trilha estiver completamente renderizada. Isso acontece independentemente de se a função <b>reproduzir trilha</b> estiver ou não ligada. Por exemplo, se você mutar todas as trilhas de vídeo, a mídia renderizada possuirá uma trilha de vídeo em branco. Se uma trilha for parte de uma trilha com efeito compartilhado, a saída da trilha com o efeito compartilhado de trilha será sobreposta na saída final, mesmo sendo roteada de volta para outra trilha (a trilha compartilhada). 
+Mutar trilha é usado para evitar que a trilha com o efeito compartilhado de trilha se sobreponha à saída da trilha de origem (a trilha compartilhada), onde o efeito de compartilhamento de trilha não está presente. See section <a href="cinelerra_cv_manual_pt_BR_14.html#SEC145">Tipos de efeitos tempo-real</a>.
 
 <a name="IDX94"></a>
 </li><li> <b>Fader</b> <br>
-Valores de fade sÃ£o representados na linha do tempo por uma curva branca que pode levar quadros-chave.
-Todas as trilhas possuem um fader, mas as unidades de cada fader dependem de se ele Ã© relacionado a um Ã¡udio ou a um vÃ­deo. <br>
-Valores de fade de Ã¡udio estÃ£o em dB. Eles representam nÃ­veis relativos, onde o 0 Ã© o nÃ­vel de som original nÃ£o alterado, -40 Ã© silÃªncio, -80 o valor mÃ­nimo configurado por padrÃ£o. VocÃª pode mover os faders e os quadros-chave para abaixo de -80, mas a curva dos parÃ¢metros nÃ£o passarÃ¡ de -40. Para a sua conveniÃªncia, vocÃª pode configurar uma abrangÃªncia de fader diferente com a aproximaÃ§Ã£o de curva. See section <a href="cinelerra_cv_manual_pt_BR_6.html#SEC101">O painel de aproximaÃ§Ã£o</a>. O propÃ³sito principal dos faders de Ã¡udio Ã© o de esvanecer o com ou abaixar seu volume suavemente atÃ© o silÃªncio, ou fazÃª-lo aparecer suavemente ao invÃ©s de abruptamente. <br>
-Os valores de fade de vÃ­deo sÃ£o a porcentagem da opacidade da imagem no modo de sobreposiÃ§Ã£o normal, a porcetagem da camada que for mixada na fila (&quot;pipeline&quot;) de renderizaÃ§Ã£o nos outros modos de sobreposiÃ§Ã£o. See section <a href="cinelerra_cv_manual_pt_BR_8.html#SEC139">Modos de sobreposiÃ§Ã£o</a>. <br>
-Clique e arraste o fader para reduzir ou aumentar a saÃ­da (de imagem ou de som). Se ele estiver agrupado a outras trilhas do mesmo tipo de mÃ­dia com a funÃ§Ã£o <b>armar</b> habilitada, os outros faders devem segui-lo. Mantenha o <kbd>SHIFT</kbd> pressionado e arraste um fader para centralizÃ¡-lo em seu valor original (0 para Ã¡udio, 100 para vÃ­deo).
+Todas as trilhas possuem um fader, mas as unidades de cada fader dependem de se ele é relacionado a um áudio ou a um vídeo. <br>
+Valores de fade de áudio estão em dB. Eles representam níveis relativos, onde o 0 é o nível de som original não alterado, -40 é silêncio, -80 o valor mínimo configurado por padrão. Você pode mover os faders e os quadros-chave para abaixo de -80, mas a curva dos parâmetros não passará de -40. Para a sua conveniência, você pode configurar uma abrangência de fader diferente com a aproximação de curva. See section <a href="cinelerra_cv_manual_pt_BR_6.html#SEC96">O painel de aproximação</a>. O propósito principal dos faders de áudio é o de esvanecer o com ou abaixar seu volume suavemente até o silêncio, ou fazê-lo aparecer suavemente ao invés de abruptamente. <br>
+Os valores de fade de vídeo são a porcentagem da opacidade da imagem no modo de sobreposição normal, a porcetagem da camada que for mixada na fila (&quot;pipeline&quot;) de renderização nos outros modos de sobreposição. See section <a href="cinelerra_cv_manual_pt_BR_8.html#SEC134">Modos de sobreposição</a>. <br>
+Clique e arraste o fader para reduzir ou aumentar a saída (de imagem ou de som). Se ele estiver agrupado a outras trilhas do mesmo tipo de mídia com a função <b>armar</b> habilitada, os outros faders devem segui-lo. Mantenha o <kbd>SHIFT</kbd> pressionado e arraste um fader para centralizá-lo em seu valor original (0 para áudio, 100 para vídeo).
 </li></ul>
 
 <hr size="6">
 <a name="Empurrando-trilhas"></a>
-<a name="SEC109"></a>
+<a name="SEC104"></a>
 <h2 class="section"> 7.2 Empurrando trilhas </h2>
 
-<p>Cada trilha possui uma caixa de texto de deslocamento (&quot;nudge&quot;) em seu patchbay. VocÃª deve ter que expandir a trilha para vÃª-la. Essas sÃ£o as imagens do patchbays quando expandido.
+<p>Cada trilha possui uma caixa de texto de deslocamento (&quot;nudge&quot;) em seu patchbay. Você deve ter que expandir a trilha para vê-la. Essas são as imagens do patchbays quando expandido.
 </p>
 <p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
-</p><p align="center"> <b>Fazendo panorÃ¢mica e deslocamento para uma trilha de Ã¡udio</b>
+</p><p align="center"> <b>Fazendo panorâmica e deslocamento para uma trilha de áudio</b>
 </p>
 <p align="center"> <img src=".././manual_images_en/vpatches.png" alt="manual_images_en/vpatches">
-</p><p align="center"> <b>Modo de sobreposiÃ§Ã£o e deslocamento para uma trilha de vÃ­deo</b>
+</p><p align="center"> <b>Modo de sobreposição e deslocamento para uma trilha de vídeo</b>
 </p>
-<p>O valor do deslocamento (&quot;nudge&quot;) Ã© o quanto a trilha Ã© empurrada para a esquerda ou direita durante a reproduÃ§Ã£o. A trilha nÃ£o Ã© disposta deslocada na linha do tempo, mas Ã© deslocada quando Ã© reproduzida. Isso Ã© Ãºtil para sincronizar Ã¡udio com vÃ­deo, criar um falso estÃ©reo ou compensar um efeito que modifica o tempo, tudo sem modificar os blocos de ediÃ§Ã£o.
+<p>O valor do deslocamento (&quot;nudge&quot;) é o quanto a trilha é empurrada para a esquerda ou direita durante a reprodução. A trilha não é disposta deslocada na linha do tempo, mas é deslocada quando é reproduzida. Isso é útil para sincronizar áudio com vídeo, criar um falso estéreo ou compensar um efeito que modifica o tempo, tudo sem modificar os blocos de edição.
 </p>
-<p>Apenas informe a quantidade de tempo para ser deslocada para deslocar imediatamente a trilha. NÃºmeros negativos fazem a trilha ser reproduzida com atraso. NÃºmeros positivos fazem com que seja reproduzida com antecedÃªncia. As unidades de deslocamento (&quot;nudge&quot;) sÃ£o tanto <b>segundos</b> ou as unidades nativas para a trilha (<b>quadros</b> ou <b>amostragem</b>). Selecione as unidades <b>clicando com o botÃ£o direito do mouse</b> na caixa de texto de deslocamento e selecione a partir do menu.
+<p>Apenas informe a quantidade de tempo para ser deslocada para deslocar imediatamente a trilha. Números negativos fazem a trilha ser reproduzida com atraso. Números positivos fazem com que seja reproduzida com antecedência. As unidades de deslocamento (&quot;nudge&quot;) são tanto <b>segundos</b> ou as unidades nativas para a trilha (<b>quadros</b> ou <b>amostragem</b>). Selecione as unidades <b>clicando com o botão direito do mouse</b> na caixa de texto de deslocamento e selecione a partir do menu.
 </p>
-<p>ConfiguraÃ§Ãµes de deslocamento sÃ£o agrupadas com a funÃ§Ã£o <b>Agrupar faders</b> e a funÃ§Ã£o <b>Armar trilha</b>.
+<p>Configurações de deslocamento são agrupadas com a função <b>Agrupar faders</b> e a função <b>Armar trilha</b>.
 </p>
-<p>Use a rodinha do mouse por sobre a caixa de texto de deslocamento para aumentar ou diminuir o nÃºmero ali.
+<p>Use a rodinha do mouse por sobre a caixa de texto de deslocamento para aumentar ou diminuir o número ali.
 </p>
 <hr size="6">
 <a name="Fazendo-um-pan-nas-trilhas-de-_00e1udio"></a>
-<a name="SEC110"></a>
-<h2 class="section"> 7.3 Fazendo um pan nas trilhas de Ã¡udio </h2>
+<a name="SEC105"></a>
+<h2 class="section"> 7.3 Fazendo um pan nas trilhas de áudio </h2>
 
-<p>Trilhas de Ã¡udio possuem uma caixa de pan em seu patchbay. VocÃª pode ter que expandir a trilha para vÃª-la. A caixa de pan Ã© mostrada aqui.
+<p>Trilhas de áudio possuem uma caixa de pan em seu patchbay. Você pode ter que expandir a trilha para vê-la. A caixa de pan é mostrada aqui.
 </p>
 <p align="center"> <img src=".././manual_images_en/apatches.png" alt="manual_images_en/apatches">
-</p><p align="center"> <b>Fazendo panorÃ¢mica e deslocamento para uma trilha de Ã¡udio</b>
+</p><p align="center"> <b>Fazendo panorâmica e deslocamento para uma trilha de áudio</b>
 </p>
-<p>Posicione o apontador na caixa de pan e clique/arraste-o para reposicionar a saÃ­da de Ã¡udio conforme o arranjo dos falantes. A altura de cada falante Ã© impressa em seu Ã­cone respectivo durante a operaÃ§Ã£o de arraste. A caixa de pan usa um algoritmo especial para tentar permitir que o Ã¡udio seja focado atravÃ©s de um falante ou dividido entre os falantes mais prÃ³ximos quando mais de 2 falantes estiverem sendo usados.
+<p>Posicione o apontador na caixa de pan e clique/arraste-o para reposicionar a saída de áudio conforme o arranjo dos falantes. A altura de cada falante é impressa em seu ícone respectivo durante a operação de arraste. A caixa de pan usa um algoritmo especial para tentar permitir que o áudio seja focado através de um falante ou dividido entre os falantes mais próximos quando mais de 2 falantes estiverem sendo usados.
 </p>
 <hr size="6">
 <a name="Pan-autom_00e1tico-de-trilhas-de-_00e1udio"></a>
-<a name="SEC111"></a>
-<h2 class="section"> 7.4 Pan automÃ¡tico de trilhas de Ã¡udio </h2>
+<a name="SEC106"></a>
+<h2 class="section"> 7.4 Pan automático de trilhas de áudio </h2>
 
-<p>VÃ¡rias funÃ§Ãµes de conveniÃªncia sÃ£o dadas para configurar automaticamente o pan para vÃ¡rios padrÃµes comuns. Elas estÃ£o listadas no menu de <b>Ãudio</b>. Estas funÃ§Ãµes afetam apenas as trilhas de Ã¡udio armadas. Elas sÃ£o:
+<p>Várias funções de conveniência são dadas para configurar automaticamente o pan para vários padrões comuns. Elas estão listadas no menu de <b>Áudio</b>. Estas funções afetam apenas as trilhas de áudio armadas. Elas são:
 </p>
 <ul>
-<li> <b>Ãudio-&gt;Mapear 1:1</b> <br>
-Mapeia cada trilha para seu prÃ³prio canal e espera (&quot;wraps around&quot;) atÃ© que todos os canais sejam alocados. Ã‰ Ãºtil principalmente para fazer 2 trilhas com 2 canais mapearem para estÃ©reo e para fazer 6 trilhas com 6 canais mapearem para uma placa de Ã¡udio de 6 canais.
+<li> <b>Áudio-&gt;Mapear 1:1</b> <br>
+Mapeia cada trilha para seu próprio canal e espera (&quot;wraps around&quot;) até que todos os canais sejam alocados. É útil principalmente para fazer 2 trilhas com 2 canais mapearem para estéreo e para fazer 6 trilhas com 6 canais mapearem para uma placa de áudio de 6 canais.
 
-</li><li> <b>Ãudio-&gt;Mapear 5.1:2</b> <br>
-Mapeia 6 trilhas para 2 canais. O projeto deve ter 2 canais quando esta funÃ§Ã£o for usada. VÃ¡ para <b>ConfiguraÃ§Ãµes-&gt;formato</b> para configurar a saÃ­da dos canais para 2. Isso Ã© Ãºtil principalmente para fazer um down-mix de Ã¡udio 5.1 para estÃ©reo.
+</li><li> <b>Áudio-&gt;Mapear 5.1:2</b> <br>
+Mapeia 6 trilhas para 2 canais. O projeto deve ter 2 canais quando esta função for usada. Vá para <b>Configurações-&gt;formato</b> para configurar a saída dos canais para 2. Isso é útil principalmente para fazer um down-mix de áudio 5.1 para estéreo.
 </li></ul>
-<p>See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC66">Atributos de Ã¡udio</a>.
+<p>See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC65">Atributos de áudio</a>.
 </p>
 <hr size="6">
 <a name="Mapeamentos-padr_00e3o-de-_00e1udio"></a>
-<a name="SEC112"></a>
-<h2 class="section"> 7.5 Mapeamentos padrÃ£o de Ã¡udio </h2>
+<a name="SEC107"></a>
+<h2 class="section"> 7.5 Mapeamentos padrão de áudio </h2>
 
-<p>Embora o Cinelerra permita que vocÃª mapeie qualquer trilha de Ã¡udio para qualquer falante, existem mapeamentos padrÃ£o que vocÃª pode usar para ter certeza de que a mÃ­dia possa ser reproduzida em outros lugares. AlÃ©m disso, a maioria dos transcodificadores de Ã¡udio requerem que as trilhas de Ã¡udio sejam mapeadas para nÃºmeros padrÃ£o de falantes ou elas nÃ£o funcionarÃ£o.
+<p>Embora o Cinelerra permita que você mapeie qualquer trilha de áudio para qualquer falante, existem mapeamentos padrão que você pode usar para ter certeza de que a mídia possa ser reproduzida em outros lugares. Além disso, a maioria dos transcodificadores de áudio requerem que as trilhas de áudio sejam mapeadas para números padrão de falantes ou elas não funcionarão.
 </p>
 <a name="IDX95"></a>
 <a name="IDX96"></a>
-<p>Na opÃ§Ã£o <b>PosiÃ§Ãµes dos canais</b> de See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC66">Atributos de Ã¡udio</a>, os canais sÃ£o numerados para corresponder Ã s trilhas de saÃ­da para onde sÃ£o renderizados. Para estÃ©reo, a fonte do canal 1 requere ser a trilha da esquerda e a fonte do canal 2 precisa ser a trilha da direita.
+<p>Na opção <b>Posições dos canais</b> de See section <a href="cinelerra_cv_manual_pt_BR_4.html#SEC65">Atributos de áudio</a>, os canais são numerados para corresponder às trilhas de saída para onde são renderizados. Para estéreo, a fonte do canal 1 requere ser a trilha da esquerda e a fonte do canal 2 precisa ser a trilha da direita.
 </p>
-<p>Para som surround 5.1, as fontes dos 6 canais precisam estar na ordem centro, esquerda-frente, direita-frente, esquerda-trÃ¡s, direita-trÃ¡s, efeitos de baixa freqÃ¼Ãªncia. Se as trilhas certas nÃ£o forem mapeadas para os falantes certos, a maioria dos transcodificadores de Ã¡udio nÃ£o codificarÃ£o a informaÃ§Ã£o certa, se Ã© que codificarÃ£o alguma coisa. A trilha para efeitos de baixa freqÃ¼Ãªncia especificamente nÃ£o pode armazenar freqÃ¼Ãªncias altas na maioria dos casos.
+<p>Para som surround 5.1, as fontes dos 6 canais precisam estar na ordem centro, esquerda-frente, direita-frente, esquerda-trás, direita-trás, efeitos de baixa freqüência. Se as trilhas certas não forem mapeadas para os falantes certos, a maioria dos transcodificadores de áudio não codificarão a informação certa, se é que codificarão alguma coisa. A trilha para efeitos de baixa freqüência especificamente não pode armazenar freqüências altas na maioria dos casos.
 </p>
 <hr size="6">
 <a name="Manipulando-trilhas"></a>
-<a name="SEC113"></a>
+<a name="SEC108"></a>
 <h2 class="section"> 7.6 Manipulando trilhas </h2>
 
-<p>As trilhas no Cinelerra contÃªm ou Ã¡udio ou vÃ­deo. NÃ£o hÃ¡ designaÃ§Ãµes especiais para trilhas alÃ©m do tipo de mÃ­dia que contÃªm. Quando vocÃª cria um projeto, ele contÃ©m trÃªs trilhas padrÃ£o: uma trilha de vÃ­deo e duas trilhas de Ã¡udio. VocÃª ainda pode adicionar ou apagar trilhas a partir dos menus. O menu de Trilhas contÃ©m um nÃºmero de opÃ§Ãµes para lidar com mÃºltiplas trilhas simultaneamente. Cada trilha possui um menu que afeta apenas ela mesma. See section <a href="cinelerra_cv_manual_pt_BR_6.html#SEC102">O menu relacionado Ã s trilhas</a>.
+<p>As trilhas no Cinelerra contêm ou áudio ou vídeo. Não há designações especiais para trilhas além do tipo de mídia que contêm. Quando você cria um projeto, ele contém três trilhas padrão: uma trilha de vídeo e duas trilhas de áudio. Você ainda pode adicionar ou apagar trilhas a partir dos menus. O menu de Trilhas contém um número de opções para lidar com múltiplas trilhas simultaneamente. Cada trilha possui um menu que afeta apenas ela mesma. See section <a href="cinelerra_cv_manual_pt_BR_6.html#SEC97">O menu relacionado às trilhas</a>.
 </p>
 <a name="IDX97"></a>
-<p>OperaÃ§Ãµes no menu de <b>Trilhas</b> afetam apenas as trilhas que estiverem armadas:
+<p>Operações no menu de <b>Trilhas</b> afetam apenas as trilhas que estiverem armadas:
 </p><ul>
 <li> <b>Mover trilhas para cima</b> e <b>Mover trilhas para baixo</b> mudam todas as trilhas armadas para cima ou para baixo no conjunto.
 <a name="IDX98"></a>
 <a name="IDX99"></a>
 </li><li> <b>Apagar trilhas</b> apaga as trilhas armadas.
-</li><li> <b>Apagar Ãºltima trilha</b> apaga a Ãºltima trilha, caso esteja armada ou nÃ£o. Pressionar a tecla <kbd>d</kbd> rapidamente apaga todas as trilhas.
+</li><li> <b>Apagar última trilha</b> apaga a última trilha, caso esteja armada ou não. Pressionar a tecla <kbd>d</kbd> rapidamente apaga todas as trilhas.
 <a name="IDX100"></a>
 <a name="IDX101"></a>
-</li><li> <b>Concatenar trilha</b> Ã© mais complexo. Esta operaÃ§Ã£o copia todos os blocos de ediÃ§Ã£o de todas as trilhas desarmadas mas reproduzÃ­veis e as concatena colando aqueles blocos de ediÃ§Ã£o ao final do primeiro conjunto de trilhas armadas. Eles sÃ£o colados um apÃ³s o outro, mantendo a mesma ordem que possuem na pilha. Caso haja duas trilhas armadas seguidas de duas trilhas desarmadas, a operaÃ§Ã£o de concatenaÃ§Ã£o copia os blocos de ediÃ§Ã£o das duas trilhas desarmadas e os cola apÃ³s os blocos de ediÃ§Ã£o das duas trilhas armadas. Caso haja trÃªs trilhas desarmadas ao invÃ©s disso, os blocos de ediÃ§Ã£o das duas trilhas serÃ£o colados apÃ³s os blocos de ediÃ§Ã£o das trilhas armadas e os blocos de ediÃ§Ã£o da terceira trilha serÃ£o colados apÃ³s o fim da primeira trilha armada. A trilha de destino entra em espera atÃ© que todas as trilhas desarmadas sejam concatenadas. Trilhas desarmadas que nÃ£o estejam reproduzÃ­veis nÃ£o sÃ£o concatenadas.
+</li><li> <b>Concatenar trilha</b> é mais complexo. Esta operação copia todos os blocos de edição de todas as trilhas desarmadas mas reproduzíveis e as concatena colando aqueles blocos de edição ao final do primeiro conjunto de trilhas armadas. Eles são colados um após o outro, mantendo a mesma ordem que possuem na pilha. Caso haja duas trilhas armadas seguidas de duas trilhas desarmadas, a operação de concatenação copia os blocos de edição das duas trilhas desarmadas e os cola após os blocos de edição das duas trilhas armadas. Caso haja três trilhas desarmadas ao invés disso, os blocos de edição das duas trilhas serão colados após os blocos de edição das trilhas armadas e os blocos de edição da terceira trilha serão colados após o fim da primeira trilha armada. A trilha de destino entra em espera até que todas as trilhas desarmadas sejam concatenadas. Trilhas desarmadas que não estejam reproduzíveis não são concatenadas.
 </li></ul>
 
-<p>Finalmente, vocÃª vai querer criar novas trilhas. Os menus de <b>Ãudio</b> e <b>VÃ­deo</b> contÃªm uma opÃ§Ã£o cada para adicionar uma trilha daquele tipo especÃ­fico. No caso de Ã¡udio, a nova trilha Ã© colocada ao final da linha do tempo e o canal de saÃ­da da trilha de Ã¡udio Ã© aumentado por um. No caso de vÃ­deo, a nova trilha Ã© colocada ao topo da linha do tempo. Desta forma, o vÃ­deo possui uma ordem natural de composiÃ§Ã£o. Novas trilhas de vÃ­deo sÃ£o sobrepostas ao topo das trilhas antigas.
+<p>Finalmente, você vai querer criar novas trilhas. Os menus de <b>Áudio</b> e <b>Vídeo</b> contêm uma opção cada para adicionar uma trilha daquele tipo específico. No caso de áudio, a nova trilha é colocada ao final da linha do tempo e o canal de saída da trilha de áudio é aumentado por um. No caso de vídeo, a nova trilha é colocada ao topo da linha do tempo. Desta forma, o vídeo possui uma ordem natural de composição. Novas trilhas de vídeo são sobrepostas ao topo das trilhas antigas.
 </p>
 <hr size="6">
 <a name="Edi_00e7_00e3o-em-duas-janelas"></a>
-<a name="SEC114"></a>
-<h2 class="section"> 7.7 EdiÃ§Ã£o em duas janelas </h2>
+<a name="SEC109"></a>
+<h2 class="section"> 7.7 Edição em duas janelas </h2>
 
-<p>Este Ã© o jeito mais rÃ¡pido de construir um programa a partir de arquivos de vÃ­deo. A idÃ©ia consiste em ver um arquivo de vÃ­deo em uma janela e ver o programa em outra janela. SubseÃ§Ãµes do arquivo de vÃ­deo sÃ£o definidas em uma janela e transferidas para o final do programa na outra janela.
+<p>Este é o jeito mais rápido de construir um programa a partir de arquivos de vídeo. A idéia consiste em ver um arquivo de vídeo em uma janela e ver o programa em outra janela. Subseções do arquivo de vídeo são definidas em uma janela e transferidas para o final do programa na outra janela.
 </p>
-<p>O jeito de comeÃ§ar uma sessÃ£o de ediÃ§Ã£o em duas janelas Ã© carregar alguns recursos. Em <b>Arquivo-&gt;Carregar</b>, carregue alguns vÃ­deos com o modo de inserÃ§Ã£o <b>Criar novos recursos</b>. VocÃª vai querer que a linha do tempo permaneÃ§a sem modificaÃ§Ãµes quando os novos recursos forem carregados. VÃ¡ para a Janela de Recursos e selecione a pasta <b>MÃ­dia</b>. Os novos recursos, recÃ©m-carregados, devem aparecer. Arraste um recurso para a janela de VisualizaÃ§Ã£o.
+<p>O jeito de começar uma sessão de edição em duas janelas é carregar alguns recursos. Em <b>arquivo-&gt;carregar</b>, carregue alguns vídeos com o modo de inserção <b>criar novos recursos</b>. Você vai querer que a linha do tempo permaneça sem modificações quando os novos recursos forem carregados. Vá para a Janela de Recursos e selecione a pasta <b>mídia</b>. Os novos recursos, recém-carregados, devem aparecer. Arraste um recurso para a janela de Visualização.
 </p>
-<p>Deve haver trilhas armadas o suficiente na linha do tempo para colocar as subseÃ§Ãµes do material-fonte que vocÃª quiser. Caso nÃ£o haja, crie novas trilhas ou arme mais trilhas.
+<p>Deve haver trilhas armadas o suficiente na linha do tempo para colocar as subseções do material-fonte que você quiser. Caso não haja, crie novas trilhas ou arme mais trilhas.
 </p>
-<p>Na janela de VisualizaÃ§Ã£o, defina um recorte de seu arquivo de vÃ­deo: <br>
+<p>Na janela de Visualização, defina um recorte de seu arquivo de vídeo: <br>
 </p>
 <ul>
-<li> Marque o ponto de inÃ­cio com o <img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>botÃ£o do ponto de entrada</b>.
-</li><li> Busque o ponto de tÃ©rmino do recorte que vocÃª quer usar.
-</li><li> Marque o ponto de tÃ©rmino com o <img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>botÃ£o do ponto de saÃ­da</b>. 
+<li> Marque o ponto de início com o <img src=".././manual_images_intl/in_point_button.png" alt="manual_images_intl/in_point_button"> <b>botão do ponto de entrada</b>.
+</li><li> Busque o ponto de término do recorte que você quer usar.
+</li><li> Marque o ponto de término com o <img src=".././manual_images_intl/out_point_button.png" alt="manual_images_intl/out_point_button"> <b>botão do ponto de saída</b>. 
 </li></ul>
 
 <p>Os dois pontos devem agora aparecer na barra de tempo e definir um recorte.<br>
-HÃ¡ vÃ¡rias coisas que vocÃª pode fazer com o recorte agora:
+Há várias coisas que você pode fazer com o recorte agora:
 </p>
 <ul>
 <li> <b>Separar</b> <br>
-<img src=".././manual_images_intl/splice_button.png" alt="manual_images_intl/splice_button"> Insere o recorte na linha do tempo, apÃ³s o ponto de inserÃ§Ã£o.<br>
-ApÃ³s o Separar fazer efeito, o ponto de inserÃ§Ã£o se move para o fim da ediÃ§Ã£o, pronto para ser usado como o prÃ³ximo local de separaÃ§Ã£o. Desta forma, vocÃª pode construir o programa continuamente por meio de divisÃµes.<br>
-Se um <b>ponto de entrada</b> ou <b>ponto de saÃ­da</b> existe na linha do tempo, o recorte serÃ¡ inserido apÃ³s o ponto de entrada ou apÃ³s o ponto de saÃ­da. <br>
-Se hÃ¡ tanto pontos de entrada como de saÃ­da marcados na linha do tempo, o recorte Ã© inserido apÃ³s o ponto de entrada.<br>
-Se hÃ¡ ediÃ§Ãµes apÃ³s o local escolhido para a separaÃ§Ã£o na linha do tempo, eles serÃ£o empurrados para a direita.
+<img src=".././manual_images_intl/splice_button.png" alt="manual_images_intl/splice_button"> Insere o recorte na linha do tempo, após o ponto de inserção.<br>
+Após o Separar fazer efeito, o ponto de inserção se move para o fim da edição, pronto para ser usado como o próximo local de separação. Desta forma, você pode construir o programa continuamente por meio de divisões.<br>
+Se um <b>ponto de entrada</b> ou <b>ponto de saída</b> existe na linha do tempo, o recorte será inserido após o ponto de entrada ou após o ponto de saída. <br>
+Se há tanto pontos de entrada como de saída marcados na linha do tempo, o recorte é inserido após o ponto de entrada.<br>
+Se há edições após o local escolhido para a separação na linha do tempo, eles serão empurrados para a direita.
 </li><li> <b>Sobrescrever</b> <br>
-<img src=".././manual_images_intl/overwrite_button.png" alt="manual_images_intl/overwrite_button"> Sobrescreve a regiÃ£o da linha do tempo com o recorte. <br>
-Se um <b>ponto de entrada</b> ou <b>ponto de saÃ­da</b> existir na linha do tempo, ele serÃ¡ sobrescrito ali; de outra forma, ele serÃ¡ sobrescrito apÃ³s o ponto de inserÃ§Ã£o.<br>
-Se uma regiÃ£o houver sido destacada ou tanto pontos de entrada quanto de saÃ­da existam, eles limitam a regiÃ£o da sobrescriÃ§Ã£o e o recorte pode ser diminuÃ­do. Isso Ã© tÃ£o sutil que vale a pena uma descriÃ§Ã£o detalhada.<br>
-<b>DICA: Para sobrescrever exatamente em uma regiÃ£o precisa da linha do tempo:</b><br>
+<img src=".././manual_images_intl/overwrite_button.png" alt="manual_images_intl/overwrite_button"> Sobrescreve a região da linha do tempo com o recorte. <br>
+Se um <b>ponto de entrada</b> ou <b>ponto de saída</b> existir na linha do tempo, ele será sobrescrito ali; de outra forma, ele será sobrescrito após o ponto de inserção.<br>
+Se uma região houver sido destacada ou tanto pontos de entrada quanto de saída existam, eles limitam a região da sobrescrição e o recorte pode ser diminuído. Isso é tão sutil que vale a pena uma descrição detalhada.<br>
+<b>DICA: Para sobrescrever exatamente em uma região precisa da linha do tempo:</b><br>
 - Deixe armadas apenas as trilhas a serem modificadas.<br>
-- Defina o destino da regiÃ£o na linha do tempo com [ e ].<br>
-- Defina o recorte que vocÃª quer usar no visor com [ e ].<br>
-- Sobrescreva a partir do Visor para a linha do tempo.<br> 
-Se a regiÃ£o de destino for menor que o recorte definido no Visor, a porÃ§Ã£o do recorte que for maior que a regiÃ£o de destino nÃ£o serÃ¡ inserida. Na linha do tempo os blocos de ediÃ§Ã£o seguintes nÃ£o serÃ£o movidos.<br>
-Aviso: Se a regiÃ£o de destino for maior que o recorte definido no Visor, a regiÃ£o de destino se encolherÃ¡. Na linha do tempo, os blocos de ediÃ§Ã£o seguintes se moverÃ£o para a esquerda.
+- Defina o destino da região na linha do tempo com [ e ].<br>
+- Defina o recorte que você quer usar no visor com [ e ].<br>
+- Sobrescreva a partir do Visor para a linha do tempo.<br> Se a região de destino for menor que o recorte definido no Visor, a porção do recorte que for maior que a região de destino não será copiada. Na linha do tempo os blocos de edição seguintes não serão movidos.<br>
+Aviso: Se a região de destino for maior que o recorte definido no Visor, a região de destino se encolherá. Na linha do tempo, os blocos de edição seguintes se moverão para a esquerda.
 </li><li> <b>Criar um recorte</b> <br>
-<img src=".././manual_images_intl/toclip_button.png" alt="manual_images_intl/toclip_button"> Gera um novo recorte para a janela de recursos contendo a regiÃ£o afetada mas nÃ£o modifica a linha do tempo. Cada recorte possui um tÃ­tulo e uma descriÃ§Ã£o, ambos opcionais.
-</li><li> Copiar se comporta da mesma forma que a ediÃ§Ã£o atravÃ©s de recortar e colar.
+<img src=".././manual_images_intl/toclip_button.png" alt="manual_images_intl/toclip_button"> Gera um novo recorte para a janela de recursos contendo a região afetada mas não modifica a linha do tempo. Cada recorte possui um título e uma descrição, ambos opcionais.
+</li><li> Copiar se comporta da mesma forma que a edição através de recortar e colar.
 </li></ul>
-<p>A ediÃ§Ã£o em duas janelas pode ser feita inteiramente atravÃ©s de atalhos de teclado. Quando vocÃª move o apontador do mouse sobre qualquer botÃ£o, uma caixa de dica deve aparecer, mostrando qual tecla estÃ¡ relacionada Ã quele botÃ£o. Na janela de VisualizaÃ§Ã£o, as teclas do teclado numÃ©rico controlam o transporte e as teclas <kbd>[</kbd> <kbd>]</kbd> <kbd>v</kbd> executam pontos de entrada/saÃ­da e divisÃ£o.
+<p>A edição em duas janelas pode ser feita inteiramente através de atalhos de teclado. Quando você move o apontador sobre qualquer botão, uma caixa de dica deve aparecer, mostrando qual tecla está relacionada àquele botão. Na janela de Visualização, as teclas do teclado numérico controlam o transporte e as teclas <kbd>[</kbd> <kbd>]</kbd> <kbd>v</kbd> executam pontos de entrada/saída e divisão.
 </p>
 <hr size="6">
 <a name="Edi_00e7_00e3o-de-arrastar-e-soltar"></a>
-<a name="SEC115"></a>
-<h2 class="section"> 7.8 EdiÃ§Ã£o de arrastar e soltar </h2>
+<a name="SEC110"></a>
+<h2 class="section"> 7.8 Edição de arrastar e soltar </h2>
 
-<p><b>EdiÃ§Ã£o de arrastar e soltar</b> Ã© uma forma simples e rÃ¡pida de trabalhar com o Cinelerra, usando apenas o mouse. A idÃ©ia bÃ¡sica Ã© criar um punhado de recortes e entÃ£o arrastÃ¡-los na ordem para a linha do tempo, construindo um protÃ³tipo de filme que vocÃª possa assistir na janela de composiÃ§Ã£o. Se apÃ³s assisti-lo vocÃª decidir re-arranjar seus recortes, marcar efeitos, adicionar transiÃ§Ãµes ou inserir/apagar material, sÃ³ arraste-os e solte-os na linha do tempo.
+<p><b>Edição de arrastar e soltar</b> é uma forma simples e rápida de trabalhar com o Cinelerra, usando apenas o mouse. A idéia básica é criar um punhado de recortes e então arrastá-los na ordem para a linha do tempo, construindo um protótipo de filme que você possa assistir na janela de composição. Se após assisti-lo você decidir re-arranjar seus recortes, marcar efeitos, adicionar transições ou inserir/apagar material, só arraste-os e solte-os na linha do tempo.
 </p>
 <ol>
-<li> Carregue alguns arquivos usando <b>Arquivo-&gt;Carregar</b>.
-</li><li> Marque o modo de inserÃ§Ã£o para <b>Criar novos recursos apenas</b>. Isso carregarÃ¡ os arquivos na Janela de Recursos.
-</li><li> Crie algumas trilhas de vÃ­deo e Ã¡udio na linha do tempo usando os menus de <b>VÃ­deo</b> e <b>Ãudio</b>.
-</li><li> Abra a pasta <b>MÃ­dia</b> na janela de recursos.
-</li><li> Certifique-se que as trilhas necessÃ¡rias estejam armadas e arraste o arquivo de mÃ­dia da janela de recursos para a linha do tempo. Se a mÃ­dia possui vÃ­deo, arraste-a para uma trilha de vÃ­deo. Se a mÃ­dia for apenas Ã¡udio, arraste-a para uma trilha de Ã¡udio. Se a mÃ­dia for uma imagem estÃ¡tica, arraste-a para uma trilha de vÃ­deo.
-</li></ol>
+<li> Carregue alguns arquivos usando <b>arquivo-&gt;carregar</b>.
+</li><li> Marque o modo de inserção para <b>Criar novos recursos</b>. Isso carregará os arquivos na Janela de Recursos.
+</li><li> Crie algumas trilhas de áudio e vídeo na linha do tempo usando os menus de áudio e vídeo.
+</li><li> Abra a pasta <b>Mídia</b> na janela de recursos.
+</li><li> Certifique-se que as trilhas necessárias estejam armadas e arraste o arquivo de mídia da janela de recursos para a linha do tempo. Se a mídia possui vídeo, arraste-a para uma trilha de vídeo. Se a mídia for apenas áudio, arraste-a para uma trilha de áudio.
 
 <p align="center"> <img src=".././manual_images_intl/drag_to_program.png" alt="manual_images_intl/drag_to_program">
 </p>
-<p>O Cinelerra preenche as trilhas de Ã¡udio e vÃ­deo abaixo do cursor que estiver arrastando as mÃ­dias com informaÃ§Ãµes sobre o arquivo. Isso afeta que trilhas vocÃª deve criar inicialmente e para qual trilha vocÃª arrastarÃ¡ a mÃ­dia.<br>
-Para arrastar e soltar um arquivo na janela de Programa, vocÃª precisa criar na linha do tempo o mesmo conjunto de trilhas de seu arquivo de mÃ­dia.<br>
-Um arquivo comum de cÃ¢mera possui um conjunto de uma trilha de vÃ­deo e duas de Ã¡udio. Neste caso, vocÃª precisarÃ¡ de uma trilha de vÃ­deo e duas trilhas de Ã¡udio e a mÃ­dia deverÃ¡ ser arrastada por sobre a primeira trilha de vÃ­deo. <br>
-Se a mÃ­dia for apenas de Ã¡udio, vocÃª precisarÃ¡ de uma trilha de Ã¡udio na linha do tempo para cada trilha de Ã¡udio na mÃ­dia, e a mÃ­dia deverÃ¡ ser arrastada por sobre a primeira trilha de Ã¡udio.<br>
-Se a mÃ­dia for uma imagem estÃ¡tica, vocÃª precisarÃ¡ de uma trilha de vÃ­deo apenas. 
+</li></ol>
+<p>O Cinelerra preenche as trilhas de áudio e vídeo abaixo do cursor que estiver arrastando as mídias com informações sobre o arquivo. Isso afeta que trilhas você deve criar inicialmente e para qual trilha você arrastará a mídia. Se a mídia possui uma trilha de vídeo e duas trilhas de áudio, você precisará de uma trilha de vídeo e duas de áudio na linha do tempo e a mídia deve ser arrastada para a primeira trilha de vídeo. Se a mídia possui apenas áudio, você precisará de uma trilha de áudio na linha do tempo para cada trilha de áudio na mídia e a mídia deve ser arrastada para a primeira trilha de áudio.
 </p>
-<p>Quando vocÃª arrasta sua mÃ­dia escolhida da pasta de mÃ­dias para a linha do tempo, o apontador de seu mouse arrastarÃ¡ uma imagem miniatura e, uma vez sobre a linha do tempo, o contorno de um retÃ¢ngulo branco do tamanho do bloco de ediÃ§Ã£o que vocÃª terÃ¡ aparecerÃ¡.<br>
+<p>Quando você arrasta sua mídia escolhida da pasta de mídias para a linha do tempo, o apontador de seu mouse arrastará uma imagem miniatura e, uma vez sobre a linha do tempo, o contorno de um retângulo branco do tamanho do bloco de edição que você terá aparecerá.<br>
 </p>
-<p>Arraste a mÃ­dia para a posiÃ§Ã£o desejada de uma trilha da linha do tempo e solte-a. Caso haja outros blocos de ediÃ§Ã£o naquela trilha, quando vocÃª mover o contorno branco por sobre um bloco, vocÃª verÃ¡ um sÃ­mbolo de gravata-borboleta &gt;&lt; aparecendo nas bordas do bloco. Se vocÃª soltar a mÃ­dia ali, o novo bloco serÃ¡ iniciado a partir da borda indicada ao centro da gravata-borboleta &gt;&lt;. 
+<p>Arraste a mídia para a posição desejada de uma trilha da linha do tempo e solte-a. Caso haja outros blocos de edição naquela trilha, quando você mover o contorno branco por sobre um bloco, você verá um símbolo de gravata-borboleta &gt;&lt; aparecendo nas bordas do bloco. Se você soltar a mídia ali, o novo bloco será iniciado a partir da borda indicada ao centro da gravata-borboleta &gt;&lt;. 
 </p>
-<p>Uma vez que o apontador do mouse estiver no meio do contorno branco, quando este retÃ¢ngulo for maior que a parte visÃ­vel da linha do tempo, Ã© bem difÃ­cil inseri-lo de modo preciso. (Isso provavelmente acontecerÃ¡ a mÃ­dias grandes). Diminuir a duraÃ§Ã£o visÃ­vel da linha do tempo modificando a amostragem de aproximaÃ§Ã£o no painel de aproximaÃ§Ã£o reduzirÃ¡ o tamanho do retÃ¢ngulo branco, fazendo com que uma inserÃ§Ã£o precisa seja possÃ­vel. 
+<p>Uma vez que o apontador do mouse estiver no meio do contorno branco, quando este retângulo for maior que a parte visível da linha do tempo, é bem difícil inseri-lo de modo preciso. (Isso provavelmente acontecerá a mídias grandes). Diminuir a duração visível da linha do tempo modificando a amostragem de aproximação no painel de aproximação reduzirá o tamanho do retângulo branco, fazendo com que uma inserção precisa seja possível. 
 </p>
-<p>VocÃª tambÃ©m pode arrastar vÃ¡rios arquivos da janela de recursos. Quando jogados na linha do tempo, eles sÃ£o concatenados.<br>
-O jeito de selecionar vÃ¡rios arquivos para arrastar mudanÃ§as vai depender se os recursos estiverem sendo exibidos como texto ou como Ã­cones. Para mudar o modo de exibiÃ§Ã£o, clique com o botÃ£o direito do mouse dentro da lista de mÃ­dia e selecione ou <b>Exibir Ã­cones</b> ou <b>Exibir texto</b>.<br>
-Quando texto estiver sendo exibido na janela de recursos, <kbd>clicar + usar o botÃ£o CTRL</kbd> nos arquivos de mÃ­dia seleciona arquivos adicionais um por vez; <kbd>clicar + usar o botÃ£o SHIFT</kbd> nos arquivos de mÃ­dia extende o nÃºmero de seleÃ§Ãµes destacadas.<br> 
-Quando Ã­cones estiverem sendo exibidos na janela de recursos, <kbd>clicar + usar o botÃ£o SHIFT</kbd> ou <kbd>clicar + usar o botÃ£o CTRL</kbd> seleciona os arquivos de mÃ­dia um por vez; desenhar uma caixa sobre os arquivos seleciona arquivos contÃ­guos.
+<p>Você também pode arrastar vários arquivos da janela de recursos. Ou desenhe uma caixa em volta dos arquivos com o mouse, use <kbd>SHIFT</kbd>, ou use <kbd>CTRL</kbd> quando estiver selecionando os arquivos. Quando você soltar os arquivos na linha do tempo, eles são concatenados. O comportamento de <kbd>SHIFT</kbd> e <kbd>CTRL</kbd> muda dependendo de se os recursos estão sendo dispostos como texto ou como ícones.
 </p>
-<p>AlÃ©m de arrastar arquivos de mÃ­dia, se vocÃª criar recortes e abrir a pasta <b>recortes</b> vocÃª pode arrastar recortes para a linha do tempo.
+<p>Para exibir os recursos como textos ou ícones, clique com o botão direito do mouse dentro da lista de mídia. Selecione ou <b>exibir ícones</b> ou <b>exibir texto</b> para mudar o formato de listagem.
 </p>
-<p>Na linha do tempo hÃ¡ funÃ§Ãµes extras de arraste. Arrastar blocos de ediÃ§Ã£o pela linha do tempo permite que vocÃª ordene listas de reproduÃ§Ã£o de mÃºsicas, cenas de vÃ­deos e gere demos do NAB melhores, mas nÃ£o muito mais que isso. Para habilitar a funÃ§Ã£o de arraste na linha do tempo, selecione o Ã­cone de flecha <img src=".././manual_images_intl/arrow.png" alt="manual_images_intl/arrow"> na barra de controle. <br>
+<p>Quando os recursos estiverem sendo exibidos como texto na janela de recursos, <b>clicar + usar o botão SHIFT</b> nos arquivos de mídia extende o número de seleções em destaque. <b>clicar + usar o botão CTRL</b> nos arquivos de mídia no modo texto seleciona arquivos adicionais um por vez.
 </p>
-<p align="center"> Arme uma trilha com vÃ¡rias cenas.
+<p>Quando os recursos estiverem sendo exibidos como ícones na janela de recursos, <b>clicar + usar o botão SHIFT</b> ou <b>clicar + usar o botão CTRL</b> seleciona os arquivos de mídia um por vez.
+</p>
+<p>Além de arrastar arquivos de mídia, se você criar recortes e abrir a pasta <b>recortes</b> você pode arrastar recortes para a linha do tempo.
+</p>
+<p>Na linha do tempo há funções extras de arraste. Arrastar blocos de edição pela linha do tempo permite que você ordene listas de reprodução de músicas, cenas de vídeos e gere demos do NAB melhores, mas não muito mais que isso. Para habilitar a função de arraste na linha do tempo, selecione o ícone de flecha <img src=".././manual_images_intl/arrow.png" alt="manual_images_intl/arrow">. Mova o cursor para um bloco de edição e arraste-o. Durante a operação de arraste, o bloco de edição se colará à borda mais próxima.
+</p>
+<p align="center"> Selecione uma trilha com várias cenas.
 </p>
 <p align="center"> <img src=".././manual_images_intl/drop_before.png" alt="manual_images_intl/drop_before">
 </p>
-<p align="center"> Trilha original com trÃªs cenas.
+<p align="center"> Trilha original com três cenas.
 </p>
-<p align="center"> VÃ¡ para a cena #3, clique e arraste-a para o meio.
+<p align="center"> Vá para a cena #3, clique e arraste-a para o meio.
 </p>
 <p align="center"> <img src=".././manual_images_intl/drag_track.png" alt="manual_images_intl/drag_track">
 </p>
-<p align="center"> Quando vocÃª soltar a cena #3
+<p align="center"> Quando você soltar a cena #3
 </p>
 <p align="center"> <img src=".././manual_images_intl/drop_concept.png" alt="manual_images_intl/drop_concept">
 </p>
@@ -319,99 +314,65 @@ Quando Ã­cones estiverem sendo exibidos na janela de recursos, <kbd>clicar + usa
 </p>
 <p align="center"> <img src=".././manual_images_intl/drop_after.png" alt="manual_images_intl/drop_after">
 </p>
-<p align="center"> Assim Ã© como a seqÃ¼Ãªncia terminada fica.
+<p align="center"> Assim é como a seqüência terminada fica.
 </p>
-<p>Se mais de uma trilha estiver armada, o Cinelerra arrastarÃ¡ todos os blocos de ediÃ§Ã£o que comeÃ§am na mesma posiÃ§Ã£o que o bloco onde o cursor do mouse estÃ¡ posicionado. Em outras palavras, vocÃª pode arrastar e soltar um grupo de blocos de ediÃ§Ã£o. O  Cinelerra reconhece como um grupo os blocos de trilhas diferentes armadas que possuem inÃ­cios alinhados, sejam eles da mesma fonte ou nÃ£o, tendo finais alinhados ou nÃ£o. 
+<p>Se mais de uma trilha estiver armada, o Cinelerra arrastará todos os blocos de edição que começam na mesma posição que o bloco onde o cursor está posicionado. Em outras palavras, você pode arrastar e soltar um grupo de blocos de edição. O  Cinelerra reconhece como um grupo os blocos de trilhas diferentes armadas que possuem inícios alinhados, sejam eles da mesma fonte ou não, tendo finais alinhados ou não. 
 </p>
-<p>Quando vocÃª arrasta e solta blocos de ediÃ§Ã£o dentro da linha do tempo:<br>
-Se vocÃª soltar um bloco quando as gravatas-borboletas &gt;&lt; estiverem sendo mostradas, ele serÃ¡ recortado e colado iniciando na borda de ediÃ§Ã£o indicada ao centro da gravata &gt;&lt;. Os blocos de ediÃ§Ã£o seguintes se moverÃ£o.<br>
-Se vocÃª soltar um bloco quando nÃ£o hÃ¡ gravatas-borboleta &gt;&lt; sendo mostradas, o bloco original serÃ¡ mutado e colado onde vocÃª o largou. Nenhum bloco de ediÃ§Ã£o se moverÃ¡. Um silÃªncio aparecerÃ¡ no lugar de seu recorte original. <br>
-Se vocÃª possui mais trilhas armadas na linha do tempo alÃ©m da qual vocÃª estÃ¡ arrastando, apenas os blocos seguintes das trilhas afetadas pela operaÃ§Ã£o de arrastar e soltar se moverÃ£o para a direita. Isso causarÃ¡ a perda de sincronia. Para restaurÃ¡-la, desarme as trilhas afetadas pela operaÃ§Ã£o de arrastar e soltar, destaque apenas o bloco recÃ©m solto e insira silÃªncio por sobre ele (<b>Editar</b> -&gt; <b>Inserir SilÃªncio</b>).
+<p>Quando você arrasta e solta blocos de edição dentro da linha do tempo:<br>
 </p>
-<p>No modo de arrastar e soltar, vocÃª nÃ£o pode arrastar e soltar marcadores. Eles estarÃ£o sempre presos Ã  barra do tempo, mesmo com a opÃ§Ã£o <b>Editar marcadores</b> habilitada. Ainda assim, com a opÃ§Ã£o <b>Editar marcadores</b> habilitada, se uma Ã¡rea selecionada de um recurso for dividida a partir do Visor para a linha do tempo em uma posiÃ§Ã£o anterior aos marcadores, estes serÃ£o empurrados para a direita pela duraÃ§Ã£o da Ã¡rea selecionada.
+<p>Se você soltar um bloco quando as gravatas-borboletas &gt;&lt; estiverem sendo mostradas, o recorte será recortado e colado iniciando na borda de edição indicada ao centro da gravata &gt;&lt;. Os blocos de edição seguintes se moverão. Se você soltar um bloco quando não há gravatas-borboleta &gt;&lt; sendo mostradas, o recorte original será mutado e colado onde você o largou. Nenhum bloco de edição se moverá. Um silêncio aparecerá no lugar de seu recorte original. 
 </p>
-<p>Com pontos de entrada/saÃ­da, vocÃª pode realizar operaÃ§Ãµes de Recortar e Colar no modo de Arrastar e Soltar assim como faria no modo Recortar e Colar. VÃ¡ para o Menu <b>Editar</b> para ver a lista e os atalhos de teclado.
+<p>No modo de edição Arrastar e Soltar, você não pode arrastar e soltar marcadores. Eles estarão sempre presos à barra de tempo, mesmo com a opção &quot;Editar marcadores&quot; habilitada. Ainda assim, com a opção &quot;Editar marcadores&quot; habilitada, se uma área selecionada de um recurso for dividida do Visor para a linha do tempo em uma posição antes de marcadores, esses marcadores serão empurrados para a direita pela duração da área selecionada.
+</p>
+<p>Com pontos de entrada/saída, você pode fazer operações de Recortar e Colar no modo Arrastar e Soltar do mesmo modo que no modo Recortar e Colar. Vá para o Menu de Edição para ver a lista e os atalhos de teclado.
 </p>
 <hr size="6">
 <a name="Edi_00e7_00e3o-de-recortar-e-colar"></a>
-<a name="SEC116"></a>
-<h2 class="section"> 7.9 EdiÃ§Ã£o de recortar e colar </h2>
+<a name="SEC111"></a>
+<h2 class="section"> 7.9 Edição de recortar e colar </h2>
 
-<p>Este Ã© o mÃ©todo tradicional de ediÃ§Ã£o nos editores de Ã¡udio.<br>
-No caso do Cinelerra, vocÃª pode copiar blocos de ediÃ§Ã£o na mesma trilha, copiar a partir de diferentes trilhas na mesma instÃ¢ncia, iniciar uma segunda instÃ¢ncia do Cinelerra e copiar a partir de uma instÃ¢ncia para a outra ou carregar um arquivo de mÃ­dia no Visor e copiÃ¡-la a partir dali.
+<p>Este é o método tradicional de edição nos editores de áudio. No caso do Cinelerra, você precisa iniciar uma segunda cópia do Cinelerra e copiar e uma cópia a outra, copiar a partir de trilhas diferentes na mesma cópia ou carregar um arquivo de mídia na janela de visualização e copiá-la dali.
 </p>
-<p>Carregue alguns arquivos na linha do tempo. Para fazer a ediÃ§Ã£o por recorte e cola, selecione o <img src=".././manual_images_intl/ibeam.png" alt="manual_images_intl/ibeam"> Ã­cone da barra. Selecione a regiÃ£o da linha do tempo e selecione o <img src=".././manual_images_intl/cut.png" alt="manual_images_intl/cut"> botÃ£o de recorte para cortÃ¡-lo. Mova o ponto de inserÃ§Ã£o para outro ponto da linha do tempo e selecione <img src=".././manual_images_intl/paste.png" alt="manual_images_intl/paste"> o botÃ£o de colar. Assumindo que nÃ£o haja pontos de entrada/saÃ­da definidos na linha do tempo, isso faz a operaÃ§Ã£o de recortar e colar.
+<p>Carregue alguns arquivos na linha do tempo. Para fazer a edição por recorte e cola, selecione o <img src=".././manual_images_intl/ibeam.png" alt="manual_images_intl/ibeam"> ícone da barra. Selecione a região da linha do tempo e selecione o <img src=".././manual_images_intl/cut.png" alt="manual_images_intl/cut"> botão de recorte para cortá-lo. Mova o ponto de inserção para outro ponto da linha do tempo e selecione <img src=".././manual_images_intl/paste.png" alt="manual_images_intl/paste"> o botão de colar. Assumindo que não haja pontos de entrada/saída definidos na linha do tempo, isso faz a operação de recortar e colar.
 </p>
-<p>Se pontos de entrada/saÃ­da estiverem definidos, o ponto de inserÃ§Ã£o e a regiÃ£o em destaque serÃ£o sobrescritas pelos pontos de entrada/saÃ­da para as operaÃ§Ãµes de prancheta (&quot;clipboard&quot;). Assim, com pontos de entrada/saÃ­da vocÃª pode fazer recorte e cola no modo de arrastar e soltar tanto quanto no modo de recortar e colar.
+<p>Se pontos de entrada/saída estiverem definidos, o ponto de inserção e a região em destaque serão sobrescritas pelos pontos de entrada/saída para as operações de prancheta (&quot;clipboard&quot;). Assim, com pontos de entrada/saída você pode fazer recorte e cola no modo de arrastar e soltar tanto quanto no modo de recortar e colar.
 </p>
-<p>A maioria das operaÃ§Ãµes estÃ¡ listada no menu <b>Editar</b>. Algumas possuem um botÃ£o na barra de ferramentas de controle do programa e um atalho de teclado.
+<p>Quando estiver editando áudio, é comum recortar uma área da onda sonora para uma mesma área de outra onda sonora. Os pontos de início e final do recorte são idênticos em cada onda sonora e podem ser deslocados levemente caso a informação de onda seja diferente. Seria bem difícil destacar uma onda sonora e recortá-la e destacar a segunda onda sonora e colá-la sem mudar as posições relativas de início e final.
 </p>
-<ul>
-<li> <b>Recortar</b> x - Apaga a Ã¡rea selecionada, armazenando-a na memÃ³ria para uma colagem futura;
-</li><li> <b>Copiar</b> c - Copia a Ã¡rea selecionada, armazenando-a na memÃ³ria para uma colagem futura;
-</li><li> <b>Colar</b> v - Cola o material armazenado na memÃ³ria (Ã¡rea de transferÃªncia);
-</li><li> <b>Limpar</b> Del - Limpa a Ã¡rea selecionada. Se o ponto de inserÃ§Ã£o estiver por sobre a borda de um bloco de ediÃ§Ã£o e os blocos de cada lado forem da mesma fonte, estes serÃ£o combinados em um bloco. O inÃ­cio deste bloco Ãºnico de ediÃ§Ã£o Ã© o inÃ­cio do primeiro bloco de ediÃ§Ã£o e seu final serÃ¡ o final do segundo bloco. Isso resulta ou no bloco de ediÃ§Ã£o aumentando ou diminuindo;
-</li><li> <b>Inserir silÃªncio</b> Shift+EspaÃ§o - Insere Ã¡udio/vÃ­deo em branco pela duraÃ§Ã£o da Ã¡rea selecionada. Blocos de ediÃ§Ã£o seguintes serÃ£o empurrados para a direita;
-</li><li> <b>Mutar regiÃ£o</b> m - Sobrescreve Ã¡udio/vÃ­deo em branco na Ã¡rea selecionada. Blocos de ediÃ§Ã£o seguintes nÃ£o se moverÃ£o;
-</li><li> <b>Expandir/encolher seleÃ§Ã£o</b> - Apaga tudo menos a regiÃ£o selecionada;
-</li><li> <b>Selecionar tudo</b> a - Seleciona toda a linha do tempo.
-</li></ul>
-
-<p>Outras operaÃ§Ãµes de ediÃ§Ã£o:
+<p>Uma alternativa para simplificar isso é abrir uma segunda cópia do Cinelerra, recortar e colar para transportar mídia entre as duas cópias. Desta forma, duas regiões destacadas podem existir simultaneamente.
 </p>
-<ul>
-<li> <b>Copiar&amp;Mutar</b> cm - Muta a Ã¡rea selecionada, armazenando-a na memÃ³ria para uma colagem futura;
-</li><li> <b>Sobrescrever</b> - Para realizar a sobrescriÃ§Ã£o na linha do tempo, cole em
-uma regiÃ£o selecionada (destacada ou entre pontos de entrada/saÃ­da). A regiÃ£o
-selecionada serÃ¡ sobrescrita. Se o recorte colado a partir da Ã¡rea de
-transferÃªncia for menor que a regiÃ£o selecionada, esta serÃ¡ encolhida. Blocos de
-ediÃ§Ã£o seguintes se moverÃ£o. Se o recorte colado a partir da Ã¡rea de
-transferÃªncia for maior do que a regiÃ£o selecionada, esta serÃ¡ sobrescrita com a
-primeira parte do recorte e a parte restante serÃ¡ inseria apÃ³s a sobrescriÃ§Ã£o.
-Blocos de ediÃ§Ã£o seguintes se moverÃ£o. De modo alternativo, sobrescreva a partir
-do Visor. See section <a href="#SEC114">EdiÃ§Ã£o em duas janelas</a>.
-</li><li> <b>Concatenar</b> - VÃ¡ para <b>Trilhas</b> -&gt; <b>Concatenar trilhas</b>. Esta
-operaÃ§Ã£o copia todos os blocos de ediÃ§Ã£o de cada trilha desarmada mas
-reproduzÃ­vel e os concatena colando-os ao final do primeiro conjunto de trilhas
-armadas. Eles sÃ£o colados um apÃ³s o outro, mantendo a mesma ordem que tinham na
-pilha. See section <a href="#SEC113">Manipulando trilhas</a>.
-</li><li> <b>Dividir</b> - O Cinelerra nÃ£o divide um bloco de ediÃ§Ã£o em dois. Para inserir uma transiÃ§Ã£o no meio de um bloco, apague um quadro Ãºnico. Para inserir um recorte no meio de um bloco de ediÃ§Ã£o, divida-o a partir do Visor. See section <a href="#SEC114">EdiÃ§Ã£o em duas janelas</a>.
-</li></ul>
-
-<p>No modo de Copiar e Colar, vocÃª tambÃ©m pode editar marcadores. Ao habilitar <b>Editar marcadores</b> no menu de configuraÃ§Ãµes, ou ao desabilitar o <b>botÃ£o de &quot;Impedir marcadores de se mover&quot;</b> na barra de controle de ferramentas do programa, marcadores poderÃ£o ser cortados, copiados ou colados juntamente com as regiÃµes selecionadas das trilhas armadas.
+<p>Outra opção é marcar pontos de entrada/saída para a região fonte da onda sonora fonte e colocar marcadores para a região de destino da onda sonora de destino. Faça um recorte, limpe os pontos de entrada/saída, selecione as regiões entre os marcadores e faça a cola.
 </p>
-<p>Quando estiver editando Ã¡udio, Ã© comum recortar uma Ã¡rea da onda sonora para uma mesma Ã¡rea de outra onda sonora. Os pontos de inÃ­cio e final do recorte sÃ£o idÃªnticos em cada onda sonora e podem ser deslocados levemente caso a informaÃ§Ã£o de onda seja diferente. Seria bem difÃ­cil destacar uma onda sonora e recortÃ¡-la e destacar a segunda onda sonora e colÃ¡-la sem mudar as posiÃ§Ãµes relativas de inÃ­cio e final.<br>
-Uma alternativa para simplificar isso Ã© abrir uma segunda cÃ³pia do Cinelerra, recortar e colar para transportar mÃ­dia entre as duas cÃ³pias. Desta forma, duas regiÃµes destacadas podem existir simultaneamente.<br>
-Outra opÃ§Ã£o Ã© marcar pontos de entrada/saÃ­da para a regiÃ£o fonte da onda sonora fonte e colocar marcadores para a regiÃ£o de destino da onda sonora de destino. FaÃ§a um recorte, limpe os pontos de entrada/saÃ­da, selecione as regiÃµes entre os marcadores e faÃ§a a cola.
+<p>A operação final na edição por recorte e cola é a operação <b>editar-&gt;limpar</b>. Se uma região é destacada ou pontos de entrada/saída existem, a região afetada pode ser limpa por <b>editar-&gt;limpar</b>. Mas se o ponto de inserção estiver sobre uma borda de um bloco de edição e os blocos a cada lado das bordas forem da mesma fonte, os blocos são combinados em um bloco. O início deste bloco de edição é o início do primeiro bloco e o final deste bloco é o final do segundo bloco. Isso resulta em um bloco se expandindo ou diminuindo.
 </p>
 <hr size="6">
 <a name="Redimensionando-_0028_0022trimming_0022_0029"></a>
-<a name="SEC117"></a>
+<a name="SEC112"></a>
 <h2 class="section"> 7.10 Redimensionando (&quot;trimming&quot;) </h2>
 
-<p>Com alguns bloco de ediÃ§Ã£o na linha do tempo, Ã© possÃ­vel fazer o redimensionamento. Por redimensionamento, vocÃª encolhe ou estica as bordas do bloco de ediÃ§Ã£o ao arrastÃ¡-las. No modo de arrastar e soltar ou no modo de recortar e colar, mova o cursor para sobre a borda de um bloco de ediÃ§Ã£o atÃ© que ele mude de forma. O cursor se tornarÃ¡ uma forma para expandir para a esquerda ou para a direita. Se o cursor for para expandir para a esuqerda, a operaÃ§Ã£o de arrastar afeta o inÃ­cio do bloco de ediÃ§Ã£o. Se o cursor for para expandir para a direita, a operÃ§Ã£o de arraste afeta o final do bloco de ediÃ§Ã£o.
+<p>Com alguns bloco de edição na linha do tempo, é possível fazer o redimensionamento. Por redimensionamento, você encolhe ou estica as bordas do bloco de edição ao arrastá-las. No modo de arrastar e soltar ou no modo de recortar e colar, mova o cursor para sobre a borda de um bloco de edição até que ele mude de forma. O cursor se tornará uma forma para expandir para a esquerda ou para a direita. Se o cursor for para expandir para a esuqerda, a operação de arrastar afeta o início do bloco de edição. Se o cursor for para expandir para a direita, a operção de arraste afeta o final do bloco de edição.
 </p>
-<p>Quando vocÃª clica na orda de um bloco de ediÃ§Ã£o para comeÃ§ar a arrastÃ¡-la, o nÃºmero do botÃ£o do mouse determina qual o comportamento de arraste serÃ¡ usado. 3 comportamentos possÃ­veis estÃ£o relacionados aos botÃµes do mouse nas preferÃªncias de interface.
-See section <a href="cinelerra_cv_manual_pt_BR_3.html#SEC61">Interface</a>.
+<p>Quando você clica na orda de um bloco de edição para começar a arrastá-la, o número do botão do mouse determina qual o comportamento de arraste será usado. 3 comportamentos possíveis estão relacionados aos botões do mouse nas preferências de interface.
+See section <a href="cinelerra_cv_manual_pt_BR_3.html#SEC60">Interface</a>.
 </p>
-<p>O efeito de cada operaÃ§Ã£o de arraste nÃ£o depende somente no comportamento do botÃ£o, mas se o comeÃ§o ou final do bloco de ediÃ§Ã£o Ã© que estÃ¡ sendo arrastado. Quando vocÃª solta o botÃ£o do mouse, a operaÃ§Ã£o de redimensionamento acontece.
+<p>O efeito de cada operação de arraste não depende somente no comportamento do botão, mas se o começo ou final do bloco de edição é que está sendo arrastado. Quando você solta o botão do mouse, a operação de redimensionamento acontece.
 </p>
-<p>Na operaÃ§Ã£o <b>Arrastar todas as ediÃ§Ãµes seguintes</b>, o comeÃ§o do bloco de ediÃ§Ã£o ou recorta informaÃ§Ã£o do bloco se vocÃª movÃª-lo para frente ou cola nova informaÃ§Ã£o de antes do recorte se vocÃª movÃª-lo para trÃ¡s. O final do bloco cola informaÃ§Ã£o no recorte se vocÃª movÃª-lo para frente ou corta informaÃ§Ã£o do final do recorte se vocÃª movÃª-lo para trÃ¡s. Todos os recortes a partir dali mudam. Finalmente, se vocÃª arrastar o final do recorte passando pelo comeÃ§o do recorte, o bloco de ediÃ§Ã£o Ã© apagado.
+<p>Na operação <b>Arrastar todas as edições seguintes</b>, o começo do bloco de edição ou recorta informação do bloco se você movê-lo para frente ou cola nova informação de antes do recorte se você movê-lo para trás. O final do bloco cola informação no recorte se você movê-lo para frente ou corta informação do final do recorte se você movê-lo para trás. Todos os recortes a partir dali mudam. Finalmente, se você arrastar o final do recorte passando pelo começo do recorte, o bloco de edição é apagado.
 </p>
-<p>Na operaÃ§Ã£o <b>Arrastar somente uma ediÃ§Ã£o</b>, o comportamento Ã© o mesmo quando vocÃª arrasta o comeÃ§o ou o final de um bloco de ediÃ§Ã£o. AÃºnica diferenÃ§a Ã© que nenhum dos outros blocos sÃ£o mudados. Ao invÃ©s disso, tudo adjacente ao bloco atual expande ou encolhe para preencher buracos deixados pela operaÃ§Ã£o de arraste.
+<p>Na operação <b>Arrastar somente uma edição</b>, o comportamento é o mesmo quando você arrasta o começo ou o final de um bloco de edição. Aúnica diferença é que nenhum dos outros blocos são mudados. Ao invés disso, tudo adjacente ao bloco atual expande ou encolhe para preencher buracos deixados pela operação de arraste.
 </p>
-<p>Em uma operaÃ§Ã£o <b>Arrastar fonte somente</b>, nada Ã© recortado ou colado. Se vocÃª mover o inÃ­cio ou o final do bloco de ediÃ§Ã£o para a frente, a fonte de referÃªncia no recorte Ã© modificada para frente. Se vocÃª mover o inÃ­cio ou o final do bloco de ediÃ§Ã£o para trÃ¡s, a fonte de referÃªncia muda para trÃ¡s. O lugar onde o recorte aparece na linha do tempo permanece o mesmo, mas a fonte muda.
+<p>Em uma operação <b>Arrastar fonte somente</b>, nada é recortado ou colado. Se você mover o início ou o final do bloco de edição para a frente, a fonte de referência no recorte é modificada para frente. Se você mover o início ou o final do bloco de edição para trás, a fonte de referência muda para trás. O lugar onde o recorte aparece na linha do tempo permanece o mesmo, mas a fonte muda.
 </p>
-<p>Para todos os formatos exceto imagens estÃ¡ticas, a extensÃ£o da operaÃ§Ã£o de redimensionamento Ã© limitada pela duraÃ§Ã£o do arquivo de origem. Tentar arrastar o inÃ­cio de um recorte para alÃ©m do inÃ­cio do material fonte nÃ£o resultarÃ¡ em nada.
+<p>Para todos os formatos exceto imagens estáticas, a extensão da operação de redimensionamento é limitada pela duração do arquivo de origem. Tentar arrastar o início de um recorte para além do início do material fonte não resultará em nada.
 </p>
-<p>Em todas as operaÃ§Ãµes de redimensionamento, todos os recortes que comeÃ§am na mesma posiÃ§Ã£o que o cursor quando a operaÃ§Ã£o de arraste comeÃ§ar serÃ£o afetados. Desarme as trilhas para prevenir que os recortes sejam afetados.
+<p>Em todas as operações de redimensionamento, todos os recortes que começam na mesma posição que o cursor quando a operação de arraste começar serão afetados. Desarme as trilhas para prevenir que os recortes sejam afetados.
 </p>
-<p>A maioria dos efeitos do Cinelerra podem ser entendidos simplesmente usando-os e mexendo em suas propriedades. Aqui estÃ£o algumas breves descriÃ§Ãµes de efeitos que vocÃª pode nÃ£o usar inteiramente simplesmente experimentando-os.
+<p>A maioria dos efeitos do Cinelerra podem ser entendidos simplesmente usando-os e mexendo em suas propriedades. Aqui estão algumas breves descrições de efeitos que você pode não usar inteiramente simplesmente experimentando-os.
 </p>
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
-<tr><td valign="middle" align="left">[<a href="#SEC107" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
-<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_8.html#SEC118" title="Next chapter"> &gt;&gt; </a>]</td>
+<tr><td valign="middle" align="left">[<a href="#SEC102" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="cinelerra_cv_manual_pt_BR_8.html#SEC113" title="Next chapter"> &gt;&gt; </a>]</td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
 <td valign="middle" align="left"> &nbsp; </td>
@@ -424,7 +385,7 @@ See section <a href="cinelerra_cv_manual_pt_BR_3.html#SEC61">Interface</a>.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated by <em>Raffaella Traniello</em> on <em>Maio, 30 2008</em> using <a href="http://texi2html.cvshome.org/"><em>texi2html 1.76</em></a>.
+  This document was generated on <i>Fevereiro, 6 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 
