@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>February 6, 2016</strong><br>
+* We are in the process of updating our english manual. Helping hands for bringing <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=shortlog;h=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
+</p>
+
+<p>
 <strong>January 19, 2016</strong><br>
 * Happy New Year! Johannes Sixt has <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/003761.html">merged Cinelerra-HV 4.1 into the CV codebase</a>. This is still experimental - please test the code and report bugs. <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Packages for Ubuntu are here</a>, thanks to Nicola Ferralis. </a>
 </p>
@@ -123,7 +128,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Jan 19, 2016</div>
+<div class="lastmodified">Last modified on Feb 6, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
