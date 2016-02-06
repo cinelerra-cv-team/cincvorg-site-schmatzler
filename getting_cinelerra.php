@@ -103,7 +103,6 @@ file in order to unmask it:</p>
 <p><code>echo "media-video/cinelerra ~x86" >> /etc/portage/package.keywords </code></p>
 <p>See the <a href='http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'>Handbook</a> 
 for details.</p>
-<p>More informations can be found in the <a href="cinelerra-cv.org/docs/cinelerra_cv_manual_en_2.html">Manual</a>.</p>
       </p>
     </div>
   </div>
@@ -237,7 +236,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Jan 25, 2016</div>
+<div class="lastmodified">Last modified on Feb 6, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
