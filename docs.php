@@ -14,6 +14,7 @@ include "header.php";
   multiple effects, built-in videoscope and more.  With screenshots.</li>
  <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160117/fdbb1173/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and cinelerra.org has been posted on our mailing list in January 2016.</li></ul>
 <h2>Cinelerra CV manual</h2>
+<p><b>NOTE:</b> <u>The english manual is the most recent version.</u> Please help us translating the other languages.</p>
   <ul style="list-style-type:none;">
 <li>
 <B><img src="/images/website/locale/us.png" style="margin-right:4px;" />English:</B> 
