@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on le 4 F&eacute;vrier 2016 by texi2html 1.76 -->
+<!-- Created on le 11 F&eacute;vrier 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -210,7 +210,7 @@ rejoindre notre mailing-liste à <a href="http://cinelerra-cv.org">http://cineler
 <a name="SEC4"></a>
 <h2 class="section"> 1.3 A propos de ce manuel </h2>
 
-<p>L'édition de ce manuel est 1.25.FR, et il s'applique à Cinelerra CV
+<p>L'édition de ce manuel est 1.26.FR, et il s'applique à Cinelerra CV
 version 2.3.  Vous pouvez le redistribueer et/ou le modifier selon
 les termes de la Licence Publique Générale GNU (GPL), telle que publiée par la
 Free Software Foundation ; soit à la version 2 de la licence ou (à votre
@@ -4582,8 +4582,7 @@ l'image transférée depuis le temporaire pourra tenir dans la piste de sortie.
 L'espace restant dans la sortie sera laissé vierge.
 </p>
 <p align="center"> <img src="./manual_images_intl/output_small.png" alt="manual_images_intl/output_small">
-</p><p align="center"> <b>Les dimensions de la sortie (affichées en vert) sont plus grandes
-</b> </p><p><b>que le temporaire</b>
+</p><p align="center"> <b>Les dimensions de la sortie (affichées en vert) sont plus grandes que le temporaire</b>
 </p>
 <p>Si les dimensions de la sortie sont plus petites que celles du temporaire,
 alors certaines parties du temporaire vidéo seront recadrées.
@@ -5151,52 +5150,124 @@ un effet partagé.
 <h2 class="section"> 13.3 Les effets audio en temps réel </h2>
 
 <table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top"><a href="#SEC143">13.3.1 Compresseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	        Comment réduire la dynamique de l'audio.
+<tr><td align="left" valign="top"><a href="#SEC143">13.3.1 Audio arrière</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Comment lire des régions à l'envers.
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC154">13.3.12 Audio en direct</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Passer l'audio directement de la carte son à la timeline.
+<tr><td align="left" valign="top"><a href="#SEC144">13.3.2 Audio en direct</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Passer l'audio directement de la carte son à la timeline.
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC157">13.3.15 Décalage de hauteur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC145">13.3.3 Audio inversée</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC158">13.3.16 Audio arrière</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	Comment lire des régions à l'envers.
+<tr><td align="left" valign="top"><a href="#SEC146">13.3.4 Boucle audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC144">13.3.2 Retard audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC147">13.3.5 Compresseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">	        Comment réduire la dynamique de l'audio.
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC145">13.3.3 Supprimer le bruit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC148">13.3.6 Décalage de hauteur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC146">13.3.4 Supprimer le bruit FFT</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC149">13.3.7 Déparasiter</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC147">13.3.5 Déparasiter</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC150">13.3.8 Egaliseur paramétrique</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC148">13.3.6 Egaliseur paramétrique</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC151">13.3.9 Etirement du temps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC149">13.3.7 Freeverb</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC152">13.3.10 Freeverb</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC150">13.3.8 Gain</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC153">13.3.11 Gain</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC151">13.3.9 Heroine College</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC154">13.3.12 Heroine College</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC152">13.3.10 Interpoler</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC155">13.3.13 Interpoler</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC153">13.3.11 Audio inversée</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC156">13.3.14 Niveau audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC155">13.3.13 Boucle audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC157">13.3.15 Overlay</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC156">13.3.14 Overlay</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC158">13.3.16 Retard audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC159">13.3.17 Niveau audio</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC159">13.3.17 Spectrogramme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC160">13.3.18 Spectrogramme</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC160">13.3.18 Supprimer le bruit</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC161">13.3.19 Synthétiseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC161">13.3.19 Supprimer le bruit FFT</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC162">13.3.20 Etirement du temps</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
+<tr><td align="left" valign="top"><a href="#SEC162">13.3.20 Synthétiseur</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 </table>
 
 <hr size="6">
-<a name="Compresseur"></a>
+<a name="Audio-arri_00e8re"></a>
 <a name="SEC143"></a>
-<h3 class="subsection"> 13.3.1 Compresseur </h3>
+<h3 class="subsection"> 13.3.1 Audio arrière </h3>
+
+<p><img src="./manual_images_intl/reverseaudio.png" alt="manual_images_intl/reverseaudio">
+</p>
+<p>Appliquer <b>audio arrière</b> à une piste audio et lisez-la en sens inverse.  Le
+son sera reproduit normalement.
+</p>
+<p>Soyez conscient, en inversant l'audio, que la forme d'onde sur la timeline ne
+reflète pas la sortie inversée.
+</p>
+<hr size="6">
+<a name="Audio-en-direct"></a>
+<a name="SEC144"></a>
+<h3 class="subsection"> 13.3.2 Audio en direct </h3>
+
+<p><img src="./manual_images_intl/liveaudio.png" alt="manual_images_intl/liveaudio">
+</p>
+<p>Cet effet lit directement l'audio depuis l'entrée de la carte son.  Il remplace
+toute l'audio de la piste il est donc en général appliqué sur une piste vide.
+</p>
+<p>Afin d'utiliser <b>audio en direct</b>, mettez en surbrillance une zone
+horizontale d'une piste audio ou placez les points d'entrée et de sortie.
+Déposez-y ensuite l'effet d'audio en direct.  Créez des pistes supplémentaires
+et attachez à ces autres pistes des copies partagées du premier effet d'audio
+en direct afin d'enregistrer des canaux supplémentaires.
+</p>
+<p>L'audio en direct utilise le pilote audio sélectionné dans
+<b>Configuration-&gt;Préférences-&gt;Lecture-&gt;Sortie audio</b> pour enregistrer, mais au
+contraire le l'acquisition il utilise la <b>taille de tampon en lecture</b> comme
+tampon d'enregistrement et le <b>taux d'échantillonage du projet</b> comme taux
+d'échantillonnage.
+</p>
+<p>Ces paramètres sont critiques car certaines cartes son ne peuvent pas
+enregistrer dans un tampon dimensionné de la même manière que celui dans lequel
+elle effectuent la restitution.  L'audio en direct est plus fiable lorsque le
+pilote d'enregistrement est ALSA et que la taille de fragment de lecture est de
+2048.
+</p>
+<p>Déposez les autres effets après l'effet audio en direct afin de traiter
+l'entrée de la carte son en temps réel.
+</p>
+<p>Aux mauvaises nouvelles maintenant.  Avec l'audio en direct, il n'y a pas
+d'anticipation, donc des effets tels que le compresseur auront un retard si
+l'anticipation est activée ou il manquera des données lors de la lecture.
+</p>
+<p>Un autre problème provient du fait que l'horloge de la carte son est parfois
+légèrement plus lente que l'horloge de la lecture.  L'enregistrement sera alors
+en avance et le son reproduit sera saccadé.
+</p>
+<p>Enfin, l'audio en direct ne fonctionne pas en inverse.
+</p>
+<hr size="6">
+<a name="Audio-invers_00e9e"></a>
+<a name="SEC145"></a>
+<h3 class="subsection"> 13.3.3 Audio inversée </h3>
+
+<p><img src="./manual_images_intl/invertaudio.png" alt="manual_images_intl/invertaudio">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Boucle-audio"></a>
+<a name="SEC146"></a>
+<h3 class="subsection"> 13.3.4 Boucle audio </h3>
+
+<p><img src="./manual_images_intl/loopaudio.png" alt="manual_images_intl/loopaudio">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Compresseur"></a>
+<a name="SEC147"></a>
+<h3 class="subsection"> 13.3.5 Compresseur </h3>
 
 <p><img src="./manual_images_intl/compressor.png" alt="manual_images_intl/compressor">
 </p>
@@ -5282,159 +5353,9 @@ uniquement la valeur crête actuelle.  Il est alors très facile de voir l'action
 du <b>temps de réaction</b> sur la détection des valeurs de crête.
 </p>
 <hr size="6">
-<a name="Retard-audio"></a>
-<a name="SEC144"></a>
-<h3 class="subsection"> 13.3.2 Retard audio </h3>
-
-<p><img src="./manual_images_intl/delayaudio.png" alt="manual_images_intl/delayaudio">
-</p>
-<p>Indiquez simplement de combien de secondes vous désirez que la piste audio soit
-retardée.
-</p>
-<hr size="6">
-<a name="Supprimer-le-bruit"></a>
-<a name="SEC145"></a>
-<h3 class="subsection"> 13.3.3 Supprimer le bruit </h3>
-
-<p><img src="./manual_images_intl/denoise.png" alt="manual_images_intl/denoise">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Supprimer-le-bruit-FFT"></a>
-<a name="SEC146"></a>
-<h3 class="subsection"> 13.3.4 Supprimer le bruit FFT </h3>
-
-<p><img src="./manual_images_intl/denoisefft.png" alt="manual_images_intl/denoisefft">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="D_00e9parasiter"></a>
-<a name="SEC147"></a>
-<h3 class="subsection"> 13.3.5 Déparasiter </h3>
-
-<p><img src="./manual_images_intl/despike.png" alt="manual_images_intl/despike">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Egaliseur-param_00e9trique"></a>
-<a name="SEC148"></a>
-<h3 class="subsection"> 13.3.6 Egaliseur paramétrique </h3>
-
-<p><img src="./manual_images_intl/parametric.png" alt="manual_images_intl/parametric">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Freeverb"></a>
-<a name="SEC149"></a>
-<h3 class="subsection"> 13.3.7 Freeverb </h3>
-
-<p><img src="./manual_images_intl/freeverb.png" alt="manual_images_intl/freeverb">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Gain"></a>
-<a name="SEC150"></a>
-<h3 class="subsection"> 13.3.8 Gain </h3>
-
-<p><img src="./manual_images_intl/gain.png" alt="manual_images_intl/gain">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Heroine-College"></a>
-<a name="SEC151"></a>
-<h3 class="subsection"> 13.3.9 Heroine College </h3>
-
-<p><img src="./manual_images_intl/reverb.png" alt="manual_images_intl/reverb">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Interpoler"></a>
-<a name="SEC152"></a>
-<h3 class="subsection"> 13.3.10 Interpoler </h3>
-
-<p><img src="./manual_images_intl/interpolateaudio.png" alt="manual_images_intl/interpolateaudio">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Audio-invers_00e9e"></a>
-<a name="SEC153"></a>
-<h3 class="subsection"> 13.3.11 Audio inversée </h3>
-
-<p><img src="./manual_images_intl/invertaudio.png" alt="manual_images_intl/invertaudio">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Audio-en-direct"></a>
-<a name="SEC154"></a>
-<h3 class="subsection"> 13.3.12 Audio en direct </h3>
-
-<p><img src="./manual_images_intl/liveaudio.png" alt="manual_images_intl/liveaudio">
-</p>
-<p>Cet effet lit directement l'audio depuis l'entrée de la carte son.  Il remplace
-toute l'audio de la piste il est donc en général appliqué sur une piste vide.
-</p>
-<p>Afin d'utiliser <b>audio en direct</b>, mettez en surbrillance une zone
-horizontale d'une piste audio ou placez les points d'entrée et de sortie.
-Déposez-y ensuite l'effet d'audio en direct.  Créez des pistes supplémentaires
-et attachez à ces autres pistes des copies partagées du premier effet d'audio
-en direct afin d'enregistrer des canaux supplémentaires.
-</p>
-<p>L'audio en direct utilise le pilote audio sélectionné dans
-<b>Configuration-&gt;Préférences-&gt;Lecture-&gt;Sortie audio</b> pour enregistrer, mais au
-contraire le l'acquisition il utilise la <b>taille de tampon en lecture</b> comme
-tampon d'enregistrement et le <b>taux d'échantillonage du projet</b> comme taux
-d'échantillonnage.
-</p>
-<p>Ces paramètres sont critiques car certaines cartes son ne peuvent pas
-enregistrer dans un tampon dimensionné de la même manière que celui dans lequel
-elle effectuent la restitution.  L'audio en direct est plus fiable lorsque le
-pilote d'enregistrement est ALSA et que la taille de fragment de lecture est de
-2048.
-</p>
-<p>Déposez les autres effets après l'effet audio en direct afin de traiter
-l'entrée de la carte son en temps réel.
-</p>
-<p>Aux mauvaises nouvelles maintenant.  Avec l'audio en direct, il n'y a pas
-d'anticipation, donc des effets tels que le compresseur auront un retard si
-l'anticipation est activée ou il manquera des données lors de la lecture.
-</p>
-<p>Un autre problème provient du fait que l'horloge de la carte son est parfois
-légèrement plus lente que l'horloge de la lecture.  L'enregistrement sera alors
-en avance et le son reproduit sera saccadé.
-</p>
-<p>Enfin, l'audio en direct ne fonctionne pas en inverse.
-</p>
-<hr size="6">
-<a name="Boucle-audio"></a>
-<a name="SEC155"></a>
-<h3 class="subsection"> 13.3.13 Boucle audio </h3>
-
-<p><img src="./manual_images_intl/loopaudio.png" alt="manual_images_intl/loopaudio">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
-<a name="Overlay"></a>
-<a name="SEC156"></a>
-<h3 class="subsection"> 13.3.14 Overlay </h3>
-
-<p><img src="./manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
-</p>
-<p>FIXME
-</p>
-<hr size="6">
 <a name="D_00e9calage-de-hauteur"></a>
-<a name="SEC157"></a>
-<h3 class="subsection"> 13.3.15 Décalage de hauteur </h3>
+<a name="SEC148"></a>
+<h3 class="subsection"> 13.3.6 Décalage de hauteur </h3>
 
 <p><img src="./manual_images_intl/pitch.png" alt="manual_images_intl/pitch">
 </p>
@@ -5462,51 +5383,129 @@ pistes audio et de glisser cette limite vers la gauche ou vers la droite afin
 de déterminer la durée de la modification.
 </p>
 <hr size="6">
-<a name="Audio-arri_00e8re"></a>
-<a name="SEC158"></a>
-<h3 class="subsection"> 13.3.16 Audio arrière </h3>
+<a name="D_00e9parasiter"></a>
+<a name="SEC149"></a>
+<h3 class="subsection"> 13.3.7 Déparasiter </h3>
 
-<p><img src="./manual_images_intl/reverseaudio.png" alt="manual_images_intl/reverseaudio">
+<p><img src="./manual_images_intl/despike.png" alt="manual_images_intl/despike">
 </p>
-<p>Appliquer <b>audio arrière</b> à une piste audio et lisez-la en sens inverse.  Le
-son sera reproduit normalement.
+<p>FIXME
 </p>
-<p>Soyez conscient, en inversant l'audio, que la forme d'onde sur la timeline ne
-reflète pas la sortie inversée.
+<hr size="6">
+<a name="Egaliseur-param_00e9trique"></a>
+<a name="SEC150"></a>
+<h3 class="subsection"> 13.3.8 Egaliseur paramétrique </h3>
+
+<p><img src="./manual_images_intl/parametric.png" alt="manual_images_intl/parametric">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Etirement-du-temps"></a>
+<a name="SEC151"></a>
+<h3 class="subsection"> 13.3.9 Etirement du temps </h3>
+
+<p><img src="./manual_images_intl/timestretch.png" alt="manual_images_intl/timestretch">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Freeverb"></a>
+<a name="SEC152"></a>
+<h3 class="subsection"> 13.3.10 Freeverb </h3>
+
+<p><img src="./manual_images_intl/freeverb.png" alt="manual_images_intl/freeverb">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Gain"></a>
+<a name="SEC153"></a>
+<h3 class="subsection"> 13.3.11 Gain </h3>
+
+<p><img src="./manual_images_intl/gain.png" alt="manual_images_intl/gain">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Heroine-College"></a>
+<a name="SEC154"></a>
+<h3 class="subsection"> 13.3.12 Heroine College </h3>
+
+<p><img src="./manual_images_intl/reverb.png" alt="manual_images_intl/reverb">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Interpoler"></a>
+<a name="SEC155"></a>
+<h3 class="subsection"> 13.3.13 Interpoler </h3>
+
+<p><img src="./manual_images_intl/interpolateaudio.png" alt="manual_images_intl/interpolateaudio">
+</p>
+<p>FIXME
 </p>
 <hr size="6">
 <a name="Niveau-audio"></a>
-<a name="SEC159"></a>
-<h3 class="subsection"> 13.3.17 Niveau audio </h3>
+<a name="SEC156"></a>
+<h3 class="subsection"> 13.3.14 Niveau audio </h3>
 
 <p><img src="./manual_images_intl/level.png" alt="manual_images_intl/level">
 </p>
 <p>FIXME
 </p>
 <hr size="6">
+<a name="Overlay"></a>
+<a name="SEC157"></a>
+<h3 class="subsection"> 13.3.15 Overlay </h3>
+
+<p><img src="./manual_images_intl/overlay.png" alt="manual_images_intl/overlay">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Retard-audio"></a>
+<a name="SEC158"></a>
+<h3 class="subsection"> 13.3.16 Retard audio </h3>
+
+<p><img src="./manual_images_intl/delayaudio.png" alt="manual_images_intl/delayaudio">
+</p>
+<p>Indiquez simplement de combien de secondes vous désirez que la piste audio soit
+retardée.
+</p>
+<hr size="6">
 <a name="Spectrogramme"></a>
-<a name="SEC160"></a>
-<h3 class="subsection"> 13.3.18 Spectrogramme </h3>
+<a name="SEC159"></a>
+<h3 class="subsection"> 13.3.17 Spectrogramme </h3>
 
 <p><img src="./manual_images_intl/spectrogram.png" alt="manual_images_intl/spectrogram">
 </p>
 <p>FIXME
 </p>
 <hr size="6">
-<a name="Synth_00e9tiseur"></a>
-<a name="SEC161"></a>
-<h3 class="subsection"> 13.3.19 Synthétiseur </h3>
+<a name="Supprimer-le-bruit"></a>
+<a name="SEC160"></a>
+<h3 class="subsection"> 13.3.18 Supprimer le bruit </h3>
 
-<p><img src="./manual_images_intl/synthesizer.png" alt="manual_images_intl/synthesizer">
+<p><img src="./manual_images_intl/denoise.png" alt="manual_images_intl/denoise">
 </p>
 <p>FIXME
 </p>
 <hr size="6">
-<a name="Etirement-du-temps"></a>
-<a name="SEC162"></a>
-<h3 class="subsection"> 13.3.20 Etirement du temps </h3>
+<a name="Supprimer-le-bruit-FFT"></a>
+<a name="SEC161"></a>
+<h3 class="subsection"> 13.3.19 Supprimer le bruit FFT </h3>
 
-<p><img src="./manual_images_intl/timestretch.png" alt="manual_images_intl/timestretch">
+<p><img src="./manual_images_intl/denoisefft.png" alt="manual_images_intl/denoisefft">
+</p>
+<p>FIXME
+</p>
+<hr size="6">
+<a name="Synth_00e9tiseur"></a>
+<a name="SEC162"></a>
+<h3 class="subsection"> 13.3.20 Synthétiseur </h3>
+
+<p><img src="./manual_images_intl/synthesizer.png" alt="manual_images_intl/synthesizer">
 </p>
 <p>FIXME
 </p>
@@ -5532,15 +5531,15 @@ reflète pas la sortie inversée.
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC171">13.4.8 Balance des couleurs</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
+<tr><td align="left" valign="top"><a href="#SEC172">13.4.9 Décimer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          		Comment réduire la fréquence des images en éliminant les images semblables.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC173">13.4.10 Désentrelacer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       	Comment convertir de la vidéo entrelacée en vidéo progressive.
+</td></tr>
 <tr><td align="left" valign="top"><a href="#SEC174">13.4.11 Retard vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC175">13.4.12 Supprimer le bruit de la vidéo</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC176">13.4.13 Supprimer le bruit de la vidéo 2</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC172">13.4.9 Décimer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">          		Comment réduire la fréquence des images en éliminant les images semblables.
-</td></tr>
-<tr><td align="left" valign="top"><a href="#SEC173">13.4.10 Désentrelacer</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       	Comment convertir de la vidéo entrelacée en vidéo progressive.
 </td></tr>
 <tr><td align="left" valign="top"><a href="#SEC177">13.4.14 Clé de différence</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">    	Créer de la transparence en se basant sur des différences de couleurs.
 </td></tr>
@@ -10421,10 +10420,10 @@ prendre le plus simple de son groupe et d'en renommer les symboles.
 <tr><td align="left" valign="top"><a href="#SEC328">22.8 Greffons dont l'interfaces utilisateur se met à jour lors de la lecture</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser les données en
   cours de lecture pour dessiner une interface graphique utilisateur.
 </td></tr>
-<tr><td align="left" valign="top"><a href="#SEC332">22.10 Utiliser OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser le matériel pour accélérer les opérations.
-</td></tr>
 <tr><td align="left" valign="top"><a href="#SEC329">22.9 Requêtes des greffons</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment les greffons obtiennent des informations concernant les
   informations devant être traitées.
+</td></tr>
+<tr><td align="left" valign="top"><a href="#SEC332">22.10 Utiliser OpenGL</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top"> comment utiliser le matériel pour accélérer les opérations.
 </td></tr>
 </table>
 
@@ -12672,26 +12671,26 @@ message posté par David Arendt sur la liste de diffusion de Cinelerra CV le
     <li><a name="TOC141" href="#SEC141">13.2 Editer les effets en temps réel</a></li>
     <li><a name="TOC142" href="#SEC142">13.3 Les effets audio en temps réel</a>
     <ul class="toc">
-      <li><a name="TOC143" href="#SEC143">13.3.1 Compresseur</a></li>
-      <li><a name="TOC144" href="#SEC144">13.3.2 Retard audio</a></li>
-      <li><a name="TOC145" href="#SEC145">13.3.3 Supprimer le bruit</a></li>
-      <li><a name="TOC146" href="#SEC146">13.3.4 Supprimer le bruit FFT</a></li>
-      <li><a name="TOC147" href="#SEC147">13.3.5 Déparasiter</a></li>
-      <li><a name="TOC148" href="#SEC148">13.3.6 Egaliseur paramétrique</a></li>
-      <li><a name="TOC149" href="#SEC149">13.3.7 Freeverb</a></li>
-      <li><a name="TOC150" href="#SEC150">13.3.8 Gain</a></li>
-      <li><a name="TOC151" href="#SEC151">13.3.9 Heroine College</a></li>
-      <li><a name="TOC152" href="#SEC152">13.3.10 Interpoler</a></li>
-      <li><a name="TOC153" href="#SEC153">13.3.11 Audio inversée</a></li>
-      <li><a name="TOC154" href="#SEC154">13.3.12 Audio en direct</a></li>
-      <li><a name="TOC155" href="#SEC155">13.3.13 Boucle audio</a></li>
-      <li><a name="TOC156" href="#SEC156">13.3.14 Overlay</a></li>
-      <li><a name="TOC157" href="#SEC157">13.3.15 Décalage de hauteur</a></li>
-      <li><a name="TOC158" href="#SEC158">13.3.16 Audio arrière</a></li>
-      <li><a name="TOC159" href="#SEC159">13.3.17 Niveau audio</a></li>
-      <li><a name="TOC160" href="#SEC160">13.3.18 Spectrogramme</a></li>
-      <li><a name="TOC161" href="#SEC161">13.3.19 Synthétiseur</a></li>
-      <li><a name="TOC162" href="#SEC162">13.3.20 Etirement du temps</a></li>
+      <li><a name="TOC143" href="#SEC143">13.3.1 Audio arrière</a></li>
+      <li><a name="TOC144" href="#SEC144">13.3.2 Audio en direct</a></li>
+      <li><a name="TOC145" href="#SEC145">13.3.3 Audio inversée</a></li>
+      <li><a name="TOC146" href="#SEC146">13.3.4 Boucle audio</a></li>
+      <li><a name="TOC147" href="#SEC147">13.3.5 Compresseur</a></li>
+      <li><a name="TOC148" href="#SEC148">13.3.6 Décalage de hauteur</a></li>
+      <li><a name="TOC149" href="#SEC149">13.3.7 Déparasiter</a></li>
+      <li><a name="TOC150" href="#SEC150">13.3.8 Egaliseur paramétrique</a></li>
+      <li><a name="TOC151" href="#SEC151">13.3.9 Etirement du temps</a></li>
+      <li><a name="TOC152" href="#SEC152">13.3.10 Freeverb</a></li>
+      <li><a name="TOC153" href="#SEC153">13.3.11 Gain</a></li>
+      <li><a name="TOC154" href="#SEC154">13.3.12 Heroine College</a></li>
+      <li><a name="TOC155" href="#SEC155">13.3.13 Interpoler</a></li>
+      <li><a name="TOC156" href="#SEC156">13.3.14 Niveau audio</a></li>
+      <li><a name="TOC157" href="#SEC157">13.3.15 Overlay</a></li>
+      <li><a name="TOC158" href="#SEC158">13.3.16 Retard audio</a></li>
+      <li><a name="TOC159" href="#SEC159">13.3.17 Spectrogramme</a></li>
+      <li><a name="TOC160" href="#SEC160">13.3.18 Supprimer le bruit</a></li>
+      <li><a name="TOC161" href="#SEC161">13.3.19 Supprimer le bruit FFT</a></li>
+      <li><a name="TOC162" href="#SEC162">13.3.20 Synthétiseur</a></li>
     </ul></li>
     <li><a name="TOC163" href="#SEC163">13.4 Les effets vidéo en temps réel</a>
     <ul class="toc">
@@ -12948,7 +12947,7 @@ message posté par David Arendt sur la liste de diffusion de Cinelerra CV le
 </tr></table>
 <h1>A propos de ce document</h1>
 <p>
-  This document was generated on <i>le 4 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+  This document was generated on <i>le 11 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
 </p>
 <p>
   Les boutons de navigation ont la signification suivante :
@@ -13050,7 +13049,7 @@ message posté par David Arendt sur la liste de diffusion de Cinelerra CV le
 <hr size="1">
 <p>
  <font size="-1">
-  This document was generated on <i>le 4 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+  This document was generated on <i>le 11 F&eacute;vrier 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 

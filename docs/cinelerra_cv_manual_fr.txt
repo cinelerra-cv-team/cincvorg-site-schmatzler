@@ -144,26 +144,26 @@ Manuel de Cinelerra CV
   13.1 Types d'effets en temps réel
   13.2 Editer les effets en temps réel
   13.3 Les effets audio en temps réel
-    13.3.1 Compresseur
-    13.3.2 Retard audio
-    13.3.3 Supprimer le bruit
-    13.3.4 Supprimer le bruit FFT
-    13.3.5 Déparasiter
-    13.3.6 Egaliseur paramétrique
-    13.3.7 Freeverb
-    13.3.8 Gain
-    13.3.9 Heroine College
-    13.3.10 Interpoler
-    13.3.11 Audio inversée
-    13.3.12 Audio en direct
-    13.3.13 Boucle audio
-    13.3.14 Overlay
-    13.3.15 Décalage de hauteur
-    13.3.16 Audio arrière
-    13.3.17 Niveau audio
-    13.3.18 Spectrogramme
-    13.3.19 Synthétiseur
-    13.3.20 Etirement du temps
+    13.3.1 Audio arrière
+    13.3.2 Audio en direct
+    13.3.3 Audio inversée
+    13.3.4 Boucle audio
+    13.3.5 Compresseur
+    13.3.6 Décalage de hauteur
+    13.3.7 Déparasiter
+    13.3.8 Egaliseur paramétrique
+    13.3.9 Etirement du temps
+    13.3.10 Freeverb
+    13.3.11 Gain
+    13.3.12 Heroine College
+    13.3.13 Interpoler
+    13.3.14 Niveau audio
+    13.3.15 Overlay
+    13.3.16 Retard audio
+    13.3.17 Spectrogramme
+    13.3.18 Supprimer le bruit
+    13.3.19 Supprimer le bruit FFT
+    13.3.20 Synthétiseur
   13.4 Les effets vidéo en temps réel
     13.4.1 1080 vers 540
     13.4.2 Vieillissement TV
@@ -450,7 +450,7 @@ notre mailing-liste à `http://cinelerra-cv.org'.
 1.3 A propos de ce manuel
 =========================
 
-L'édition de ce manuel est 1.25.FR, et il s'applique à Cinelerra CV
+L'édition de ce manuel est 1.26.FR, et il s'applique à Cinelerra CV
 version 2.3.  Vous pouvez le redistribueer et/ou le modifier selon les
 termes de la Licence Publique Générale GNU (GPL), telle que publiée par
 la Free Software Foundation ; soit à la version 2 de la licence ou (à
@@ -4399,8 +4399,7 @@ dans la piste de sortie.  L'espace restant dans la sortie sera laissé
 vierge.
 
 
-   Les dimensions de la sortie (affichées en vert) sont plus grandes
-   que le temporaire
+Les dimensions de la sortie (affichées en vert) sont plus grandes que le temporaire
 
    Si les dimensions de la sortie sont plus petites que celles du
 temporaire, alors certaines parties du temporaire vidéo seront
@@ -4947,7 +4946,66 @@ référence si c'est un effet partagé.
 13.3 Les effets audio en temps réel
 ===================================
 
-13.3.1 Compresseur
+13.3.1 Audio arrière
+--------------------
+
+ Appliquer audio arrière à une piste audio et lisez-la en sens inverse.
+Le son sera reproduit normalement.
+
+   Soyez conscient, en inversant l'audio, que la forme d'onde sur la
+timeline ne reflète pas la sortie inversée.
+
+13.3.2 Audio en direct
+----------------------
+
+ Cet effet lit directement l'audio depuis l'entrée de la carte son.  Il
+remplace toute l'audio de la piste il est donc en général appliqué sur
+une piste vide.
+
+   Afin d'utiliser audio en direct, mettez en surbrillance une zone
+horizontale d'une piste audio ou placez les points d'entrée et de
+sortie.  Déposez-y ensuite l'effet d'audio en direct.  Créez des pistes
+supplémentaires et attachez à ces autres pistes des copies partagées du
+premier effet d'audio en direct afin d'enregistrer des canaux
+supplémentaires.
+
+   L'audio en direct utilise le pilote audio sélectionné dans
+Configuration->Préférences->Lecture->Sortie audio pour enregistrer,
+mais au contraire le l'acquisition il utilise la taille de tampon en
+lecture comme tampon d'enregistrement et le taux d'échantillonage du
+projet comme taux d'échantillonnage.
+
+   Ces paramètres sont critiques car certaines cartes son ne peuvent pas
+enregistrer dans un tampon dimensionné de la même manière que celui
+dans lequel elle effectuent la restitution.  L'audio en direct est plus
+fiable lorsque le pilote d'enregistrement est ALSA et que la taille de
+fragment de lecture est de 2048.
+
+   Déposez les autres effets après l'effet audio en direct afin de
+traiter l'entrée de la carte son en temps réel.
+
+   Aux mauvaises nouvelles maintenant.  Avec l'audio en direct, il n'y
+a pas d'anticipation, donc des effets tels que le compresseur auront un
+retard si l'anticipation est activée ou il manquera des données lors de
+la lecture.
+
+   Un autre problème provient du fait que l'horloge de la carte son est
+parfois légèrement plus lente que l'horloge de la lecture.
+L'enregistrement sera alors en avance et le son reproduit sera saccadé.
+
+   Enfin, l'audio en direct ne fonctionne pas en inverse.
+
+13.3.3 Audio inversée
+---------------------
+
+ FIXME
+
+13.3.4 Boucle audio
+-------------------
+
+ FIXME
+
+13.3.5 Compresseur
 ------------------
 
  Au contraire de ce qu'on fait avec les ordinateurs, le compresseur
@@ -5039,109 +5097,8 @@ par uniquement la valeur crête actuelle.  Il est alors très facile de
 voir l'action du temps de réaction sur la détection des valeurs de
 crête.
 
-13.3.2 Retard audio
--------------------
-
- Indiquez simplement de combien de secondes vous désirez que la piste
-audio soit retardée.
-
-13.3.3 Supprimer le bruit
--------------------------
-
- FIXME
-
-13.3.4 Supprimer le bruit FFT
------------------------------
-
- FIXME
-
-13.3.5 Déparasiter
-------------------
-
- FIXME
-
-13.3.6 Egaliseur paramétrique
------------------------------
-
- FIXME
-
-13.3.7 Freeverb
----------------
-
- FIXME
-
-13.3.8 Gain
------------
-
- FIXME
-
-13.3.9 Heroine College
-----------------------
-
- FIXME
-
-13.3.10 Interpoler
-------------------
-
- FIXME
-
-13.3.11 Audio inversée
-----------------------
-
- FIXME
-
-13.3.12 Audio en direct
------------------------
-
- Cet effet lit directement l'audio depuis l'entrée de la carte son.  Il
-remplace toute l'audio de la piste il est donc en général appliqué sur
-une piste vide.
-
-   Afin d'utiliser audio en direct, mettez en surbrillance une zone
-horizontale d'une piste audio ou placez les points d'entrée et de
-sortie.  Déposez-y ensuite l'effet d'audio en direct.  Créez des pistes
-supplémentaires et attachez à ces autres pistes des copies partagées du
-premier effet d'audio en direct afin d'enregistrer des canaux
-supplémentaires.
-
-   L'audio en direct utilise le pilote audio sélectionné dans
-Configuration->Préférences->Lecture->Sortie audio pour enregistrer,
-mais au contraire le l'acquisition il utilise la taille de tampon en
-lecture comme tampon d'enregistrement et le taux d'échantillonage du
-projet comme taux d'échantillonnage.
-
-   Ces paramètres sont critiques car certaines cartes son ne peuvent pas
-enregistrer dans un tampon dimensionné de la même manière que celui
-dans lequel elle effectuent la restitution.  L'audio en direct est plus
-fiable lorsque le pilote d'enregistrement est ALSA et que la taille de
-fragment de lecture est de 2048.
-
-   Déposez les autres effets après l'effet audio en direct afin de
-traiter l'entrée de la carte son en temps réel.
-
-   Aux mauvaises nouvelles maintenant.  Avec l'audio en direct, il n'y
-a pas d'anticipation, donc des effets tels que le compresseur auront un
-retard si l'anticipation est activée ou il manquera des données lors de
-la lecture.
-
-   Un autre problème provient du fait que l'horloge de la carte son est
-parfois légèrement plus lente que l'horloge de la lecture.
-L'enregistrement sera alors en avance et le son reproduit sera saccadé.
-
-   Enfin, l'audio en direct ne fonctionne pas en inverse.
-
-13.3.13 Boucle audio
---------------------
-
- FIXME
-
-13.3.14 Overlay
----------------
-
- FIXME
-
-13.3.15 Décalage de hauteur
----------------------------
+13.3.6 Décalage de hauteur
+--------------------------
 
  Comme pour les méthodes d'étirement du temps, il y a trois méthodes de
 décalage de hauteur : Décalage de hauteur, Rééchantillonner, et le
@@ -5167,32 +5124,74 @@ hauteur.  Cette méthode demande aussi d'effectuer un clic gauche sur la
 limite droite des pistes audio et de glisser cette limite vers la
 gauche ou vers la droite afin de déterminer la durée de la modification.
 
-13.3.16 Audio arrière
----------------------
+13.3.7 Déparasiter
+------------------
 
- Appliquer audio arrière à une piste audio et lisez-la en sens inverse.
-Le son sera reproduit normalement.
+ FIXME
 
-   Soyez conscient, en inversant l'audio, que la forme d'onde sur la
-timeline ne reflète pas la sortie inversée.
+13.3.8 Egaliseur paramétrique
+-----------------------------
 
-13.3.17 Niveau audio
+ FIXME
+
+13.3.9 Etirement du temps
+-------------------------
+
+ FIXME
+
+13.3.10 Freeverb
+----------------
+
+ FIXME
+
+13.3.11 Gain
+------------
+
+ FIXME
+
+13.3.12 Heroine College
+-----------------------
+
+ FIXME
+
+13.3.13 Interpoler
+------------------
+
+ FIXME
+
+13.3.14 Niveau audio
 --------------------
 
  FIXME
 
-13.3.18 Spectrogramme
+13.3.15 Overlay
+---------------
+
+ FIXME
+
+13.3.16 Retard audio
+--------------------
+
+ Indiquez simplement de combien de secondes vous désirez que la piste
+audio soit retardée.
+
+13.3.17 Spectrogramme
 ---------------------
 
  FIXME
 
-13.3.19 Synthétiseur
---------------------
-
- FIXME
-
-13.3.20 Etirement du temps
+13.3.18 Supprimer le bruit
 --------------------------
+
+ FIXME
+
+13.3.19 Supprimer le bruit FFT
+------------------------------
+
+ FIXME
+
+13.3.20 Synthétiseur
+--------------------
 
  FIXME
 

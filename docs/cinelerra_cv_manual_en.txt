@@ -19,18 +19,18 @@ Cinelerra CV Manual
   2.4 Running Cinelerra
   2.5 Live CDs
   2.6 Arch Linux
-  2.7 Ark Linux
-  2.8 Debian
-    2.8.1 Debian binaries
-    2.8.2 Debian prerequisites
-  2.9 Ubuntu
-    2.9.1 Instructions for Ubuntu packages installation
-  2.10 Gentoo
-  2.11 Fedora
-  2.12 Mandriva
-  2.13 Slackware
-  2.14 Suse
-  2.15 MacOSX
+  2.7 Debian
+    2.7.1 Debian binaries
+    2.7.2 Debian prerequisites
+  2.8 Ubuntu
+    2.8.1 Instructions for Ubuntu packages installation
+  2.9 Gentoo
+  2.10 Fedora
+  2.11 Mandriva
+  2.12 Slackware
+  2.13 OpenSUSE
+  2.14 Manjaro
+  2.15 ROSA Linux
 3 Configuration
   3.1 Environment variables
   3.2 Audio drivers
@@ -460,7 +460,7 @@ creating well-formed bug reports.  You may join our mailing list at
 1.3 About this manual
 =====================
 
-This manual edition is 1.60.EN, for Cinelerra CV version 2.3.  You may
+This manual edition is 1.62.EN, for Cinelerra CV version 2.3.  You may
 redistribute it and/or modify it under the terms of the GNU General
 Public License, as published by the Free Software Foundation; either
 version 2 of the License, or (at your option) any later version.
@@ -927,31 +927,25 @@ it on your system.  This is possible by using Live CDs, that are
 GNU/Linux distributions which boot from a CD, without installation on a
 hard drive.  Here are some of the Live CD's known to contain Cinelerra:
 
-   * Knoppix - the "original" Debian-based LiveDistro -
-     `http://www.knoppix.org'
-
-   * dyne:bolic - for multimedia production - uses Window Maker window
-     manager - `http://www.dynebolic.org'
-
-   * Elive - Debian based live CD using Enlightenment window manager -
-     `http://www.elivecd.org'
-
-   * x-evian - Debian based live CD for multimedia creations -
-     `http://x-evian.org'
-
-   * Mediainlinux - Knoppix based  - `http://www.mediainlinux.org/'
-
-   * Musix - Knoppix based live CD for audio production, graphic design
-     and video editing  - `http://musix.org.ar'
-
-   * pho (garbure) - dedicated to video editing -
-     `http://garbure.org/pho/'
-
-   * Slo-Tech - based on Debian and Morphix -
-     `http://linux.slo-tech.com'
+   * Apodio - Based on Xubuntu 14.04. A GNU/Linux operating system
+     containing audio, text-friendly, graphic and video tools -
+     `http://www.apodio.org'
 
    * ArtistX - Debian based live CD, Gnome or KDE. For multimedia
-     productions - `http://artistx.org'
+     productions -
+     `http://sourceforge.net/projects/archiveos/files/artistx/'
+
+   * AVLinux - 32bit+PAE OS, designed to turn a regular old PC or Intel
+     Mac into an Audio/Graphics/Video workstation -
+     `http://www.bandshed.net/avlinux/'
+
+   * Elive - Debian based live CD using Enlightenment window manager:
+     This uses the upstream version HV, not CV -
+     `http://www.elivecd.org'
+
+   * Musix - Knoppix based live CD for audio production, graphic design
+     and video editing: This uses the upstream version HV, not CV -
+     `http://musix.org.ar'
 
 2.6 Arch Linux
 ==============
@@ -963,56 +957,19 @@ info).
 Then run the following command from the command line:
 `pacman -Sy cinelerra-cv'
 
-2.7 Ark Linux
-=============
-
-Cinelerra CV is included in the Ark Linux package repository.
-To install the cinelerra package use the Install Software tool in
-Mission Control or run the following commands from a command line:
-`apt-get update'
-`apt-get install cinelerra'.
-
-2.8 Debian
+2.7 Debian
 ==========
 
-2.8.1 Debian binaries
+2.7.1 Debian binaries
 ---------------------
 
-Andraz TORI maintains build rules for Debian Sid.  He also makes binary
-.deb packages for Sid.  They are built from the unofficial SVN releases.
-Debian Sid packages can be found here:
-   * Apt source for i386:
-     `deb http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./'
+Debian packages are available through Deb Multimedia:
+`https://www.deb-multimedia.org/'
 
-   * Apt source for Pentium4 (optimized):
-     `deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentium4/ ./'
+   Stable (Jessie) comes with Cinelerra-CV 2.2, Testing (Stretch) and
+Unstable (Sid) already have the latest version 2.3.
 
-   * Apt source for Pentium-M (optimized):
-     `deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentiumm/ ./'
-
-   * Apt source for AthlonXP (optimized):
-     `deb http://www.kiberpipa.org/~minmax/cinelerra/builds/athlonxp/ ./'
-
-   Valentina MESSERI built also
-   * Apt source for Opteron (AMD64) (optimized):
-     `deb http://giss.tv/~vale/debian64/ ./'
-
-   Christian MARILLAT makes binary Debian packages, built from the
-unofficial SVN releases, for stable, testing and unstable.
-   * Apt source for amd64, hppa, i386, ia64, powerpc (not optimized):
-     `deb http://www.debian-multimedia.org BRANCH main'
-
-   Note: BRANCH = stable, testing or unstable
-Note: Install debian-multimedia-keyring to add in your keyring
-Marillat's gpg-key.
-
-   Note: If Cinelerra produces the following error:
-`cinelerra: relocation error: /usr/lib/libavcodec.so.0.4.8: undefined
-symbol: faacDecOpen'
-You can solve the problem by entering the following command as root:
-`apt-get install --reinstall libfaad2-0=2.0.0-0.5'
-
-2.8.2 Debian prerequisites
+2.7.2 Debian prerequisites
 --------------------------
 
 Standard development packages
@@ -1084,24 +1041,24 @@ following line, which is Christian Marillat's repository:
 
    * libfaac-dev
 
-2.9 Ubuntu
+2.8 Ubuntu
 ==========
 
-2.9.1 Instructions for Ubuntu packages installation
+2.8.1 Instructions for Ubuntu packages installation
 ---------------------------------------------------
 
 Chose a repository from the ones above according to your release and
-CPU type and install the package.
-Here are 3 ways of doing that:
+CPU type and install the package. Here are 3 ways of doing that:
 
-   With Synaptic Package Manager (recommended):
+With Synaptic Package Manager (recommended):
 
-   Open the Software Sources Window.
-You can do it in two ways:
-- Go to System -> Administraton -> Software Sources
-- Inside Synaptic Package Manager: Go to Settings -> Repositories.
-Make sure you have universe, multiverse and restricted sources checked
-in the first tab.
+   Open the Software Sources Window. You can do it in two ways:
+
+   * Go to System -> Administraton -> Software Sources
+
+   * Inside Synaptic Package Manager: Go to Settings -> Repositories.
+   Make sure you have universe, multiverse and restricted sources
+checked in the first tab.
 Click on tab Third Party. Click on the Add button and enter:
 ppa:cinelerra-ppa/ppa
 
@@ -1110,6 +1067,7 @@ Software Sources window.
 You should now see Cinelerra in the list of packages available in
 Synaptic.
 Follow Synaptic instructions for installation.
+
 With the command line:
 
    Edit directly your `/etc/apt/sources.list' file.
@@ -1117,186 +1075,115 @@ Make sure you have universe, multiverse and restricted sources enabled
 by checking you have the following line uncommented:
 deb http://ppa.launchpad.net/cinelerra-ppa/ppa/ubuntu <RELEASE> main
  where <RELEASE> is your installed version of Ubuntu (precise, trusty,
-etc).
+xenial, etc).
 Add the complete APT line of your chosen repository.
 Install Cinelerra by typing in your terminal:
 apt-get update
  and then
 apt-get install cinelerra
+HOWTOs for package installation or compilation from source code
 
-With GDebi Package Installer:
+   Compilation from source code on Ubuntu (for beginners):
 
-   Send Firefox to the web address of the repository
-(e.g. http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/.)
-Click on the .deb link for your chosen Cinelerra package
-(e.g. cinelerra_2.1.0+svn20070109-0ubuntu1_i386.deb)
-A dialog window will ask you to confirm your intention to open this
-file with GDebi Package installer.
-Clicking OK will start the download.
-If during the process you get errors about not satisfiable
-dependencies, try installing the problematic library with the same
-method from the same webpage.
+   `http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html'
 
-   HOWTOs for package installation or compilation from source code
-   * Installation of Ubunty Feisty AMD64 Cinelerra package:
-     `https://help.ubuntu.com/community/CinelerraOnFeistyAMD64'
-
-   * Compilation from source code on Ubuntu 7.10 Gutsy Gibbon (for
-     beginners):
-     `http://www.g-raffa.eu/Cinelerra/cin_compilation.html'
-
-   * Compilation from source code on Ubuntu 7.10 Gutsy Gibbon:
-     `http://lab.dyne.org/cinelerra/Gutsy'
-
-   * Compilation from source code on Ubuntu 6.10 Edgy Eft:
-     `http://www.ubuntuforums.org/showthread.php?t=320701&highlight=cinelerra'
-
-   * Compilation from source code on Ubuntu Breezy:
-     `http://placide.home.sapo.pt/cinelerra02.html'
-
-   * Compilation from source code on Ubuntu (for beginners, in Italian):
-     `https://faberlibertatis.org/wiki/Cinelerra_CV_su_Ubuntu'
-
-2.10 Gentoo
-===========
+2.9 Gentoo
+==========
 
 Installation for Gentoo GNU/Linux is very straight forward. Simply type:
-emerge cinelerra-cvs
+emerge cinelerra
  as root and it should install and run without any problems.  Note that
-you may need to put cinelerra-cvs in your
-`/etc/portage/package.keywords' file in order to unmask it:
-echo "=media-video/cinelerra-cvs ~x86" >> /etc/portage/package.keywords
+you may need to put cinelerra in your `/etc/portage/package.keywords'
+file in order to unmask it:
+echo "=media-video/cinelerra ~x86" >> /etc/portage/package.keywords
 
-   See
-`http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'
-for details. If you are running on an architecture other than x86 e.g.
+See `https://wiki.gentoo.org/wiki/Handbook:X86/Working/Portage' for
+details. If you are running on an architecture other than x86 e.g.
 amd64, you will need to replace ~x86 with the relevant architecture
 e.g. ~amd64.
 
-   You may also want to adjust the USE flags. First run
-emerge -av cinelerra-cvs
+   You may also want to adjust the USE flags. First run:
+emerge -av cinelerra
  to see what flags are available and then add the relevant ones to
 `/etc/portage/package.use':
-echo "media-video/cinelerra-cvs ieee1394" >> /etc/portage/package.use
+echo "media-video/cinelerra ieee1394" >> /etc/portage/package.use
  This would enable support for firewire devices.
 
-2.11 Fedora
+2.10 Fedora
 ===========
 
-Cinelerra is included in the Freshrpms repository at
-`http://freshrpms.net'.  The easiest way to install packages from
-Freshrpms is to include the repository in the yum configuration. Also
-make sure that the Fedora Extras repository is enabled.  This is the
-case by default on Fedora 5 and 6, and Core and Extras are merged into
-one on Fedora 7.
+Cinelerra-CV is not available in Fedora by default. It's also not in
+the RPM Fusion repository. The ATrpms repository offers the old version
+2.1 for Fedora 20: `http://packages.atrpms.net/name/cinelerra/'
+If you want to compile CinelerraCV from source you can find detailed
+instructions here:
+   * Build Cinelerra-CV for Fedora 22 under Docker:
+     `http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker'
 
-   For Fedora 8 see
-`http://kernelreloaded.blog385.com/index.php/archives/install-cinelerra-on-fedora-8/'
+   * Build Cinelerra-CV for Fedora 15, x86-64:
+     `http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html'
 
-   On Fedora 6, as the user root do:
-rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/6/\
-freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
-
-   On Fedora 5, do:
-rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/5/\
-freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
-
-   Then type:
-yum -y install cinelerra
- to get and install Cinelerra and all the dependencies, including
-ffmpeg and mjpegtools.  If it does not work, check the `/etc/yum.conf'
-file and make sure that the Freshrpms config gets included from the
-`/etc/yum.repos.d'.
-
-   Notes:
-   * The package collection of Freshrpms may overlap and/or conflict
-     with other third-party repositories such as Livna, which may also
-     carry audio and video libraries and Cinelerra.  It may be a good
-     idea to stick with one repository and not mix packages from
-     several different third-party repositories.
-
-   * The header files of the various libraries are needed for compiling
-     Cinelerra from source. The header files are included in separate
-     devel packages that are included in the Fedora and Freshrpms
-     repositories and can be installed with yum. At least the following
-     are required:
-     OpenEXR-devel SDL-devel a52dec-devel alsa-lib-devel
-     e2fsprogs-devel faac-devel faad2-devel ffmpeg-devel fftw-devel
-     imlib2-devel lame-devel libXv-devel libXxf86vm-devel
-     libavc1394-devel libdv-devel libiec61883-devel libogg-devel
-     libraw1394-devel libsndfile-devel libtheora-devel libvorbis-devel
-     mjpegtools-devel x264-devel xvidcore-devel
-
-   * If you want to compile Cinelerra from source on Fedora Core 6,
-     detailed instructions on how to install the necessary dependent
-     files can be found at: `http://crazedmuleproductions.blogspot.com
-     /2007/03/fedora-core-6-cinelerra-dependencies.html'
-
-2.12 Mandriva
+2.11 Mandriva
 =============
 
-Cinelerra packages for Mandriva are made by PLF are ready to install.
-Read `http://plf.zarb.org/packages.php' for more information.
+CinelerraCV 2.2 is officially available in OpenMandriva 2014.2. Make
+sure restricted packages are activated in the control center. Note:
+cinelerra doesn't appear in the "programs with GUI" list. You have to
+show the complete list to install it.
 
-2.13 Slackware
+2.12 Slackware
 ==============
 
-Rafael DINIZ build Slackware packages for Cinelerra.
+You can find prebuilt Cinelerra-CV packages at the following locations:
 
-   * For x86:
-     `http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/'
+   * Slackonly packages (recommended, because it uses SBo SlackBuilds):
+     `http://packages.slackonly.com/pub/packages/'
 
-   * For slackintosh:
-     `http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/'
+   * Ponce's repository: `http://ponce.cc/slackware/sources/repo/'
 
-2.14 Suse
-=========
+   * Studioware packages: `http://studioware.org/packages'
 
-RPMs for SuSE 9 are built from SVN sources by Kevin BROSIUS, and
-available at `http://cin.kevb.net/files/RPM/'
+   * If you want to build CinelerraCV from scratch, SlackBuilds are
+     available at the usual place:
+     `http://slackbuilds.org/repository/14.1/multimedia/cinelerra/'
 
-   RPMs for OpenSUSE 10.1 and 10.2, architecture i586 and x86_64, are
-built from SVN by Leon FREITAG at Packman.  They are available at
-`http://packman.links2linux.org/package/cinelerra/16413'.
+2.13 OpenSUSE
+=============
 
-   The RPM package(s) can be installed as root in a terminal using this
-command:
-rpm -Uvh package_name.rpm
+RPMs for openSUSE are in the Packman repositories:
+`http://packman.links2linux.org/package/cinelerra-cv'
 
-   The following installation case shows four screenshots for a GUI
-based Cinelerra SVN installation on OpenSUSE 10.2 i586 using YaST2.
-First by adding packman's YaST2 repository as a YaST2 Installation
-source, and next the package installation with the YaST2 Software
-Manager.
+   You can install directly with Yast if you have Packman configured as
+a Yast install source.
 
-   Start the YaST Control center on OpenSUSE 10.2 and add the root
-password when requested:
+2.14 Manjaro
+============
 
+Cinelerra-CV can be installed through the Octopi package manager.
+Install the following packages:
+   * libquicktime
 
+   * mjpegtools
 
-Start the YaST2 installation source tool, select the HTTP protocol and
-add the servername for packman as shown.  Synchronization with Zenworks
-may take some time, wait until it is finished.
+   * cinelerra-cv
 
+2.15 ROSA Linux
+===============
 
+Packages for Cinelerra-CV are available in the Restricted Updates
+Repository:
+   *
+     i586:`http://mirror.rosalab.ru/rosa/red/repository/i586/restricted/updates/'
 
-Start the YaST2 Software Management.  Enter "Cinelerra" in the left
-search field and next check the checkboxes for the Cinelerra packages
-in the right window.  If an older version of Cinelerra is installed on
-beforehand visible with a lock symbol, delete it, possibly try an
-update first.
+   *
+     x86_64:`http://mirror.rosalab.ru/rosa/red/repository/x86_64/restricted/updates/'
 
-
-
-Click Accept to start the package installation and afterwards Next to
-finish.
-
-
-
-2.15 MacOSX
-===========
-
-FIXME
+   To install Cinelerra-CV in ROSA Linux, enable ROSA Restricted
+Updates repository on "Install and Remove Software".
+Update packages list:
+urpmi.update -a
+ Install cinelerra-cv rpm package:
+urpmi cinelerra-cv
 
 3 Configuration
 ***************
@@ -5276,7 +5163,89 @@ effect to blur just the alpha.
 14.4.7 Chroma key (HSV)
 -----------------------
 
- FIXME
+Plugin by Jerome Cornet `http://jcornet.free.fr/linux/chromakey.html'
+This plugin is used to remove a color from a video to composite with
+another image.  People refer to is as green screen or blue screen
+process (because of the color that is keyed out).  More information:
+`http://en.wikipedia.org/wiki/Chromakey'
+Requirements
+
+   The subject in the movie should have a good background. The lighting
+is crucial and good lighting during production will save your hide with
+much less effort than in post-production. Here we assume that we have a
+good video, filmed on green (or blue) screen that we want to use.
+Important: Make sure you are using an color model that has an alpha
+channel, such as RGBA8, RGBAFloat, YUVA8. To change color model, go to
+Settings->Format->Color Model.
+
+Usage
+
+   As any other effect, add it to the timeline in the main window. You
+can tweak each parameter in order to improve the keying.
+
+   Start with Hue Tolerance at 10%, Min Brightness at 0, Max brightness
+at 100%, Saturation offset at 0, Min Saturation at 0, In Slope at 0,
+Out Slope at 0, Alpha Offset at 0 (that's mid-way through), Spill
+Threshold at 0, Spill Compensation at 100%. At any time, you can check
+what the Mask looks like by clicking on Show Mask. This will output a
+black and white image of the mask.
+
+   * Select the Key color Select the key color (green, blue, etc) using
+     the color wheel or the color picker. Remember, only the Hue
+     matters, not Saturation or Value. To use the color picker, click
+     on the color picker icon in the Compositor window, then click on
+     the color you want in the Compositor window. Then in the Chromakey
+     (HSV) parameters window, click on "Use Color Picker".
+
+   * Adjust the Hue Tolerance Because there are slight variations in
+     lighting, the background will not be in a uniform key color hue.
+     Increase or decrease the Hue tolerance to mask out the background.
+     If there are dark spots that are keyed out that shouldn't be, it
+     can be corrected later.
+
+   * Adjust the Brightness Increase Min Brightness so that only the
+     background is masked out, and not parts of the foreground. You can
+     also reduce Max Brightness if some clear areas are keyed out
+     (useful for very dark backgrounds).
+
+   * Adjust the Saturation Increase Min Saturation so that only the
+     background is masked out, and not parts of the foreground.
+     Saturation Offset can be used to change this, but for now leave it
+     to 0.
+
+   * Check what it looks like At this stage, your mask should be pretty
+     clean. Toggle Show Mask to check what it looks like, it should be
+     OK. If not, repeat steps 1 to 4 to get a better key. The rest of
+     the controls are useful to smear the mask to help compositing
+     later on. They will help you to make your key look much cleaner.
+
+   * Adjust the slope For now, the mask is a full on/ full off mask
+     that can be really harsh and not necessarily what you are looking
+     for. In Slope and Out Slope will help you to smooth that key. In
+     Slope leaves more colors in the mask, Out Slope takes more colors
+     out of the mask. The colors that are borderline in the mask will
+     see their alpha channel reduced by half instead of being
+     completely on or off.
+
+   * Adjust the alpha channel This control offsets the whole alpha
+     channel by some amount. You probably know what you are doing if
+     you change it from 0 (the default value)
+
+   * Remove spill light This steps helps you removing the green (or
+     blue) halo around the edges of the mask. It does so by removing
+     the saturation of pixels that have a similar hue to the key color
+     (turning them into grey instead of green or blue). Spill
+     Compensation controls the amount of de-saturation. If you start
+     with Spill Compensation at 100%, slowly increase the Spill
+     Threshold until the remaining green or blue areas turn grey. Then
+     reduce Spill Compensation until the image looks good.
+
+   * Blur the alpha channel Now the mask is probably still very harsh,
+     so just below the Chromakey (HSV) plugin, add a Blur effect, and
+     select only the Alpha channel, with a radius of 2 or 3 (more if
+     you really want to soften the edges). This will significantly help
+     the keying.
+
 
 14.4.8 Color balance
 --------------------
@@ -5368,7 +5337,9 @@ can soften the transparency border.
 14.4.15 DotTV
 -------------
 
- Another effect by Kentaro (effectTV).
+ DotTV converts gray scale images to set of dots. It is hard to
+recognize what is shown when your eyes are close to the monitor. This
+is is part of EffectTV: `http://effectv.sourceforge.net'
 
 14.4.16 Downsample
 ------------------
@@ -5618,7 +5589,12 @@ Split output
 14.4.25 HolographicTV
 ---------------------
 
- By Kentarou effectTV
+ Incoming objects are projected like holovision seen in the movie "STAR
+WARS" (remember R2-D2's video message projector). To use, push space
+key and a picture is taken as a background image. Differences between
+current picture and the background image are recognized as the incoming
+objects. Use black clothing for best results. This is is part of
+EffectTV: `http://effectv.sourceforge.net'
 
 14.4.26 Hue saturation
 ----------------------

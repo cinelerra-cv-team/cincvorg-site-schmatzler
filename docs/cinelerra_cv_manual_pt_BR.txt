@@ -442,7 +442,7 @@ com a gente do que com a HV.
 1.3 Sobre este manual
 =====================
 
-Esta edição é a 1.47.pt_BR, válida para a versão 2.3 da versão do
+Esta edição é a 1.48.pt_BR, válida para a versão 2.3 da versão do
 Cinelerra CV. Você pode redistribui-lo e/ou modificá-lo sob os termos
 da GNU General Public License, conforme publicada pela Free Software
 Foundation; tanto a versão 2 da Licença, quanto (à sua escolha)
@@ -5950,6 +5950,7 @@ movimento:
      para estabilizar um objeto no quadro. As operações de moção pode
      ser precisas para pixels únicos ou subpixels mudando-se a
      configuração de ação.
+
 
 14.4.33.1 Segredos do rastreamento de moção
 ...........................................

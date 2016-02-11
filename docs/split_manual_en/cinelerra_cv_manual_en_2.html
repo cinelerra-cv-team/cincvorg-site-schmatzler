@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on February, 4 2016 by texi2html 1.76 -->
+<!-- Created on February, 11 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -334,23 +334,13 @@ which boot from a CD, without installation on a hard drive.  Here are some of
 the Live CD's known to contain Cinelerra:
 </p>
 <ul>
-<li> <b>Knoppix</b> - the &quot;original&quot; Debian-based LiveDistro -
-<a href="http://www.knoppix.org">http://www.knoppix.org</a>
-</li><li> <b>dyne:bolic</b> - for multimedia production - uses Window Maker window
-manager - <a href="http://www.dynebolic.org">http://www.dynebolic.org</a>
-</li><li> <b>Elive</b> - Debian based live CD using Enlightenment window manager -
-<a href="http://www.elivecd.org">http://www.elivecd.org</a>
-</li><li> <b>x-evian</b> - Debian based live CD for multimedia creations -
-<a href="http://x-evian.org">http://x-evian.org</a>
-</li><li> <b>Mediainlinux</b> - Knoppix based  - <a href="http://www.mediainlinux.org/">http://www.mediainlinux.org/</a>
-</li><li> <b>Musix</b> - Knoppix based live CD for audio production, graphic design and 
-video editing  - <a href="http://musix.org.ar">http://musix.org.ar</a>
-</li><li> <b>pho</b> (garbure) - dedicated to video editing -
-<a href="http://garbure.org/pho/">http://garbure.org/pho/</a>   
-</li><li> <b>Slo-Tech</b> - based on Debian and Morphix -
-<a href="http://linux.slo-tech.com">http://linux.slo-tech.com</a>
+<li> <b>Apodio</b> - Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools - <a href="http://www.apodio.org">http://www.apodio.org</a>
 </li><li> <b>ArtistX</b> - Debian based live CD, Gnome or KDE. For multimedia
-productions - <a href="http://artistx.org">http://artistx.org</a>
+productions - <a href="http://sourceforge.net/projects/archiveos/files/artistx/">http://sourceforge.net/projects/archiveos/files/artistx/</a>
+</li><li> <b>AVLinux</b> - 32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation - <a href="http://www.bandshed.net/avlinux/">http://www.bandshed.net/avlinux/</a>
+</li><li> <b>Elive</b> - Debian based live CD using Enlightenment window manager: This uses the upstream version HV, not CV - <a href="http://www.elivecd.org">http://www.elivecd.org</a>
+</li><li> <b>Musix</b> - Knoppix based live CD for audio production, graphic design and 
+video editing: This uses the upstream version HV, not CV - <a href="http://musix.org.ar">http://musix.org.ar</a> 
 </li></ul>
 
 <hr size="6">
@@ -366,69 +356,24 @@ Then run the following command from the command line:<br>
 <code>pacman -Sy cinelerra-cv</code>
 </p>
 <hr size="6">
-<a name="Ark-Linux"></a>
-<a name="SEC18"></a>
-<h2 class="section"> 2.7 Ark Linux </h2>
-
-<p>Cinelerra CV is included in the Ark Linux package repository. <br>
-To install the <b>cinelerra</b> package use the <b>Install Software</b> tool in Mission 
-Control or run the following commands from a command line:<br>
-<code>apt-get update</code><br>
-<code>apt-get install cinelerra</code>. 
-</p>
-<hr size="6">
 <a name="Debian"></a>
-<a name="SEC19"></a>
-<h2 class="section"> 2.8 Debian </h2>
+<a name="SEC18"></a>
+<h2 class="section"> 2.7 Debian </h2>
 
 
 <hr size="6">
 <a name="Debian-binaries"></a>
-<a name="SEC20"></a>
-<h3 class="subsection"> 2.8.1 Debian binaries </h3>
+<a name="SEC19"></a>
+<h3 class="subsection"> 2.7.1 Debian binaries </h3>
 
-<p>Andraz <small>TORI</small> maintains build rules for Debian Sid.  He also makes binary
-.deb packages for Sid.  They are built from the unofficial SVN releases.
-Debian Sid packages can be found here:
-</p><ul>
-<li> <b>Apt source for i386:</b><br>
-<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/ ./</code>
-</li><li> <b>Apt source for Pentium4 (optimized):</b><br>
-<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentium4/ ./</code>
-</li><li> <b>Apt source for Pentium-M (optimized):</b><br>
-<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/pentiumm/ ./</code>
-</li><li> <b>Apt source for AthlonXP (optimized):</b><br>
-<code>deb http://www.kiberpipa.org/~minmax/cinelerra/builds/athlonxp/ ./</code>
-</li></ul>
-
-<p>Valentina <small>MESSERI</small> built also
-</p><ul>
-<li> <b>Apt source for Opteron (AMD64) (optimized):</b><br>
-<code>deb http://giss.tv/~vale/debian64/ ./</code>
-</li></ul>
-
-<p>Christian <small>MARILLAT</small> makes binary Debian packages, built from the unofficial SVN 
-releases, for stable, testing and unstable.
-</p><ul>
-<li> <b>Apt source for amd64, hppa, i386, ia64, powerpc (not optimized):</b><br>
-<code>deb http://www.debian-multimedia.org BRANCH main</code>
-</li></ul>
-
-
-<p><b>Note:</b> BRANCH = stable, testing or unstable<br>
-<b>Note:</b> Install <b>debian-multimedia-keyring</b> to add in your keyring Marillat's
-gpg-key.
+<p>Debian packages are available through Deb Multimedia: <a href="https://www.deb-multimedia.org/">https://www.deb-multimedia.org/</a>
 </p>
-<p><b>Note:</b> If Cinelerra produces the following error:<br>
-<code>cinelerra: relocation error: /usr/lib/libavcodec.so.0.4.8: undefined symbol: 
-faacDecOpen</code><br>
-You can solve the problem by entering the following command as root:<br> 
-<code>apt-get install --reinstall libfaad2-0=2.0.0-0.5</code> 
+<p>Stable (Jessie) comes with Cinelerra-CV 2.2, Testing (Stretch) and Unstable (Sid) already have the latest version 2.3.
 </p>
 <hr size="6">
 <a name="Debian-prerequisites"></a>
-<a name="SEC21"></a>
-<h3 class="subsection"> 2.8.2 Debian prerequisites </h3>
+<a name="SEC20"></a>
+<h3 class="subsection"> 2.7.2 Debian prerequisites </h3>
 
 <p><b>Standard development packages</b>
 </p>
@@ -490,227 +435,155 @@ line, which is Christian Marillat's repository:<br>
 
 <hr size="6">
 <a name="Ubuntu"></a>
-<a name="SEC22"></a>
-<h2 class="section"> 2.9 Ubuntu </h2>
+<a name="SEC21"></a>
+<h2 class="section"> 2.8 Ubuntu </h2>
 
 
 <hr size="6">
 <a name="Instructions-for-Ubuntu-packages-installation"></a>
-<a name="SEC23"></a>
-<h3 class="subsection"> 2.9.1 Instructions for Ubuntu packages installation </h3>
+<a name="SEC22"></a>
+<h3 class="subsection"> 2.8.1 Instructions for Ubuntu packages installation </h3>
 
 <p>Chose a repository from the ones above according to your release and CPU type 
-and install the package.<br>
-Here are 3 ways of doing that:
+and install the package. Here are 3 ways of doing that:
 </p>
+<br>
 <p><b>With Synaptic Package Manager (recommended):</b>
 </p>
-<p>Open the Software Sources Window. <br>
-You can do it in two ways: <br>
-- Go to System -&gt; Administraton -&gt; Software Sources<br>
-- Inside Synaptic Package Manager: Go to Settings -&gt; Repositories. <br>
-Make sure you have universe, multiverse and restricted sources checked in the 
+<p>Open the Software Sources Window. You can do it in two ways:
+</p>
+<ul>
+<li> Go to System -&gt; Administraton -&gt; Software Sources
+</li><li> Inside Synaptic Package Manager: Go to Settings -&gt; Repositories. 
+</li></ul>
+<p>Make sure you have universe, multiverse and restricted sources checked in the 
 first tab.<br>
 Click on tab Third Party. Click on the Add button and enter: <br>
-</p><pre class="verbatim">ppa:cinelerra-ppa/ppa
+</p><pre class="verbatim">ppa:cinelerra-ppa/ppa 
 </pre>
-<p>Clicking Add Source will display the new repository enabled in the Software 
+<br><p> Clicking Add Source will display the new repository enabled in the Software 
 Sources window. <br>
 You should now see Cinelerra in the list of packages available in Synaptic. <br>
-Follow Synaptic instructions for installation.<br>
+Follow Synaptic instructions for installation.
 </p>
+<br>
 <p><b>With the command line:</b>
 </p>
 <p>Edit directly your <tt>`/etc/apt/sources.list'</tt> file.<br>
 Make sure you have universe, multiverse and restricted sources enabled by checking 
 you have the following line uncommented: <br>
 </p><pre class="verbatim">deb http://ppa.launchpad.net/cinelerra-ppa/ppa/ubuntu &lt;RELEASE&gt; main
-</pre><p>where &lt;RELEASE&gt; is your installed version of Ubuntu (precise, trusty, etc). <br>
+</pre><p>where &lt;RELEASE&gt; is your installed version of Ubuntu (precise, trusty, xenial, etc). <br>
 </p>
 <p>Add the complete APT line of your chosen repository.<br>
 Install Cinelerra by typing in your terminal:<br>
 </p><pre class="verbatim">apt-get update
 </pre><p>and then 
 </p><pre class="verbatim">apt-get install cinelerra
-</pre>
-<p><b>With GDebi Package Installer:</b>
+</pre><br>
+<p><b>HOWTOs for package installation or compilation from source code</b>
 </p>
-<p>Send Firefox to the web address of the repository <br>
-(e.g. http://www.kiberpipa.org/~muzzol/cinelerra/edgy-i386/.)<br>
-Click on the .deb link for your chosen Cinelerra package <br>
-(e.g. cinelerra_2.1.0+svn20070109-0ubuntu1_i386.deb)<br>
-A dialog window will ask you to confirm your intention to open this file with 
-GDebi Package installer. <br>
-Clicking OK will start the download.<br>
-If during the process you get errors about not satisfiable dependencies, try 
-installing the problematic library with the same method from the same webpage.
+<p>Compilation from source code on Ubuntu (for beginners):
 </p>
-<p><b>HOWTOs for package installation or compilation from source code</b><br>
+<p><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html</a>
 </p>
-<ul>
-<li> Installation of Ubunty Feisty AMD64 Cinelerra package:<br>
-<a href="https://help.ubuntu.com/community/CinelerraOnFeistyAMD64">https://help.ubuntu.com/community/CinelerraOnFeistyAMD64</a>
-
-</li><li> Compilation from source code on Ubuntu 7.10 Gutsy Gibbon (for beginners):<br>
-<a href="http://www.g-raffa.eu/Cinelerra/cin_compilation.html">http://www.g-raffa.eu/Cinelerra/cin_compilation.html</a>
-
-</li><li> Compilation from source code on Ubuntu 7.10 Gutsy Gibbon:<br>
-<a href="http://lab.dyne.org/cinelerra/Gutsy">http://lab.dyne.org/cinelerra/Gutsy</a>
-
-</li><li> Compilation from source code on Ubuntu 6.10 Edgy Eft:<br>
-<a href="http://www.ubuntuforums.org/showthread.php?t=320701&amp;highlight=cinelerra">http://www.ubuntuforums.org/showthread.php?t=320701&amp;highlight=cinelerra</a>
-
-</li><li> Compilation from source code on Ubuntu Breezy:<br>
-<a href="http://placide.home.sapo.pt/cinelerra02.html">http://placide.home.sapo.pt/cinelerra02.html</a>
-
-</li><li> Compilation from source code on Ubuntu (for beginners, in 
-Italian):<br>
-<a href="https://faberlibertatis.org/wiki/Cinelerra_CV_su_Ubuntu">https://faberlibertatis.org/wiki/Cinelerra_CV_su_Ubuntu</a>
-</li></ul>
-
 <hr size="6">
 <a name="Gentoo"></a>
-<a name="SEC24"></a>
-<h2 class="section"> 2.10 Gentoo </h2>
+<a name="SEC23"></a>
+<h2 class="section"> 2.9 Gentoo </h2>
 
 <p>Installation for Gentoo GNU/Linux is very straight forward. Simply type:
-</p><pre class="verbatim">emerge cinelerra-cvs
+</p><pre class="verbatim">emerge cinelerra
 </pre><p>as root and it should install and run without any problems.  Note that you may need
-to put cinelerra-cvs in your <tt>`/etc/portage/package.keywords'</tt> file in order to
+to put cinelerra in your <tt>`/etc/portage/package.keywords'</tt> file in order to
 unmask it:
-</p><pre class="verbatim">echo &quot;=media-video/cinelerra-cvs ~x86&quot; &gt;&gt; /etc/portage/package.keywords
+</p><pre class="verbatim">echo &quot;=media-video/cinelerra ~x86&quot; &gt;&gt; /etc/portage/package.keywords
 </pre>
-<p>See <a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&amp;chap=3">http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&amp;chap=3</a> 
+<br>
+<p>See <a href="https://wiki.gentoo.org/wiki/Handbook:X86/Working/Portage">https://wiki.gentoo.org/wiki/Handbook:X86/Working/Portage</a> 
 for details. If you are running on an architecture other than x86 e.g. amd64, you 
 will need to replace ~x86 with the relevant architecture e.g. ~amd64.
 </p>
-<p>You may also want to adjust the USE flags. First run <br>
-</p><pre class="verbatim">emerge -av cinelerra-cvs
+<p>You may also want to adjust the USE flags. First run:
+</p><pre class="verbatim">emerge -av cinelerra
 </pre><p>to see what flags are available and then add the relevant ones to 
-<tt>`/etc/portage/package.use'</tt>: <br>
-</p><pre class="verbatim">echo &quot;media-video/cinelerra-cvs ieee1394&quot; &gt;&gt; /etc/portage/package.use 
+<tt>`/etc/portage/package.use'</tt>:
+</p><pre class="verbatim">echo &quot;media-video/cinelerra ieee1394&quot; &gt;&gt; /etc/portage/package.use 
 </pre><p>This would enable support for firewire devices.
 </p>
 <hr size="6">
 <a name="Fedora"></a>
-<a name="SEC25"></a>
-<h2 class="section"> 2.11 Fedora </h2>
+<a name="SEC24"></a>
+<h2 class="section"> 2.10 Fedora </h2>
 
-<p>Cinelerra is included in the Freshrpms repository at
-<a href="http://freshrpms.net">http://freshrpms.net</a>.  The easiest way to install packages from
-Freshrpms is to include the repository in the <b>yum</b> configuration. Also make
-sure that the Fedora Extras repository is enabled.  This is the case by default
-on Fedora 5 and 6, and Core and Extras are merged into one on Fedora 7.
-</p>
-<p>For Fedora 8 see
-<a href="http://kernelreloaded.blog385.com/index.php/archives/install-cinelerra-on-fedora-8/">http://kernelreloaded.blog385.com/index.php/archives/install-cinelerra-on-fedora-8/</a>
-</p>
-<p>On Fedora 6, as the user root do:
-</p><pre class="verbatim">rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/6/\
-freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
-</pre>
-<p>On Fedora 5, do:
-</p><pre class="verbatim">rpm -ivh http://ftp.freshrpms.net/pub/freshrpms/fedora/linux/5/\
-freshrpms-release/freshrpms-release-1.1-1.fc.noarch.rpm
-</pre>
-<p>Then type:
-</p><pre class="verbatim">yum -y install cinelerra
-</pre><p>to get and install Cinelerra and all the dependencies, including ffmpeg and
-mjpegtools.  If it does not work, check the <tt>`/etc/yum.conf'</tt> file and make
-sure that the Freshrpms config gets included from the <tt>`/etc/yum.repos.d'</tt>.
-</p>
-<p><b>Notes:</b>
+<p>Cinelerra-CV is not available in Fedora by default. It's also not in the RPM Fusion repository. The ATrpms repository offers the old version 2.1 for Fedora 20: <a href="http://packages.atrpms.net/name/cinelerra/">http://packages.atrpms.net/name/cinelerra/</a><br>
+<br>
+If you want to compile CinelerraCV from source you can find detailed instructions here:
 </p><ul>
-<li> The package collection of Freshrpms may overlap and/or conflict with
-other third-party repositories such as Livna, which may also carry
-audio and video libraries and Cinelerra.  It may be a good idea to stick with
-one repository and not mix packages from several different third-party
-repositories.
-</li><li> The header files of the various libraries are needed for compiling
-Cinelerra from source. The header files are included in separate devel packages
-that are included in the Fedora and Freshrpms repositories and can be installed
-with yum. At least the following are required:<br>
-OpenEXR-devel SDL-devel a52dec-devel alsa-lib-devel e2fsprogs-devel faac-devel
-faad2-devel ffmpeg-devel fftw-devel imlib2-devel lame-devel libXv-devel
-libXxf86vm-devel libavc1394-devel libdv-devel libiec61883-devel libogg-devel
-libraw1394-devel libsndfile-devel libtheora-devel libvorbis-devel
-mjpegtools-devel x264-devel xvidcore-devel
-</li><li> If you want to compile Cinelerra from source on Fedora Core 6, detailed 
-instructions on how to install the necessary dependent files can be found at:
-<a href="http://crazedmuleproductions.blogspot.com<br> /2007/03/fedora-core-6-cinelerra-dependencies.html">http://crazedmuleproductions.blogspot.com<br> /2007/03/fedora-core-6-cinelerra-dependencies.html</a>
+<li> Build Cinelerra-CV for Fedora 22 under Docker: <a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker</a>
+</li><li> Build Cinelerra-CV for Fedora 15, x86-64: <a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html</a>
 </li></ul>
 
 <hr size="6">
 <a name="Mandriva"></a>
-<a name="SEC26"></a>
-<h2 class="section"> 2.12 Mandriva </h2>
+<a name="SEC25"></a>
+<h2 class="section"> 2.11 Mandriva </h2>
 
-<p>Cinelerra packages for Mandriva are made by PLF are ready to install.  Read
-<a href="http://plf.zarb.org/packages.php">http://plf.zarb.org/packages.php</a> for more information.
+<p>CinelerraCV 2.2 is officially available in OpenMandriva 2014.2. Make sure restricted packages are activated in the control center. Note: cinelerra doesn't appear in the &quot;programs with GUI&quot; list. You have to show the complete list to install it.
 </p>
 <hr size="6">
 <a name="Slackware"></a>
-<a name="SEC27"></a>
-<h2 class="section"> 2.13 Slackware </h2>
+<a name="SEC26"></a>
+<h2 class="section"> 2.12 Slackware </h2>
 
-<p>Rafael <small>DINIZ</small> build Slackware packages for Cinelerra.
+<p>You can find prebuilt Cinelerra-CV packages at the following locations:
 </p>
 <ul>
-<li> <b>For x86:</b><br>
-<a href="http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/">http://slack.sarava.org/packages/slackware/slackware-11.0/multimedia/</a>
-</li><li> <b>For slackintosh:</b><br>
-<a href="http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/">http://slack.sarava.org/packages/slackintosh/slackintosh-11.0/multimedia/</a>
+<li> Slackonly packages (recommended, because it uses SBo SlackBuilds): <a href="http://packages.slackonly.com/pub/packages/">http://packages.slackonly.com/pub/packages/</a>
+</li><li> Ponce's repository: <a href="http://ponce.cc/slackware/sources/repo/">http://ponce.cc/slackware/sources/repo/</a>
+</li><li> Studioware packages: <a href="http://studioware.org/packages">http://studioware.org/packages</a>
+</li><li> If you want to build CinelerraCV from scratch, SlackBuilds are available at the usual place: <a href="http://slackbuilds.org/repository/14.1/multimedia/cinelerra/">http://slackbuilds.org/repository/14.1/multimedia/cinelerra/</a>
 </li></ul>
 
 <hr size="6">
-<a name="Suse"></a>
-<a name="SEC28"></a>
-<h2 class="section"> 2.14 Suse </h2>
+<a name="OpenSUSE"></a>
+<a name="SEC27"></a>
+<h2 class="section"> 2.13 OpenSUSE </h2>
 
-<p>RPMs for SuSE 9 are built from SVN sources by Kevin <small>BROSIUS</small>, and available at
-<a href="http://cin.kevb.net/files/RPM/">http://cin.kevb.net/files/RPM/</a>
+<p>RPMs for openSUSE are in the Packman repositories: <a href="http://packman.links2linux.org/package/cinelerra-cv">http://packman.links2linux.org/package/cinelerra-cv</a>
 </p>
-<p>RPMs for OpenSUSE 10.1 and 10.2, architecture i586 and x86_64, are built from
-SVN by Leon <small>FREITAG</small> at Packman.  They are available at
-<a href="http://packman.links2linux.org/package/cinelerra/16413">http://packman.links2linux.org/package/cinelerra/16413</a>.
-</p>
-<p>The RPM package(s) can be installed as root in a terminal using this command:
-</p><pre class="verbatim">rpm -Uvh package_name.rpm
-</pre>
-<p>The following installation case shows four screenshots for a GUI based
-Cinelerra SVN installation on OpenSUSE 10.2 i586 using YaST2.  First by adding
-packman's YaST2 repository as a YaST2 Installation source, and next the package
-installation with the YaST2 Software Manager. 
-</p>
-<p>Start the YaST Control center on OpenSUSE 10.2 and add the root password when
-requested:
-</p>
-<p align="center"> <img src=".././manual_images_intl/yast2_control_center.png" alt="manual_images_intl/yast2_control_center">
-</p>
-<p>Start the YaST2 installation source tool, select the HTTP protocol and add the
-servername for packman as shown.  Synchronization with Zenworks may take some
-time, wait until it is finished.
-</p>
-<p align="center"> <img src=".././manual_images_intl/yast2_installation_source.png" alt="manual_images_intl/yast2_installation_source">
-</p>
-<p>Start the YaST2 Software Management.  Enter &quot;Cinelerra&quot; in the left search field
-and next check the checkboxes for the Cinelerra packages in the right window.
-If an older version of Cinelerra is installed on beforehand visible with a lock
-symbol, delete it, possibly try an update first.
-</p>
-<p align="center"> <img src=".././manual_images_intl/yast2_cinelerra_installation.png" alt="manual_images_intl/yast2_cinelerra_installation">
-</p>
-<p>Click Accept to start the package installation and afterwards Next to finish.
-</p>
-<p align="center"> <img src=".././manual_images_intl/yast2_package_installation.png" alt="manual_images_intl/yast2_package_installation">
+<p>You can install directly with Yast if you have Packman configured as a Yast install source.
 </p>
 <hr size="6">
-<a name="MacOSX"></a>
-<a name="SEC29"></a>
-<h2 class="section"> 2.15 MacOSX </h2>
+<a name="Manjaro"></a>
+<a name="SEC28"></a>
+<h2 class="section"> 2.14 Manjaro </h2>
 
-<p>FIXME
-</p>
+<p>Cinelerra-CV can be installed through the Octopi package manager. Install the following packages:
+</p><ul>
+<li> libquicktime
+</li><li> mjpegtools
+</li><li> cinelerra-cv
+</li></ul>
+
+<hr size="6">
+<a name="ROSA-Linux"></a>
+<a name="SEC29"></a>
+<h2 class="section"> 2.15 ROSA Linux </h2>
+
+<p>Packages for Cinelerra-CV are available in the Restricted Updates Repository:
+</p><ul>
+<li> <b>i586:</b><a href="http://mirror.rosalab.ru/rosa/red/repository/i586/restricted/updates/">http://mirror.rosalab.ru/rosa/red/repository/i586/restricted/updates/</a> 
+</li><li> <b>x86_64:</b><a href="http://mirror.rosalab.ru/rosa/red/repository/x86_64/restricted/updates/">http://mirror.rosalab.ru/rosa/red/repository/x86_64/restricted/updates/</a>
+</li></ul>
+
+<p>To install Cinelerra-CV in ROSA Linux, enable ROSA Restricted Updates repository on &quot;Install and Remove Software&quot;. 
+<br>
+Update packages list:
+</p><pre class="verbatim">urpmi.update -a
+</pre><p>Install cinelerra-cv rpm package:
+</p><pre class="verbatim">urpmi cinelerra-cv
+</pre>
 <hr size="6">
 <table cellpadding="1" cellspacing="1" border="0">
 <tr><td valign="middle" align="left">[<a href="#SEC9" title="Beginning of this chapter or previous chapter"> &lt;&lt; </a>]</td>
@@ -727,7 +600,7 @@ symbol, delete it, possibly try an update first.
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated on <i>February, 4 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+  This document was generated on <i>February, 11 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 
