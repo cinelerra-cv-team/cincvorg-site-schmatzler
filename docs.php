@@ -128,6 +128,7 @@ Some HOWTOs for specific needs are available on the internet:
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">How to compile CinelerraCV on Ubuntu</a> - by Raffaella Traniello</li>
   <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="http://www.udosworld.de/23-08-05-cinelerra-installation.php?id=linux">Installation von Cinelerra unter Debian Lenny</a> - by Udo Bender</li>
   <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><img src="/images/website/archive.png" style="margin-right:4px;" /><a href="http://web.archive.org/web/20140822083830/http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra#more-246">Crear títulos diferentes con Cinelerra</a> - by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample projects.</li>
+  <li><img src="/images/website/locale/pt.png" style="margin-right:4px;" /><a href="https://dominandocinelerra.wordpress.com/2010/12/03/chroma-key-hsv/">How to use the Chroma key (HSV) plugin</a> - by Paulo Carvalho</li>
 </ul>
 <h2><a name="links">Various links</a></h2>
 <ul style="list-style-type:none;">
@@ -151,7 +152,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on Feb 4, 2016</div>
+<div class="lastmodified">Last modified on Feb 11, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>
