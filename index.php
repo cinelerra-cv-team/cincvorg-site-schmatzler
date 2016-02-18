@@ -49,7 +49,7 @@ include "header.php";
 
 <p>
 <strong>February 6, 2016</strong><br>
-* We are in the process of updating our english manual. Helping hands for bringing <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=shortlog;h=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
+* We are in the process of updating our english manual. Helping hands for bringing <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
 </p>
 
 <p>
