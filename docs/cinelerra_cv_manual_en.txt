@@ -460,7 +460,7 @@ creating well-formed bug reports.  You may join our mailing list at
 1.3 About this manual
 =====================
 
-This manual edition is 1.62.EN, for Cinelerra CV version 2.3.  You may
+This manual edition is 1.63.EN, for Cinelerra CV version 2.3.  You may
 redistribute it and/or modify it under the terms of the GNU General
 Public License, as published by the Free Software Foundation; either
 version 2 of the License, or (at your option) any later version.
@@ -499,15 +499,15 @@ elaboration of this manual.
 SVN repository as Cinelerra's source code (hvirtual/doc folder). They
 can be converted in many formats. The doc/README_en file contains
 instructions for building the manual in PDF, HTML (single page) HTML
-(one page per chapter, in a folder), plain TXT, TXT in DokuWiki sintax
+(one page per chapter, in a folder), plain TXT, TXT in DokuWiki syntax
 (one file per chapter, in a folder), Docbook.
 
-   You can participate on editing this manual by making changes in the
-Cinelerra-CV wiki:
-`http://cinelerra-cv.org/docs/wiki/doku.php'
+   A version of this manual for Cinelerra-CV is available online
+`http://cinelerra-cv.org/docs.php'
 
    If you would like to translate this manual in your language, see the
-doc/TRANSLATIONS file and contact the Cinelerra-CV Community.
+doc/TRANSLATIONS file and contact the Cinelerra-CV Community through
+the mailing list.
 
 1.4 Getting help
 ================
@@ -786,27 +786,26 @@ You can install Cinelerra CV by fetching the source code and compiling
 it.  That is the method to use if you want to compile the most
 up-to-date version of Cinelerra CV.
 
-   The source code of Cinelerra-CV is available from a Subversion (SVN)
-repository.  Subversion is available for download at
-`http://subversion.tigris.org/', but most likely your distribution has
-prebuilt packages. Complete documentation of subversion is available at
-`http://svnbook.red-bean.com/nightly/en/index.html'.
+   The source code of Cinelerra-CV is available from GIT repository.
+GIT is available for download at `https://git-scm.com/', but most
+likely your distribution has prebuilt packages. Complete documentation
+of subversion is available at `https://git-scm.com/doc'.
 
-  1. First you have to fetch Cinelerra CV's sources from the SVN
-     repository (approximately 170Mb or 60Mb for a read-only checkout).
-     Run the following command:
-     `svn checkout svn://svn.skolelinux.org/cinelerra/trunk/hvirtual'
-     The svn command above will create in your current working
-     directory a directory hvirtual that contains the sources.
+  1. First you have to fetch Cinelerra CV's sources from the GIT
+     repository (approximately 120Mb for a read-only checkout).  Run
+     the following command:
+     `git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv'
+     The git command above will create in your current working
+     directory a directory cinelerra-cv that contains the sources.
 
-  2. Go to the hvirtual directory:
-     `cd hvirtual'
+  2. Go to the cinelerra-cv directory:
+     `cd cinelerra-cv'
 
   3. Create the `./configure' file by running:
      `autoreconf -i --force'
 
   4. Then run the `.configure' file:
-     `./configure --with-buildinfo=svn/recompile'
+     `./configure'
      This option makes the revision number to be shown in the About tab
      of the Preferences window.  You can have a look at all the other
      options available by running:
@@ -856,11 +855,10 @@ prebuilt packages. Complete documentation of subversion is available at
    * Updating the source code:
      If you already fetched the sources of an out of date revision, you
      can update to the latest revision by running:
-     `svn update'
+     `git checkout master'
    * Installing old revisions:
      If you wish to fetch an old revision, run:
-     `svn checkout -r <revision>
-     svn://svn.skolelinux.org/cinelerra/trunk/hvirtual'
+     `git checkout <revision>'
 
    * Installing several revisions:
      If you wish to install several revisions of Cinelerra CV on your
@@ -889,14 +887,13 @@ When Cinelerra CV crashes, one can compile it with debugging symbols
 and run it inside gdb.  The information displayed by gdb is far more
 detailed and will help CV developers find bugs faster.
 
-   First, fetch the SVN sources as usual.  Then, run the following
+   First, fetch the GIT sources as usual.  Then, run the following
 commands:
-`cd hvirtual'
+`cd cinelerra-cv'
 `nice -19 autoreconf -i --force'
-`mkdir ../hvdbg'
-`cd ../hvdbg'
-`nice -19 ../hvirtual/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g'
---with-buildinfo=svn/recompile'
+`mkdir ../cvdbg'
+`cd ../cvdbg'
+`nice -19 ../cinelerra-cv/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g''
 `cd quicktime/ffmpeg'
 `nice -19 make CFLAGS='-O3''
 `cd ../..'
@@ -9509,14 +9506,12 @@ and TVs. Good luck!
 22.1 Reporting bugs
 ===================
 
-When you notice a bug, the first thing to do is to go to
-`http://bugs.cinelerra.org' and check if it has not been already
-reported.  If there is no bug report for the bug you noticed, you can
-file a bug report.  Open an account on `http://bugs.cinelerra.org' if
-you do not have one.  Then, file the bug report, including the
-following information:
+When you notice a bug, you can file a bug report by sending an email to
+the cinelerra-cv mailing list
+(`http://lists.cinelerra-cv.org/cgi-bin/mailman/listinfo/cinelerra')
+including the following information:
 
-   * Revision number of Cinelerra CV.  Example: r959
+   * GIT revision number of Cinelerra CV.  Example: r959e
 
    * Distribution name and version.  Example: Debian SID
 

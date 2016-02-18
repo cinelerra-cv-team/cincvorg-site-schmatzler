@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/loose.dtd">
 <html>
-<!-- Created on February, 11 2016 by texi2html 1.76 -->
+<!-- Created on February, 18 2016 by texi2html 1.76 -->
 <!--
 Written by: Lionel Cons <Lionel.Cons@cern.ch> (original author)
             Karl Berry  <karl@freefriends.org>
@@ -196,26 +196,26 @@ in compilation failing with cryptic error messages.
 is the method to use if you want to compile the most up-to-date version of 
 Cinelerra CV.
 </p>
-<p>The source code of Cinelerra-CV is available from a Subversion (SVN) repository. 
-Subversion is available for download at <a href="http://subversion.tigris.org/">http://subversion.tigris.org/</a>, but
+<p>The source code of Cinelerra-CV is available from GIT repository.
+GIT is available for download at <a href="https://git-scm.com/">https://git-scm.com/</a>, but
 most likely your distribution has prebuilt packages. Complete documentation of 
-subversion is available at <a href="http://svnbook.red-bean.com/nightly/en/index.html">http://svnbook.red-bean.com/nightly/en/index.html</a>.
+subversion is available at <a href="https://git-scm.com/doc">https://git-scm.com/doc</a>.
 </p>
 <ol>
-<li> First you have to fetch Cinelerra CV's sources from the SVN repository 
-(approximately 170Mb or 60Mb for a read-only checkout).  Run the following command:<br>
-<code>svn checkout svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code><br>
-The svn command above will create in your current working directory a directory 
-hvirtual that contains the sources.
+<li> First you have to fetch Cinelerra CV's sources from the GIT repository
+(approximately 120Mb for a read-only checkout).  Run the following command:<br>
+<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code><br>
+The git command above will create in your current working directory a directory
+cinelerra-cv that contains the sources.
 
-</li><li> Go to the hvirtual directory:<br>
-<code>cd hvirtual</code>
+</li><li> Go to the cinelerra-cv directory:<br>
+<code>cd cinelerra-cv</code>
 
 </li><li> Create the <tt>`./configure'</tt> file by running:<br>
 <code>autoreconf -i --force</code>
 
 </li><li> Then run the <tt>`.configure'</tt> file:<br>
-<code>./configure --with-buildinfo=svn/recompile</code><br>
+<code>./configure</code><br>
 This option makes the revision number to be shown in the <b>About</b> tab of the 
 <b>Preferences</b> window.
 You can have a look at all the other options available by running:<br>
@@ -262,11 +262,10 @@ Replace <samp>`-prefer-non-pic'</samp> with <samp>`-fPIC \'</samp> in your <br>
 </li><li> <b>Updating the source code:</b><br>
 If you already fetched the sources of an out of date revision, you can update 
 to the latest revision by running:<br>
-<code>svn update</code><br>
+<code>git checkout master</code><br>
 </li><li> <b>Installing old revisions:</b><br>
 If you wish to fetch an old revision, run:<br>
-<code>svn checkout -r &lt;revision&gt;
-svn://svn.skolelinux.org/cinelerra/trunk/hvirtual</code>
+<code>git checkout &lt;revision&gt;</code>
 </li><li> <b>Installing several revisions:</b><br>
 If you wish to install several revisions of Cinelerra CV on your computer,
 create a <tt>`/usr/local_cinelerra'</tt> folder, and use the following options with
@@ -294,13 +293,12 @@ also required to build.
 inside gdb.  The information displayed by gdb is far more detailed and
 will help CV developers find bugs faster.
 </p>
-<p>First, fetch the SVN sources as usual.  Then, run the following commands:<br>
-<code>cd hvirtual</code><br>
+<p>First, fetch the GIT sources as usual.  Then, run the following commands:<br>
+<code>cd cinelerra-cv</code><br>
 <code>nice -19 autoreconf -i --force</code><br>
-<code>mkdir ../hvdbg</code><br>
-<code>cd ../hvdbg</code><br>
-<code>nice -19 ../hvirtual/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g'
---with-buildinfo=svn/recompile</code><br>
+<code>mkdir ../cvdbg</code><br>
+<code>cd ../cvdbg</code><br>
+<code>nice -19 ../cinelerra-cv/configure CXXFLAGS='-O0 -g' CFLAGS='-O0 -g'</code><br>
 <code>cd quicktime/ffmpeg</code><br>
 <code>nice -19 make CFLAGS='-O3'</code><br>
 <code>cd ../..</code><br>
@@ -600,7 +598,7 @@ Update packages list:
 </tr></table>
 <p>
  <font size="-1">
-  This document was generated on <i>February, 11 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
+  This document was generated on <i>February, 18 2016</i> using <a href="http://texi2html.cvshome.org/"><i>texi2html 1.76</i></a>.
  </font>
  <br>
 
