@@ -17,8 +17,11 @@ include "header.php";
     <li>maintaining our <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/">mailing list</a></li>
     <li>and <a href="http://cinelerra-cv.org/repo">providing packages</a> for our upcoming LiveCD project</li>
   </ul>
+
+<p>All of this is costing us 12Eur per month, the machine is being paid by <i>cehteh</i>.</p>
   
-<h2>How?</h2>
+<h2>How to donate</h2>
+  <p style="color:blue;">If you want to make a donation with a different payment method, please leave a message on our <a href="http://cinelerra-cv.org/contact.php">mailing list</a>.</p>
   <p>You can donate Bitcoins to the following address:</p>
   <p style="text-align:center;font-size:150%;">1AvfR2VodNB969p9T1isWZxKkyD3Y4XgfQ</p>
   
@@ -28,10 +31,6 @@ include "header.php";
     <li><a href="https://blockchain.info/address/1AvfR2VodNB969p9T1isWZxKkyD3Y4XgfQ?currency=EUR">Donation history</a></li>
     <li><a href="https://www.bitcoin.com/buy-bitcoin">How to buy Bitcoin</a></li>
   </ul>
-  
-<h2>Can I help you without Bitcoin?</h2>
-
-  <p>Yes. If you want to make a donation with a different payment method, please leave a message on our mailing list.</p>
   
 <p>Thank you for supporting us!</p>
 
