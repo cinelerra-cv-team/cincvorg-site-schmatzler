@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="google-site-verification" content="CrWrb4banD-eOg3fmZxaRqW_6B8P5fCIxKsyDiSVjjg" />
-  <meta property="og:image" content="http://cinelerra-cv.org/cinelerra.png" />
+  <meta property="og:image" content="http://cinelerra-cv.org/cinelerra-blue-1200.png" />
   <meta property="og:site_name" content="Cinelerra-CV.org"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
