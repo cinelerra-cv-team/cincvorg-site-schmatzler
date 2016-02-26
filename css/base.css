@@ -187,3 +187,16 @@ div.livecd h4 {
 .lastmodified {
   text-align:right;margin-right:-20px;font-size:small;
 }
+
+/* The social buttons in the menu need their own class
+ * since PureCSS doesn't allow to put two items next to each other */
+.socialmenu {
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+/* Default font size for pure menu items */
+.socialmenu a {
+  font-size:90%;
+}
+
