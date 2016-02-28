@@ -54,7 +54,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on Jan 19, 2016</div>
+<div class="lastmodified">Last modified on Feb 28, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
