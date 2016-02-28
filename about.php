@@ -12,7 +12,7 @@ include "header.php";
 
 <p>Cinelerra is one of the most advanced, open-source non-linear video editors and compositors for Linux.</p>
 <p>Users are frequently confused about the fact that three separately maintained versions of this software exist.</p>
-<p><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160117/fdbb1173/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and cinelerra.org has been posted on our mailing list in January 2016.</p>
+<p><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160117/fdbb1173/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and cinelerra.org ("5.0") has been posted on our mailing list in January 2016.</p>
 <p><b>We are not affiliated with cinelerra.org or Cinelerra-HV.</b> If you're interested - here's why:</p>
 <br />
 
@@ -23,9 +23,10 @@ include "header.php";
 <p>Cinelerra-HV exists even today. Every few months a release is made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a>.</p>
 <br />
 
-<h2>About cinelerra.org</h2>
+<h2>About cinelerra.org and "5.0"</h2>
 <p>Around March 2014 we overlooked the renewal of <a href="http://cinelerra.org">cinelerra.org</a>. The domain was then taken over by a different project, which is following commercial interests.</p>
-<p>They are releasing their own version ("5.0") and make their own adjustments to the software.</p>
+<p>For a while, they released their own version ("5.0") and made their own adjustments to the software.</p>
+<p>In December 2015, the developer working behind cinelerra.org ("Good Guy") joined us and continues to improve the software here. He is also accepting feedback on our mailing list.</p>
 <br/>
 
 <h2>About Cinelerra-CV</h2>
@@ -49,6 +50,7 @@ include "header.php";
 <li>Mailing list messages:
   <ul>
     <li><a href="https://lists.skolelinux.org/pipermail/cinelerra/2006-April/006012.html">[1] Heroine Virtual getting in touch with the CV community</a></li>
+    <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/003774.html">[2] Good Guy agreeing to join the CV community</a></li>
   </ul>
 </ul>
 </p>
