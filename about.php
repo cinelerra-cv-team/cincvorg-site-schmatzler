@@ -32,7 +32,7 @@ include "header.php";
 <h2>About Cinelerra-CV</h2>
 
 <p><b>CV</b> stands for <b>C</b>ommunity <b>V</b>ersion. This website was originally meant to be a community for Cinelerra-HV, where users could come together to get help or work on improving the original software.</p>
-<p>Although Cinelerra-HV builds its own community now, our goals have not changed:</p>
+<p>Our goals have not changed to this day:</p>
 <ul>
 <li>Cinelerra-CV is not a fork. We develop it in a direction not diverging from the original and we merge with all the new releases from the original project.</li>
 <li>We apply bug fixes, compiler compliance fixes, and enhancements for the HV code to our <a href="http://git.cinelerra-cv.org/gitweb">git repository</a>.</li>
@@ -54,7 +54,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on Feb 28, 2016</div>
+<div class="lastmodified">Last modified on Feb 29, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
