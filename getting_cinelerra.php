@@ -177,10 +177,14 @@ for details.</p>
     <img src="/images/website/distro-logos/ubuntu.png" alt="Ubuntu Logo" title="Download Cinelerra-CV for Ubuntu" />
     <h4>Ubuntu</h4>
     <div class="details">
-<p>Latest CinelerraCV 2.3 for Ubuntu (from 12.04 Precise Pangolin to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis:</p>
-<code>https://launchpad.net/~cinelerra-ppa</code>
-<p>To add the Cinelerra PPA to your source list follow the instructions on the <a href="https://launchpad.net/~cinelerra-ppa/+archive/ppa">Launchpad page</a>.</p>
-<p>Once the the PPA has been enabled you can install the package with the command: </p>
+<p>Latest Cinelerra-CV 2.3 for Ubuntu (from 12.04 Precise Pangolin to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis:</p>
+<a href="https://launchpad.net/~cinelerra-ppa">https://launchpad.net/~cinelerra-ppa</a>
+<p>To add the Cinelerra PPA to your source list run these commands in a terminal:</p>
+<ul>
+  <li><code>sudo add-apt-repository ppa:cinelerra-ppa/ppa</code></li>
+  <li><code>sudo apt-get update</code></li>
+</ul>
+<p>Once the the PPA has been enabled you can install the package with the command:</p>
 <code>sudo apt-get install cinelerra-cv</code>
 <br/>
 <p>If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
@@ -236,7 +240,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Feb 6, 2016</div>
+<div class="lastmodified">Last modified on Mar 1, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
