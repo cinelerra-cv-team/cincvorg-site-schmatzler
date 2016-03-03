@@ -34,9 +34,9 @@ include "header.php";
 <p><b>CV</b> stands for <b>C</b>ommunity <b>V</b>ersion. This website was originally meant to be a community for Cinelerra-HV, where users could come together to get help or work on improving the original software.</p>
 <p>Our goals have not changed to this day:</p>
 <ul>
-<li>Cinelerra-CV is not a fork. We develop it in a direction not diverging from the original and we merge with all the new releases from the original project.</li>
+<li>Cinelerra-CV can be considered a fork, although we try to develop it in a direction not diverging from the original and merge with all the new releases from the original project. This does <u>not</u> mean that enhancements to the software are forbidden, they are very welcome.</li>
 <li>We apply bug fixes, compiler compliance fixes, and enhancements for the HV code to our <a href="http://git.cinelerra-cv.org/gitweb">git repository</a>.</li>
-<li>When there is a new official release, few members (usually just Johannes Sixt) merge HV's code with our code taking the new enhancements from HV, and re-arranging our version to be more similar to the original (whitespace, function naming, directory naming, slight changes in implementations etc).</li>
+<li>When there is a new official release, few members (usually just Johannes Sixt) merge HV's code with our code taking the new enhancements from HV, and re-arranging our version to be more similar to the original (whitespace, function naming, directory naming, slight changes in implementations etc). During recent years, we've fallen a bit behind with merging HV's releases, but it still is our goal to do so.</li>
 <li>New HV releases often have problems in the form of bugs or usability issues, since HV only builds for few distros. We intend to fix them (as users find bugs and as time permits to fix them) before making a new release.</li>
 <li>Cinelerra-CV primarily focusses on stability of the software. Rather than implementing the latest cutting-edge technology, new features of the software are tested for a while and patches from the community have to be a approved by a core developer.</li>
 </ul>
@@ -54,7 +54,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on Mar 2nd, 2016</div>
+<div class="lastmodified">Last modified on Mar 3rd, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
