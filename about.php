@@ -26,7 +26,7 @@ include "header.php";
 <h2>About cinelerra.org and "5.0"</h2>
 <p>Around March 2014 we overlooked the renewal of <a href="http://cinelerra.org">cinelerra.org</a>. The domain was then taken over by a different project, which is following commercial interests.</p>
 <p>For a while, they released their own version ("5.0") and made their own adjustments to the software.</p>
-<p>In December 2015, the developer working behind cinelerra.org ("Good Guy") joined us and continues to improve the software here. He is also accepting feedback on our mailing list.</p>
+<p>In January 2016, the developer working behind cinelerra.org ("Good Guy") joined us and continues to improve the software here. He is also accepting feedback on our mailing list.</p>
 <br/>
 
 <h2>About Cinelerra-CV</h2>
