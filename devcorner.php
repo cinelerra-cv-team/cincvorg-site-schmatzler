@@ -50,7 +50,7 @@ include "header.php";
 
 <blockquote>
 
-<li><a href="doxygen/2.3_d189a04">Doxygen for 2.3</a> (commit <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=commit;h=d189a0400ba9088e2da2b09cbae5eb7d96125894">d189a04</a>)</li>
+<li><a href="doxygen/2.3_d189a04">Doxygen for 2.3</a> (commit <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=commit;h=d189a0400ba9088e2da2b09cbae5eb7d96125894">d189a04</a>)</li>
 
 </blockquote>
 

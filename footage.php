@@ -26,8 +26,8 @@ Italian television.</li>
 <h2>Titler compositing demo</h2>
 
 <ul>
-<li> <a href="http://cinelerra-cv.org/examples/NY_titler_swipe_glow.ogg">swiping-glowing title</a>, made by Herman Robak with alpha blending, blurring, track bouncing and duplicate tracks with alpha "holes" revealing the altered version below.  The background is from Manhattan, New York.</li>
-<li> <a href="http://cinelerra-cv.org/examples/NY_titler_timefront.ogg">swiping-transparent title</a>, a modified version of the above title, made adding also the Timefront effect.</li>
+<li> <a href="examples/NY_titler_swipe_glow.ogg">swiping-glowing title</a>, made by Herman Robak with alpha blending, blurring, track bouncing and duplicate tracks with alpha "holes" revealing the altered version below.  The background is from Manhattan, New York.</li>
+<li> <a href="examples/NY_titler_timefront.ogg">swiping-transparent title</a>, a modified version of the above title, made adding also the Timefront effect.</li>
 </ul>
 
 <h2>Motion tracker demo</h2>

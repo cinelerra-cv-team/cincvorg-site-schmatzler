@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/base.css" type="text/css">
   <link rel="stylesheet" href="/css/menu.css" type="text/css">
   <link rel="stylesheet" href="/css/pure-min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
   <script type="text/javascript" src="/scripts/js/prototype.js"></script>
   <script type="text/javascript" src="/scripts/js/scriptaculous.js"></script>
   <script type="text/javascript" src="/scripts/js/tooltip.js"></script>

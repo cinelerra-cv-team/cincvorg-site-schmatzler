@@ -203,7 +203,7 @@ for details.</p>
 <h2><a name="source">Source Code</a></h2>
 
 <p>The sources of Cinelerra-CV are available as .tar.xz snapshots here:</p>
-<p><a href="http://www.cinelerra-cv.org/releases/">Browse releases</a></p>
+<p><a href="https://cinelerra-cv.org/releases/">Browse releases</a></p>
 <p>You can also <a href="/main_repo.php">check out the code</a> we're currently working on.</p>
 
 <!-- async js -->

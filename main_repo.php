@@ -24,7 +24,7 @@ Additionally, release tarballs are available on our <a href=/releases/>releases 
 <code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
  </blockquote>
 
-<p>The stable repo is maintained by a small group of core developers. You can browse the <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
+<p>The stable repo is maintained by a small group of core developers. You can browse the <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
 
 <h2>Experimental code</h2>
 
@@ -34,27 +34,27 @@ Additionally, release tarballs are available on our <a href=/releases/>releases 
 <blockquote>
 <p>
 Einar Rünkaru is working with the long-term goal of improving the core fixing bugs and design flaws to get a stronger code, better designed to fit a community development. It's a quite invasive work, that needs a lot of debugging.</p>
-<p><a href="http://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">einar&#039;s repo</a></p>
 </blockquote>
 
 <h3>j6t - merging Cinelerra-HV 4.x</h3>
 <blockquote>
 <p>Johannes Sixt' goal is to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
-<p><a href="http://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
 </blockquote>
 
 <h3>goodguy - Cinelerra 5.x</h3>
 <blockquote>
 <p>This is essentially the codebase that was started on cinelerra.org a while back.</p>
 <p>It is planned to merge this code with the j6t repository in the future.</p>
-<p><a href="http://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a></p>
 </blockquote>
 
 <h3>akirad - useful merges from all branches</h3>
 <blockquote>
 <p>This repository by Paolo Rampino has a blend of the HV-like extended ffmpeg decoding, many of the fixes found in CinCV 2.3 and much improved UI theming from the former Cinecutie project.</p>
 <p>Unfortunately, this hasn't been updated in a while and may not compile with recent gcc versions.</p>
-<p><a href="http://git.cinelerra-cv.org/gitweb?p=akirad/cinelerra.git;a=summary">akirad&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=akirad/cinelerra.git;a=summary">akirad&#039;s repo</a></p>
 </blockquote>
 
 <h3>monty - FFMPEG-based loader</h3>

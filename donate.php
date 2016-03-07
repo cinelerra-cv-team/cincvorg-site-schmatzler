@@ -13,9 +13,9 @@ include "header.php";
   <p>We need to rent a server for:</p>
   <ul>
     <li>hosting this website</li>
-    <li>running our <a href="http://git.cinelerra-cv.org/gitweb">GIT repositories</a> for the developers</li>
+    <li>running our <a href="https://git.cinelerra-cv.org/gitweb">GIT repositories</a> for the developers</li>
     <li>maintaining our <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/">mailing list</a></li>
-    <li>and <a href="http://cinelerra-cv.org/repo">providing packages</a> for our upcoming LiveCD project</li>
+    <li>and <a href="https://cinelerra-cv.org/repo">providing packages</a> for our upcoming LiveCD project</li>
   </ul>
 
 <p>All of this is costing us 12Eur per month, the machine is being paid by <i>cehteh</i>.</p>

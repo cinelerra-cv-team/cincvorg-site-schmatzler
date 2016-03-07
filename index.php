@@ -41,7 +41,7 @@ include "header.php";
         
         <div>
             <a class="button-cta pure-button" href="/getting_cinelerra.php">Get Started</a>
-            <a class="button-secondary pure-button" href="http://git.cinelerra-cv.org/gitweb">Browse code</a>
+            <a class="button-secondary pure-button" href="https://git.cinelerra-cv.org/gitweb">Browse code</a>
         </div>
         </div>
 
@@ -49,7 +49,7 @@ include "header.php";
 
 <p>
 <strong>February 6, 2016</strong><br>
-* We are in the process of updating our english manual. Helping hands for bringing <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
+* We are in the process of updating our english manual. Helping hands for bringing <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
 </p>
 
 <p>
@@ -79,7 +79,7 @@ include "header.php";
 
 <p>
 <strong>September 5, 2015</strong><br>
-* We've switched over to a new machine to host our repositories and the website. As a result, our <a href="http://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="http://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
+* We've switched over to a new machine to host our repositories and the website. As a result, our <a href="https://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="https://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
 </p>
 
 <p>
@@ -100,17 +100,17 @@ Changes in version 2.3:
   </ul>
 </li>
 </ul>
-Full changelog can be browsed through <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
+Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
 </p>
 
 <p>
 <strong>June, 2014</strong><br>
-* The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="http://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
+* The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
 </p>
 
 <p>
 <strong>Mar 7, 2014</strong><br>
-* Our Bugtracker on <a href="http://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="http://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
+* Our Bugtracker on <a href="https://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="https://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
 </p>
 
 <p>
@@ -121,7 +121,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p>
 <strong>Jan 20, 2014</strong><br>
-* Cinelerra-CV has moved to <a href="http://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
+* Cinelerra-CV has moved to <a href="https://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
 </p>
 
 <hr>

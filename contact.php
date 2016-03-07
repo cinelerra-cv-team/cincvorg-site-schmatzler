@@ -21,7 +21,7 @@ include "header.php";
   <p>We are on the channel <code>#cinelerra</code> on <strong>Freenode</strong>.</p>
   <p>You can join this chat <a href="http://webchat.freenode.net/?randomnick=1&channels=%23cinelerra&uio=d4" target="_blank">in your browser</a> or with an IRC Client like <a href="https://hexchat.github.io/" target="_blank">HexChat</a> or <a href="http://www.pidgin.im" target="_blank">Pidgin</a>.</p>
   <p>If you don't know which server to connect to, try irc.freenode.net, port 6667.</p>
-  <p>The channel is logged into a <a href="http://irclog.cinelerra-cv.org/">web archive</a>.</p>
+  <p>The channel is logged into a <a href="https://irclog.cinelerra-cv.org/">web archive</a>.</p>
   
 <h2>Webmaster</h2>
   <p>You've found a bug on the website or you have a suggestion for it? Please <a href="mailto:danny@schmarsel.de">send me a message!</a></p>
