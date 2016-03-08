@@ -55,7 +55,8 @@ $opts = array(
 			//'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadAllow'   => array('all'), // Allow all mimetypes for goodguy
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
-			'accessControl' => 'access'                     // disable and hide dot starting files (OPTIONAL)
+			'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
+			'uploadMaxSize' => '500M'
 		)
 	)
 );
