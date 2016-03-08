@@ -45,7 +45,7 @@ function access($attr, $path, $data, $volume) {
 // https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options
 $opts = array(
 	// 'debug' => true,
-	'uploadTempPath' => '$HOME/tmp',
+	'uploadTempPath' => '/var/tmp',
 	'roots' => array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
