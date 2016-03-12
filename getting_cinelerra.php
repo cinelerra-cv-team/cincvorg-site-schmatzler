@@ -45,6 +45,8 @@ Event.observe(window, 'load', init, false);
   </div>
 </div>
 
+<div style="clear:both;"></div>
+
 <h2><a name="packages">Packages</a></h2>
 
 <h4 class="download">Select Your Operating System</h4>
