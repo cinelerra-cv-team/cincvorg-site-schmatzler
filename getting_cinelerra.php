@@ -94,7 +94,9 @@ Guidelines</a> for more info), then run the following command from the command l
     <img src="/images/website/distro-logos/gentoo.png" alt="Gentoo Logo" title="Download Cinelerra-CV for Gentoo" />
     <h4>Gentoo</h4>
     <div class="details">
-      <p> 
+      <p>
+<!--TODO: Add tutorial for building from source on Gentoo-->
+<p style="color:red;"><b>Note:</b> Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and severely outdated. Please try building Cinelerra-CV from source or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
 <p>Installation for Gentoo GNU/Linux is very straight forward. Simply type:</p>
 <p><code>emerge cinelerra</code></p>
 <p>as root and it should install and run without any problems.</p>
@@ -240,7 +242,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Mar 1, 2016</div>
+<div class="lastmodified">Last modified on Mar 12, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
