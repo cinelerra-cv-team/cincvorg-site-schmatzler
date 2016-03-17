@@ -57,6 +57,17 @@ $opts = array(
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
 			'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
 			'uploadMaxSize' => '500M'
+		),
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => '../../repo/',                 // path to files (REQUIRED)
+			'URL'           => dirname($_SERVER['PHP_SELF']) . '/../../repo/', // URL to files (REQUIRED)
+			//'uploadDeny'    => array('all'),                // All Mimetypes not allowed to upload
+			//'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadAllow'   => array('all'), // Allow all mimetypes for goodguy
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
+			'uploadMaxSize' => '500M'
 		)
 	)
 );
