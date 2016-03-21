@@ -48,6 +48,16 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>March 21, 2016</strong><br>
+* Good Guy has released the next version of his own branch - ‪‎Cinelerra‬ 5.1 Beta.
+<ul><li>Merged in operators and methods from Adam's HV version</li>
+<li>Merged in user interface characteristics from CV - <u>where possible</u></li>
+<li>Many bug fixes and code improvements from the stable CV version are included</li></ul>
+A more detailed description and packages for Ubuntu <a href="http://lists.cinelerra-cv.org/…/cinelerra/2016q1/004236.html">can be found here.</a>
+Please test the code and report bugs.
+</p>
+
+<p>
 <strong>February 6, 2016</strong><br>
 * We are in the process of updating our english manual. Helping hands for bringing <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
 </p>
@@ -128,7 +138,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on Feb 6, 2016</div>
+<div class="lastmodified">Last modified on March 21, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
