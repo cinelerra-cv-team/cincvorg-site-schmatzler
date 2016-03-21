@@ -49,11 +49,11 @@ include "header.php";
 
 <p>
 <strong>March 21, 2016</strong><br>
-* Good Guy has released the next version of his own branch - ‪‎Cinelerra‬ 5.1 Beta.
+* Good Guy has released the next version of his own branch - Cinelerra 5.1 Beta.
 <ul><li>Merged in operators and methods from Adam's HV version</li>
 <li>Merged in user interface characteristics from CV - <u>where possible</u></li>
 <li>Many bug fixes and code improvements from the stable CV version are included</li></ul>
-A more detailed description and packages for Ubuntu <a href="http://lists.cinelerra-cv.org/…/cinelerra/2016q1/004236.html">can be found here.</a>
+A more detailed description and packages for Ubuntu <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/004236.html">can be found here.</a>
 Please test the code and report bugs.
 </p>
 
