@@ -40,7 +40,9 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <h3>j6t - merging Cinelerra-HV 4.x</h3>
 <blockquote>
 <p>Johannes Sixt' goal is to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
-<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s main repo</a></p>
+<p>For the <i>merge-4</i> branch (combination of HV 4.1 + CV 2.3), see here:</p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s merge-4 repo</a> | <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Ubuntu packages</a></p>
 </blockquote>
 
 <h3>goodguy - Cinelerra 5.x</h3>
@@ -80,7 +82,7 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<div class="lastmodified">Last modified on Jan 25, 2016</div>
+<div class="lastmodified">Last modified on March 26, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
