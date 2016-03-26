@@ -19,7 +19,7 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 function init() {
 	new Effect.Tooltip('distro-apodio', '<b>Cinelerra-CV 2.2</b> | Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
 	new Effect.Tooltip('distro-artistx', '<b>Cinelerra-CV 2.2</b> | ArtistX is a free DVD which turns a computer into a full multimedia production studio', {className: 'tip'});
-	new Effect.Tooltip('distro-avlinux', '<b>Cinelerra-CV 2.2</b> | 32bit+PAE OS, designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
+	new Effect.Tooltip('distro-avlinux', '<b>CVA (akirad) + 5.0 (goodguy)</b> | Distribution designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
 	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> | 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
 	h.init();
 }
@@ -36,7 +36,7 @@ Event.observe(window, 'load', init, false);
       <h4>ArtistX</h4>
   </div>
   <div id="distro-avlinux" class="livecd">
-    <a href="http://iso.linuxquestions.org/av-linux/av-linux-6.0.4/" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
+    <a href="http://www.bandshed.net/avlinux/" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
   </div>
   <div id="distro-dyne" class="livecd">
@@ -244,7 +244,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Mar 12, 2016</div>
+<div class="lastmodified">Last modified on Mar 26, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
