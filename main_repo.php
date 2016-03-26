@@ -49,7 +49,7 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <blockquote>
 <p>This is essentially the codebase that was started on cinelerra.org a while back.</p>
 <p>It is planned to merge this code with the j6t repository in the future.</p>
-<p><a href="https://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a> | <a href="https://cinelerra-cv.org/five">Packages for Ubuntu, openSUSE, Mint, CentOS</a></p>
 </blockquote>
 
 <h3>akirad - useful merges from all branches</h3>
