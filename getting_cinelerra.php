@@ -9,6 +9,8 @@ include "header.php";
     <h2>Download <a href="#livecd">Live Media</a> | <a href="#packages">Packages</a> | <a href="#source">Source code</a></h2> 
 </div>
 
+<p><b>Note:</b> This page is only for Cinelerra-<u>CV</u>. Packages and code for experimental versions (CVE, CVA, 5.1, merge-4) <a href="main_repo.php">can be found here.</a></p>
+
 <h2><a name="livecd">Live Media</a></h2>
 
 <p>You can try out Cinelerra-CV without modifying your computer, thanks to Live DVDs that contain it.<br/>
