@@ -42,7 +42,7 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <p>Johannes Sixt' goal is to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s main repo</a></p>
 <p>For the <i>merge-4</i> branch (combination of HV 4.1 + CV 2.3), see here:</p>
-<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s merge-4 repo</a> | <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Ubuntu packages</a></p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=shortlog;h=refs/heads/merge-4">j6t&#039;s merge-4 repo</a> | <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Ubuntu packages</a></p>
 </blockquote>
 
 <h3>goodguy - Cinelerra 5.x</h3>
