@@ -36,7 +36,7 @@ include "header.php";
 
 <div class='content'>
 
-        <div style="text-align:center;margin-top:15px;padding-top:30px;"><img style="width:100%;max-width:496px;" src="/cinelerra-home.png" alt="Cinelerra-CV">
+        <div style="text-align:center;margin-top:15px;padding-top:30px;"><img style="width:100%;max-width:496px;" src="/cinelerra-home2.png" alt="Cinelerra-CV">
         <div class="hero-titles">Professional video editing and compositing environment for Linux.</div>
         
         <div>
