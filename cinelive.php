@@ -88,7 +88,7 @@ This script, called 'iso2usb.sh', accepts the following parameters: <pre>
 <p><b>Examples:</b></p>
 <ul>
 <li>Create a USB version of CINELIVE, where the USB stick is known to the system as /dev/sdX. Note - the value for the output parameter is the device name of the stick and not one of its partitions!
-    <pre>./iso2usb.sh -i ~/download/cinelive.iso -o /dev/sdX</pre>
+    <pre>./iso2usb.sh -i cinelive.iso -o /dev/sdX</pre>
 </li>
 <li>Create a USB Live like above, but this time adding an encrypted /home filesystem with 750 MB of space, and at the same time increase the wait time on boot to 15 seconds (useful for slow USB media that fail to start the Live OS otherwise):
     <pre>./iso2usb.sh -i cinelive.iso -o /dev/sdX -c 750M -w 15</pre>
