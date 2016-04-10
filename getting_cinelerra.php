@@ -93,6 +93,58 @@ Guidelines</a> for more info), then run the following command from the command l
       </p>
     </div>
   </div>
+
+  <div id="distro-freebsd" class="button">
+    <img src="/images/website/distro-logos/freebsd.png" alt="FreeBSD Logo" title="Download Cinelerra-CV for FreeBSD" />
+    <h4>FreeBSD</h4>
+    <div class="details">
+      <p>
+<p>A WIP (work in progress) port of Cinelerra-CV 2.3 for FreeBSD has been created <a href="https://github.com/decke/ports.git">by Bernhard Fröhlich</a>.</p>
+<p style="color:red">It is <u>not</u> fully working yet and can't be built completely from source.
+Please help him out, if you can.</p>
+<p><b><i>Prerequisites</i></b>
+<ul>
+<li>1. <a href="http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/10.3/FreeBSD-10.3-RELEASE-amd64-dvd1.iso">FreeBSD-10.3-RELEASE-amd64-dvd1.iso</a> was installed with default settings.</li>
+<li>2. We added a new user <i>cinelerra</i> at the end of the installation.</li>
+<li>3. Added user to the wheel group (so we can run commands as root):
+   <pre>pw groupmod wheel -m cinelerra</pre></li>
+<li>4. bsdconfig is broken, to install packages from the DVD we ran:
+   <pre>mkdir -p /dist
+mount -t cd9660 /dev/cd0 /dist
+   
+env REPOS_DIR=/dist/packages/repos \
+pkg bootstrap</pre></li>
+<li>5. Installed the graphical environment:
+   <pre>env REPOS_DIR=/dist/packages/repos \
+pkg install kde xorg</pre></li>
+<li>6. Made KDM start at boot:
+   <pre>echo 'kdm4_enable="YES"' >> /etc/rc.conf
+echo 'dbus_enable="YES"' >> /etc/rc.conf</pre></li>
+<li>7. VirtualBox (optional)
+   <pre>pkg install virtualbox-ose-additions
+echo 'vboxguest_enable="YES"' >> /etc/rc.conf
+echo 'vboxservice_enable="YES"' >> /etc/rc.conf</pre></li>
+</ul>
+</p>  
+This gives us a basic graphical system with X.Org and KDE4 installed.</p>
+
+<p><b><i>Install Cinelerra-CV</i></b>
+  
+<ul>
+<li>1. Install dependencies:
+   <pre>pkg install tiff fftw3 mjpegtools jpeg liba52 png libsndfile x264 libtheora libvorbis ffmpeg libdv e2fsprogs-libuuid OpenEXR esound</pre></li>
+<li>2. Clone the build scripts and change into their directory:
+   <pre>pkg install git
+git clone https://github.com/decke/ports.git
+cd ports/multimedia/cinelerra</pre></li>
+<li>3. Build the program and install it:
+   <pre>make install</pre></li>
+   
+</ul>   
+</p>
+      </p>
+    </div>
+  </div>
   
   <div id="distro-gentoo" class="button">
     <img src="/images/website/distro-logos/gentoo.png" alt="Gentoo Logo" title="Download Cinelerra-CV for Gentoo" />
@@ -246,7 +298,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on Mar 26, 2016</div>
+<div class="lastmodified">Last modified on April 10, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
