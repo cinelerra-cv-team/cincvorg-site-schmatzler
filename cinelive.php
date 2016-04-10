@@ -24,7 +24,7 @@ include "header.php";
 
 <div class="content">
 <div class="header">
-    <img src="/images/website/livecd-logos/cinelive-light.png" alt="cinelive-logo"/>
+    <img style="width:100%;max-width:480px;" src="/images/website/livecd-logos/cinelive-light.png" alt="cinelive-logo"/>
     <h2>A Linux distribution for video production</h2> 
 </div>
 
