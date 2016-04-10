@@ -48,6 +48,11 @@ include "header.php";
 <h2>News</h2>
 
 <p>
+<strong>April 11, 2016</strong><br>
+* The latest beta release of CINELIVE - our very own LiveDVD including all variants of Cinelerra - <a href="/cinelive.php">is now available for testing</a>. It is based on the upcoming Slackware 14.2 and can be run from a DVD or installed on a USB stick.
+</p>
+
+<p>
 <strong>March 21, 2016</strong><br>
 * Good Guy has released the next version of his own branch - Cinelerra 5.1 Beta.
 <ul><li>Merged in operators and methods from Adam's HV version</li>
@@ -138,7 +143,7 @@ For verifying future news statements, please refer to our mailing list <a href="
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on March 21, 2016</div>
+<div class="lastmodified">Last modified on April 11, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>

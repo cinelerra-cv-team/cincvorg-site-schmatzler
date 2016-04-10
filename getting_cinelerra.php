@@ -19,31 +19,21 @@ Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">R
 
 <script type='text/javascript'>
 function init() {
-	new Effect.Tooltip('distro-apodio', '<b>Cinelerra-CV 2.2</b> | Based on Xubuntu 14.04. A GNU/Linux operating system containing audio, text-friendly, graphic and video tools', {className: 'tip'});
-	new Effect.Tooltip('distro-artistx', '<b>Cinelerra-CV 2.2</b> | ArtistX is a free DVD which turns a computer into a full multimedia production studio', {className: 'tip'});
-	new Effect.Tooltip('distro-avlinux', '<b>CVA (akirad) + 5.0 (goodguy)</b> | Distribution designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation', {className: 'tip'});
-	new Effect.Tooltip('distro-dyne', '<b>Outdated!</b> | 100% free OS for multimedia production, uses Window Maker window manager', {className: 'tip'});
+	new Effect.Tooltip('distro-cinelive', '<b>All variants</b> | Based on Slackware 14.2. Our very own LiveDVD, regularly updated. This is the best choice for trying out different editions of Cinelerra and finding the one that suits you best.', {className: 'tip'});
+	new Effect.Tooltip('distro-avlinux', '<b>CVA (akirad) + 5.0 (goodguy)</b> | Distribution designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation.', {className: 'tip'});
 	h.init();
 }
 Event.observe(window, 'load', init, false);
 </script>
 
 <div style="width:100%;height:100px;">
-  <div id="distro-apodio" class="livecd">
-    <a href="http://www.apodio.org/" target="_blank" ><img src="/images/website/livecd-logos/apodio.png" alt="Apodio Logo" /></a>
-      <h4>Apodio</h4>
-  </div>
-  <div id="distro-artistx" class="livecd">
-    <a href="http://sourceforge.net/projects/archiveos/files/artistx/" target="_blank" ><img src="/images/website/livecd-logos/artistx.png" alt="ArtistX Logo" /></a>
-      <h4>ArtistX</h4>
+  <div id="distro-cinelive" class="livecd">
+    <a href="/cinelive.php" ><img src="images/website/livecd-logos/cinelive.png" alt="CINELIVE Logo" /></a>
+      <h4>CINELIVE</h4>
   </div>
   <div id="distro-avlinux" class="livecd">
     <a href="http://www.bandshed.net/avlinux/" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
       <h4>AVLinux</h4>
-  </div>
-  <div id="distro-dyne" class="livecd">
-    <a href="https://www.dyne.org/software/dynebolic/" target="_blank" ><img src="/images/website/livecd-logos/dyne.png" alt="dyne:bolic Logo" /></a>
-      <h4>dyne:bolic</h4>
   </div>
 </div>
 
@@ -298,7 +288,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on April 10, 2016</div>
+<div class="lastmodified">Last modified on April 11, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
