@@ -28,15 +28,8 @@ include "header.php";
     <h2>A Linux distribution for video production</h2> 
 </div>
 
-<p>Our very own LiveDVD (based on <a href="http://slackware.com">Slackware 14.2</a>) comes with all branches of Cinelerra:
-<ul>
-<li>Cinelerra-CV</li>
-<li>Cinelerra-HV (Adam Williams)</li>
-<li>Cinelerra 5.1 (goodguy)</li>
-<li>Cinelerra-CV (j6t/merge-4)</li>
-<li>Cinelerra-CVA (akirad)</li>
-<li>Cinelerra-CVE (einar)</li>
-</ul></p>
+<p><a href="/images/website/cinelive-screenshot.png"><img style="float: left;padding-right:20px;width:100%;max-width:200px;" src="/images/website/cinelive-screenshot-thumb.png"/></a></p>
+<p>Our very own LiveDVD (based on <a href="http://slackware.com">Slackware 14.2</a>) comes with all branches of Cinelerra - CV, HV, 5.1, merge-4, CVA, CVE.</p>
 <p>It also includes various other tools for video production and conversion to make editing easier:
 <ul>
 <li>Seven Gnomes (drag-and-drop indexer and converter)</li>
@@ -58,6 +51,7 @@ include "header.php";
 </div>
 <p>Build date: April 10, 2016</p>
 <p>MD5SUM: f45439666c33188c121141dd12425049</p>
+<p>Username/Password: live</p>
 
 <h2>INSTALL ON USB</h2>
 <p>The USB version has a major advantage to the DVD variant: It is "persistent" - meaning that the OS stores your updates on the USB stick.</p>
