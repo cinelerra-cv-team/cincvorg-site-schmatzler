@@ -59,7 +59,9 @@ include "header.php";
 <p style="color:red"><b>Note: </b> While you can use tools like Rufus or UNetbootin to install the ISO to a USB stick, it will behave like a DVD and will not be writeable afterwards!</p>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">A script is available</a> which allows you to transfer the ISO image content to a USB stick, making some modifications depending on the script's parameters.</p>
 
-This script, called 'iso2usb.sh', accepts the following parameters: <pre>
+<p><b>Ubuntu/Debian distributions need <i>squashfs-tools</i> and <i>libcdio-utils</i> to be installed for the script to work.</b></p>
+
+This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">'iso2usb.sh'</a>, accepts the following parameters: <pre>
   -c|--crypt size|perc       Add a LUKS encrypted /home ; parameter is the
                              requested size of the container in kB, MB, GB,
                              or as a percentage of free space.
