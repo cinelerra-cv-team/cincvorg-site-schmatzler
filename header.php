@@ -16,8 +16,8 @@
   <script type="text/javascript" src="/scripts/js/scriptaculous.js"></script>
   <script type="text/javascript" src="/scripts/js/tooltip.js"></script>
   <script type="text/javascript" src="/scripts/js/ui.js"></script>
-  <meta property="og:title" content="Cinelerra :: <?php if ($title != NULL) { echo $title; } else { $title=0; echo "a video editor and compositor for Linux"; } ?>" />
-  <title>Cinelerra :: <?php if ($title != NULL) { echo $title; } else { echo "a video editor and compositor for Linux"; } ?></title>
+  <meta property="og:title" content="<?php if ($title != NULL) { echo $title; } else { $title=0; echo "a video editor and compositor for Linux"; } ?> :: Cinelerra-CV" />
+  <title><?php if ($title != NULL) { echo $title; } else { echo "a video editor and compositor for Linux"; } ?> :: Cinelerra-CV</title>
 </head>
 <body>
 <div id="layout">
