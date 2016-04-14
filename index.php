@@ -47,59 +47,89 @@ include "header.php";
 
 <h2>News</h2>
 
-<p>
-<strong>April 11, 2016</strong><br>
-* The latest beta release of CINELIVE - our very own LiveDVD including all variants of Cinelerra - <a href="/cinelive.php">is now available for testing</a>. It is based on the upcoming Slackware 14.2 and can be run from a DVD or installed on a USB stick.
-</p>
+<div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-CV LiveDVD released</div>
+  <div class="datebubble">April 11, 2016</div>
+</div>
+<div class="newscontent">
+The latest beta release of CINELIVE - our very own LiveDVD including all variants of Cinelerra - <a href="/cinelive.php">is now available for testing</a>. It is based on the upcoming Slackware 14.2 and can be run from a DVD or installed on a USB stick.
+</div>
 
-<p>
-<strong>March 21, 2016</strong><br>
-* Good Guy has released the next version of his own branch - Cinelerra 5.1 Beta.
+<div class="news">
+  <div class="newsitem">New version of Cinelerra 5</div>
+  <div class="datebubble">March 21, 2016</div>
+</div>
+<div class="newscontent">
+Good Guy has released the next version of his own branch - Cinelerra 5.1 Beta.
 <ul><li>Merged in operators and methods from Adam's HV version</li>
 <li>Merged in user interface characteristics from CV - <u>where possible</u></li>
 <li>Many bug fixes and code improvements from the stable CV version are included</li></ul>
 A more detailed description and packages for Ubuntu <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/004236.html">can be found here.</a>
 Please test the code and report bugs.
-</p>
+</div>
 
-<p>
-<strong>February 6, 2016</strong><br>
-* We are in the process of updating our english manual. Helping hands for bringing <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
-</p>
+<div class="news">
+  <div class="newsitem">English manual updated</div>
+  <div class="datebubble">February 6, 2016</div>
+</div>
+<div class="newscontent">
+We are in the process of updating our english manual. Helping hands for bringing <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=history;f=doc;hb=HEAD">all of the updates</a> into the <a href="docs.php">French, Portuguese, Spanish or Basque manuals</a> are very welcome.
+</div>
 
-<p>
-<strong>January 19, 2016</strong><br>
-* Happy New Year! Johannes Sixt has <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/003761.html">merged Cinelerra-HV 4.1 into the CV codebase</a>. This is still experimental - please test the code and report bugs. <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Packages for Ubuntu are here</a>, thanks to Nicola Ferralis. </a>
-</p>
+<div class="news">
+  <div class="newsitem">"Mergelerra 4.1" is ready for beta-testing</div>
+  <div class="datebubble">January 19, 2016</div>
+</div>
+<div class="newscontent">
+Happy New Year! Johannes Sixt has <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/003761.html">merged Cinelerra-HV 4.1 into the CV codebase</a>. This is still experimental - please test the code and report bugs. <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Packages for Ubuntu are here</a>, thanks to Nicola Ferralis. </a>
+</div>
 
-<p>
-<strong>December 28, 2015</strong><br>
-* Heroine Virtual has released Cinelerra-HV 4.6.1 in November - now, three different versions of Cinelerra are existing. <a href="/about.php">We've cleared up some of the confusion here.</a>
-</p>
+<div class="news">
+  <div class="newsitem">New Cinelerra-HV release by Adam Williams</div>
+  <div class="datebubble">December 28, 2015</div>
+</div>
+<div class="newscontent">
+Heroine Virtual has released Cinelerra-HV 4.6.1 in November - now, three different versions of Cinelerra are existing. <a href="/about.php">We've cleared up some of the confusion here.</a>
+</div>
 
-<p>
-<strong>October 21, 2015</strong><br>
-* Rendering H.264 directly is broken with a recent version of libx264. We are aware of that - but fear not! <a href="/render-h264.php">Follow these instructions</a> and you can render H.264 with the YUV4MPEG pipe.
-</p>
+<div class="news">
+  <div class="newsitem">Workaround: H.264 rendering with YUV4MPEG</div>
+  <div class="datebubble">October 21, 2015</div>
+</div>
+<div class="newscontent">
+Rendering H.264 directly is broken with a recent version of libx264. We are aware of that - but fear not! <a href="/render-h264.php">Follow these instructions</a> and you can render H.264 with the YUV4MPEG pipe.
+</div>
 
-<p>
-<strong>October 9, 2015</strong><br>
-* We have documented our latest codebase with <a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
-</p>
+<div class="news">
+  <div class="newsitem">Updated code documentation is online</div>
+  <div class="datebubble">October 9, 2015</div>
+</div>
+<div class="newscontent">
+We have documented our latest codebase with <a href="/doxygen">doxygen</a> - thanks to Johannes Sixt for providing a template configuration file.
+</div>
 
-<p>
-<strong>September 26, 2015</strong><br>
-* Our new website has launched. It can now be browsed with tablets and smartphones. We also added language icons to our <a href="/docs.php">documentation section</a>, making it easier to find useful content in your native tongue.
-</p>
+<div class="news">
+  <div class="newsitem">New mobile-friendy website</div>
+  <div class="datebubble">September 26, 2015</div>
+</div>
+<div class="newscontent">
+Our new website has launched. It can now be browsed with tablets and smartphones. We also added language icons to our <a href="/docs.php">documentation section</a>, making it easier to find useful content in your native tongue.
+</div>
 
-<p>
-<strong>September 5, 2015</strong><br>
-* We've switched over to a new machine to host our repositories and the website. As a result, our <a href="https://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="https://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
-</p>
+<div class="news">
+  <div class="newsitem">Updates to gitweb and website</div>
+  <div class="datebubble">September 5, 2015</div>
+</div>
+<div class="newscontent">
+We've switched over to a new machine to host our repositories and the website. As a result, our <a href="https://git.cinelerra-cv.org/gitweb">gitweb</a> received a facelift. You can browse the repositories faster and also download snapshots from it. Additionally, the code of this website is <a href="https://git.cinelerra-cv.org/gitweb?p=www/cinelerra-site.git;a=summary">now accessible to the public</a>. If you want to help us fixing it, please leave a message on the mailing list.
+</div>
 
-<p>
-<strong>August 10, 2015</strong><br>
-* Cinelerra-CV 2.3 has been released!
+<div class="news">
+  <div class="newsitem">Cinelerra-CV release 2.3</div>
+  <div class="datebubble">August 10, 2015</div>
+</div>
+<div class="newscontent">
+Cinelerra-CV 2.3 has been released!
 Changes in version 2.3:
 <ul><li>Full UTF-8 support</li>
 <li>Complete new overlay engine and resampler</li>
@@ -116,28 +146,7 @@ Changes in version 2.3:
 </li>
 </ul>
 Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=log;h=58ef118e63bf2fac8c99add372c584e93b008bae">gitweb</a>.
-</p>
-
-<p>
-<strong>June, 2014</strong><br>
-* The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
-</p>
-
-<p>
-<strong>Mar 7, 2014</strong><br>
-* Our Bugtracker on <a href="https://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="https://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
-</p>
-
-<p>
-<strong>Feb 23, 2014</strong><br>
-* Our obsolete domain cinelerra.org was reregistered by someone else and currently shows an outdated and modified, static website copy. 
-For verifying future news statements, please refer to our mailing list <a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">cinelerra@skolelinux.no</a>.
-</p>
-
-<p>
-<strong>Jan 20, 2014</strong><br>
-* Cinelerra-CV has moved to <a href="https://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
-</p>
+</div>
 
 <hr>
 

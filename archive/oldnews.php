@@ -20,6 +20,27 @@ These are the older ones, back to the beginning in April 2003.
 </p>
 
 <p>
+<strong>June, 2014</strong><br>
+* The development of the next release of cinelerra-cv has been very active in the last few months. Some notable changes already included in the development branch: massive bug fixing (memory leaks, seg faults), revised and more robust plugin infrastructure, new plugins (Bluebanana, C41, color3way, findobject), new graphics, support for UTF-8 text and much more. These are available now in the  <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git">git repository</a>(or in <a href="https://launchpad.net/%7Ecinelerra-ppa/+archive/ppa">precompiled binaries</a>). Check back here for more updates.
+</p>
+
+<p>
+<strong>Mar 7, 2014</strong><br>
+* Our Bugtracker on <a href="https://bugs.cinelerra-cv.org/">bugs.cinelerra-cv.org</a> and gitweb on <a href="https://git.cinelerra-cv.org/gitweb">git.cinelerra-cv.org/gitweb</a> are back. Mind the <strong>-cv</strong> in the domain name! All git users should update their remote URL to the new domain git.cinelerra-cv.org.
+</p>
+
+<p>
+<strong>Feb 23, 2014</strong><br>
+* Our obsolete domain cinelerra.org was reregistered by someone else and currently shows an outdated and modified, static website copy. 
+For verifying future news statements, please refer to our mailing list <a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">cinelerra@skolelinux.no</a>.
+</p>
+
+<p>
+<strong>Jan 20, 2014</strong><br>
+* Cinelerra-CV has moved to <a href="https://cinelerra-cv.org/">cinelerra-cv.org</a>. Our new domain name reflects how cinelerra is named in several popular distributions and clarifies that it is the home of the community version of cinelerra. 
+</p>
+
+<p>
 <strong>Jul 9, 2012</strong><br>
 * <a href="http://heroinewarrior.com/index.php">Heroine Virtual LTD</a> releases <a href="http://heroinewarrior.com/cinelerra.php#download">Cinelerra 4.4</a>. Faster startup and responsiveness. Audio oscilloscope. Histogram updates. Audio gap removal. Better recording from webcams. Better live audio processing. Introducing the Bright theme for outdoor use.
 </p>
