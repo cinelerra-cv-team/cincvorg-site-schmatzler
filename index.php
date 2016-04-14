@@ -109,7 +109,7 @@ We have documented our latest codebase with <a href="/doxygen">doxygen</a> - tha
 </div>
 
 <div class="news">
-  <div class="newsitem">New mobile-friendy website</div>
+  <div class="newsitem">New mobile-friendly website</div>
   <div class="datebubble">September 26, 2015</div>
 </div>
 <div class="newscontent">
