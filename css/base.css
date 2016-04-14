@@ -283,6 +283,7 @@ div.alert div.hintcontent p {
     font: 13px/1.5 Arial,sans-serif;
     font-size:0.8em;
     line-height:1em;
+    opacity:0.9;
 }
 
 .newscontent {
