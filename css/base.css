@@ -208,8 +208,7 @@ div.livecd h4 {
   font-size:90%;
 }
 
-/* Put notes in fancy boxes
- * TODO: alerts */
+/* Put notes in fancy boxes */
 div.hint {
     border-radius: 5px;
     margin: .5em 0;
@@ -228,13 +227,33 @@ div.hint h3 {
     padding: 0 1em;
 }
 
-div.hint div.hintcontent {
+div.alert {
+    border-radius: 5px;
+    margin: .5em 0;
+    border: 1px solid #C00000;
+    clear: none;
+    overflow: auto;
+}
+
+div.alert h3 {
+    border-radius: 3px 3px 0 0;
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    color: white;
+    background-color: #C00000;
+    padding: 0 1em;
+}
+
+div.hint div.hintcontent,
+div.alert div.hintcontent {
     padding: .5em 1em;
 }
 
 /* Override browser-set values.
  * (Chrome adds a margin to p tags)*/
-div.hint div.hintcontent p {
+div.hint div.hintcontent p,
+div.alert div.hintcontent p {
     margin-top:0;
     margin-bottom:0;
 }

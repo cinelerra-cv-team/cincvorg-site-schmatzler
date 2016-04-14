@@ -56,8 +56,8 @@ include "header.php";
 <h2>INSTALL ON USB</h2>
 <p>The USB version has a major advantage to the DVD variant: It is "persistent" - meaning that the OS stores your updates on the USB stick.</p>
 <p>In order to protect your sensitive private data in case you lose your USB stick (or in case it gets stolen) you can enhance your persistent USB Live OS with an encrypted homedirectory and/or an encrypted persistence file, to be unlocked on boot with a passphrase that only you know.</p>
- <div class="hint">
-   <h3 class="hint">Note:</h3>
+ <div class="alert">
+   <h3 class="alert">Attention:</h3>
    <div class="hintcontent">
      <p>While you can use tools like Rufus or UNetbootin to install the ISO to a USB stick, it will behave like a DVD and will not be writeable afterwards!</p>
  </div></div>

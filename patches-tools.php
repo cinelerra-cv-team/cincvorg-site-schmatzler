@@ -24,8 +24,8 @@ include "header.php";
 <blockquote>
 <p><strong>Sérgio Basto</strong> has created two patches for recent ffmpeg versions (using the --with-external-ffmpeg flag).</p>
 <p>You can find the patches <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg_api2.2.patch">here</a> and <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg2.0.patch">here</a>.</p>
- <div class="hint">
-   <h3 class="hint">Note:</h3>
+ <div class="alert">
+   <h3 class="alert">Note:</h3>
    <div class="hintcontent">
      <p>These patches may be unstable. Use them at your own risk.</p>
  </div></div>

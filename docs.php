@@ -19,8 +19,8 @@ include "header.php";
  <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160330/23d34507/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and Cinelerra 5.1 has been posted on our mailing list on March 30, 2016. Thanks to Phyllis Smith.</li></ul>
 <h2>Cinelerra CV manual</h2>
 
- <div class="hint">
-   <h3 class="hint">Note:</h3>
+ <div class="alert">
+   <h3 class="alert">Attention:</h3>
    <div class="hintcontent">
      <p>The english manual is the most recent version.</u> Please help us translating the other languages.</p>
  </div></div>
