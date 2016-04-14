@@ -60,7 +60,7 @@ pre {
     background-color: #454545;
     border: 1px solid #666;
     overflow: auto;
-    max-height: 15em;
+    max-height: 17em;
     font-family: "Liberation Mono",dl_liberation_mono,monospace;
     /* Override PureCSS, a little to big for my taste */
     font-size: .85em !important;
