@@ -12,7 +12,11 @@ include "header.php";
 <h3>Cinelerra Bezier Patch</h3>
 <blockquote>
 <p><strong>Hermann Vosseler</strong> created this patch to get a usable bezier automation for Cinelerra 2.1CV fades, camera and projector. It retains backwards and (partially) upwards compatibility of session files. To know more read its <a href="http://ichthyostega.de/cinelerra/bezier-patch/">nice documentation</a>.
-<p><b>Note: This has since been included in CinelerraCV</b></p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>Note: This has since been included in Cinelerra-CV</p>
+ </div></div>
 </p>
 </blockquote>
 
@@ -20,7 +24,11 @@ include "header.php";
 <blockquote>
 <p><strong>Sérgio Basto</strong> has created two patches for recent ffmpeg versions (using the --with-external-ffmpeg flag).</p>
 <p>You can find the patches <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg_api2.2.patch">here</a> and <a href="https://raw.githubusercontent.com/sergiomb2/cinelerra-cv/master/cinelerra-cv-ffmpeg2.0.patch">here</a>.</p>
-<p><b>Note:</b> These patches may be unstable. Use them at your own risk.</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>These patches may be unstable. Use them at your own risk.</p>
+ </div></div>
 </p>
 </blockquote>
 <h2>Tools</h2>
@@ -81,7 +89,11 @@ href="http://www.assistcg.com/index.php/component/content/article/62.html">exr2t
 href="https://svn.bourget.cc/svn/wackystuff/programs/cinelerra-slideshow/">cinelerra-slideshow</a></strike>, a script that creates a cinelerra .xml file with some already pre-built slideshow tracks. (a bit old)
 <br>
 </p>
-<p><b>Note:</b> Link is dead. Author contacted.</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>Link is dead. Author contacted.</p>
+ </div></div>
 </blockquote>
 
 <h3>bin2cinelerra_header</h3>
@@ -126,7 +138,11 @@ frames by interpolating the motion between frames, using an MPEG-style motion co
 <p><strong>Alexandre "wacky" Bourget</strong> wrote a python script called <strike><a
 href="https://svn.bourget.cc/svn/wackystuff/programs/CreateCueSheet/">CreateCueSheet</a></strike>, a script that creates a PDF Cue-Sheet, based on LABELS in a Cinelerra .xml file. Creates a kind of storyboard, with labels frames marked. Uses LaTeX.
 <br></p>
-<p><b>Note:</b> Link is dead. Author contacted.</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>Link is dead. Author contacted.</p>
+ </div></div>
 </blockquote>
 
 <div class="lastmodified">Last modified on Sep 16, 2015</div>

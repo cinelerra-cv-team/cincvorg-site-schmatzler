@@ -67,9 +67,16 @@ td.title {
 </style>
 
 <div class="content">
-<h2>Google Summer of Code</h2>
-<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p> 
-<p>With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/">Google Summer of Code</a> 2007. <br>
+<br/>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
+ </div></div>
+ 
+ <h2>Google Summer of Code</h2>
+ 
+ <p>With the hope to get some nice work done, we tried to get into <a href="http://code.google.com/soc/">Google Summer of Code</a> 2007. <br>
 Here is the work we planned:</p>
 
 <table class="bounty">

@@ -5,8 +5,14 @@ include "../header.php";
 
 
 <div class='content'>
-<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
-<h2>Tools</h2>
+<br/>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
+ </div></div>
+ 
+ <h2>Tools</h2>
 
 <h3>Cinelerra theme helper</h3>
 <blockquote>

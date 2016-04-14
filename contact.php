@@ -14,7 +14,11 @@ include "header.php";
   <p>Our mailing list brings both developers and users together. It is basically a forum, where users send mails to each other.</p>
   <p>You can send an e-mail to <code>&lt;cinelerra <strong>at</strong> lists.cinelerra-cv.org&gt;</code> and all users subscribed to our mailing list will get it.</p>
   <p>There is a web interface for <a href="http://lists.cinelerra-cv.org/cgi-bin/mailman/listinfo/cinelerra">subscribing</a> and a <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/">web archive</a> that anybody can browse.</p>
-  <p>You are <u>not forced</u> to subscribe, but your e-mail will then be held waiting for moderator approval. The same goes for attachments bigger than 400KB.</p>
+   <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>You are <u>not forced</u> to subscribe, but your e-mail will then be held waiting for moderator approval. The same goes for attachments bigger than 400KB.</p>
+ </div></div>
   <p style="font-size:small;">We also have a <a href="https://lists.skolelinux.org/pipermail/cinelerra/">web archive of the old mailing list</a> which was mostly shut down in March 2014. It is also available on <a href="http://www.mail-archive.com/cinelerra@skolelinux.no/">The Mail Archive</a></li> and <a href="http://dir.gmane.org/gmane.comp.video.cinelerra-cv.general">GMANE</a>.</p>
   
 <h2>Internet Relay Chat (IRC)</h2>
@@ -25,7 +29,11 @@ include "header.php";
   
 <h2>Webmaster</h2>
   <p>You've found a bug on the website or you have a suggestion for it? Please <a href="mailto:danny@schmarsel.de">send me a message!</a></p>
-  <p><b>Note:</b> If you'd like to make non-trivial changes or change extensive stuff, please contact the mailing list first for approval.</p>
+  <div class="hint">
+  <h3 class="hint">Note:</h3>
+     <div class="hintcontent">
+       <p>If you'd like to make non-trivial changes or change extensive stuff, please contact the mailing list first for approval.</p>
+  </div></div>
 
 <div class="lastmodified">Last modified on Mar 1st, 2016</div>
 </div>

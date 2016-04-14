@@ -5,8 +5,13 @@ include "../header.php";
 
 
 <div class="content">
-<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
-<p>
+<br/>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
+ </div></div>
+ <p>
 <blockquote>
 The front page only contains the latest news items.
 These are the older ones, back to the beginning in April 2003.

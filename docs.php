@@ -8,13 +8,22 @@ include "header.php";
     <h1>Documentation</h1>
     <h2>The features, the manual, the tutorials</h2> 
 </div>
- <p><b>Note:</b> Entries that are marked with <img src="/images/website/archive.png" /> are hosted on archive.org and may be outdated.</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>Entries that are marked with <img src="/images/website/archive.png" /> are hosted on archive.org and may be outdated.</p>
+ </div></div>
  <h2>Cinelerra's features</h2>
  <ul><li>Linux Media Arts has an <a href="http://heroinewarrior.com/cinelerra.php">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,
   multiple effects, built-in videoscope and more.  With screenshots.</li>
  <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160330/23d34507/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and Cinelerra 5.1 has been posted on our mailing list on March 30, 2016. Thanks to Phyllis Smith.</li></ul>
 <h2>Cinelerra CV manual</h2>
-<p><b>NOTE:</b> <u>The english manual is the most recent version.</u> Please help us translating the other languages.</p>
+
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>The english manual is the most recent version.</u> Please help us translating the other languages.</p>
+ </div></div>
   <ul style="list-style-type:none;">
 <li>
 <B><img src="/images/website/locale/us.png" style="margin-right:4px;" />English:</B> 

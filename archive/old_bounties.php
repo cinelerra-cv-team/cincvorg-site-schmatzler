@@ -67,7 +67,12 @@ td.title {
 </style>
 
 <div class='content'>
-<p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
+<br/>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p style="color:red;">Note: This content is obsolete and has been archived. <a href="/archive.php">Go back to the archive</a>.</p>
+ </div></div>
 <h2>Old Bounties</h2>
 
 <p style="color:red;">These bounties are no longer valid, most of the features already work in CinelerraCV 2.3.</p>

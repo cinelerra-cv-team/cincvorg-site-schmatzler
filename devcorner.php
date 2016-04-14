@@ -167,9 +167,13 @@ patch does improve Cinelerra-CV.
     git send-email outgoing/
 </pre>
 
-<p>SignOff is not currently required.<br />
-<b>Note:</b> The smtp setup above is just a basic example.<br />
+<p>SignOff is not currently required.</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>The smtp setup above is just a basic example.<br />
 Please consult your internet or hosting provider for more information about smtp settings.</p>
+ </div></div>
 
 <h3>Every change must:</h3>
 

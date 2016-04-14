@@ -56,10 +56,18 @@ include "header.php";
 <h2>INSTALL ON USB</h2>
 <p>The USB version has a major advantage to the DVD variant: It is "persistent" - meaning that the OS stores your updates on the USB stick.</p>
 <p>In order to protect your sensitive private data in case you lose your USB stick (or in case it gets stolen) you can enhance your persistent USB Live OS with an encrypted homedirectory and/or an encrypted persistence file, to be unlocked on boot with a passphrase that only you know.</p>
-<p style="color:red"><b>Note: </b> While you can use tools like Rufus or UNetbootin to install the ISO to a USB stick, it will behave like a DVD and will not be writeable afterwards!</p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>While you can use tools like Rufus or UNetbootin to install the ISO to a USB stick, it will behave like a DVD and will not be writeable afterwards!</p>
+ </div></div>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">A script is available</a> which allows you to transfer the ISO image content to a USB stick, making some modifications depending on the script's parameters.</p>
 
-<p><b>Ubuntu/Debian distributions need <i>squashfs-tools</i> and <i>libcdio-utils</i> to be installed for the script to work.</b></p>
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>Ubuntu/Debian distributions need <i>squashfs-tools</i> and <i>libcdio-utils</i> to be installed for the script to work.</p>
+ </div></div>
 
 This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">'iso2usb.sh'</a>, accepts the following parameters: <pre>
   -c|--crypt size|perc       Add a LUKS encrypted /home ; parameter is the

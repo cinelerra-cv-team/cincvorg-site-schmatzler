@@ -208,3 +208,34 @@ div.livecd h4 {
   font-size:90%;
 }
 
+/* Put notes in fancy boxes
+ * TODO: alerts */
+div.hint {
+    border-radius: 5px;
+    margin: .5em 0;
+    border: 1px solid #1F8DD6;
+    clear: none;
+    overflow: auto;
+}
+
+div.hint h3 {
+    border-radius: 3px 3px 0 0;
+    margin: 0;
+    font-size: .9em;
+    font-weight: bold;
+    color: white;
+    background-color: #1F8DD6;
+    padding: 0 1em;
+}
+
+div.hint div.hintcontent {
+    padding: .5em 1em;
+}
+
+/* Override browser-set values.
+ * (Chrome adds a margin to p tags)*/
+div.hint div.hintcontent p {
+    margin-top:0;
+    margin-bottom:0;
+}
+
