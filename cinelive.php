@@ -3,25 +3,6 @@ $title="LiveDVD";
 include "header.php";
 ?>
 
-<style type="text/css" scoped>
-    a.button-cta {
-        background: #1f8dd6;
-        color: #fff;
-        border: 1px solid #1f8dd6;
-    }
-    a.button-cta, a.button-secondary {
-        margin: 0.25em;
-    }
-    a.button-secondary {
-       background: #fff;
-       color: #666;
-       border: 1px solid #ddd;
-    }
-    a.button-cta, a.button-secondary {
-       margin: 0.25em;
-    }
-</style>
-
 <div class="content">
 <div class="header">
     <img style="width:100%;max-width:480px;" src="/images/website/livecd-logos/cinelive-light.png" alt="cinelive-logo"/>
@@ -46,8 +27,8 @@ include "header.php";
 
 <p>This is the latest beta release of CINELIVE. It will become final with the release of Slackware 14.2.</p>
 <div>
-   <a class="button-cta pure-button" href="/cinelive-xfce-beta2.iso">Download Beta2</a>
-   <a class="button-secondary pure-button" href="https://schmatzler.de/tmp/cinelive-xfce-beta2.iso">Mirror</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta2.iso">Download Beta2</a>
+   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/tmp/cinelive-xfce-beta2.iso">Mirror</a>
 </div>
 <p>Build date: April 10, 2016</p>
 <p>MD5SUM: f45439666c33188c121141dd12425049</p>
