@@ -102,7 +102,7 @@ This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/ci
    <div class="hintcontent">
      <p>You must have an existing <u>ext4</u> partition (>=4GB) and a <u>swap</u> partition on your drive.</p>
      <p>Newer machines may also need an EFI partition (setup2hd will tell you if it needs one).</p>
-     <p>All of these partitions can be created with gparted, which is accessibe from the "System" menu.</p>
+     <p>All of these partitions can be created with gparted, which is accessible from the "System" menu.</p>
  </div></div>
  
 <br/>
