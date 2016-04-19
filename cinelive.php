@@ -23,6 +23,8 @@ include "header.php";
 
 <p>All packages are updated regularly and can also be kept up to date on a DVD (until a reboot).</p>
 
+<br/>
+
 <h2>DOWNLOAD</h2>
 
 <p>This is the latest beta release of CINELIVE. It will become final with the release of Slackware 14.2.</p>
@@ -33,6 +35,8 @@ include "header.php";
 <p>Build date: April 19, 2016</p>
 <p>MD5SUM: 46cf7be4be75d8b1fb72b973b85013f4</p>
 <p>Username/Password: live</p>
+
+<br/>
 
 <h2>INSTALL ON USB</h2>
 <p>The USB version has a major advantage to the DVD variant: It is "persistent" - meaning that the OS stores your updates on the USB stick.</p>
@@ -86,9 +90,27 @@ This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/ci
 </li>
 </ul>
 
+<br/>
+
 <h2>INSTALL ON HDD</h2>
-<p>It's currently not possible to make a harddisk install from within the running system.</p>
-<p>But: <a href="http://docs.slackware.com/slackware:install">You can install Slackware64-current</a> (soon to be 14.2) and configure it to use our repository to get the latest packages:</p>
+<p>Since Beta3, we have included an installer called 'setup2hd' that can be run directly from the running LiveDVD.</p>
+<p>Open a terminal and run the script as root to install and configure everything needed:</p>
+<pre>su -c setup2hd</pre>
+
+ <div class="hint">
+   <h3 class="hint">Note:</h3>
+   <div class="hintcontent">
+     <p>You must have an existing <u>ext4</u> partition (>=4GB) and a <u>swap</u> partition on your drive.</p>
+     <p>Newer machines may also need an EFI partition (setup2hd will tell you if it needs one).</p>
+     <p>All of these partitions can be created with gparted, which is accessibe from the "System" menu.</p>
+ </div></div>
+ 
+<br/>
+ 
+<h2>INSTALL ON SLACKWARE64</h2>
+
+<p>All of our packages can be used on Slackware64-current (soon to be 14.2).</p>
+<p>Configure it to use our repository to get the latest packages:</p>
 <ul>
 <li>1. Install <a href="http://slakfinder.org/slackpkg+.html">slackpkg+</a></li>
 <li>2. Edit <i>/etc/slackpkg/slackpkgplus.conf</i> and make sure you <u>alter</u> <b>REPOPLUS</b> and <u>add</u> <b>MIRRORPLUS</b> to create a new repository 'cinelerracv':
