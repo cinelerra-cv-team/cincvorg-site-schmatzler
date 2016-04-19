@@ -27,7 +27,7 @@ include "header.php";
 
 <p>This is the latest beta release of CINELIVE. It will become final with the release of Slackware 14.2.</p>
 <div>
-   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta3.iso">Download Beta2</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta3.iso">Download Beta3</a>
    <a class="pure-button pure-button-secondary" href="https://schmatzler.de/tmp/cinelive-xfce-beta3.iso">Mirror</a>
 </div>
 <p>Build date: April 19, 2016</p>
