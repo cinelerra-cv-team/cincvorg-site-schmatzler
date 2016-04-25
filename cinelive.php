@@ -107,7 +107,7 @@ This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/ci
  
 <br/>
  
-<h2>INSTALL ON SLACKWARE64</h2>
+<h2><a name="slackinstall">INSTALL ON SLACKWARE64</a></h2>
 
 <p>All of our packages can be used on Slackware64-current (soon to be 14.2).</p>
 <p>Configure it to use our repository to get the latest packages:</p>

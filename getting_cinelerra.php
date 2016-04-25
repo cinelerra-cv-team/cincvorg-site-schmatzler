@@ -56,7 +56,7 @@ Cinelerra-CV is included in the Arch Linux community repository. To install
 the "cinelerra" package enable the community repository first (See the <a
 href='http://wiki.archlinux.org/index.php/AUR_User_Guidelines'>User
 Guidelines</a> for more info), then run the following command from the command line: <BR>
-<code>pacman -Sy cinelerra-cv</code> 
+<pre>pacman -Sy cinelerra-cv</pre> 
       </p>
     </div>
   </div>
@@ -76,9 +76,12 @@ Guidelines</a> for more info), then run the following command from the command l
     <img src="/images/website/distro-logos/fedora.png" alt="Fedora Logo" title="Download Cinelerra-CV for Fedora" />
     <h4>Fedora</h4>
     <div class="details">
-      <p> 
+      <p>      
+<div class="alert">
+<h3 class="alert">Attention:</h3>
+<div class="hintcontent">
 <p>Cinelerra-CV is <u>not</u> available in Fedora by default. It's also <u>not</u> in the RPM Fusion repository.</p>
-<p>The <a href="http://packages.atrpms.net/name/cinelerra/">ATrpms repository</a> offers the old version 2.1 for Fedora 20.
+</div></div>
 <p>If you want to compile CinelerraCV from source you can find detailed instructions here:</p>
 <ul>
 <li><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a></li>
@@ -94,8 +97,12 @@ Guidelines</a> for more info), then run the following command from the command l
     <div class="details">
       <p>
 <p>A WIP (work in progress) port of Cinelerra-CV 2.3 for FreeBSD has been created <a href="https://github.com/decke/ports.git">by Bernhard Fröhlich</a>.</p>
-<p style="color:red">It is <u>not</u> fully working yet and can't be built completely from source.
+<div class="alert">
+<h3 class="alert">Attention:</h3>
+<div class="hintcontent">
+<p>It is <u>not</u> fully working yet and can't be built completely from source.
 Please help him out, if you can.</p>
+</div></div>
 <p><b><i>Prerequisites</i></b>
 <ul>
 <li>1. <a href="http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/10.3/FreeBSD-10.3-RELEASE-amd64-dvd1.iso">FreeBSD-10.3-RELEASE-amd64-dvd1.iso</a> was installed with default settings.</li>
@@ -146,13 +153,17 @@ cd ports/multimedia/cinelerra</pre></li>
     <div class="details">
       <p>
 <!--TODO: Add tutorial for building from source on Gentoo-->
-<p style="color:red;"><b>Note:</b> Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and severely outdated. Please try building Cinelerra-CV from source or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
+<div class="alert">
+<h3 class="alert">Attention:</h3>
+<div class="hintcontent">
+<p>Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and <font style="color:red;">severely outdated</font>. Please try building Cinelerra-CV from source or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
+</div></div>
 <p>Installation for Gentoo GNU/Linux is very straight forward. Simply type:</p>
-<p><code>emerge cinelerra</code></p>
+<pre>emerge cinelerra</pre>
 <p>as root and it should install and run without any problems.</p>
 <p>Note that you may need to put cinelerra in your <i>/etc/portage/package.keywords</i>
 file in order to unmask it:</p>
-<p><code>echo "media-video/cinelerra ~x86" >> /etc/portage/package.keywords </code></p>
+<pre>echo "media-video/cinelerra ~x86" >> /etc/portage/package.keywords</pre>
 <p>See the <a href='http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3&chap=3'>Handbook</a> 
 for details.</p>
       </p>
@@ -182,7 +193,12 @@ for details.</p>
       <p> 
 <p>CinelerraCV 2.2 is officially available in OpenMandriva 2014.2.</p>
 <p>Make sure restricted packages are activated in the control center.</p>
-<p><b>Note:</b> cinelerra doesn't show up in the "programs with GUI" list. You have to show the complete list to install it.</p>
+
+<div class="hint">
+<h3 class="hint">Note:</h3>
+<div class="hintcontent">
+<p>Cinelerra doesn't show up in the "programs with GUI" list. You have to show the complete list to install it.</p>
+</div></div>
       </p>
     </div>
   </div>
@@ -205,9 +221,9 @@ for details.</p>
 <ul>
     <li>Enable ROSA Restricted Updates repository on <i>Install and Remove Software</i></li>
     <li>Update packages list:<br/>
-    <code>urpmi.update -a</code></li>
+    <pre>urpmi.update -a</pre></li>
     <li>Install cinelerra-cv rpm package:<br/>
-    <code>urpmi cinelerra-cv</code></li>
+    <pre>urpmi cinelerra-cv</pre></li>
     </div>
   </div>
 
@@ -215,6 +231,13 @@ for details.</p>
     <img src="/images/website/distro-logos/slackware.png" alt="Slackware Logo" title="Download Cinelerra-CV for Slackware" />
     <h4>Slackware</h4>
     <div class="details">
+    
+    <div class="hint">
+      <h3 class="hint">Note:</h3>
+      <div class="hintcontent">
+        <p>We're putting up 64bit packages as part of our Live Edition. Those are based on the very latest code and can be used on a regular Slackware installation, too. See our <a href="/cinelive.php/#slackinstall">CINELIVE page</a> for details.</p>
+      </div></div>
+    
       <p>You can find prebuilt Cinelerra-CV packages at the following locations:</p>
       <ul>
       <li><a href="http://packages.slackonly.com/pub/packages/">Slackonly packages</a> (recommended, because it uses <a href="http://slackbuilds.org/">SBo SlackBuilds</a>)</li>
@@ -232,13 +255,12 @@ for details.</p>
 <p>Latest Cinelerra-CV 2.3 for Ubuntu (from 12.04 Precise Pangolin to the current beta release) is available from a Launchpad repo maintained by Nicola Ferralis:</p>
 <a href="https://launchpad.net/~cinelerra-ppa">https://launchpad.net/~cinelerra-ppa</a>
 <p>To add the Cinelerra PPA to your source list run these commands in a terminal:</p>
-<ul>
-  <li><code>sudo add-apt-repository ppa:cinelerra-ppa/ppa</code></li>
-  <li><code>sudo apt-get update</code></li>
-</ul>
+
+<pre>sudo add-apt-repository ppa:cinelerra-ppa/ppa</pre>
+<pre>sudo apt-get update</pre>
+
 <p>Once the the PPA has been enabled you can install the package with the command:</p>
-<code>sudo apt-get install cinelerra-cv</code>
-<br/>
+<pre>sudo apt-get install cinelerra-cv</pre>
 <p>If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
     </div>
   </div>
@@ -292,7 +314,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on April 11, 2016</div>
+<div class="lastmodified">Last modified on April 25, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
