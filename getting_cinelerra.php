@@ -12,7 +12,7 @@ include "header.php";
 <div class="hint">
 <h3 class="hint">Note:</h3>
 <div class="hintcontent">
-<p>This page is only for Cinelerra-<u>CV</u>. Packages and code for experimental versions (CVE, CVA, 5.1, merge-4) <a href="main_repo.php">can be found here.</a></p>
+<p>This page is only for Cinelerra-<u>CV</u>. Packages and code for experimental versions (CVE, CVA, 5.1, merge-4) <a href="main_repo.php#experimental">can be found here.</a></p>
 </div></div>
 
 <h2><a name="livecd">Live Media</a></h2>

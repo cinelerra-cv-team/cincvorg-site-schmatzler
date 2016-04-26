@@ -26,7 +26,7 @@ Additionally, release tarballs are available on our <a href=/releases/>releases 
 
 <p>The stable repo is maintained by a small group of core developers. You can browse the <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
 
-<h2>Experimental code</h2>
+<h2><a name="experimental">Experimental code</a></h2>
 
 <p>Some developers are working around specific issues on experimental repos. You are welcome to test the application and report back to the <a href="contact.php">mailing list</a>.</p>
 
