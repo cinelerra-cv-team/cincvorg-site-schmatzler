@@ -41,7 +41,7 @@ a {
 }
 
 /* Give a reaction when hovering over a link */
-a:hover {
+.content a:hover {
     color: #265778 !important;
 }
 
