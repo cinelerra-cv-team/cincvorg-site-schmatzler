@@ -65,9 +65,14 @@ Guidelines</a> for more info), then run the following command from the command l
     <img src="/images/website/distro-logos/debian.png" alt="Debian Logo" title="Download Cinelerra-CV for Debian" />
     <h4>Debian</h4>
     <div class="details">
-      <p> 
-<p>For Debian, packages are available through <a href="http://deb-multimedia.org/">Deb Multimedia</a>.</p>
-<p>Stable (Jessie) comes with Cinelerra-CV 2.2, Testing (Stretch) and Unstable (Sid) already have the latest version 2.3.</p>
+      <p>
+<p>For Debian, packages are available through <a href="http://deb-multimedia.org/">Deb-Multimedia</a>.</p>
+<p>Stable (Jessie) comes with Cinelerra-CV 2.2.</p>
+<div class="alert">
+<h3 class="alert">Attention:</h3>
+<div class="hintcontent">
+<p>Deb-Multimedia stopped building Cinelerra-CV after 2.2 and switched to Cinelerra-HV. If you want the latest version 2.3, your only option is to build it from source.</p>
+</div></div>
       </p>
     </div>
   </div>
@@ -314,7 +319,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on April 25, 2016</div>
+<div class="lastmodified">Last modified on May 1, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
