@@ -36,7 +36,7 @@
                 <li class="<?php if ($title=="About Cinelerra") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/about.php" class="pure-menu-link"><img src="/images/website/menu/info-button.png" alt="about" />About</a></li>
                 <li class="<?php if ($title=="Contact us") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/contact.php" class="pure-menu-link"><img src="/images/website/menu/contact.png" alt="contact" />Contact us</a></li>
                 <li class="<?php if ($title=="Documentation") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/docs.php" class="pure-menu-link"><img src="/images/website/menu/docs.png" alt="docs" />Documentation</a></li>
-                <li class="<?php if ($title=="User's Productions") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/productions.php" class="pure-menu-link"><img src="/images/website/menu/users.png" alt="users" />Users' Productions</a></li>
+                <li class="<?php if ($title=="Users' Productions") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/productions.php" class="pure-menu-link"><img src="/images/website/menu/users.png" alt="users" />Users' Productions</a></li>
             </ul>
             
             <a class="pure-menu-heading" href="#">Download</a>
