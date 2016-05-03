@@ -56,6 +56,7 @@ página por capítulo) |
 <a href="docs/split_manual_eu/cinelerra_cv_manual_eu.html">HTML</a> (One page per chapter)  |  
 <a href="docs/cinelerra_cv_manual_eu.txt">TXT</a> (500 Kb) </li>
  </ul>
+ 
 
   <h2><a name="video-tutorials">Cinelerra video tutorials</a></h2>
 Some video tutorials (talk and screencast) are available on the internet:
@@ -74,6 +75,8 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/watch?v=H2aTi-VcpkM">Отслеживание и стабилизация движения в Cinelerra-CV (Motion Tracking)</a> - by <i>Linux - это просто!</i></li>
 <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PL22E4D21BF236B8CF">Обзор и уроки по Cinelerra-CV (Overview and tutorials)</a> - by Alexey Korelsky (aka <i>GreenZmeyk</i>)</li>
 </ul>
+
+
  <h2><a name="tutorials">Cinelerra tutorials</a></h2>
  <ul style="list-style-type:none;">
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.robfisher.net/linux/video/cinelerra1.html">Cinelerra Tutorial - Getting Started</a> - by Rob Fisher.
@@ -112,17 +115,16 @@ de Cinelerra</a> - by funix.org.
   <li><img src="/images/website/locale/ru.png" style="margin-right:4px;" /><a href="http://wiki.linuxformat.ru/wiki/LXF92:Cinelerra">Базовые приёмы работы с программой (Basic tutorials)</a> - by Peter Semiletov
   </li>
 </ul>
+
+
 <h2><a name="links">HOWTOs</a></h2>
 Some HOWTOs for specific needs are available on the internet:
 
 <ul style="list-style-type:none;">
-  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="/render-h264.php">How to render H.264 with YUV4MPEG</a>
-  </li>
-  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">How to build Cinelerra-CV for Fedora 15, x86-64</a> - by Scott Frase</li>
-  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a> - by rabin</li>
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="/render-h264.php">How to render H.264 with YUV4MPEG</a></li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2007/06/beginners-guide-to-exporting-video-from.html">Beginner's Guide to Exporting Video from Cinelerra</a> - by Scott Frase  </li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.youtube.com/watch?v=MhaOgNQ0Bbc">Capturing desktop screens in Cinelerra</a> - screencast by Scott Frase</li>
-  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://jcornet.free.fr/linux/chromakey.html">HOWTO use theChromakey (HSV) plugin</a> - by Jerome Cornet</li>
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://jcornet.free.fr/linux/chromakey.html">HOWTO use the Chromakey (HSV) plugin</a> - by Jerome Cornet</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2009/03/motion-stabilization-tutorial.html">Motion Stabilization Tutorial</a> - by Scott Frase</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://jakedth.tumblr.com/post/85794790/cinelerra-cv-motion-tracking-tutorial">Cinelerra-CV Motion Tracking tutorial</a> - by Jacob Lludkrab</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.calcmaster.net/cinelerra/forgotten-guide/08-advanced-ve-01-motion-tracking.php">Motion tracking in Cinelerra</a> - by calcmaster.net</li>
@@ -135,11 +137,21 @@ Some HOWTOs for specific needs are available on the internet:
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.g-raffa.eu/SimAV/">SimAV HOWTOs</a> - How to create a picture in picture effect, How to create overlays, How to change theme, by Simeon Volkel</li> 
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/archive.png" style="margin-right:4px;" /><a href="https://web.archive.org/web/20080716214706/http://www.alexandergrundner.com/2007/07/19/tips-for-transcoding-cinelerra-compatible-video-with-ffmpeg-mencoder/">Tips for Transcoding Cinelerra Compatible Video with FFmpeg, MEncoder</a> - by Alexander Grundner</li>
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="https://n1njahacks.wordpress.com/2013/03/11/exporting-h-264-from-cinelerra/">Exporting H.264 from Cinelerra</a> - by valblant</li>
-  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">How to compile CinelerraCV on Ubuntu</a> - by Raffaella Traniello</li>
   <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="http://www.udosworld.de/23-08-05-cinelerra-installation.php?id=linux">Installation von Cinelerra unter Debian Lenny</a> - by Udo Bender</li>
   <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><img src="/images/website/archive.png" style="margin-right:4px;" /><a href="http://web.archive.org/web/20140822083830/http://kutxa.homeunix.org/bloga/2007/08/13/crear-titulos-diferentes-con-cinelerra#more-246">Crear títulos diferentes con Cinelerra</a> - by Gustavo Iñiguez Goya  - how to add effects to titles. With downloadable sample projects.</li>
   <li><img src="/images/website/locale/pt.png" style="margin-right:4px;" /><a href="https://dominandocinelerra.wordpress.com/2010/12/03/chroma-key-hsv/">How to use the Chroma key (HSV) plugin</a> - by Paulo Carvalho</li>
 </ul>
+
+<h2><a name="compiling">How to build from source</a></h2>
+
+<ul style="list-style-type:none;">
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">How to build Cinelerra-CV for Fedora 15, x86-64</a> - by Scott Frase</li>
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a> - by rabin</li>
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="https://mcturra2000.wordpress.com/2016/04/28/compiling-cinelerra-cv-in-ubuntu-xenial/">Compiling #cinelerra-cv in Ubuntu Xenial</a> - by Mark Carter</li>
+  <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">How to compile CinelerraCV on Ubuntu</a> - by Raffaella Traniello</li>
+  </ul>
+  
+
 <h2><a name="links">Various links</a></h2>
 <ul style="list-style-type:none;">
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><img src="/images/website/archive.png" style="margin-right:4px;" /><a href="https://web.archive.org/web/20140222010640/http://neuron2.net/LVG/interlacing.html">Interlacing</a> - an easy introduction to Interlacing for beginners.</li>  
@@ -155,6 +167,8 @@ Some HOWTOs for specific needs are available on the internet:
   <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://womble.decadent.org.uk/talks/dvd-ukuug06/dvd-talk-ukuug06-paper.html">Creating DVD videos on Linux and Unix</a> - an excellent high level overview of DVD authoring in general on Linux</li>    
   <li><img src="/images/website/locale/fr.png" style="margin-right:4px;" /><a href="http://fr.lprod.org/wiki/doku.php">lprod - Libre Production</a> - a wiki full of resources for Open Source video editing, especially for Cinelerra HV.</li>
 </ul>
+
+
 <h2>Cinelerra CV Wiki</h2>
 <p>A few years ago we had a wiki here. Due to too much spam and a missing maintainer we had to shut it down.</p>
 <p>If you'd like to help with maintaining a new wiki, please send a message to our mailing list.</p>
@@ -162,7 +176,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on March 30, 2016</div>
+<div class="lastmodified">Last modified on May 3, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>

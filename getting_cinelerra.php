@@ -71,7 +71,7 @@ Guidelines</a> for more info), then run the following command from the command l
 <div class="alert">
 <h3 class="alert">Attention:</h3>
 <div class="hintcontent">
-<p>Deb-Multimedia stopped building Cinelerra-CV after 2.2 and switched to Cinelerra-HV. If you want the latest version 2.3, your only option is to build it from source.</p>
+<p>Deb-Multimedia stopped building Cinelerra-CV after 2.2 and switched to Cinelerra-HV. If you want the latest version 2.3, your only option is to <a href="/docs.php#compiling">build it from source</a>.</p>
 </div></div>
       </p>
     </div>
@@ -87,11 +87,7 @@ Guidelines</a> for more info), then run the following command from the command l
 <div class="hintcontent">
 <p>Cinelerra-CV is <u>not</u> available in Fedora by default. It's also <u>not</u> in the RPM Fusion repository.</p>
 </div></div>
-<p>If you want to compile CinelerraCV from source you can find detailed instructions here:</p>
-<ul>
-<li><a href="http://blog.rabin.io/447/building-cinelerracv-for-fedora-22-under-docker">Build Cinelerra-CV for Fedora 22 under Docker</a></li>
-<li><a href="http://crazedmuleproductions.blogspot.com/2011/05/fedora-15-cinelerra-install-works.html">Build Cinelerra-CV for Fedora 15, x86-64</a></li>
-</ul>
+<p>If you want to compile Cinelerra-CV from source you can find <a href="/docs.php#compiling">detailed instructions here</a>.</p>
       </p>
     </div>
   </div>
@@ -161,7 +157,7 @@ cd ports/multimedia/cinelerra</pre></li>
 <div class="alert">
 <h3 class="alert">Attention:</h3>
 <div class="hintcontent">
-<p>Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and <font style="color:red;">severely outdated</font>. Please try building Cinelerra-CV from source or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
+<p>Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and <font style="color:red;">severely outdated</font>. Please try building Cinelerra-CV <a href="/docs.php#compiling">from source</a> or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
 </div></div>
 <p>Installation for Gentoo GNU/Linux is very straight forward. Simply type:</p>
 <pre>emerge cinelerra</pre>
@@ -266,7 +262,7 @@ for details.</p>
 
 <p>Once the the PPA has been enabled you can install the package with the command:</p>
 <pre>sudo apt-get install cinelerra-cv</pre>
-<p>If you want to compile CinelerraCV from source you can find detailed instructions on the <a href="http://www.g-raffa.eu/Cinelerra/HOWTO/compilation.html">Cinelerra for Grandma</a> tutorial.</p>
+<p>If you want to compile CinelerraCV from source you can find detailed instructions on our <a href="/docs.php#compiling">documentation page</a>.</p>
     </div>
   </div>
   
@@ -283,7 +279,7 @@ for details.</p>
 
 <p>The sources of Cinelerra-CV are available as .tar.xz snapshots here:</p>
 <p><a href="https://cinelerra-cv.org/releases/">Browse releases</a></p>
-<p>You can also <a href="/main_repo.php">check out the code</a> we're currently working on.</p>
+<p>You can also <a href="/main_repo.php">check out the code</a> we're currently working on or read <a href="/docs.php#compiling">some tutorials</a> about compiling it into a useable program.</p>
 
 <!-- async js -->
 <script type="text/javascript">
@@ -319,7 +315,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on May 1, 2016</div>
+<div class="lastmodified">Last modified on May 3, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
