@@ -20,6 +20,9 @@ include "header.php";
         color: #fff;
         border: 1px solid #1f8dd6;
     }
+    a.button-cta:hover {
+        color: #fff !important;
+    }
     a.button-cta, a.button-secondary {
         margin: 0.25em;
     }
@@ -27,6 +30,9 @@ include "header.php";
        background: #fff;
        color: #666;
        border: 1px solid #ddd;
+    }
+    a.button-secondary:hover {
+       color: #666 !important;
     }
     a.button-cta, a.button-secondary {
        margin: 0.25em;
