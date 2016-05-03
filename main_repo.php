@@ -11,18 +11,13 @@ include "header.php";
 
 <h1>Get Cinelerra-CV source code</h1>
 <p>The source code of of Cinelerra-CV is available from a git repository.<br/>
-To get it you need to have git-core installed.</br>
 Additionally, release tarballs are available on our <a href=/releases/>releases page</a>.<p>
 
 <p>You can clone the repo of the last stable release (2.3) with:</p>
- <blockquote>
-<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git -b rel2.3.0 cinelerra-cv-2.3</code>
- </blockquote>
+<pre>git clone git://git.cinelerra-cv.org/CinelerraCV.git -b rel2.3.0 cinelerra-cv-2.3</pre>
 
 <p>Alternatively you can clone the ever growing git repository:</p>
- <blockquote>
-<code>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</code>
- </blockquote>
+<pre>git clone git://git.cinelerra-cv.org/CinelerraCV.git cinelerra-cv</pre>
 
 <p>The stable repo is maintained by a small group of core developers. You can browse the <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">CinelerraCV repository</a> on-line, thanks to Gitweb.</p>
 
@@ -82,7 +77,7 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<div class="lastmodified">Last modified on March 26, 2016</div>
+<div class="lastmodified">Last modified on May 3, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
