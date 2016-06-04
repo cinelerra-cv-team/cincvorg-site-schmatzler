@@ -29,11 +29,11 @@ include "header.php";
 
 <p>This is the latest beta release of CINELIVE. It will become final with the release of Slackware 14.2.</p>
 <div>
-   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta5.iso">Download Beta5</a>
-   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/tmp/cinelive-xfce-beta5.iso">Mirror</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta6.iso">Download Beta6</a>
+   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/tmp/cinelive-xfce-beta6.iso">Mirror</a>
 </div>
-<p>Build date: <b>May 5, 2016</b></p>
-<p>MD5SUM: <b>56533cd3b0420128be24d6cd7f842013</b></p>
+<p>Build date: <b>June 4, 2016</b></p>
+<p>MD5SUM: <b>2c845bbef4016ee620252a59ea802676</b></p>
 <p>Username/Password: <b>live</b></p>
 
 <br/>
