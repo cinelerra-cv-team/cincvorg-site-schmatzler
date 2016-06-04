@@ -127,7 +127,7 @@ slackpkg update gpg
 slackpkg install cinelerracv
 </pre></li>
 
-<div class="lastmodified">Last modified on May 5, 2016</div>
+<div class="lastmodified">Last modified on June 4, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>

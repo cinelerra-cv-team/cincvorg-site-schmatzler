@@ -307,3 +307,12 @@ div.alert div.hintcontent p {
     margin-bottom: 35px;
     margin-top: 10px;
 }
+
+/*no colored links on buttons (cinelive.php)*/
+a.pure-button-primary:hover {
+  color:#fff !important;
+}
+
+a.pure-button-secondary:hover {
+  color:rgba(0,0,0,.8) !important;
+}
