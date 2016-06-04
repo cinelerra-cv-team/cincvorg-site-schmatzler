@@ -56,6 +56,9 @@ página por capítulo) |
 <a href="docs/split_manual_eu/cinelerra_cv_manual_eu.html">HTML</a> (One page per chapter)  |  
 <a href="docs/cinelerra_cv_manual_eu.txt">TXT</a> (500 Kb) </li>
  </ul>
+
+Additional documentation:
+<ul style="list-style-type:none;"><li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="/five/Features5.pdf">Extended manual</a> describing all of the new features of Cinelerra 5.1</li></ul>
  
 
   <h2><a name="video-tutorials">Cinelerra video tutorials</a></h2>
@@ -176,7 +179,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on May 3, 2016</div>
+<div class="lastmodified">Last modified on June 4, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>
