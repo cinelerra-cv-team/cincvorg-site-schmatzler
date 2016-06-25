@@ -10,6 +10,11 @@ include "header.php";
 </div>
 
 <h2>E-Mail</h2>
+   <div class="alert">
+   <h3 class="alert">Attention:</h3>
+   <div class="hintcontent">
+     <p>Please refrain from using <b>Yahoo</b> or <b>Hotmail</b> addresses to sign up. Their overly restrictive policies may cause messages not arriving at your inbox. Any other provider should be fine.</p>
+ </div></div>
   <p>E-Mail is our main medium of communication.<p>
   <p>Our mailing list brings both developers and users together. It is basically a forum, where users send mails to each other.</p>
   <p>You can send an e-mail to <code>&lt;cinelerra <strong>at</strong> lists.cinelerra-cv.org&gt;</code> and all users subscribed to our mailing list will get it.</p>
@@ -35,7 +40,7 @@ include "header.php";
        <p>If you'd like to make non-trivial changes or change extensive stuff, please contact the mailing list first for approval.</p>
   </div></div>
 
-<div class="lastmodified">Last modified on Mar 1st, 2016</div>
+<div class="lastmodified">Last modified on June 25, 2016</div>
 </div>
  
 <?php include "footer.php"; ?>
