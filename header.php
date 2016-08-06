@@ -59,7 +59,7 @@
             <a class="pure-menu-heading" href="#">Other</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><div class="socialmenu"><a href="https://www.facebook.com/cinelerracv" target="_blank"><img src="/images/website/menu/FB-f-Logo__blue_20.png" alt="facebook" />Like</a> <a href="https://twitter.com/CinelerraCV" target="_blank"><img src="/images/website/menu/twitter_logo.png" alt="twitter" />Follow</a></div></li>
+                <li class="pure-menu-item"><div class="socialmenu"><a href="https://www.facebook.com/cinelerra" target="_blank"><img src="/images/website/menu/bluesoc.png" alt="fb" />Like</a> <a href="https://twitter.com/CinelerraCV" target="_blank"><img src="/images/website/menu/lightbluesoc.png" alt="tw" />Follow</a></div></li>
                 <li class="<?php if ($title=="Donation") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/donate.php" class="pure-menu-link"><img src="/images/website/menu/donate.png" alt="donate" />Donate</a></li>
                 <li class="<?php if ($title=="Archive") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/archive/index.php" class="pure-menu-link"><img src="/images/website/menu/archive.png" alt="archive" />Archive</a></li>
             </ul>
