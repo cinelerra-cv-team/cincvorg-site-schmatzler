@@ -54,7 +54,19 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
-  <div class="newsitem">Cinelerra-CV LiveDVD released</div>
+  <div class="newsitem">Stable LiveDVD, 5.1 + CVE development, more packages</div>
+  <div class="datebubble">August 6, 2016</div>
+</div>
+<p>Today we've released the first stable version of CINELIVE, based on the long awaited Slackware 14.2. <a href="/cinelive.php">More information here.</a></p>
+<p>Good Guy has constantly improved Cinelerra 5.1 with new features and bugfixes. You can see a list of the major improvements of <a href="https://cinelerra-cv.org/five/releasenotes.pdf">the last two months here</a>.</p>
+<p>He is even <a href="https://cinelerra-cv.org/five/">building packages for a lot of major distributions</a> like Arch, CentOS, Debian, Fedora, Ubuntu, Suse and many more. We'll probably have to revise our download page very soon to keep up with that. 😉</p>
+<p>But let's not forget that other people are putting work into Cinelerra, too. Einar has written <a href="https://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">a lot of code</a> for Cinelerra-CVE since our last news bulletin. You can find a build of it on our LiveDVD for testing.</p>
+<div class="newscontent">
+
+</div>
+
+<div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-CV LiveDVD Beta release</div>
   <div class="datebubble">April 11, 2016</div>
 </div>
 <div class="newscontent">
@@ -158,7 +170,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on April 11, 2016</div>
+<div class="lastmodified">Last modified on August 6, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
