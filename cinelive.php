@@ -27,13 +27,13 @@ include "header.php";
 
 <h2>DOWNLOAD</h2>
 
-<p>This is the latest beta release of CINELIVE. It will become final with the release of Slackware 14.2.</p>
+<p>This is the latest stable release of CINELIVE.</p>
 <div>
-   <a class="pure-button pure-button-primary" href="/cinelive-xfce-beta6.iso">Download Beta6</a>
-   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/tmp/cinelive-xfce-beta6.iso">Mirror</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-06_08_2016.iso">Download Stable</a>
+   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/cinelive/cinelive-xfce-06_08_2016.iso">Mirror</a>
 </div>
-<p>Build date: <b>June 4, 2016</b></p>
-<p>MD5SUM: <b>2c845bbef4016ee620252a59ea802676</b></p>
+<p>Build date: <b>August 6, 2016</b></p>
+<p>MD5SUM: <b>66038a7cfc412a8c68a1512abacd42bf</b></p>
 <p>Username/Password: <b>live</b></p>
 
 <br/>
@@ -127,7 +127,7 @@ slackpkg update gpg
 slackpkg install cinelerracv
 </pre></li>
 
-<div class="lastmodified">Last modified on June 4, 2016</div>
+<div class="lastmodified">Last modified on August 6, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
