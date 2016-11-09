@@ -54,15 +54,30 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-HV 6 released</div>
+  <div class="datebubble">November 9, 2016</div>
+</div>
+<div class="newscontent">
+<p>Not to be confused with goodguy's Cinelerra 5.1, a new release of the original Cinelerra(-HV) by Adam Williams has <a href="https://sourceforge.net/projects/heroines/">arrived at sourceforge.net</a>: Cinelerra(-HV) 6.</p>
+<p>The reason behind the major jump from 4.6.1 to version 6 is yet unclear, but there certainly are improvements (<a href="http://www.heroinewarrior.com/cinelerra.php">quoted from the official website</a>):</p>
+<ul>
+<li>Updated the h264 decoding.</li>
+<li>There are no longer picons in the asset window.</li>
+<li>Motion tracking got major optimizations.</li>
+<li>Resampling effects got new interfaces. Titler can load subtitle files.</li>
+</ul>
+</p>
+</div>
+
+<div class="news" style="margin-top:30px;">
   <div class="newsitem">Stable LiveDVD, 5.1 + CVE development, more packages</div>
   <div class="datebubble">August 6, 2016</div>
 </div>
+<div class="newscontent">
 <p>Today we've released the first stable version of CINELIVE, based on the long awaited Slackware 14.2. <a href="/cinelive.php">More information here.</a></p>
 <p>Good Guy has constantly improved Cinelerra 5.1 with new features and bugfixes. You can see a list of the major improvements of <a href="https://cinelerra-cv.org/five/releasenotes.pdf">the last two months here</a>.</p>
 <p>He is even <a href="https://cinelerra-cv.org/five/">building packages for a lot of major distributions</a> like Arch, CentOS, Debian, Fedora, Ubuntu, Suse and many more. We'll probably have to revise our download page very soon to keep up with that. 😉</p>
 <p>But let's not forget that other people are putting work into Cinelerra, too. Einar has written <a href="https://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=summary">a lot of code</a> for Cinelerra-CVE since our last news bulletin. You can find a build of it on our LiveDVD for testing.</p>
-<div class="newscontent">
-
 </div>
 
 <div class="news" style="margin-top:30px;">
@@ -170,7 +185,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on August 6, 2016</div>
+<div class="lastmodified">Last modified on November 9, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
