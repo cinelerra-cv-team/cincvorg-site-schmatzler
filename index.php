@@ -46,12 +46,21 @@ include "header.php";
         <div class="hero-titles">Professional video editing and compositing environment for Linux.</div>
         
         <div>
-            <a class="button-cta pure-button" href="/getting_cinelerra.php">Get Started</a>
+            <a class="button-cta pure-button" href="/download.php">Get Started</a>
             <a class="button-secondary pure-button" href="https://git.cinelerra-cv.org/gitweb">Browse code</a>
         </div>
         </div>
 
 <h2>News</h2>
+
+<div class="news" style="margin-top:30px;">
+  <div class="newsitem">Revised download page</div>
+  <div class="datebubble">December 10, 2016</div>
+</div>
+<div class="newscontent">
+<p><a href="/download.php">Our download page</a> has been revised to display the most important variants of Cinelerra, including their benefits and weakpoints: CV, GG and HV.</p>
+<p>All references to Cinelerra 5.1 have been changed to Cinelerra-<u>GG</u> 5.1, to prevent users confusing it with Adam Williams' Cinelerra(-HV) 6.</p>
+</div>
 
 <div class="news" style="margin-top:30px;">
   <div class="newsitem">Cinelerra-HV 6 released</div>
@@ -185,7 +194,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on November 9, 2016</div>
+<div class="lastmodified">Last modified on December 10, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>
