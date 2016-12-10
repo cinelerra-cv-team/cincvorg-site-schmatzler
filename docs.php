@@ -16,7 +16,7 @@ include "header.php";
  <h2>Cinelerra's features</h2>
  <ul><li>Linux Media Arts has an <a href="http://heroinewarrior.com/cinelerra.php">impressive listing of Cinelerra's features</a>.  6-channel sound, HDTV,
   multiple effects, built-in videoscope and more.  With screenshots.</li>
- <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160330/23d34507/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and Cinelerra 5.1 has been posted on our mailing list on March 30, 2016. Thanks to Phyllis Smith.</li></ul>
+ <li><a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160330/23d34507/attachment.pdf">A detailed feature comparison</a> between Cinelerra-CV, Cinelerra-HV and Cinelerra-GG 5.1 has been posted on our mailing list on March 30, 2016. Thanks to Phyllis Smith.</li></ul>
 <h2>Cinelerra CV manual</h2>
 
  <div class="alert">
@@ -71,6 +71,7 @@ Some video tutorials (talk and screencast) are available on the internet:
 </ul></li>
 <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PL62ABEFC47A6CD4DA">Cinelerra video tutorials</a> - by Cybrid productions.</li>
 <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.assistcg.com/attachments/063_VideoTutorial.mov.zip">Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">assistcg.com</a> (drag and drop mode, cut and paste mode, video transitions) - downloadable .zip file.</li>
+<li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLv6Mn7I6pSmWivUKTvf_CzqHjnlKt5zCS">Cinelerra tutorials by heroineworshipper</a> - video tutorials by the creator of the original Cinelerra.</li>
 <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><a href="http://www.facilware.com/series?serie=cinelerra">Video manuales de Cinelerra</a> - by FacilWare.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLESfiH5NUWTTUJIi8qkAv8LgEKBRVOwEo">Cinelerra tutorials</a> - an ongoing series by schmatzler.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLxMC0gN6SN_3a4SNpzYYxgUb93mVk9QcP">Cinelerra-Anleitungen</a> - by MICE Tutorials.</li>
@@ -179,7 +180,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on June 4, 2016</div>
+<div class="lastmodified">Last modified on December 10, 2016</div>
  </div>
 
 <?php include "footer.php"; ?>
