@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="/css/base.css?id=7" type="text/css">
   <link rel="stylesheet" href="/css/menu.css" type="text/css">
   <link rel="stylesheet" href="/css/pure-min.css">
+  <?php 
+  //only pull in the grid system where we need it
+  if ($grid != NULL) { echo "<link rel=\"stylesheet\" href=\"/css/grids-responsive-min.css\">\n";}
+  ?>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
   <script type="text/javascript" src="/scripts/js/prototype.js"></script>
   <script type="text/javascript" src="/scripts/js/scriptaculous.js"></script>
@@ -42,7 +46,7 @@
             <a class="pure-menu-heading" href="#">Download</a>
 
             <ul class="pure-menu-list">
-                <li class="<?php if ($title=="Get Cinelerra-CV") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/getting_cinelerra.php" class="pure-menu-link"><img src="/images/website/menu/downloads.png" alt="downloads" />Get Cinelerra-CV</a></li>
+                <li class="<?php if ($title=="Get Cinelerra") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/download.php" class="pure-menu-link"><img src="/images/website/menu/downloads.png" alt="downloads" />Get Cinelerra</a></li>
                 <li class="<?php if ($title=="Tools") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/patches-tools.php" class="pure-menu-link"><img src="/images/website/menu/tools.png" alt="tools" />Patches & Tools</a></li>
                 <li class="<?php if ($title=="Transitions") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/transitions.php" class="pure-menu-link"><img src="/images/website/menu/transitions.png" alt="transitions" />Transitions & Themes</a></li>
                 <li class="<?php if ($title=="Test Clips") {echo "pure-menu-item pure-menu-selected"; } else  {echo "pure-menu-item";}?>"><a href="/footage.php" class="pure-menu-link"><img src="/images/website/menu/footage.png" alt="footage" />Test Clips</a></li>

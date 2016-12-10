@@ -6,40 +6,14 @@ include "header.php";
 <div class="content">
 <div class="header">
     <h1>Get Cinelerra-CV</h1>
-    <h2>Download <a href="#livecd">Live Media</a> | <a href="#packages">Packages</a> | <a href="#source">Source code</a></h2> 
+    <h2>Download <a href="#packages">Packages</a> and <a href="#source">Source code</a></h2> 
 </div>
 
 <div class="hint">
 <h3 class="hint">Note:</h3>
 <div class="hintcontent">
-<p>This page is only for Cinelerra-<u>CV</u>. Packages and code for experimental versions (CVE, CVA, 5.1, merge-4) <a href="main_repo.php#experimental">can be found here.</a></p>
+<p>This page is only for Cinelerra-<u>CV</u>. Packages and code for all other versions <a href="/download.php">can be found here.</a></p>
 </div></div>
-
-<h2><a name="livecd">Live Media</a></h2>
-
-<p>You can try out Cinelerra-CV without modifying your computer, thanks to Live DVDs that contain it.<br/>
-Just download the .iso file, burn it on a DVD, insert it in the drive and restart your machine.</br>
-Or put in on a USB stick with <a href="https://rufus.akeo.ie/" target="_blank">Rufus</a> or <a href="https://unetbootin.github.io/" target="_blank">UNetbootin</a>.</p>
-
-<script type='text/javascript'>
-function init() {
-	new Effect.Tooltip('distro-cinelive', '<b>All variants</b> | Based on Slackware 14.2. Our very own LiveDVD, regularly updated. This is the best choice for trying out different editions of Cinelerra and finding the one that suits you best.', {className: 'tip'});
-	new Effect.Tooltip('distro-avlinux', '<b>CVA (akirad) + 5.0 (goodguy)</b> | Distribution designed to turn a regular old PC or Intel Mac into an Audio/Graphics/Video workstation.', {className: 'tip'});
-	h.init();
-}
-Event.observe(window, 'load', init, false);
-</script>
-
-<div style="width:100%;height:100px;">
-  <div id="distro-cinelive" class="livecd">
-    <a href="/cinelive.php" ><img src="images/website/livecd-logos/cinelive.png" alt="CINELIVE Logo" /></a>
-      <h4>CINELIVE</h4>
-  </div>
-  <div id="distro-avlinux" class="livecd">
-    <a href="http://www.bandshed.net/avlinux/" target="_blank" ><img src="/images/website/livecd-logos/avlinux.png" alt="AVLinux Logo" /></a>
-      <h4>AVLinux</h4>
-  </div>
-</div>
 
 <div style="clear:both;"></div>
 
@@ -315,7 +289,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on May 3, 2016</div>
+<div class="lastmodified">Last modified on December 10, 2016</div>
 </div>
 
 <?php include "footer.php"; ?>

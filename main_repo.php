@@ -40,13 +40,6 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=shortlog;h=refs/heads/merge-4">j6t&#039;s merge-4 repo</a> | <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Ubuntu packages</a></p>
 </blockquote>
 
-<h3>goodguy - Cinelerra 5.x</h3>
-<blockquote>
-<p>This is essentially the codebase that was started on cinelerra.org a while back.</p>
-<p>It is planned to merge this code with the j6t repository in the future.</p>
-<p><a href="https://git.cinelerra-cv.org/gitweb?p=goodguy/cinelerra.git;a=summary">goodguy&#039;s repo</a> | <a href="https://cinelerra-cv.org/five">Packages for Ubuntu, openSUSE, Mint, CentOS</a></p>
-</blockquote>
-
 <h3>akirad - useful merges from all branches</h3>
 <blockquote>
 <p>This repository by Paolo Rampino has a blend of the HV-like extended ffmpeg decoding, many of the fixes found in CinCV 2.3 and much improved UI theming from the former Cinecutie project.</p>
@@ -77,7 +70,7 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<div class="lastmodified">Last modified on May 3, 2016</div>
+<div class="lastmodified">Last modified on December 10, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
