@@ -29,11 +29,11 @@ include "header.php";
 
 <p>This is the latest stable release of CINELIVE.</p>
 <div>
-   <a class="pure-button pure-button-primary" href="/cinelive-xfce-05_11_2016.iso">Download Stable</a>
-   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/cinelive/cinelive-xfce-05_11_2016.iso">Mirror</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-15_12_2016.iso">Download Stable</a>
+   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/cinelive/cinelive-xfce-15_12_2016.iso">Mirror</a>
 </div>
-<p>Build date: <b>November 5, 2016</b></p>
-<p>MD5SUM: <b>7ea78bfbbf17d21032e84698780c4651</b></p>
+<p>Build date: <b>December 15, 2016</b></p>
+<p>MD5SUM: <b>04896ccd745e3fbc027e949551229596</b></p>
 <p>Username/Password: <b>live</b></p>
 
 <br/>
@@ -127,7 +127,7 @@ slackpkg update gpg
 slackpkg install cinelerracv
 </pre></li>
 
-<div class="lastmodified">Last modified on November 5, 2016</div>
+<div class="lastmodified">Last modified on December 15, 2016</div>
 </div> 
 
 <?php include "footer.php"; ?>
