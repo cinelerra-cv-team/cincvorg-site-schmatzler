@@ -60,10 +60,24 @@ gpgcheck=0
     <h4>Debian</h4>
     <div class="details">
       <p>To install Cinelerra-GG on Debian, run the following commands in a terminal:</p>
-<pre>apt install software-properties-common apt-transport-https
-apt-add-repository https://cinelerra-cv.org/five/pkgs/debian
-apt update
+<pre>apt install software-properties-common apt-transport-https</pre>
+For Debian 8 (Jessie):
+<pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/debian8</pre>
+For Debian 9 (Stretch):
+<pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/debian</pre>
+Then run:
+<pre>apt update
 apt install cin</pre>
+<br/>
+<div class="hint">
+<h3 class="hint">Note for Debian 8 and 9</h3>
+<div class="hintcontent">
+Just like Ubuntu, Debian is more strict for licensing now. You will have to edit <i>/etc/apt/sources.list</i> so the added line contains <b>[trusted=yes]</b>.
+The line for Debian 8 should be:
+<pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/debian8 jessie main</pre>
+or for Debian 9:
+<pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/debian stretch main</pre>
+</div></div>
       <p>If you want to update a previous install, run:</p>
 <pre>apt update
 apt upgrade cin</pre>
@@ -87,8 +101,11 @@ apt upgrade cin</pre>
     <img src="/images/website/distro-logos/mint.png" alt="Linux Mint Logo" title="Download Cinelerra-GG for Linux Mint" />
     <h4>Linux Mint</h4>
     <div class="details">
-      <p>To install Cinelerra-GG on Linux Mint, go to: <b>Administration->Software Sources->Additional Repositories->Add a new repository</b> and enter the following line:</p>
-<pre>deb http://cinelerra-cv.org/five/pkgs/mint trusty main</pre>
+      <p>To install Cinelerra-GG on Linux Mint 18, go to:<br>
+      <b>System->Software Sources->Additional Repositories->Add a new repository</b>
+      <br/>
+      and enter the following line:</p>
+<pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/mint xenial main</pre>
       <p>Afterwards, install it by entering the following commands into a terminal:</p>
 <pre>apt update
 apt install cin</pre>
@@ -104,10 +121,7 @@ apt upgrade cin</pre>
     <img src="/images/website/distro-logos/opensuse.png" alt="OpenSUSE Logo" title="Download Cinelerra-GG for OpenSUSE" />
     <h4>openSUSE</h4>
     <div class="details"> 
-<p>To install Cinelerra-GG on <b>openSUSE 13.2</b>, run the following commands in a terminal:</p>
-<pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/suse/ cincv
-zypper install -r cincv cinelerra</pre>
-<p>To install Cinelerra-GG on <b>openSUSE Leap 42.2</b>, run the following commands in a terminal:</p>
+<p>To install Cinelerra-GG on <b>openSUSE Leap 42.3</b>, run the following commands in a terminal:</p>
 <pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap/ cincv
 zypper install -r cincv cinelerra</pre>
       <p>If you want to update a previous install, run:</p>
@@ -115,12 +129,13 @@ zypper install -r cincv cinelerra</pre>
 zypper up cinelerra</pre>
       <p>You can uninstall Cinelerra-GG by running:</p>
 <pre>zypper remove cinelerra</pre>
+<br/>
 
 <div class="alert">
 <h3 class="alert">Attention:</h3>
 <div class="hintcontent">
-<p>For openSUSE <b>Leap</b>, a special version with 10bit color support is also available. This can not be used with 8bit color files!</p>
-<p>To install Cinelerra-GG <u>10bit</u> on <b>openSUSE Leap 42.2</b>, run the following commands in a terminal:</p>
+<p>A special version with 10bit color support is also available. This can not be used with 8bit color files!</p>
+<p>To install Cinelerra-GG <u>10bit</u> on <b>openSUSE Leap 42.3</b>, run the following commands in a terminal:</p>
 <pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap/ cincv
 zypper install -r cincv cinelerra10bit</pre>
 <p>If you want to update a previous install, run:</p>
@@ -164,17 +179,19 @@ slackpkg install cinelerra-goodguy</pre>
 <pre>apt install software-properties-common apt-transport-https</pre>
 <p>For Ubuntu 14.04 (Trusty Tahr), run:</p>
 <pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub14</pre>
-<p>For Ubuntu 15.10 (Wily Werewolf), run:</p>
-<pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub15</pre>
 <p>For Ubuntu 16.04 (Xenial Xerus), run:</p>
 <pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub16</pre>
+<p>For Ubuntu 17.04 (Zesty Zapus), run:</p>
+<pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub17</pre>
 <div class="hint">
-<h3 class="hint">Note for Ubuntu 16</h3>
+<h3 class="hint">Note for Ubuntu 16 and 17</h3>
 <div class="hintcontent">
-Version 16 of Ubuntu is more strict for licensing so you will have to edit
+Starting with version 16 Ubuntu is more strict for licensing so you will have to edit
 the file <i>/etc/apt/sources.list</i> so the added line contains <b>[trusted=yes]</b>.
 The line should be:
 <pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/ub16 xenial main</pre>
+or for Ubuntu 17:
+<pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/ub17 zesty main</pre>
 </div></div>
 <p>Afterwards, run:</p>
 <pre>apt update
