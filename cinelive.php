@@ -29,11 +29,11 @@ include "header.php";
 
 <p>This is the latest stable release of CINELIVE.</p>
 <div>
-   <a class="pure-button pure-button-primary" href="/cinelive-xfce-18_03_2017.iso">Download Stable</a>
-   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/cinelive/cinelive-xfce-18_03_2017.iso">Mirror</a>
+   <a class="pure-button pure-button-primary" href="/cinelive-xfce-15_10_2017.iso">Download Stable</a>
+   <a class="pure-button pure-button-secondary" href="https://schmatzler.de/cinelive/cinelive-xfce-15_10_2017.iso">Mirror</a>
 </div>
-<p>Build date: <b>March 18, 2017</b></p>
-<p>MD5SUM: <b>9a03657159162122303c2e690c805a86</b></p>
+<p>Build date: <b>October 15, 2017</b></p>
+<p>MD5SUM: <b>66d38758cf13c22fa05a42b18e54c246</b></p>
 <p>Username/Password: <b>live</b></p>
 
 <br/>
@@ -46,7 +46,9 @@ include "header.php";
    <div class="hintcontent">
      <p>While you can use tools like Rufus or UNetbootin to install the ISO to a USB stick, it will behave like a DVD and will not be writeable afterwards!</p>
  </div></div>
-<p><a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">A script is available</a> which allows you to transfer the ISO image content to a USB stick, making some modifications depending on the script's parameters.</p>
+<p><a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/cinelive.git;a=blob_plain;f=iso2usb.sh;hb=HEAD">A script is available</a> which allows you to transfer the ISO image content to a USB stick, making some modifications depending on the script's parameters.
+The USB stick will be erased and re-formatted when running this script (except when using the '-r' refresh option)!  Before inflicting any irreversible damage, the script will show you a prompt at which point you can evaluate whether it is safe to continue.
+</p>
 
  <div class="hint">
    <h3 class="hint">Note:</h3>
@@ -59,14 +61,19 @@ This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/ci
                              requested size of the container in kB, MB, GB,
                              or as a percentage of free space.
                              Examples: '-c 125M', '-c 1.3G', '-c 20%'.
+  -d|--devices               List removable devices on this computer.
   -f|--force                 Ignore most warnings (except the back-out).
   -h|--help                  This help.
-  -i|--infile <b>&lt;filename&gt;</b>     Full path to the ISO image file.
-  -o|--outdev <b>&lt;filename&gt;</b>     The device name of your USB drive.
-  -p|--persistence <b>&lt;name&gt;</b>    Custom name of the 'persistence' directory/file.
+  -i|--infile <filename>     Full path to the ISO image file.
+  -o|--outdev <filename>     The device name of your USB drive.
+  -p|--persistence <name>    Custom name of the 'persistence' directory/file.
+  -r|--refresh               Refresh the USB stick with the ISO content.
+                             No formatting, do not touch user content.
+  -s|--scan                  Scan for insertion of new USB device instead of
+                             providing a devicename (using option '-o').
   -u|--unattended            Do not ask any questions.
   -v|--verbose               Show verbose messages.
-  -w|--wait<b>&lt;number&gt;</b>          Add <b>&lt;number&gt;</b> seconds wait time to initialize USB.
+  -w|--wait<number>          Add <number> seconds wait time to initialize USB.
   -C|--cryptpersistfile size|perc
                              Use a LUKS-encrypted 'persistence' file instead
                              of a directory (for use on FAT filesystem).
@@ -87,6 +94,9 @@ This script, called <a href="https://git.cinelerra-cv.org/gitweb?p=schmatzler/ci
 </li>
 <li>Create a USB Live with both the /home and the persistent data encrypted (the persistence filesystem will be 300 MB in size):
     <pre>./iso2usb.sh -i cinelive.iso -o /dev/sdX -c 30% -C 300M</pre>
+</li>
+<li>Refresh the system modules on a USB drive using a Live ISO as the source.  Let the script scan for insertion of a USB stick instead of specifying the device name on the commandline.  Note that the addons and optional modules will not be touched by this action:
+  <pre>./iso2usb.sh -i cinelive.iso -r -s</pre>
 </li>
 </ul>
 
@@ -127,7 +137,7 @@ slackpkg update gpg
 slackpkg install cinelerracv
 </pre></li>
 
-<div class="lastmodified">Last modified on March 18, 2017</div>
+<div class="lastmodified">Last modified on October 15, 2017</div>
 </div> 
 
 <?php include "footer.php"; ?>
