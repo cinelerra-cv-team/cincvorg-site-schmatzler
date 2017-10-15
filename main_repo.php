@@ -34,7 +34,8 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 
 <h3>j6t - merging Cinelerra-HV 4.x</h3>
 <blockquote>
-<p>Johannes Sixt' goal is to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
+<b style="color:red;">This project is not being actively worked on anymore.</b>
+<p>Johannes Sixt' goal was to merge the Cinelerra-HV releases (4.x) with Cinelerra-CV. Since HV does not provide a GIT repository, this requires a lot of testing and debugging.</p>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=summary">j6t&#039;s main repo</a></p>
 <p>For the <i>merge-4</i> branch (combination of HV 4.1 + CV 2.3), see here:</p>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=j6t/cinelerra.git;a=shortlog;h=refs/heads/merge-4">j6t&#039;s merge-4 repo</a> | <a href="https://launchpad.net/~cinelerra-ppa/+archive/ubuntu/cinelerra-beta">Ubuntu packages</a></p>
@@ -42,6 +43,7 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 
 <h3>akirad - useful merges from all branches</h3>
 <blockquote>
+<b style="color:red;">This project is not being actively worked on anymore.</b>
 <p>This repository by Paolo Rampino has a blend of the HV-like extended ffmpeg decoding, many of the fixes found in CinCV 2.3 and much improved UI theming from the former Cinecutie project.</p>
 <p>Unfortunately, this hasn't been updated in a while and may not compile with recent gcc versions.</p>
 <p><a href="https://git.cinelerra-cv.org/gitweb?p=akirad/cinelerra.git;a=summary">akirad&#039;s repo</a></p>
@@ -49,6 +51,7 @@ Einar Rünkaru is working with the long-term goal of improving the core fixing b
 
 <h3>monty - FFMPEG-based loader</h3>
 <blockquote>
+<b style="color:red;">This project is not being actively worked on anymore.</b>
 <p>Monty Montgomery wrote an improved version of the FFMPEG-based file reader from CinHV 4.1 so that Cinelerra can read many more file formats. Main changes are:</p>
 <ul>
 <li>updates the internal ffmpeg version to ffmpeg-0.6.</li>
@@ -70,7 +73,7 @@ files with partially incomplete initial open GOPs</li>
 <a href="http://git.xiph.org/?p=users/xiphmont/cinelerraCV.git;a=summary">monty's repo</a></p>
 </blockquote>
 
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on October 15, 2017</div>
 </div> 
 
 <?php include "footer.php"; ?>
