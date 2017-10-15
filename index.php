@@ -54,6 +54,24 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-HV 7 released</div>
+  <div class="datebubble">October 10, 2017</div>
+</div>
+<div class="newscontent">
+<p>Another new release has been made by Adam Williams <a href="https://sourceforge.net/projects/heroines/">on sourceforge.net</a>: Cinelerra(-HV) 7.</p>
+<ul>
+<li>Optimized playback of large format video.</li>
+<li>H.265 decoding.</li>
+<li>Optimized screen capturing.</li>
+<li>Spherical camera blending.</li>
+<li>Eyedropper can show the maximum value.</li>
+<li>Interpolating CR2 images always white balances.</li>
+</ul>
+There also is <a href="https://www.youtube.com/watch?v=zEQ4Cve3_-M" target="_blank"> a video where the new features are summarized</a>.
+</p>
+</div>
+
+<div class="news" style="margin-top:30px;">
   <div class="newsitem">Revised download page</div>
   <div class="datebubble">December 10, 2016</div>
 </div>
@@ -194,7 +212,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on October 15, 2017</div>
 </div>
 
 <?php include "footer.php"; ?>

@@ -91,7 +91,7 @@ Event.observe(window, 'load', init, false);
                     <h2>Adam Williams</h2>
 
                     <span class="cine-table-edition">
-                        HV <span>6.0</span>
+                        HV <span>7.0</span>
                     </span>
                 </div>
 
@@ -144,7 +144,7 @@ Event.observe(window, 'load', init, false);
     </div> <!-- end information -->
 </div> <!-- end l-content -->
 
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on October 15, 2017</div>
 </div>
 
 <?php include "footer.php"; ?>
