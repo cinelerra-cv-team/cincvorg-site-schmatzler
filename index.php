@@ -54,6 +54,56 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
+  <div class="newsitem">Development updates (Yes, we are still alive.)</div>
+  <div class="datebubble">October 16, 2017</div>
+</div>
+<div class="newscontent">
+<p>We haven't had the time to update this news page for a while - but behind the scenes, a lot of things happened.</p>
+<h3>Cinelerra-GG</h3>
+<p>Goodguy's variant of Cinelerra has received a big amount of love over the last months. Here are some of the most exciting new features:</p>
+<ul>
+<li>Sam has created a ton of beautiful icons for a more modern look (licensed under Creative Commons Zero):
+<a href="/images/website/news/icons-update.jpg" target="_blank"><img style="width:80%;max-width:500px;" src="/images/website/news/icons-update.jpg" alt="New icons by Sam" /></a></li>
+<br/>
+<li>The titler has received major improvements.
+<a href="/images/website/news/new-title-plugin.jpg" target="_blank"><img style="width:80%;max-width:500px;" src="/images/website/news/new-title-plugin.jpg" alt="New titler plugin" /></a>
+<br/>
+Here is a selection of the best features:
+   <ul>
+      <li>title can be dragged anywhere on the screen with handles</li>
+      <li>longer titles up to 3071 characters</li>
+      <li>color picker allows for saving the last 16 picked colors for later re-use</li>
+      <li>faster font locator plus stroker for pen strokes inside characters</li>
+      <li>addition of background video</li>
+      <li>individual character attributes of Color, Size, Font, Underline, Bold, Italic, Caps, Blink, 
+     Alpha, Nudge, Sup(erscript,subscript),  PNG inclusion, and unicode characters</li>
+   </ul>
+<li>Comfortable zoom slider for the compositor</li>
+<a href="/images/website/news/zoom-slider.jpg" target="_blank"><img style="width:80%;max-width:416px;" src="/images/website/news/zoom-slider.jpg" alt="Zoom slider on the compositor" /></a>
+<li>New and improved plugins (Perspective, Blue Banana, Edgedetect, C41, Rumbler, Motion51, CriKey)</li>
+<li>Additional video transitions for Shapewipe (Specks, Spiral and Burst)</li>
+<li><a href="https://cinelerra-cv.org/download_gg.php">Builds for new distributions</a> (Ubuntu 17, Mint 18, Leap 42.3, Debian Stretch 32-bit, Slackware 32-bit)</li>
+<li>Third-party libraries have been kept up to date to include ffmpeg, x264/x265,ladspa.</li>
+<li>Updated dcraw to be able to process CR2 raw-image formats.</li>
+<li>Added several new option files: visually_lossless, option to handle "movflags=+faststart" in the MP4/QT containers and h265 option files.</li>
+<li>New capability for copying/pasting a list of files among and between instances of Cinelerra.</li>
+</ul>
+<h3>Cinelerra-CV(E)</h3>
+<ul>
+<li>Einar Rünkaru has made big progress in <a href="https://git.cinelerra-cv.org/gitweb?p=einar/cinelerra.git;a=commit;h=9d233e5c35be459ac96e101403469477410825aa">removing the very outdated quicktime library</a> from Cinelerra-CVE.
+This is a neccessary step for improving Cinelerra-<b>CV</b> in the future.</li>
+<li>Speaking of which, Cinelerra-CV has also received <a href="https://git.cinelerra-cv.org/gitweb?p=CinelerraCV.git;a=summary">a steady stream</a> of bugfixes and compiler updates.</li>
+</ul>
+<h3>CINELIVE</h3>
+<ul>
+<li>Shortly after the release of Cinelerra-HV 7.0, we've also put out a new build of our <a href="https://cinelerra-cv.org/cinelive.php">LiveDVD/LiveUSB distribution</a>.
+This enables you to test all of the new features and different variants of Cinelerra.</li>
+<li>The script that generates a bootable USB drive now also works on more Linux distributions. Thanks to Eric Hameleers.</li>
+<li>Since Johannes Sixt has <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2017q3/006529.html">retired from his merge-4 project</a>, the "j6t" variant of Cinelerra has been removed from the LiveDVD.</li>
+</ul>
+</div>
+
+<div class="news" style="margin-top:30px;">
   <div class="newsitem">Cinelerra-HV 7 released</div>
   <div class="datebubble">October 10, 2017</div>
 </div>
@@ -212,7 +262,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on October 15, 2017</div>
+<div class="lastmodified">Last modified on October 16, 2017</div>
 </div>
 
 <?php include "footer.php"; ?>
