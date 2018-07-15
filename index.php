@@ -58,7 +58,7 @@ include "header.php";
   <div class="datebubble">July 15, 2018</div>
 </div>
 <div class="newscontent">
-<p>Thanks to Yuri and Good Guy, Cinelerra-GG now builds on FreeBSD and is in a useable state. You can find installation instructions on the <a href="/download-gg.php">download page</a>.</p>
+<p>Thanks to Yuri and Good Guy, Cinelerra-GG now builds on FreeBSD and is in a useable state. You can find installation instructions on the <a href="/download_gg.php">download page</a>.</p>
 <p>Additionally, Cinelerra-GG has received a steady stream of fixes and features over the last months. Most notably, <a href="https://linuxmusicians.com/viewtopic.php?t=18598">LV2 plugins can now be used with UI support.</a></p>
 </div>
 
