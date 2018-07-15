@@ -127,12 +127,6 @@ cd ports/multimedia/cinelerra</pre></li>
     <h4>Gentoo</h4>
     <div class="details">
       <p>
-<!--TODO: Add tutorial for building from source on Gentoo-->
-<div class="alert">
-<h3 class="alert">Attention:</h3>
-<div class="hintcontent">
-<p>Gentoo's packages for Cinelerra-CV are 4 years old (testing: 2 years) and <font style="color:red;">severely outdated</font>. Please try building Cinelerra-CV <a href="/docs.php#compiling">from source</a> or if you're skilled enough, <a href="https://bugs.gentoo.org/show_bug.cgi?id=539174">become a maintainer</a> for the package.</p>
-</div></div>
 <p>Installation for Gentoo GNU/Linux is very straight forward. Simply type:</p>
 <pre>emerge cinelerra</pre>
 <p>as root and it should install and run without any problems.</p>
@@ -289,7 +283,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on July 15, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>
