@@ -11,7 +11,7 @@ function init() {
 	new Effect.Tooltip('annot1', 'Formats might be any supported by an <b>earlier</b> ffmpeg version and include:<br>Quicktime H264 Video and NTSC Video, AVI, FLAC, WAV, MPEG, MP3, MP4 H264, PNG, JPEG, and OGG.', {className: 'tip'});
 	new Effect.Tooltip('annot2', 'Formats supported can be all of those supported by a <b>very recent</b> version of ffmpeg and include:<br>mp4, pro, m2ts, dvd, qt, f4v, flv, mp3, mkv, webm, xvid, bmp, mpeg, pam, pbm, pcx, pgm, pgmyuv, png, ppm, sgi, tiff, AVI, FLAC, Video FLASH, GIF, Quicktime DV/H264/H264 NTSC/H264 1080P Video, WMV, Real Media, MXF, OGG, WAV, MP4 H264, and JPEG.', {className: 'tip'});
 	new Effect.Tooltip('annot3', 'Formats supported might be any supported by a <b>previous</b> ffmpeg version and include:<br>Quicktime H264 Video and NTSC Video, Video FLASH, FLAC, WMV, WAV, MPEG, MP3, MP4 H264, PNG, and JPEG.', {className: 'tip'});
-	new Effect.Tooltip('annot4', 'Tested less due to making changes quickly available to users in an effort to keep current/relevant.', {className: 'tip'});
+	new Effect.Tooltip('annot4', 'Tested by active members of the community, found bugs are usually fixed within a few days.', {className: 'tip'});
 	new Effect.Tooltip('annot5', 'International Language support, major Zoom Bar enhancements, apply masks before plugins, Asset Interlace, Manual GoTo, Export EDL, free movement of fragments, Titler Bbox, Titler Color, Reel number, Timecode support, Label Anchor/Folder/Info Edit support, lock labels from moving, Preview Slider, Find Object, and XML tag closer present.', {className: 'tip'});
 	new Effect.Tooltip('annot6', 'Subtitle Track, Subtitle Script, more Alpha blending and PorterDuff operators, Capture and Recording, libmpeg and libzmpeg support, Edit_Keyframe built, 16-bit Hi Color Depth, Crash dump capture, Playback 5.1→2 driver downmix, Resizable fonts, Icons support, Asset program selection, Updatable Icon image, Toolset Visibility, Multi-screen / playback config support, Audio H/W gain and many more...', {className: 'tip'});
 	new Effect.Tooltip('annot7', 'Nested assets, Align edits, Reverse edits, Multi-view window, Multi-pane, Titler font kerning, Playback speed automation,specify edit time in seconds, Realtime priority audio, and Filescene / Festival simple animation.', {className: 'tip'});
@@ -74,7 +74,7 @@ Event.observe(window, 'load', init, false);
                     <li>Support by GG and the community</li>
                     <li>Quick enhancements</li>
                     <li>Extensive codec support<font id="annot2" class="annot">?</font></li>
-                    <li>Less-tested<font id="annot4" class="annot">?</font></li>
+                    <li>Tested<font id="annot4" class="annot">?</font></li>
                     <li>Features from CV, HV and own<font id="annot6" class="annot">?</font></li>
                     <li>Includes changes from all</li>
                     <li>No strict requirements for patches<font id="annot9" class="annot">?</font></li>
@@ -144,7 +144,7 @@ Event.observe(window, 'load', init, false);
     </div> <!-- end information -->
 </div> <!-- end l-content -->
 
-<div class="lastmodified">Last modified on October 15, 2017</div>
+<div class="lastmodified">Last modified on July 15, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>
