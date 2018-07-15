@@ -134,8 +134,12 @@ apt upgrade cin</pre>
     <img src="/images/website/distro-logos/opensuse.png" alt="OpenSUSE Logo" title="Download Cinelerra-GG for OpenSUSE" />
     <h4>openSUSE</h4>
     <div class="details"> 
-<p>To install Cinelerra-GG on <b>openSUSE Leap 42.3</b>, run the following commands in a terminal:</p>
-<pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap/ cincv
+<p>To install Cinelerra-GG on <b>openSUSE Leap</b>, run the following commands in a terminal:</p>
+<p>For <b>Leap 15</b>, run:b</p>
+<pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap15/ cincv
+zypper install -r cincv cinelerra</pre>
+<p>For <b>Leap 42.3</b>, run:b</p>
+<pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap42/ cincv
 zypper install -r cincv cinelerra</pre>
       <p>If you want to update a previous install, run:</p>
 <pre>zypper refresh cinelerra
@@ -148,9 +152,8 @@ zypper up cinelerra</pre>
 <h3 class="alert">Attention:</h3>
 <div class="hintcontent">
 <p>A special version with 10bit color support is also available. This can not be used with 8bit color files!</p>
-<p>To install Cinelerra-GG <u>10bit</u> on <b>openSUSE Leap 42.3</b>, run the following commands in a terminal:</p>
-<pre>zypper ar -f https://cinelerra-cv.org/five/pkgs/leap/ cincv
-zypper install -r cincv cinelerra10bit</pre>
+<p>To install Cinelerra-GG <u>10bit</u>, replace the install command with this:</p>
+<pre>zypper install -r cincv cinelerra10bit</pre>
 <p>If you want to update a previous install, run:</p>
 <pre>zypper refresh cinelerra10bit
 zypper up cinelerra10bit</pre>
