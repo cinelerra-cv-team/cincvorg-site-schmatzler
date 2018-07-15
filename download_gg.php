@@ -183,8 +183,10 @@ slackpkg install cinelerra-goodguy</pre>
 <pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub16</pre>
 <p>For Ubuntu 17.04 (Zesty Zapus), run:</p>
 <pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub17</pre>
+<p>For Ubuntu 18.04 (Bionic Beaver), run:</p>
+<pre>apt-add-repository https://cinelerra-cv.org/five/pkgs/ub18</pre>
 <div class="hint">
-<h3 class="hint">Note for Ubuntu 16 and 17</h3>
+<h3 class="hint">Note for Ubuntu 16 - 18</h3>
 <div class="hintcontent">
 Starting with version 16 Ubuntu is more strict for licensing so you will have to edit
 the file <i>/etc/apt/sources.list</i> so the added line contains <b>[trusted=yes]</b>.
@@ -192,6 +194,8 @@ The line should be:
 <pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/ub16 xenial main</pre>
 or for Ubuntu 17:
 <pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/ub17 zesty main</pre>
+or for Ubuntu 18:
+<pre>deb [trusted=yes] https://cinelerra-cv.org/five/pkgs/ub18 bionic main</pre>
 </div></div>
 <p>Afterwards, run:</p>
 <pre>apt update
@@ -258,7 +262,7 @@ function install_distro_button_actions ()
 Event.observe (window, 'load', install_distro_button_actions);
 </script>
 
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on July 15, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>
