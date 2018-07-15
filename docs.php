@@ -73,6 +73,7 @@ Some video tutorials (talk and screencast) are available on the internet:
 <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="http://www.assistcg.com/attachments/063_VideoTutorial.mov.zip">Cinelerra: The Use of Transitions</a> - by <a href="http://www.assistcg.com">assistcg.com</a> (drag and drop mode, cut and paste mode, video transitions) - downloadable .zip file.</li>
 <li><img src="/images/website/locale/us.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLv6Mn7I6pSmWivUKTvf_CzqHjnlKt5zCS">Cinelerra tutorials by heroineworshipper</a> - video tutorials by the creator of the original Cinelerra.</li>
 <li><img src="/images/website/locale/es.png" style="margin-right:4px;" /><a href="http://www.facilware.com/series?serie=cinelerra">Video manuales de Cinelerra</a> - by FacilWare.</li>
+<li><img src="/images/website/locale/it.png" style="margin-right:4px;" /><a href="https://www.youtube.com/channel/UC1CJCJS08utg6F4FHF3kiyA">Cinelerra-GG video course in Italian</a> - by Andrea paz.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLESfiH5NUWTTUJIi8qkAv8LgEKBRVOwEo">Cinelerra tutorials</a> - an ongoing series by schmatzler.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLxMC0gN6SN_3a4SNpzYYxgUb93mVk9QcP">Cinelerra-Anleitungen</a> - by MICE Tutorials.</li>
 <li><img src="/images/website/locale/de.png" style="margin-right:4px;" /><a href="https://www.youtube.com/playlist?list=PLB72ED01700810796">Cinelerra Basics</a> - by video4tux.</li>
@@ -180,7 +181,7 @@ Some HOWTOs for specific needs are available on the internet:
 The first Cinelerra-CV wiki was set up by Alex Ferrer. It is available only through the <a href="http://web.archive.org/web/20070205230110/ftconsult.taxnetusa.com/twiki/bin/view/Cinelerra/CinelerraManualTOC">Internet Archive</a>. It contains Cinelerra documentation, users' tips and other useful resources for your project. Most of its content is now in the Cinelerra CV manual. It has been translated to Slovenian, Spanish, Italian (partially) and French.
 </p>
 
-<div class="lastmodified">Last modified on December 10, 2016</div>
+<div class="lastmodified">Last modified on July 15, 2018</div>
  </div>
 
 <?php include "footer.php"; ?>
