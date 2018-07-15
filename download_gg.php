@@ -97,6 +97,19 @@ apt upgrade cin</pre>
     </div>
   </div>
 
+  <div id="distro-freebsd" class="button">
+    <img src="/images/website/distro-logos/freebsd.png" alt="FreeBSD Logo" title="Download Cinelerra-GG for FreeBSD" />
+    <h4>FreeBSD</h4>
+    <div class="details">
+      <p>We are excited that a FreeBSD port of Cinelerra-GG is now available for you.</p>
+      <p>You can install a precompiled package with this command:</p>
+      <pre>pkg install cinelerra-gg</pre>
+      <p>Cinelerra-GG is also available by using a port:</p>
+      <pre>cd /usr/ports/multimedia/cinelerra-gg && make install clean</pre>
+      <p>Link to the port: <a href="https://www.freshports.org/multimedia/cinelerra-gg/">https://www.freshports.org/multimedia/cinelerra-gg/</a></p>
+    </div>
+  </div>
+
   <div id="distro-mint" class="button">
     <img src="/images/website/distro-logos/mint.png" alt="Linux Mint Logo" title="Download Cinelerra-GG for Linux Mint" />
     <h4>Linux Mint</h4>
