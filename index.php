@@ -54,6 +54,15 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-GG for FreeBSD, LV2 support</div>
+  <div class="datebubble">July 15, 2018</div>
+</div>
+<div class="newscontent">
+<p>Thanks to Yuri and Good Guy, Cinelerra-GG now builds on FreeBSD and is in a useable state. You can find installation instructions on the <a href="/download-gg.php">download page</a>.</p>
+<p>Additionally, Cinelerra-GG has received a steady stream of fixes and features over the last months. Most notably, <a href="https://linuxmusicians.com/viewtopic.php?t=18598">LV2 plugins can now be used with UI support.</a></p>
+</div>
+
+<div class="news" style="margin-top:30px;">
   <div class="newsitem">Development updates (Yes, we are still alive.)</div>
   <div class="datebubble">October 16, 2017</div>
 </div>
@@ -262,7 +271,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on October 16, 2017</div>
+<div class="lastmodified">Last modified on July 15, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>
