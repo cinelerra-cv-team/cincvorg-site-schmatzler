@@ -33,14 +33,15 @@ include "header.php";
   <p>The channel is logged into a <a href="https://irclog.cinelerra-cv.org/">web archive</a>.</p>
   
 <h2>Webmaster</h2>
-  <p>You've found a bug on the website or you have a suggestion for it? Please <a href="mailto:danny@schmarsel.de">send me a message!</a></p>
+  <p>Due to creative differences this website is currently unmaintained. If you want to step up and keep it updated, please <a href="mailto:danny@schmarsel.de">send me a message!</a></p>
+  <p>Please <strong>do not</strong> send bug reports to this address. They will be ignored.</p>
   <div class="hint">
   <h3 class="hint">Note:</h3>
      <div class="hintcontent">
        <p>If you'd like to make non-trivial changes or change extensive stuff, please contact the mailing list first for approval.</p>
   </div></div>
 
-<div class="lastmodified">Last modified on June 25, 2016</div>
+<div class="lastmodified">Last modified on December 8th, 2018</div>
 </div>
  
 <?php include "footer.php"; ?>
