@@ -23,12 +23,12 @@ include "header.php";
 <p>Cinelerra-HV exists even today. Every few months a release is made on <a href="http://sourceforge.net/projects/heroines/">SourceForge</a>.</p>
 <br />
 
-<h2>About Cinelerra-GG 5.1</h2>
+<h2>About Cinelerra-GG</h2>
 <p>Around March 2014 we overlooked the renewal of <a href="http://cinelerra.org">cinelerra.org</a>. The domain was then taken over by a different project, which is following commercial interests.</p>
 <p>For a while, they released their own version ("5.0") and made their own adjustments to the software.</p>
 <p>In January 2016, the developer working behind cinelerra.org ("Good Guy") joined us and continues to improve the software here. He is also accepting feedback on our mailing list.</p>
 <p>This version started out as Cinelerra 4.6-mod a few years back and was renamed to 5.0 after Adam Williams showed no interest in merging its features into Cinelerra-HV.</p>
-<p>The current version of this software is <b>Cinelerra-GG 5.1 Beta</b> and <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/2016q1/004236.html">can be found here</a>.</p>
+<p>The project has since moved to another website and can be accessed here: <a href="https://cinelerra-gg.org/">cinelerra-gg.org</a>.</p>
 <p style="font-size:small;">You can also see a <a href="http://lists.cinelerra-cv.org/pipermail/cinelerra/attachments/20160321/bb92690e/attachment.pdf">A Brief History of Time</a>, written from the developer's point of view.</p>
 <br/>
 
@@ -57,7 +57,7 @@ include "header.php";
   </ul>
 </ul>
 </p>
-<div class="lastmodified">Last modified on October 16, 2017</div>
+<div class="lastmodified">Last modified on December 8th, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>

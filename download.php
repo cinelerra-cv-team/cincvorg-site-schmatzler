@@ -81,7 +81,7 @@ Event.observe(window, 'load', init, false);
                     
                 </ul>
 
-                <a href="/download_gg.php"><button class="button-choose pure-button">Choose</button></a>
+                <a href="https://www.cinelerra-gg.org/downloads/"><button class="button-choose pure-button">Choose</button></a>
             </div>
         </div>
 
@@ -144,7 +144,7 @@ Event.observe(window, 'load', init, false);
     </div> <!-- end information -->
 </div> <!-- end l-content -->
 
-<div class="lastmodified">Last modified on July 15, 2018</div>
+<div class="lastmodified">Last modified on December 8th, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>

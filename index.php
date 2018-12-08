@@ -54,6 +54,17 @@ include "header.php";
 <h2>News</h2>
 
 <div class="news" style="margin-top:30px;">
+  <div class="newsitem">Cinelerra-GG has moved to another website</div>
+  <div class="datebubble">December 8, 2018</div>
+</div>
+<div class="newscontent">
+<p>Due to different development speeds and development directions the Cinelerra-GG project has now moved to:</p>
+<p><a href="https://cinelerra-gg.org/">https://cinelerra-gg.org</a>.</p>
+<p>The modern website has everything a growing project needs: A new mailing list, forums, a bugtracker, GIT repositories and downloads of the software.</p>
+<p>If you used the repositories on this website before, they will no longer work. Please make sure to read the updated instructions here: <a href="https://www.cinelerra-gg.org/downloads/">Downloads</a></p>
+</div>
+
+<div class="news" style="margin-top:30px;">
   <div class="newsitem">Cinelerra-GG for FreeBSD, LV2 support</div>
   <div class="datebubble">July 15, 2018</div>
 </div>
@@ -271,7 +282,7 @@ Full changelog can be browsed through <a href="https://git.cinelerra-cv.org/gitw
 
 <p><a href="archive/oldnews.php">Older news...</a></p>
 <br />
-<div class="lastmodified">Last modified on July 15, 2018</div>
+<div class="lastmodified">Last modified on December 8th, 2018</div>
 </div>
 
 <?php include "footer.php"; ?>
